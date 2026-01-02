@@ -232,7 +232,7 @@ def extract_data_resource(game_dir: str | None = None, target_dir: str | None = 
             logPrint("%s | 正在复制文件（Copying）：   %s\t%s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(src_size), src_date, srcpath), print_time = True)
             dstpath: str = os.path.join(target_dir, relpath).replace("\\", "/")
             os.makedirs(os.path.dirname(dstpath), exist_ok = True)
-            shutil.copy2(srcpath, dstpath) #第一步暂且先复制原始文件（For the first step, temporarily copy the raw files）
+            shutil.copy2(srcpath, dstpath) #第一阶段暂且先复制原始文件（For the first phase, temporarily copy the raw files）
         elif isWadPath(relpath):
             logPrint("%s | 正在解包文件（Unpacking）： %s\t%s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(src_size), src_date, srcpath), print_time = True)
             if relpath.startswith("Game/DATA/FINAL/"):
@@ -246,7 +246,7 @@ def extract_data_resource(game_dir: str | None = None, target_dir: str | None = 
             dstpath = os.path.join(target_dir, wad_extract_path_header).replace("\\", "/") #此时dstpath是一个文件夹（Now, `dstpath` is a folder）
             status: int = wad_extract(srcpath, dstpath, patterns = []) #这里之所以没有指定正则表达式，主要是因为尚未确定wad文件中的文本文件的命名模式（The reason why patterns aren't specified is because the pattern of names of text files in wad files isn't figured out yet）
             if status != 0:
-                logPrint("解包失败。请等待该步骤结束后查看。\nUnpack failed. Please check it after this step finishes.")
+                logPrint("解包失败。请等待该阶段结束后查看。\nUnpack failed. Please check it after this phase finishes.")
                 error_wad_client_files.append(srcpath)
     else:
         logPrint("%s文件夹下的游戏数据已提取到%s目标文件夹中。\nGame data under %s folder have been exported into the target folder %s successfully." %(game_dir, target_dir, game_dir, target_dir))
@@ -333,8 +333,8 @@ def convert_bin_files(extract_dir: str | None = None, game_version: Any | None =
                 traceback_info = traceback.format_exc()
                 logPrint(traceback_info, write_time = False)
                 logPrint("文件%s转换失败！\nFile %s conversion failure!" %(srcpath, srcpath), write_time = False)
-                if os.path.exists(dstpath):
-                    os.remove(dstpath) #转换失败的文件为空，因此应当删除（Files fail to converted will be empty and thus should be removed）
+                if os.path.exists(dstpath + ".json"):
+                    os.remove(dstpath + ".json") #转换失败的文件为空，因此应当删除（Files fail to converted will be empty and thus should be removed）
                 error_files.append(srcpath)
         elif rst_pattern.search(srcpath):
             RstConvert(srcpath, dstpath + ".json", game_version)
@@ -354,7 +354,7 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
     :type simpleCopyFixStrategy: int
     '''
     if not bool(extract_dir):
-        logPrint("请指定第一步提取的文件目录。\nPlease specify the directory of files extracted in Step 1.")
+        logPrint("请指定第一阶段提取的文件目录。\nPlease specify the directory of files extracted in Phase 1.")
     while True:
         if not bool(extract_dir):
             extract_dir = logInput()
@@ -432,7 +432,7 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
         dstpath: str = os.path.join(target_dir, relpath).replace("\\", "/")
         index_str: str = "[%d/%d]" %(i + 1, len(textfiles_to_convert))
         logPrint("%s | 正在校对文件（Checking）： %s\t%s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(src_size), src_date, srcpath), print_time = True)
-        #第二步涉及较为复杂的格式化操作（Step 2 involves more complex formatting operations）
+        #第二阶段涉及较为复杂的格式化操作（Phase 2 involves more complex formatting operations）
         encodings = ["utf-8", "ansi"]
         for i in range(len(encodings)):
             encoding = encodings[i]
@@ -518,7 +518,7 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
 
 def delete_intermediate_files(extract_dir: str | None = None) -> None:
     if not bool(extract_dir):
-        logPrint("请指定第一步提取的文件目录。\nPlease specify the directory of files extracted in Step 1.")
+        logPrint("请指定第一阶段提取的文件目录。\nPlease specify the directory of files extracted in Phase 1.")
     while True:
         if not bool(extract_dir):
             extract_dir = logInput()
@@ -534,7 +534,7 @@ def delete_intermediate_files(extract_dir: str | None = None) -> None:
             break
         extract_dir = logInput()
     extract_dir = extract_dir.replace("\\", "/")
-    logPrint(f"正在删除文件夹（Deleting folder）： {extract_dir}")
+    logPrint(f"正在删除文件夹（Deleting folder）： {extract_dir}\n请耐心等待。此过程将花费至少15分钟。\nPlease wait in patience. This process will take at least 15 minutes.")
     while os.path.exists(extract_dir) and os.path.isdir(extract_dir):
         try:
             shutil.rmtree(extract_dir)
@@ -546,7 +546,7 @@ def delete_intermediate_files(extract_dir: str | None = None) -> None:
                 break
 
 def main():
-    logPrint("请确保您的磁盘有足够的存储空间。建议剩余空间：200 GB。\nPlease make sure you have enough disk space. Recommended free space: 200 GB.\n在每个步骤输入目录时，输入Ctrl-D以跳过此步骤。\nWhen you enter a directory, submit Ctrl-D to skip this step.\n")
+    logPrint("请确保您的磁盘有足够的存储空间。建议剩余空间：200 GB。\nPlease make sure you have enough disk space. Recommended free space: 200 GB.\n在自动化流程设置参数时，输入多个Ctrl-D字符以回退多步。\nWhen you're setting parameters for the automatic procedures, submit multiple Ctrl-D characters to recall multiple steps.\n在分步执行流程中，输入Ctrl-D字符以返回上一层。\nWhen you select stepwise execution, submit Ctrl-D character to return to the last step.\n")
     game_version_default: str = "1524"
     game_dir_latest_default: str = "C:/WeGameApps/英雄联盟"
     intermediate_dir_latest_default: str = "D:/Workspace/LoL-Wad-Extract-Tencent/Data/latest"
@@ -707,20 +707,20 @@ def main():
             if allTextExtract:
                 copy_text = extract_wad = True
             #运行主要流程（Run main procedures）
-            logPrint("第一步：提取游戏目录中的文件。\nStep 1: Extract files from the game directory.", print_time = True)
+            logPrint("第一阶段：提取游戏目录中的文件。\nPhase 1: Extract files from the game directory.", print_time = True)
             extract_data_resource(game_dir = game_dir, target_dir = intermediate_dir, copy_text = copy_text, extract_wad = extract_wad)
-            logPrint("第二步：转换二进制文件。\nStep 2: Convert binary files.", print_time = True)
+            logPrint("第二阶段：转换二进制文件。\nPhase 2: Convert binary files.", print_time = True)
             convert_bin_files(extract_dir = intermediate_dir, game_version = game_version)
-            logPrint("第三步：转换文本文件。\nStep 3: Convert text files.", print_time = True)
+            logPrint("第三阶段：转换文本文件。\nPhase 3: Convert text files.", print_time = True)
             format_text_files(extract_dir = intermediate_dir, target_dir = target_dir)
-            logPrint("第四步：删除中间文件。\nStep 4: Delete intermediate files.", print_time = True)
+            logPrint("第四阶段：删除中间文件。\nPhase 4: Delete intermediate files.", print_time = True)
             delete_intermediate_files(extract_dir = intermediate_dir)
         elif mode[0] == "3":
             #参数初始化（Parameter initialization）
             copy_text = extract_wad = False
             #参数设置（Parameter configuration）
             #运行主要流程（Run main procedures）
-            logPrint("第一步：提取游戏目录中的文件。\nStep 1: Extract files from the game directory.", print_time = True)
+            logPrint("第一阶段：提取游戏目录中的文件。\nPhase 1: Extract files from the game directory.", print_time = True)
             logPrint("请选择要提取的文件：\n0\t返回上一层（Return to the last step）\n1\t所有文本文件（All text files）\n2\t仅外部文本文件（Only external text files）\n3\t仅wad内文本文件（Only within-wad text files）\n4\t跳过此步骤（Skip this step）")
             while True:
                 back: bool = False
@@ -755,7 +755,7 @@ def main():
                 if back:
                     logPrint(behavior_str)
                     continue
-            logPrint("第二步：转换二进制文件。\nStep 2: Convert binary files.", print_time = True)
+            logPrint("第二阶段：转换二进制文件。\nPhase 2: Convert binary files.", print_time = True)
             convert_bin_files()
             logPrint('按回车键以继续，或者输入任意非空字符串以返回上一层。\nPress Enter to continue, or submit any non-empty string to return to the last step.')
             back_str = logInput()
@@ -763,9 +763,9 @@ def main():
             if back:
                 logPrint(behavior_str)
                 continue
-            logPrint("第三步：转换文本文件。\nStep 3: Convert text files.", print_time = True)
+            logPrint("第三阶段：转换文本文件。\nStep 3: Convert text files.", print_time = True)
             format_text_files()
-            logPrint("转换完成。请手动删除第一步和第二步在您指定的目录下产生的中间文件以释放空间。按回车键继续。\nConvert finished. Please clear the intermediate files generated during Steps 1 and 2 under the specified directory by yourself to save space. Press Enter to continue.")
+            logPrint("转换完成。请手动删除第一阶段和第二阶段在您指定的目录下产生的中间文件以释放空间。按回车键继续。\nConvert finished. Please clear the intermediate files generated during Phases 1 and 2 under the specified directory by yourself to save space. Press Enter to continue.")
             logInput()
         else:
             logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
