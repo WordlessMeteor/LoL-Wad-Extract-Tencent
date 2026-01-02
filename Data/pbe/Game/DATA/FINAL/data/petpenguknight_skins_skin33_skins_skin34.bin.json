@@ -1,0 +1,178 @@
+{
+    "Characters/PetPenguKnight/Themes/Set5LaunchBattlePass/Root/Materials/Spiritfire_Hair_inst": {
+        "name": "Characters/PetPenguKnight/Themes/Set5LaunchBattlePass/Root/Materials/Spiritfire_Hair_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/PetPenguKnight/Themes/Set5LaunchBattlePass/PetPenguKnight_Set5LaunchBattlePass_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gredient_Texture",
+                "texturePath": "ASSETS/Characters/PetPenguKnight/Themes/Set5LaunchBattlePass/Particles/PetPenguKnight_Set5_Hair_Gradient.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "ASSETS/Characters/Amumu/Skins/Skin17/Amumu_Skin17_MASK_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Bloom_Masks",
+                "texturePath": "ASSETS/Characters/PetPenguKnight/Themes/Set5LaunchBattlePass/Particles/PetPenguKnight_Set5_Hair_BloomMask.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Additive_Mask_Texture",
+                "texturePath": "ASSETS/Characters/PetPenguKnight/Themes/Set5LaunchBattlePass/Particles/PetPenguKnight_Set5_Hair_AddMask.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Color_Fresnel",
+                "value": [
+                    1.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaFresnel_Size",
+                "value": [
+                    0.10999999940395355,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "AlphaFresnel_Bias",
+                "value": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "X_Scale",
+                "value": [
+                    1.6758323907852173,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Y_Scale",
+                "value": [
+                    1.25,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "X_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Y_Speed",
+                "value": [
+                    0.550000011920929,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color1",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.7499961853027344,
+                    0.5499961972236633
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color2",
+                "value": [
+                    0.0,
+                    0.9100022912025452,
+                    0.609994649887085,
+                    0.5000076293945312
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.4749999940395355,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ADDITIVE_PANNER",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Harrowing_Base",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": []
+}

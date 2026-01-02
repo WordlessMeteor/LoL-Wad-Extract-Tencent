@@ -1,0 +1,95 @@
+{
+    "Characters/TFT4_Spirit_Wisp/Skins/Skin0/Materials/Diffuse_Alpha_add_inst": {
+        "name": "Characters/TFT4_Spirit_Wisp/Skins/Skin0/Materials/Diffuse_Alpha_add_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT4_Spirit_Wisp/Skins/Base/TFT4_Spirit_Wisp_Light_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Noise_Clouds_01.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Alpha_Offset",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha_add",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Alpha_Offset",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mOperator": 3,
+                            "mValueA": {
+                                "mValue": 0.5,
+                                "__type": "FloatLiteralMaterialDriver"
+                            },
+                            "mValueB": {
+                                "mKeyName": "FadeValue",
+                                "__type": "GetMapPropFloatDynamicMaterialFloatDriver"
+                            },
+                            "__type": "FloatComparisonMaterialDriver"
+                        },
+                        "mOnValue": -1.0,
+                        "mOffValue": 1.0,
+                        "mTurnOnTimeSec": 2.5,
+                        "mTurnOffTimeSec": 1.5,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": []
+}

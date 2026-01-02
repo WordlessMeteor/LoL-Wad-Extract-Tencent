@@ -1,0 +1,116 @@
+{
+    "Characters/ZedShadow/Skins/Skin31/Materials/HKG_Eyes_Blink_Mat_Zed_inst": {
+        "name": "Characters/ZedShadow/Skins/Skin31/Materials/HKG_Eyes_Blink_Mat_Zed_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Eyelid_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/ZedShadow/Skins/Skin31/ZedShadow_Skin31_ShadowEyes_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Eyes_Mask",
+                "texturePath": "ASSETS/Characters/ZedShadow/Skins/Skin31/ZedShadow_Skin31_EyesMask_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Blink_Texture",
+                "texturePath": "ASSETS/Characters/ZedShadow/Skins/Skin31/ZedShadow_Skin31_EyesBlink_TX_CM.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TimeOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "eyelid_color",
+                "value": [
+                    0.8627451062202454,
+                    0.14901961386203766,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blink_speed",
+                "value": [
+                    0.05000000074505806,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ControlAll",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.49803921580314636,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_EYELID_TEX",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/HKG_Eyes_Blink_Mat",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": []
+}

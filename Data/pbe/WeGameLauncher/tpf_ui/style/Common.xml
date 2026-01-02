@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UIStyles>
+    
+    <Control Name="CommonCheckBox">
+        <Style Name="BoxStyle">
+            <Properties>
+                <Property Name="Image" Value="client_mainframe\checkbox\checkbox_normal.png" />
+                <Property Name="ImageChecked" Value="client_mainframe\checkbox\checkbox_sel_normal.png" />
+                <Property Name="ImageDisable" Value="client_mainframe\checkbox\checkbox_disable.png" />
+                <Property Name="ImageDisableChecked" Value="client_mainframe\checkbox\checkbox_sel_disable.png" />
+                <Property Name="ImageHover" Value="client_mainframe\checkbox\checkbox_hover.png.png" />
+                <Property Name="ImageHoverChecked" Value="client_mainframe\checkbox\checkbox_sel_hover.png" />
+            </Properties>
+        </Style>
+
+        <Style Name="RadioStyle">
+            <Properties>
+                <Property Name="Image" Value="client_mainframe\checkbox\radio_normal.png" />
+                <Property Name="ImageChecked" Value="client_mainframe\checkbox\radio_sel_normal.png" />
+                <Property Name="ImageDisable" Value="client_mainframe\checkbox\radio_disable.png" />
+                <Property Name="ImageDisableChecked" Value="client_mainframe\checkbox\radio_sel_disable.png" />
+                <Property Name="ImageHover" Value="client_mainframe\checkbox\radio_hover.png" />
+                <Property Name="ImageHoverChecked" Value="client_mainframe\checkbox\radio_sel_hover.png" />
+            </Properties>
+        </Style>
+
+    </Control>
+
+    <!-- 通用按钮 -->
+    <Control Name="CommonBtn">
+        <!-- 默认按钮height=26px 白色 -->
+        <Style Name="NormalBtnStyle">
+            <Properties>
+                <Property Name="Background" Value="9IMAGES:client_mainframe\normla_btn_small.png?0,0,12,12;client_mainframe\normla_btn_small.png?15,0,27,12;client_mainframe\normla_btn_small.png?30,0,42,12;client_mainframe\normla_btn_small.png?0,15,12,17;client_mainframe\normla_btn_small.png?15,15,27,17;client_mainframe\normla_btn_small.png?30,15,42,17;client_mainframe\normla_btn_small.png?0,20,12,32;client_mainframe\normla_btn_small.png?15,20,27,32;client_mainframe\normla_btn_small.png?30,20,42,32;Tile;0;" />
+                <Property Name="BackgroundHover" Value="9IMAGES:client_mainframe\normla_btn_small.png?0,42,12,54;client_mainframe\normla_btn_small.png?15,42,27,54;client_mainframe\normla_btn_small.png?30,42,42,54;client_mainframe\normla_btn_small.png?0,57,12,59;client_mainframe\normla_btn_small.png?15,57,27,59;client_mainframe\normla_btn_small.png?30,57,42,59;client_mainframe\normla_btn_small.png?0,62,12,74;client_mainframe\normla_btn_small.png?15,62,27,74;client_mainframe\normla_btn_small.png?30,62,42,74;Tile;0;" />
+                <Property Name="BackgroundPressed" Value="9IMAGES:client_mainframe\normla_btn_small.png?0,0,12,12;client_mainframe\normla_btn_small.png?15,0,27,12;client_mainframe\normla_btn_small.png?30,0,42,12;client_mainframe\normla_btn_small.png?0,15,12,17;client_mainframe\normla_btn_small.png?15,15,27,17;client_mainframe\normla_btn_small.png?30,15,42,17;client_mainframe\normla_btn_small.png?0,20,12,32;client_mainframe\normla_btn_small.png?15,20,27,32;client_mainframe\normla_btn_small.png?30,20,42,32;Tile;0;" />
+                <Property Name="BackgroundDisable" Value="9IMAGES:client_mainframe\normla_btn_small.png?0,84,12,96;client_mainframe\normla_btn_small.png?15,84,27,96;client_mainframe\normla_btn_small.png?30,84,42,96;client_mainframe\normla_btn_small.png?0,99,12,101;client_mainframe\normla_btn_small.png?15,99,27,101;client_mainframe\normla_btn_small.png?30,99,42,101;client_mainframe\normla_btn_small.png?0,104,12,116;client_mainframe\normla_btn_small.png?15,104,27,116;client_mainframe\normla_btn_small.png?30,104,42,116;Tile;0;" />
+                <Property Name="TextColor" Value="0x3c3c3c" />
+                <Property Name="TextColorHover" Value="0x3c3c3c" />
+                <Property Name="TextColorPressed" Value="0x3c3c3c" />
+                <Property Name="TextColorDisable" Value="0xdcdcdc" />
+            </Properties>
+        </Style>
+
+        <!-- 高亮按钮 黄色-->
+        <Style Name="HighLightBtnStyle">
+            <Properties>
+                <Property Name="Background" Value="9IMAGES:client_mainframe\highlight_btn_small.png?0,0,12,12;client_mainframe\highlight_btn_small.png?15,0,27,12;client_mainframe\highlight_btn_small.png?30,0,42,12;client_mainframe\highlight_btn_small.png?0,15,12,17;client_mainframe\highlight_btn_small.png?15,15,27,17;client_mainframe\highlight_btn_small.png?30,15,42,17;client_mainframe\highlight_btn_small.png?0,20,12,32;client_mainframe\highlight_btn_small.png?15,20,27,32;client_mainframe\highlight_btn_small.png?30,20,42,32;Tile;0;" />
+                <Property Name="BackgroundHover" Value="9IMAGES:client_mainframe\highlight_btn_small.png?0,42,12,54;client_mainframe\highlight_btn_small.png?15,42,27,54;client_mainframe\highlight_btn_small.png?30,42,42,54;client_mainframe\highlight_btn_small.png?0,57,12,59;client_mainframe\highlight_btn_small.png?15,57,27,59;client_mainframe\highlight_btn_small.png?30,57,42,59;client_mainframe\highlight_btn_small.png?0,62,12,74;client_mainframe\highlight_btn_small.png?15,62,27,74;client_mainframe\highlight_btn_small.png?30,62,42,74;Tile;0;" />
+                <Property Name="BackgroundPressed" Value="9IMAGES:client_mainframe\highlight_btn_small.png?0,0,12,12;client_mainframe\highlight_btn_small.png?15,0,27,12;client_mainframe\highlight_btn_small.png?30,0,42,12;client_mainframe\highlight_btn_small.png?0,15,12,17;client_mainframe\highlight_btn_small.png?15,15,27,17;client_mainframe\highlight_btn_small.png?30,15,42,17;client_mainframe\highlight_btn_small.png?0,20,12,32;client_mainframe\highlight_btn_small.png?15,20,27,32;client_mainframe\highlight_btn_small.png?30,20,42,32;Tile;0;" />
+                <Property Name="BackgroundDisable" Value="9IMAGES:client_mainframe\highlight_btn_small.png?0,84,12,96;client_mainframe\highlight_btn_small.png?15,84,27,96;client_mainframe\highlight_btn_small.png?30,84,42,96;client_mainframe\highlight_btn_small.png?0,99,12,101;client_mainframe\highlight_btn_small.png?15,99,27,101;client_mainframe\highlight_btn_small.png?30,99,42,101;client_mainframe\highlight_btn_small.png?0,104,12,116;client_mainframe\highlight_btn_small.png?15,104,27,116;client_mainframe\highlight_btn_small.png?30,104,42,116;Tile;0;" />
+                <Property Name="TextColor" Value="0x3c3c3c" />
+                <Property Name="TextColorHover" Value="0x3c3c3c" />
+                <Property Name="TextColorPressed" Value="0x3c3c3c" />
+                <Property Name="TextColorDisable" Value="0xdcdcdc" />
+            </Properties>
+        </Style>
+        
+        <!-- 小按钮height=20px 白色 -->
+        <Style Name="LittleNormalBtnStyle">
+            <Properties>
+                <Property Name="Background" Value="3HIMAGES:client_mainframe\sys_setting.png?97,377,117,397;client_mainframe\sys_setting.png?127,377,147,397;client_mainframe\sys_setting.png?157,377,176,397;Center;null;" />
+                <Property Name="BackgroundHover" Value="3HIMAGES:client_mainframe\sys_setting.png?97,411,117,431;client_mainframe\sys_setting.png?127,411,147,431;client_mainframe\sys_setting.png?157,411,176,431;Center;null;" />
+                <Property Name="BackgroundPressed" Value="3HIMAGES:client_mainframe\sys_setting.png?97,445,117,465;client_mainframe\sys_setting.png?127,445,146,465;client_mainframe\sys_setting.png?157,445,177,465;Center;null;" />
+                <Property Name="BackgroundDisable" Value="3HIMAGES:client_mainframe\sys_setting.png?97,479,117,499;client_mainframe\sys_setting.png?127,479,147,499;client_mainframe\sys_setting.png?157,479,176,499;Center;null;" />
+                <Property Name="TextColor" Value="0x3c3c3c" />
+                <Property Name="TextColorHover" Value="0x3c3c3c" />
+                <Property Name="TextColorPressed" Value="0x3c3c3c" />
+                <Property Name="TextColorDisable" Value="0xdcdcdc" />
+            </Properties>
+        </Style>
+
+        <Style Name="BigNormalBtnStyle">
+            <Properties>
+                <Property Name="Background" Value="9IMAGES:client_mainframe\normal_btn_big.png?0,0,16,16;client_mainframe\normal_btn_big.png?19,0,35,16;client_mainframe\normal_btn_big.png?38,0,54,16;client_mainframe\normal_btn_big.png?0,19,16,21;client_mainframe\normal_btn_big.png?19,19,35,21;client_mainframe\normal_btn_big.png?38,19,54,21;client_mainframe\normal_btn_big.png?0,24,16,40;client_mainframe\normal_btn_big.png?19,24,35,40;client_mainframe\normal_btn_big.png?38,24,54,40;Tile;0;" />
+                <Property Name="BackgroundHover" Value="9IMAGES:client_mainframe\normal_btn_big.png?0,46,16,62;client_mainframe\normal_btn_big.png?19,46,35,62;client_mainframe\normal_btn_big.png?38,46,54,62;client_mainframe\normal_btn_big.png?0,65,16,67;client_mainframe\normal_btn_big.png?19,65,35,67;client_mainframe\normal_btn_big.png?38,65,54,67;client_mainframe\normal_btn_big.png?0,70,16,86;client_mainframe\normal_btn_big.png?19,70,35,86;client_mainframe\normal_btn_big.png?38,70,54,86;Tile;0;" />
+                <Property Name="BackgroundPressed" Value="9IMAGES:client_mainframe\normal_btn_big.png?0,0,16,16;client_mainframe\normal_btn_big.png?19,0,35,16;client_mainframe\normal_btn_big.png?38,0,54,16;client_mainframe\normal_btn_big.png?0,19,16,21;client_mainframe\normal_btn_big.png?19,19,35,21;client_mainframe\normal_btn_big.png?38,19,54,21;client_mainframe\normal_btn_big.png?0,24,16,40;client_mainframe\normal_btn_big.png?19,24,35,40;client_mainframe\normal_btn_big.png?38,24,54,40;Tile;0;" />
+                <Property Name="BackgroundDisable" Value="9IMAGES:client_mainframe\normal_btn_big.png?0,92,16,108;client_mainframe\normal_btn_big.png?19,92,35,108;client_mainframe\normal_btn_big.png?38,92,54,108;client_mainframe\normal_btn_big.png?0,111,16,113;client_mainframe\normal_btn_big.png?19,111,35,113;client_mainframe\normal_btn_big.png?38,111,54,113;client_mainframe\normal_btn_big.png?0,116,16,132;client_mainframe\normal_btn_big.png?19,116,35,132;client_mainframe\normal_btn_big.png?38,116,54,132;Tile;0;" />
+                <Property Name="TextColor" Value="0x3c3c3c" />
+                <Property Name="TextColorHover" Value="0x3c3c3c" />
+                <Property Name="TextColorPressed" Value="0x3c3c3c" />
+                <Property Name="TextColorDisable" Value="0xdcdcdc" />
+            </Properties>
+        </Style>
+
+        <Style Name="SquareBtnStyle">
+            <Properties>
+                <Property Name="Background" Value="9IMAGES:client_mainframe\square_btn.png?1,1,5,9;client_mainframe\square_btn.png?6,1,7,9;client_mainframe\square_btn.png?8,1,12,9;client_mainframe\square_btn.png?1,10,5,12;client_mainframe\square_btn.png?6,10,7,12;client_mainframe\square_btn.png?8,10,12,12;client_mainframe\square_btn.png?1,13,5,21;client_mainframe\square_btn.png?6,13,7,21;client_mainframe\square_btn.png?8,13,12,21;Tile;0;" />
+                <Property Name="BackgroundHover" Value="9IMAGES:client_mainframe\square_btn.png?14,1,18,9;client_mainframe\square_btn.png?19,1,20,9;client_mainframe\square_btn.png?21,1,25,9;client_mainframe\square_btn.png?14,10,18,12;client_mainframe\square_btn.png?19,10,20,12;client_mainframe\square_btn.png?21,10,25,12;client_mainframe\square_btn.png?14,13,18,21;client_mainframe\square_btn.png?19,13,20,21;client_mainframe\square_btn.png?21,13,25,21;Tile;0;" />
+                <Property Name="BackgroundPressed" Value="9IMAGES:client_mainframe\square_btn.png?1,1,5,9;client_mainframe\square_btn.png?6,1,7,9;client_mainframe\square_btn.png?8,1,12,9;client_mainframe\square_btn.png?1,10,5,12;client_mainframe\square_btn.png?6,10,7,12;client_mainframe\square_btn.png?8,10,12,12;client_mainframe\square_btn.png?1,13,5,21;client_mainframe\square_btn.png?6,13,7,21;client_mainframe\square_btn.png?8,13,12,21;Tile;0;" />
+                <Property Name="TextColor" Value="0x3c3c3c" />
+                <Property Name="TextColorHover" Value="0x3c3c3c" />
+                <Property Name="TextColorPressed" Value="0x3c3c3c" />
+                <Property Name="TextColorDisable" Value="0xdcdcdc" />
+            </Properties>
+        </Style>
+
+    </Control>
+
+    <!-- 进度条 -->
+    <Control Name="ProgressBar">
+        <!-- 进度容器样式 -->
+        <Style Name="ProgressBarCntStyle">
+            <Properties>
+                <Property Name="Background" Value="3HIMAGES:client_mainframe\sys_setting.png?89,12,99,21;client_mainframe\sys_setting.png?109,12,119,21;client_mainframe\sys_setting.png?129,12,139,21;Stretch;null;" />
+            </Properties>
+        </Style>
+        
+        <!-- 进度样式 -->
+        <Style Name="ProgressLevelStyle">
+            <Properties>
+                <Property Name="LevelTopImage" Value="3HIMAGES:client_mainframe\sys_setting.png?89,33,99,42;client_mainframe\sys_setting.png?109,33,119,42;client_mainframe\sys_setting.png?129,33,139,42;Stretch;null;" />
+            </Properties>
+        </Style>
+    </Control>
+
+    <!-- 通用容器 -->
+    <Control Name="CommonContainer">
+        <!-- 白色圆角容器样式 -->
+        <Style Name="WhiteRoundedRectStyle">
+            <Properties>
+                <Property Name="Background" Value="9IMAGES:client_tips\9patch.png?3,0,23,20;client_tips\9patch.png?24,0,44,20;client_tips\9patch.png?45,0,65,20;client_tips\9patch.png?3,21,23,41;client_tips\9patch.png?24,21,44,41;client_tips\9patch.png?45,21,65,41;client_tips\9patch.png?3,42,23,62;client_tips\9patch.png?24,42,44,62;client_tips\9patch.png?45,42,65,62;Center;0;" />
+            </Properties>
+        </Style>
+
+        <!-- 灰色圆角容器样式 -->
+        <Style Name="GreyRoundedRectStyle">
+            <Properties>
+                <Property Name="Background" Value="9IMAGES:client_tips\9patch.png?69,0,89,20;client_tips\9patch.png?90,0,110,20;client_tips\9patch.png?111,0,131,20;client_tips\9patch.png?69,21,89,41;client_tips\9patch.png?90,21,110,41;client_tips\9patch.png?111,21,131,41;client_tips\9patch.png?69,42,89,62;client_tips\9patch.png?90,42,110,62;client_tips\9patch.png?111,42,131,62;Center;0;" />
+            </Properties>
+        </Style>
+    </Control>
+
+    
+
+    <!-- 弹窗样式 -->
+    <Control Name="PopupWnd">
+        <Style Name="PopupWndStyle">
+            <Properties>
+                <Property Name="Background" Value="9IMAGES:client_social\socail_maframe.png?16,6,56,46;client_social\socail_maframe.png?66,6,76,46;client_social\socail_maframe.png?86,6,126,46;client_social\socail_maframe.png?16,62,26,72;client_social\socail_maframe.png?66,62,76,72;client_social\socail_maframe.png?116,62,126,72;client_social\socail_maframe.png?16,82,26,92;client_social\socail_maframe.png?66,82,76,92;client_social\socail_maframe.png?116,82,126,92;Center;0;" />
+                <Property Name="Caption" Value="WeGame" />
+            </Properties>
+        </Style>
+
+        <Style Name="PopupWndNoLogoStyle">
+            <Properties>
+                <Property Name="Background" Value="9IMAGES:client_social\socail_maframe.png?16,6,56,46;client_social\socail_maframe.png?66,6,76,46;client_social\socail_maframe.png?86,6,126,46;client_social\socail_maframe.png?16,62,26,72;client_social\socail_maframe.png?66,62,76,72;client_social\socail_maframe.png?116,62,126,72;client_social\socail_maframe.png?16,82,26,92;client_social\socail_maframe.png?66,82,76,92;client_social\socail_maframe.png?116,82,126,92;Center;0;" />
+                <Property Name="Icon" Value="app_icon.ico" />
+                <Property Name="Caption" Value="WeGame" />
+            </Properties>
+        </Style>
+
+      <Style Name="PopupWndNoTitleBarStyle">
+        <Properties>
+            <Property Name="Background" Value="9IMAGES:client_social\socail_maframe.png?16,6,56,46;client_social\socail_maframe.png?66,6,76,46;client_social\socail_maframe.png?86,6,126,46;client_social\socail_maframe.png?16,62,26,72;client_social\socail_maframe.png?66,62,76,72;client_social\socail_maframe.png?116,62,126,72;client_social\socail_maframe.png?16,82,26,92;client_social\socail_maframe.png?66,82,76,92;client_social\socail_maframe.png?116,82,126,92;Center;0;" />
+        </Properties>
+      </Style>
+	  
+	  <Style Name="PopupWndTitleBarStyle">
+        <Properties>
+            <Property Name="Background" Value="3HIMAGES:client_popup_wnd\title_bar.png?20,6,56,86;client_popup_wnd\title_bar.png?66,6,68,86;client_popup_wnd\title_bar.png?86,6,124,86;Tile;null;" />
+        </Properties>
+      </Style>
+	  
+	  <Style Name="PopupWndLogoStyle">
+        <Properties>
+          <Property Name="Background" Value="ONEIMAGE:client_popup_wnd\logo.png;Stretch,0" />
+		  <Property Name="Width" Value="20" />
+		  <Property Name="Height" Value="20" />
+		  <Property Name="AnchorEx" Value="LEFT,VCENTER"/>
+		  <Property Name="MarginEx" Value="12,0,0,0"/>
+        </Properties>
+      </Style>
+
+        <!-- 弹窗标题 -->
+        <Style Name="TitleTxtStyle">
+            <Properties>
+                <Property Name="XOffset" Value="0" />
+                <Property Name="YOffset" Value="0" />
+                <Property Name="Width" Value="200" />
+                <Property Name="Height" Value="26" />
+                <Property Name="TextColor" Value="0xf0f0f0" />
+                <Property Name="AnchorEx" Value="LEFT,VCENTER"/>
+                 <Property Name="MarginEx" Value="35,0,0,0"/>
+                <Property Name="VerticalAlignMode" Value="Center" />
+            </Properties>
+        </Style>
+        
+        <!-- 关闭弹窗按钮 -->
+        <Style Name="CloseBtnStyle">
+            <Properties>
+                <Property Name="XOffset" Value="0" />
+                <Property Name="YOffset" Value="0" />
+                <Property Name="Width" Value="24" />
+                <Property Name="Height" Value="20" />
+                <Property Name="AnchorEx" Value="RIGHT,VCENTER"/>
+                <Property Name="MarginEx" Value="0,0,8,0"/>
+                <Property Name="Background" Value="ONEIMAGE:client_mainframe\top_title\Close_Normal.png;Stretch;0"/>
+                <Property Name="BackgroundHover" Value="ONEIMAGE:client_mainframe\top_title\Close_Hover.png;Stretch;0"/>
+                <Property Name="BackgroundPressed" Value="ONEIMAGE:client_mainframe\top_title\Close_Press.png;Stretch;0"/>
+                <Property Name="BackgroundDisable" Value="ONEIMAGE:client_mainframe\top_title\Close_Disabled.png;Stretch;0" />
+            </Properties>
+        </Style>
+
+        <!-- TitleBar 的关闭按钮-->
+        <Style Name="CloseBtnInTitleBarStyle">
+            <Properties>
+                <Property Name="XOffset" Value="0" />
+                <Property Name="YOffset" Value="0" />
+                <Property Name="Width" Value="24" />
+                <Property Name="Height" Value="20" />
+                <Property Name="MarginEx" Value="0,0,4,0" />
+                <Property Name="AnchorEx" Value="RIGHT,VCENTER" />
+                <Property Name="TransRegionEventTransparent" Value="false"/>
+                <Property Name="Background" Value="ONEIMAGE:client_mainframe\top_title\Close_Normal.png;Stretch;0"/>
+                <Property Name="BackgroundHover" Value="ONEIMAGE:client_mainframe\top_title\Close_Hover.png;Stretch;0"/>
+                <Property Name="BackgroundPressed" Value="ONEIMAGE:client_mainframe\top_title\Close_Press.png;Stretch;0"/>
+                <Property Name="BackgroundDisable" Value="ONEIMAGE:client_mainframe\top_title\Close_Disabled.png;Stretch;0" />
+            </Properties>
+        </Style>
+        <!-- TitleBar 的最小化按钮-->
+        <Style Name="MiniInTitleBarBtnStyle">
+            <Properties>
+                <Property Name="XOffset" Value="0" />
+                <Property Name="YOffset" Value="0" />
+                <Property Name="Width" Value="24" />
+                <Property Name="Height" Value="20" />
+                <Property Name="MarginEx" Value="0,0,32,0" />
+                <Property Name="AnchorEx" Value="RIGHT,VCENTER" />
+                <Property Name="TransRegionEventTransparent" Value="false"/>
+                <Property Name="Background" Value="ONEIMAGE:client_mainframe\top_title\Min_Normal.png;Stretch;0"/>
+                <Property Name="BackgroundHover" Value="ONEIMAGE:client_mainframe\top_title\Min_Hover.png;Stretch;0"/>
+                <Property Name="BackgroundPressed" Value="ONEIMAGE:client_mainframe\top_title\Min_Press.png?Stretch;0"/>
+                <Property Name="BackgroundDisable" Value="ONEIMAGE:client_mainframe\top_title\Min_Disabled.png?Stretch;0" />
+            </Properties>
+        </Style>
+
+        <!-- 无阴影窗体样式 -->
+        <Style Name="PopupWndStyleNoShadow">
+            <Properties>
+                <Property Name="XOffset" Value="0" />
+                <Property Name="YOffset" Value="0" />
+                <Property Name="Width" Value="1084" />
+                <Property Name="Height" Value="632" />
+                <Property Name="Icon" Value="app_icon.ico" />
+                <Property Name="InitPosition" Value="center" />
+                <Property Name="CaptionHeight" Value="40"/>
+                <Property Name="RegionSet" Value="ROUNDRECT:4,4"/>
+                <Property Name="Background" Value="COLOR:RGB:0,0,0;"/>
+            </Properties>
+        </Style>
+    </Control>
+
+    <!-- 分割线样式 -->
+    <Control Name="SeparateLine">
+        <Style Name="SeparateLineStyle">
+            <Properties>
+                <Property Name="Background" Value="COLOR:RGB:0,0,0" />
+                <Property Name="Alpha" Value="21" />
+            </Properties>
+        </Style>
+    </Control>
+
+    <!-- checkbox样式 -->
+    <Control Name="CheckBox">
+        <Style Name="CheckBoxStyle">
+            <Properties>
+                <Property Name="Image" Value="client_mainframe\checkbox\checkbox_normal.png" />
+                <Property Name="ImageChecked" Value="client_mainframe\checkbox\checkbox_sel_normal.png" />
+                <Property Name="ImageDisable" Value="client_mainframe\checkbox\checkbox_disable.png" />
+                <Property Name="ImageDisableChecked" Value="client_mainframe\checkbox\checkbox_sel_disable.png" />
+                <Property Name="ImageHover" Value="client_mainframe\checkbox\checkbox_hover.png.png" />
+                <Property Name="ImageHoverChecked" Value="client_mainframe\checkbox\checkbox_sel_hover.png" />
+                <Property Name="TextColor" Value="0x3C3C3C" />
+                <Property Name="TextColorDisable" Value="0xcccccc" />
+                <Property Name="TextColorHover" Value="0x3C3C3C" />
+                <Property Name="TextColorPressed" Value="0x3C3C3C" />
+                <Property Name="LogFont" Value="-14;0;0;0;400;0;0;0;134;3;2;1;34;微软雅黑" />
+                <Property Name="AlwaysOnBottom" Value="true"/>
+            </Properties>
+        </Style>
+        <Style Name="RadioStyle">
+            <Properties>
+                <Property Name="Image" Value="client_mainframe\checkbox\radio_normal.png" />
+                <Property Name="ImageChecked" Value="client_mainframe\checkbox\radio_sel_normal.png" />
+                <Property Name="ImageDisable" Value="client_mainframe\checkbox\radio_disable.png" />
+                <Property Name="ImageDisableChecked" Value="client_mainframe\checkbox\radio_sel_disable.png" />
+                <Property Name="ImageHover" Value="client_mainframe\checkbox\radio_hover.png" />
+                <Property Name="ImageHoverChecked" Value="client_mainframe\checkbox\radio_sel_hover.png" />
+                <Property Name="TextColor" Value="0x3C3C3C" />
+                <Property Name="TextColorDisable" Value="0xdcdcdc" />
+                <Property Name="TextColorHover" Value="0x3C3C3C" />
+                <Property Name="TextColorPressed" Value="0x3C3C3C" />
+                <Property Name="LogFont" Value="-14;0;0;0;400;0;0;0;134;3;2;1;34;微软雅黑" />
+                 <Property Name="AlwaysOnBottom" Value="true"/>
+            </Properties>
+        </Style>
+    </Control>
+
+    <!-- 编辑框样式 -->
+    <Control Name="EditBox">
+        <Style Name="EditBoxStyle">
+            <Properties>
+                <Property Name="TextColor" Value="0x3C3C3C" />
+                <Property Name="BorderColor" Value="0xAAAAAA" />
+                <Property Name="CaretColor" Value="0xAAAAAA" />
+            </Properties>
+        </Style>
+    </Control>
+
+    <!-- 通用Tips样式 -->
+    <Control Name="CommonTips">
+        <Style Name="CommonTipsStyle">
+            <Properties>
+                <Property Name="Background" Value="9IMAGES:client_social\socail_maframe.png?16,6,56,46;client_social\socail_maframe.png?66,6,76,46;client_social\socail_maframe.png?86,6,126,46;client_social\socail_maframe.png?16,62,26,72;client_social\socail_maframe.png?66,62,76,72;client_social\socail_maframe.png?116,62,126,72;client_social\socail_maframe.png?16,82,26,92;client_social\socail_maframe.png?66,82,76,92;client_social\socail_maframe.png?116,82,126,92;Center;0;" />
+            </Properties>
+        </Style>
+        
+        <!-- 白色按钮 -->
+        <Style Name="NormalBtn">
+            <Properties>
+                <Property Name="Background" Value="ONEIMAGE:client_tips\btn_00.png;Stretch;null;" />
+                <Property Name="BackgroundHover" Value="ONEIMAGE:client_tips\btn_01.png;Stretch;null;" />
+                <Property Name="BackgroundPressed" Value="ONEIMAGE:client_tips\btn_02.png;Stretch;null;" />
+            </Properties>
+        </Style>
+
+        <!-- 高亮按钮 -->
+        <Style Name="HighLightBtn">
+            <Properties>
+                <Property Name="Background" Value="ONEIMAGE:client_tips\btn2_00.png;Stretch;null;" />
+                <Property Name="BackgroundHover" Value="ONEIMAGE:client_tips\btn2_01.png;Stretch;null;" />
+                <Property Name="BackgroundPressed" Value="ONEIMAGE:client_tips\btn2_02.png;Stretch;null;" />
+            </Properties>
+        </Style>
+        
+        <Style Name="TitleBarStyle">
+            <Properties>
+                <Property Name="Background" Value="ONEIMAGE:client_tips\title_bar.png;Stretch;null;"  />
+                <Property Name="Transparent" Value="true" />
+            </Properties>
+        </Style>
+        
+        <Style Name="TitleBarTxt">
+            <Properties>
+                <Property Name="Background" Value="" />
+            </Properties>
+        </Style>
+
+        <Style Name="TitleBarCloseBtn">
+            <Properties>
+                <Property Name="Background" Value="ONEIMAGE:client_tips\closebtn_00.png;Stretch;0;" />
+                <Property Name="BackgroundHover" Value="ONEIMAGE:client_tips\closebtn_01.png;Stretch;0;" />
+                <Property Name="BackgroundPressed" Value="ONEIMAGE:client_tips\closebtn_02.png;Stretch;0;" />
+            </Properties>
+        </Style>
+        
+        <!-- 提示Icon 4种： 黄/红 !, 对号, i -->
+        <Style Name="TipsIcon_1">
+            <Properties>
+                <Property Name="Background" Value="ONEIMAGE:bottom_bar\tips_icon\yellow_icon.png;Stretch;0;" />
+            </Properties>
+        </Style>
+        <Style Name="TipsIcon_2">
+            <Properties>
+                <Property Name="Background" Value="ONEIMAGE:bottom_bar\tips_icon\red_icon.png;Stretch;0;" />
+            </Properties>
+        </Style>
+        <Style Name="TipsIcon_3">
+            <Properties>
+                <Property Name="Background" Value="ONEIMAGE:bottom_bar\tips_icon\green_icon.png;Stretch;0;" />
+            </Properties>
+        </Style>
+        <Style Name="TipsIcon_4">
+            <Properties>
+                <Property Name="Background" Value="ONEIMAGE:bottom_bar\tips_icon\blue_icon.png;Stretch;0;" />
+            </Properties>
+        </Style>
+
+    </Control>
+
+
+</UIStyles>

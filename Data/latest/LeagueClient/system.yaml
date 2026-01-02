@@ -1,0 +1,52 @@
+---
+app:
+  app_name: LeagueClient
+  local_settings_file: Config/LeagueClientSettings.yaml
+  log_dir: LeagueClient Logs
+  project: leagueclient
+  publisher: riot
+  respawn:
+    command: LeagueClient.exe
+    display_name: League of Legends
+  splash: lol
+  ux_app_bundle_name: League of Legends
+  ux_helper_name: LeagueClientUxHelper
+  ux_name: LeagueClientUx
+build:
+  branch: Releases/15.24
+  patchline: Tencent
+  patchline-visible-name: ''
+custom_landing_url: https://lol.qq.com/client/client_lcu.shtml
+default_region: TENCENT
+patcher:
+  product_refresh_period: 60
+  self_update:
+    executables:
+      exe: LeagueClient.exe
+player_bug_report_url: https://kf.qq.com/touch/kfgames/A1130/v2/PCweb/conf/index.html?scene_id=CSCE20240327092050CIsIBYMh#/home
+products:
+- id: league_of_legends
+  patcher:
+    id: league_of_legends
+region_data:
+  TENCENT:
+    available_locales:
+    - zh_CN
+    - en_US
+    default_locale: zh_CN
+    rso_platform_id: TENCENT
+    servers:
+      payments:
+        payments_host: https://lol.qq.com/pay/pay.html
+      rms:
+        rms_heartbeat_interval_seconds: 60
+      voice:
+        access_token_uri: https://live-vts.lol.qq.com:18088/vts/v1/access_token
+        auth_token_uri: https://live-vts.lol.qq.com:18088/vts/v1/auth_token
+        jwt2gvt_url: https://api.gcloud.qq.com/lol/v1/jwt2gvt
+        provider: gvoice
+        use_external_auth: true
+        voice_domain: gvoice_ch
+        voice_url: null
+    web_region: staging.na
+web_assets_base_path: https://champion.lol.qq.com/

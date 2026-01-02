@@ -1,0 +1,27 @@
+install:
+    cohorts: {}
+    globals:
+        locale: "zh_CN"
+        region: "TENCENT"
+    launcher_server.enabled: false
+    riot-client-auth:
+        home-base-country: "nan"
+    telemetry:
+        ap:
+            disabled_events:
+                riotclient__ClientAction__v15: true
+                riotclient__Error__v5: true
+                riotclient__RSOMobileUIEvent__v1: true
+                riotclient__TimeSample__v4: true
+                rpg__ServiceAvailability__v2: true
+                rpg__ServiceLatency__v2: true
+                schemaless__ExternalWebRequest__v1: true
+        heartbeat_interval: 0
+        heartbeat_products: false
+        installation_id: "sO19Qw=="
+        metrics_enabled: false
+        newrelic_api_key: ""
+        newrelic_events_v2_enabled: false
+        newrelic_metrics_v1_enabled: false
+        newrelic_schemaless_events_v2_enabled: false
+        open_telemetry_sender.enabled: false

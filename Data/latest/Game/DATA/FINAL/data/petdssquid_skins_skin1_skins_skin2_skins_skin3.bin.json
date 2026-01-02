@@ -1,0 +1,230 @@
+{
+    "Characters/PetDSSquid/Themes/Base/Root/Materials/DS_Shader_Skin01": {
+        "name": "Characters/PetDSSquid/Themes/Base/Root/Materials/DS_Shader_Skin01",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/PetDSSquid/Pet_DSSquid_Base_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "SS_Texture",
+                "texturePath": "ASSETS/Characters/Jhin/Skins/Skin05/Particles/Jhin_Skin05_EmpQ_Stars.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask1",
+                "texturePath": "ASSETS/Characters/PetDSSwordGuy/Skins/Skin03/Particles/PetSwordGuy_TX_MASK1.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask2",
+                "texturePath": "ASSETS/Characters/PetDSSwordGuy/Skins/Skin03/Particles/PetSwordGuy_TX_MASK2.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "SS_Scale",
+                "value": [
+                    2.48799991607666,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SS_rate",
+                "value": [
+                    -0.009999999776482582,
+                    0.07999999821186066,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Color",
+                "value": [
+                    1.0,
+                    0.0941176488995552,
+                    0.9098039269447327,
+                    0.729411780834198
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blue_Scale",
+                "value": [
+                    10.0,
+                    10.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Blue_Rate",
+                "value": [
+                    0.35499998927116394,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BloomIntensity",
+                "value": [
+                    1.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dodge_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_LOCAL_SPACE",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Darkstar",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Color",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mAnimationNames": [
+                                "Taunt_loop"
+                            ],
+                            "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                        },
+                        "mColorOn": [
+                            1.0,
+                            1.0,
+                            1.0,
+                            0.501960813999176
+                        ],
+                        "mColorOff": [
+                            1.0,
+                            0.08999770879745483,
+                            0.9100022912025452,
+                            0.7300068736076355
+                        ],
+                        "__type": "ColorChooserMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Fresnel_Size",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mAnimationNames": [
+                                "Taunt_loop"
+                            ],
+                            "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 0.0,
+                        "mOffValue": 0.5,
+                        "mTurnOnTimeSec": 0.0,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "textures": [
+                {
+                    "name": "Diffuse_Texture",
+                    "options": [
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt_loop"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "ASSETS/Characters/PetDSSquid/Pet_DSSquid_Taunt_TX_CM.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                },
+                {
+                    "name": "SS_Texture",
+                    "options": [
+                        {
+                            "driver": {
+                                "mAnimationNames": [
+                                    "Taunt_loop"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "ASSETS/Characters/PetDSSquid/Pet_DSSquid_Taunt_TX_CM.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": []
+}

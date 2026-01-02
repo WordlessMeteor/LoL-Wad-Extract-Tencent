@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gf-config>
+	<typedefs>
+		<typedef file="@this:TypeDef\\BasicTypeDef.xml" type="基础"/>
+		<typedef file="@this:TypeDef\\ExtraTypeDef.xml" type="系统"/>
+		<typedef file="@this:TypeDef\\AppTypeDef.xml" type="应用"/>
+		<typedef file="@this:TypeDef\\AFTypeDef.xml" type="AF"/>
+		<typedef file="@this:TypeDef\\ManualTypeDef.xml" type="手动"/>
+	</typedefs>
+	<colorinfo color="0x74ccff"/>
+	<themes>
+		<theme file="systheme:Config\\Theme.xml"/>
+		<theme file="systheme:Config\\LTVTheme.xml"/>
+    <theme file="systheme:Config\\PLiveTheme.xml"/>
+	</themes>
+	<configs>
+		<config file="systheme:Config\\AppFrameworkConfig.xml"/>
+		<config file="systheme:Config\\ConfigCenterConfig.xml"/>
+		<config file="systheme:Config\\GFConfigAgent.xml"/>
+		<config file="systheme:Config\\CustomFaceMgrConfig.xml"/>
+		<config file="systheme:Config\\GFConfigAgentNewPanel.xml"/>
+		<config file="systheme:Config\\CameraConfig.xml"/>
+		<config file="@thistheme:Config\\Config.xml"/>
+		<config file="systheme:config\\LOLHallConfig.xml"/>
+		<config file="systheme:config\\LTVConfig.xml"/>
+		<config file="systheme:config\\PLiveConfig.xml"/>
+		<config file="systheme:config\\TutorConfig.xml"/>
+		<config file="systheme:config\\SpeedLiveConfig.xml" />
+	</configs>
+	<windows>
+		<xtml window="MainPanel" file="@thisxtml:MainFrame\MainPanel.xml|MainPanel"/>
+		<xtml window="MainMenu" file="@thisxtml:MainMenu\MainMenu.xml|MainMenu"/>
+	</windows>
+</gf-config>

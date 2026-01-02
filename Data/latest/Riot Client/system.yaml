@@ -1,0 +1,60 @@
+---
+allow_insecure_content: true
+allow_run_in_background: false
+app:
+  app_name: Riot Client
+  local_settings_file: RiotClientSettings.yaml
+  log_dir: Riot Client Logs
+  multitenant: true
+  project: Keystone
+  respawn:
+    command: RiotClientServices.exe
+    display_name: Riot Client Services
+  splash: riot
+build:
+  patchline: KeystoneFoundationTencentLeagueLivePublicWin
+  patchline-visible-name: ''
+default_region: TENCENT
+enable_bug_reporter: false
+enable_crashpad: false
+enable_direct_launch: false
+enable_eula: true
+enable_patching: false
+enable_player_feedback_tool: false
+enable_rail_integration_v1: true
+enable_rail_integration_v2: false
+enable_rcrpcs_integration: true
+enable_remoting_trace: false
+enable_riot_login: false
+enable_self_update: false
+enable_system_tray: false
+enable_telemetry: false
+enable_tssapi_integration: true
+expected_partner_launcher_arg: --use-updated-tencent-api
+insecure_tls_versions: true
+launch_ux: false
+partner_product:
+  arguments:
+  - --riotclient-auth-token={remoting-auth-token}
+  - --riotclient-app-port={remoting-app-port}
+  - --riotclient-tencent
+  - --no-rads
+  - --disable-self-update
+  - --region=TENCENT
+  - --locale={locale}
+  executable: LeagueClient.exe
+  id: LoL
+  relative_path: ../LeagueClient
+publisher: tencent
+region_data:
+  TENCENT:
+    available_locales:
+    - en_US
+    - zh_CN
+    default_locale: zh_CN
+    servers: null
+rso-mobile-ui:
+  stay-signed-in: false
+skip_mgc_shortcut_creation: true
+wegame_game_id: 26
+write_data_beside_install_dir: true

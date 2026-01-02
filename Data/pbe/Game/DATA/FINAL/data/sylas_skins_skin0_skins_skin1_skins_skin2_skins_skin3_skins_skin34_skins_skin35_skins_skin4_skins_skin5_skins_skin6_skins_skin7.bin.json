@@ -1,0 +1,129 @@
+{
+    "Characters/Sylas/Skins/Skin0/Particles/Sylas_Base_Recall_Chains": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 0.20000000298023224,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.5,
+                "lifetime": 0.5,
+                "isSingleParticle": 1,
+                "emitterName": "Avatar",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "chain_left",
+                            "chain_right"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.3333333432674408,
+                        0.3333333432674408,
+                        1.0,
+                        0.29019609093666077
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5
+                        ],
+                        "values": [
+                            [
+                                0.3333333432674408,
+                                0.3333333432674408,
+                                1.0,
+                                0.21167244017124176
+                            ],
+                            [
+                                0.3333333432674408,
+                                0.3333333432674408,
+                                1.0,
+                                0.29019609093666077
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "modulationFactor": [
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        180.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.0199999809265137,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Sylas/Skins/Base/Particles/Sylas_Base_W_portalDome_swoosh.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.20000000298023224
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "texDiv": [
+                    1.0,
+                    0.5
+                ],
+                "particleUVScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.699999988079071
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -2.0
+                            ],
+                            [
+                                0.0,
+                                -7.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "IntegratedValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Sylas_Base_Recall_Chains",
+        "particlePath": "Characters/Sylas/Skins/Skin0/Particles/Sylas_Base_Recall_Chains",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": []
+}

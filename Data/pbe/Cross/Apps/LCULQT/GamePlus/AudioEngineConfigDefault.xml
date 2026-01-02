@@ -1,0 +1,44 @@
+<audio-config>
+<config type="AudioQuality" id="1">
+	<param type="SampleRate" value="16000"/>
+	<param type="Channels" value="1"/>
+	<param type="AutoCodec" value="0"/>
+	<param type="AutoBitRate" value="0"/>
+	<param type="CodecType" value="4102"/>
+	<param type="BitRate" value="18000"/>	
+	<param type="Reserved" value="1|23"/>
+</config>
+<config type="AudioQuality" id="2">
+	<param type="SampleRate" value="48000"/>
+	<param type="Channels" value="2"/>
+	<param type="AutoCodec" value="0"/>
+	<param type="AutoBitRate" value="0"/>
+	<param type="CodecType" value="4106"/>
+	<param type="BitRate" value="32000"/>	
+	<param type="Reserved" value="1|23"/>
+</config>
+<config type="JBQuality" id ="1">
+	<param type="JitterDelayDefault" value="240"/>
+	<param type="JitterDelayMin" value="240"/>
+	<param type="JitterDelayMax" value="800"/>
+	<param type="Reserved" value="1|23"/>
+</config>
+<config type="JBQuality" id ="2">
+	<param type="JitterDelayDefault" value="320"/>
+	<param type="JitterDelayMin" value="320"/>
+	<param type="JitterDelayMax" value="800"/>
+	<param type="Reserved" value="1|23"/>
+</config>
+<config type="JBQuality" id ="3">
+	<param type="JitterDelayDefault" value="400"/>
+	<param type="JitterDelayMin" value="400"/>
+	<param type="JitterDelayMax" value="1200"/>
+	<param type="Reserved" value="1|23"/>
+</config>
+
+<config type="CurrentConfig">
+	<relate type="MicOrderAdmin" 	 AudioQualityVal="2" JBQualityVal="3" />
+	<relate type="MicOrderFree" 	 AudioQualityVal="1" JBQualityVal="1" />
+	<relate type="FullQuality" 	 AudioQualityVal="2" JBQualityVal="3" />
+</config>
+</audio-config>
