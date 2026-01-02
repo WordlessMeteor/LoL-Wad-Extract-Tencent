@@ -8,9 +8,9 @@ from cdtb.export import AtlasInfoConverter
 from typing import Any, Literal
 from bs4 import BeautifulSoup
 
-os.makedirs("Update Logs", exist_ok = True)
+os.makedirs("Data/Update Logs", exist_ok = True)
 currentTime = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
-log = open(f"Update Logs/{currentTime}.log", "w", encoding = "utf-8")
+log = open(f"Data/Update Logs/{currentTime}.log", "w", encoding = "utf-8")
 
 def logInput(prompt: str = "", log: _io.TextIOWrapper = log, write_time: bool = True) -> str:
     s = input(prompt)
@@ -151,7 +151,7 @@ def isWadPath(path: str) -> bool:
     ext: str = os.path.splitext(path)[1]
     return ext == ".wad" or path.endswith(".wad.client")
 
-def extract_data_resource(copy_text: bool = True, extract_wad: bool = True) -> None:
+def extract_data_resource(game_dir: str | None = None, target_dir: str | None = None, copy_text: bool = True, extract_wad: bool = True) -> None:
     '''
     将游戏目录中的文件提取到某个临时文件夹。<br>Extract game files into some temporary folder.
     
@@ -160,12 +160,12 @@ def extract_data_resource(copy_text: bool = True, extract_wad: bool = True) -> N
     :param extract_wad: 指示是否提取.wad.client文件和.wad文件中的内容。默认为真。<br>Represents whether to extract content from ".wad.client" and ".wad" files. True by default.
     :type extract_wad: bool
     '''
-    logPrint("请指定游戏目录：\nPlease specify the game directory:")
+    if not bool(game_dir):
+        logPrint("请指定游戏目录：\nPlease specify the game directory:")
     while True:
-        game_dir: str = logInput()
-        if game_dir == "":
-            continue
-        elif game_dir == chr(4):
+        if not bool(game_dir):
+            game_dir = logInput()
+        if game_dir == chr(4):
             return
         elif not os.path.exists(game_dir):
             logPrint("目录不存在。请重新输入。\nPath not found. Please try again.")
@@ -173,9 +173,12 @@ def extract_data_resource(copy_text: bool = True, extract_wad: bool = True) -> N
             logPrint("请输入一个文件夹。\nPlease enter a folder.")
         else:
             break
-    logPrint("请指定要导出的文件目录：\nPlease specify the target directory:")
+        game_dir = logInput()
+    if not bool(target_dir):
+        logPrint("请指定要导出的文件目录：\nPlease specify the target directory:")
     while True:
-        target_dir = logInput()
+        if not bool(target_dir):
+            target_dir = logInput()
         if target_dir == "":
             continue
         elif target_dir == chr(4):
@@ -189,6 +192,7 @@ def extract_data_resource(copy_text: bool = True, extract_wad: bool = True) -> N
             os.makedirs(target_dir)
             logPrint("已创建文件夹。\nFolder created.")
             break
+        target_dir = logInput()
     logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
     patterns_to_skip: list[str] = [
         r"Cross/coach/agent/lol_ai_coach/Python311/.*", #Python3.11的标准文件无需查看其变更（Python 3.11's standard files don't need inspecting any change）
@@ -252,13 +256,15 @@ def extract_data_resource(copy_text: bool = True, extract_wad: bool = True) -> N
             logPrint(i)
         logPrint("请尝试使用黑曜石应用检查以上文件是否存在对应的文件树。如果黑曜石能够正常运行，请提交一个议题。\nPlease check these files by Obsidian to see if an organized file tree will be generated. If Obsidian works well, please open an issue.")
 
-def convert_bin_files() -> None:
+def convert_bin_files(extract_dir: str | None = None, game_version: Any | None = None) -> None:
     '''
-    将从.wad.client文件中提取得到的bin文件转换成文本文件，往往是json文件。<br>Transform bin files extracted from .wad.client files into text files, which are always json files.
+    将从.wad.client文件中提取得到的bin文件转换成文本文件，往往是json文件。json文件与bin文件位于同一目录。<br>Transform bin files extracted from .wad.client files into text files, which are always json files. json files are located under the same folder as bin files, respectively.
     '''
-    logPrint("请输入一个通过CDTB或者Obsidian等工具提取的客户端文件存放的文件夹路径：\nPlease input the path of a folder that contains the extracted client files using tools like CDTB or Obsidian:")
+    if not bool(extract_dir):
+        logPrint("请输入一个通过CDTB或者Obsidian等工具提取的客户端文件存放的文件夹路径：\nPlease input the path of a folder that contains the extracted client files using tools like CDTB or Obsidian:")
     while True:
-        extract_dir: str = logInput()
+        if not bool(extract_dir):
+            extract_dir = logInput()
         if extract_dir == "":
             continue
         elif extract_dir == chr(4):
@@ -269,15 +275,15 @@ def convert_bin_files() -> None:
             logPrint("请输入一个文件夹。\nPlease enter a folder.")
         else:
             break
-    bin_pattern = re.compile(r"Game/DATA/FINAL/.*\.bin$") #这里和cdtb库的正则表达式有区别，因为在游戏目录下，Game文件夹以及Game/DATA文件夹内含有其它内容。下同。另外需要说明，plugins文件夹中的.wad文件中不包含.bin文件。这是通过比对cdtb库的代码和CommunityDragon在线数据库的game和plugins文件夹得出的结论（Here the regular expression is different from that in cdtb library, because under the game directory, there're other content under Game/ and Game/Data/ folders. So are the following regular expressions. Besides, worth mentioning, none of the .wad files under plugins/ folder contain any .bin file. This is concluded by comparison between cdtb library code and the game/ and plugins/ folders in CommunityDragon online database）
-    rst_pattern = re.compile(r"Game/DATA/FINAL/(?:.*/)?data/menu/.*\.(txt|stringtable)$")
-    atlasInfo_pattern = re.compile(r"Game/DATA/FINAL/clientstates/.*\.cdtb$|Game/DATA/FINAL/assets/items/icons2d/autoatlas/.*/atlas_info\.bin$") #注意到凡是能被atlasInfo_pattern识别到的字符串一定能被bin_pattern识别。所以，识别的顺序很重要（Note that any string matched by `atlasInfo_pattern` will be matched by `bin_pattern`. Hence, the order of finding a match really matters）
-    logPrint('请输入版本号：\nPlease input the game version number:\n示例：要查询25.24版本的hash，请输入“1524”。\nExample: To use hashes in v25.24, input "1524".')
+        extract_dir = logInput()
+    if not bool(game_version):
+        logPrint('请输入版本号：\nPlease input the game version number:\n示例：要查询25.24版本的hash，请输入“1524”。\nExample: To use hashes in v25.24, input "1524".')
     while True:
-        game_version = logInput()
+        if not bool(game_version):
+            game_version = logInput()
         if game_version == "":
             game_version = "1524"
-        elif extract_dir == chr(4):
+        elif game_version == chr(4):
             return
         else:
             try:
@@ -286,7 +292,11 @@ def convert_bin_files() -> None:
                 logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
             else:
                 break
+        game_version = logInput()
     logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
+    bin_pattern = re.compile(r"Game/DATA/FINAL/.*\.bin$") #这里和cdtb库的正则表达式有区别，因为在游戏目录下，Game文件夹以及Game/DATA文件夹内含有其它内容。下同。另外需要说明，plugins文件夹中的.wad文件中不包含.bin文件。这是通过比对cdtb库的代码和CommunityDragon在线数据库的game和plugins文件夹得出的结论（Here the regular expression is different from that in cdtb library, because under the game directory, there're other content under Game/ and Game/Data/ folders. So are the following regular expressions. Besides, worth mentioning, none of the .wad files under plugins/ folder contain any .bin file. This is concluded by comparison between cdtb library code and the game/ and plugins/ folders in CommunityDragon online database）
+    rst_pattern = re.compile(r"Game/DATA/FINAL/(?:.*/)?data/menu/.*\.(txt|stringtable)$")
+    atlasInfo_pattern = re.compile(r"Game/DATA/FINAL/clientstates/.*\.cdtb$|Game/DATA/FINAL/assets/items/icons2d/autoatlas/.*/atlas_info\.bin$") #注意到凡是能被atlasInfo_pattern识别到的字符串一定能被bin_pattern识别。所以，识别的顺序很重要（Note that any string matched by `atlasInfo_pattern` will be matched by `bin_pattern`. Hence, the order of finding a match really matters）
     binfiles_to_convert: list[dict[str, Any]] = []
     error_files: list[str] = []
     for root, dirs, files in os.walk(extract_dir): #这一步转换过程一定会发生修改时间的更新，所以本脚本没有设置“按修改时间更新”的选项（Because the modification time must be updated after this conversion, this program doesn't set an option like "Update according to Modification Time"）
@@ -323,6 +333,8 @@ def convert_bin_files() -> None:
                 traceback_info = traceback.format_exc()
                 logPrint(traceback_info, write_time = False)
                 logPrint("文件%s转换失败！\nFile %s conversion failure!" %(srcpath, srcpath), write_time = False)
+                if os.path.exists(dstpath):
+                    os.remove(dstpath) #转换失败的文件为空，因此应当删除（Files fail to converted will be empty and thus should be removed）
                 error_files.append(srcpath)
         elif rst_pattern.search(srcpath):
             RstConvert(srcpath, dstpath + ".json", game_version)
@@ -332,7 +344,7 @@ def convert_bin_files() -> None:
             logPrint(file)
         logPrint("", write_time = False)
 
-def format_text_files(abortOnDecodeError: bool = False, simpleCopyFixStrategy: bool = True) -> None:
+def format_text_files(extract_dir: str | None = None, target_dir: str | None = None, abortOnDecodeError: bool = False, simpleCopyFixStrategy: bool = True) -> None:
     '''
     将从游戏数据中提取得到的文本文件格式化，并保存到目标文件夹。默认情况是存储库文件夹。<br>Format text files extracted and converted from game data and save the formatted files into the target directory, which is the repository folder by default.
     
@@ -341,9 +353,11 @@ def format_text_files(abortOnDecodeError: bool = False, simpleCopyFixStrategy: b
     :param simpleCopyFixStrategy: 标记发生文本解码错误时，是否直接复制原始文件。默认为真。<br>Marks whether to copy the raw file when a UnicodeDecodeError happens. True by default.
     :type simpleCopyFixStrategy: int
     '''
-    logPrint("请指定第一步提取的文件目录。\nPlease specify the directory of files extracted in Step 1.")
+    if not bool(extract_dir):
+        logPrint("请指定第一步提取的文件目录。\nPlease specify the directory of files extracted in Step 1.")
     while True:
-        extract_dir: str = logInput()
+        if not bool(extract_dir):
+            extract_dir = logInput()
         if extract_dir == "":
             continue
         elif extract_dir == chr(4):
@@ -354,9 +368,12 @@ def format_text_files(abortOnDecodeError: bool = False, simpleCopyFixStrategy: b
             logPrint("请输入一个文件夹。\nPlease enter a folder.")
         else:
             break
-    logPrint("请指定转换后文件的存放目录。\nPlease specify the target directory for converted files.")
+        extract_dir = logInput()
+    if not bool(target_dir):
+        logPrint("请指定转换后文件的存放目录。\nPlease specify the target directory for converted files.")
     while True:
-        target_dir = logInput()
+        if not bool(target_dir):
+            target_dir = logInput()
         if target_dir == "":
             target_dir = os.path.expanduser("~/Documents/GitHub/LoL-Wad-Extract-Tencent/Data").replace("\\", "/")
             break
@@ -371,6 +388,7 @@ def format_text_files(abortOnDecodeError: bool = False, simpleCopyFixStrategy: b
             os.makedirs(target_dir)
             logPrint("已创建文件夹。\nFolder created.")
             break
+        target_dir = logInput()
     logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
     updated_files: list[str] = []
     added_files: list[str] = []
@@ -497,49 +515,262 @@ def format_text_files(abortOnDecodeError: bool = False, simpleCopyFixStrategy: b
         for file in error_files:
             logPrint(file)
         logPrint("", write_time = False)
-    
+
+def delete_intermediate_files(extract_dir: str | None = None) -> None:
+    if not bool(extract_dir):
+        logPrint("请指定第一步提取的文件目录。\nPlease specify the directory of files extracted in Step 1.")
+    while True:
+        if not bool(extract_dir):
+            extract_dir = logInput()
+        if extract_dir == "":
+            continue
+        elif extract_dir == chr(4):
+            return
+        elif not os.path.exists(extract_dir):
+            logPrint("目录不存在。请重新输入。\nPath not found. Please try again.")
+        elif not os.path.isdir(extract_dir):
+            logPrint("请输入一个文件夹。\nPlease enter a folder.")
+        else:
+            break
+        extract_dir = logInput()
+    extract_dir = extract_dir.replace("\\", "/")
+    logPrint(f"正在删除文件夹（Deleting folder）： {extract_dir}")
+    while os.path.exists(extract_dir) and os.path.isdir(extract_dir):
+        try:
+            shutil.rmtree(extract_dir)
+        except PermissionError:
+            logPrint("拒绝访问：另一个程序正在使用此文件，进程无法访问。请检查文件占用情况后按回车键重试，或者输入任意非空字符串以取消删除。\nPermission Error: The process cannot access the file, because it's being used by another process. Please check the file occupation and press Enter to try again, or submit any non-empty string to cancel deletion.")
+            cancel_str: str = logInput()
+            cancel: bool = bool(cancel_str)
+            if cancel:
+                break
+
 def main():
     logPrint("请确保您的磁盘有足够的存储空间。建议剩余空间：200 GB。\nPlease make sure you have enough disk space. Recommended free space: 200 GB.\n在每个步骤输入目录时，输入Ctrl-D以跳过此步骤。\nWhen you enter a directory, submit Ctrl-D to skip this step.\n")
-    logPrint("第一步：提取游戏目录中的文件。\nStep 1: Extract files from the game directory.", print_time = True)
-    logPrint("请选择要提取的文件：\n0\t退出程序（Exit the program）\n1\t所有文本文件（All text files）\n2\t仅外部文本文件（Only external text files）\n3\t仅wad内文本文件（Only within-wad text files）\n4\t跳过此步骤（Skip this step）")
+    game_version_default: str = "1524"
+    game_dir_latest_default: str = "C:/WeGameApps/英雄联盟"
+    intermediate_dir_latest_default: str = "D:/Workspace/LoL-Wad-Extract-Tencent/Data/latest"
+    target_dir_latest_default: str = os.path.expanduser("~/Documents/GitHub/LoL-Wad-Extract-Tencent/Data/latest").replace("\\", "/")
+    game_dir_pbe_default: str = "C:/WeGameApps/英雄联盟体验服"
+    intermediate_dir_pbe_default: str = "D:/Workspace/LoL-Wad-Extract-Tencent/Data/pbe"
+    target_dir_pbe_default: str = os.path.expanduser("~/Documents/GitHub/LoL-Wad-Extract-Tencent/Data/pbe").replace("\\", "/")
+    behavior_str: str = "请选择行为：\nPlease select a behavior:\n0\t退出程序（Exit the program）\n1\t提取和转换正式服的所有文本文件（Extract and convert text files from latest game data）\n2\t提取和转换测试服的所有文本文件（Extract and convert text files from pbe game data）\n3\t分步执行（Execute stepwise）"
+    logPrint(behavior_str)
     while True:
-        option = logInput()
-        if option == "":
+        mode = logInput()
+        if mode == "":
             continue
-        elif option[0] == "0":
-            return
-        elif option[0] == "1":
-            copy_text = extract_wad = True
+        elif mode[0] == "0":
             break
-        elif option[0] == "2":
-            copy_text, extract_wad = True, False
-            break
-        elif option[0] == "3":
-            copy_text, extract_wad = False, True
-            break
-        elif option[0] == "4":
+        elif mode[0] == "1" or mode[0] == "2":
+            #参数初始化（Parameter initialization）
+            useLatest: bool = mode[0] == "1" #代表是否使用正式服版本线的游戏文件（Represents whether to use game files of live patchline）
+            productName_zh: str = "正式服" if useLatest else "体验服" #用于中文步骤提示（Used in step hints in Chinese）
+            productName_en: str = "latest" if useLatest else "pbe" #用于英文步骤提示（Used in step hints in English）
+            game_dir_default: str = game_dir_latest_default if useLatest else game_dir_pbe_default #指定默认游戏目录（Specifies the default game directory to copy text files and read wad files from）
+            intermediate_dir_default: str = intermediate_dir_latest_default if useLatest else intermediate_dir_pbe_default #指定默认临时游戏目录，用于存放从游戏目录中复制的文本文件和从wad文件中提取的所有文件（Specifies the default temporary game directory to store text files copied from game directory and all files extracted from wad files）
+            target_dir_default: str = target_dir_latest_default if useLatest else target_dir_pbe_default #指定默认生成目录，用于存放所有格式化后的文本文件（Specifies the default generation directory to store all formatted text files）
+            game_dir: str = "" #代表程序实际使用的游戏目录（Represents the game directory to be used actually）
+            intermediate_dir: str = "" #代表程序实际使用的临时游戏目录（Represents the intermediate directory to be used actually）
+            game_version = "" #代表游戏版本正整数（Represents the game version integer）
+            target_dir: str = "" #代表程序实际使用的生成目录（Represents the generation directory to be used actually）
+            step: int = 1 #标记步骤序号（Denotes the step number）
+            allTextExtract: bool = False #代表是否提取所有文本文件，包括wad外和wad内的。当该变量的值为真时，copy_text和extract_wad置为真（Represents whether to extract all text files, including both beyond-wad and within-wad. When this variable's value is True, the values of `copy_text` and `extract_wad` are set as True）
+            copy_text: bool = False #代表是否提取wad外的所有文本文件（Represents whether to extract all text files outside the wad files）
+            extract_wad: bool = False #代表是否提取wad内的所有文件（Represents whether to extract all files within the wad files）
+            back: bool = False #代表是否返回上一层（Represents whether to return to the last step）
+            #参数设置（Parameter configuration）
+            while step <= 7:
+                if step <= 0:
+                    back = True
+                    break
+                elif step == 1:
+                    logPrint(f"第一步：请指定英雄联盟国服{productName_zh}游戏目录：\nStep 1: Please specify the game directory of League of Legends Tencent {productName_en} patchline:\n当前默认目录（Current default directory）： {game_dir_default}")
+                    while True:
+                        game_dir: str = logInput()
+                        if game_dir == "":
+                            game_dir = game_dir_default
+                        if chr(4) in game_dir:
+                            step -= 1 + game_dir.count(chr(4))
+                            break
+                        elif not os.path.exists(game_dir):
+                            logPrint("目录不存在。请重新输入。\nPath not found. Please try again.")
+                        elif not os.path.isdir(game_dir):
+                            logPrint("请输入一个文件夹。\nPlease enter a folder.")
+                        else:
+                            break
+                elif step == 2:
+                    logPrint(f"第二步：请指定从英雄联盟国服{productName_zh}的游戏文件要导出的中间文件目录：\nStep 2: Please specify the intermediate directory from League of Legends Tencent game files of {productName_en} patchline:\n当前默认目录（Current default directory）： {intermediate_dir_default}")
+                    while True:
+                        intermediate_dir: str = logInput()
+                        if intermediate_dir == "":
+                            intermediate_dir = intermediate_dir_default
+                        if chr(4) in intermediate_dir:
+                            step -= 1 + intermediate_dir.count(chr(4))
+                            break
+                        elif os.path.exists(intermediate_dir):
+                            if os.path.isdir(intermediate_dir):
+                                break
+                            else:
+                                logPrint("您输入的目录已存在，但不是文件夹。请重新输入。\nThe path you entered already exists but isn't a folder. Please try again.")
+                        else:
+                            os.makedirs(intermediate_dir)
+                            logPrint("已创建文件夹。\nFolder created.")
+                            break
+                elif step == 3:
+                    logPrint(f'第三步：请输入英雄联盟国服{productName_zh}的游戏版本号：\nStep 3: Please input the game version number of League of Legends Tencent {productName_en} patchline:\n示例：要查询25.24版本的hash，请输入“1524”。\nExample: To use hashes in v25.24, input "1524".')
+                    while True:
+                        game_version = logInput()
+                        if game_version == "":
+                            game_version = game_version_default
+                        if chr(4) in game_version:
+                            step -= 1 + game_version.count(chr(4))
+                            break
+                        else:
+                            try:
+                                game_version = int(game_version)
+                            except ValueError:
+                                logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
+                            else:
+                                break
+                elif step == 4:
+                    logPrint(f"第四步：请指定从英雄联盟国服{productName_zh}的游戏文件转换后文件的存放目录。\nStep 4: Please specify the target directory for files converted from League of Legends Tencent game files of {productName_en} patchline.\n当前默认目录（Current default directory）： {target_dir_default}")
+                    while True:
+                        target_dir = logInput()
+                        if target_dir == "":
+                            target_dir = target_dir_default
+                        if chr(4) in target_dir:
+                            step -= 1 + target_dir.count(chr(4))
+                            break
+                        elif os.path.exists(target_dir):
+                            if os.path.isdir(target_dir):
+                                break
+                            else:
+                                logPrint("您输入的目录已存在，但不是文件夹。请重新输入。\nThe path you entered already exists but isn't a folder. Please try again.")
+                        else:
+                            os.makedirs(target_dir)
+                            logPrint("已创建文件夹。\nFolder created.")
+                            break
+                elif step == 5:
+                    logPrint(f"第五步：是否提取和转换所有文本文件？\nStep 5: Do you want to extract and convert all text files?\n☆1\t是（Yes）\n2\t否（No）")
+                    while True:
+                        allTextExtract_str: str = logInput()
+                        if allTextExtract_str == "":
+                            allTextExtract_str = "1"
+                        if chr(4) in allTextExtract_str:
+                            step -= 1 + allTextExtract_str.count(chr(4))
+                            break
+                        elif allTextExtract_str[0] == "1" or allTextExtract_str[0] == "2":
+                            allTextExtract: bool = allTextExtract_str[0] == "1"
+                            break
+                        else:
+                            logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
+                elif step == 6:
+                    if not allTextExtract:
+                        logPrint("第六步：是否提取外部文本文件？\nStep 6: Do you want to extract non-wad text files?\n☆1\t是（Yes）\n2\t否（No）")
+                        while True:
+                            copy_text_str: str = logInput()
+                            if copy_text_str == "":
+                                copy_text_str = "1"
+                            if chr(4) in copy_text_str:
+                                step -= 1 + copy_text_str.count(chr(4))
+                                break
+                            elif copy_text_str[0] == "1" or copy_text_str[0] == "2":
+                                copy_text: bool = copy_text_str[0] == "1"
+                                break
+                            else:
+                                logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
+                elif step == 7:
+                    if not allTextExtract:
+                        logPrint("第七步：是否提取wad内文本文件？\nStep 7: Do you want to extract within-wad text files?\n☆1\t是（Yes）\n2\t否（No）")
+                        while True:
+                            copy_text_str: str = logInput()
+                            if copy_text_str == "":
+                                copy_text_str = "1"
+                            if chr(4) in copy_text_str:
+                                step -= 1 + copy_text_str.count(chr(4))
+                                break
+                            elif copy_text_str[0] == "1" or copy_text_str[0] == "2":
+                                copy_text: bool = copy_text_str[0] == "1"
+                                break
+                            else:
+                                logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
+                else:
+                    logPrint("发现异常步骤！请联系开发人员检查和调试代码。\nAn unexpected step is found! Please contact the developer to check and debug the code.")
+                    back = True
+                    break
+                step += 1
+            if back:
+                logPrint(behavior_str)
+                continue
+            #参数后处理（Parameter post-operation）
+            if allTextExtract:
+                copy_text = extract_wad = True
+            #运行主要流程（Run main procedures）
+            logPrint("第一步：提取游戏目录中的文件。\nStep 1: Extract files from the game directory.", print_time = True)
+            extract_data_resource(game_dir = game_dir, target_dir = intermediate_dir, copy_text = copy_text, extract_wad = extract_wad)
+            logPrint("第二步：转换二进制文件。\nStep 2: Convert binary files.", print_time = True)
+            convert_bin_files(extract_dir = intermediate_dir, game_version = game_version)
+            logPrint("第三步：转换文本文件。\nStep 3: Convert text files.", print_time = True)
+            format_text_files(extract_dir = intermediate_dir, target_dir = target_dir)
+            logPrint("第四步：删除中间文件。\nStep 4: Delete intermediate files.", print_time = True)
+            delete_intermediate_files(extract_dir = intermediate_dir)
+        elif mode[0] == "3":
+            #参数初始化（Parameter initialization）
             copy_text = extract_wad = False
-            break
+            #参数设置（Parameter configuration）
+            #运行主要流程（Run main procedures）
+            logPrint("第一步：提取游戏目录中的文件。\nStep 1: Extract files from the game directory.", print_time = True)
+            logPrint("请选择要提取的文件：\n0\t返回上一层（Return to the last step）\n1\t所有文本文件（All text files）\n2\t仅外部文本文件（Only external text files）\n3\t仅wad内文本文件（Only within-wad text files）\n4\t跳过此步骤（Skip this step）")
+            while True:
+                back: bool = False
+                option = logInput()
+                if option == "":
+                    continue
+                elif option[0] == "0":
+                    back = True
+                    break
+                elif option[0] == "1":
+                    copy_text = extract_wad = True
+                    break
+                elif option[0] == "2":
+                    copy_text, extract_wad = True, False
+                    break
+                elif option[0] == "3":
+                    copy_text, extract_wad = False, True
+                    break
+                elif option[0] == "4":
+                    copy_text = extract_wad = False
+                    break
+                else:
+                    logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
+            if back:
+                logPrint(behavior_str)
+                continue
+            if copy_text or extract_wad:
+                extract_data_resource(copy_text = copy_text, extract_wad = extract_wad)
+                logPrint('按回车键以继续，或者输入任意非空字符串以返回上一层。\nPress Enter to continue, or submit any non-empty string to return to the last step.')
+                back_str = logInput()
+                back: bool = bool(back_str)
+                if back:
+                    logPrint(behavior_str)
+                    continue
+            logPrint("第二步：转换二进制文件。\nStep 2: Convert binary files.", print_time = True)
+            convert_bin_files()
+            logPrint('按回车键以继续，或者输入任意非空字符串以返回上一层。\nPress Enter to continue, or submit any non-empty string to return to the last step.')
+            back_str = logInput()
+            back: bool = bool(back_str)
+            if back:
+                logPrint(behavior_str)
+                continue
+            logPrint("第三步：转换文本文件。\nStep 3: Convert text files.", print_time = True)
+            format_text_files()
+            logPrint("转换完成。请手动删除第一步和第二步在您指定的目录下产生的中间文件以释放空间。按回车键继续。\nConvert finished. Please clear the intermediate files generated during Steps 1 and 2 under the specified directory by yourself to save space. Press Enter to continue.")
+            logInput()
         else:
             logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
-    if copy_text or extract_wad:
-        extract_data_resource(copy_text = copy_text, extract_wad = extract_wad)
-        logPrint('按回车键以继续，或者输入任意非空字符串以退出程序。\nPress Enter to continue, or submit any non-empty string to exit the program.')
-        quit_str = logInput()
-        quit: bool = bool(quit_str)
-        if quit:
-            return
-    logPrint("第二步：转换二进制文件。\nStep 2: Convert binary files.", print_time = True)
-    convert_bin_files()
-    logPrint('按回车键以继续，或者输入任意非空字符串以退出程序。\nPress Enter to continue, or submit any non-empty string to exit the program.')
-    quit_str = logInput()
-    quit: bool = bool(quit_str)
-    if quit:
-        return
-    logPrint("第三步：转换文本文件。\nStep 3: Convert text files.", print_time = True)
-    format_text_files()
-    logPrint("转换完成。请手动删除第一步和第二步在您指定的目录下产生的中间文件以释放空间。按回车键退出程序。\nConvert finished. Please clear the intermediate files generated during Steps 1 and 2 under the specified directory by yourself to save space. Press Enter to exit.")
-    logInput()
+            continue
+        logPrint(behavior_str)
     
 if __name__ == "__main__":
     main()
