@@ -111,7 +111,7 @@ def CopyConvert(src: str, dst: str) -> None: #纯文本文件复制函数（Plai
     with open(src, "rb") as fsrc, open(dst, "wb") as fdst:
         shutil.copyfileobj(fsrc, fdst)
 
-def BinConvert(src: str, dst: str) -> None: #二进制文件复制函数。dst参数应以“.json”结尾（Binary file copy function. `dst` should end with ".json"）
+def BinConvert(src: str, dst: str) -> None: #二进制文件转换函数。dst参数应以“.json”结尾（Binary file conversion function. `dst` should end with ".json"）
     os.makedirs(os.path.dirname(dst), exist_ok = True)
     with open(dst, "w", encoding = "utf-8") as fdst:
         binfile = BinFile(src)
@@ -122,9 +122,9 @@ def BinConvert(src: str, dst: str) -> None: #二进制文件复制函数。dst�
         if "__patches" in binData:
             tmp: Any = binData.pop("__patches")
             binData["__patches"] = tmp
-        json.dump(binfile.to_serializable(), fdst, indent = 4, ensure_ascii = False)
+        json.dump(binfile.to_serializable(), fdst, indent = 4, ensure_ascii = False) #这里的indent = 4实际上可以删掉，因为format_text_files函数中在读取json文件后会自动转化成缩进为4个空格的字符串，从而显著节省空间占用。下同（Here `indent = 4` can actually be deleted, because after `format_text_files` function reads the json file, the content will be transformed into a string with 4 spaces as an indentation unit, so that space cost can be saved significantly. So can the following）
 
-def RstConvert(src: str, dst: str, game_version: int = 1502) -> None: #字符串常量池复制函数。dst参数应以“.json”结尾（Stringtable copy function. `dst` should end with ".json"）
+def RstConvert(src: str, dst: str, game_version: int = 1502) -> None: #字符串常量池转换函数。dst参数应以“.json”结尾（Stringtable conversion function. `dst` should end with ".json"）
     rstfile: RstFile = RstFile(src)
     hashes = get_hashfile(game_version).load()
     hashes = {key_to_hash(hash, bits = rstfile.hash_bits): value for (hash, value) in hashes.items()}
@@ -139,18 +139,9 @@ def RstConvert(src: str, dst: str, game_version: int = 1502) -> None: #字符串
     with open(dst, "w", encoding = "utf-8") as fdst:
         json.dump(rst_json, fdst, indent = 4, ensure_ascii = False)
 
-def AtlasInfoConvert(src: str, output_dir: str) -> None: #图册信息复制函数（Atlas info copy function）
-    wad: Wad = Wad(src)
-    with open(wad.path, "rb") as fwad:
-        for wadfile in wad.files:
-            if wadfile.path == None:
-                continue
-            data = wad.read_file_data(fwad, wadfile)
-            if data == None:
-                continue
-            fsrc = BytesIO(data)
-            with open(os.path.join(output_dir, wadfile.path) + ".json", "w", encoding = "utf-8") as fdst:
-                json.dump(AtlasInfoConverter.parse_atlasinfo(fsrc), fdst, indent = 4, ensure_ascii = False)
+def AtlasInfoConvert(src: str, dst: str) -> None: #图册信息转换函数（Atlas info conversion function）
+    with open(src, "rb") as fsrc, open(dst, "w", encoding = "utf-8") as fdst:
+        json.dump(AtlasInfoConverter.parse_atlasinfo(fsrc), fdst, indent = 4, ensure_ascii = False)
 
 def isPlainTextPath(path: str) -> bool:
     ext: str = os.path.splitext(path)[1]
@@ -198,6 +189,7 @@ def extract_data_resource(copy_text: bool = True, extract_wad: bool = True) -> N
             os.makedirs(target_dir)
             logPrint("已创建文件夹。\nFolder created.")
             break
+    logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
     patterns_to_skip: list[str] = [
         r"Cross/coach/agent/lol_ai_coach/Python311/.*", #Python3.11的标准文件无需查看其变更（Python 3.11's standard files don't need inspecting any change）
         r"Game/Config/Champions/.*",
@@ -206,7 +198,6 @@ def extract_data_resource(copy_text: bool = True, extract_wad: bool = True) -> N
         r"Game/Logs/.*"
     ]
     error_wad_client_files: list[str] = []
-    logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
     files_to_extract: list[dict[str, Any]] = []
     for root, dirs, files in os.walk(game_dir):
         for file in files:
@@ -244,10 +235,12 @@ def extract_data_resource(copy_text: bool = True, extract_wad: bool = True) -> N
                 wad_extract_path_header: str = "Game/DATA/FINAL/"
             elif relpath.startswith("Plugins"):
                 wad_extract_path_header = ""
-            else: #等价于（Equivalent to）relpath.startswith("LeagueClient/Plugins")
+            elif relpath.startswith("LeagueClient/Plugins"):
                 wad_extract_path_header = "LeagueClient"
+            else: #当用户传入某个具体的文件夹作为试验时，直接以relpath作为文件夹抬头（When the user pass some more specific folder as test, take `relpath` as the path header）
+                wad_extract_path_header = relpath
             dstpath = os.path.join(target_dir, wad_extract_path_header).replace("\\", "/") #此时dstpath是一个文件夹（Now, `dstpath` is a folder）
-            status: int = wad_extract(srcpath, dstpath, patterns = [])
+            status: int = wad_extract(srcpath, dstpath, patterns = []) #这里之所以没有指定正则表达式，主要是因为尚未确定wad文件中的文本文件的命名模式（The reason why patterns aren't specified is because the pattern of names of text files in wad files isn't figured out yet）
             if status != 0:
                 logPrint("解包失败。请等待该步骤结束后查看。\nUnpack failed. Please check it after this step finishes.")
                 error_wad_client_files.append(srcpath)
@@ -276,9 +269,9 @@ def convert_bin_files() -> None:
             logPrint("请输入一个文件夹。\nPlease enter a folder.")
         else:
             break
-    bin_pattern = re.compile(r"game/.*\.bin$")
-    rst_pattern = re.compile(r"game/(?:.*/)?data/menu/.*\.(txt|stringtable)$")
-    atlasInfo_pattern = re.compile(r"game/clientstates/.*\.cdtb$|game/assets/items/icons2d/autoatlas/.*/atlas_info\.bin$")
+    bin_pattern = re.compile(r"Game/DATA/FINAL/.*\.bin$") #这里和cdtb库的正则表达式有区别，因为在游戏目录下，Game文件夹以及Game/DATA文件夹内含有其它内容。下同。另外需要说明，plugins文件夹中的.wad文件中不包含.bin文件。这是通过比对cdtb库的代码和CommunityDragon在线数据库的game和plugins文件夹得出的结论（Here the regular expression is different from that in cdtb library, because under the game directory, there're other content under Game/ and Game/Data/ folders. So are the following regular expressions. Besides, worth mentioning, none of the .wad files under plugins/ folder contain any .bin file. This is concluded by comparison between cdtb library code and the game/ and plugins/ folders in CommunityDragon online database）
+    rst_pattern = re.compile(r"Game/DATA/FINAL/(?:.*/)?data/menu/.*\.(txt|stringtable)$")
+    atlasInfo_pattern = re.compile(r"Game/DATA/FINAL/clientstates/.*\.cdtb$|Game/DATA/FINAL/assets/items/icons2d/autoatlas/.*/atlas_info\.bin$") #注意到凡是能被atlasInfo_pattern识别到的字符串一定能被bin_pattern识别。所以，识别的顺序很重要（Note that any string matched by `atlasInfo_pattern` will be matched by `bin_pattern`. Hence, the order of finding a match really matters）
     logPrint('请输入版本号：\nPlease input the game version number:\n示例：要查询25.24版本的hash，请输入“1524”。\nExample: To use hashes in v25.24, input "1524".')
     while True:
         game_version = logInput()
@@ -295,11 +288,12 @@ def convert_bin_files() -> None:
                 break
     logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
     binfiles_to_convert: list[dict[str, Any]] = []
+    error_files: list[str] = []
     for root, dirs, files in os.walk(extract_dir): #这一步转换过程一定会发生修改时间的更新，所以本脚本没有设置“按修改时间更新”的选项（Because the modification time must be updated after this conversion, this program doesn't set an option like "Update according to Modification Time"）
         for file in files:
-            srcpath = os.path.join(root, file).replace("/", "\\")
+            srcpath = os.path.join(root, file).replace("\\", "/")
             relpath = os.path.relpath(srcpath, extract_dir).replace("\\", "/")
-            if bin_pattern.search(relpath) or rst_pattern.search(relpath) or atlasInfo_pattern.search(relpath):
+            if bin_pattern.search(srcpath) or rst_pattern.search(srcpath) or atlasInfo_pattern.search(srcpath):
                 body: dict[str, Any] = {}
                 src_timestamp: float = os.path.getmtime(srcpath)
                 src_date: str = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime(src_timestamp))
@@ -320,12 +314,23 @@ def convert_bin_files() -> None:
         dstpath: str = os.path.join(extract_dir, relpath).replace("\\", "/")
         index_str: str = "[%d/%d]" %(i + 1, len(binfiles_to_convert))
         logPrint("%s | 正在转换文件（Converting）： %s\t%s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(src_size), src_date, srcpath), print_time = True)
-        if bin_pattern.search(relpath):
-            BinConvert(srcpath, dstpath + ".json")
-        elif rst_pattern.search(relpath):
+        if atlasInfo_pattern.search(srcpath): #图册信息文件名模式是二进制文件名模式的一个特殊形式。要先处理特殊情形，再处理一般情形（`atlasInfo_pattern` belongs to `bin_pattern`. First deal with the special case, and then the general case）
+            AtlasInfoConvert(srcpath, dstpath + ".json")
+        elif bin_pattern.search(srcpath):
+            try:
+                BinConvert(srcpath, dstpath + ".json")
+            except ValueError: #UI.wad.client/ux/tftactivesets.bin
+                traceback_info = traceback.format_exc()
+                logPrint(traceback_info, write_time = False)
+                logPrint("文件%s转换失败！\nFile %s conversion failure!" %(srcpath, srcpath), write_time = False)
+                error_files.append(srcpath)
+        elif rst_pattern.search(srcpath):
             RstConvert(srcpath, dstpath + ".json", game_version)
-        else:
-            AtlasInfoConvert(srcpath, os.path.dirname(relpath))
+    if len(error_files) > 0:
+        logPrint("以下%d个文件转换失败。\nThe following %d file(s) fail to be converted." %(len(error_files), len(error_files)), write_time = False)
+        for file in error_files:
+            logPrint(file)
+        logPrint("", write_time = False)
 
 def format_text_files(abortOnDecodeError: bool = False, simpleCopyFixStrategy: bool = True) -> None:
     '''
@@ -366,6 +371,7 @@ def format_text_files(abortOnDecodeError: bool = False, simpleCopyFixStrategy: b
             os.makedirs(target_dir)
             logPrint("已创建文件夹。\nFolder created.")
             break
+    logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
     updated_files: list[str] = []
     added_files: list[str] = []
     error_files: list[str] = []
@@ -417,7 +423,7 @@ def format_text_files(abortOnDecodeError: bool = False, simpleCopyFixStrategy: b
                     text = fp.read()
             except UnicodeDecodeError as e:
                 # traceback_info = traceback.format_exc()
-                # logPrint(traceback_info)
+                # logPrint(traceback_info, write_time = False)
                 if i == len(encodings) - 1:
                     if abortOnDecodeError:
                         raise e
