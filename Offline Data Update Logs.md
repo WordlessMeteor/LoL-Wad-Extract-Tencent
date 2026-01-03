@@ -31,5 +31,15 @@
 			<td style="text-align:center;">1;2</td>
 			<td>No changes</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-01-03 13-49-59</td>
+			<td style="text-align:center;">1</td>
+			<td>Debug what happens after a login within the same patch</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-01-03 17-05-17</td>
+			<td style="text-align:center;">2</td>
+			<td>No changes</td>
+		</tr>
 	</tbody>
 </table>
