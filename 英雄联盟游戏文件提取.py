@@ -199,7 +199,8 @@ def extract_data_resource(game_dir: str | None = None, target_dir: str | None = 
         r"Game/Config/Champions/.*",
         r"Game/Config/Global/Recommended/RIOT_ItemSet_\d*\.json",
         r"Game/Config/ItemSets.json",
-        r"Game/Logs/.*"
+        r"Game/Logs/.*",
+        r"tiny_cache/.*"
     ]
     error_wad_client_files: list[str] = []
     files_to_extract: list[dict[str, Any]] = []
@@ -207,7 +208,7 @@ def extract_data_resource(game_dir: str | None = None, target_dir: str | None = 
         for file in files:
             srcpath: str = os.path.join(root, file).replace("\\", "/")
             relpath: str = os.path.relpath(srcpath, game_dir).replace("\\", "/")
-            if any(map(lambda x: re.fullmatch(x, relpath), patterns_to_skip)):
+            if any(map(lambda x: re.search(x, srcpath), patterns_to_skip)):
                 continue
             if isPlainTextPath(relpath) and copy_text or isWadPath(relpath) and extract_wad:
                 body: dict[str, Any] = {}
@@ -344,7 +345,7 @@ def convert_bin_files(extract_dir: str | None = None, game_version: Any | None =
             logPrint(file)
         logPrint("", write_time = False)
 
-def format_text_files(extract_dir: str | None = None, target_dir: str | None = None, abortOnDecodeError: bool = False, simpleCopyFixStrategy: bool = True) -> None:
+def format_text_files(extract_dir: str | None = None, target_dir: str | None = None, abortOnDecodeError: bool = False, simpleCopyFixStrategy: bool = True, delete_old_files: bool | None = None, delete_old_folders: bool | None = None) -> None:
     '''
     将从游戏数据中提取得到的文本文件格式化，并保存到目标文件夹。默认情况是存储库文件夹。<br>Format text files extracted and converted from game data and save the formatted files into the target directory, which is the repository folder by default.
     
@@ -393,13 +394,21 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
     updated_files: list[str] = []
     added_files: list[str] = []
     error_files: list[str] = []
-    copied_files: list[str] = []
+    copied_files_OnDecodeError: list[str] = [] #存储因为解码失败而直接复制的文件（Stores files that fail to be decoded and thus directly copied）
+    copied_files_OnParsingFailure: list[str] = [] #存储因为内容解析失败而直接复制的文件（Stores files that fail to be parsed content and thus directly copied）
+    folders_to_delete: list[str] = [] #统计旧版本存在而新版本不存在的文件夹（Summarize the folders that exist in the old patch but not in the new patch）
+    files_to_delete: list[str] = [] #统计旧版本存在而新版本不存在的文件（Summarize the files that exist in the old patch but not in the new patch）
+    for root, dirs, files in os.walk(target_dir): #要统计旧版本不存在的文件和文件夹，一定要先把旧版本有的文件和文件夹全部列出来，然后跟新版本比对，新版本有的则逐个从待删除列表中移除（To summarize the files and folders that don't exist in the old patch, the program should first list all the local files and folders in the old patch, then compare them with the new patch and remove each file or folder that exists in the new patch）
+        if not root in folders_to_delete:
+            folders_to_delete.append(root.replace("\\", "/") + "/")
+        files_to_delete += list(map(lambda x: os.path.join(root, x).replace("\\", "/"), files))
     textfiles_to_convert: list[dict[str, Any]] = []
     for root, dirs, files in os.walk(extract_dir):
         for file in files:
             srcpath: str = os.path.join(root, file).replace("\\", "/")
             relpath: str = os.path.relpath(srcpath, extract_dir).replace("\\", "/")
             dstpath: str = os.path.join(target_dir, relpath).replace("\\", "/")
+            dst_folder: str = os.path.dirname(dstpath).replace("\\", "/")
             if isPlainTextPath(file):
                 body: dict[str, Any] = {}
                 src_timestamp: float = os.path.getmtime(srcpath)
@@ -420,6 +429,10 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
                 body["dst_bytes"] = dst_bytes
                 body["dst_size"] = dst_size
                 textfiles_to_convert.append(body)
+                if dst_folder in folders_to_delete:
+                    folders_to_delete.remove(dst_folder)
+                if dstpath in files_to_delete:
+                    files_to_delete.remove(dstpath)
     max_index_width: int = 2 * len(str(len(textfiles_to_convert))) + 3
     for i in range(len(textfiles_to_convert)):
         relpath = textfiles_to_convert[i]["relpath"]
@@ -452,7 +465,7 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
                 logPrint("文件解码失败！程序将跳过比对，直接复制该文件。\nFile decode error! The program will skip comparing and directly copy this file instead.", write_time = False)
                 os.makedirs(os.path.dirname(dstpath), exist_ok = True)
                 shutil.copy2(srcpath, dstpath)
-                copied_files.append(srcpath)
+                copied_files_OnDecodeError.append(srcpath)
             else:
                 logPrint("文件解码失败！请等待程序结束后手动比对。\nFile decode error! Please check manually after the program execution finishes.", write_time = False)
                 error_files.append(srcpath)
@@ -466,8 +479,14 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
                     src_json = json.loads(text.encode().decode("utf-8-sig"))
                     src: str = json.dumps(src_json, indent = 4, ensure_ascii = False)
                 else:
-                    logPrint("文件内容解析失败！请等待程序结束后手动比对。\nFile content parsing failure! Please check manually after the program execution finishes.", write_time = False)
-                    error_files.append(srcpath)
+                    if simpleCopyFixStrategy:
+                        logPrint("文件内容解析失败！程序将跳过比对，直接复制该文件。\nFile content parsing failure! The program will skip comparing and directly copy this file instead.", write_time = False)
+                        os.makedirs(os.path.dirname(dstpath), exist_ok = True)
+                        shutil.copy2(srcpath, dstpath)
+                        copied_files_OnParsingFailure.append(srcpath)
+                    else:
+                        logPrint("文件内容解析失败！请等待程序结束后手动比对。\nFile content parsing failure! Please check manually after the program execution finishes.", write_time = False)
+                        error_files.append(srcpath)
                     continue
             else:
                 src: str = json.dumps(src_json, indent = 4, ensure_ascii = False)
@@ -505,15 +524,50 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
         for file in added_files:
             logPrint(file, write_time = False)
         logPrint("", write_time = False)
-    if len(copied_files) > 0:
-        logPrint("以下%d个文件因解码错误而直接复制！\nThe following %d file(s) are directly copied because of decode error." %(len(copied_files), len(copied_files)), write_time = False)
-        for file in copied_files:
+    if len(copied_files_OnDecodeError) > 0:
+        logPrint("以下%d个文件因解码错误而直接复制！\nThe following %d file(s) are directly copied because of decode error." %(len(copied_files_OnDecodeError), len(copied_files_OnDecodeError)), write_time = False)
+        for file in copied_files_OnDecodeError:
+            logPrint(file)
+        logPrint("", write_time = False)
+    if len(copied_files_OnParsingFailure) > 0:
+        logPrint("以下%d个文件因文件内容解析错误而直接复制！\nThe following %d file(s) are directly copied because of content parsing error." %(len(copied_files_OnParsingFailure), len(copied_files_OnParsingFailure)), write_time = False)
+        for file in copied_files_OnParsingFailure:
             logPrint(file)
         logPrint("", write_time = False)
     if len(error_files) > 0:
         logPrint("以下%d个文件比对失败。请重新比对！\nThe following %d file(s) fail to be checked. Please check manually!" %(len(error_files), len(error_files)), write_time = False)
         for file in error_files:
             logPrint(file)
+        logPrint("", write_time = False)
+    if len(files_to_delete) > 0:
+        if delete_old_files == None:
+            logPrint("以下%d个文件不存在于新版本中。是否永久删除这些文件？（输入任意非空字符串删除，否则不删除。）\nThe following %d file(s) don't exist in the new patch. Do you want to delete them? (Submit any non-empty string to delete, or null to refuse deleting the files.)\n" %(len(files_to_delete), len(files_to_delete)) + "\n".join(files_to_delete), write_time = False)
+            delete_file_str: str = logInput()
+            delete_file: bool = bool(delete_file_str)
+        else:
+            logPrint("正在删除以下%d个文件……\nDeleting the following %d file(s) ...\n" %(len(files_to_delete), len(files_to_delete)) + "\n".join(files_to_delete), write_time = False)
+            delete_file = delete_old_files
+        if delete_file:
+            for file in files_to_delete:
+                try:
+                    os.remove(file)
+                except FileNotFoundError:
+                    pass
+        logPrint("", write_time = False)
+    if len(files_to_delete) > 0:
+        if delete_old_folders == None:
+            logPrint("以下%d个文件夹不存在于新版本中。是否永久删除这些文件夹？（输入任意非空字符串删除，否则不删除。）\nThe following %d folder(s) don't exist in the new patch. Do you want to delete them? (Submit any non-empty string to delete, or null to refuse deleting the folders.)\n" %(len(folders_to_delete), len(folders_to_delete)) + "\n".join(folders_to_delete), write_time = False)
+            delete_folder_str: str = logInput()
+            delete_folder: bool = bool(delete_folder_str)
+        else:
+            logPrint("正在删除以下%d个文件夹……\nDeleting the following %d folder(s) ...\n" %(len(folders_to_delete), len(folders_to_delete)) + "\n".join(folders_to_delete), write_time = False)
+            delete_folder = delete_old_folders
+        if delete_folder:
+            for folder in folders_to_delete:
+                try:
+                    shutil.rmtree(folder)
+                except FileNotFoundError:
+                    pass
         logPrint("", write_time = False)
 
 def delete_intermediate_files(extract_dir: str | None = None) -> None:
@@ -578,9 +632,10 @@ def main():
             allTextExtract: bool = False #代表是否提取所有文本文件，包括wad外和wad内的。当该变量的值为真时，copy_text和extract_wad置为真（Represents whether to extract all text files, including both beyond-wad and within-wad. When this variable's value is True, the values of `copy_text` and `extract_wad` are set as True）
             copy_text: bool = False #代表是否提取wad外的所有文本文件（Represents whether to extract all text files outside the wad files）
             extract_wad: bool = False #代表是否提取wad内的所有文件（Represents whether to extract all files within the wad files）
+            delete_old_files_and_folders: bool | None = None
             back: bool = False #代表是否返回上一层（Represents whether to return to the last step）
             #参数设置（Parameter configuration）
-            while step <= 7:
+            while step <= 8:
                 if step <= 0:
                     back = True
                     break
@@ -695,6 +750,20 @@ def main():
                                 break
                             else:
                                 logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
+                elif step == 8:
+                    logPrint("第八步：是否自动删除新版本不存在的文件和文件夹？\nStep 8: Do you want the program to automatically delete the files and folders that don't exist in the new patch?\n☆1\t是（Yes）\n2\t否（No）")
+                    while True:
+                        delete_old_files_and_folders_str: str = logInput()
+                        if delete_old_files_and_folders_str == "":
+                            delete_old_files_and_folders_str = "1"
+                        if chr(4) in delete_old_files_and_folders_str:
+                            step -= (3 if allTextExtract else 1) + delete_old_files_and_folders_str.count(chr(4))
+                            break
+                        elif delete_old_files_and_folders_str[0] == "1" or delete_old_files_and_folders_str[0] == "2":
+                            delete_old_files_and_folders = delete_old_files_and_folders_str[0] == "1"
+                            break
+                        else:
+                            logPrint("您的输入有误！请重新输入。\nERROR input! Please try again.")
                 else:
                     logPrint("发现异常步骤！请联系开发人员检查和调试代码。\nAn unexpected step is found! Please contact the developer to check and debug the code.")
                     back = True
@@ -712,7 +781,7 @@ def main():
             logPrint("第二阶段：转换二进制文件。\nPhase 2: Convert binary files.", print_time = True)
             convert_bin_files(extract_dir = intermediate_dir, game_version = game_version)
             logPrint("第三阶段：转换文本文件。\nPhase 3: Convert text files.", print_time = True)
-            format_text_files(extract_dir = intermediate_dir, target_dir = target_dir)
+            format_text_files(extract_dir = intermediate_dir, target_dir = target_dir, delete_old_files = delete_old_files_and_folders, delete_old_folders = delete_old_files_and_folders)
             logPrint("第四阶段：删除中间文件。\nPhase 4: Delete intermediate files.", print_time = True)
             delete_intermediate_files(extract_dir = intermediate_dir)
         elif mode[0] == "3":
