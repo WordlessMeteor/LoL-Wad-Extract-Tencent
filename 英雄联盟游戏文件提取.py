@@ -399,16 +399,19 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
     folders_to_delete: list[str] = [] #统计旧版本存在而新版本不存在的文件夹（Summarize the folders that exist in the old patch but not in the new patch）
     files_to_delete: list[str] = [] #统计旧版本存在而新版本不存在的文件（Summarize the files that exist in the old patch but not in the new patch）
     for root, dirs, files in os.walk(target_dir): #要统计旧版本不存在的文件和文件夹，一定要先把旧版本有的文件和文件夹全部列出来，然后跟新版本比对，新版本有的则逐个从待删除列表中移除（To summarize the files and folders that don't exist in the old patch, the program should first list all the local files and folders in the old patch, then compare them with the new patch and remove each file or folder that exists in the new patch）
+        root = os.path.realpath(root).replace("\\", "/")
         if not root in folders_to_delete:
-            folders_to_delete.append(root.replace("\\", "/") + "/")
-        files_to_delete += list(map(lambda x: os.path.join(root, x).replace("\\", "/"), files))
+            folders_to_delete.append(root.replace("\\", "/"))
+        files_to_delete += list(map(lambda x: os.path.realpath(os.path.join(root, x)).replace("\\", "/"), files))
     textfiles_to_convert: list[dict[str, Any]] = []
     for root, dirs, files in os.walk(extract_dir):
+        src_folder: str = root.replace("\\", "/")
+        rel_folder: str = os.path.relpath(src_folder, extract_dir).replace("\\", "/")
+        dst_folder: str = os.path.realpath(os.path.join(target_dir, rel_folder)).replace("\\", "/")
         for file in files:
             srcpath: str = os.path.join(root, file).replace("\\", "/")
-            relpath: str = os.path.relpath(srcpath, extract_dir).replace("\\", "/")
+            relpath: str = os.path.relpath(srcpath, extract_dir).replace("\\", "/") #在获取文件的相对路径时，不可能出现“.”作为目录引用（While getting the relative path of a file, the path can't have a "." as the current directory）
             dstpath: str = os.path.join(target_dir, relpath).replace("\\", "/")
-            dst_folder: str = os.path.dirname(dstpath).replace("\\", "/")
             if isPlainTextPath(file):
                 body: dict[str, Any] = {}
                 src_timestamp: float = os.path.getmtime(srcpath)
@@ -429,10 +432,10 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
                 body["dst_bytes"] = dst_bytes
                 body["dst_size"] = dst_size
                 textfiles_to_convert.append(body)
-                if dst_folder in folders_to_delete:
-                    folders_to_delete.remove(dst_folder)
                 if dstpath in files_to_delete:
                     files_to_delete.remove(dstpath)
+        if dst_folder in folders_to_delete:
+            folders_to_delete.remove(dst_folder)
     max_index_width: int = 2 * len(str(len(textfiles_to_convert))) + 3
     for i in range(len(textfiles_to_convert)):
         relpath = textfiles_to_convert[i]["relpath"]
