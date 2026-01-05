@@ -46,5 +46,14 @@
 			<td style="text-align:center;">2</td>
 			<td>Debug what happens after a login within the same pbe patch</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-01-05 15-12-57</td>
+			<td style="text-align:center;"></td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>Latest: 15.24.735.1945 -> 15.24.735.9402</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
