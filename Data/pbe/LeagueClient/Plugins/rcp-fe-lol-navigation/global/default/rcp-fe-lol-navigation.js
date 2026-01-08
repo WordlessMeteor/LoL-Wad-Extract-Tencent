@@ -4036,7 +4036,7 @@
                     this._services.readyCheck._hideModal()
                 }
                 async showHome() {
-                    return await this._services.navigation.setActiveFirstEnabled(), new Promise((e => {
+                    return await this.activityCenter.showActivityCenter(), new Promise((e => {
                         e()
                     }))
                 }
@@ -17017,9 +17017,6 @@
                     const e = this.get("backgroundContent") || this.get("parallaxBackgroundContent") ? 1 : 0;
                     this.set("componentsToLoadMedia", e)
                 },
-                willDestroyElement() {
-                    this._super(...arguments), this.set("id", null)
-                },
                 actions: {
                     onMediaLoaded() {
                         this.incrementProperty("componentMediaLoadedCount"), this.get("componentMediaLoadedCount") === this.get("componentsToLoadMedia") && this.set("isLoading", !1)
@@ -17050,7 +17047,7 @@
                     willDestroy() {
                         this._super(...arguments), this.get("trackTimeSpent") && i.TelemetryService.stopTelemetryTimerEvent(a.TELEMETRY_EVENT_NAME.TIME_SPENT_ACTIVITY, a.TELEMETRY_EVENT_TYPE.TIME_SPENT, this.get("telemetryEventOrigin") || a.TELEMETRY_EVENT_ORIGIN_LOCATIONS.ACTIVITY_CENTER, {
                             id: this.get("id") || this.get("elementId")
-                        }), this.set("telemetryEventOrigin", null), this.set("id", null)
+                        })
                     }
                 });
             t.default = s
@@ -17103,7 +17100,7 @@
                     this._super(...arguments), this.element.addEventListener("themed-button-hovered", this.onThemedButtonHover), this.element.addEventListener("themed-button-clicked", this.onThemedButtonClick)
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this.element.removeEventListener("themed-button-hovered", this.onThemedButtonHover), this.element.removeEventListener("themed-button-clicked", this.onThemedButtonClick), this.set("id", null)
+                    this._super(...arguments), this.element.removeEventListener("themed-button-hovered", this.onThemedButtonHover), this.element.removeEventListener("themed-button-clicked", this.onThemedButtonClick)
                 },
                 headerContent: i.Ember.computed.alias(`data.formattedBlades.${o.BLADES_COMPONENT_TYPES.MASTHEAD_CONTENT_BLOCK}`),
                 backgroundContent: i.Ember.computed.alias(`data.formattedBlades.${o.BLADES_COMPONENT_TYPES.MASTHEAD_CONTENT_BLOCK}.backdrop`),
@@ -17303,7 +17300,7 @@
                 willDestroyElement() {
                     this._super(...arguments), this.element.removeEventListener("click", this._onSkinPreviewExit), this.get("persistentControlPanelService").updatePositionMargin({
                         marginRight: 0
-                    }), a.Navigation.activityCenter.clearObserversByKey(this.get("observeKey")), this.removeObservers(), this.sendViewedSkinsTelemetry(), this._onCarouselSelection = null, this._onSkinPreviewExit = null, this.set("id", null)
+                    }), a.Navigation.activityCenter.clearObserversByKey(this.get("observeKey")), this.removeObservers(), this.sendViewedSkinsTelemetry(), this._onCarouselSelection = null, this._onSkinPreviewExit = null
                 },
                 attachScreenRootObservers(e) {
                     e.on("show", this.screenRootAutoPlayShow), e.on("hide", this.screenRootAutoPlayHide)
@@ -17711,9 +17708,6 @@
                     this._super(...arguments);
                     const e = this.get("backgroundContent") || this.get("parallaxBackgroundContent") ? 1 : 0;
                     this.set("componentsToLoadMedia", e)
-                },
-                willDestroyElement() {
-                    this._super(...arguments), this.set("id", null)
                 },
                 actions: {
                     onMediaLoaded() {
@@ -18529,7 +18523,7 @@
                     i.Navigation.activityCenter.clearObserversByKey(this.get("observeKey"))
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this.element.removeEventListener("mouseenter", this.mouseEnter.bind(this)), this.element.removeEventListener("mouseleave", this.mouseLeave.bind(this)), this.set("telemetryEventOrigin", null), this.set("telemetryPageId", null)
+                    this._super(...arguments), this.element.removeEventListener("mouseenter", this.mouseEnter.bind(this)), this.element.removeEventListener("mouseleave", this.mouseLeave.bind(this))
                 },
                 dispatchAction(e, t) {
                     i.Navigation.activityCenter.route(e.type, e.payload, t)
@@ -18792,9 +18786,6 @@
                 })),
                 init() {
                     this._super(...arguments), this.mouseEnter = this.mouseEnter.bind(this), this.mouseLeave = this.mouseLeave.bind(this), this.sendClickEvent = this.sendClickEvent.bind(this)
-                },
-                willDestroyElement() {
-                    this._super(...arguments), this.set("telemetryEventOrigin", null), this.set("telemetryPageId", null)
                 },
                 mouseEnter() {
                     const e = new CustomEvent("cta-hovered", {

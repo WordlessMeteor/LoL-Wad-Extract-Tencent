@@ -64,5 +64,14 @@
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-01-08 17-38-17</td>
+			<td style="text-align:center;">2</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>PBE: 16.1.734.2383 -> 16.1.736.4068</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
