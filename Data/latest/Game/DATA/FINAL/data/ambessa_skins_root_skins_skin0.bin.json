@@ -110,34 +110,24 @@
                         "__type": "ContextualRule"
                     },
                     {
-                        "mRuleName": "Dragon",
+                        "mRuleName": "Elder Dragon",
                         "mConditions": [
                             {
                                 "mCharacterType": 1,
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
-                                            "Characters/sru_dragon_air/CharacterRecords/Root",
-                                            "Characters/sru_dragon_chemtech/CharacterRecords/Root",
-                                            "Characters/sru_dragon_earth/CharacterRecords/Root",
-                                            "Characters/sru_dragon_fire/CharacterRecords/Root",
-                                            "Characters/sru_dragon_hextech/CharacterRecords/Root",
-                                            "Characters/sru_dragon_ruined/CharacterRecords/Root",
-                                            "Characters/sru_dragon_water/CharacterRecords/Root"
+                                            "Characters/sru_dragon_elder/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
-                            },
-                            {
-                                "mRuleCooldown": 30.0,
-                                "__type": "ContextualConditionRuleCooldown"
                             }
                         ],
                         "mAudioAction": {
                             "mMaxOccurences": 1,
-                            "mSelfEventName": "Attack2DElementalDragon",
+                            "mSelfEventName": "Attack2DElderDragon",
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
@@ -154,22 +144,17 @@
                                 "mCharacterType": 1,
                                 "mChildConditions": [
                                     {
-                                        "mCharacters": [
-                                            "Characters/sru_dragon_elder/CharacterRecords/Root"
-                                        ],
-                                        "__type": "ContextualConditionCharacterName"
+                                        "mCategory": "monstertype",
+                                        "mData": "dragon",
+                                        "__type": "ContextualConditionCharacterMetadata"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
-                            },
-                            {
-                                "mRuleCooldown": 30.0,
-                                "__type": "ContextualConditionRuleCooldown"
                             }
                         ],
                         "mAudioAction": {
                             "mMaxOccurences": 1,
-                            "mSelfEventName": "Attack2DElderDragon",
+                            "mSelfEventName": "Attack2DDragon",
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
@@ -193,10 +178,6 @@
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
-                            },
-                            {
-                                "mRuleCooldown": 30.0,
-                                "__type": "ContextualConditionRuleCooldown"
                             }
                         ],
                         "mAudioAction": {
@@ -244,8 +225,13 @@
                             }
                         ],
                         "mAudioAction": {
+                            "mMaxOccurences": 1,
                             "mSelfEventName": "Move2DFirstAllyMel",
                             "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
                         },
                         "__type": "ContextualRule"
                     },
@@ -268,8 +254,13 @@
                             }
                         ],
                         "mAudioAction": {
+                            "mMaxOccurences": 1,
                             "mSelfEventName": "Move2DFirstEnemyMel",
                             "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
                         },
                         "__type": "ContextualRule"
                     },
@@ -316,7 +307,7 @@
                         "mRuleName": "Recall",
                         "mConditions": [
                             {
-                                "mPercentChanceToPlay": 50,
+                                "mPercentChanceToPlay": 75,
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
@@ -385,16 +376,19 @@
                         "mRuleName": "Mel Nearby",
                         "mConditions": [
                             {
-                                "mCharacterType": 3,
                                 "mChildConditions": [
                                     {
                                         "mCharacters": [
                                             "Characters/Mel/CharacterRecords/Root"
                                         ],
                                         "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mDistance": 750.0,
+                                        "__type": "ContextualConditionCharacterDistance"
                                     }
                                 ],
-                                "__type": "ContextualConditionCharacter"
+                                "__type": "ContextualConditionAnyOtherHero"
                             }
                         ],
                         "mAudioAction": {
@@ -604,10 +598,9 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "mSkinIDs": [
-                                            35
-                                        ],
-                                        "__type": "ContextualConditionCharacterSkinID"
+                                        "mCategory": "skinline",
+                                        "mData": "arcane",
+                                        "__type": "ContextualConditionCharacterMetadata"
                                     }
                                 ],
                                 "__type": "ContextualConditionCharacter"
@@ -976,32 +969,6 @@
                             },
                             {
                                 "mSpell": "{fc33e1bc}",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "DontResetTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "W",
-                        "mConditions": [
-                            {
-                                "mPercentChanceToPlay": 50,
-                                "__type": "ContextualConditionChanceToPlay"
-                            },
-                            {
-                                "mSpell": "Characters/Ambessa/Spells/AmbessaWAbility/AmbessaW",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -1544,10 +1511,9 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "mSkinIDs": [
-                                            35
-                                        ],
-                                        "__type": "ContextualConditionCharacterSkinID"
+                                        "mCategory": "skinline",
+                                        "mData": "arcane",
+                                        "__type": "ContextualConditionCharacterMetadata"
                                     },
                                     {
                                         "__type": "{b6da23cb}"

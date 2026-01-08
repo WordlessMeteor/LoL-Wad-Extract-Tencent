@@ -66736,55 +66736,6 @@
                 ],
                 "__type": "ContextualSituation"
             },
-            "Idle2_Base": {
-                "mRules": [
-                    {
-                        "mRuleName": "Idle - Kiko",
-                        "mAudioAction": {
-                            "mSelfEventName": "Kiko_Idle3DGeneral",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "Idle - Ahri",
-                        "mAudioAction": {
-                            "mSelfEventName": "Idle3DGeneral",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    }
-                ],
-                "__type": "ContextualSituation"
-            },
-            "Death": {
-                "mRules": [
-                    {
-                        "mRuleName": "Death - Kiko",
-                        "mAudioAction": {
-                            "mSelfEventName": "Kiko_Death3D",
-                            "mAllyEventName": "Kiko_Death3D",
-                            "mEnemyEventName": "Kiko_Death3D",
-                            "mSpectatorEventName": "Kiko_Death3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    }
-                ],
-                "__type": "ContextualSituation"
-            },
             "Taunt": {
                 "mRules": [
                     {
@@ -67048,6 +66999,93 @@
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"
                         },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AnimationEnded": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mConditions": [
+                            {
+                                "AnimationName": "Joke",
+                                "__type": "{2363fb10}"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DGeneralEnd",
+                            "mAllyEventName": "Joke3DGeneralEnd",
+                            "mEnemyEventName": "Joke3DGeneralEnd",
+                            "mSpectatorEventName": "Joke3DGeneralEnd",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "{20749c51}": false,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Idle",
+                        "mConditions": [
+                            {
+                                "AnimationName": "Idle1_Base",
+                                "__type": "{2363fb10}"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Idle3DGeneralEnd",
+                            "mAllyEventName": "Idle3DGeneralEnd",
+                            "mEnemyEventName": "Idle3DGeneralEnd",
+                            "mSpectatorEventName": "Idle3DGeneralEnd",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "{20749c51}": false,
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Idle1_Base": {
+                "mRules": [
+                    {
+                        "mRuleName": "Idle - Ahri",
+                        "mConditions": [
+                            {
+                                "mRuleCooldown": 20.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Idle3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellBuffRemove": {
+                "mRules": [
+                    {
+                        "mRuleName": "R end",
+                        "mConditions": [
+                            {
+                                "SpellBuff": "Characters/Ahri/Spells/AhriRAbility/AhriR",
+                                "__type": "ContextualConditionSpellBuffName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DREnd",
+                            "mAllyEventName": "Spell3DREnd",
+                            "mEnemyEventName": "Spell3DREnd",
+                            "mSpectatorEventName": "Spell3DREnd",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "{20749c51}": false,
                         "__type": "ContextualRule"
                     }
                 ],

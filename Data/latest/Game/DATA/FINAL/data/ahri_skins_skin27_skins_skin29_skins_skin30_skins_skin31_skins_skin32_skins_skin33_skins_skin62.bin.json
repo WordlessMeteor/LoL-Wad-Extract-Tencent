@@ -67510,10 +67510,6 @@
                         "mRuleName": "E Hit",
                         "mConditions": [
                             {
-                                "mPercentChanceToPlay": 20,
-                                "__type": "ContextualConditionChanceToPlay"
-                            },
-                            {
                                 "mSpell": "{f82834e6}",
                                 "__type": "ContextualConditionSpellName"
                             },
@@ -67534,7 +67530,6 @@
                             }
                         ],
                         "mAudioAction": {
-                            "mMaxOccurences": 10,
                             "mSelfEventName": "hit3D",
                             "mAllyEventName": "hit3D",
                             "mEnemyEventName": "hit3D",
@@ -67545,6 +67540,47 @@
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"
                         },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AnimationEnded": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mConditions": [
+                            {
+                                "AnimationName": "Joke",
+                                "__type": "{2363fb10}"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DEnd",
+                            "mAllyEventName": "Joke3DEnd",
+                            "mEnemyEventName": "Joke3DEnd",
+                            "mSpectatorEventName": "Joke3DEnd",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "{20749c51}": false,
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Taunt",
+                        "mConditions": [
+                            {
+                                "AnimationName": "Taunt",
+                                "__type": "{2363fb10}"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Taunt3DEnd",
+                            "mAllyEventName": "Taunt3DEnd",
+                            "mEnemyEventName": "Taunt3DEnd",
+                            "mSpectatorEventName": "Taunt3DEnd",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "{20749c51}": false,
                         "__type": "ContextualRule"
                     }
                 ],
