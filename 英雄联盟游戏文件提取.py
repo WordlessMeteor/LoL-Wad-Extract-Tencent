@@ -223,6 +223,7 @@ def extract_data_resource(game_dir: str | None = None, target_dir: str | None = 
                 body["src_size"] = src_size
                 files_to_extract.append(body)
     max_index_width: int = 2 * len(str(len(files_to_extract))) + 3
+    locale_re = re.compile(r"[a-z]{2}_[A-Z]{2}")
     for i in range(len(files_to_extract)):
         relpath = files_to_extract[i]["relpath"]
         src_date = files_to_extract[i]["src_date"]
@@ -236,11 +237,14 @@ def extract_data_resource(game_dir: str | None = None, target_dir: str | None = 
             shutil.copy2(srcpath, dstpath) #第一阶段暂且先复制原始文件（For the first phase, temporarily copy the raw files）
         elif isWadPath(relpath):
             logPrint("%s | 正在解包文件（Unpacking）： %s\t%s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(src_size), src_date, srcpath), print_time = True)
-            if relpath.startswith("Game/DATA/FINAL/"):
-                wad_extract_path_header: str = "Game/DATA/FINAL/"
-            elif relpath.startswith("Plugins"):
+            if relpath.startswith("Game/DATA/FINAL/"): #需要特别小心带有语言文化代码后缀的wad文件（Watch out for the wad files with locale suffix）
+                wad_extract_path_header: str = "Game/DATA/FINAL/" #通过这个处理，即使Game/Data/FINAL文件夹下的wad文件分布于不同目录，其内的文件也会按照wad文件组织树来进行组织，并都位于Game/DATA/FINAL文件夹下（By this operation, even if those wad files under Game/DATA/FINAL folder are distributed into different directories, the internal files will follow the organization inside the wad files, and of course, will be exported into the Game/DATA/FINAL after all）
+                if matchObj := locale_re.search(os.path.basename(relpath)):
+                    locale: str = matchObj.group()
+                    wad_extract_path_header = os.path.join(wad_extract_path_header, locale.lower()) #语言文化代码参照CommunityDragon数据库的组织形式，一律小写（Locales are all set lower, following the manner of CommunityDragon database）
+            elif relpath.startswith("Plugins"): #适用于国际服（Applies in Riot server）
                 wad_extract_path_header = ""
-            elif relpath.startswith("LeagueClient/Plugins"):
+            elif relpath.startswith("LeagueClient/Plugins"): #适用于国服（Applies in Tencent server）
                 wad_extract_path_header = "LeagueClient"
             else: #当用户传入某个具体的文件夹作为试验时，直接以relpath作为文件夹抬头（When the user pass some more specific folder as test, take `relpath` as the path header）
                 wad_extract_path_header = relpath
@@ -278,12 +282,12 @@ def convert_bin_files(extract_dir: str | None = None, game_version: Any | None =
             break
         extract_dir = logInput()
     if not bool(game_version):
-        logPrint('请输入版本号：\nPlease input the game version number:\n示例：要查询25.24版本的hash，请输入“1524”。\nExample: To use hashes in v25.24, input "1524".')
+        logPrint('请输入版本号：\nPlease input the game version number:\n示例：要查询26.01版本的hash，请输入“1601”。\nExample: To use hashes in v26.01, input "1601".')
     while True:
         if not bool(game_version):
             game_version = logInput()
         if game_version == "":
-            game_version = "1524"
+            game_version = "1601"
         elif game_version == chr(4):
             return
         else:
@@ -604,7 +608,7 @@ def delete_intermediate_files(extract_dir: str | None = None) -> None:
 
 def main():
     logPrint("请确保您的磁盘有足够的存储空间。建议剩余空间：200 GB。\nPlease make sure you have enough disk space. Recommended free space: 200 GB.\n在自动化流程设置参数时，输入多个Ctrl-D字符以回退多步。\nWhen you're setting parameters for the automatic procedures, submit multiple Ctrl-D characters to recall multiple steps.\n在分步执行流程中，输入Ctrl-D字符以返回上一层。\nWhen you select stepwise execution, submit Ctrl-D character to return to the last step.\n")
-    game_version_default: str = "1524"
+    game_version_default: str = "1601"
     game_dir_latest_default: str = "C:/WeGameApps/英雄联盟"
     intermediate_dir_latest_default: str = "D:/Workspace/LoL-Wad-Extract-Tencent/Data/latest"
     target_dir_latest_default: str = os.path.expanduser("~/Documents/GitHub/LoL-Wad-Extract-Tencent/Data/latest").replace("\\", "/")
@@ -676,7 +680,7 @@ def main():
                             logPrint("已创建文件夹。\nFolder created.")
                             break
                 elif step == 3:
-                    logPrint(f'第三步：请输入英雄联盟国服{productName_zh}的游戏版本号：\nStep 3: Please input the game version number of League of Legends Tencent {productName_en} patchline:\n示例：要查询25.24版本的hash，请输入“1524”。\nExample: To use hashes in v25.24, input "1524".')
+                    logPrint(f'第三步：请输入英雄联盟国服{productName_zh}的游戏版本号：\nStep 3: Please input the game version number of League of Legends Tencent {productName_en} patchline:\n示例：要查询26.01版本的hash，请输入“1601”。\nExample: To use hashes in v26.01, input "1601".')
                     while True:
                         game_version = logInput()
                         if game_version == "":
