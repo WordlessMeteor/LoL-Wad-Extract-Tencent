@@ -561,7 +561,7 @@ def format_text_files(extract_dir: str | None = None, target_dir: str | None = N
                 except FileNotFoundError:
                     pass
         logPrint("", write_time = False)
-    if len(files_to_delete) > 0:
+    if len(folders_to_delete) > 0:
         if delete_old_folders == None:
             logPrint("以下%d个文件夹不存在于新版本中。是否永久删除这些文件夹？（输入任意非空字符串删除，否则不删除。）\nThe following %d folder(s) don't exist in the new patch. Do you want to delete them? (Submit any non-empty string to delete, or null to refuse deleting the folders.)\n" %(len(folders_to_delete), len(folders_to_delete)) + "\n".join(folders_to_delete), write_time = False)
             delete_folder_str: str = logInput()
