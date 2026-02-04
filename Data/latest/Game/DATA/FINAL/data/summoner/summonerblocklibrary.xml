@@ -37,21 +37,6 @@
       </OutParameter>
     </Parameters>
   </Block>
-  <Block Name="AddItemToFloatCollection" Category="Action\Collection\Float" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
-    <Description>Sets the Output parameter to reference the float Collection with the addition of the specified float ItemValue.</Description>
-    <Label>[{Out:Output} != {Collection} ? {Out:Output}=:]{Collection}.Add({ItemValue})</Label>
-    <Parameters>
-      <Parameter Name="Collection" Type="FloatCollection" Default="" VariableType="Reference">
-        <Description>Source Reference</Description>
-      </Parameter>
-      <Parameter Name="ItemValue" Type="Float" Default="0" VariableType="Reference,Value">
-        <Description>Source Reference</Description>
-      </Parameter>
-      <OutParameter Name="Output" Type="FloatCollection">
-        <Description>Destination Reference</Description>
-      </OutParameter>
-    </Parameters>
-  </Block>
   <Block Name="SetVarFloatCollectionItem" Category="Action\Collection\Float" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
     <Description>Sets the Output parameter to reference the float Collection with the specified float ItemValue set at the index specified by ItemID.</Description>
     <Label>[{Out:Output} != {Collection} ? {Out:Output}=:]{Collection}[{ItemID}]={ItemValue}</Label>
@@ -173,78 +158,6 @@
       </Parameter>
     </Parameters>
   </Block>
-  <Block Name="SetLoggingData" Category="Action\Logging" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
-    <Description>Sets the value of a data logging variable to be sent up to the data server.</Description>
-    <Label>{LoggingCategory}.{ValueName}={NewValue}</Label>
-    <Parameters>
-      <Parameter Name="LoggingCategory" Type="String" Default="NONE" VariableType="Reference,Value">
-        <Description>Category from DataLoggingCategories to log into</Description>
-      </Parameter>
-      <Parameter Name="ValueName" Type="String" Default="NONE" VariableType="Reference,Value">
-        <Description>Value from the given category in DataLoggingCategories to set</Description>
-      </Parameter>
-      <Parameter Name="NewValue" Type="Float" Default="0" VariableType="Reference,Value">
-        <Description>The new value to set into the given logging value position</Description>
-      </Parameter>
-    </Parameters>
-  </Block> 
-  <Block Name="AccumulateLoggingData" Category="Action\Logging" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
-    <Description>Sets the value of a data logging variable to be sent up to the data server.</Description>
-    <Label>{LoggingCategory}.{ValueName} += {ValueChange}</Label>
-    <Parameters>
-      <Parameter Name="LoggingCategory" Type="String" Default="NONE" VariableType="Reference,Value">
-        <Description>Category from DataLoggingCategories to log into</Description>
-      </Parameter>
-      <Parameter Name="ValueName" Type="String" Default="NONE" VariableType="Reference,Value">
-        <Description>Value from the given category in DataLoggingCategories to set</Description>
-      </Parameter>
-      <Parameter Name="ValueChange" Type="Float" Default="0" VariableType="Reference,Value">
-        <Description>The number that should be added to the given value</Description>
-      </Parameter>
-    </Parameters>
-  </Block> 
-  <Block Name="SampleLoggingBegin" Category="Action\Logging" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
-    <Description>Begins a sample in the give data logging category. Stores the sample ID of this sample into DestSampleID</Description>
-    <Label>{LoggingCategory}.{DestSampleID}</Label>
-    <Parameters>
-      <Parameter Name="LoggingCategory" Type="String" Default="NONE" VariableType="Reference,Value">
-        <Description>Category from DataLoggingCategories to log into</Description>
-      </Parameter>
-      <OutParameter Name="DestSampleID" Type="Int">
-        <Description>Variable which is set to the sample ID of the given sample. Subsequent calls to SampleLoggingSetData should use this ID</Description>
-      </OutParameter>
-    </Parameters>
-  </Block> 
-  <Block Name="SampleLoggingSetData" Category="Action\Logging" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
-    <Description>Sets the value of a data logging variable in a given sample to be sent up to the data server.</Description>
-    <Label>{LoggingCategory}.{SampleID}.{ValueName}={NewValue}</Label>
-    <Parameters>
-      <Parameter Name="LoggingCategory" Type="String" Default="NONE" VariableType="Reference,Value">
-        <Description>Category from DataLoggingCategories to log into</Description>
-      </Parameter>
-      <Parameter Name="SampleID" Type="Int" Default="0" VariableType="Reference,Value">
-        <Description>Sample ID from a call to SampleLoggingBegin into which this data should be set</Description>
-      </Parameter>
-      <Parameter Name="ValueName" Type="String" Default="NONE" VariableType="Reference,Value">
-        <Description>Value from the given category in DataLoggingCategories to set</Description>
-      </Parameter>
-      <Parameter Name="NewValue" Type="Float" Default="0" VariableType="Reference,Value">
-        <Description>The new value to set into the given logging value position</Description>
-      </Parameter>
-    </Parameters>
-  </Block> 
-  <Block Name="SampleLoggingEnd" Category="Action\Logging" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
-    <Description>Ends a sample in the give data logging category</Description>
-    <Label>{LoggingCategory}.{SampleID}</Label>
-    <Parameters>
-      <Parameter Name="LoggingCategory" Type="String" Default="NONE" VariableType="Reference,Value">
-        <Description>Category from DataLoggingCategories to log into</Description>
-      </Parameter>
-      <Parameter Name="SampleID" Type="Int" Default="0" VariableType="Reference,Value">
-        <Description>Sample ID from a call to SampleLoggingBegin that we should end</Description>
-      </Parameter>
-    </Parameters>
-  </Block> 
   <Block Name="IterateOverAllDecorator" Category="Decorator\Iterator" SubCategory="Control" CanHaveChildren="true" NumberOfChildren="1">
     <Description>Decorator that will iterate through a collection, looping its children for each entry. Right now this only supports AttackableUnit collections.  This will always return SUCCESS.</Description>
     <Label>{Collection}</Label>
@@ -927,17 +840,6 @@
       </Parameter>
     </Parameters>
   </Block>
-  <Block Name="NormalizeFloatToTickRate" Category="Action\Math" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
-    <Description>Takes a value which is meant to be updated at the constant tick rate of the behavior tree, and normalizes it to match. If you expect your value you to be updated 10 times per second, but the behavior tree may not actually update at this rate, so this causes us to match to that rate.</Description>
-    <Parameters>
-      <Parameter Name="LeftHandSide" Type="Float" Default="0" VariableType="Reference,Value">
-        <Description>LeftHandSide Reference of the operation</Description>
-      </Parameter>
-      <OutParameter Name="Output" Type="Float">
-        <Description>Output reference of the operation</Description>
-      </OutParameter>
-    </Parameters>
-  </Block>
   <Block Name="EqualUnitType" Category="Test\System\Unit\Type" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
     <Description>Returns SUCCESS if LeftHandSide is equal to RightHandSide, and FAILURE if it is not. This version is for Unit type References.</Description>
     <Label>{LeftHandSide}=={RightHandSide}?</Label>
@@ -1410,18 +1312,6 @@
     <Parameters>
       <OutParameter Name="Output" Type="Float">
         <Description>Destination reference; contains the currently elapsed game time.</Description>
-      </OutParameter>
-    </Parameters>
-  </Block>
-  <Block Name="HasCustomizationTag" Category="Action\Skin" SubCategory="" CanHaveChildren="false" NumberOfChildren="-1">
-    <Description>Check existence of a skin customization tag</Description>
-    <Label>{Out:Output}=HasCustomizationTag({Tag})</Label>
-    <Parameters>
-      <Parameter Name="Tag" Type="String" Default="" VariableType="Reference,Value">
-        <Description>Tag itself</Description>
-      </Parameter>
-      <OutParameter Name="Output" Type="Bool">
-        <Description>Does this tag exist</Description>
       </OutParameter>
     </Parameters>
   </Block>

@@ -282,12 +282,12 @@ def convert_bin_files(extract_dir: str | None = None, game_version: Any | None =
             break
         extract_dir = logInput()
     if not bool(game_version):
-        logPrint('请输入版本号：\nPlease input the game version number:\n示例：要查询26.01版本的hash，请输入“1601”。\nExample: To use hashes in v26.01, input "1601".')
+        logPrint('请输入版本号：\nPlease input the game version number:\n示例：要查询26.03版本的hash，请输入“1603”。\nExample: To use hashes in v26.03, input "1603".')
     while True:
         if not bool(game_version):
             game_version = logInput()
         if game_version == "":
-            game_version = "1601"
+            game_version = "1603"
         elif game_version == chr(4):
             return
         else:
@@ -608,7 +608,7 @@ def delete_intermediate_files(extract_dir: str | None = None) -> None:
 
 def main():
     logPrint("请确保您的磁盘有足够的存储空间。建议剩余空间：200 GB。\nPlease make sure you have enough disk space. Recommended free space: 200 GB.\n在自动化流程设置参数时，输入多个Ctrl-D字符以回退多步。\nWhen you're setting parameters for the automatic procedures, submit multiple Ctrl-D characters to recall multiple steps.\n在分步执行流程中，输入Ctrl-D字符以返回上一层。\nWhen you select stepwise execution, submit Ctrl-D character to return to the last step.\n")
-    game_version_default: str = "1601"
+    game_version_default: str = "1603"
     game_dir_latest_default: str = "C:/WeGameApps/英雄联盟"
     intermediate_dir_latest_default: str = "D:/Workspace/LoL-Wad-Extract-Tencent/Data/latest"
     target_dir_latest_default: str = os.path.expanduser("~/Documents/GitHub/LoL-Wad-Extract-Tencent/Data/latest").replace("\\", "/")
@@ -680,7 +680,7 @@ def main():
                             logPrint("已创建文件夹。\nFolder created.")
                             break
                 elif step == 3:
-                    logPrint(f'第三步：请输入英雄联盟国服{productName_zh}的游戏版本号：\nStep 3: Please input the game version number of League of Legends Tencent {productName_en} patchline:\n示例：要查询26.01版本的hash，请输入“1601”。\nExample: To use hashes in v26.01, input "1601".')
+                    logPrint(f'第三步：请输入英雄联盟国服{productName_zh}的游戏版本号：\nStep 3: Please input the game version number of League of Legends Tencent {productName_en} patchline:\n示例：要查询26.03版本的hash，请输入“1603”。\nExample: To use hashes in v26.03, input "1603".')
                     while True:
                         game_version = logInput()
                         if game_version == "":
