@@ -23344,7 +23344,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -23825,7 +23825,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -60755,7 +60755,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -61236,7 +61236,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -121793,7 +121793,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -138011,7 +138011,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -138424,7 +138424,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.sco",
+                        "mSimpleMeshName": "ASSETS/Characters/Sona/Skins/Skin66/Particles/Petals_Mesh.SKINS_Sona_Skin66.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -151174,6 +151174,40 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "VCDissolve_Pattern_Tilling",
+                "value": [
+                    0.019999999552965164,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Pattern_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Width",
+                "value": [
+                    0.20000000298023224,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "VCDissolve_Value",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "AllFeatureOpener",
                 "value": [
                     1.0,
@@ -151721,6 +151755,17 @@
             {
                 "name": "DISSOLVE",
                 "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISSOLVE_VCBASED",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISSOLVE_VCREVERSE",
                 "Group": "Dissolve",
                 "__type": "StaticMaterialSwitchDef"
             },
