@@ -78,8 +78,8 @@
                     "mName": "AttackSpeed",
                     "mValues": [
                         0.0,
-                        0.6499999761581421,
-                        0.6499999761581421,
+                        0.800000011920929,
+                        0.800000011920929,
                         3.0,
                         2.0,
                         0.0,
@@ -125,6 +125,19 @@
                         0.33000001311302185
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "APDamage",
+                    "mValues": [
+                        0.0,
+                        8.0,
+                        12.0,
+                        50.0,
+                        100.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -133,12 +146,8 @@
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mSubpart": {
-                                "mDataValue": "AttackSpeed",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "mRatio": 0.009999999776482582,
-                            "__type": "SubPartScaledProportionalToStat"
+                            "mDataValue": "AttackSpeed",
+                            "__type": "NamedDataValueCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -154,6 +163,14 @@
                             },
                             "mRatio": 1.0,
                             "mStat": 3,
+                            "__type": "SubPartScaledProportionalToStat"
+                        },
+                        {
+                            "mSubpart": {
+                                "mDataValue": "APDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -238,7 +255,7 @@
                                 },
                                 {
                                     "type": "ADDamage",
-                                    "nameOverride": "TFT_AD_PhysicalDamage_Scale",
+                                    "nameOverride": "Spell_TFT16_YunaraSpell_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -925,26 +942,59 @@
     },
     "Characters/TFT16_Yunara/CharacterRecords/Root": {
         "mCharacterName": "TFT16_Yunara",
-        "baseHP": 800.0,
-        "baseStaticHPRegen": 0.0,
+        "{8662cf12}": {
+            "{b35aa769}": 800.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
         "healthBarHeight": 210.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 50.0,
-            "arBaseStaticRegen": 0.0,
+            "{726ee5cd}": {
+                "{b35aa769}": 50.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 60.0,
-        "baseArmor": 30.0,
-        "baseSpellBlock": 30.0,
+        "{4af40dc3}": {
+            "{b35aa769}": 60.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 30.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 30.0,
+            "__type": "{ce9b917b}"
+        },
         "baseCritChance": 0.25,
         "critDamageMultiplier": 1.399999976158142,
-        "baseMoveSpeed": 500.0,
-        "attackRange": 890.0,
-        "attackSpeed": 0.800000011920929,
-        "attackSpeedRatio": 0.75,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 890.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.800000011920929,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.75,
+            "__type": "{ce9b917b}"
+        },
         "basicAttack": {
             "mAttackName": "TFT16_YunaraBasicAttack",
             "__type": "AttackSlotData"

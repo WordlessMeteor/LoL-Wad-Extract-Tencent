@@ -75,7 +75,7 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-01-09 16-18-29</td>
-			<td style="text-align:center;">2</td>
+			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>Latest: 16.1.736.4068 -> 16.1.737.1049</li>
@@ -111,7 +111,7 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-01-22 09-03-40</td>
-			<td style="text-align:center;">2</td>
+			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>Latest: 16.1.738.2755 -> 16.2.739.8242</li>
@@ -120,7 +120,7 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-01-23 18-24-08</td>
-			<td style="text-align:center;">2</td>
+			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>Latest: 16.2.739.8242 -> 16.2.740.1491</li>
@@ -129,7 +129,7 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-02-04 10-05-07</td>
-			<td style="text-align:center;">2</td>
+			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>Latest: 16.2.740.1491 -> 16.3.743.3755</li>
@@ -138,7 +138,7 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-02-09 20-58-34/td>
-			<td style="text-align:center;">2</td>
+			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>Latest: 16.3.743.3755 -> 16.3.744.1639</li>
@@ -154,13 +154,21 @@
 				</ul>
 			</td>
 		</tr>
-	</tbody>
 		<tr>
 			<td style="text-align:center;">2026-02-11 22-40-49/td>
-			<td style="text-align:center;">2</td>
+			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>Latest: 16.3.744.1639 -> 16.3.745.7600</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-03-01 14-41-22/td>
+			<td style="text-align:center;">2</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>PBE: 16.3.744.1639 -> 16.5.749.6037</li>
 				</ul>
 			</td>
 		</tr>

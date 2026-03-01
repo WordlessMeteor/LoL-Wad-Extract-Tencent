@@ -336,7 +336,7 @@
                 },
                 {
                     "mStartingJointName": "L_Tassels1",
-                    "mEndingJointName": "{04663f0a}",
+                    "mEndingJointName": "L_Tassels7",
                     "mDefaultMaskName": "{7136e1bc}",
                     "mMaxBoneAngle": 180.0,
                     "mDampingValue": 5.0,
@@ -347,7 +347,7 @@
                 },
                 {
                     "mStartingJointName": "R_Tassels1",
-                    "mEndingJointName": "{c53c0bec}",
+                    "mEndingJointName": "R_Tassels7",
                     "mDefaultMaskName": "{7136e1bc}",
                     "mMaxBoneAngle": 180.0,
                     "mDampingValue": 5.0,
@@ -358,14 +358,14 @@
                 },
                 {
                     "name": "Spring",
-                    "Joint": "{ebaa7d7a}",
+                    "Joint": "Bird_SpringRoot",
                     "DoRotation": true,
                     "maxAngle": 180.0,
                     "__type": "SpringPhysicsRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{50531566}",
-                    "mEndingJointName": "{54531bb2}",
+                    "mStartingJointName": "Weapon_String1",
+                    "mEndingJointName": "Weapon_String5",
                     "mDefaultMaskName": "{7136e1bc}",
                     "OnlyActivateInTurns": true,
                     "__type": "ConformToPathRigPoseModifierData"
@@ -614,19 +614,24 @@
                 "OwnerCondition": {
                     "mDrivers": [
                         {
-                            "mDrivers": [
-                                {
-                                    "__type": "HasGearDynamicMaterialBoolDriver"
-                                },
-                                {
-                                    "mDriver": {
-                                        "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    "__type": "NotMaterialDriver"
-                                }
-                            ],
-                            "__type": "AllTrueMaterialDriver"
+                            "__type": "HasGearDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Kalista/Spells/KalistaRInvuln",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mAnimationNames": [
+                                    "Respawn",
+                                    "Recall_Winddown"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -18391,17 +18396,17 @@
                         "mSubmeshesToDraw": [
                             "BODY",
                             "Sleeves",
-                            "{920b7a16}",
+                            "LegsRight",
                             "Legs",
-                            "{0f38851d}",
+                            "LegsLeft",
                             "horn"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
                             "Sleeves",
-                            "{920b7a16}",
+                            "LegsRight",
                             "Legs",
-                            "{0f38851d}",
+                            "LegsLeft",
                             "horn"
                         ],
                         "mLockMeshToAttachment": true,
@@ -18468,13 +18473,13 @@
                         "mSubmeshesToDraw": [
                             "weapon",
                             "Lantern",
-                            "{9b6f09e9}",
+                            "Growth01",
                             "Branches"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "weapon",
                             "Lantern",
-                            "{9b6f09e9}",
+                            "Growth01",
                             "Branches"
                         ],
                         "mLockMeshToAttachment": true,
@@ -18541,17 +18546,17 @@
                         "mSubmeshesToDraw": [
                             "BODY",
                             "Sleeves",
-                            "{920b7a16}",
+                            "LegsRight",
                             "Legs",
-                            "{0f38851d}",
+                            "LegsLeft",
                             "horn"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
                             "Sleeves",
-                            "{920b7a16}",
+                            "LegsRight",
                             "Legs",
-                            "{0f38851d}",
+                            "LegsLeft",
                             "horn"
                         ],
                         "mLockMeshToAttachment": true,
@@ -36769,7 +36774,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 2.4000000953674316,
+                    "constantValue": 1.5,
                     "__type": "ValueFloat"
                 },
                 "isSingleParticle": 1,
@@ -36827,6 +36832,40 @@
                         1.0,
                         1.0
                     ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            0.4000000059604645,
+                            0.6000000238418579
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.600000023841858,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/Lillia/Skins/Skin46/Particles/Lillia_Skin46_RvfxFlower.SKINS_Lillia_Skin46.tex",
@@ -70980,25 +71019,25 @@
                 "flower",
                 "horn",
                 "Lantern",
-                "{0f38851d}",
-                "{920b7a16}",
+                "LegsLeft",
+                "LegsRight",
                 "Chain02",
                 "Sleeves",
-                "{9b6f09e9}"
+                "Growth01"
             ],
             "mCharacterSubmeshesToShow": [
-                "{f77f8478}",
+                "UltRibbon",
                 "Ultcloud",
                 "UltBody",
                 "{5a5a4c9d}",
-                "{1f4a97d8}",
+                "UltClothes",
                 "UltWeapon",
-                "{996f06c3}",
-                "{7fa19f98}",
-                "{1db6806d}",
-                "{a0dd497f}",
-                "{986f0530}",
-                "{500e7a8a}"
+                "Growth03",
+                "UltLegsLeft",
+                "UltLegsRight",
+                "UltFlower",
+                "Growth02",
+                "UltBodyoutline"
             ],
             "__type": "GearData"
         },

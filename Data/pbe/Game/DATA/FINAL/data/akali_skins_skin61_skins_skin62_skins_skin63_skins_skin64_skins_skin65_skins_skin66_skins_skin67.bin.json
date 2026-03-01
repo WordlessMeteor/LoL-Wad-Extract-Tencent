@@ -77461,7 +77461,7 @@
                         "mRuleName": "Q",
                         "mConditions": [
                             {
-                                "mPercentChanceToPlay": 30,
+                                "mPercentChanceToPlay": 40,
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
@@ -78134,6 +78134,10 @@
                             {
                                 "mPercentChanceToPlay": 30,
                                 "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 60.0,
+                                "__type": "ContextualConditionRuleCooldown"
                             }
                         ],
                         "mAudioAction": {
@@ -78157,6 +78161,10 @@
                             {
                                 "mPercentChanceToPlay": 30,
                                 "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 60.0,
+                                "__type": "ContextualConditionRuleCooldown"
                             }
                         ],
                         "mAudioAction": {
@@ -78180,6 +78188,10 @@
                             {
                                 "mPercentChanceToPlay": 30,
                                 "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 60.0,
+                                "__type": "ContextualConditionRuleCooldown"
                             }
                         ],
                         "mAudioAction": {
@@ -78204,6 +78216,10 @@
                             {
                                 "mPercentChanceToPlay": 30,
                                 "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 60.0,
+                                "__type": "ContextualConditionRuleCooldown"
                             }
                         ],
                         "mAudioAction": {
@@ -78391,6 +78407,29 @@
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"
                         },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AnimationEnded": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mConditions": [
+                            {
+                                "AnimationName": "Joke",
+                                "__type": "{2363fb10}"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DEnd",
+                            "mAllyEventName": "Joke3DEnd",
+                            "mEnemyEventName": "Joke3DEnd",
+                            "mSpectatorEventName": "Joke3DEnd",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "{20749c51}": false,
                         "__type": "ContextualRule"
                     }
                 ],

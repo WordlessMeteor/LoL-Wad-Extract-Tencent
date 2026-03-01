@@ -13686,10 +13686,19 @@
         "mCooldown": 15.0,
         "mSituations": {
             "RecallLeadIn": {
-                "mCoolDownTime": 10.0,
                 "mRules": [
                     {
                         "mRuleName": "Recall",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 10.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
                         "mAudioAction": {
                             "mSelfEventName": "Recall3DGeneral",
                             "mWaitTimeout": -1.0,
@@ -13712,7 +13721,10 @@
                             "mSpectatorEventName": "Taunt3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -13723,10 +13735,6 @@
                     {
                         "mRuleName": "Buy Item - Infinity Edge",
                         "mConditions": [
-                            {
-                                "mRuleCooldown": 5.0,
-                                "__type": "ContextualConditionRuleCooldown"
-                            },
                             {
                                 "mItems": [
                                     "Items/3031"
@@ -13739,16 +13747,15 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
                         "mRuleName": "Buy Item - Phantom Dancer",
                         "mConditions": [
-                            {
-                                "mRuleCooldown": 5.0,
-                                "__type": "ContextualConditionRuleCooldown"
-                            },
                             {
                                 "mItems": [
                                     "Items/3046"
@@ -13761,16 +13768,15 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
                         "mRuleName": "Buy Item - Bloodthirster",
                         "mConditions": [
-                            {
-                                "mRuleCooldown": 5.0,
-                                "__type": "ContextualConditionRuleCooldown"
-                            },
                             {
                                 "mItems": [
                                     "Items/3072"
@@ -13783,16 +13789,15 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
                         "mRuleName": "Buy Item - Trinity Force",
                         "mConditions": [
-                            {
-                                "mRuleCooldown": 5.0,
-                                "__type": "ContextualConditionRuleCooldown"
-                            },
                             {
                                 "mItems": [
                                     "Items/3078"
@@ -13805,16 +13810,15 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
                         "mRuleName": "Buy Item - Nashors Tooth",
                         "mConditions": [
-                            {
-                                "mRuleCooldown": 5.0,
-                                "__type": "ContextualConditionRuleCooldown"
-                            },
                             {
                                 "mItems": [
                                     "Items/3115"
@@ -13827,14 +13831,16 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
                 "__type": "ContextualSituation"
             },
             "UseItem": {
-                "mCoolDownTime": 10.0,
                 "mRules": [
                     {
                         "mRuleName": "Use Item - Ward",
@@ -13842,6 +13848,14 @@
                             {
                                 "mItemVOGroupHash": "Ward",
                                 "__type": "ContextualConditionItemVOGroup"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 60.0,
+                                "__type": "ContextualConditionRuleCooldown"
                             }
                         ],
                         "mAudioAction": {
@@ -13849,7 +13863,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -13860,9 +13877,14 @@
                     {
                         "mRuleName": "First Move",
                         "mAudioAction": {
+                            "mMaxOccurences": 1,
                             "mSelfEventName": "Move2DFirst",
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
                         },
                         "__type": "ContextualRule"
                     }
@@ -13902,173 +13924,6 @@
                 ],
                 "__type": "ContextualSituation"
             },
-            "SpellCast": {
-                "mRules": [
-                    {
-                        "mRuleName": "BasicAttack",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Draven/Spells/DravenBasicAttack",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mOverrideCacCooldown": true,
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "BasicAttack2",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Draven/Spells/DravenBasicAttack2",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mOverrideCacCooldown": true,
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "CritAttack",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Draven/Spells/DravenCritAttack",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mOverrideCacCooldown": true,
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "E",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Draven/Spells/DravenDoubleShotAbility/DravenDoubleShot",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mOverrideCacCooldown": true,
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "R",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Draven/Spells/DravenRCastAbility/DravenRCast",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mOverrideCacCooldown": true,
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "Q - Spinning Attack",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Draven/Spells/DravenSpinningAbility/DravenSpinningAttack",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mOverrideCacCooldown": true,
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "Q - Spinning Attack2",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Draven/Spells/DravenSpinningAbility/DravenSpinningAttack2",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mOverrideCacCooldown": true,
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "Q - Spinning Attack Crit",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Draven/Spells/DravenSpinningAbility/DravenSpinningAttackCrit",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mOverrideCacCooldown": true,
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "Q - Spinning Attack Crit 2",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Draven/Spells/DravenSpinningAbility/DravenSpinningAttack2Crit",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mOverrideCacCooldown": true,
-                        "__type": "ContextualRule"
-                    }
-                ],
-                "__type": "ContextualSituation"
-            },
             "Joke": {
                 "mRules": [
                     {
@@ -14080,7 +13935,10 @@
                             "mSpectatorEventName": "Joke3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -14097,7 +13955,10 @@
                             "mSpectatorEventName": "Laugh3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -14140,7 +14001,10 @@
                             "mSpectatorEventName": "Dance3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -14171,10 +14035,12 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "FirstEncounter3DDraven",
-                            "mEnemyEventName": "FirstEncounter3DDraven",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -14223,6 +14089,271 @@
                             "DontResetTimer": true,
                             "__type": "ContextualActionCooldownModifications"
                         },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellCast": {
+                "mRules": [
+                    {
+                        "mRuleName": "BasicAttack",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Draven/Spells/DravenBasicAttack",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "BasicAttack2",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Draven/Spells/DravenBasicAttack2",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "CritAttack",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Draven/Spells/DravenCritAttack",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Q Attack",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Draven/Spells/DravenSpinningAbility/DravenSpinningAttack",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Q Attack2",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Draven/Spells/DravenSpinningAbility/DravenSpinningAttack2",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Q Attack Crit",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Draven/Spells/DravenSpinningAbility/DravenSpinningAttackCrit",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Q Attack2 Crit",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Draven/Spells/DravenSpinningAbility/DravenSpinningAttack2Crit",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": -10,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "E",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Draven/Spells/DravenDoubleShotAbility/DravenDoubleShot",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "R",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Draven/Spells/DravenRCastAbility/DravenRCast",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 100,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AnimationEnded": {
+                "mRules": [
+                    {
+                        "mRuleName": "Dance",
+                        "mConditions": [
+                            {
+                                "AnimationName": "Dance",
+                                "__type": "{2363fb10}"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Dance3DEnd",
+                            "mAllyEventName": "Dance3DEnd",
+                            "mEnemyEventName": "Dance3DEnd",
+                            "mSpectatorEventName": "Dance3DEnd",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "{20749c51}": false,
                         "__type": "ContextualRule"
                     }
                 ],
