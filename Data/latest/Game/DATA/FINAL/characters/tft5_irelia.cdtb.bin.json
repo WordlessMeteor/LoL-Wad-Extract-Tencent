@@ -73,8 +73,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -128,13 +126,13 @@
                             "Elements": [
                                 {
                                     "type": "MagicDamage",
-                                    "nameOverride": "Spell_TFT5_Footer_ModifiedDamage",
+                                    "nameOverride": "Spell_ListType_MagicDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "DamageReduction",
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT5_GalioW_Durability",
+                                    "nameOverride": "Spell_ListType_DamageReduction",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -189,7 +187,7 @@
             "castConeDistance": 100.0,
             "castFrame": 10.0,
             "missileSpeed": 467.0,
-            "mMissileEffectName": "EvelynnBasicAttack_mis.troy",
+            "mMissileEffectName": "doesnotexist.troy",
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "mClientData": {
                 "mTargeterDefinitions": [
@@ -242,7 +240,7 @@
             "castConeDistance": 100.0,
             "castFrame": 10.0,
             "missileSpeed": 467.0,
-            "mMissileEffectName": "EvelynnBasicAttack_mis.troy",
+            "mMissileEffectName": "doesnotexist.troy",
             "mHitEffectKey": "TFT_Global_BA_Hit",
             "mClientData": {
                 "mTargeterDefinitions": [
@@ -337,26 +335,59 @@
     },
     "Characters/TFT5_Irelia/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Irelia",
-        "baseHP": 750.0,
-        "baseStaticHPRegen": 0.0,
+        "{8662cf12}": {
+            "{b35aa769}": 750.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
         "healthBarHeight": 170.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 80.0,
-            "arBaseStaticRegen": 0.0,
+            "{726ee5cd}": {
+                "{b35aa769}": 80.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 50.0,
-        "baseArmor": 40.0,
-        "baseSpellBlock": 40.0,
+        "{4af40dc3}": {
+            "{b35aa769}": 60.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 40.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 40.0,
+            "__type": "{ce9b917b}"
+        },
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
-        "baseMoveSpeed": 500.0,
-        "attackRange": 180.0,
-        "attackSpeed": 0.699999988079071,
-        "attackSpeedRatio": 0.699999988079071,
+        "critDamageMultiplier": 1.2999999523162842,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 180.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.800000011920929,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.800000011920929,
+            "__type": "{ce9b917b}"
+        },
         "basicAttack": {
             "mAttackName": "TFT5_IreliaBasicAttack",
             "__type": "AttackSlotData"

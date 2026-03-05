@@ -195,8 +195,6 @@
             ],
             "mSpellCalculations": {
                 "{7f88ebba}": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -205,7 +203,7 @@
                             },
                             "mRatio": 0.009999999776482582,
                             "mStyleTag": "noScale",
-                            "mStyleTagIfScaled": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
                             "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
@@ -213,8 +211,8 @@
                     "__type": "GameCalculation"
                 },
                 "TotalDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mExpandedTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
                             "mStat": 2,
@@ -224,8 +222,8 @@
                                     "__type": "NamedDataValueCalculationPart"
                                 },
                                 "mRatio": 0.009999999776482582,
-                                "mStyleTag": "noScale",
-                                "mStyleTagIfScaled": "noScale",
+                                "mStyleTag": "scaleAD",
+                                "mStyleTagIfScaled": "scaleAD",
                                 "__type": "SubPartScaledProportionalToStat"
                             },
                             "__type": "StatBySubPartCalculationPart"
@@ -317,19 +315,13 @@
                                 {
                                     "type": "PercentAttackDamage",
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT5_KalistaQ_DamagePercent",
+                                    "nameOverride": "Spell_ListType_ADScaling",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_BonusDamage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "BaseDamage",
-                                    "nameOverride": "Spell_TFT5_KalistaQ_TotalDamage",
-                                    "Style": 2,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -346,26 +338,59 @@
     },
     "Characters/TFT5_Kalista/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Kalista",
-        "baseHP": 500.0,
-        "baseStaticHPRegen": 0.0,
+        "{8662cf12}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
         "healthBarHeight": 150.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 120.0,
-            "arBaseStaticRegen": 0.0,
+            "{726ee5cd}": {
+                "{b35aa769}": 120.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 55.0,
-        "baseArmor": 15.0,
-        "baseSpellBlock": 15.0,
+        "{4af40dc3}": {
+            "{b35aa769}": 60.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 15.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 15.0,
+            "__type": "{ce9b917b}"
+        },
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
-        "baseMoveSpeed": 500.0,
-        "attackRange": 890.0,
-        "attackSpeed": 0.699999988079071,
-        "attackSpeedRatio": 0.699999988079071,
+        "critDamageMultiplier": 1.2999999523162842,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 890.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.75,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.75,
+            "__type": "{ce9b917b}"
+        },
         "basicAttack": {
             "mAttackName": "TFT5_KalistaBasicAttack",
             "__type": "AttackSlotData"

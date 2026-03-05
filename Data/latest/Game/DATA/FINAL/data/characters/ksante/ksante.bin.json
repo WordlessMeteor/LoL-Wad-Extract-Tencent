@@ -2236,8 +2236,80 @@
                         12.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "MarkDamagePercentMin",
+                    "mValues": [
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "mName": "MarkDamagePercentMax",
+                    "mValues": [
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "mName": "MaxHealthDamagePercentBase",
+                            "mValues": [
+                                0.014999999664723873,
+                                0.014999999664723873,
+                                0.014999999664723873,
+                                0.014999999664723873,
+                                0.014999999664723873,
+                                0.014999999664723873,
+                                0.014999999664723873
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "mName": "MarkDamagePercentMin",
+                            "mValues": [
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "mName": "MarkDamagePercentMax",
+                            "mValues": [
+                                0.029999999329447746,
+                                0.029999999329447746,
+                                0.029999999329447746,
+                                0.029999999329447746,
+                                0.029999999329447746,
+                                0.029999999329447746,
+                                0.029999999329447746
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "{281dd874}": {
                     "mFormulaParts": [
@@ -2270,9 +2342,9 @@
                 "PercentHealthDamage": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 0.009999999776482582,
-                            "mEndValue": 0.019999999552965164,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "{0589a59c}": "{cd7e016a}",
+                            "{0b65bc23}": "{d79198e0}",
+                            "__type": "{ee18a47b}"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -7378,7 +7450,7 @@
         "mDescriptionTraKey": "stat_stone_description_KsanteWDamageReduced",
         "EventsToTrack": [
             {
-                "EventToTrack": 245,
+                "EventToTrack": 249,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -7406,7 +7478,7 @@
         "mDescriptionTraKey": "stat_stone_description_KsanteEDamgeBlocked",
         "EventsToTrack": [
             {
-                "EventToTrack": 245,
+                "EventToTrack": 249,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -7434,7 +7506,7 @@
         "mDescriptionTraKey": "stat_stone_description_KsanteChampsMovedDistance",
         "EventsToTrack": [
             {
-                "EventToTrack": 245,
+                "EventToTrack": 249,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -7614,7 +7686,7 @@
         "mDescriptionTraKey": "stat_stone_description_KsantePProcsOnChamps",
         "EventsToTrack": [
             {
-                "EventToTrack": 245,
+                "EventToTrack": 249,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -7642,7 +7714,7 @@
         "mDescriptionTraKey": "stat_stone_description_KsanteROverWall",
         "EventsToTrack": [
             {
-                "EventToTrack": 245,
+                "EventToTrack": 249,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -7670,7 +7742,7 @@
         "mDescriptionTraKey": "stat_stone_description_KsanteQKnockUps",
         "EventsToTrack": [
             {
-                "EventToTrack": 245,
+                "EventToTrack": 249,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -8252,7 +8324,6 @@
             },
             "30": {
                 "mItemList": [
-                    226664,
                     223158,
                     223006,
                     223087,
@@ -8265,7 +8336,6 @@
                     223075,
                     223177,
                     223004,
-                    222517,
                     223504,
                     223302,
                     224645,
@@ -8324,7 +8394,6 @@
                     223078,
                     223222,
                     224646,
-                    226620,
                     226701,
                     223020,
                     222512,
@@ -8468,26 +8537,16 @@
                             "mChoicesMap": {
                                 "AnG": {
                                     "mChoices": [
-                                        3111
+                                        3111,
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnI": {
                                     "mChoices": [
                                         3111,
-                                        6662
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "Anc": {
-                                    "mChoices": [
-                                        3111
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "And": {
-                                    "mChoices": [
-                                        3111
+                                        6662,
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8497,16 +8556,15 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "Av5": {
+                                "Avq": {
                                     "mChoices": [
                                         3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AwD": {
+                                "Av5": {
                                     "mChoices": [
-                                        3111,
-                                        3047
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8521,8 +8579,8 @@
                                 "Awn": {
                                     "mChoices": [
                                         6662,
-                                        2504,
-                                        3084
+                                        3084,
+                                        2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8558,17 +8616,17 @@
                         },
                         {
                             "mChoicesMap": {
-                                "AnGAwM": {
-                                    "mChoices": [
-                                        3111
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AnGBoG": {
                                     "mChoices": [
                                         3111,
-                                        3047,
-                                        6665
+                                        6665,
+                                        3047
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AnIAwM": {
+                                    "mChoices": [
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8582,29 +8640,24 @@
                                 },
                                 "AnIBoG": {
                                     "mChoices": [
-                                        3111
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AndAwn": {
-                                    "mChoices": [
-                                        6665
+                                        3111,
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnAwM": {
                                     "mChoices": [
                                         6662,
-                                        2502,
-                                        3075
+                                        3075,
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnBoG": {
                                     "mChoices": [
+                                        6665,
                                         2502,
-                                        3075,
-                                        6665
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8638,29 +8691,30 @@
                                 },
                                 "AwnBoG": {
                                     "mChoices": [
-                                        2502,
                                         6665,
+                                        2502,
                                         6664
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AwnBoI": {
+                                    "mChoices": [
+                                        6662
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwnBoJ": {
                                     "mChoices": [
-                                        2504,
                                         6662,
-                                        2502
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "BoGBoI": {
-                                    "mChoices": [
-                                        3111
+                                        2502,
+                                        2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "BoGBoJ": {
                                     "mChoices": [
-                                        3111
+                                        3111,
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -8692,6 +8746,12 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
+                                "AnGAwMBoG": {
+                                    "mChoices": [
+                                        3111
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
                                 "AnGAwnBoG": {
                                     "mChoices": [
                                         6665,
@@ -8700,9 +8760,9 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnGBoGBoJ": {
+                                "AnIAvnBoG": {
                                     "mChoices": [
-                                        3111
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8716,20 +8776,8 @@
                                 "AnIAwnBoG": {
                                     "mChoices": [
                                         6665,
-                                        3075,
-                                        2502
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAwnBoJ": {
-                                    "mChoices": [
-                                        6662
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AndAwnBoG": {
-                                    "mChoices": [
-                                        6665
+                                        2502,
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8742,9 +8790,9 @@
                                 },
                                 "AvnAwDBoG": {
                                     "mChoices": [
+                                        6665,
                                         3143,
-                                        2502,
-                                        6665
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8764,6 +8812,12 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
+                                "AwDAwnBoG": {
+                                    "mChoices": [
+                                        6665
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
                                 "AwMAwnBoG": {
                                     "mChoices": [
                                         2502,
@@ -8772,11 +8826,17 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
+                                "AwMAwnBoI": {
+                                    "mChoices": [
+                                        6662
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
                                 "AwMAwnBoJ": {
                                     "mChoices": [
                                         3075,
-                                        2502,
-                                        6662
+                                        6662,
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8791,8 +8851,8 @@
                                 "AwnBoGBoJ": {
                                     "mChoices": [
                                         2504,
-                                        2502,
-                                        3075
+                                        3075,
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -8807,15 +8867,10 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnGAvnAwDBoG": {
-                                    "mChoices": [
-                                        3143
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AnGAvnAwMBoG": {
                                     "mChoices": [
-                                        3075
+                                        3075,
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8848,12 +8903,12 @@
                                 "AnGAwnBoGBoJ": {
                                     "mChoices": [
                                         3075,
-                                        3065,
-                                        3143
+                                        3143,
+                                        3065
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnIAwDAwnBoG": {
+                                "AnIAwMAwnBoG": {
                                     "mChoices": [
                                         6665
                                     ],
@@ -8862,8 +8917,8 @@
                                 "AnIAwnBoGBoJ": {
                                     "mChoices": [
                                         3075,
-                                        2502,
-                                        4401
+                                        4401,
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8873,9 +8928,9 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AwDAwnBoGBoI": {
+                                "AvnAwDBoGBoJ": {
                                     "mChoices": [
-                                        2502
+                                        2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -8895,14 +8950,14 @@
                                 "AwMAwnBoGBoJ": {
                                     "mChoices": [
                                         3075,
-                                        2502
+                                        2502,
+                                        2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwnBoGBoIBoJ": {
                                     "mChoices": [
-                                        2504,
-                                        3075
+                                        2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -8979,14 +9034,14 @@
                     "Items/3047",
                     "Items/3050",
                     "Items/2524",
-                    "Items/3111",
                     "Items/3075",
                     "Items/6665",
+                    "Items/3111",
                     "Items/6662",
                     "Items/2525",
-                    "Items/3190",
-                    "Items/2504",
                     "Items/3143",
+                    "Items/2504",
+                    "Items/3190",
                     "Items/3110",
                     "Items/3876",
                     "Items/2502"
@@ -9008,9 +9063,9 @@
                             "mChoicesMap": {
                                 "A8Z": {
                                     "mChoices": [
-                                        2524,
                                         3050,
-                                        3047
+                                        3047,
+                                        2524
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -9029,8 +9084,8 @@
                                 },
                                 "AvnA8Z": {
                                     "mChoices": [
-                                        2524,
                                         3050,
+                                        2524,
                                         6662
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -9051,15 +9106,14 @@
                                 },
                                 "AwnA8Z": {
                                     "mChoices": [
-                                        2524,
-                                        3050
+                                        3050,
+                                        2524
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "A8ZBoG": {
                                     "mChoices": [
-                                        3047,
-                                        3111
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9077,16 +9131,14 @@
                                 "AncAvnA8Z": {
                                     "mChoices": [
                                         3050,
-                                        3075,
-                                        3190
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AncAvqA8Z": {
                                     "mChoices": [
-                                        3111,
                                         3047,
-                                        2525
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9099,8 +9151,20 @@
                                 "AvnAvqA8Z": {
                                     "mChoices": [
                                         2524,
-                                        3075,
+                                        6665,
+                                        3075
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvnAwDA8Z": {
+                                    "mChoices": [
                                         6665
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvnA8ZBoG": {
+                                    "mChoices": [
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9120,21 +9184,14 @@
                                     "mChoices": [
                                         2525,
                                         3075,
-                                        3190
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AncAvqAwnA8Z": {
                                     "mChoices": [
-                                        2525,
-                                        3190,
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AvnAvqAwDA8Z": {
-                                    "mChoices": [
-                                        6665
+                                        6665,
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -9211,14 +9268,14 @@
                     "Items/6665",
                     "Items/3075",
                     "Items/3111",
-                    "Items/2502",
                     "Items/2504",
+                    "Items/2502",
                     "Items/3143",
-                    "Items/2525",
+                    "Items/3050",
                     "Items/3065",
+                    "Items/2525",
                     "Items/3110",
                     "Items/6664",
-                    "Items/3050",
                     "Items/4401",
                     "Items/2524"
                 ],
@@ -9242,8 +9299,7 @@
                                 "AnG": {
                                     "mChoices": [
                                         3047,
-                                        3111,
-                                        6662
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9258,20 +9314,16 @@
                                 "Anc": {
                                     "mChoices": [
                                         3047,
-                                        3111
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "And": {
-                                    "mChoices": [
-                                        3047
+                                        3111,
+                                        6662
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvB": {
                                     "mChoices": [
                                         6662,
-                                        2504
+                                        2504,
+                                        3050
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9279,14 +9331,14 @@
                                     "mChoices": [
                                         6662,
                                         3075,
-                                        2504
+                                        3050
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "Avq": {
                                     "mChoices": [
-                                        3111,
                                         3047,
+                                        3111,
                                         6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -9294,8 +9346,8 @@
                                 "Av5": {
                                     "mChoices": [
                                         3111,
-                                        3047,
-                                        6662
+                                        6662,
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9403,25 +9455,16 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnGAwD": {
-                                    "mChoices": [
-                                        3047,
-                                        3111
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AnGAwn": {
                                     "mChoices": [
-                                        6665,
-                                        6662,
-                                        3065
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnGBoG": {
                                     "mChoices": [
-                                        3111,
                                         3047,
+                                        3111,
                                         6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -9429,6 +9472,7 @@
                                 "AnIAvB": {
                                     "mChoices": [
                                         6662,
+                                        3050,
                                         6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -9444,13 +9488,8 @@
                                 "AnIAvq": {
                                     "mChoices": [
                                         3111,
-                                        3047
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAv5": {
-                                    "mChoices": [
-                                        3111
+                                        3047,
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9469,12 +9508,6 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnIAxW": {
-                                    "mChoices": [
-                                        6662
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AnIBEx": {
                                     "mChoices": [
                                         3111
@@ -9489,12 +9522,6 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnIBoI": {
-                                    "mChoices": [
-                                        3111
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AnIBoJ": {
                                     "mChoices": [
                                         3111,
@@ -9502,30 +9529,16 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AncAvn": {
-                                    "mChoices": [
-                                        6662,
-                                        3050
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AncAwn": {
-                                    "mChoices": [
-                                        3050
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AncBoG": {
                                     "mChoices": [
-                                        3111,
-                                        3047
+                                        3047,
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AndBoG": {
                                     "mChoices": [
-                                        3047,
-                                        3111
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9538,7 +9551,7 @@
                                 "AvBBoG": {
                                     "mChoices": [
                                         6665,
-                                        2502,
+                                        3050,
                                         3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -9591,13 +9604,7 @@
                                 "AvnAxH": {
                                     "mChoices": [
                                         6662,
-                                        6665,
-                                        3075
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AvnA6e": {
-                                    "mChoices": [
+                                        3075,
                                         6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -9612,24 +9619,24 @@
                                 "AvnBoG": {
                                     "mChoices": [
                                         3075,
-                                        2502,
-                                        6665
+                                        6665,
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnBoI": {
                                     "mChoices": [
                                         6662,
-                                        3075,
-                                        6665
+                                        6665,
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnBoJ": {
                                     "mChoices": [
                                         6662,
-                                        3075,
-                                        2502
+                                        3143,
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9648,25 +9655,18 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AvqBEx": {
-                                    "mChoices": [
-                                        3111
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AvqBoG": {
                                     "mChoices": [
-                                        3111,
                                         3047,
-                                        3009
+                                        3111,
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvqBoJ": {
                                     "mChoices": [
                                         3111,
-                                        3047,
-                                        2525
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9680,8 +9680,7 @@
                                 "Av5BoG": {
                                     "mChoices": [
                                         3111,
-                                        3047,
-                                        6665
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9696,12 +9695,6 @@
                                         6662,
                                         6665,
                                         2504
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AwDAxH": {
-                                    "mChoices": [
-                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9726,10 +9719,9 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AwmAwn": {
+                                "AwMBoG": {
                                     "mChoices": [
-                                        6662,
-                                        6665
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9744,15 +9736,15 @@
                                     "mChoices": [
                                         6662,
                                         6665,
-                                        2504
+                                        3050
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwnBoG": {
                                     "mChoices": [
                                         6665,
-                                        2502,
-                                        2504
+                                        2504,
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9768,13 +9760,12 @@
                                     "mChoices": [
                                         6662,
                                         2504,
-                                        2502
+                                        3050
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwvBoG": {
                                     "mChoices": [
-                                        3047,
                                         3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -9812,7 +9803,13 @@
                                     "mChoices": [
                                         3111,
                                         3047,
-                                        2525
+                                        3075
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "BoIBoJ": {
+                                    "mChoices": [
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -9824,26 +9821,20 @@
                                 "AnGAnIAvn": {
                                     "mChoices": [
                                         6665,
-                                        2525,
-                                        3075
+                                        3075,
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnGAnIAwn": {
                                     "mChoices": [
                                         6665,
-                                        2525,
-                                        6662
+                                        6662,
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnGAvBBoG": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnGAvnAvq": {
                                     "mChoices": [
                                         6665
                                     ],
@@ -9867,18 +9858,11 @@
                                 },
                                 "AnGAvnBoJ": {
                                     "mChoices": [
-                                        2504,
                                         3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnGAv5BoG": {
-                                    "mChoices": [
-                                        3111
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnGAwDBoG": {
                                     "mChoices": [
                                         3111
                                     ],
@@ -9892,12 +9876,6 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnGAwnBoI": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AnGAwnBoJ": {
                                     "mChoices": [
                                         3065
@@ -9906,13 +9884,12 @@
                                 },
                                 "AnGBoGBoJ": {
                                     "mChoices": [
-                                        3111,
                                         3047,
-                                        3075
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnIAndAwn": {
+                                "AnIAvBAvq": {
                                     "mChoices": [
                                         6665
                                     ],
@@ -9921,15 +9898,15 @@
                                 "AnIAvBBoG": {
                                     "mChoices": [
                                         6665,
-                                        2502,
-                                        3075
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnIAvnAvq": {
                                     "mChoices": [
                                         6665,
-                                        3143
+                                        3143,
+                                        6662
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9941,15 +9918,10 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnIAvnAwm": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AnIAvnAxH": {
                                     "mChoices": [
-                                        6665
+                                        6665,
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -9963,8 +9935,8 @@
                                 },
                                 "AnIAvnBoJ": {
                                     "mChoices": [
-                                        3143,
                                         3075,
+                                        3143,
                                         2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -9972,15 +9944,14 @@
                                 "AnIAvqAwn": {
                                     "mChoices": [
                                         6665,
-                                        3143,
-                                        2525
+                                        6662,
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnIAv5Awn": {
                                     "mChoices": [
                                         6665,
-                                        6662,
                                         4401
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10009,8 +9980,7 @@
                                 "AnIAwnBEx": {
                                     "mChoices": [
                                         6665,
-                                        6662,
-                                        3065
+                                        6662
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10024,30 +9994,24 @@
                                 },
                                 "AnIAwnBoI": {
                                     "mChoices": [
-                                        6665,
                                         6662,
-                                        2502
+                                        6665,
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnIAwnBoJ": {
                                     "mChoices": [
-                                        3075,
                                         6662,
+                                        3075,
                                         2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnIBoGBoJ": {
                                     "mChoices": [
-                                        3111,
-                                        3047
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AncAvnAvq": {
-                                    "mChoices": [
-                                        6665
+                                        3047,
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10055,46 +10019,20 @@
                                     "mChoices": [
                                         6665,
                                         3075,
-                                        2502
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AncAvqAwn": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AncAwnBoG": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AndAvnAwD": {
-                                    "mChoices": [
-                                        6665
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AndAvnBoG": {
                                     "mChoices": [
                                         6665,
-                                        3075,
-                                        2502
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AndAwnBoG": {
                                     "mChoices": [
-                                        6665,
-                                        3075
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AndBoGBoJ": {
-                                    "mChoices": [
-                                        3047
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10110,15 +10048,28 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AvnAvqAwD": {
+                                "AvBBoGBoJ": {
                                     "mChoices": [
-                                        6665,
-                                        2525,
+                                        3075,
                                         2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
+                                "AvnAvqAwD": {
+                                    "mChoices": [
+                                        6665,
+                                        6662,
+                                        2525
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
                                 "AvnAvqAwm": {
+                                    "mChoices": [
+                                        6665
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvnAvqAxH": {
                                     "mChoices": [
                                         6665
                                     ],
@@ -10136,23 +10087,22 @@
                                     "mChoices": [
                                         2525,
                                         3143,
-                                        2502
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnAv5BoG": {
                                     "mChoices": [
                                         6665,
-                                        2502,
-                                        3075
+                                        3143,
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnAv8BoG": {
                                     "mChoices": [
                                         3075,
-                                        2502,
-                                        2504
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10166,8 +10116,8 @@
                                 },
                                 "AvnAwDAxH": {
                                     "mChoices": [
-                                        6662,
                                         6665,
+                                        6662,
                                         2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10189,14 +10139,8 @@
                                 "AvnAwDBoJ": {
                                     "mChoices": [
                                         3143,
-                                        2502,
-                                        2504
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AvnAwMBoG": {
-                                    "mChoices": [
-                                        6665
+                                        2504,
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10204,28 +10148,12 @@
                                     "mChoices": [
                                         6665,
                                         3075,
-                                        3143
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AvnAwmBoJ": {
-                                    "mChoices": [
-                                        3075
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AvnAwnBoG": {
-                                    "mChoices": [
-                                        6665,
-                                        2502,
                                         2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnAwvBoG": {
                                     "mChoices": [
-                                        6665,
-                                        2502,
                                         3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10240,7 +10168,8 @@
                                 },
                                 "AvnAxHBoJ": {
                                     "mChoices": [
-                                        3075
+                                        3075,
+                                        2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10254,8 +10183,8 @@
                                 },
                                 "AvnBoGBoI": {
                                     "mChoices": [
-                                        3075,
                                         6665,
+                                        3075,
                                         2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10274,6 +10203,12 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
+                                "AvqAwDBoG": {
+                                    "mChoices": [
+                                        3047
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
                                 "AvqAwnBEx": {
                                     "mChoices": [
                                         6665
@@ -10283,16 +10218,22 @@
                                 "AvqAwnBoG": {
                                     "mChoices": [
                                         6665,
-                                        2504,
-                                        3075
+                                        3075,
+                                        2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvqAwnBoJ": {
                                     "mChoices": [
-                                        2525,
                                         3143,
+                                        2525,
                                         2504
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvqBoGBoJ": {
+                                    "mChoices": [
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10300,14 +10241,13 @@
                                     "mChoices": [
                                         6665,
                                         2502,
-                                        3075
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "Av5AxWBoG": {
                                     "mChoices": [
-                                        3143,
-                                        2502
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10319,24 +10259,17 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AwDAwnBoI": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AwDAwnBoJ": {
                                     "mChoices": [
                                         2504,
-                                        2502,
-                                        2525
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwDBoGBoJ": {
                                     "mChoices": [
-                                        3111,
-                                        3047
+                                        3047,
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10356,22 +10289,16 @@
                                 "AwnAxHBoG": {
                                     "mChoices": [
                                         6665,
-                                        2504
+                                        2504,
+                                        3065
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwnBExBoG": {
                                     "mChoices": [
                                         6665,
-                                        3075,
-                                        2502
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AwnBExBoJ": {
-                                    "mChoices": [
                                         3143,
-                                        6662
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10385,8 +10312,8 @@
                                 },
                                 "AwnBoGBoJ": {
                                     "mChoices": [
-                                        2504,
                                         3075,
+                                        2504,
                                         2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10395,12 +10322,6 @@
                                     "mChoices": [
                                         3075,
                                         6662
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AxWBoGBoJ": {
-                                    "mChoices": [
-                                        3065
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -10419,45 +10340,44 @@
                                 },
                                 "AnGAnIAvnBoJ": {
                                     "mChoices": [
-                                        3143,
-                                        2525
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnGAnIAwnBoG": {
                                     "mChoices": [
                                         6665,
-                                        3143,
-                                        3075
+                                        3075,
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnGAnIAwnBoJ": {
                                     "mChoices": [
                                         2525,
-                                        3143,
-                                        3075
+                                        3075,
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnGAndAvnBoG": {
                                     "mChoices": [
-                                        6665,
-                                        3075
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnGAndAwnBoG": {
+                                "AnGAvnAvqBoG": {
                                     "mChoices": [
-                                        6665
+                                        6665,
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnGAvnAv5BoG": {
                                     "mChoices": [
                                         6665,
-                                        2525,
-                                        3075
+                                        3075,
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10472,8 +10392,7 @@
                                 "AnGAvnAwDBoJ": {
                                     "mChoices": [
                                         3143,
-                                        2525,
-                                        2504
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10488,18 +10407,6 @@
                                         3075,
                                         6665,
                                         2525
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnGAvnBExBoG": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnGAvnBoGBoI": {
-                                    "mChoices": [
-                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10527,34 +10434,18 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnGAwnBoGBoI": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AnGAwnBoGBoJ": {
                                     "mChoices": [
                                         3075,
-                                        3065,
-                                        3143
+                                        3143,
+                                        3065
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnIAndAvnBoG": {
+                                "AnIAvnAvqBoG": {
                                     "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAndAwnBoG": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAvnAwDAxH": {
-                                    "mChoices": [
+                                        3143,
+                                        3075,
                                         6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10570,7 +10461,6 @@
                                 "AnIAvnAwDBoJ": {
                                     "mChoices": [
                                         3143,
-                                        2502,
                                         2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10585,15 +10475,17 @@
                                 },
                                 "AnIAvnBoGBoJ": {
                                     "mChoices": [
-                                        3143,
                                         3075,
+                                        3143,
                                         2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnIAvqAwnBoG": {
                                     "mChoices": [
-                                        6665
+                                        6665,
+                                        3075,
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10602,12 +10494,6 @@
                                         3143,
                                         2525,
                                         3075
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAv5AwnBoG": {
-                                    "mChoices": [
-                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10622,37 +10508,19 @@
                                 "AnIAwDAwnBoJ": {
                                     "mChoices": [
                                         3143,
-                                        2525,
-                                        2502
+                                        2502,
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnIAwnAxHBoG": {
                                     "mChoices": [
-                                        6665,
-                                        3075
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAwnAxHBoJ": {
-                                    "mChoices": [
-                                        3075
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAwnBExBoG": {
-                                    "mChoices": [
+                                        3075,
                                         6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnIAwnBExBoJ": {
-                                    "mChoices": [
-                                        2502
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAwnBoGBoI": {
+                                "AnIAwnBExBoG": {
                                     "mChoices": [
                                         6665
                                     ],
@@ -10663,12 +10531,6 @@
                                         3075,
                                         3143,
                                         2502
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AndAvnAvqBoJ": {
-                                    "mChoices": [
-                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10687,38 +10549,38 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AndAwnBoGBoJ": {
-                                    "mChoices": [
-                                        3075,
-                                        3065,
-                                        2504
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AvnAvqAwDBoG": {
                                     "mChoices": [
                                         6665,
-                                        3143
+                                        3143,
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnAvqAwDBoJ": {
                                     "mChoices": [
-                                        2525
+                                        3143
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvnAvqAxHBoG": {
+                                    "mChoices": [
+                                        6665,
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnAvqAxHBoJ": {
                                     "mChoices": [
-                                        2525
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnAvqBoGBoJ": {
                                     "mChoices": [
-                                        3143,
                                         2525,
-                                        3075
+                                        3075,
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10730,11 +10592,17 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
+                                "AvnAv5AxHBoG": {
+                                    "mChoices": [
+                                        6665
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
                                 "AvnAv5BoGBoJ": {
                                     "mChoices": [
                                         3143,
                                         3075,
-                                        2502
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10743,12 +10611,6 @@
                                         6665,
                                         3143,
                                         2504
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AvnAwDAwnBoG": {
-                                    "mChoices": [
-                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10762,8 +10624,7 @@
                                 },
                                 "AvnAwDAxHBoJ": {
                                     "mChoices": [
-                                        2502,
-                                        2504
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10775,8 +10636,7 @@
                                 },
                                 "AvnAwDBoGBoI": {
                                     "mChoices": [
-                                        6665,
-                                        3143
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10813,15 +10673,26 @@
                                 "AvnBExBoGBoJ": {
                                     "mChoices": [
                                         3075,
-                                        3143,
-                                        2525
+                                        3143
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvnBoGBoIBoJ": {
+                                    "mChoices": [
+                                        3075
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvqAwDAwnBoG": {
+                                    "mChoices": [
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvqAwnBoGBoJ": {
                                     "mChoices": [
-                                        2525,
                                         3143,
+                                        2525,
                                         3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10832,11 +10703,23 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
+                                "Av5AwnAxHBoG": {
+                                    "mChoices": [
+                                        6665
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
                                 "Av5AwnBoGBoJ": {
                                     "mChoices": [
+                                        3075,
                                         3143,
-                                        2525,
-                                        3075
+                                        2525
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AwDAwnAxHBoG": {
+                                    "mChoices": [
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10848,30 +10731,31 @@
                                 },
                                 "AwDAwnBoGBoJ": {
                                     "mChoices": [
-                                        3143,
                                         2504,
+                                        3143,
                                         2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwnAxHBoGBoJ": {
                                     "mChoices": [
-                                        2504,
                                         3075,
-                                        2502
+                                        2504,
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwnBExBoGBoJ": {
                                     "mChoices": [
-                                        3143,
                                         3075,
-                                        2525
+                                        3143,
+                                        3065
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwnBoGBoIBoJ": {
                                     "mChoices": [
+                                        3143,
                                         3075,
                                         2525
                                     ],
@@ -10891,7 +10775,6 @@
                                 },
                                 "AnGAnIAvnBoGBoJ": {
                                     "mChoices": [
-                                        3143,
                                         3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10904,38 +10787,29 @@
                                 },
                                 "AnGAnIAwnBoGBoJ": {
                                     "mChoices": [
+                                        3143,
+                                        2525
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AnGAndAvnBoGBoJ": {
+                                    "mChoices": [
+                                        3075
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AnGAvnAv5BoGBoJ": {
+                                    "mChoices": [
                                         2525,
                                         3075,
                                         3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnGAndAvnBoGBoJ": {
-                                    "mChoices": [
-                                        3075,
-                                        3143,
-                                        3065
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnGAvnAv5AwDBoG": {
-                                    "mChoices": [
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnGAvnAv5BoGBoJ": {
-                                    "mChoices": [
-                                        3075,
-                                        3143,
-                                        2525
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
                                 "AnGAvnAwDAxHBoG": {
                                     "mChoices": [
-                                        6665,
                                         3110,
+                                        6665,
                                         2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -10950,38 +10824,22 @@
                                 },
                                 "AnGAvnAxHBoGBoJ": {
                                     "mChoices": [
-                                        2525,
                                         3075,
+                                        2525,
                                         3065
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AnGAv5AwDAwnBoG": {
+                                    "mChoices": [
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnGAv5AwnBoGBoJ": {
                                     "mChoices": [
-                                        2525,
-                                        3075,
-                                        3143
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnGAwDAwnBoGBoJ": {
-                                    "mChoices": [
                                         3143,
-                                        2525,
-                                        3065
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAndAvnBoGBoJ": {
-                                    "mChoices": [
-                                        3143,
-                                        3075
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AnIAndAwnBoGBoJ": {
-                                    "mChoices": [
-                                        3075
+                                        2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -10993,16 +10851,15 @@
                                 },
                                 "AnIAvnAwDBoGBoJ": {
                                     "mChoices": [
-                                        2525,
                                         3143,
+                                        2525,
                                         2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnIAvnAxHBoGBoJ": {
                                     "mChoices": [
-                                        3075,
-                                        2525
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -11021,22 +10878,34 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AndAvnAwDBoGBoJ": {
-                                    "mChoices": [
-                                        2502,
-                                        2504
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AndAvnAxHBoGBoJ": {
+                                "AndAvnAvqBoGBoJ": {
                                     "mChoices": [
                                         3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AvnAv5AwDBoGBoJ": {
+                                "AndAvnAwDBoGBoJ": {
+                                    "mChoices": [
+                                        2502,
+                                        3143
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvnAvqAwDBoGBoJ": {
                                     "mChoices": [
                                         3143,
+                                        2525
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvnAv5AwDBoGBoJ": {
+                                    "mChoices": [
+                                        2525
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvnAv5AxHBoGBoJ": {
+                                    "mChoices": [
                                         2525
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -11049,21 +10918,15 @@
                                 },
                                 "AvnAwDAwmBoGBoJ": {
                                     "mChoices": [
-                                        2502
+                                        3143
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvnAwDAxHBoGBoJ": {
                                     "mChoices": [
                                         2525,
-                                        2502,
-                                        3110
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AwDAwnAxHBoGBoJ": {
-                                    "mChoices": [
-                                        2525
+                                        3110,
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -11153,17 +11016,17 @@
                     "Items/3047",
                     "Items/6665",
                     "Items/3111",
-                    "Items/2502",
                     "Items/3075",
-                    "Items/3068",
-                    "Items/2504",
-                    "Items/2525",
+                    "Items/2502",
                     "Items/3050",
+                    "Items/2504",
+                    "Items/3068",
                     "Items/3143",
-                    "Items/2524",
-                    "Items/3065",
+                    "Items/2525",
                     "Items/6664",
-                    "Items/4401"
+                    "Items/4401",
+                    "Items/3065",
+                    "Items/3742"
                 ],
                 "mCompletedItemMatrix": {
                     "mrows": [
@@ -11173,7 +11036,7 @@
                                     "mChoices": [
                                         6662,
                                         3047,
-                                        3068
+                                        3050
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -11202,13 +11065,7 @@
                             "mChoicesMap": {
                                 "AvnBoG": {
                                     "mChoices": [
-                                        2502,
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AwnBoG": {
-                                    "mChoices": [
+                                        6665,
                                         2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -11291,16 +11148,16 @@
                     "Items/6665",
                     "Items/3075",
                     "Items/2502",
-                    "Items/2504",
                     "Items/3111",
+                    "Items/2504",
                     "Items/3143",
-                    "Items/3065",
                     "Items/3050",
+                    "Items/3065",
                     "Items/3110",
+                    "Items/4401",
                     "Items/2525",
-                    "Items/2524",
-                    "Items/3084",
-                    "Items/4401"
+                    "Items/3119",
+                    "Items/2524"
                 ],
                 "mCompletedItemMatrix": {
                     "mrows": [
@@ -11309,7 +11166,8 @@
                                 "EMPTY": {
                                     "mChoices": [
                                         6662,
-                                        3047
+                                        3047,
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -11339,8 +11197,8 @@
                                 "AvnBoG": {
                                     "mChoices": [
                                         2502,
-                                        6665,
-                                        3075
+                                        3075,
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -11425,11 +11283,11 @@
                     "Items/3075",
                     "Items/2502",
                     "Items/3143",
-                    "Items/6664",
-                    "Items/2525",
                     "Items/3050",
+                    "Items/6664",
                     "Items/3065",
                     "Items/3110",
+                    "Items/2525",
                     "Items/4401",
                     "Items/2524"
                 ],
@@ -11440,8 +11298,8 @@
                                 "EMPTY": {
                                     "mChoices": [
                                         2504,
-                                        6662,
-                                        3047
+                                        3047,
+                                        6662
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -11462,7 +11320,7 @@
                                     "mChoices": [
                                         6662,
                                         3075,
-                                        3143
+                                        2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -11496,8 +11354,7 @@
                                 "BoG": {
                                     "mChoices": [
                                         3047,
-                                        3111,
-                                        6665
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -11510,8 +11367,7 @@
                                 },
                                 "BoJ": {
                                     "mChoices": [
-                                        3047,
-                                        3111
+                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -11524,7 +11380,7 @@
                                     "mChoices": [
                                         6662,
                                         6665,
-                                        2502
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -11532,13 +11388,14 @@
                                     "mChoices": [
                                         6662,
                                         6665,
-                                        2502
+                                        3050
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AnIBoG": {
                                     "mChoices": [
-                                        3047
+                                        3047,
+                                        3111
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -11550,21 +11407,22 @@
                                 },
                                 "AvnBoG": {
                                     "mChoices": [
-                                        2502,
+                                        3075,
                                         6665,
-                                        3075
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AvnBoI": {
-                                    "mChoices": [
-                                        6662
+                                        2502
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AvqAwn": {
                                     "mChoices": [
-                                        6665
+                                        6665,
+                                        6662
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "Av5Awn": {
+                                    "mChoices": [
+                                        6662
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -11572,26 +11430,13 @@
                                     "mChoices": [
                                         6665,
                                         2504,
-                                        2502
+                                        3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
                                 "AwnBoI": {
                                     "mChoices": [
-                                        6662,
-                                        6665
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AwnBoJ": {
-                                    "mChoices": [
                                         6662
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "BoGBoJ": {
-                                    "mChoices": [
-                                        3047
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 }
@@ -11602,8 +11447,7 @@
                             "mChoicesMap": {
                                 "AnGAvnBoG": {
                                     "mChoices": [
-                                        6665,
-                                        3075
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -11615,19 +11459,23 @@
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnIAwnBoG": {
+                                "AnIAvqAwn": {
                                     "mChoices": [
-                                        6665,
-                                        2502,
-                                        3075
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AnIAwnBoJ": {
+                                "AnIAwnBoG": {
                                     "mChoices": [
-                                        2525,
+                                        6665,
                                         3075,
-                                        3143
+                                        2502
+                                    ],
+                                    "__type": "ItemRecommendationChoices"
+                                },
+                                "AvnAvqBoG": {
+                                    "mChoices": [
+                                        6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
@@ -11635,25 +11483,19 @@
                                     "mChoices": [
                                         6665,
                                         2502,
-                                        3143
+                                        2504
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AvnBoGBoJ": {
-                                    "mChoices": [
-                                        3075,
-                                        2502
-                                    ],
-                                    "__type": "ItemRecommendationChoices"
-                                },
-                                "AwnBoGBoI": {
+                                "AvnAxHBoG": {
                                     "mChoices": [
                                         6665
                                     ],
                                     "__type": "ItemRecommendationChoices"
                                 },
-                                "AwnBoGBoJ": {
+                                "AvnBoGBoJ": {
                                     "mChoices": [
+                                        2502,
                                         3075
                                     ],
                                     "__type": "ItemRecommendationChoices"
@@ -11663,7 +11505,7 @@
                         },
                         {
                             "mChoicesMap": {
-                                "AnGAvnAwDBoG": {
+                                "AvnAwDBoGBoJ": {
                                     "mChoices": [
                                         3143
                                     ],
@@ -11685,35 +11527,95 @@
     },
     "Characters/KSante/CharacterRecords/Root": {
         "mCharacterName": "KSante",
-        "baseHP": 625.0,
-        "hpPerLevel": 120.0,
-        "baseStaticHPRegen": 1.899999976158142,
-        "hpRegenPerLevel": 0.20000000298023224,
+        "{8662cf12}": {
+            "{b35aa769}": 625.0,
+            "__type": "{ce9b917b}"
+        },
+        "{4d37af28}": {
+            "{b35aa769}": 120.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 1.899999976158142,
+            "__type": "{ce9b917b}"
+        },
+        "{913157bb}": {
+            "{b35aa769}": 0.20000000298023224,
+            "__type": "{ce9b917b}"
+        },
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 320.0,
-            "arPerLevel": 60.0,
-            "arBaseStaticRegen": 1.399999976158142,
-            "arRegenPerLevel": 0.20000000298023224,
+            "{726ee5cd}": {
+                "{b35aa769}": 320.0,
+                "__type": "{ce9b917b}"
+            },
+            "{6216bf7b}": {
+                "{b35aa769}": 60.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 1.399999976158142,
+                "__type": "{ce9b917b}"
+            },
+            "{3a509002}": {
+                "{b35aa769}": 0.20000000298023224,
+                "__type": "{ce9b917b}"
+            },
             "arMaxSegments": 10,
             "__type": "AbilityResourceSlotInfo"
         },
         "secondaryAbilityResource": {
-            "arBaseStaticRegen": 0.0,
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 64.0,
-        "damagePerLevel": 3.5,
-        "baseArmor": 36.0,
-        "armorPerLevel": 5.199999809265137,
-        "baseSpellBlock": 30.0,
-        "spellBlockPerLevel": 2.0999999046325684,
+        "{4af40dc3}": {
+            "{b35aa769}": 64.0,
+            "__type": "{ce9b917b}"
+        },
+        "{e2b5d80d}": {
+            "{b35aa769}": 3.5,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 36.0,
+            "__type": "{ce9b917b}"
+        },
+        "{18956a21}": {
+            "{b35aa769}": 5.199999809265137,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 30.0,
+            "__type": "{ce9b917b}"
+        },
+        "{01262a25}": {
+            "{b35aa769}": 2.0999999046325684,
+            "__type": "{ce9b917b}"
+        },
         "critDamageMultiplier": 2.0,
-        "baseMoveSpeed": 330.0,
-        "attackRange": 150.0,
-        "attackSpeed": 0.6880000233650208,
-        "attackSpeedRatio": 0.625,
-        "attackSpeedPerLevel": 2.5,
+        "{e62d9d92}": {
+            "{b35aa769}": 330.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 150.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.6880000233650208,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.625,
+            "__type": "{ce9b917b}"
+        },
+        "{b9f2b365}": {
+            "{b35aa769}": 2.5,
+            "__type": "{ce9b917b}"
+        },
         "acquisitionRange": 400.0,
         "basicAttack": {
             "mAttackDelayCastOffsetPercent": -0.10468749701976776,

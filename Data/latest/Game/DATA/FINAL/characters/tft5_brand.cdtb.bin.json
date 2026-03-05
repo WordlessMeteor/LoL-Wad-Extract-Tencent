@@ -169,9 +169,9 @@
                     "mName": "Damage",
                     "mValues": [
                         0.0,
-                        550.0,
-                        825.0,
-                        1500.0,
+                        650.0,
+                        950.0,
+                        1750.0,
                         0.0,
                         0.0,
                         0.0
@@ -182,12 +182,12 @@
                     "mName": "Duration",
                     "mValues": [
                         0.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -195,9 +195,9 @@
                     "mName": "MRShred",
                     "mValues": [
                         40.0,
-                        20.0,
-                        30.0,
+                        40.0,
                         50.0,
+                        70.0,
                         40.0,
                         40.0,
                         40.0
@@ -207,8 +207,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -288,8 +286,7 @@
                             "Elements": [
                                 {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_TFT5_BrandQ_Damage",
-                                    "Style": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -394,26 +391,59 @@
     },
     "Characters/TFT5_Brand/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Brand",
-        "baseHP": 600.0,
-        "baseStaticHPRegen": 0.0,
+        "{8662cf12}": {
+            "{b35aa769}": 600.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 30.0,
-            "arBaseStaticRegen": 0.0,
+            "{726ee5cd}": {
+                "{b35aa769}": 30.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 40.0,
-        "baseArmor": 20.0,
-        "baseSpellBlock": 20.0,
+        "{4af40dc3}": {
+            "{b35aa769}": 45.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 20.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 20.0,
+            "__type": "{ce9b917b}"
+        },
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
-        "baseMoveSpeed": 500.0,
-        "attackRange": 660.0,
-        "attackSpeed": 0.699999988079071,
-        "attackSpeedRatio": 0.699999988079071,
+        "critDamageMultiplier": 1.2999999523162842,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 660.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.6499999761581421,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.6499999761581421,
+            "__type": "{ce9b917b}"
+        },
         "basicAttack": {
             "mAttackName": "TFT5_BrandBasicAttack",
             "__type": "AttackSlotData"

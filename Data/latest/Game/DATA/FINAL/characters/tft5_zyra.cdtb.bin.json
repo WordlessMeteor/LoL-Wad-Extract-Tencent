@@ -189,9 +189,9 @@
                     "mName": "Damage",
                     "mValues": [
                         0.0,
-                        220.0,
-                        330.0,
-                        560.0,
+                        200.0,
+                        300.0,
+                        525.0,
                         0.0,
                         0.0,
                         0.0
@@ -203,8 +203,8 @@
                     "mValues": [
                         0.0,
                         1.5,
-                        1.5,
                         2.0,
+                        2.5,
                         2.0,
                         2.0,
                         2.0
@@ -214,8 +214,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -302,7 +300,7 @@
                             "Elements": [
                                 {
                                     "type": "Damage",
-                                    "nameOverride": "Spell_ListType_ModifiedMagicDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -324,25 +322,55 @@
     },
     "Characters/TFT5_Zyra/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Zyra",
-        "baseHP": 700.0,
-        "baseStaticHPRegen": 0.0,
+        "{8662cf12}": {
+            "{b35aa769}": 600.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBaseStaticRegen": 0.0,
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 40.0,
-        "baseArmor": 25.0,
-        "baseSpellBlock": 25.0,
+        "{4af40dc3}": {
+            "{b35aa769}": 40.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 20.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 20.0,
+            "__type": "{ce9b917b}"
+        },
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
-        "baseMoveSpeed": 500.0,
-        "attackRange": 890.0,
-        "attackSpeed": 0.75,
-        "attackSpeedRatio": 0.75,
+        "critDamageMultiplier": 1.2999999523162842,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 890.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.699999988079071,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.699999988079071,
+            "__type": "{ce9b917b}"
+        },
         "basicAttack": {
             "mAttackName": "TFT5_ZyraBasicAttack",
             "__type": "AttackSlotData"

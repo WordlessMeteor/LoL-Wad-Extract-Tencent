@@ -11897,7 +11897,7 @@
                     },
                     {
                         "name": "OmnivampToADRatio",
-                        "value": 1.5
+                        "value": 2.0
                     }
                 ]
             }
@@ -12216,7 +12216,7 @@
                 "constants": [
                     {
                         "name": "BonusPercentHealth",
-                        "value": 0.45
+                        "value": 0.4
                     }
                 ],
                 "min_units": 4,
@@ -12228,7 +12228,7 @@
                 "constants": [
                     {
                         "name": "BonusPercentHealth",
-                        "value": 0.65
+                        "value": 0.6
                     }
                 ],
                 "min_units": 6,
@@ -12258,7 +12258,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Every @CastsToGainXP@ casts, the Chronokeeper stores <TFTBonus>@XPPerCast@</TFTBonus> XP. If he has enough stored for you to level up, he transfers you the required&nbsp;XP. <br><br>If you are level 10, he instead gains <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Damage Amp.<br><br><rules>Stored XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Every @CastsToGainXP@ casts, the Chronokeeper stores <TFTBonus>@XPPerCast@</TFTBonus> XP. If he has enough stored for you to level up, he transfers you the required&nbsp;XP. <br><br>If you are level 10, he instead gains <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;Damage Amp.<br><br><rules>Stored XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>In Choncc's Treasure, the amount of casts required to gain XP is increased to @CastsToGainXPCT@ until Stage 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12270,6 +12270,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13000,8 +13004,12 @@
             {
                 "constants": [
                     {
+                        "name": "BladesAP",
+                        "value": 15.0
+                    },
+                    {
                         "name": "BladesFlatDamage",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "BladesForceProcThreshold",
@@ -13049,7 +13057,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 1.0
+                        "value": 1.3
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13068,8 +13076,12 @@
             {
                 "constants": [
                     {
+                        "name": "BladesAP",
+                        "value": 25.0
+                    },
+                    {
                         "name": "BladesFlatDamage",
-                        "value": 8.0
+                        "value": 0.0
                     },
                     {
                         "name": "BladesForceProcThreshold",
@@ -13117,7 +13129,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 1.0
+                        "value": 1.3
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13136,8 +13148,12 @@
             {
                 "constants": [
                     {
+                        "name": "BladesAP",
+                        "value": 50.0
+                    },
+                    {
                         "name": "BladesFlatDamage",
-                        "value": 15.0
+                        "value": 0.0
                     },
                     {
                         "name": "BladesForceProcThreshold",
@@ -13185,7 +13201,7 @@
                     },
                     {
                         "name": "Transcendence3StarBuff",
-                        "value": 1.0
+                        "value": 1.3
                     },
                     {
                         "name": "TranscendenceHealth",
@@ -13758,7 +13774,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Each second, Shurimans gain @ASPerSecond*100@% Attack Speed and restore @HealthRestorePerSecond@ Health. At combat start, they gain additional effects.<br><br><row>(@MinUnits@) @BonusHealth*100@% max Health</row><br><row>(@MinUnits@) @ArmorMR@ Armor and Magic Resist</row><br><row>(@MinUnits@) A Shuriman ascends to GODHOOD every @GodhoodCadence@ seconds.</row>",
+        "tooltip_text": "Each second, Shurimans gain @ASPerSecond*100@% Attack Speed and restore @HealthRestorePerSecond@ Health. At combat start, they gain additional effects.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismatic: Unlock Nasus, Renekton, and Xerath, then field 4 Shurima</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% max Health</row><br><row>(@MinUnits@) @ArmorMR@ Armor and Magic Resist</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>A Shuriman ascends to GODHOOD every @GodhoodCadence@ seconds </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic>Only available when Nasus, Renekton, and Xerath have been unlocked.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13838,7 +13854,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13846,7 +13862,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13854,8 +13870,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -13901,7 +13917,7 @@
                 "constants": [
                     {
                         "name": "BonusAD",
-                        "value": 0.22
+                        "value": 0.2
                     },
                     {
                         "name": "BonusOmnivamp",
@@ -13917,7 +13933,7 @@
                 "constants": [
                     {
                         "name": "BonusAD",
-                        "value": 0.33
+                        "value": 0.3
                     },
                     {
                         "name": "BonusOmnivamp",
@@ -13933,7 +13949,7 @@
                 "constants": [
                     {
                         "name": "BonusAD",
-                        "value": 0.44
+                        "value": 0.4
                     },
                     {
                         "name": "BonusOmnivamp",
@@ -13958,7 +13974,7 @@
                 "constants": [
                     {
                         "name": "AllyAP",
-                        "value": 18.0
+                        "value": 15.0
                     },
                     {
                         "name": "BonusAP",
@@ -13974,11 +13990,11 @@
                 "constants": [
                     {
                         "name": "AllyAP",
-                        "value": 25.0
+                        "value": 20.0
                     },
                     {
                         "name": "BonusAP",
-                        "value": 40.0
+                        "value": 50.0
                     }
                 ],
                 "min_units": 4,
@@ -13990,11 +14006,11 @@
                 "constants": [
                     {
                         "name": "AllyAP",
-                        "value": 40.0
+                        "value": 35.0
                     },
                     {
                         "name": "BonusAP",
-                        "value": 60.0
+                        "value": 70.0
                     }
                 ],
                 "min_units": 6,
@@ -14145,11 +14161,11 @@
                     },
                     {
                         "name": "JarvanResistDamage3",
-                        "value": 1.55
+                        "value": 1.4
                     },
                     {
                         "name": "JarvanResistDamage4",
-                        "value": 2.0
+                        "value": 1.75
                     },
                     {
                         "name": "JarvanShieldShare",
@@ -14558,7 +14574,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "After each combat, an Ascendant Charm appears in your shop. These are powerful effects that can be bought for gold.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "After each combat, an Ascendant Charm appears in your shop. These are powerful effects that can be bought for gold.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>In Choncc's Treasure, the Faithful Followers Charm cannot appear until you are level 7.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15947,7 +15963,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedSlowDuration",
-                        "value": 5.0
+                        "value": 4.75
                     }
                 ],
                 "min_units": 4,
@@ -16078,7 +16094,7 @@
                     },
                     {
                         "name": "BonusHealth",
-                        "value": 400.0
+                        "value": 425.0
                     }
                 ],
                 "min_units": 2,
@@ -16094,7 +16110,7 @@
                     },
                     {
                         "name": "BonusHealth",
-                        "value": 700.0
+                        "value": 750.0
                     }
                 ],
                 "min_units": 4,
@@ -16110,7 +16126,7 @@
                     },
                     {
                         "name": "BonusHealth",
-                        "value": 1000.0
+                        "value": 1100.0
                     }
                 ],
                 "min_units": 6,
@@ -16192,7 +16208,7 @@
                     },
                     {
                         "name": "GalioAD",
-                        "value": 85.0
+                        "value": 90.0
                     },
                     {
                         "name": "GalioBonusArmor",
@@ -16228,7 +16244,7 @@
                     },
                     {
                         "name": "GalioAD",
-                        "value": 115.0
+                        "value": 120.0
                     },
                     {
                         "name": "GalioBonusArmor",
@@ -17130,7 +17146,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 200.0
+                        "value": 225.0
                     }
                 ],
                 "min_units": 2,
@@ -17150,7 +17166,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 250.0
+                        "value": 275.0
                     }
                 ],
                 "min_units": 4,
@@ -17170,7 +17186,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 300.0
+                        "value": 325.0
                     }
                 ],
                 "min_units": 6,
@@ -17190,7 +17206,7 @@
                     },
                     {
                         "name": "ShieldAmount",
-                        "value": 525.0
+                        "value": 550.0
                     }
                 ],
                 "min_units": 8,
@@ -17574,7 +17590,7 @@
                     },
                     {
                         "name": "LifestealMax",
-                        "value": 60.0
+                        "value": 55.0
                     }
                 ],
                 "min_units": 6,
@@ -17598,7 +17614,7 @@
                     },
                     {
                         "name": "LifestealMax",
-                        "value": 80.0
+                        "value": 75.0
                     }
                 ],
                 "min_units": 9,
@@ -17670,7 +17686,7 @@
                     },
                     {
                         "name": "TraitOmnivampPercent",
-                        "value": 50.0
+                        "value": 60.0
                     }
                 ],
                 "min_units": 2,
@@ -17686,7 +17702,7 @@
                     },
                     {
                         "name": "TraitOmnivampPercent",
-                        "value": 110.0
+                        "value": 120.0
                     }
                 ],
                 "min_units": 4,
@@ -17702,7 +17718,7 @@
                     },
                     {
                         "name": "TraitOmnivampPercent",
-                        "value": 135.0
+                        "value": 145.0
                     }
                 ],
                 "min_units": 6,
@@ -18002,7 +18018,7 @@
                     },
                     {
                         "name": "StageMultiplierPercent",
-                        "value": 20.0
+                        "value": 13.0
                     },
                     {
                         "name": "StageMultiplierStart",
@@ -18050,11 +18066,11 @@
                     },
                     {
                         "name": "StageMultiplierPercent",
-                        "value": 20.0
+                        "value": 13.0
                     },
                     {
                         "name": "StageMultiplierStart",
-                        "value": 4.0
+                        "value": 5.0
                     },
                     {
                         "name": "StarLevel",
@@ -18062,8 +18078,8 @@
                     }
                 ],
                 "min_units": 5,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -18083,7 +18099,7 @@
                 "constants": [
                     {
                         "name": "CritAmpPercent",
-                        "value": 15.0
+                        "value": 30.0
                     },
                     {
                         "name": "CritChanceAmpPercent",
@@ -18099,7 +18115,7 @@
                 "constants": [
                     {
                         "name": "CritAmpPercent",
-                        "value": 25.0
+                        "value": 40.0
                     },
                     {
                         "name": "CritChanceAmpPercent",
@@ -18115,7 +18131,7 @@
                 "constants": [
                     {
                         "name": "CritAmpPercent",
-                        "value": 40.0
+                        "value": 50.0
                     },
                     {
                         "name": "CritChanceAmpPercent",
@@ -18124,8 +18140,8 @@
                 ],
                 "min_units": 6,
                 "max_units": 25000,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -18170,8 +18186,8 @@
                 ],
                 "min_units": 6,
                 "max_units": 2500,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -18215,8 +18231,8 @@
                     }
                 ],
                 "min_units": 6,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -18240,8 +18256,8 @@
                     }
                 ],
                 "min_units": 1,
-                "style_idx": 4,
-                "style_name": "kUnique"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -18364,8 +18380,8 @@
                     }
                 ],
                 "min_units": 1,
-                "style_idx": 4,
-                "style_name": "kUnique"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -18461,7 +18477,7 @@
                     },
                     {
                         "name": "PercentOfMaximumHealth",
-                        "value": 100.0
+                        "value": 120.0
                     },
                     {
                         "name": "Ticks",
@@ -18470,8 +18486,8 @@
                 ],
                 "min_units": 8,
                 "max_units": 25000,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -18606,7 +18622,7 @@
         "display_name": "Eternal",
         "trait_id": "TFT5_Eternal",
         "set": "TFTSet5",
-        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Eternal.png",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Eternal.png",
         "tooltip_text": "(@MinUnits@) Wolf separates from Lamb, and can be placed anywhere on the battlefield. Wolf does not count toward your team size, and receives all of Lamb's stat bonuses.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
@@ -18637,10 +18653,6 @@
                         "value": 5.0
                     },
                     {
-                        "name": "NumOfShadowItems",
-                        "value": 1.0
-                    },
-                    {
                         "name": "VictoryPercent",
                         "value": 10.0
                     }
@@ -18659,10 +18671,6 @@
                     {
                         "name": "MaxCombats",
                         "value": 5.0
-                    },
-                    {
-                        "name": "NumOfShadowItems",
-                        "value": 2.0
                     },
                     {
                         "name": "VictoryPercent",
@@ -18685,10 +18693,6 @@
                         "value": 5.0
                     },
                     {
-                        "name": "NumOfShadowItems",
-                        "value": 3.0
-                    },
-                    {
                         "name": "VictoryPercent",
                         "value": 10.0
                     }
@@ -18702,15 +18706,11 @@
                 "constants": [
                     {
                         "name": "InitialADandAP",
-                        "value": 120.0
+                        "value": 150.0
                     },
                     {
                         "name": "MaxCombats",
                         "value": 5.0
-                    },
-                    {
-                        "name": "NumOfShadowItems",
-                        "value": 4.0
                     },
                     {
                         "name": "VictoryPercent",
@@ -18719,8 +18719,8 @@
                 ],
                 "min_units": 8,
                 "max_units": 25000,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -18758,7 +18758,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 15.0
+                        "value": 10.0
                     }
                 ],
                 "min_units": 2,
@@ -18770,7 +18770,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 40.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 4,
@@ -18782,7 +18782,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 80.0
+                        "value": 70.0
                     }
                 ],
                 "min_units": 6,
@@ -18794,13 +18794,13 @@
                 "constants": [
                     {
                         "name": "AttackSpeedPercent",
-                        "value": 140.0
+                        "value": 125.0
                     }
                 ],
                 "min_units": 8,
                 "max_units": 25000,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -18824,8 +18824,8 @@
                     }
                 ],
                 "min_units": 1,
-                "style_idx": 4,
-                "style_name": "kUnique"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -18841,7 +18841,7 @@
                 "constants": [
                     {
                         "name": "ManaPerAttack",
-                        "value": 2.0
+                        "value": 3.0
                     }
                 ],
                 "min_units": 2,
@@ -18853,7 +18853,7 @@
                 "constants": [
                     {
                         "name": "ManaPerAttack",
-                        "value": 5.0
+                        "value": 6.0
                     }
                 ],
                 "min_units": 4,
@@ -18886,7 +18886,7 @@
                 "constants": [
                     {
                         "name": "Armor",
-                        "value": 60.0
+                        "value": 70.0
                     }
                 ],
                 "min_units": 3,
@@ -18898,12 +18898,12 @@
                 "constants": [
                     {
                         "name": "Armor",
-                        "value": 120.0
+                        "value": 125.0
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -18919,7 +18919,7 @@
                 "constants": [
                     {
                         "name": "BlockAmount",
-                        "value": 15.0
+                        "value": 20.0
                     }
                 ],
                 "min_units": 2,
@@ -18931,7 +18931,7 @@
                 "constants": [
                     {
                         "name": "BlockAmount",
-                        "value": 30.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 4,
@@ -18943,7 +18943,7 @@
                 "constants": [
                     {
                         "name": "BlockAmount",
-                        "value": 60.0
+                        "value": 70.0
                     }
                 ],
                 "min_units": 6,
@@ -18967,8 +18967,8 @@
                         "value": 25.0
                     },
                     {
-                        "name": "Omnivamp",
-                        "value": 0.15
+                        "name": "HealPercent",
+                        "value": 15.0
                     }
                 ],
                 "min_units": 2,
@@ -18980,11 +18980,11 @@
                 "constants": [
                     {
                         "name": "ASBoostPercent",
-                        "value": 65.0
+                        "value": 70.0
                     },
                     {
-                        "name": "Omnivamp",
-                        "value": 0.25
+                        "name": "HealPercent",
+                        "value": 20.0
                     }
                 ],
                 "min_units": 4,
@@ -18996,11 +18996,11 @@
                 "constants": [
                     {
                         "name": "ASBoostPercent",
-                        "value": 110.0
+                        "value": 135.0
                     },
                     {
-                        "name": "Omnivamp",
-                        "value": 0.3
+                        "name": "HealPercent",
+                        "value": 25.0
                     }
                 ],
                 "min_units": 6,
@@ -19012,16 +19012,16 @@
                 "constants": [
                     {
                         "name": "ASBoostPercent",
-                        "value": 160.0
+                        "value": 250.0
                     },
                     {
-                        "name": "Omnivamp",
-                        "value": 0.4
+                        "name": "HealPercent",
+                        "value": 35.0
                     }
                 ],
                 "min_units": 8,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -19037,7 +19037,7 @@
                 "constants": [
                     {
                         "name": "MagicResist",
-                        "value": 30.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 2,
@@ -19049,7 +19049,7 @@
                 "constants": [
                     {
                         "name": "MagicResist",
-                        "value": 60.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 3,
@@ -19061,7 +19061,7 @@
                 "constants": [
                     {
                         "name": "MagicResist",
-                        "value": 100.0
+                        "value": 175.0
                     }
                 ],
                 "min_units": 4,
@@ -19073,13 +19073,13 @@
                 "constants": [
                     {
                         "name": "MagicResist",
-                        "value": 150.0
+                        "value": 300.0
                     }
                 ],
                 "min_units": 5,
                 "max_units": 2500,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -19175,7 +19175,7 @@
                     },
                     {
                         "name": "MaxPercentHealthShield",
-                        "value": 150.0
+                        "value": 200.0
                     },
                     {
                         "name": "ShieldDuration",
@@ -19183,8 +19183,8 @@
                     }
                 ],
                 "min_units": 8,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -19200,7 +19200,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 100.0
+                        "value": 80.0
                     },
                     {
                         "name": "BuffDuration",
@@ -19265,8 +19265,8 @@
                 ],
                 "min_units": 6,
                 "max_units": 2500,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -19302,39 +19302,19 @@
                 "constants": [
                     {
                         "name": "AbilityPowerAmount",
-                        "value": 55.0
+                        "value": 60.0
                     },
                     {
                         "name": "ArmorAmount",
-                        "value": 30.0
+                        "value": 35.0
                     },
                     {
                         "name": "MagicResist",
-                        "value": 30.0
+                        "value": 35.0
                     }
                 ],
                 "min_units": 6,
-                "max_units": 7,
-                "style_idx": 3,
-                "style_name": "kSilver"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "AbilityPowerAmount",
-                        "value": 65.0
-                    },
-                    {
-                        "name": "ArmorAmount",
-                        "value": 40.0
-                    },
-                    {
-                        "name": "MagicResist",
-                        "value": 40.0
-                    }
-                ],
-                "min_units": 8,
-                "max_units": 9,
+                "max_units": 8,
                 "style_idx": 5,
                 "style_name": "kGold"
             },
@@ -19342,18 +19322,18 @@
                 "constants": [
                     {
                         "name": "AbilityPowerAmount",
-                        "value": 150.0
+                        "value": 100.0
                     },
                     {
                         "name": "ArmorAmount",
-                        "value": 100.0
+                        "value": 70.0
                     },
                     {
                         "name": "MagicResist",
-                        "value": 100.0
+                        "value": 70.0
                     }
                 ],
-                "min_units": 10,
+                "min_units": 9,
                 "style_idx": 6,
                 "style_name": "kChromatic"
             }
@@ -19396,8 +19376,8 @@
                 ],
                 "min_units": 4,
                 "max_units": 5,
-                "style_idx": 3,
-                "style_name": "kSilver"
+                "style_idx": 5,
+                "style_name": "kGold"
             },
             {
                 "constants": [
@@ -19411,8 +19391,8 @@
                     }
                 ],
                 "min_units": 6,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -19448,7 +19428,7 @@
                     },
                     {
                         "name": "HealthPercent",
-                        "value": 35.0
+                        "value": 25.0
                     }
                 ],
                 "min_units": 3,
@@ -19464,7 +19444,7 @@
                     },
                     {
                         "name": "HealthPercent",
-                        "value": 60.0
+                        "value": 45.0
                     }
                 ],
                 "min_units": 4,
@@ -19480,12 +19460,12 @@
                     },
                     {
                         "name": "HealthPercent",
-                        "value": 90.0
+                        "value": 70.0
                     }
                 ],
                 "min_units": 5,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -19521,27 +19501,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 1.0
-                    },
-                    {
-                        "name": "Duration",
-                        "value": 3.0
-                    },
-                    {
-                        "name": "Shield",
-                        "value": 1200.0
-                    }
-                ],
-                "min_units": 6,
-                "max_units": 7,
-                "style_idx": 3,
-                "style_name": "kSilver"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "AttackSpeed",
-                        "value": 1.8
+                        "value": 0.8
                     },
                     {
                         "name": "Duration",
@@ -19549,11 +19509,11 @@
                     },
                     {
                         "name": "Shield",
-                        "value": 1600.0
+                        "value": 800.0
                     }
                 ],
-                "min_units": 8,
-                "max_units": 9,
+                "min_units": 6,
+                "max_units": 8,
                 "style_idx": 5,
                 "style_name": "kGold"
             },
@@ -19561,7 +19521,7 @@
                 "constants": [
                     {
                         "name": "AttackSpeed",
-                        "value": 8.0
+                        "value": 6.0
                     },
                     {
                         "name": "Duration",
@@ -19569,10 +19529,10 @@
                     },
                     {
                         "name": "Shield",
-                        "value": 2400.0
+                        "value": 2000.0
                     }
                 ],
-                "min_units": 10,
+                "min_units": 9,
                 "style_idx": 6,
                 "style_name": "kChromatic"
             }
@@ -19590,7 +19550,7 @@
                 "constants": [
                     {
                         "name": "AttackDamage",
-                        "value": 0.04
+                        "value": 4.0
                     },
                     {
                         "name": "PercentHealthShield",
@@ -19606,7 +19566,7 @@
                 "constants": [
                     {
                         "name": "AttackDamage",
-                        "value": 0.08
+                        "value": 10.0
                     },
                     {
                         "name": "PercentHealthShield",
@@ -19614,23 +19574,7 @@
                     }
                 ],
                 "min_units": 6,
-                "max_units": 7,
-                "style_idx": 3,
-                "style_name": "kSilver"
-            },
-            {
-                "constants": [
-                    {
-                        "name": "AttackDamage",
-                        "value": 0.12
-                    },
-                    {
-                        "name": "PercentHealthShield",
-                        "value": 70.0
-                    }
-                ],
-                "min_units": 8,
-                "max_units": 9,
+                "max_units": 8,
                 "style_idx": 5,
                 "style_name": "kGold"
             },
@@ -19638,14 +19582,14 @@
                 "constants": [
                     {
                         "name": "AttackDamage",
-                        "value": 0.3
+                        "value": 20.0
                     },
                     {
                         "name": "PercentHealthShield",
-                        "value": 150.0
+                        "value": 100.0
                     }
                 ],
-                "min_units": 10,
+                "min_units": 9,
                 "style_idx": 6,
                 "style_name": "kChromatic"
             }
@@ -19663,11 +19607,11 @@
                 "constants": [
                     {
                         "name": "AP",
-                        "value": 20.0
+                        "value": 15.0
                     },
                     {
                         "name": "BonusAP",
-                        "value": 3.0
+                        "value": 2.0
                     },
                     {
                         "name": "StackCap",
@@ -19683,15 +19627,15 @@
                 "constants": [
                     {
                         "name": "AP",
-                        "value": 40.0
+                        "value": 35.0
                     },
                     {
                         "name": "BonusAP",
-                        "value": 6.0
+                        "value": 4.0
                     },
                     {
                         "name": "StackCap",
-                        "value": 15.0
+                        "value": 10.0
                     }
                 ],
                 "min_units": 4,
@@ -19703,20 +19647,20 @@
                 "constants": [
                     {
                         "name": "AP",
-                        "value": 80.0
+                        "value": 70.0
                     },
                     {
                         "name": "BonusAP",
-                        "value": 20.0
+                        "value": 8.0
                     },
                     {
                         "name": "StackCap",
-                        "value": 20.0
+                        "value": 10.0
                     }
                 ],
                 "min_units": 6,
-                "style_idx": 5,
-                "style_name": "kGold"
+                "style_idx": 6,
+                "style_name": "kChromatic"
             }
         ]
     },
@@ -19770,8 +19714,8 @@
                 ],
                 "min_units": 1,
                 "max_units": 1,
-                "style_idx": 4,
-                "style_name": "kUnique"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },

@@ -127,8 +127,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedMagicDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -144,8 +142,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedPercentHealed": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -199,20 +195,14 @@
                             "Elements": [
                                 {
                                     "type": "MagicDamage",
-                                    "nameOverride": "Spell_TFT5_Footer_ModifiedMagicDamage",
+                                    "nameOverride": "Spell_ListType_MagicDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "PercentDamageReduction",
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_TFT5_GalioW_Durability",
+                                    "nameOverride": "Spell_ListType_DamageReduction",
                                     "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "PercentHealed",
-                                    "nameOverride": "Spell_TFT5_GalioW_PercentHeal",
-                                    "Style": 2,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -316,26 +306,59 @@
     },
     "Characters/TFT5_Galio/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Galio",
-        "baseHP": 1100.0,
-        "baseStaticHPRegen": 0.0,
+        "{8662cf12}": {
+            "{b35aa769}": 1000.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
         "healthBarHeight": 200.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 160.0,
-            "arBaseStaticRegen": 0.0,
+            "{726ee5cd}": {
+                "{b35aa769}": 180.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 70.0,
-        "baseArmor": 60.0,
-        "baseSpellBlock": 60.0,
+        "{4af40dc3}": {
+            "{b35aa769}": 70.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 60.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 60.0,
+            "__type": "{ce9b917b}"
+        },
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
-        "baseMoveSpeed": 500.0,
-        "attackRange": 180.0,
-        "attackSpeed": 0.6000000238418579,
-        "attackSpeedRatio": 0.6000000238418579,
+        "critDamageMultiplier": 1.2999999523162842,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 180.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.6000000238418579,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.6000000238418579,
+            "__type": "{ce9b917b}"
+        },
         "basicAttack": {
             "mAttackName": "TFT5_GalioBasicAttack",
             "__type": "AttackSlotData"
@@ -390,7 +413,7 @@
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 100.0,
+        "mInitialMana": 120.0,
         "mShopData": "{40be4e5e}",
         "__type": "TFTCharacterRecord"
     },

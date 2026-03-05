@@ -120,9 +120,9 @@
                     "mName": "MagicDamage",
                     "mValues": [
                         0.0,
-                        200.0,
-                        300.0,
-                        480.0,
+                        250.0,
+                        350.0,
+                        550.0,
                         0.0,
                         0.0,
                         0.0
@@ -146,9 +146,9 @@
                     "mName": "TrueDamageBonus",
                     "mValues": [
                         0.0,
-                        16.0,
-                        24.0,
-                        36.0,
+                        20.0,
+                        25.0,
+                        40.0,
                         0.0,
                         0.0,
                         0.0
@@ -158,8 +158,6 @@
             ],
             "mSpellCalculations": {
                 "ModifiedDamage": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -175,8 +173,6 @@
                     "__type": "GameCalculation"
                 },
                 "ModifiedTrueDamageBonus": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mSubpart": {
@@ -226,19 +222,12 @@
                             "Elements": [
                                 {
                                     "type": "MagicDamage",
-                                    "nameOverride": "Spell_ListType_ModifiedMagicDamage",
+                                    "nameOverride": "Spell_ListType_MagicDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "TrueDamageBonus",
                                     "nameOverride": "Spell_ListType_TFT5_YasuoR_TrueDamageBonus",
-                                    "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "TrueDamageBonus",
-                                    "nameOverride": "Spell_TFT5_YasuoR_TrueDamage",
-                                    "Style": 2,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -310,26 +299,59 @@
     },
     "Characters/TFT5_Yasuo/CharacterRecords/Root": {
         "mCharacterName": "TFT5_Yasuo",
-        "baseHP": 800.0,
-        "baseStaticHPRegen": 0.0,
+        "{8662cf12}": {
+            "{b35aa769}": 800.0,
+            "__type": "{ce9b917b}"
+        },
+        "{9eedebad}": {
+            "{b35aa769}": 0.0,
+            "__type": "{ce9b917b}"
+        },
         "healthBarHeight": 180.0,
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
-            "arBase": 40.0,
-            "arBaseStaticRegen": 0.0,
+            "{726ee5cd}": {
+                "{b35aa769}": 40.0,
+                "__type": "{ce9b917b}"
+            },
+            "{c4ab3550}": {
+                "{b35aa769}": 0.0,
+                "__type": "{ce9b917b}"
+            },
             "arAllowMaxValueToBeOverridden": true,
             "__type": "AbilityResourceSlotInfo"
         },
-        "baseDamage": 50.0,
-        "baseArmor": 40.0,
-        "baseSpellBlock": 40.0,
+        "{4af40dc3}": {
+            "{b35aa769}": 60.0,
+            "__type": "{ce9b917b}"
+        },
+        "{ea6100d5}": {
+            "{b35aa769}": 35.0,
+            "__type": "{ce9b917b}"
+        },
+        "{33c0bf27}": {
+            "{b35aa769}": 35.0,
+            "__type": "{ce9b917b}"
+        },
         "baseCritChance": 0.25,
-        "critDamageMultiplier": 1.399999976158142,
-        "baseMoveSpeed": 500.0,
-        "attackRange": 180.0,
-        "attackSpeed": 0.800000011920929,
-        "attackSpeedRatio": 0.800000011920929,
+        "critDamageMultiplier": 1.2999999523162842,
+        "{e62d9d92}": {
+            "{b35aa769}": 500.0,
+            "__type": "{ce9b917b}"
+        },
+        "{7bd4b298}": {
+            "{b35aa769}": 180.0,
+            "__type": "{ce9b917b}"
+        },
+        "{836cc82a}": {
+            "{b35aa769}": 0.8999999761581421,
+            "__type": "{ce9b917b}"
+        },
+        "{4f89c991}": {
+            "{b35aa769}": 0.8999999761581421,
+            "__type": "{ce9b917b}"
+        },
         "basicAttack": {
             "mAttackName": "TFT5_YasuoBasicAttack",
             "__type": "AttackSlotData"
