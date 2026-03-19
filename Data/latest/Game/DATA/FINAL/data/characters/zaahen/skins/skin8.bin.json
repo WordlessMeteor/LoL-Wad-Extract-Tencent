@@ -626,6 +626,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Characters/Zaahen/Skins/Skin01/Material/Zaahen_Flowmap2.Zaahen.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -641,6 +642,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Characters/Zaahen/Skins/Skin01/Material/Material_ZH_Idle_VerTexDeformMask.Zaahen.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -651,6 +653,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Zaahen/Skins/Skin08/Material/Zaahen_Skin08_Material_ZH_Idle_Bloom.Chroma_Zaahen_ImmortalJourney.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -666,6 +669,7 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -676,10 +680,51 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -1389,6 +1434,16 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
                 "Group": "Surface Scrolling Feature",
@@ -1592,6 +1647,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Shared/Materials/flowmap.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1607,6 +1663,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1617,6 +1674,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Zaahen/Skins/Skin08/Material/Zaahen_Skin08_MRND_OutlineColor.Chroma_Zaahen_ImmortalJourney.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1632,6 +1690,7 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1642,10 +1701,51 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -2331,6 +2431,16 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
                 "Group": "Surface Scrolling Feature",
@@ -2484,6 +2594,7 @@
             {
                 "TextureName": "FlowmapTex",
                 "texturePath": "ASSETS/Characters/Zaahen/Skins/Skin01/Material/Zaahen_Flowmap2.Zaahen.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -2499,6 +2610,7 @@
             {
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Characters/Zaahen/Skins/Skin01/Material/Material_ZH_Idle_VerTexDeformMask.Zaahen.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -2509,6 +2621,7 @@
             {
                 "TextureName": "BloomColor",
                 "texturePath": "ASSETS/Characters/Zaahen/Skins/Skin08/Material/Zaahen_Skin08_Material_ZH_Idle_Bloom.Chroma_Zaahen_ImmortalJourney.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -2524,6 +2637,7 @@
             {
                 "TextureName": "Transition_State2",
                 "texturePath": "ASSETS/Shared/Materials/rock_texture.tex",
+                "samplerName": "Clamp_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -2534,6 +2648,7 @@
             {
                 "TextureName": "Dissolve_Tex",
                 "texturePath": "ASSETS/Characters/Aatrox/Skins/Base/Particles/Aatrox_Base_R_body_mask.tex",
+                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -2541,6 +2656,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Transition_Pattern_Tilling",
                 "value": [
@@ -3255,6 +3410,16 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "Group": "Albedo Remap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "Group": "Rim",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "SURFACE_SCROLLING_VFXMESH",
                 "on": false,
