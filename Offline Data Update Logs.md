@@ -137,7 +137,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-02-09 20-58-34/td>
+			<td style="text-align:center;">2026-02-09 20-58-34</td>
 			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
@@ -146,7 +146,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-02-10 23-12-50/td>
+			<td style="text-align:center;">2026-02-10 23-12-50</td>
 			<td style="text-align:center;">2</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
@@ -155,7 +155,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-02-11 22-40-49/td>
+			<td style="text-align:center;">2026-02-11 22-40-49</td>
 			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
@@ -164,7 +164,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-03-01 14-41-22/td>
+			<td style="text-align:center;">2026-03-01 14-41-22</td>
 			<td style="text-align:center;">2</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
@@ -173,12 +173,12 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-03-01 18-05-04/td>
+			<td style="text-align:center;">2026-03-01 18-05-04</td>
 			<td style="text-align:center;">2</td>
 			<td>Debug the latest change</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-03-05 09-58-59/td>
+			<td style="text-align:center;">2026-03-05 09-58-59</td>
 			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
@@ -187,7 +187,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-03-05 19-51-37/td>
+			<td style="text-align:center;">2026-03-05 19-51-37</td>
 			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
@@ -196,7 +196,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-03-11 14-47-10/td>
+			<td style="text-align:center;">2026-03-11 14-47-10</td>
 			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
@@ -205,7 +205,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-03-13 23-08-38/td>
+			<td style="text-align:center;">2026-03-13 23-08-38</td>
 			<td style="text-align:center;">2</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
@@ -214,30 +214,40 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-03-19 12-43-46/td>
-			<td style="text-align:center;">2</td>
+			<td style="text-align:center;">2026-03-19 12-43-46</td>
+			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
-					<li>PBE: 16.5.752.3998 -> 16.6.753.8272</li>
+					<li>Latest: 16.5.752.3998 -> 16.6.753.8272</li>
 				</ul>
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-03-19 16-16-17/td>
-			<td style="text-align:center;">2</td>
+			<td style="text-align:center;">2026-03-19 16-16-17</td>
+			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
-					<li>PBE: 16.6.753.8272 -> 16.6.755.1498</li>
+					<li>Latest: 16.6.753.8272 -> 16.6.755.1498</li>
 				</ul>
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-03-23 18-30-24/td>
-			<td style="text-align:center;">2</td>
+			<td style="text-align:center;">2026-03-23 18-30-24</td>
+			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
-					<li>PBE: 16.6.755.1498 -> 16.6.756.0931</li>
+					<li>Latest: 16.6.755.1498 -> 16.6.756.0931</li>
 				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-03-25 12-43-13</td>
+			<td style="text-align:center;">1/2</td>
+			<td>
+				<ol style="list-style-type: disc; margin-left: 2px;">
+					<li>Upgrade cdtb library to the repo version</li>
+					<li>Debug champion skin info converter</li>
+				</ol>
 			</td>
 		</tr>
 	</tbody>
