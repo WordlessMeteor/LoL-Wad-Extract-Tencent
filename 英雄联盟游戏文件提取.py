@@ -4,7 +4,7 @@ from cdtb.hashes import default_hashfile, HashFile
 from cdtb.wad import Wad
 from cdtb.binfile import BinFile
 from cdtb.rstfile import RstFile, get_hashfile, key_to_hash
-from cdtb.export import AtlasInfoConverter
+from cdtb.export import AtlasInfoConverter, ChampionSkinInfoConverter
 from typing import Any, Literal, Optional
 from bs4 import BeautifulSoup
 
@@ -178,6 +178,18 @@ def AtlasInfoConvert(src: str, dst: str) -> None:
     '''
     with open(src, "rb") as fsrc, open(dst, "w", encoding = "utf-8") as fdst:
         json.dump(AtlasInfoConverter.parse_atlasinfo(fsrc), fdst, indent = 4, ensure_ascii = False)
+
+def championSkinInfoConvert(src: str, dst: str) -> None:
+    '''
+    英雄皮肤信息转换函数。<br>A function to convert champion skin information.
+    
+    :param src: 原英雄皮肤信息文件路径。<br>Original champion skin information file path.
+    :type src: str
+    :param dst: 目标文件路径。建议以“.json”结尾。<br>Target file path. Better ends with ".json".
+    :type dst: str
+    '''
+    with open(src, "rb") as fsrc, open(dst, "w", encoding = "utf-8") as fdst:
+        json.dump(ChampionSkinInfoConverter.parse_championskininfo(fsrc), fdst, indent = 4, ensure_ascii = False)
 
 def isPlainTextPath(path: str) -> bool:
     '''
@@ -363,7 +375,8 @@ def convert_bin_files(extract_dir: Optional[str] = None, target_dir: Optional[st
     logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
     bin_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/.*\.bin$") #这里和cdtb库的正则表达式有区别，因为在游戏目录下，Game文件夹以及Game/DATA文件夹内含有其它内容。下同。另外需要说明，plugins文件夹中的.wad文件中不包含.bin文件。这是通过比对cdtb库的代码和CommunityDragon在线数据库的game和plugins文件夹得出的结论（Here the regular expression is different from that in cdtb library, because under the game directory, there're other content under Game/ and Game/DATA/ folders. So are the following regular expressions. Besides, worth mentioning, none of the .wad files under plugins/ folder contain any .bin file. This is concluded by comparison between cdtb library code and the game/ and plugins/ folders in CommunityDragon online database）
     rst_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/(?:.*/)?data/menu/.*\.(txt|stringtable)$")
-    atlasInfo_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/clientstates/.*\.cdtb$|Game/DATA/FINAL/assets/items/icons2d/autoatlas/.*/atlas_info\.bin$") #注意到凡是能被atlasInfo_pattern识别到的字符串一定能被bin_pattern识别。所以，识别的顺序很重要（Note that any string matched by `atlasInfo_pattern` will be matched by `bin_pattern`. Hence, the order of finding a match really matters）
+    atlasInfo_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/.*\.cdtb$|Game/DATA/FINAL/assets/items/icons2d/autoatlas/.*/atlas_info\.bin$") #注意到凡是能被atlasInfo_pattern识别到的字符串一定能被bin_pattern识别。所以，识别的顺序很重要（Note that any string matched by `atlasInfo_pattern` will be matched by `bin_pattern`. Hence, the order of finding a match really matters）
+    championSkinInfo_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/global/champions/championskins.info")
     binfiles_to_convert: list[dict[str, Any]] = []
     textfiles_to_copy: list[dict[str, Any]] = []
     error_files: list[str] = []
@@ -371,7 +384,7 @@ def convert_bin_files(extract_dir: Optional[str] = None, target_dir: Optional[st
         for file in files:
             srcpath = os.path.join(root, file).replace("\\", "/")
             relpath = os.path.relpath(srcpath, extract_dir).replace("\\", "/")
-            if isPlainTextPath(relpath) or bin_pattern.search(srcpath) or rst_pattern.search(srcpath) or atlasInfo_pattern.search(srcpath):
+            if isPlainTextPath(relpath) or bin_pattern.search(srcpath) or rst_pattern.search(srcpath) or atlasInfo_pattern.search(srcpath) or championSkinInfo_pattern.search(srcpath):
                 body: dict[str, Any] = {}
                 src_timestamp: float = os.path.getmtime(srcpath)
                 src_date: str = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime(src_timestamp))
@@ -421,6 +434,8 @@ def convert_bin_files(extract_dir: Optional[str] = None, target_dir: Optional[st
                 error_files.append(srcpath)
         elif rst_pattern.search(srcpath):
             RstConvert(srcpath, dstpath + ".json", game_version)
+        elif championSkinInfo_pattern.search(srcpath):
+            championSkinInfoConvert(srcpath, dstpath + ".json")
     if len(error_files) > 0:
         logPrint("以下%d个文件转换失败。\nThe following %d file(s) fail to be converted." %(len(error_files), len(error_files)), write_time = False)
         for file in error_files:
@@ -438,7 +453,7 @@ def format_text_files(convert_dir: Optional[str] = None, target_dir: Optional[st
     '''
     #参数预处理（Parameter preprocess）
     if not bool(convert_dir):
-        logPrint("请指定第一阶段提取的文件目录。\nPlease specify the directory of files extracted in Phase 1.")
+        logPrint("请指定第二阶段转换的文件目录。\nPlease specify the directory of files converted in Phase 2.")
         while True:
             convert_dir = logInput()
             if convert_dir == "":
