@@ -106,12 +106,28 @@ def wad_extract(wad_path: str, output_dir: str, hash_path: Optional[str] = None,
     wad.extract(output_dir, overwrite = not lazy)
     return 0
 
-def CopyConvert(src: str, dst: str) -> None: #纯文本文件复制函数（Plain text file copy function）
+def CopyConvert(src: str, dst: str) -> None:
+    '''
+    纯文本文件复制函数。<br>A function to simply copy a plain-text file.
+    
+    :param src: 原文本文件路径。<br>Original text file path.
+    :type src: str
+    :param dst: 目标文件路径。<br>Target file path.
+    :type dst: str
+    '''
     os.makedirs(os.path.dirname(dst), exist_ok = True)
     with open(src, "rb") as fsrc, open(dst, "wb") as fdst:
         shutil.copyfileobj(fsrc, fdst)
 
-def BinConvert(src: str, dst: str) -> None: #二进制文件转换函数。dst参数应以“.json”结尾（Binary file conversion function. `dst` should end with ".json"）
+def BinConvert(src: str, dst: str) -> None:
+    '''
+    二进制描述文件转换函数。<br>A function to convert a binary description file.
+    
+    :param src: 原二进制描述文件路径。<br>Original binary description file path.
+    :type src: str
+    :param dst: 目标文件路径。建议以“.json”结尾。<br>Target file path. Better ends with ".json".
+    :type dst: str
+    '''
     os.makedirs(os.path.dirname(dst), exist_ok = True)
     with open(dst, "w", encoding = "utf-8") as fdst:
         binfile = BinFile(src)
@@ -124,7 +140,19 @@ def BinConvert(src: str, dst: str) -> None: #二进制文件转换函数。dst�
             binData["__patches"] = tmp
         json.dump(binfile.to_serializable(), fdst, indent = 4, ensure_ascii = False) #这里的indent = 4实际上可以删掉，因为format_text_files函数中在读取json文件后会自动转化成缩进为4个空格的字符串，从而显著节省空间占用。下同（Here `indent = 4` can actually be deleted, because after `format_text_files` function reads the json file, the content will be transformed into a string with 4 spaces as an indentation unit, so that space cost can be saved significantly. So can the following）
 
-def RstConvert(src: str, dst: str, game_version: int = 1502) -> None: #字符串常量池转换函数。dst参数应以“.json”结尾（Stringtable conversion function. `dst` should end with ".json"）
+def RstConvert(src: str, dst: str, game_version: int = 1502) -> None:
+    '''
+    字符串常量池文件复制函数。<br>A function to convert Riot stringtable files.
+    
+    :param src: 原字符串常量池文件路径。<br>Original stringtable file path.
+    :type src: str
+    :param dst: 目标文件路径。建议以“.json”结尾。<br>Target file path. Better ends with ".json".
+    :type dst: str
+    :param game_version: 对局版本，决定了字符串常量池的键的加密方式。默认使用25.02版本的加密方式。<br>The patch of the stringtable, which determines the encryption method of keys in the stringtable. Encryption method in Patch 25.02 is adopted by default.
+    
+        这里的对局版本应沿用版本号变更前的格式，并去掉其中的点。例如，25.01版本应填“1501”，14.24版本应填“1424”。<br>This version should follow the format between the patch format change, and the dot should be eliminated. For example, to use Patch 25.01's encryption method, one should pass "1501"; on the other hand, to use Patch 14.24's encryption method, one should pass "1424".
+    :type game_version: int
+    '''
     rstfile: RstFile = RstFile(src)
     hashes = get_hashfile(game_version).load()
     hashes = {key_to_hash(hash, bits = rstfile.hash_bits): value for (hash, value) in hashes.items()}
@@ -139,15 +167,39 @@ def RstConvert(src: str, dst: str, game_version: int = 1502) -> None: #字符串
     with open(dst, "w", encoding = "utf-8") as fdst:
         json.dump(rst_json, fdst, indent = 4, ensure_ascii = False)
 
-def AtlasInfoConvert(src: str, dst: str) -> None: #图册信息转换函数（Atlas info conversion function）
+def AtlasInfoConvert(src: str, dst: str) -> None:
+    '''
+    图册信息转换函数。<br>A function to convert atlas information.
+    
+    :param src: 原图册信息文件路径。<br>Original atlas information file path.
+    :type src: str
+    :param dst: 目标文件路径。建议以“.json”结尾。<br>Target file path. Better ends with ".json".
+    :type dst: str
+    '''
     with open(src, "rb") as fsrc, open(dst, "w", encoding = "utf-8") as fdst:
         json.dump(AtlasInfoConverter.parse_atlasinfo(fsrc), fdst, indent = 4, ensure_ascii = False)
 
 def isPlainTextPath(path: str) -> bool:
+    '''
+    判断一个文件是不是文本文件。<br>Judge whether a file is a text file.
+    
+    :param path: 文件路径。<br>File path.
+    :type path: str
+    :return: 是否文本文件。<br>Whether it's a text file.
+    :rtype: bool
+    '''
     ext: str = os.path.splitext(path)[1]
     return ext in {".json", ".txt", ".js", ".xml", ".yaml", ".css", ".html", ".cfg", ".ini", ".effect", ".manifest"}
 
 def isWadPath(path: str) -> bool:
+    '''
+    判断一个文件是不是客户端文件。<br>Judge whether a file is a client file.
+    
+    :param path: 文件路径。<br>File path.
+    :type path: str
+    :return: 是否客户端文件。<br>Whether it's a client file.
+    :rtype: bool
+    '''
     ext: str = os.path.splitext(path)[1]
     return ext == ".wad" or path.endswith(".wad.client")
 
@@ -221,7 +273,7 @@ def extract_data_resource(game_dir: Optional[str] = None, target_dir: Optional[s
                 body["src_size"] = src_size
                 files_to_extract.append(body)
     max_index_width: int = 2 * len(str(len(files_to_extract))) + 3
-    locale_re = re.compile(r"[a-z]{2}_[A-Z]{2}")
+    locale_re: re.Pattern[str] = re.compile(r"[a-z]{2}_[A-Z]{2}")
     for i in range(len(files_to_extract)):
         relpath = files_to_extract[i]["relpath"]
         src_date = files_to_extract[i]["src_date"]
@@ -309,9 +361,9 @@ def convert_bin_files(extract_dir: Optional[str] = None, target_dir: Optional[st
                     break
     #复制文本文件和转换bin文件（Copy text files and convert bin files）
     logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
-    bin_pattern = re.compile(r"Game/DATA/FINAL/.*\.bin$") #这里和cdtb库的正则表达式有区别，因为在游戏目录下，Game文件夹以及Game/DATA文件夹内含有其它内容。下同。另外需要说明，plugins文件夹中的.wad文件中不包含.bin文件。这是通过比对cdtb库的代码和CommunityDragon在线数据库的game和plugins文件夹得出的结论（Here the regular expression is different from that in cdtb library, because under the game directory, there're other content under Game/ and Game/DATA/ folders. So are the following regular expressions. Besides, worth mentioning, none of the .wad files under plugins/ folder contain any .bin file. This is concluded by comparison between cdtb library code and the game/ and plugins/ folders in CommunityDragon online database）
-    rst_pattern = re.compile(r"Game/DATA/FINAL/(?:.*/)?data/menu/.*\.(txt|stringtable)$")
-    atlasInfo_pattern = re.compile(r"Game/DATA/FINAL/clientstates/.*\.cdtb$|Game/DATA/FINAL/assets/items/icons2d/autoatlas/.*/atlas_info\.bin$") #注意到凡是能被atlasInfo_pattern识别到的字符串一定能被bin_pattern识别。所以，识别的顺序很重要（Note that any string matched by `atlasInfo_pattern` will be matched by `bin_pattern`. Hence, the order of finding a match really matters）
+    bin_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/.*\.bin$") #这里和cdtb库的正则表达式有区别，因为在游戏目录下，Game文件夹以及Game/DATA文件夹内含有其它内容。下同。另外需要说明，plugins文件夹中的.wad文件中不包含.bin文件。这是通过比对cdtb库的代码和CommunityDragon在线数据库的game和plugins文件夹得出的结论（Here the regular expression is different from that in cdtb library, because under the game directory, there're other content under Game/ and Game/DATA/ folders. So are the following regular expressions. Besides, worth mentioning, none of the .wad files under plugins/ folder contain any .bin file. This is concluded by comparison between cdtb library code and the game/ and plugins/ folders in CommunityDragon online database）
+    rst_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/(?:.*/)?data/menu/.*\.(txt|stringtable)$")
+    atlasInfo_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/clientstates/.*\.cdtb$|Game/DATA/FINAL/assets/items/icons2d/autoatlas/.*/atlas_info\.bin$") #注意到凡是能被atlasInfo_pattern识别到的字符串一定能被bin_pattern识别。所以，识别的顺序很重要（Note that any string matched by `atlasInfo_pattern` will be matched by `bin_pattern`. Hence, the order of finding a match really matters）
     binfiles_to_convert: list[dict[str, Any]] = []
     textfiles_to_copy: list[dict[str, Any]] = []
     error_files: list[str] = []
