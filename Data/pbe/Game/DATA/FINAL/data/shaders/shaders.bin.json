@@ -65677,6 +65677,119 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Fresnel_ColorBias",
+                "logicalParameters": [
+                    {
+                        "name": "Fresnel_ColorBias",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Fresnel_Size",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Fresnel_Size",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "RimLightOffset",
+                "data": [
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "RimLightOffset",
+                        "fields": 7,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Rim_max",
+                "data": [
+                    -2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Rim_max",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "RimColor",
+                "data": [
+                    1.0,
+                    0.7490196228027344,
+                    0.11372549086809158,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "RimColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "LQ_Lighting_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "LQ_Lighting_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Bottom_ScrollSpeed",
                 "data": [
                     1.0,
@@ -65742,6 +65855,18 @@
             {
                 "name": "VERTEX_COLOR_ANIM",
                 "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "ADDITIVE_ALPHA",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "RIM",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "BLOOM",
+                "__type": "ShaderStaticSwitch"
             }
         ],
         "textures": [
@@ -65759,14 +65884,22 @@
                 "name": "Top_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "ShaderTexture"
+            },
+            {
+                "name": "Mask",
+                "defaultTexturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "ShaderTexture"
             }
         ],
         "featureDefines": {
             "DEBUG_USES_LINEAR_SPACE": "1",
+            "FEATURE_BLOOM": "1",
             "FEATURE_DISPLACEMENT": "1",
-            "FEATURE_VERTEX_COLOR_VS": "1"
+            "FEATURE_VERTEX_COLOR_VS": "1",
+            "FEATURE_WORLD_NORMAL": "1",
+            "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 36,
+        "featureMask": 37,
         "objectPath": "Shaders/SkinnedMesh/ScrollingUVs_MultiLayer",
         "__type": "CustomShaderDef"
     },
