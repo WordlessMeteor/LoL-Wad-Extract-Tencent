@@ -295,5 +295,10 @@
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-04-08 17-20-10</td>
+			<td style="text-align:center;">1;2</td>
+			<td>Program debug: Introduce divided TFT bin files</td>
+		</tr>
 	</tbody>
 </table>
