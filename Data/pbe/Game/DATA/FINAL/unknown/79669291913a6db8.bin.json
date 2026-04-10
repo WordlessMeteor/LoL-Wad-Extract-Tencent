@@ -24,7 +24,6 @@
                     "duration": 5.0,
                     "BlackboardVfxSource": "SourcePlayer",
                     "effectKey": "TFT_PlayerDamageMis_Avatar",
-                    "HitEffectKey": "TFT_PlayerDamageTar",
                     "{c547d3c0}": true,
                     "MissileRadius": 1.0,
                     "{7974836b}": {
@@ -55,6 +54,20 @@
                     "StartAudioEvent": "Play_sfx_tft_dmg_skin222_tier3_launch",
                     "{78afa616}": "Target",
                     "__type": "TftCutsceneObjSfxClip"
+                },
+                {
+                    "duration": 5.0,
+                    "BlackboardVfxSource": "SourcePlayer",
+                    "effectKey": "TFT_PlayerDamageTar",
+                    "BlackboardAssociatedPlayers": [
+                        "SourcePlayer"
+                    ],
+                    "Position": {
+                        "BlackboardPosition": "TargetPosition",
+                        "BlackboardOrientation": "TargetOrientation",
+                        "__type": "{8e30b80e}"
+                    },
+                    "__type": "TftCutscenePosProviderVfxClip"
                 }
             ],
             "initializer": {
