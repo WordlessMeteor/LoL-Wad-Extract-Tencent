@@ -300,5 +300,14 @@
 			<td style="text-align:center;">1;2</td>
 			<td>Program debug: Introduce divided TFT bin files</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-04-10 20-39-49</td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>PBE: 16.7.758.4427 -> 16.7.762.8295</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
