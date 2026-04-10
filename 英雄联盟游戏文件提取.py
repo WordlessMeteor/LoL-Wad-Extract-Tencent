@@ -261,7 +261,7 @@ def extract_data_resource(game_dir: Optional[str] = None, target_dir: Optional[s
         r"Game/Config/Champions/.*",
         r"Game/Config/Global/Recommended/RIOT_ItemSet_\d*\.json",
         r"Game/Config/ItemSets.json",
-        r"Game/Logs/.*",
+        r".*/Logs/.*",
         r"tiny_cache/.*"
     ]
     error_wad_client_files: list[str] = []
