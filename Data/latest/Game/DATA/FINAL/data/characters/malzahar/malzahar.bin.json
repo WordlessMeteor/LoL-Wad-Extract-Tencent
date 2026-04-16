@@ -174,6 +174,32 @@
                         0.20000000298023224
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StackDuration",
+                    "values": [
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -667,6 +693,32 @@
                         0.20000000298023224
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StackDuration",
+                    "values": [
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0,
+                        25000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1034,13 +1086,54 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        70.0,
+                        70.0,
+                        105.0,
+                        140.0,
+                        175.0,
+                        210.0,
+                        245.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SilenceDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DelayPostCast",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamageTooltip": {
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.550000011920929,
@@ -1194,8 +1287,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SilenceDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1807,6 +1900,32 @@
                         1250.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PoolDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CCDuration",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2004,8 +2123,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "CCDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2017,8 +2136,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "CCDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2030,8 +2149,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "CCDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2153,6 +2272,10 @@
                         4.0,
                         4.0
                     ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "UnnamedEffectAmount2",
                     "__type": "SpellDataValue"
                 }
             ],
@@ -2932,87 +3055,87 @@
     },
     "Characters/Malzahar/CharacterRecords/Root": {
         "mCharacterName": "Malzahar",
-        "{8662cf12}": {
-            "{b35aa769}": 580.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 580.0,
+            "__type": "ModifiableFloat"
         },
-        "{4d37af28}": {
-            "{b35aa769}": 101.0,
-            "__type": "{ce9b917b}"
+        "hpPerLevelModifiable": {
+            "baseValue": 101.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 1.2000000476837158,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.2000000476837158,
+            "__type": "ModifiableFloat"
         },
-        "{913157bb}": {
-            "{b35aa769}": 0.11999999731779099,
-            "__type": "{ce9b917b}"
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.11999999731779099,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 115.0,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 375.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 375.0,
+                "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
-                "{b35aa769}": 28.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 28.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 1.600000023841858,
-                "__type": "{ce9b917b}"
+                "baseValue": 1.600000023841858,
+                "__type": "ModifiableFloat"
             },
             "{3a509002}": {
-                "{b35aa769}": 0.1599999964237213,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.1599999964237213,
+                "__type": "ModifiableFloat"
             },
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 55.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 55.0,
+            "__type": "ModifiableFloat"
         },
-        "{e2b5d80d}": {
-            "{b35aa769}": 3.0,
-            "__type": "{ce9b917b}"
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 18.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 18.0,
+            "__type": "ModifiableFloat"
         },
-        "{18956a21}": {
-            "{b35aa769}": 4.699999809265137,
-            "__type": "{ce9b917b}"
+        "armorPerLevelModifiable": {
+            "baseValue": 4.699999809265137,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
         "{01262a25}": {
-            "{b35aa769}": 1.2999999523162842,
-            "__type": "{ce9b917b}"
+            "baseValue": 1.2999999523162842,
+            "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
-        "{e62d9d92}": {
-            "{b35aa769}": 335.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 335.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 500.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.625,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.625,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
         },
-        "{b9f2b365}": {
-            "{b35aa769}": 1.5,
-            "__type": "{ce9b917b}"
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 1.5,
+            "__type": "ModifiableFloat"
         },
         "mAdaptiveForceToAbilityPowerWeight": 1.0,
         "acquisitionRange": 600.0,
