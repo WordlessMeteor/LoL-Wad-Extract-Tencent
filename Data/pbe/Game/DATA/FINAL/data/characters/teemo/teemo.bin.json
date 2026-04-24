@@ -413,6 +413,64 @@
                     }
                 ],
                 "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "{5c16cd52}": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1056",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1086",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1055",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1101",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1102",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1103",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
             }
         ],
         "__type": "ItemRecommendationOverrideSet"
@@ -496,7 +554,7 @@
             ],
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.ASU_Teemo.dds"
+                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW.dds"
             ],
             "{11704a2b}": 0.5286999940872192,
             "cooldownTime": [
@@ -666,7 +724,7 @@
         "mScriptName": "TeemoWPassiveCooldown",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW_Grey.ASU_Teemo.dds"
+                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoW_Grey.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1107,7 +1165,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.ASU_Teemo.dds"
+                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoR.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1596,6 +1654,11 @@
         "mName": "TeemoEAbility",
         "__type": "AbilityObject"
     },
+    "{38aed395}": {
+        "ObjectName": "TeemoEShared",
+        "mScriptName": "TeemoEShared",
+        "__type": "SpellObject"
+    },
     "Characters/Teemo/Spells/TeemoEAbility/TeemoE": {
         "ObjectName": "TeemoE",
         "mScriptName": "TeemoE",
@@ -1693,6 +1756,32 @@
                         1.600000023841858
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TickBonusADRatio",
+                    "values": [
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ImpactBonusADRatio",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1704,6 +1793,12 @@
                         },
                         {
                             "mDataValue": "TickAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "TickBonusADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1718,6 +1813,12 @@
                         },
                         {
                             "mDataValue": "ImpactAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "ImpactBonusADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1763,7 +1864,7 @@
             ],
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.ASU_Teemo.dds"
+                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoE.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -2367,7 +2468,7 @@
             },
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.ASU_Teemo.dds"
+                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoQ.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2594,7 +2695,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.ASU_Teemo.dds"
+                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.dds"
             ],
             "castRange": [
                 0.0,
@@ -2660,7 +2761,7 @@
         "mScriptName": "TeemoPAttackSpeedBuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive_Buff.ASU_Teemo.dds"
+                "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive_Buff.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -3211,87 +3312,87 @@
     },
     "Characters/Teemo/CharacterRecords/Root": {
         "mCharacterName": "Teemo",
-        "{8662cf12}": {
-            "{b35aa769}": 615.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 615.0,
+            "__type": "ModifiableFloat"
         },
-        "{4d37af28}": {
-            "{b35aa769}": 104.0,
-            "__type": "{ce9b917b}"
+        "hpPerLevelModifiable": {
+            "baseValue": 104.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 1.100000023841858,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.100000023841858,
+            "__type": "ModifiableFloat"
         },
-        "{913157bb}": {
-            "{b35aa769}": 0.12999999523162842,
-            "__type": "{ce9b917b}"
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.12999999523162842,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 75.0,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 334.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 334.0,
+                "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
-                "{b35aa769}": 25.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 25.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 1.9199999570846558,
-                "__type": "{ce9b917b}"
+                "baseValue": 1.9199999570846558,
+                "__type": "ModifiableFloat"
             },
             "{3a509002}": {
-                "{b35aa769}": 0.09000000357627869,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.09000000357627869,
+                "__type": "ModifiableFloat"
             },
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 54.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 54.0,
+            "__type": "ModifiableFloat"
         },
-        "{e2b5d80d}": {
-            "{b35aa769}": 3.0,
-            "__type": "{ce9b917b}"
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 24.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 24.0,
+            "__type": "ModifiableFloat"
         },
-        "{18956a21}": {
-            "{b35aa769}": 4.949999809265137,
-            "__type": "{ce9b917b}"
+        "armorPerLevelModifiable": {
+            "baseValue": 4.949999809265137,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
         "{01262a25}": {
-            "{b35aa769}": 1.2999999523162842,
-            "__type": "{ce9b917b}"
+            "baseValue": 1.2999999523162842,
+            "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
-        "{e62d9d92}": {
-            "{b35aa769}": 330.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 330.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 500.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.6899999976158142,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.6899999976158142,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.6899999976158142,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6899999976158142,
+            "__type": "ModifiableFloat"
         },
-        "{b9f2b365}": {
-            "{b35aa769}": 3.380000114440918,
-            "__type": "{ce9b917b}"
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 3.380000114440918,
+            "__type": "ModifiableFloat"
         },
         "mAdaptiveForceToAbilityPowerWeight": 1.0,
         "acquisitionRange": 500.0,
@@ -3365,7 +3466,7 @@
         "passiveName": "game_character_passiveName_Teemo",
         "passiveLuaName": "TeemoPassive",
         "passiveToolTip": "game_character_passiveDescription_Teemo",
-        "passive1IconName": "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.ASU_Teemo.dds",
+        "passive1IconName": "ASSETS/Characters/Teemo/HUD/Icons2D/TeemoPassive.dds",
         "name": "game_character_displayname_Teemo",
         "mUseCCAnimations": true,
         "selectionHeight": 100.0,

@@ -797,6 +797,34 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        20.0,
+                        40.0,
+                        60.0,
+                        80.0,
+                        100.0,
+                        120.0,
+                        140.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseApRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mCoefficient": 0.30000001192092896,
             "mCoefficient2": 0.8999999761581421,
             "mAnimationName": "",
@@ -907,119 +935,6 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        25.0,
-                        25.0,
-                        30.0,
-                        35.0,
-                        40.0,
-                        45.0,
-                        45.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "MinimumWBaseDamage",
@@ -1059,6 +974,136 @@
                         0.15000000596046448
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MRRatio",
+                    "values": [
+                        0.0007999999797903001,
+                        0.0007999999797903001,
+                        0.0007999999797903001,
+                        0.0007999999797903001,
+                        0.0007999999797903001,
+                        0.0007999999797903001,
+                        0.0007999999797903001
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PhysicalDRPercent",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageReductionBase",
+                    "values": [
+                        0.20000000298023224,
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxChargeDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SelfSlowPercent",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CCDurationMin",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HpRatio",
+                    "values": [
+                        9.999999747378752e-05,
+                        9.999999747378752e-05,
+                        9.999999747378752e-05,
+                        9.999999747378752e-05,
+                        9.999999747378752e-05,
+                        9.999999747378752e-05,
+                        9.999999747378752e-05
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CCDurationMax",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DRLingerDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ApRatio",
+                    "values": [
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007,
+                        0.00039999998989515007
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1074,30 +1119,29 @@
                 },
                 "MagicDamageReduction": {
                     "mMultiplier": {
-                        "mNumber": 0.009999999776482582,
+                        "mNumber": 1.0,
                         "__type": "NumberCalculationPart"
                     },
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "DamageReductionBase",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.03999999910593033,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 6,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.07999999821186066,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "MRRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 12,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.009999999776482582,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "HPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -1105,10 +1149,9 @@
                 },
                 "PhysicalDamageReduction": {
                     "mMultiplier": {
-                        "mNumber": 0.5,
-                        "__type": "NumberCalculationPart"
+                        "mDataValue": "PhysicalDRPercent",
+                        "__type": "NamedDataValueCalculationPart"
                     },
-                    "tooltipOnly": true,
                     "mModifiedGameCalculation": "MagicDamageReduction",
                     "__type": "GameCalculationModified"
                 },
@@ -1130,7 +1173,6 @@
                         "mNumber": 3.0,
                         "__type": "NumberCalculationPart"
                     },
-                    "tooltipOnly": true,
                     "mModifiedGameCalculation": "MinTotalDamage",
                     "__type": "GameCalculationModified"
                 },
@@ -1155,10 +1197,26 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{7a7521c1}": {
+                    "mMultiplier": {
+                        "mNumber": 100.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "tooltipOnly": true,
+                    "mModifiedGameCalculation": "MagicDamageReduction",
+                    "__type": "GameCalculationModified"
+                },
+                "{c9a870dd}": {
+                    "mMultiplier": {
+                        "mNumber": 50.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "tooltipOnly": true,
+                    "mModifiedGameCalculation": "MagicDamageReduction",
+                    "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 0.07999999821186066,
-            "mCoefficient2": 0.5,
             "mAnimationName": "",
             "mImgIconName": [
                 "ASSETS/Characters/Galio/HUD/Icons2D/Galio_W.dds"
@@ -1278,16 +1336,17 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "DamageReductionBase",
                                     "typeIndex": 1,
+                                    "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_MagicDamageReduction",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "DamageReductionBase",
                                     "typeIndex": 1,
-                                    "multiplier": 0.5,
+                                    "multiplier": 50.0,
                                     "nameOverride": "Spell_ListType_PhysicalDamageReduction",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -1348,8 +1407,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "CCDurationMin",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1361,8 +1420,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "CCDurationMin",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -3005,87 +3064,87 @@
     },
     "Characters/Galio/CharacterRecords/Root": {
         "mCharacterName": "Galio",
-        "{8662cf12}": {
-            "{b35aa769}": 600.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 600.0,
+            "__type": "ModifiableFloat"
         },
-        "{4d37af28}": {
-            "{b35aa769}": 126.0,
-            "__type": "{ce9b917b}"
+        "hpPerLevelModifiable": {
+            "baseValue": 126.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 1.600000023841858,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.600000023841858,
+            "__type": "ModifiableFloat"
         },
-        "{913157bb}": {
-            "{b35aa769}": 0.1599999964237213,
-            "__type": "{ce9b917b}"
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.1599999964237213,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 135.0,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 410.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 410.0,
+                "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
-                "{b35aa769}": 40.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 40.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 1.899999976158142,
-                "__type": "{ce9b917b}"
+                "baseValue": 1.899999976158142,
+                "__type": "ModifiableFloat"
             },
             "{3a509002}": {
-                "{b35aa769}": 0.14000000059604645,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.14000000059604645,
+                "__type": "ModifiableFloat"
             },
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 59.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 59.0,
+            "__type": "ModifiableFloat"
         },
-        "{e2b5d80d}": {
-            "{b35aa769}": 3.5,
-            "__type": "{ce9b917b}"
+        "damagePerLevelModifiable": {
+            "baseValue": 3.5,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 24.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 24.0,
+            "__type": "ModifiableFloat"
         },
-        "{18956a21}": {
-            "{b35aa769}": 4.699999809265137,
-            "__type": "{ce9b917b}"
+        "armorPerLevelModifiable": {
+            "baseValue": 4.699999809265137,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 32.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 32.0,
+            "__type": "ModifiableFloat"
         },
         "{01262a25}": {
-            "{b35aa769}": 2.049999952316284,
-            "__type": "{ce9b917b}"
+            "baseValue": 2.049999952316284,
+            "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
-        "{e62d9d92}": {
-            "{b35aa769}": 340.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 340.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 150.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 150.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.625,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.625,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
         },
-        "{b9f2b365}": {
-            "{b35aa769}": 1.5,
-            "__type": "{ce9b917b}"
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 1.5,
+            "__type": "ModifiableFloat"
         },
         "mAdaptiveForceToAbilityPowerWeight": 1.0,
         "acquisitionRange": 400.0,

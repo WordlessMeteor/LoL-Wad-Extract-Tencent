@@ -374,7 +374,7 @@
             },
             "mAnimationName": "None",
             "mImgIconName": [
-                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarE.StrawberryRebuild.dds"
+                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarE.dds"
             ],
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
@@ -956,9 +956,9 @@
             },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarW.StrawberryRebuild.dds",
-                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarW2.StrawberryRebuild.dds",
-                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarWBuff.StrawberryRebuild.dds"
+                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarW.dds",
+                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarW2.dds",
+                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarWBuff.dds"
             ],
             "cooldownTime": [
                 20.0,
@@ -1223,7 +1223,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarW2.StrawberryRebuild.dds"
+                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarW2.dds"
             ],
             "mCastTime": 1.0,
             "{11704a2b}": 1.0,
@@ -1672,10 +1672,10 @@
             },
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarR.StrawberryRebuild.dds",
-                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarWBuff.StrawberryRebuild.dds"
+                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarR.dds",
+                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarWBuff.dds"
             ],
-            "mMinimapIconName": "ASSETS/Characters/Strawberry_Briar/HUD/Strawberry_Briar_CertainDeath_Circle.StrawberryRebuild.tex",
+            "mMinimapIconName": "ASSETS/Characters/Strawberry_Briar/HUD/Strawberry_Briar_CertainDeath_Circle.tex",
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
             "cooldownTime": [
@@ -2027,7 +2027,7 @@
                 }
             },
             "mAnimationName": "",
-            "mMinimapIconName": "ASSETS/Characters/Strawberry_Boss_Briar/HUD/Strawberry_Boss_Briar_CertainDeath_Circle.StrawberryRebuild.tex",
+            "mMinimapIconName": "ASSETS/Characters/Strawberry_Boss_Briar/HUD/Strawberry_Boss_Briar_CertainDeath_Circle.tex",
             "mCastTime": 1.0,
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2163,7 +2163,7 @@
                 }
             ],
             "mImgIconName": [
-                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarP.StrawberryRebuild.dds"
+                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarP.dds"
             ],
             "castRange": [
                 0.0,
@@ -2387,7 +2387,7 @@
             },
             "mAnimationName": "Attack4",
             "mImgIconName": [
-                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarW.StrawberryRebuild.dds"
+                "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarW.dds"
             ],
             "mCastTime": 0.5,
             "{f26881a0}": 1.0,
@@ -2742,53 +2742,53 @@
     },
     "Characters/Strawberry_Briar/CharacterRecords/Root": {
         "mCharacterName": "Strawberry_Briar",
-        "{8662cf12}": {
-            "{b35aa769}": 1200.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 1200.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 0.0,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
         },
         "primaryAbilityResource": {
             "arType": 5,
             "{726ee5cd}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 0.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
             },
             "arHasRegenText": false,
             "arAllowMaxValueToBeOverridden": true,
             "{4eb6a404}": 2,
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 60.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 60.0,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 15.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 15.0,
+            "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
-        "{e62d9d92}": {
-            "{b35aa769}": 350.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 350.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 125.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.6439999938011169,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.6439999938011169,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.6690000295639038,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6690000295639038,
+            "__type": "ModifiableFloat"
         },
         "acquisitionRange": 400.0,
         "basicAttack": {
@@ -2903,7 +2903,7 @@
         "passiveLuaName": "Strawberry_BriarP",
         "passiveToolTip": "Spell_Strawberry_BriarP_Summary",
         "passiveSpell": "Strawberry_BriarP",
-        "passive1IconName": "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarP.StrawberryRebuild.dds",
+        "passive1IconName": "ASSETS/Characters/Strawberry_Briar/HUD/Icons2D/Strawberry_BriarP.dds",
         "name": "game_character_displayname_Strawberry_Briar",
         "mUseCCAnimations": true,
         "selectionHeight": 191.6667022705078,

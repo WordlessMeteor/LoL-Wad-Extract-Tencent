@@ -1250,7 +1250,6 @@
                             "mSpectatorEventName": "cast3D",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "DontResetTimer": true,
@@ -1473,7 +1472,11 @@
                             "mSpectatorEventName": "cast3D",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {

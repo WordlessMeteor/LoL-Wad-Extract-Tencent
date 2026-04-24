@@ -7514,7 +7514,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/disc32.SKINS_Rakan_Skin47.tex",
+                "texture": "ASSETS/Shared/Particles/disc32.HA_CREPE.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -202253,7 +202253,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {

@@ -396,6 +396,58 @@
                         100.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MovespeedAmount",
+                    "values": [
+                        0.15000000596046448,
+                        0.20000000298023224,
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VisionRadius",
+                    "values": [
+                        2100.0,
+                        2100.0,
+                        2100.0,
+                        2100.0,
+                        2100.0,
+                        2100.0,
+                        2100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VisionDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -526,8 +578,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 3,
+                                    "type": "MovespeedAmount",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_MovementSpeed",
                                     "Style": 1,
@@ -566,8 +617,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "MoveSpeedAmount",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1570,7 +1621,8 @@
             "mAlternateName": "QuinnE",
             "mSpellTags": [
                 "PositiveEffect_MoveBlock",
-                "Trait_ImmobilizingCCSpell"
+                "Trait_ImmobilizingCCSpell",
+                "Trait_AttackReset"
             ],
             "mEffectAmount": [
                 {
@@ -1631,12 +1683,53 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        40.0,
+                        40.0,
+                        65.0,
+                        90.0,
+                        115.0,
+                        140.0,
+                        140.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDecayTime",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
@@ -1723,8 +1816,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1785,8 +1877,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowAmount",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1906,6 +1998,32 @@
                         0.5,
                         0.5,
                         0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VisionReductionRadius",
+                    "values": [
+                        -1000.0,
+                        -1000.0,
+                        -1000.0,
+                        -1000.0,
+                        -1000.0,
+                        -1000.0,
+                        -1000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VisionReductionDuration",
+                    "values": [
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2291,6 +2409,116 @@
         ],
         "__type": "JunglePathRecommendation"
     },
+    "{786c4e8f}": {
+        "mOverrides": [
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1055",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1086",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1083",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1101",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1102",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1103",
+                            "Items/1102"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6698",
+                            "Items/3006",
+                            "Items/6672"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3006",
+                            "Items/3009"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6676",
+                            "Items/3097"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3814",
+                            "Items/3031",
+                            "Items/3036"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223026",
+                            "Items/6673",
+                            "Items/3153"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6699",
+                            "Items/3142",
+                            "Items/3139",
+                            "Items/3033"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
     "{8599d56a}": {
         "__type": "ChampionRuneRecommendationsContext"
     },
@@ -2353,87 +2581,87 @@
     },
     "Characters/Quinn/CharacterRecords/Root": {
         "mCharacterName": "Quinn",
-        "{8662cf12}": {
-            "{b35aa769}": 565.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 565.0,
+            "__type": "ModifiableFloat"
         },
-        "{4d37af28}": {
-            "{b35aa769}": 107.0,
-            "__type": "{ce9b917b}"
+        "hpPerLevelModifiable": {
+            "baseValue": 107.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 1.100000023841858,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.100000023841858,
+            "__type": "ModifiableFloat"
         },
-        "{913157bb}": {
-            "{b35aa769}": 0.10999999940395355,
-            "__type": "{ce9b917b}"
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10999999940395355,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 105.0,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 269.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 269.0,
+                "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
-                "{b35aa769}": 35.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 35.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 1.399999976158142,
-                "__type": "{ce9b917b}"
+                "baseValue": 1.399999976158142,
+                "__type": "ModifiableFloat"
             },
             "{3a509002}": {
-                "{b35aa769}": 0.07999999821186066,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.07999999821186066,
+                "__type": "ModifiableFloat"
             },
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 59.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 59.0,
+            "__type": "ModifiableFloat"
         },
-        "{e2b5d80d}": {
-            "{b35aa769}": 3.200000047683716,
-            "__type": "{ce9b917b}"
+        "damagePerLevelModifiable": {
+            "baseValue": 3.200000047683716,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 28.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 28.0,
+            "__type": "ModifiableFloat"
         },
-        "{18956a21}": {
-            "{b35aa769}": 4.699999809265137,
-            "__type": "{ce9b917b}"
+        "armorPerLevelModifiable": {
+            "baseValue": 4.699999809265137,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
         "{01262a25}": {
-            "{b35aa769}": 1.2999999523162842,
-            "__type": "{ce9b917b}"
+            "baseValue": 1.2999999523162842,
+            "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
-        "{e62d9d92}": {
-            "{b35aa769}": 330.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 330.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 525.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 525.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.6679999828338623,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.6679999828338623,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.6679999828338623,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6679999828338623,
+            "__type": "ModifiableFloat"
         },
-        "{b9f2b365}": {
-            "{b35aa769}": 3.0999999046325684,
-            "__type": "{ce9b917b}"
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 3.0999999046325684,
+            "__type": "ModifiableFloat"
         },
         "basicAttack": {
             "mAttackDelayCastOffsetPercent": -0.12456139922142029,

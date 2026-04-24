@@ -6,25 +6,18 @@
                 "mRules": [
                     {
                         "mRuleName": "Joke Response",
-                        "mConditions": [
-                            {
-                                "mCharacterType": 7,
-                                "mChildConditions": [
-                                    {
-                                        "__type": "ContextualConditionIsAlly"
-                                    }
-                                ],
-                                "__type": "ContextualConditionCharacter"
-                            }
-                        ],
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "JokeResponse3DGeneral",
+                            "mAllyEventName": "JokeResponse3DGeneral",
                             "mEnemyEventName": "JokeResponse3DGeneral",
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -75,7 +68,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -88,7 +84,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -112,17 +111,6 @@
                 "mRules": [
                     {
                         "mRuleName": "Kill - General",
-                        "mConditions": [
-                            {
-                                "mCharacterType": 6,
-                                "mChildConditions": [
-                                    {
-                                        "__type": "ContextualConditionIsAlly"
-                                    }
-                                ],
-                                "__type": "ContextualConditionCharacter"
-                            }
-                        ],
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DGeneral",
@@ -132,7 +120,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -156,18 +147,30 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
                         "mRuleName": "Buy Item - General",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
                         "mAudioAction": {
                             "mMaxOccurences": 5,
                             "mSelfEventName": "BuyItem2DGeneral",
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -191,25 +194,18 @@
                 "mRules": [
                     {
                         "mRuleName": "Taunt Response",
-                        "mConditions": [
-                            {
-                                "mCharacterType": 7,
-                                "mChildConditions": [
-                                    {
-                                        "__type": "ContextualConditionIsAlly"
-                                    }
-                                ],
-                                "__type": "ContextualConditionCharacter"
-                            }
-                        ],
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "TauntResponse3DGeneral",
+                            "mAllyEventName": "TauntResponse3DGeneral",
                             "mEnemyEventName": "TauntResponse3DGeneral",
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -231,7 +227,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -248,7 +247,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -265,7 +267,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -282,7 +287,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -299,7 +307,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -316,7 +327,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -333,7 +347,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -350,7 +367,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -367,7 +387,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -377,12 +400,21 @@
                 "mRules": [
                     {
                         "mRuleName": "Respawn",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
                         "mAudioAction": {
                             "mSelfEventName": "Respawn2DGeneral",
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -413,10 +445,12 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "FirstEncounter3DJhin",
-                            "mEnemyEventName": "FirstEncounter3DJhin",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -441,10 +475,12 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "FirstEncounter3DLulu",
-                            "mEnemyEventName": "FirstEncounter3DLulu",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -469,10 +505,12 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "FirstEncounter3DMalphite",
-                            "mEnemyEventName": "FirstEncounter3DMalphite",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -497,10 +535,12 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "FirstEncounter3DMaokai",
-                            "mEnemyEventName": "FirstEncounter3DMaokai",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -525,10 +565,12 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "FirstEncounter3DReksai",
-                            "mEnemyEventName": "FirstEncounter3DReksai",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -553,10 +595,12 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "FirstEncounter3DZyra",
-                            "mEnemyEventName": "FirstEncounter3DZyra",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -573,7 +617,10 @@
                             "mSpectatorEventName": "Joke3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -590,7 +637,10 @@
                             "mSpectatorEventName": "Laugh3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -941,7 +991,10 @@
                             "mSelfEventName": "UseItem3DWard",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -958,7 +1011,10 @@
                             "mSpectatorEventName": "Dance3DStart",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -975,7 +1031,10 @@
                             "mSpectatorEventName": "Dance3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],

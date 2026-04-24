@@ -2025,6 +2025,19 @@
                         270.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CooldownRefresh",
+                    "values": [
+                        0.125,
+                        0.1599999964237213,
+                        0.19499999284744263,
+                        0.23000000417232513,
+                        0.26499998569488525,
+                        0.30000001192092896,
+                        0.33500000834465027
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2099,13 +2112,13 @@
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
             "cooldownTime": [
-                16.0,
+                18.0,
+                18.0,
+                17.0,
                 16.0,
                 15.0,
                 14.0,
-                13.0,
-                12.0,
-                11.0
+                14.0
             ],
             "mCantCancelWhileWindingUp": true,
             "mProjectTargetToCastRange": true,
@@ -2229,6 +2242,13 @@
                                 },
                                 {
                                     "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "CooldownRefresh",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_ECooldownRefresh",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -3783,26 +3803,26 @@
                 {
                     "name": "TotalBaseDamage",
                     "values": [
-                        10.0,
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0,
-                        70.0
+                        5.0,
+                        15.0,
+                        25.0,
+                        35.0,
+                        45.0,
+                        55.0,
+                        65.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "TotalAPRatio",
                     "values": [
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -8654,7 +8674,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8681,7 +8704,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8694,7 +8720,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -8749,7 +8778,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8777,7 +8809,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8805,7 +8840,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     },
                     {
@@ -8819,7 +8857,10 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -8843,7 +8884,10 @@
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
@@ -9094,87 +9138,87 @@
     },
     "Characters/Zoe/CharacterRecords/Root": {
         "mCharacterName": "Zoe",
-        "{8662cf12}": {
-            "{b35aa769}": 630.0,
-            "__type": "{ce9b917b}"
+        "baseHPModifiable": {
+            "baseValue": 630.0,
+            "__type": "ModifiableFloat"
         },
-        "{4d37af28}": {
-            "{b35aa769}": 106.0,
-            "__type": "{ce9b917b}"
+        "hpPerLevelModifiable": {
+            "baseValue": 106.0,
+            "__type": "ModifiableFloat"
         },
-        "{9eedebad}": {
-            "{b35aa769}": 1.5,
-            "__type": "{ce9b917b}"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.5,
+            "__type": "ModifiableFloat"
         },
-        "{913157bb}": {
-            "{b35aa769}": 0.11999999731779099,
-            "__type": "{ce9b917b}"
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.11999999731779099,
+            "__type": "ModifiableFloat"
         },
         "healthBarHeight": 110.0,
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "{b35aa769}": 425.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 425.0,
+                "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
-                "{b35aa769}": 25.0,
-                "__type": "{ce9b917b}"
+                "baseValue": 25.0,
+                "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "{b35aa769}": 1.600000023841858,
-                "__type": "{ce9b917b}"
+                "baseValue": 1.600000023841858,
+                "__type": "ModifiableFloat"
             },
             "{3a509002}": {
-                "{b35aa769}": 0.12999999523162842,
-                "__type": "{ce9b917b}"
+                "baseValue": 0.12999999523162842,
+                "__type": "ModifiableFloat"
             },
             "__type": "AbilityResourceSlotInfo"
         },
-        "{4af40dc3}": {
-            "{b35aa769}": 58.0,
-            "__type": "{ce9b917b}"
+        "baseDamageModifiable": {
+            "baseValue": 58.0,
+            "__type": "ModifiableFloat"
         },
-        "{e2b5d80d}": {
-            "{b35aa769}": 3.299999952316284,
-            "__type": "{ce9b917b}"
+        "damagePerLevelModifiable": {
+            "baseValue": 3.299999952316284,
+            "__type": "ModifiableFloat"
         },
-        "{ea6100d5}": {
-            "{b35aa769}": 21.0,
-            "__type": "{ce9b917b}"
+        "baseArmorModifiable": {
+            "baseValue": 21.0,
+            "__type": "ModifiableFloat"
         },
-        "{18956a21}": {
-            "{b35aa769}": 4.699999809265137,
-            "__type": "{ce9b917b}"
+        "armorPerLevelModifiable": {
+            "baseValue": 4.699999809265137,
+            "__type": "ModifiableFloat"
         },
-        "{33c0bf27}": {
-            "{b35aa769}": 30.0,
-            "__type": "{ce9b917b}"
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
         },
         "{01262a25}": {
-            "{b35aa769}": 1.2999999523162842,
-            "__type": "{ce9b917b}"
+            "baseValue": 1.2999999523162842,
+            "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
-        "{e62d9d92}": {
-            "{b35aa769}": 340.0,
-            "__type": "{ce9b917b}"
+        "baseMoveSpeedModifiable": {
+            "baseValue": 340.0,
+            "__type": "ModifiableFloat"
         },
-        "{7bd4b298}": {
-            "{b35aa769}": 550.0,
-            "__type": "{ce9b917b}"
+        "attackRangeModifiable": {
+            "baseValue": 550.0,
+            "__type": "ModifiableFloat"
         },
-        "{836cc82a}": {
-            "{b35aa769}": 0.6579999923706055,
-            "__type": "{ce9b917b}"
+        "attackSpeedModifiable": {
+            "baseValue": 0.6579999923706055,
+            "__type": "ModifiableFloat"
         },
-        "{4f89c991}": {
-            "{b35aa769}": 0.625,
-            "__type": "{ce9b917b}"
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
         },
-        "{b9f2b365}": {
-            "{b35aa769}": 2.5,
-            "__type": "{ce9b917b}"
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.5,
+            "__type": "ModifiableFloat"
         },
         "mAdaptiveForceToAbilityPowerWeight": 1.0,
         "acquisitionRange": 550.0,
