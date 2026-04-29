@@ -10,7 +10,6 @@
         "Button2Definition": "ClientStates/LoLCommon/UX/Options/UIBase/Options/Options_Button2_Def",
         "Tabs": [
             "{e82739cc}",
-            "{03f7c297}",
             "{68f73c4b}",
             "{a8b01587}",
             "{98607cc3}",
@@ -5196,7 +5195,13 @@
                                     },
                                     {
                                         "Filter": {
-                                            "__type": "{d4737a04}"
+                                            "ShowInLolReplay": false,
+                                            "ShowInTftGame": false,
+                                            "ShowInTftReplay": false,
+                                            "ShowInTftPregame": false,
+                                            "{64bc3430}": false,
+                                            "{047600fd}": false,
+                                            "__type": "OptionItemFilter_GameStyle"
                                         },
                                         "template": "{98fedb7a}",
                                         "{349ad6a6}": true,
@@ -6067,11 +6072,6 @@
                                                     {
                                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Display_ShowHealthBars",
                                                         "EventName": "[WASD]ShowHealthBars",
-                                                        "__type": "OptionItemSecondaryHotkeys1Column_Row"
-                                                    },
-                                                    {
-                                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Display_ToggleMinionHealthBars",
-                                                        "EventName": "[WASD]ToggleMinionHealthBars",
                                                         "__type": "OptionItemSecondaryHotkeys1Column_Row"
                                                     },
                                                     {
@@ -8200,16 +8200,6 @@
                                     {
                                         "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Display_ShowHealthBars",
                                         "EventName": "[GameEvents]evtShowHealthBars",
-                                        "__type": "OptionItemSecondaryHotkeys2Column_Row"
-                                    },
-                                    {
-                                        "LabelTraKey": "Options_Hotkeys_AdditionalHotkeys_Display_ToggleMinionHealthBars",
-                                        "EventName": "[GameEvents]evtToggleMinionHealthBars",
-                                        "Filter": {
-                                            "ShowInTftGame": false,
-                                            "ShowInTftReplay": false,
-                                            "__type": "OptionItemFilter_GameStyle"
-                                        },
                                         "__type": "OptionItemSecondaryHotkeys2Column_Row"
                                     },
                                     {

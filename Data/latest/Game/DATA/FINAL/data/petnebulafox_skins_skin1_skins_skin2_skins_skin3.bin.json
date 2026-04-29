@@ -9,12 +9,12 @@
             },
             {
                 "TextureName": "_LayerTex02",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "_LayerTex03",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -24,17 +24,17 @@
             },
             {
                 "TextureName": "_NoiseTex01",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "_NoiseTex02",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "_NoiseTex03",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -45,39 +45,33 @@
         ],
         "paramValues": [
             {
-                "name": "WorldPosInfluenceFactor",
+                "name": "BloomColor",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "DissolveInfo",
+                "name": "BloomIntensity",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "DepthPullPush",
+                "name": "BloomThreshold",
                 "value": [
                     1.0,
-                    0.0,
-                    0.0,
+                    1.0,
+                    1.0,
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "MatcapNormalScale",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
+                "name": "BloomWeight",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "EmissiveFactor",
+                "name": "BoneInfo",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "DeformColor02",
+                "name": "DeformColor01",
                 "value": [
                     0.501960813999176,
                     0.501960813999176,
@@ -87,7 +81,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "DeformColor01",
+                "name": "DeformColor02",
                 "value": [
                     0.501960813999176,
                     0.501960813999176,
@@ -107,11 +101,7 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "MatcapType",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "LayerUVInfo01",
+                "name": "DeformUVInfo",
                 "value": [
                     1.0,
                     1.0,
@@ -121,7 +111,51 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "LayerUVType01",
+                "name": "DeformUVType",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DepthPullPush",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveInfo",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "EmissiveFactor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LayerBlendMode01",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LayerBlendMode02",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LayerBlendMode03",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LayerMultiFactor02",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LayerMultiFactor03",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -135,14 +169,42 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "LayerTint02",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LayerTint03",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "LayerUVFactor01",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "LayerBlendMode01",
+                "name": "LayerUVFactor02",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LayerUVFactor03",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LayerUVInfo01",
                 "value": [
                     1.0,
-                    0.0,
+                    1.0,
                     0.0,
                     0.0
                 ],
@@ -159,32 +221,6 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "LayerUVType02",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "LayerTint02",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "LayerUVFactor02",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "LayerBlendMode02",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "LayerMultiFactor02",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
                 "name": "LayerUVInfo03",
                 "value": [
                     1.0,
@@ -195,29 +231,29 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "LayerUVType01",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LayerUVType02",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "LayerUVType03",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "LayerTint03",
+                "name": "MatcapNormalScale",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "LayerUVFactor03",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "LayerBlendMode03",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "LayerMultiFactor03",
+                "name": "MatcapType",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -231,10 +267,6 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "NoiseUVType01",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
                 "name": "NoiseUVInfo02",
                 "value": [
                     1.0,
@@ -242,10 +274,6 @@
                     0.0,
                     0.0
                 ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "NoiseUVType02",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
@@ -259,39 +287,25 @@
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
+                "name": "NoiseUVType01",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseUVType02",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "NoiseUVType03",
                 "__type": "StaticMaterialShaderParamDef"
             },
             {
-                "name": "BloomColor",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BloomThreshold",
-                "value": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BloomIntensity",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BloomWeight",
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "BoneInfo",
+                "name": "WorldPosInfluenceFactor",
                 "__type": "StaticMaterialShaderParamDef"
             }
         ],
         "switches": [
             {
-                "name": "USING_CUSTOM_MOVEMENT_DIRECTION",
+                "name": "AFFECTED_BY_VERTEX_COLOR",
                 "on": false,
                 "Group": "Deform",
                 "__type": "StaticMaterialSwitchDef"
@@ -300,12 +314,6 @@
                 "name": "ENABLE_DISSOLVE",
                 "on": false,
                 "Group": "Noise03",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USING_VERTEX_COLOR",
-                "on": false,
-                "Group": "Deform",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -320,9 +328,21 @@
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "USING_LAYER_TWO",
+                "name": "USING_ALPHA_CLIP",
                 "on": false,
-                "Group": "Layer02",
+                "Group": "Global",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USING_BLOOM",
+                "on": false,
+                "Group": "Bloom",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USING_CUSTOM_MOVEMENT_DIRECTION",
+                "on": false,
+                "Group": "Deform",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -332,15 +352,15 @@
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "USING_NOISE_ONE",
+                "name": "USING_LAYER_TWO",
                 "on": false,
-                "Group": "Noise01",
+                "Group": "Layer02",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "USING_NOISE_TWO",
+                "name": "USING_NOISE_ONE",
                 "on": false,
-                "Group": "Noise02",
+                "Group": "Noise01",
                 "__type": "StaticMaterialSwitchDef"
             },
             {
@@ -350,14 +370,21 @@
                 "__type": "StaticMaterialSwitchDef"
             },
             {
-                "name": "USING_BLOOM",
+                "name": "USING_NOISE_TWO",
                 "on": false,
-                "Group": "Bloom",
+                "Group": "Noise02",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USING_VERTEX_COLOR",
+                "on": false,
+                "Group": "Deform",
                 "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
+            "NUM_BLEND_WEIGHTS": "4",
+            "SKINNED_MATERIAL_ADDITIVE": "1"
         },
         "techniques": [
             {
@@ -370,7 +397,7 @@
                         "stencilReferenceVal": 90,
                         "stencilMask": 255,
                         "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
                         "dstAlphaBlendFactor": 7,
                         "windingToCull": 0,
                         "writeMask": 7,

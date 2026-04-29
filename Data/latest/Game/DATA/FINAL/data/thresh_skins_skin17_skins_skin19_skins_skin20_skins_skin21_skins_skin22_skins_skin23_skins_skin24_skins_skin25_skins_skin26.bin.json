@@ -6482,7 +6482,7 @@
                     -1.0,
                     -1.0
                 ],
-                "texture": "ASSETS/Shared/Particles/white_RGB.StrawberryRebuild.tex",
+                "texture": "ASSETS/Shared/Particles/white_RGB.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -23517,7 +23517,7 @@
                 ],
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
-                "texture": "ASSETS/Shared/Particles/white_RGB.StrawberryRebuild.tex",
+                "texture": "ASSETS/Shared/Particles/white_RGB.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -41163,7 +41163,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/white_RGB.StrawberryRebuild.tex",
+                "texture": "ASSETS/Shared/Particles/white_RGB.tex",
                 "uvScale": {
                     "dynamics": {
                         "times": [
@@ -44671,7 +44671,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/white_RGB.StrawberryRebuild.tex",
+                "texture": "ASSETS/Shared/Particles/white_RGB.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -66886,7 +66886,7 @@
                     -1.0,
                     -1.0
                 ],
-                "texture": "ASSETS/Shared/Particles/white_RGB.StrawberryRebuild.tex",
+                "texture": "ASSETS/Shared/Particles/white_RGB.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -67351,12 +67351,12 @@
         "samplerValues": [
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "MatCap_Mask",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -67367,13 +67367,13 @@
             },
             {
                 "TextureName": "Main_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "OutlineMask_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.SKINS_Lissandra_Skin43.tex",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "addressW": 2,
@@ -68160,7 +68160,10 @@
                             "mSpectatorEventName": "Laugh3DGeneral",
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mOverrideCacCooldown": true,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
                         "__type": "ContextualRule"
                     }
                 ],
