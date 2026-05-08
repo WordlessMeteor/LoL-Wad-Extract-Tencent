@@ -758,7 +758,7 @@ def main():
     extract_dir_pbe_default: str = "D:/Workspace/LoL-Wad-Extract-Tencent/pbe"
     convert_dir_pbe_default: str = "D:/Workspace/LoL-Wad-Extract-Tencent/pbe-text"
     target_dir_pbe_default: str = os.path.expanduser("~/Documents/GitHub/LoL-Wad-Extract-Tencent/Data/pbe").replace("\\", "/")
-    behavior_str: str = "请选择行为：\nPlease select a behavior:\n0\t退出程序（Exit the program）\n1\t提取和转换正式服的所有文本文件（Extract and convert text files from latest game data）\n2\t提取和转换测试服的所有文本文件（Extract and convert text files from pbe game data）\n3\t分步执行（Execute stepwise）"
+    behavior_str: str = "请选择行为：\nPlease select a behavior:\n0\t退出程序（Exit the program）\n1\t提取和转换正式服的所有文本文件（Extract and convert text files from latest game data）\n2\t提取和转换体验服的所有文本文件（Extract and convert text files from pbe game data）\n3\t分步执行（Execute stepwise）"
     logPrint(behavior_str)
     while True:
         mode = logInput()
