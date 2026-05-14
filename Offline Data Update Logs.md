@@ -404,7 +404,16 @@
 			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
-					<li>PBE: 16.9.772.3889 -> 16.10.775.5890</li>
+					<li>Latest: 16.9.772.3889 -> 16.10.775.5890</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-05-14 21-42-19</td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>Latest: 16.10.775.5890 -> 16.10.776.5552</li>
 				</ul>
 			</td>
 		</tr>
