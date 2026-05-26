@@ -543,7 +543,7 @@ def format_text_files(convert_dir: Optional[str] = None, target_dir: Optional[st
         index_str: str = "[%d/%d]" %(i + 1, len(textfiles_to_convert))
         logPrint("%s | 正在校对文件（Checking）： %s\t%s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(src_size), src_date, srcpath), print_time = True)
         #第二阶段涉及较为复杂的格式化操作（Phase 2 involves more complex formatting operations）
-        encodings = ["utf-8", "ansi"]
+        encodings = ["utf-8", "gbk", "ansi"]
         for i in range(len(encodings)):
             encoding = encodings[i]
             try:
