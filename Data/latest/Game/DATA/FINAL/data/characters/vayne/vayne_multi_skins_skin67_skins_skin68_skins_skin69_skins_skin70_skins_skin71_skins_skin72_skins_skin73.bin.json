@@ -34595,6 +34595,28 @@
             "KillChampion": {
                 "mRules": [
                     {
+                        "mRuleName": "Penta",
+                        "mConditions": [
+                            {
+                                "mMultikillSize": 5,
+                                "__type": "ContextualConditionMultikillSize"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DPenta",
+                            "mAllyEventName": "Kill3DPenta",
+                            "mEnemyEventName": "Kill3DPenta",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
                         "mRuleName": "Kill3DAnnie",
                         "mConditions": [
                             {
@@ -34929,28 +34951,6 @@
                             "__type": "ContextualActionPlayVO"
                         },
                         "mPriority": 30,
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "Penta",
-                        "mConditions": [
-                            {
-                                "mMultikillSize": 5,
-                                "__type": "ContextualConditionMultikillSize"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Kill3DPenta",
-                            "mAllyEventName": "Kill3DPenta",
-                            "mEnemyEventName": "Kill3DPenta",
-                            "mWaitForAnnouncerQueue": true,
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "mPriority": 200,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"
@@ -35486,9 +35486,9 @@
                             "mSpectatorEventName": "cast3D",
                             "__type": "ContextualActionPlayVO"
                         },
+                        "mPriority": -5,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
-                            "DontResetTimer": true,
                             "__type": "ContextualActionCooldownModifications"
                         },
                         "__type": "ContextualRule"
@@ -35638,17 +35638,6 @@
                             "__type": "ContextualActionCooldownModifications"
                         },
                         "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "E Empowered (switch on)",
-                        "mAudioAction": {
-                            "mSelfEventName": "EmpoweredStart",
-                            "mAllyEventName": "EmpoweredStart",
-                            "mEnemyEventName": "EmpoweredStart",
-                            "mSpectatorEventName": "EmpoweredStart",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "__type": "ContextualRule"
                     }
                 ],
                 "__type": "ContextualSituation"
@@ -35656,7 +35645,7 @@
             "SpellBuffReceive": {
                 "mRules": [
                     {
-                        "mRuleName": "E Empowered (switch on)",
+                        "mRuleName": "Spell3DRStart",
                         "mConditions": [
                             {
                                 "SpellBuff": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
@@ -35679,7 +35668,7 @@
             "SpellBuffRemove": {
                 "mRules": [
                     {
-                        "mRuleName": "E Empowered (switch off)",
+                        "mRuleName": "Spell3DREnd",
                         "mConditions": [
                             {
                                 "SpellBuff": "Characters/Vayne/Spells/VayneInquisitionAbility/VayneInquisition",
@@ -35687,10 +35676,10 @@
                             }
                         ],
                         "mAudioAction": {
-                            "mSelfEventName": "EmpoweredEnd",
-                            "mAllyEventName": "EmpoweredEnd",
-                            "mEnemyEventName": "EmpoweredEnd",
-                            "mSpectatorEventName": "EmpoweredEnd",
+                            "mSelfEventName": "VayneInquisition_EmpoweredEnd",
+                            "mAllyEventName": "VayneInquisition_EmpoweredEnd",
+                            "mEnemyEventName": "VayneInquisition_EmpoweredEnd",
+                            "mSpectatorEventName": "VayneInquisition_EmpoweredEnd",
                             "__type": "ContextualActionPlayVO"
                         },
                         "{20749c51}": false,

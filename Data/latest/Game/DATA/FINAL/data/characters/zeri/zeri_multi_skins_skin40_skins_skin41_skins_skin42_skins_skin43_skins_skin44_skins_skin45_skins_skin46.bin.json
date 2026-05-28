@@ -174275,6 +174275,7 @@
                             "mSpectatorEventName": "cast3D",
                             "__type": "ContextualActionPlayVO"
                         },
+                        "mPriority": 100,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"
@@ -175084,35 +175085,6 @@
                 ],
                 "__type": "ContextualSituation"
             },
-            "SpellLevelUp": {
-                "mRules": [
-                    {
-                        "mRuleName": "Activate Spell - R",
-                        "mConditions": [
-                            {
-                                "mSpellSlot": 3,
-                                "__type": "ContextualConditionSpellSlot"
-                            },
-                            {
-                                "mSpellLevel": 1,
-                                "__type": "ContextualConditionSpellLevel"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mMaxOccurences": 1,
-                            "mSelfEventName": "Spell3DRActivate",
-                            "mAllyEventName": "Spell3DRActivate",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    }
-                ],
-                "__type": "ContextualSituation"
-            },
             "BuyItem": {
                 "mRules": [
                     {
@@ -175331,6 +175303,58 @@
                         "mAudioAction": {
                             "mSelfEventName": "Receive3DBuff",
                             "mAllyEventName": "Receive3DBuff",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellBuffReceive": {
+                "mRules": [
+                    {
+                        "mRuleName": "Passive Ready",
+                        "mConditions": [
+                            {
+                                "SpellBuff": "Characters/Zeri/Spells/ZeriQAbility/ZeriQPassiveReady",
+                                "__type": "ContextualConditionSpellBuffName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DPReady",
+                            "mAllyEventName": "Spell3DPReady",
+                            "mEnemyEventName": "Spell3DPReady",
+                            "mSpectatorEventName": "Spell3DPReady",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellBuffRemove": {
+                "mRules": [
+                    {
+                        "mRuleName": "R End",
+                        "mConditions": [
+                            {
+                                "SpellBuff": "Characters/Zeri/Spells/ZeriRAbility/ZeriR",
+                                "__type": "ContextualConditionSpellBuffName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DREnd",
+                            "mAllyEventName": "Spell3DREnd",
+                            "mEnemyEventName": "Spell3DREnd",
+                            "mSpectatorEventName": "Spell3DREnd",
                             "__type": "ContextualActionPlayVO"
                         },
                         "CooldownModifications": {

@@ -5,10 +5,10 @@
         "LoginData": {
             "Scene": "Patching/UX/RiotUI/Login/UIBase/LoginScene",
             "StatusText": "Patching/UX/RiotUI/Login/UIBase/LoginScene/Login_Status",
-            "DefaultLogo": "Patching/UX/RiotUI/Login/UIBase/BackgroundScene/TFTLogo",
+            "DefaultLogo": "Patching/UX/RiotUI/LoginBG/UIBase/BackgroundScene/TFTLogo",
             "RegionalLogoMapping": {
-                "0": "Patching/UX/RiotUI/Login/UIBase/BackgroundScene/TFTLogo_VN",
-                "1": "Patching/UX/RiotUI/Login/UIBase/BackgroundScene/TFTLogo_TW"
+                "0": "Patching/UX/RiotUI/LoginBG/UIBase/BackgroundScene/TFTLogo_VN",
+                "1": "Patching/UX/RiotUI/LoginBG/UIBase/BackgroundScene/TFTLogo_TW"
             },
             "__type": "TftMobileLoginData"
         },
@@ -69,6 +69,7 @@
         "{65643564}": "Patching/UX/RiotUI/Login/UIBase/LoginScene/LoginProviderGuestAccountButton",
         "{95c2d7cf}": "Patching/UX/RiotUI/Login/UIBase/LoginScene/LoginProviderGuestSignInButton",
         "{ff4ab060}": "Patching/UX/RiotUI/Login/UIBase/LoginScene/LoginGuestAccountMessage",
+        "{1a0d8988}": "Patching/UX/RiotUI/LoginBG",
         "__type": "LoginViewController"
     },
     "Patching/UX/RiotUI/Login/UIBase": {
@@ -130,6 +131,15 @@
         "{b96dbb63}": "{402ebf4a}",
         "{3cbd727a}": "{e2032ff2}",
         "__type": "PatchingViewController"
+    },
+    "Patching/UX/RiotUI/LoginBG": {
+        "PathHashToSelf": "{96feb16b9104b22c}",
+        "BaseLoadable": "Patching/UX/RiotUI/LoginBG/UIBase",
+        "__type": "ViewController"
+    },
+    "Patching/UX/RiotUI/LoginBG/UIBase": {
+        "FilepathHash": "patching/ux/riotui/loginbg/uibase",
+        "__type": "UiPropertyLoadable"
     },
     "Patching/UX/RiotUI/PatchingModalShroud": {
         "PathHashToSelf": "{4c866214093ce2ee}",
