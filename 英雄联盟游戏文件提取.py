@@ -597,8 +597,11 @@ def format_text_files(convert_dir: Optional[str] = None, target_dir: Optional[st
         else:
             src = text.replace("\r", "")
         if os.path.exists(dstpath):
-            with open(dstpath, "r", encoding = "utf-8") as fp: #因为下面保存文件时用的是utf-8编码，所以这里只需要用utf-8编码即可（Because in the following files are saved with "utf-8" encoding, here we only need to open with "utf-8" encoding）
-                dst = fp.read()
+            try:
+                with open(dstpath, "r", encoding = "utf-8") as fp: #因为下面保存文件时用的是utf-8编码，所以这里只需要用utf-8编码即可（Because in the following files are saved with "utf-8" encoding, here we only need to open with "utf-8" encoding）
+                    dst = fp.read()
+            except UnicodeDecodeError: #有可能在切换设备后，新设备提取的文件是符合UTF-8编码的，但是旧设备上传到GitHub上的文件是因为未能成功用UTF-8解码而直接复制文件的（Chances are that after switching to a new device, the files extracted by the new device are decodable with UTF-8 encoding, but the files uploaded to GitHub from the old device are directly copied because they fail to be decoded with UTF-8 encoding successfully）
+                dst = ""
         else:
             dst = None
         if src != dst:
@@ -607,10 +610,13 @@ def format_text_files(convert_dir: Optional[str] = None, target_dir: Optional[st
                 fp.write(src)
             if dst == None:
                 added_files.append(srcpath)
-                # logPrint("%s | 已添加文件（Added file）：   %s → %s\t%s → %s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(dst_size), "{0:<12}".format(src_size), dst_date, src_date, srcpath), print_time = True)
+                # logPrint("%s | 已添加文件（Added file）：        %s → %s\t%s → %s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(dst_size), "{0:<12}".format(src_size), dst_date, src_date, srcpath), print_time = True)
+            elif dst == "":
+                updated_files.append(srcpath)
+                # logPrint("%s | 已重编码文件（Re-encoded file）： %s → %s\t%s → %s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(dst_size), "{0:<12}".format(src_size), dst_date, src_date, srcpath), print_time = True)
             else:
                 updated_files.append(srcpath)
-                # logPrint("%s | 已更新文件（Updated file）： %s → %s\t%s → %s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(dst_size), "{0:<12}".format(src_size), dst_date, src_date, srcpath), print_time = True)
+                # logPrint("%s | 已更新文件（Updated file）：      %s → %s\t%s → %s\t%s" %("{0:<{1}}".format(index_str, max_index_width), "{0:<12}".format(dst_size), "{0:<12}".format(src_size), dst_date, src_date, srcpath), print_time = True)
         file_size: int = os.path.getsize(dstpath)
         if ext == ".json" and file_size > 80 * 1024 * 1024: #当本地的json文件大小大于80 MB时，对文件按照对象类型进行拆分，以便Git比对文件变化（When the local file is larger than 80 MiB, split the file into different object types, so that Git can compare the file change）
             src_data: dict[str, Any] = json.loads(src)
