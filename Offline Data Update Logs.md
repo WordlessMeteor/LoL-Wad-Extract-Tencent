@@ -453,5 +453,15 @@
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-06-02 12-39-45</td>
+			<td style="text-align:center;">1</td>
+			<td>Within-patch change</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-06-02 13-56-09</td>
+			<td style="text-align:center;">2</td>
+			<td>Data checking and hash resolve</td>
+		</tr>
 	</tbody>
 </table>
