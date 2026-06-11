@@ -1891,8 +1891,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -2094,8 +2093,7 @@
                 "colorLookUpTypeY": 1,
                 "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -2259,8 +2257,7 @@
                 "miscRenderFlags": 1,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -2518,8 +2515,7 @@
                 },
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -2763,8 +2759,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -3035,8 +3030,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -3271,8 +3265,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -3543,8 +3536,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -3815,8 +3807,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -4071,8 +4062,7 @@
                 },
                 "meshRenderFlags": 0,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthScale0": {
                     "constantValue": [
                         700.0,
@@ -4161,7 +4151,8 @@
                     -80.0
                 ],
                 "disableBackfaceCull": true,
-                "isGroundLayer": 1,
+                "miscRenderFlags": 1,
+                "isFollowingTerrain": 1,
                 "birthScale0": {
                     "constantValue": [
                         12.600000381469727,
@@ -8107,253 +8098,6 @@
                 "__type": "VfxEmitterDefinitionData"
             },
             {
-                "timeBeforeFirstEmission": 0.05999999865889549,
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 1.5,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 0.30000001192092896,
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "GroundDecal",
-                "disabled": true,
-                "primitive": {
-                    "__type": "VfxPrimitiveArbitraryQuad"
-                },
-                "blendMode": 1,
-                "Color": {
-                    "constantValue": [
-                        0.10000763088464737,
-                        0.08999770879745483,
-                        0.06999313086271286,
-                        0.6299992203712463
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.10000763088464737,
-                                0.08999770879745483,
-                                0.06999313086271286,
-                                0.6299992203712463
-                            ],
-                            [
-                                0.10000763088464737,
-                                0.08999770879745483,
-                                0.06999313086271286,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": -500,
-                "colorLookUpTypeY": 3,
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        90.0,
-                        -90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        500.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Diana/Skins/Base/Particles/Diana_Base_R_GroundDecal.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.20000000298023224,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 0.30000001192092896,
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "GroundDecal1",
-                "disabled": true,
-                "primitive": {
-                    "__type": "VfxPrimitiveArbitraryQuad"
-                },
-                "blendMode": 4,
-                "Color": {
-                    "constantValue": [
-                        0.6627451181411743,
-                        0.8117647171020508,
-                        1.0,
-                        1.0
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.6627451181411743,
-                                0.8117647171020508,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.6627451181411743,
-                                0.8117647171020508,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": -500,
-                "colorLookUpTypeY": 3,
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        90.0,
-                        -90.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        500.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Diana/Skins/Base/Particles/Diana_Base_R_GroundDecal.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.15000000596046448,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 0.30000001192092896,
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "SnowFlash12",
-                "disabled": true,
-                "EmitterPosition": {
-                    "constantValue": [
-                        0.0,
-                        100.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "blendMode": 4,
-                "Color": {
-                    "constantValue": [
-                        0.42352941632270813,
-                        0.5764706134796143,
-                        1.0,
-                        0.8705882430076599
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.42352941632270813,
-                                0.5764706134796143,
-                                1.0,
-                                0.8705882430076599
-                            ],
-                            [
-                                0.42352941632270813,
-                                0.5764706134796143,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "colorLookUpTypeY": 3,
-                "alphaErosionDefinition": {
-                    "erosionDriveCurve": {
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                1.0
-                            ],
-                            "values": [
-                                0.0,
-                                1.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "erosionMapName": "ASSETS/Characters/Diana/Skins/Base/Particles/silver-ring.tex",
-                    "erosionMapChannelMixer": {
-                        "constantValue": [
-                            1.0,
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "__type": "ValueColor"
-                    },
-                    "__type": "VfxAlphaErosionDefinitionData"
-                },
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        90.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        550.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Diana/Skins/Base/Particles/Diana_Base_Z_Circle.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
                 "rate": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -8909,8 +8653,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -9112,8 +8855,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -9279,8 +9021,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -9482,8 +9223,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -9685,8 +9425,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -9872,8 +9611,7 @@
                     "__type": "ValueColor"
                 },
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -10076,8 +9814,7 @@
                 },
                 "pass": -50,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -10280,8 +10017,7 @@
                 },
                 "pass": -50,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -10448,8 +10184,7 @@
                 },
                 "pass": -50,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -10652,8 +10387,7 @@
                 },
                 "pass": -50,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -10856,8 +10590,7 @@
                 },
                 "pass": -50,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -11044,8 +10777,7 @@
                 },
                 "pass": -50,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
