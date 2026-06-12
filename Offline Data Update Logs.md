@@ -481,5 +481,19 @@
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-06-11 18-43-15</td>
+			<td style="text-align:center;">1</td>
+			<td>No changes</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-06-12 17-16-51</td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>Latest: 16.12.785.9634 -> 16.12.786.9700</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
