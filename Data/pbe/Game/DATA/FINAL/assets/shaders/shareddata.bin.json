@@ -9,7 +9,6 @@
             "{d8907437}",
             "{cb07a94b}",
             "{b2db15bc}",
-            "{b4d758b6}",
             "{6ab0703d}",
             "{6500c3ef}",
             "{75055a4d}",
@@ -288,7 +287,19 @@
             "{b40cd67c}",
             "{51bfd9ae}",
             "{a7d7f4a0}",
-            "{0df3cfcb}"
+            "{0df3cfcb}",
+            "{4826710d}",
+            "{3359c942}",
+            "{14725299}"
+        ],
+        "{08f782f8}": [
+            {
+                "name": "LightRegionInfo",
+                "{a1d375b5}": 2,
+                "{52fc6665}": 14,
+                "{9d17b3be}": "{f15a89f3}",
+                "__type": "{4bcf438a}"
+            }
         ],
         "__type": "X3DSharedData"
     },
@@ -307,10 +318,6 @@
     "{21026ca5}": {
         "objectPath": "{21026ca5}",
         "__type": "{c94926c6}"
-    },
-    "{33ed59d6}": {
-        "objectPath": "{33ed59d6}",
-        "__type": "EnvironmentUnlitShadingModel"
     },
     "{3c6ecc43}": {
         "objectPath": "{3c6ecc43}",
@@ -352,12 +359,33 @@
         "objectPath": "{c63393ed}",
         "__type": "EnvironmentPbrShadingModel"
     },
+    "{e3f0ccbe}": {
+        "objectPath": "{e3f0ccbe}",
+        "__type": "EnvironmentUnlitShadingModel"
+    },
     "{fefebb19}": {
         "objectPath": "{fefebb19}",
         "__type": "SkinnedPbrShadingModel"
     },
     "{0df3cfcb}": {
         "name": "CharacterClamp",
+        "{b6887851}": 4,
+        "__type": "{429c75be}"
+    },
+    "{14725299}": {
+        "name": "Clamp_Linear_Mip",
+        "__type": "{429c75be}"
+    },
+    "{3359c942}": {
+        "name": "EnvironmentWrap",
+        "{82ab734b}": 0,
+        "{83ab74de}": 0,
+        "{84ab7671}": 0,
+        "{b6887851}": 4,
+        "__type": "{429c75be}"
+    },
+    "{4826710d}": {
+        "name": "EnvironmentClamp",
         "{b6887851}": 4,
         "__type": "{429c75be}"
     },
@@ -420,7 +448,7 @@
                 "__type": "X3DSharedConstantDef"
             },
             {
-                "name": "SHADOW_PROJECTION_MATRIX",
+                "name": "mShadowProj",
                 "type": 9,
                 "__type": "X3DSharedConstantDef"
             },
@@ -474,6 +502,19 @@
                 "name": "GLOBAL_ENVIRONMENT_VALUES",
                 "type": 3,
                 "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "SUN_LIGHT_DIRECTION",
+                "type": 2,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "NORMAL_OFFSET_BIAS",
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "DRAGON_TERRAIN",
+                "__type": "X3DSharedConstantDef"
             }
         ],
         "__type": "X3DSharedConstantBufferDef"
@@ -496,22 +537,14 @@
         "type": 1,
         "constants": [
             {
-                "name": "LightRegionInfo",
-                "type": 10,
-                "{9d17b3be}": "{f15a89f3}",
-                "Count": 20,
-                "__type": "X3DSharedConstantDef"
-            },
-            {
                 "name": "LIGHT_REGION_TEXTURE_SIZE",
                 "type": 1,
                 "__type": "X3DSharedConstantDef"
             },
             {
                 "name": "EnvEffectorInfo",
-                "type": 10,
-                "{9d17b3be}": "{b5cc9d24}",
-                "Count": 32,
+                "type": 3,
+                "Count": 128,
                 "__type": "X3DSharedConstantDef"
             },
             {
@@ -974,17 +1007,6 @@
                 "name": "TransitionPositions",
                 "type": 3,
                 "Count": 5,
-                "__type": "X3DSharedConstantDef"
-            }
-        ],
-        "__type": "X3DSharedConstantBufferDef"
-    },
-    "{b4d758b6}": {
-        "name": "ShadowPassVS",
-        "constants": [
-            {
-                "name": "mShadowProj",
-                "type": 9,
                 "__type": "X3DSharedConstantDef"
             }
         ],

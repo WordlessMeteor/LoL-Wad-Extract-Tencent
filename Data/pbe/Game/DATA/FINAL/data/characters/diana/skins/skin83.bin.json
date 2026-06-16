@@ -16879,6 +16879,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Spec_Intensity",
                 "value": [
                     1.0,
@@ -17055,6 +17095,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "MULTIPLY_DIFFUSE",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -17176,7 +17224,6 @@
             {
                 "TextureName": "FBM_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Generated_Noise.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -17185,19 +17232,16 @@
             {
                 "TextureName": "Distortion_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Noise04.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Distortion_Texture_02",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Noise04.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Gradient",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin83/Diana_Skin83_Form1Hair_Gradine_TX_CM.Chroma_Diana_EclipseEternalAspect.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -17206,7 +17250,6 @@
             {
                 "TextureName": "Screen_Space_Texture",
                 "texturePath": "ASSETS/Shared/Materials/Galaxy.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -17251,6 +17294,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha_Multiplier",
                 "value": [
@@ -17782,6 +17865,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "Group": "Screen_Space",
                 "__type": "StaticMaterialSwitchDef"
@@ -17960,6 +18051,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "SS_Scale",
                 "value": [
                     6.0,
@@ -18036,6 +18167,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_LOCAL_SPACE",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -18108,6 +18247,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "SS_Scale",
                 "value": [
@@ -18185,6 +18364,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_LOCAL_SPACE",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -18261,6 +18448,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Spec_Intensity",
                 "value": [
@@ -18432,6 +18659,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "MULTIPLY_DIFFUSE",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -18557,6 +18792,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "SS_Scale",
                 "value": [
                     4.0,
@@ -18633,6 +18908,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_LOCAL_SPACE",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -18703,7 +18986,6 @@
             {
                 "TextureName": "FBM_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Generated_Noise.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -18712,19 +18994,16 @@
             {
                 "TextureName": "Distortion_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Noise04.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Distortion_Texture_02",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Noise04.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Gradient",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin83/Diana_Skin83_Form1Hair_Gradine_TX_CM.Chroma_Diana_EclipseEternalAspect.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -18733,7 +19012,6 @@
             {
                 "TextureName": "Screen_Space_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin83/Particles/Skin83_kw.Chroma_Diana_EclipseEternalAspect.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -18778,6 +19056,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha_Multiplier",
                 "value": [
@@ -19309,6 +19627,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "Group": "Screen_Space",
                 "__type": "StaticMaterialSwitchDef"
@@ -19470,6 +19796,46 @@
         ],
         "paramValues": [
             {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Outline_Thickness",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -19505,6 +19871,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_GRADIENT_COLOR",
                 "__type": "StaticMaterialSwitchDef"
@@ -19963,7 +20337,6 @@
             {
                 "TextureName": "FBM_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Generated_Noise.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -19972,19 +20345,16 @@
             {
                 "TextureName": "Distortion_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Noise04.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Distortion_Texture_02",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Noise04.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Gradient",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin83/Diana_Skin83_Form1Hair_Gradine_TX_CM.Chroma_Diana_EclipseEternalAspect.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -19993,7 +20363,6 @@
             {
                 "TextureName": "Screen_Space_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin83/Particles/Skin83_kw.Chroma_Diana_EclipseEternalAspect.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -20038,6 +20407,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha_Multiplier",
                 "value": [
@@ -20569,6 +20978,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "Group": "Screen_Space",
                 "__type": "StaticMaterialSwitchDef"
@@ -20744,7 +21161,6 @@
             {
                 "TextureName": "FBM_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Generated_Noise.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -20753,19 +21169,16 @@
             {
                 "TextureName": "Distortion_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Noise04.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Distortion_Texture_02",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1Noise04.SKINS_Diana_Skin76.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Gradient",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin83/Diana_Skin83_Form1Hair_Gradine_TX_CM.Chroma_Diana_EclipseEternalAspect.tex",
-                "samplerName": "Clamp_No_Mip",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -20774,7 +21187,6 @@
             {
                 "TextureName": "Screen_Space_Texture",
                 "texturePath": "ASSETS/Characters/Diana/Skins/Skin83/Particles/Skin83_kw.Chroma_Diana_EclipseEternalAspect.tex",
-                "samplerName": "Wrap_No_Mip",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -20819,6 +21231,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha_Multiplier",
                 "value": [
@@ -21349,6 +21801,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "Group": "Screen_Space",

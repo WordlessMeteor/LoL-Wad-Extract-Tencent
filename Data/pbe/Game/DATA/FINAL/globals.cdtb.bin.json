@@ -19243,6 +19243,13 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{3a3bdb24}": {
+        "mExpandedMutator": "Event_MSI_2026",
+        "mMutators": [
+            "EsportsBannerViewController(1)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{3afe8d29}": {
         "mExpandedMutator": "TFT_PAIRS",
         "mMutators": [
@@ -19488,6 +19495,17 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{541b8d69}": {
+        "mExpandedMutator": "Event_MSI_2026_2",
+        "mMutators": [
+            "MSIFandomChat",
+            "EsportsNamePrefixes(1)",
+            "MSITricode(1)",
+            "MapObjectESportTeamBanners(1)",
+            "MSITrophy"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{5436f4f7}": {
         "mExpandedMutator": "Esports_Test_Rotating_Banners",
         "__type": "GameMutatorExpansions"
@@ -19544,6 +19562,14 @@
     },
     "{5803cbc6}": {
         "mExpandedMutator": "TFT_ArenaTextureStreaming",
+        "__type": "GameMutatorExpansions"
+    },
+    "{59eb07f5}": {
+        "mExpandedMutator": "Event_FST2026_PlayerFacing",
+        "mMutators": [
+            "MapSkin_Map11_Sodapop_SRS",
+            "MapObjectESportTeamBanners(1)"
+        ],
         "__type": "GameMutatorExpansions"
     },
     "{5a482ff5}": {
@@ -19776,7 +19802,7 @@
         "mExpandedMutator": "TFT_Event_5YR",
         "mMutators": [
             "TFTSetOverride(TFTSetEvent5YR)",
-            "TFT_RolesRevamped(0)",
+            "TFT_RolesRevamped(1)",
             "AudioFeature(TFTEvent5YR)"
         ],
         "__type": "GameMutatorExpansions"
@@ -20985,6 +21011,16 @@
         "mMutators": [
             "LoadingScreenTipsOverride(TipsTS_Caitlyn)",
             "LoadingScreenBackground(ASSETS/UX/LoadingScreen/Trueshot/Trueshot_Caitlyn.Trueshot.dds)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{eb1a5ab6}": {
+        "mExpandedMutator": "Event_MSI_2026_PlayerFacing",
+        "mMutators": [
+            "MSIFandomChat",
+            "EsportsNamePrefixes(1)",
+            "MSITricode(1)",
+            "MapObjectESportTeamBanners(1)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -22234,7 +22270,8 @@
             "{4f6e4712}",
             "{13ef1487}",
             "{6568dab6}",
-            "{28147ab4}",
+            "{b54c7d60}",
+            "{f6be599a}",
             "{21694807}",
             "{3896274e}",
             "{4d6b3cb0}",
@@ -22286,14 +22323,14 @@
                 "name": "Unique Per Player (Deprecated)",
                 "maxStacks": 25,
                 "StacksExclusive": true,
-                "BuffAddType": 2,
+                "BuffAddType": 3,
                 "__type": "BuffStackingTemplate"
             },
             {
                 "name": "Unique Per Player",
                 "maxStacks": 100,
                 "StacksExclusive": true,
-                "BuffAddType": 4,
+                "BuffAddType": 6,
                 "__type": "BuffStackingTemplate"
             }
         ],
@@ -23369,6 +23406,7 @@
         "{32cd2d78}": [
             "{18999027}",
             "{eec24eaf}",
+            "{4476a513}",
             "{9a270666}",
             "{232429d3}",
             "{304f7fb5}",
@@ -23381,8 +23419,8 @@
             "{5c15ec98}",
             "{c087bac9}",
             "{7adb50f4}",
-            "{d75529b5}",
-            "{459c09ea}"
+            "{459c09ea}",
+            "{e6aee944}"
         ],
         "{77ef3aa7}": [
             "{756016fb}",
@@ -23390,7 +23428,8 @@
             "{838b088a}",
             "{a171d834}",
             "{3ca9c8f9}",
-            "{ee148ab2}"
+            "{ee148ab2}",
+            "{df0cf05b}"
         ],
         "__type": "DeathEventPriority"
     },
@@ -23422,13 +23461,14 @@
             "{51601c15}": true,
             "{e2213221}": false,
             "{2094dd6e}": true,
+            "{da5b6e04}": true,
             "{724bed8c}": true,
             "{7aacbbbc}": true,
-            "{90ede9a7}": true,
             "{4ed93bd7}": true,
             "{2da5d839}": true,
             "{067b280d}": true,
             "{80e296cb}": true,
+            "{a038e9b0}": false,
             "__type": "LoLFeatureToggles"
         },
         "mGameplayToggles": {
@@ -24119,6 +24159,10 @@
         "mElasticLockAcceleration": 4.0,
         "__type": "CameraConfig"
     },
+    "{afe6e150}": {
+        "FilepathHash": "{40db8bf813b6ffef}",
+        "__type": "BinFileContainer"
+    },
     "{be5db4cb}": {
         "mSemiLockTrapezoid": {
             "mMaxZDown": 400.0,
@@ -24145,6 +24189,9 @@
         },
         "mElasticLockAcceleration": 4.0,
         "__type": "CameraConfig"
+    },
+    "{c727cc6d}": {
+        "__type": "{f7c4193e}"
     },
     "Globals/DamageSourceSettings": {
         "damageTagDefinition": [

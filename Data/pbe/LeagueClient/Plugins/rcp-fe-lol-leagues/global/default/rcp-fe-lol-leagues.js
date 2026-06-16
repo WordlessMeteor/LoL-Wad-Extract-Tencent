@@ -152,11 +152,16 @@
                     tra: s,
                     ComponentFactory: e,
                     NotificationsRootComponent: n(112),
-                    SeasonStartModalComponent: n(114),
+                    SeasonStartModalComponent: n(115),
                     SplitNotificationsComponent: n(117),
                     EosNotificationsComponent: n(120),
                     SeasonMemorialModalComponent: n(123).default,
                     LeaguesDialogsComponent: n(126)
+                }), t.setFactoryDefinition({
+                    name: "RankedFtuxModalComponent",
+                    tra: s,
+                    ComponentFactory: e,
+                    RankedFtuxModalComponent: n(129).default
                 })
             };
             var s, a = (s = n(1)) && s.__esModule ? s : {
@@ -195,60 +200,59 @@
                 })(e)
             }
             const c = 864e5,
-                u = 36e5;
-            let d = i.SUMMONER_QUEUE_ORDER;
-            const m = (0, s.emberDataBinding)({
-                Ember: s.Ember,
-                websocket: (0, s.getProvider)().getSocket(),
-                basePaths: {
-                    summoner: "/lol-summoner",
-                    ranked: "/lol-ranked",
-                    chat: "/lol-chat",
-                    honor: "/lol-honor-v2",
-                    gameData: "/lol-game-data",
-                    riotClient: "/riotclient"
-                },
-                boundProperties: {
-                    summonerReady: {
-                        api: "summoner",
-                        path: "/v1/summoner-requests-ready"
+                u = 36e5,
+                d = (0, s.emberDataBinding)({
+                    Ember: s.Ember,
+                    websocket: (0, s.getProvider)().getSocket(),
+                    basePaths: {
+                        summoner: "/lol-summoner",
+                        ranked: "/lol-ranked",
+                        chat: "/lol-chat",
+                        honor: "/lol-honor-v2",
+                        gameData: "/lol-game-data",
+                        riotClient: "/riotclient"
                     },
-                    currentSummoner: {
-                        api: "summoner",
-                        path: "/v1/current-summoner"
-                    },
-                    myRankedStats: {
-                        api: "ranked",
-                        path: "/v1/current-ranked-stats"
-                    },
-                    honorProfile: {
-                        api: "honor",
-                        path: "/v1/profile"
-                    },
-                    challengerLaddersEnabled: {
-                        api: "ranked",
-                        path: "/v1/challenger-ladders-enabled"
-                    },
-                    topRatedLaddersEnabled: {
-                        api: "ranked",
-                        path: "/v1/top-rated-ladders-enabled"
-                    },
-                    uxSettings: "/lol-settings/v2/local/lol-user-experience",
-                    tftSets: {
-                        api: "gameData",
-                        path: "/assets/v1/tftsets.json"
-                    },
-                    regionLocale: {
-                        api: "riotClient",
-                        path: "/region-locale"
+                    boundProperties: {
+                        summonerReady: {
+                            api: "summoner",
+                            path: "/v1/summoner-requests-ready"
+                        },
+                        currentSummoner: {
+                            api: "summoner",
+                            path: "/v1/current-summoner"
+                        },
+                        myRankedStats: {
+                            api: "ranked",
+                            path: "/v1/current-ranked-stats"
+                        },
+                        honorProfile: {
+                            api: "honor",
+                            path: "/v1/profile"
+                        },
+                        challengerLaddersEnabled: {
+                            api: "ranked",
+                            path: "/v1/challenger-ladders-enabled"
+                        },
+                        topRatedLaddersEnabled: {
+                            api: "ranked",
+                            path: "/v1/top-rated-ladders-enabled"
+                        },
+                        uxSettings: "/lol-settings/v2/local/lol-user-experience",
+                        tftSets: {
+                            api: "gameData",
+                            path: "/assets/v1/tftsets.json"
+                        },
+                        regionLocale: {
+                            api: "riotClient",
+                            path: "/region-locale"
+                        }
                     }
-                }
-            });
-            e.exports = s.Ember.Component.extend(m, {
+                });
+            e.exports = s.Ember.Component.extend(d, {
                 classNames: ["leagues-root-component"],
                 layout: n(33),
                 leagues: null,
-                leaguesQueueOrders: d,
+                leaguesQueueOrders: i.SUMMONER_QUEUE_ORDER,
                 leaguesQueues: a.QUEUES.ALL_RANKED_AND_RATED_QUEUE_TYPES,
                 isLoading: !0,
                 selectedState: null,
@@ -301,14 +305,23 @@
                     const t = Date.now();
                     e && t > e.seasonStart && t < e.seasonEnd && this.set("activeLoLSeason", e)
                 },
+                _getHighestRankedLadder(e) {
+                    const t = e.filter((e => e.requestedRankedEntry));
+                    return t && 0 !== t.length ? t.reduce(((e, t) => {
+                        if (t.requestedRankedEntry && e) {
+                            return -1 === this.leagueTierNames.compareTierDivision(e.requestedRankedEntry.tier, e.requestedRankedEntry.division, t.requestedRankedEntry.tier, t.requestedRankedEntry.division, a.RANKED.TIERS) ? t : e
+                        }
+                    })) : null
+                },
                 _handleSummonerLeaguesData: function(e) {
                     if (!e) return;
-                    if (e[0].queueType && this.set("highestRankedQueueType", e[0].queueType), !this.get("isViewingLocalSummoner") && this.leagueTierNames.isApexForQueue(e[0])) {
+                    const t = this._getHighestRankedLadder(e);
+                    if (t && this.set("highestRankedQueueType", t.queueType), !this.get("isViewingLocalSummoner") && this.leagueTierNames.isApexForQueue(e[0])) {
                         const t = e[0];
                         this._cacheApexQueueInfo(t, t.queueType, t.tier)
                     }
-                    const t = this.enrichSummonerLeaguesData(e);
-                    this.set("leagues.summonerLeagues", t), this.set("isLoading", !1)
+                    const n = this.enrichSummonerLeaguesData(e);
+                    this.set("leagues.summonerLeagues", n), this.set("isLoading", !1)
                 },
                 _handleApexQueueInfoData: function(e, t, n) {
                     return e ? (this._cacheApexQueueInfo(e, t, n), e.divisions = this._getCachedApexLeagues(t), Promise.resolve(this.enrichSummonerLeaguesData([e], !0)).then((e => e))) : Promise.resolve()
@@ -332,7 +345,7 @@
                     const e = this.get("leagues.summonerLeagues"),
                         t = this.get("highestRankedQueueType") || this.get("leaguesQueues.0"),
                         n = e.find((e => e.queueType === t));
-                    this.get("isViewingLocalSummoner") && n && s.LeaguesConsts.TIERS.includes(n.tier) ? this._selectLeagueType("apex", t) : n && this._selectLeague(n)
+                    n && s.LeaguesConsts.REGULAR_TIERS.includes(n.tier) ? this._selectLeagueType("apex", t) : n && this._selectLeague(n)
                 })),
                 _selectLeague: function(e, t) {
                     const n = e && this.leagueTierNames.isApexForQueue(e),
@@ -433,7 +446,7 @@
                 isAnimationEnabled: s.Ember.computed("uxSettings.data.potatoModeEnabled", (function() {
                     return !this.get("uxSettings.data.potatoModeEnabled")
                 })),
-                bannerProperties: s.Ember.computed("selectedState.standing.puuid", "selectedState.league.queueType", "selectedState.standing.wins", "selectedState.standing.losses", "selectedState.division.division", "selectedState.division.tier", "selectedState.standing.division", "selectedState.standing.tier", "selectedState.league.tier", "selectedState.league.provisionalGameThreshold", "selectedState.standing.provisionalGamesRemaining", "selectedState.standing.isProvisional", "selectedState.standing.points", "selectedState.standing.position", (function() {
+                bannerProperties: s.Ember.computed("selectedState.standing.puuid", "selectedState.league.queueType", "selectedState.standing.wins", "selectedState.standing.losses", "selectedState.division.division", "selectedState.division.tier", "selectedState.standing.division", "selectedState.standing.tier", "selectedState.league.tier", "selectedState.league.provisionalGameThreshold", "selectedState.standing.provisionalGamesRemaining", "selectedState.standing.isProvisional", "selectedState.standing.points", "selectedState.standing.position", "selectedState.isViewingTopPlayers", (function() {
                     const e = this.get("selectedState.standing.wins") + this.get("selectedState.standing.losses"),
                         t = this.get("selectedState.standing.isProvisional"),
                         n = this.get("selectedState.standing.tier") || this.get("selectedState.division.tier") || this.get("selectedState.league.tier");
@@ -448,7 +461,8 @@
                         games: e,
                         isProvisional: t,
                         provisionalGameThreshold: this.get("selectedState.league.provisionalGameThreshold"),
-                        provisionalGamesRemaining: this.get("selectedState.standing.provisionalGamesRemaining")
+                        provisionalGamesRemaining: this.get("selectedState.standing.provisionalGamesRemaining"),
+                        isViewingTopPlayers: this.get("selectedState.isViewingTopPlayers")
                     }
                 })),
                 showingPlayerNotRanked: s.Ember.computed("selectedState.league", "selectedState.isViewingTopPlayers", "selectedState.isViewingRatedLadder", (function() {
@@ -457,8 +471,8 @@
                         t = this.get("selectedState.isViewingTopPlayers");
                     return !e || !this.get("selectedState.league.requestedRankedEntry") && !t
                 })),
-                isShowingLol: s.Ember.computed("isViewingTft", "isViewingCherry", (function() {
-                    return !this.get("isViewingTft") && !this.get("isViewingCherry")
+                isShowingLol: s.Ember.computed("isViewingTft", "isViewingCherry", "isViewingRankedPremade", (function() {
+                    return !this.get("isViewingTft") && !this.get("isViewingCherry") && !this.get("isViewingRankedPremade")
                 })),
                 isShowingSplitEndCountdown: s.Ember.computed("isViewingLocalSummoner", "activeLoLSeason", "isShowingLol", (function() {
                     const e = this.get("activeLoLSeason");
@@ -483,6 +497,9 @@
                 isViewingCherry: s.Ember.computed("selectedState.league", (function() {
                     return "CHERRY" === this.get("selectedState.league.queueType")
                 })),
+                isViewingRankedPremade: s.Ember.computed("selectedState.league", (function() {
+                    return "RANKED_PREMADE_5x5" === this.get("selectedState.league.queueType")
+                })),
                 nextUpdateMillis: s.Ember.computed("selectedState.league.nextApexUpdateMillis", "selectedState.league.nextRatedUpdateMillis", (function() {
                     const e = this.get("selectedState.league") || {};
                     return e.nextApexUpdateMillis || e.nextRatedUpdateMillis
@@ -493,10 +510,11 @@
                         year: "numeric"
                     }) : (new Date).getFullYear()
                 })),
-                seasonNameText: s.Ember.computed("isViewingCherry", "isViewingTft", "tftSets", "currentSeasonYear", "activeLoLSeason.metadata.currentSplit", (function() {
+                seasonNameText: s.Ember.computed("isViewingCherry", "isViewingTft", "isViewingRankedPremade", "tftSets", "currentSeasonYear", "activeLoLSeason.metadata.currentSplit", (function() {
                     const e = this.get("tra");
                     if (this.get("isViewingCherry")) return this.get("tra.QUEUE_NAME_CHERRY");
                     if (this.get("isViewingTft")) return this.get("tftSets").LCTFTModeData.mDefaultSet.SetDisplayName;
+                    if (this.get("isViewingRankedPremade")) return this.get("tra.QUEUE_NAME_RANKED_PREMADE_5x5");
                     {
                         const t = this.get("currentSeasonYear"),
                             n = this.get("activeLoLSeason.metadata.currentSplit");
@@ -978,38 +996,40 @@
             const n = "RANKED_SOLO_5x5",
                 s = "RANKED_FLEX_SR",
                 a = "RANKED_FLEX_TT",
-                i = "CHERRY",
-                o = "RANKED_TFT",
-                l = "RANKED_TFT_DOUBLE_UP",
-                r = "RANKED_TFT_TURBO",
-                c = "RANKED_TFT_PAIRS";
-            let u = [n, s];
-            const d = [...u, a],
-                m = [i],
-                p = [o, l],
-                g = [r, c],
-                E = [...p, ...g],
-                f = [...d, ...p],
-                h = [...g, ...m];
-            var _ = {
+                i = "RANKED_PREMADE_5x5",
+                o = "CHERRY",
+                l = "RANKED_TFT",
+                r = "RANKED_TFT_DOUBLE_UP",
+                c = "RANKED_TFT_TURBO",
+                u = "RANKED_TFT_PAIRS",
+                d = [n, s, i],
+                m = [...d, a],
+                p = [o],
+                g = [l, r],
+                E = [c, u],
+                f = [...g, ...E],
+                _ = [...m, ...g],
+                h = [...E, ...p];
+            var S = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: s,
+                RANKED_PREMADE_5X5_QUEUE_TYPE: i,
                 RANKED_FLEX_TT_QUEUE_TYPE: a,
-                RANKED_CHERRY_QUEUE_TYPE: i,
-                RANKED_TFT_QUEUE_TYPE: o,
-                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: l,
-                RANKED_TFT_TURBO_QUEUE_TYPE: r,
-                RANKED_TFT_PAIRS_QUEUE_TYPE: c,
-                RANKED_LOL_QUEUE_TYPES: d,
-                RANKED_SR_QUEUE_TYPES: u,
-                RANKED_TFT_QUEUE_TYPES: p,
-                RATED_TFT_QUEUE_TYPES: g,
-                RANKED_AND_RATED_TFT_QUEUE_TYPES: E,
-                ALL_RANKED_QUEUE_TYPES: f,
+                RANKED_CHERRY_QUEUE_TYPE: o,
+                RANKED_TFT_QUEUE_TYPE: l,
+                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: r,
+                RANKED_TFT_TURBO_QUEUE_TYPE: c,
+                RANKED_TFT_PAIRS_QUEUE_TYPE: u,
+                RANKED_LOL_QUEUE_TYPES: m,
+                RANKED_SR_QUEUE_TYPES: d,
+                RANKED_TFT_QUEUE_TYPES: g,
+                RATED_TFT_QUEUE_TYPES: E,
+                RANKED_AND_RATED_TFT_QUEUE_TYPES: f,
+                ALL_RANKED_QUEUE_TYPES: _,
                 ALL_RATED_QUEUE_TYPES: h,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...f, ...h]
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [..._, ...h]
             };
-            t.default = _
+            t.default = S
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1018,17 +1038,19 @@
             const n = "UNRANKED",
                 s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                i = ["IV", "III", "II", "I"],
-                o = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                i = s[s.length - 1],
+                o = [i, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                l = ["IV", "III", "II", "I"],
+                r = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function l(e) {
+            function c(e) {
                 const t = {};
                 for (let n = 0; n < e.length; n++) {
                     t[e[n]] = n
                 }
                 return t
             }
-            var r = {
+            var u = {
                 TIER_NAME_UNRANKED: n,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
@@ -1038,14 +1060,14 @@
                 TIERS: a,
                 ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: s[s.length - 1],
+                HIGHEST_TIER: i,
                 LOWEST_TIER: s[0],
-                DIVISIONS: i,
-                HIGHEST_DIVISION: i[i.length - 1],
-                LOWEST_DIVISION: i[0],
+                DIVISIONS: l,
+                HIGHEST_DIVISION: l[l.length - 1],
+                LOWEST_DIVISION: l[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: l(a),
-                DIVISION_TO_ORDINAL: l(i),
+                TIER_NAME_TO_ORDINAL: c(a),
+                DIVISION_TO_ORDINAL: c(l),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -1053,9 +1075,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: o,
+                TFT_RATED_TIERS: r,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: o[0],
+                LOWEST_TFT_RATED_TIER: r[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -1072,9 +1094,10 @@
                     CHAMPION_SKIN_CHROMA: "CHAMPION_SKIN_CHROMA",
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
-                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500
+                DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
+                TIERS_WITH_DECAY: o
             };
-            t.default = r
+            t.default = u
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1178,7 +1201,8 @@
                 [s.QUEUES.RANKED_TFT_QUEUE_TYPE]: 40,
                 [s.QUEUES.RANKED_TFT_DOUBLE_UP_QUEUE_TYPE]: 50,
                 [s.QUEUES.RANKED_TFT_TURBO_QUEUE_TYPE]: 60,
-                [s.QUEUES.RANKED_TFT_PAIRS_QUEUE_TYPE]: 70
+                [s.QUEUES.RANKED_TFT_PAIRS_QUEUE_TYPE]: 70,
+                [s.QUEUES.RANKED_PREMADE_5X5_QUEUE_TYPE]: 80
             };
             t.SUMMONER_QUEUE_ORDER = a;
             t.RATED_LADDER_REFRESH_TIME_MILLIS = 3e5;
@@ -1248,8 +1272,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "wUILR7B5",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["loading-spinner ",["helper",["unless"],[["get",["isLoading"]],"loading-fade-out"],null]]]],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["smoke-background-container ",["helper",["if"],[["get",["showingPlayerNotRanked"]],"removed"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["ranked-intro-background ",["helper",["unless"],[["get",["showingPlayerNotRanked"]],"removed"],null]]]],["flush-element"],["close-element"],["text","\\n"],["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-ranked-rendered"]],8]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["rank-queue-dropdown"],null,[["overlayMode","selectedLeague","leagues","leagueTypeSelected","challengerLaddersEnabled","topRatedLaddersEnabled","tooltipMessages","onSelectLeagueType"],[["get",["overlayMode"]],["get",["selectedState","league"]],["get",["leagues"]],["get",["leagueTypeSelected"]],["get",["challengerLaddersEnabled"]],["get",["topRatedLaddersEnabled"]],["get",["tooltipMessages"]],"selectLeagueType"]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["overlayMode"]]],null,0]],"locals":[]},{"statements":[["text","              "],["append",["helper",["ranked-banner"],null,[["puuid","queueType","tier","division","ladderRank","leaguePoints","miniseries","games","isAnimationEnabled","provisionalGameThreshold","provisionalGamesRemaining","isProvisional"],[["get",["bannerProperties","puuid"]],["get",["bannerProperties","queueType"]],["get",["bannerProperties","tier"]],["get",["bannerProperties","division"]],["get",["bannerProperties","ladderRank"]],["get",["bannerProperties","leaguePoints"]],["get",["bannerProperties","miniseries"]],["get",["bannerProperties","games"]],["get",["isAnimationEnabled"]],["get",["bannerProperties","provisionalGameThreshold"]],["get",["bannerProperties","provisionalGamesRemaining"]],["get",["bannerProperties","isProvisional"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["helper",["rated-badge"],null,[["puuid","summoner","queueType"],[["get",["puuid"]],["get",["currentSummoner"]],["get",["selectedState","league","queueType"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-left-container"],["flush-element"],["text","\\n            "],["append",["helper",["rank-standing"],null,[["selectedState","selectDivision","selectStanding","onSelectApexLeague"],[["get",["selectedState"]],"selectDivision",["helper",["action"],[["get",[null]],"selectStanding"],null],["helper",["action"],[["get",[null]],"selectApexLeague"],null]]]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-right-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingRatedLadder"]]],null,3,2],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["ranked-intro"],null,[["league"],[["get",["selectedState","league"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time-icon"],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time"],["flush-element"],["append",["unknown",["splitTimeRemainingText"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","ranked-reference-modal-button-container"],["flush-element"],["text","\\n                "],["append",["helper",["ranked-reference-modal-button"],null,[["queueType"],[["get",["selectedState","league","queueType"]]]]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-container ",["helper",["if"],[["get",["isLoading"]],"loading-hidden","loading-fade-in"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-display-area ",["unknown",["animationClass"]]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-leagues-info-header-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-info-season-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-season-info-container"],["flush-element"],["text","\\n            "],["append",["unknown",["seasonNameText"]],false],["text","\\n"],["block",["if"],[["get",["isShowingLol"]]],null,7],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["isShowingSplitEndCountdown"]]],null,6],["text","        "],["close-element"],["text","\\n        "],["append",["helper",["leagues-countdowns"],null,[["league","myRankedStats","nextUpdateMillis","isViewingApexTier","isViewingRatedLadder","onRefresh"],[["get",["selectedState","league"]],["get",["myRankedStats"]],["get",["nextUpdateMillis"]],["get",["selectedState","isViewingApexTier"]],["get",["selectedState","isViewingRatedLadder"]],["helper",["action"],[["get",[null]],"refreshRankings"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["showingPlayerNotRanked"]]],null,5,4],["text","    "],["close-element"],["text","\\n"],["block",["unless"],[["get",["isLoading"]]],null,1],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-faq-right"],["flush-element"],["text","\\n      "],["open-element","a",[]],["dynamic-attr","href",["concat",[["unknown",["faqUrl"]]]]],["static-attr","target","_new"],["static-attr","class","lol-leagues-faq-btn"],["flush-element"],["append",["unknown",["faqText"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "nENSf894",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["loading-spinner ",["helper",["unless"],[["get",["isLoading"]],"loading-fade-out"],null]]]],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["smoke-background-container ",["helper",["if"],[["get",["showingPlayerNotRanked"]],"removed"],null]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["ranked-intro-background ",["helper",["unless"],[["get",["showingPlayerNotRanked"]],"removed"],null]]]],["flush-element"],["close-element"],["text","\\n"],["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-ranked-rendered"]],7]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["rank-queue-dropdown"],null,[["overlayMode","selectedState","leagues","leagueTypeSelected","challengerLaddersEnabled","topRatedLaddersEnabled","tooltipMessages","onSelectLeagueType"],[["get",["overlayMode"]],["get",["selectedState"]],["get",["leagues"]],["get",["leagueTypeSelected"]],["get",["challengerLaddersEnabled"]],["get",["topRatedLaddersEnabled"]],["get",["tooltipMessages"]],"selectLeagueType"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["helper",["ranked-banner"],null,[["puuid","queueType","tier","division","ladderRank","leaguePoints","miniseries","games","isAnimationEnabled","provisionalGameThreshold","provisionalGamesRemaining","isProvisional","isViewingTopPlayers"],[["get",["bannerProperties","puuid"]],["get",["bannerProperties","queueType"]],["get",["bannerProperties","tier"]],["get",["bannerProperties","division"]],["get",["bannerProperties","ladderRank"]],["get",["bannerProperties","leaguePoints"]],["get",["bannerProperties","miniseries"]],["get",["bannerProperties","games"]],["get",["isAnimationEnabled"]],["get",["bannerProperties","provisionalGameThreshold"]],["get",["bannerProperties","provisionalGamesRemaining"]],["get",["bannerProperties","isProvisional"]],["get",["bannerProperties","isViewingTopPlayers"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["helper",["rated-badge"],null,[["puuid","summoner","queueType"],[["get",["puuid"]],["get",["currentSummoner"]],["get",["selectedState","league","queueType"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-wrapper"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-left-container"],["flush-element"],["text","\\n            "],["append",["helper",["rank-standing"],null,[["selectedState","selectDivision","selectStanding","onSelectApexLeague"],[["get",["selectedState"]],"selectDivision",["helper",["action"],[["get",[null]],"selectStanding"],null],["helper",["action"],[["get",[null]],"selectApexLeague"],null]]]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-right-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingRatedLadder"]]],null,2,1],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["helper",["ranked-intro"],null,[["league"],[["get",["selectedState","league"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time-icon"],["flush-element"],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","lol-leagues-header-split-info-remaining-time"],["flush-element"],["append",["unknown",["splitTimeRemainingText"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","ranked-reference-modal-button-container"],["flush-element"],["text","\\n                "],["append",["helper",["ranked-reference-modal-button"],null,[["queueType"],[["get",["selectedState","league","queueType"]]]]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-container ",["helper",["if"],[["get",["isLoading"]],"loading-hidden","loading-fade-in"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-display-area ",["unknown",["animationClass"]]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-leagues-info-header-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-info-season-header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-leagues-season-info-container"],["flush-element"],["text","\\n            "],["append",["unknown",["seasonNameText"]],false],["text","\\n"],["block",["if"],[["get",["isShowingLol"]]],null,6],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["isShowingSplitEndCountdown"]]],null,5],["text","        "],["close-element"],["text","\\n        "],["append",["helper",["leagues-countdowns"],null,[["league","myRankedStats","nextUpdateMillis","isViewingApexTier","isViewingRatedLadder","onRefresh"],[["get",["selectedState","league"]],["get",["myRankedStats"]],["get",["nextUpdateMillis"]],["get",["selectedState","isViewingApexTier"]],["get",["selectedState","isViewingRatedLadder"]],["helper",["action"],[["get",[null]],"refreshRankings"],null]]]],false],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["showingPlayerNotRanked"]]],null,4,3],["text","    "],["close-element"],["text","\\n"],["block",["unless"],[["get",["isLoading"]]],null,0],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-faq-right"],["flush-element"],["text","\\n      "],["open-element","a",[]],["dynamic-attr","href",["concat",[["unknown",["faqUrl"]]]]],["static-attr","target","_new"],["static-attr","class","lol-leagues-faq-btn"],["flush-element"],["append",["unknown",["faqText"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1263,16 +1287,15 @@
                     const e = this.get("daysUntilDecay");
                     return null != e && e >= -1
                 })),
-                daysUntilDecay: s.Ember.computed("league", "myRankedStats", "isViewingApexTier", (function() {
+                daysUntilDecay: s.Ember.computed("league", "myRankedStats", (function() {
                     const e = this.get("league"),
-                        t = this.get("myRankedStats"),
-                        n = this.get("isViewingApexTier");
+                        t = this.get("myRankedStats");
                     if (!e || !t || !t.queues) return null;
                     const {
-                        queueType: s
+                        queueType: n
                     } = e;
                     for (const e of t.queues)
-                        if (e.queueType === s && this.leagueTierNames.isApexForQueue(e) === n && e.warnings) return e.warnings.daysUntilDecay;
+                        if (e.queueType === n && this.leagueTierNames.tierHasDecay(e) && e.warnings) return e.warnings.daysUntilDecay;
                     return null
                 })),
                 shouldDisplayDecayWarningInDays: s.Ember.computed("isValidDaysUntilDecay", "shouldDisplayDecayWarningInCountdownTimer", (function() {
@@ -1323,8 +1346,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "TUcOdBTS",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-leagues-info-leagues-countdowns-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplayDecayWarningInDays"]]],null,5],["block",["if"],[["get",["shouldDisplayCountdownTimer"]]],null,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["tra","RANKED_DECAY_TOOLTIP"]]],null],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["flush-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-countdown-timer-wrapper"],["flush-element"],["text","\\n      "],["append",["helper",["countdown-timer"],null,[["countdownLabel","countdownToTime","isUrgent","onRefresh"],[["get",["countdownLabel"]],["get",["nextUpdateMillis"]],["get",["shouldCountdownTimerBeUrgent"]],["helper",["action"],[["get",[null]],["get",["onRefresh"]]],null]]]],false],["text","\\n"],["block",["if"],[["get",["shouldDisplayDecayWarningInCountdownTimer"]]],null,1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["helper",["sanitize"],[["get",["tra","RANKED_DECAY_TOOLTIP"]]],null],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","         \\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-decay-warning-countdown ",["helper",["if"],[["get",["isDecayUrgent"]],"decay-urgent"],null]]]],["flush-element"],["text","\\n          "],["append",["unknown",["decayWarningDaysRemaining"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-decay-warning ",["helper",["if"],[["get",["isDecayUrgent"]],"decay-urgent"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["decayWarningText"]],false],["text","\\n"],["block",["if"],[["get",["decayWarningDaysRemaining"]]],null,4],["text","      "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],3],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "fWWtJ+L4",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-countdowns\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-leagues-info-leagues-countdowns-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldDisplayDecayWarningInDays"]]],null,5],["block",["if"],[["get",["shouldDisplayCountdownTimer"]]],null,2],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["text","\\n              "],["append",["helper",["sanitize"],[["get",["tra","RANKED_DECAY_TOOLTIP"]]],null],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["flush-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-countdown-timer-wrapper"],["flush-element"],["text","\\n      "],["append",["helper",["countdown-timer"],null,[["countdownLabel","countdownToTime","isUrgent","onRefresh"],[["get",["countdownLabel"]],["get",["nextUpdateMillis"]],["get",["shouldCountdownTimerBeUrgent"]],["helper",["action"],[["get",[null]],["get",["onRefresh"]]],null]]]],false],["text","\\n"],["block",["if"],[["get",["shouldDisplayDecayWarningInCountdownTimer"]]],null,1],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-large"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["helper",["sanitize"],[["get",["tra","RANKED_DECAY_TOOLTIP"]]],null],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","         \\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-decay-warning-countdown ",["helper",["if"],[["get",["isDecayUrgent"]],"decay-urgent"],null]]]],["flush-element"],["text","\\n          "],["append",["unknown",["decayWarningDaysRemaining"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-decay-warning ",["helper",["if"],[["get",["isDecayUrgent"]],"decay-urgent"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["decayWarningText"]],false],["text","\\n"],["block",["if"],[["get",["decayWarningDaysRemaining"]]],null,4],["text","      "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","ranked-reference-modal-question-mark"],["flush-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition"],["right"]],3],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1340,8 +1363,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "vrwTFHK4",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\index.js\\" "],["text","\\n"],["open-element","ul",[]],["static-attr","class","lol-leagues-miniseries-status-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["results"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","li",[]],["dynamic-attr","class",["concat",["lol-leagues-miniseries-status-item ",["get",["result"]]," ",["unknown",["showingAsSelf"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["result"]}],"hasPartials":false}',
+                id: "8OUCd2RA",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\miniseries-results\\\\index.js\\" "],["text","\\n"],["open-element","ul",[]],["static-attr","class","lol-leagues-miniseries-status-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["results"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","li",[]],["dynamic-attr","class",["concat",["lol-leagues-miniseries-status-item ",["get",["result"]]," ",["unknown",["showingAsSelf"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["result"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1365,8 +1388,9 @@
                 didReceiveAttrs: function() {
                     this._super(...arguments);
                     const e = this.get("puuid"),
-                        t = this.get("queueType");
-                    e ? this.get("displayedPuuid") === e && this.get("displayedQueueType") === t || (this.set("displayedPuuid", e), this.set("displayedQueueType", t), this.fetchRankedData()) : (this.set("displayedPuuid", e), this.set("displayedQueueType", t), this.set("displayedTier", this.get("tier")), this.set("displayedDivision", this.get("division")), this.set("displayedRegaliaLevel", 0), this.set("displayedPreviousTier", ""))
+                        t = this.get("queueType"),
+                        n = this.get("isViewingTopPlayers");
+                    e ? this.get("displayedPuuid") === e && this.get("displayedQueueType") === t || n || (this.set("displayedPuuid", e), this.set("displayedQueueType", t), this.fetchRankedData()) : (this.set("displayedPuuid", e), this.set("displayedQueueType", t), this.set("displayedTier", this.get("tier")), this.set("displayedDivision", this.get("division")), this.set("displayedRegaliaLevel", 0), this.set("displayedPreviousTier", ""))
                 },
                 willDestroyElement: function() {
                     this._super(...arguments);
@@ -1432,8 +1456,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "YLZXFUcP",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isProvisional"]]],null,7],["text","\\n"],["open-element","lol-regalia-ranked-banner-v2-element",[]],["static-attr","animations","false"],["static-attr","banner-type","lastSeasonHighestRank"],["dynamic-attr","banner-rank",["concat",[["unknown",["displayedPreviousTier"]]]]],["static-attr","animation-config","{\\"topFadeEnd\\": 1, \\"topFadeStart\\": 0.15}"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","ranked-banner-contents-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","banner-ranked-emblem-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","banner-regalia-crest-sizer"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","queue-type",["unknown",["queueType"]],null],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["unranked"]],"unranked",["get",["displayedTier"]]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isProvisional"]]],null,4,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-tier-division-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["banner-league-points-display ",["helper",["unless"],[["get",["showLeaguePoints"]],"hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["leaguePointsString"]],false],["text","\\n    "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-apex-ladder-rank"],["flush-element"],["text","\\n        "],["append",["unknown",["apexLadderRank"]],false],["text","\\n      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasApexLadderRank"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-miniseries-progress"],["flush-element"],["text","\\n        "],["append",["helper",["miniseries-results"],null,[["results","showingAsSelf"],[["get",["miniseries"]],true]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["miniseries"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-provisional-text-container"],["flush-element"],["text","\\n        "],["append",["unknown",["provisionalGamesProgressText"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","provisional-banner-static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","id","provisional-banner-loop"],["static-attr","src","/fe/lol-static-assets/videos/provisional-banner-loop.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isAnimationEnabled"]]],null,6,5]],"locals":[]}],"hasPartials":false}',
+                id: "Rqb4KHZH",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-banner\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isProvisional"]]],null,7],["text","\\n"],["open-element","lol-regalia-ranked-banner-v2-element",[]],["static-attr","animations","false"],["static-attr","banner-type","lastSeasonHighestRank"],["dynamic-attr","banner-rank",["concat",[["unknown",["displayedPreviousTier"]]]]],["static-attr","animation-config","{\\"topFadeEnd\\": 1, \\"topFadeStart\\": 0.15}"],["flush-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","ranked-banner-contents-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","banner-ranked-emblem-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","banner-regalia-crest-sizer"],["flush-element"],["text","\\n        "],["open-element","lol-regalia-emblem-element",[]],["dynamic-attr","ranked-division",["unknown",["displayedDivision"]],null],["dynamic-attr","queue-type",["unknown",["queueType"]],null],["dynamic-attr","ranked-tier",["helper",["if"],[["get",["unranked"]],"unranked",["get",["displayedTier"]]],null],null],["flush-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isProvisional"]]],null,4,3],["text","\\n    "],["open-element","div",[]],["static-attr","class","banner-tier-division-label"],["flush-element"],["text","\\n      "],["append",["unknown",["tierDivisionLabel"]],false],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["banner-league-points-display ",["helper",["unless"],[["get",["showLeaguePoints"]],"hidden"],null]]]],["flush-element"],["text","\\n      "],["append",["unknown",["leaguePointsString"]],false],["text","\\n    "],["close-element"],["text","\\n\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-apex-ladder-rank"],["flush-element"],["text","\\n        "],["append",["unknown",["apexLadderRank"]],false],["text","\\n      "],["close-element"],["text","\\n    "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasApexLadderRank"]]],null,0]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-miniseries-progress"],["flush-element"],["text","\\n        "],["append",["helper",["miniseries-results"],null,[["results","showingAsSelf"],[["get",["miniseries"]],true]]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["miniseries"]]],null,2,1]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","banner-provisional-text-container"],["flush-element"],["text","\\n        "],["append",["unknown",["provisionalGamesProgressText"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","provisional-banner-static"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","uikit-video",[]],["static-attr","id","provisional-banner-loop"],["static-attr","src","/fe/lol-static-assets/videos/provisional-banner-loop.webm"],["static-attr","autoplay",""],["static-attr","loop",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isAnimationEnabled"]]],null,6,5]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1441,10 +1465,11 @@
             var s = n(1),
                 a = n(29);
             n(44);
-            let i = {
+            const i = {
                 RANKED_SOLO_5x5: 420,
                 RANKED_FLEX_SR: 440,
-                RANKED_FLEX_TT: 470
+                RANKED_FLEX_TT: 470,
+                RANKED_PREMADE_5x5: 710
             };
             e.exports = s.Ember.Component.extend({
                 classNames: ["ranked-intro-component"],
@@ -1459,7 +1484,7 @@
                 hideQueueUpButton: s.Ember.computed("queueTypeQueueId", (function() {
                     return 0 === this.get("queueTypeQueueId")
                 })),
-                rankedIntroSections: s.Ember.computed("queueType", "league.isPositionRanks", "tra", "tra.RANKED_INTRO_RANKED_SOLO_5x5_SECTION_1_TITLE", "tra.RANKED_INTRO_RANKED_SOLO_5x5_SECTION_1_BODY", "tra.RANKED_INTRO_RANKED_FLEX_SR_SECTION_1_TITLE", "tra.RANKED_INTRO_RANKED_FLEX_SR_SECTION_1_BODY", "tra.RANKED_INTRO_RANKED_FLEX_TT_SECTION_1_TITLE", "tra.RANKED_INTRO_RANKED_FLEX_TT_SECTION_1_BODY", "tra.RANKED_INTRO_SECTION_2_TITLE", "tra.RANKED_INTRO_SECTION_2_BODY", "tra.RANKED_INTRO_SECTION_3_TITLE", "tra.RANKED_INTRO_SECTION_3_BODY", (function() {
+                rankedIntroSections: s.Ember.computed("queueType", "league.isPositionRanks", (function() {
                     const e = this.get("queueType");
                     return [{
                         titleString: this.get(`tra.RANKED_INTRO_${e}_SECTION_1_TITLE`),
@@ -1490,8 +1515,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "JGNOYHl/",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-intro-page-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-intro-section-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rankedIntroSections"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["ranked-intro-footer-container ",["helper",["if"],[["get",["hideQueueUpButton"]],"hidden"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-up-hype left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","class","queue-up-button-container"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","type","next"],["static-attr","class","queue-up-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"createPartyLobby"],null],null],["flush-element"],["append",["unknown",["queueUpButtonText"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-up-hype right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","ranked-intro-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-image-frame"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","ranked-intro-section-image"],["dynamic-attr","src",["unknown",["section","imageSource"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-title"],["flush-element"],["append",["unknown",["section","titleString"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-body"],["flush-element"],["append",["unknown",["section","bodyString"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["section"]}],"hasPartials":false}',
+                id: "i7+h4Go3",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-intro\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","ranked-intro-page-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-intro-section-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rankedIntroSections"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["ranked-intro-footer-container ",["helper",["if"],[["get",["hideQueueUpButton"]],"hidden"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-up-hype left"],["flush-element"],["close-element"],["text","\\n    "],["open-element","lol-uikit-flat-button-group",[]],["static-attr","class","queue-up-button-container"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-button",[]],["static-attr","type","next"],["static-attr","class","queue-up-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"createPartyLobby"],null],null],["flush-element"],["append",["unknown",["queueUpButtonText"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","queue-up-hype right"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","ranked-intro-section"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-image-frame"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","ranked-intro-section-image"],["dynamic-attr","src",["unknown",["section","imageSource"]],null],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-title"],["flush-element"],["append",["unknown",["section","titleString"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-intro-section-body"],["flush-element"],["append",["unknown",["section","bodyString"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["section"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1544,8 +1569,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "uO7oNG1S",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\index.js\\" "],["text","\\n"],["append",["helper",["rank-standing-header"],null,[["league","activateTab","selectedState","onSelectApexLeague"],[["get",["league"]],["helper",["action"],[["get",[null]],"activateTab"],null],["get",["selectedState"]],["get",["onSelectApexLeague"]]]]],false],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["rank-standing-list-container ",["unknown",["animationClass"]]]]],["flush-element"],["text","\\n  "],["append",["helper",["rank-standing-list"],null,[["leagueContext","selectedState","standings","selectStanding"],[["get",["selectedState","league"]],["get",["selectedState"]],["get",["displayedStandings"]],["get",["selectStanding"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "XXRTbzmW",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\index.js\\" "],["text","\\n"],["append",["helper",["rank-standing-header"],null,[["league","activateTab","selectedState","onSelectApexLeague"],[["get",["league"]],["helper",["action"],[["get",[null]],"activateTab"],null],["get",["selectedState"]],["get",["onSelectApexLeague"]]]]],false],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["rank-standing-list-container ",["unknown",["animationClass"]]]]],["flush-element"],["text","\\n  "],["append",["helper",["rank-standing-list"],null,[["leagueContext","selectedState","standings","selectStanding"],[["get",["selectedState","league"]],["get",["selectedState"]],["get",["displayedStandings"]],["get",["selectStanding"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1588,8 +1613,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "A5TOt4pT",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-division-btn division-",["unknown",["leagueDivisionInfo","division"]]," ",["unknown",["activeStyle"]]," ",["unknown",["playerDivisionStyle"]]]]],["flush-element"],["append",["unknown",["text"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "s+FfVFSo",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\rank-standing-header-button\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-division-btn division-",["unknown",["leagueDivisionInfo","division"]]," ",["unknown",["activeStyle"]]," ",["unknown",["playerDivisionStyle"]]]]],["flush-element"],["append",["unknown",["text"]],false],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1637,8 +1662,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "AiV4vXvU",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-division-tier ",["helper",["if"],[["get",["selectedState","isViewingApexTier"]],"removed"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingRatedLadder"]]],null,2,1],["close-element"],["text","\\n"],["open-element","ul",[]],["dynamic-attr","class",["concat",["lol-leagues-division-list ",["helper",["if"],[["get",["selectedState","isViewingRatedLadder"]],"removed"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["league","divisions"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["rank-standing-header-button"],null,[["leagueDivisionInfo","btnIndex","activeIndex","onBtnClick","selectedDivision","contentSize","isViewingTopPlayers","queueType","onSelectApexLeague","playClickAudio"],[["get",["l"]],["get",["l","position"]],["get",["activeIndex"]],"activateButton",["get",["selectedState","division"]],["get",["league","divisions","length"]],["get",["selectedState","isViewingTopPlayers"]],["get",["league","queueType"]],["get",["onSelectApexLeague"]],"playClickAudio"]]],false],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","    "],["append",["unknown",["localizedTier"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["topRatedTier"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "sZQY89we",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-header\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-division-tier ",["helper",["if"],[["get",["selectedState","isViewingApexTier"]],"removed"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingRatedLadder"]]],null,2,1],["close-element"],["text","\\n"],["open-element","ul",[]],["dynamic-attr","class",["concat",["lol-leagues-division-list ",["helper",["if"],[["get",["selectedState","isViewingRatedLadder"]],"removed"],null]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["league","divisions"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["rank-standing-header-button"],null,[["leagueDivisionInfo","btnIndex","activeIndex","onBtnClick","selectedDivision","contentSize","isViewingTopPlayers","queueType","onSelectApexLeague","playClickAudio"],[["get",["l"]],["get",["l","position"]],["get",["activeIndex"]],"activateButton",["get",["selectedState","division"]],["get",["league","divisions","length"]],["get",["selectedState","isViewingTopPlayers"]],["get",["league","queueType"]],["get",["onSelectApexLeague"]],"playClickAudio"]]],false],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","    "],["append",["unknown",["localizedTier"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["topRatedTier"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1809,8 +1834,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "nNWwGzkm",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-leagues-headers-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasFirstHeader"]]],null,22],["text","\\n"],["block",["if"],[["get",["hasSecondHeader"]]],null,15],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-list-container ",["helper",["if"],[["get",["isEmptyDivisionOrNotFullApexTier"]],"show-division-or-tier-message"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasRowsToDisplay"]]],null,6],["block",["if"],[["get",["isEmptyDivisionOrNotFullApexTier"]]],null,4],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","LEAGUES_APEX_TIER_UNLOCKED_NOT_FULL"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","shocked-poro-icon"],["flush-element"],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","LEAGUES_APEX_TIER_UNLOCKED_EMPTY_CHECK_BACK_LATER"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["divisionIsEmpty"]]],null,1,0],["text","          "],["open-element","p",[]],["flush-element"],["append",["helper",["if"],[["get",["selectedState","division","topNumberOfPlayers"]],["get",["divisionOrTierEmptyText"]]],null],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty-content locked"],["flush-element"],["text","\\n          "],["append",["unknown",["divisionOrTierEmptyText"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","lol-leagues-list-apex-locked-check-back"],["flush-element"],["append",["unknown",["tra","LEAGUE_APEX_TIER_LOCKED_CHECK_BACK"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasApexUnlockTimeInTheFuture"]]],null,3,2],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["rank-standing-row"],null,[["data","leagueContext","leagueDivisionInfo","rowIndex","onRowClick","summonerId","selectedStanding"],[["get",["row"]],["get",["leagueContext"]],["get",["selectedState","division"]],["get",["index"]],["helper",["action"],[["get",[null]],"onRowClick"],null],["get",["selectedState","summonerId"]],["get",["selectedState","standing"]]]]],false],["text","\\n"]],"locals":["row","index"]},{"statements":[["block",["ember-collection"],null,[["class","items","cell-layout","scroll-top"],["lol-leagues-list",["get",["displayedRows"]],["helper",["fixed-grid-layout"],[["get",["ROW_WIDTH"]],["get",["ROW_HEIGHT"]]],null],["get",["scrollTop"]]]],5]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_RATING"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["playerHeaderText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,10,9],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isRatedQueue"]]],null,8,7],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["secondaryHeaderData","headerText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,13,12],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-header second-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["secondaryHeaderData","isApexTier"]]],null,14,11],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_UP_FOR_PROMO"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,17,16],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["miniseriesLengthDisplay"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["playerHeaderText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,20,19],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingApexTier"]]],null,21,18],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "wn8XCnzl",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-list\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-leagues-headers-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasFirstHeader"]]],null,22],["text","\\n"],["block",["if"],[["get",["hasSecondHeader"]]],null,15],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-leagues-list-container ",["helper",["if"],[["get",["isEmptyDivisionOrNotFullApexTier"]],"show-division-or-tier-message"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasRowsToDisplay"]]],null,6],["block",["if"],[["get",["isEmptyDivisionOrNotFullApexTier"]]],null,4],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","LEAGUES_APEX_TIER_UNLOCKED_NOT_FULL"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","shocked-poro-icon"],["flush-element"],["close-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","LEAGUES_APEX_TIER_UNLOCKED_EMPTY_CHECK_BACK_LATER"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["divisionIsEmpty"]]],null,1,0],["text","          "],["open-element","p",[]],["flush-element"],["append",["helper",["if"],[["get",["selectedState","division","topNumberOfPlayers"]],["get",["divisionOrTierEmptyText"]]],null],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty-content locked"],["flush-element"],["text","\\n          "],["append",["unknown",["divisionOrTierEmptyText"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","lol-leagues-list-apex-locked-check-back"],["flush-element"],["append",["unknown",["tra","LEAGUE_APEX_TIER_LOCKED_CHECK_BACK"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-empty"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasApexUnlockTimeInTheFuture"]]],null,3,2],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["rank-standing-row"],null,[["data","leagueContext","leagueDivisionInfo","rowIndex","onRowClick","summonerId","selectedStanding"],[["get",["row"]],["get",["leagueContext"]],["get",["selectedState","division"]],["get",["index"]],["helper",["action"],[["get",[null]],"onRowClick"],null],["get",["selectedState","summonerId"]],["get",["selectedState","standing"]]]]],false],["text","\\n"]],"locals":["row","index"]},{"statements":[["block",["ember-collection"],null,[["class","items","cell-layout","scroll-top"],["lol-leagues-list",["get",["displayedRows"]],["helper",["fixed-grid-layout"],[["get",["ROW_WIDTH"]],["get",["ROW_HEIGHT"]]],null],["get",["scrollTop"]]]],5]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_RATING"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["playerHeaderText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,10,9],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isRatedQueue"]]],null,8,7],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["secondaryHeaderData","headerText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,13,12],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-header second-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["secondaryHeaderData","isApexTier"]]],null,14,11],["text","    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_UP_FOR_PROMO"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,17,16],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["miniseriesLengthDisplay"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["playerHeaderText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,20,19],["text","        "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-header"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedState","isViewingApexTier"]]],null,21,18],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2483,15 +2508,17 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "upRZ1A6f",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowMiniseries"]]],null,16],["text","\\n"],["block",["if"],[["get",["isSecondaryHeader"]]],null,13],["text","\\n"],["block",["if"],[["get",["data","isApexTierCutoff"]]],null,6],["text","\\n"],["block",["if"],[["get",["isNonTopTierStandingRow"]]],null,5],["text","\\n"],["block",["if"],[["get",["isTopTierStandingRow"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["text","/"],["append",["unknown",["data","losses"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,2],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-summoner-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,1,0],["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-league-points"],["flush-element"],["text","\\n      "],["append",["unknown",["data","leaguePoints"]],false],["open-element","div",[]],["dynamic-attr","class",["concat",[["unknown",["divisionChangeStyle"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,4],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["unknown",["data","leaguePoints"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-apex-cutoff-container"],["flush-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","lol-leagues-apex-cutoff-hr"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-apex-cutoff-title"],["flush-element"],["append",["unknown",["data","apexCutoffText"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","lol-leagues-apex-cutoff-hr"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_PLAYERS"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,8,7],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","headerText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,11,10],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["data","isApexTier"]]],null,12,9]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["lol-leagues-list-best-status ",["get",["msStyle"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["msStyle","index"]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,15],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["each"],[["get",["miniseriesStyles"]]],null,14],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "YxgZHs/s",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-standing\\\\rank-standing-row\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["shouldShowMiniseries"]]],null,16],["text","\\n"],["block",["if"],[["get",["isSecondaryHeader"]]],null,13],["text","\\n"],["block",["if"],[["get",["data","isApexTierCutoff"]]],null,6],["text","\\n"],["block",["if"],[["get",["isNonTopTierStandingRow"]]],null,5],["text","\\n"],["block",["if"],[["get",["isTopTierStandingRow"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["text","/"],["append",["unknown",["data","losses"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,2],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-summoner-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,1,0],["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-league-points"],["flush-element"],["text","\\n      "],["append",["unknown",["data","leaguePoints"]],false],["open-element","div",[]],["dynamic-attr","class",["concat",[["unknown",["divisionChangeStyle"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,4],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["unknown",["data","leaguePoints"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-apex-cutoff-container"],["flush-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","lol-leagues-apex-cutoff-hr"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-apex-cutoff-title"],["flush-element"],["append",["unknown",["data","apexCutoffText"]],false],["close-element"],["text","\\n    "],["open-element","hr",[]],["static-attr","class","lol-leagues-apex-cutoff-hr"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_PLAYERS"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,8,7],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_WIN_LOSE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_TFT_WINS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["text","#"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","headerText"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,11,10],["text","    "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["append",["unknown",["tra","LEAGUES_PROFILE_TABLE_HEADER_POINTS"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["data","isApexTier"]]],null,12,9]],"locals":[]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["lol-leagues-list-best-status ",["get",["msStyle"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["msStyle","index"]},{"statements":[["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",[["unknown",["positionDeltaStyle"]]]]],["flush-element"],["append",["unknown",["positionDeltaAbs"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-1 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","position"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-2 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasPositionDelta"]]],null,15],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-3 lol-leagues-list-col"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","batch"],["tooltip",["get",["data","puuid"]],["get",["data","summonerName"]],true]]],false],["text","\\n    "],["open-element","span",[]],["static-attr","class","lol-leagues-list-friend"],["dynamic-attr","visible",["concat",[["unknown",["isFriend"]]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-4 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-5 lol-leagues-list-col"],["flush-element"],["close-element"],["text","\\n\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-6 lol-leagues-list-col"],["flush-element"],["append",["unknown",["data","wins"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","lol-leagues-list-col-7 lol-leagues-list-col"],["flush-element"],["text","\\n"],["block",["each"],[["get",["miniseriesStyles"]]],null,14],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
                 a = n(30);
-            n(82), e.exports = s.Ember.Component.extend({
+            n(82);
+            const i = "summoner";
+            e.exports = s.Ember.Component.extend({
                 classNames: ["rank-queue-dropdown-component"],
                 classNameBindings: ["wrapperStyle"],
                 wrapperStyle: "lol-leagues-filter-wrapper",
@@ -2503,27 +2530,39 @@
                     }))
                 },
                 isPlayerUnranked: s.Ember.computed("leagues", (function() {
-                    const e = this.get("leagues"),
-                        t = s.Lodash.filter(e.get("summonerLeagues"), (e => e && s.LeaguesConsts.TIERS.includes(e.tier)));
-                    return !t || 0 === t.length
+                    const e = this.get("leagues").get("summonerLeagues").filter((e => e && s.LeaguesConsts.TIERS.includes(e.tier)));
+                    return !e || 0 === e.length
                 })),
-                challengerQueues: s.Ember.computed("challengerLaddersEnabled", "selectedLeague.queueType", (function() {
+                challengerQueues: s.Ember.computed("challengerLaddersEnabled", "selectedState.league", "leagues.summonerLeagues", "overlayMode", (function() {
                     const e = this,
                         t = e.get("challengerLaddersEnabled");
                     if (!t) return s.Ember.A([]);
-                    return s.Lodash.map(t, (t => ({
-                        queueType: t,
-                        isSelected: "apex" === this.get("leagueTypeSelected") && this.get("selectedLeague.queueType") === t,
-                        queueTypeDisplay: e.get("tra").formatString("LEAGUES_DROPDOWN_APEX", {
-                            queueType: s.LeagueTierNames.getRankedQueueName(t)
-                        })
-                    })))
+                    const n = this.get("selectedState"),
+                        a = this.get("leagues.summonerLeagues"),
+                        o = [];
+                    return t.forEach((t => {
+                        const l = a.find((e => {
+                            const n = e?.queueType === t && s.LeaguesConsts.APEX_TIERS.includes(e.tier),
+                                a = null != e.nextApexUpdateMillis && e.nextApexUpdateMillis < Date.now();
+                            return n && (e.requestedRankedEntry || a)
+                        }));
+                        if (this.get("overlayMode") && !l) return;
+                        const r = {
+                            queueType: t,
+                            leagueType: l ? i : "apex",
+                            isSelected: (n?.isViewingApexTier || n?.isViewingTopPlayers) && n.league?.queueType === t,
+                            queueTypeDisplay: e.get("tra").formatString("LEAGUES_DROPDOWN_APEX", {
+                                queueType: s.LeagueTierNames.getRankedQueueName(t)
+                            })
+                        };
+                        o.push(r)
+                    })), o
                 })),
                 summonerLeagues: s.Ember.computed("selectedLeague.queueType", "leagues", (function() {
                     const e = this.get("leagues.summonerLeagues"),
                         t = this.get("selectedLeague.queueType");
                     if (!e) return null;
-                    return s.Lodash.map(e, (e => ({
+                    return e.map((e => ({
                         queue: e,
                         isSelected: "summoner" === this.get("leagueTypeSelected") && t === e.queueType
                     }))).filter((function(e) {
@@ -2531,16 +2570,26 @@
                         return !(0, a.isTftQueueType)(e.queue.queueType) && !t
                     }))
                 })),
-                topRatedLadderQueues: s.Ember.computed("topRatedLaddersEnabled", (function() {
+                topRatedLadderQueues: s.Ember.computed("topRatedLaddersEnabled", "selectedState", "leagues", "overlayMode", (function() {
                     const e = this,
                         t = e.get("topRatedLaddersEnabled");
                     if (!t) return s.Ember.A([]);
-                    return s.Lodash.map(t, (t => ({
-                        queueType: t,
-                        queueTypeDisplay: e.get("tra").formatString("LEAGUES_DROPDOWN_APEX", {
-                            queueType: s.LeagueTierNames.getRankedQueueName(t)
-                        })
-                    })))
+                    const n = this.get("selectedState"),
+                        a = this.get("leagues.summonerLeagues"),
+                        o = [];
+                    return t.forEach((t => {
+                        const l = a.find((e => e?.queueType === t && s.LeaguesConsts.RATED_TIER_NAME_NONE !== e.tier));
+                        if (this.get("overlayMode") && !l) return;
+                        const r = {
+                            queueType: t,
+                            leagueType: l ? i : "rated",
+                            isSelected: n?.isViewingRatedLadder && n.league?.queueType === t,
+                            queueTypeDisplay: e.get("tra").formatString("LEAGUES_DROPDOWN_APEX", {
+                                queueType: s.LeagueTierNames.getRankedQueueName(t)
+                            })
+                        };
+                        o.push(r)
+                    })), o
                 })),
                 _onSelected: function(e) {
                     const t = e.selected.dataset.leaguetype,
@@ -2554,8 +2603,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "BRMVkc2O",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-flat-dropdown",[]],["static-attr","class","rank-queue-dropdown-container"],["static-attr","direction","downwards"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPlayerUnranked"]]],null,4],["text","  "],["open-element","lol-uikit-dropdown-optgroup",[]],["static-attr","slot","lol-uikit-dropdown-optgroup"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-uikit-dropdown-optgroup-header"],["static-attr","slot","lol-uikit-dropdown-optgroup-header"],["flush-element"],["append",["unknown",["tra","LEAGUES_DROPDOWN_GROUP_CHALLENGER_TIER"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["challengerQueues"]]],null,1],["block",["each"],[["get",["topRatedLadderQueues"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","data-leaguetype","rated"],["dynamic-attr","data-queuetype",["unknown",["l","queueType"]],null],["flush-element"],["append",["unknown",["l","queueTypeDisplay"]],false],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["l","isSelected"]],null],["static-attr","data-leaguetype","apex"],["dynamic-attr","data-queuetype",["unknown",["l","queueType"]],null],["flush-element"],["append",["unknown",["l","queueTypeDisplay"]],false],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["l","isSelected"]],null],["static-attr","data-leaguetype","summoner"],["dynamic-attr","data-queuetype",["concat",[["unknown",["l","queue","queueType"]]]]],["flush-element"],["text","\\n            "],["append",["unknown",["l","queue","queueTypeDisplay"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["block",["each"],[["get",["summonerLeagues"]]],null,2]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-dropdown-optgroup",[]],["static-attr","slot","lol-uikit-dropdown-optgroup"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-uikit-dropdown-optgroup-header"],["static-attr","slot","lol-uikit-dropdown-optgroup-header"],["flush-element"],["append",["unknown",["tra","LEAGUES_QUEUE_NAME_UNRANKED"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["leagues","summonerLeagues"]]],null,3],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "JWsSJTfs",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rank-queue-dropdown\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-flat-dropdown",[]],["static-attr","class","rank-queue-dropdown-container"],["static-attr","direction","downwards"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isPlayerUnranked"]]],null,4],["text","  "],["open-element","lol-uikit-dropdown-optgroup",[]],["static-attr","slot","lol-uikit-dropdown-optgroup"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-uikit-dropdown-optgroup-header"],["static-attr","slot","lol-uikit-dropdown-optgroup-header"],["flush-element"],["append",["unknown",["tra","LEAGUES_DROPDOWN_GROUP_CHALLENGER_TIER"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["challengerQueues"]]],null,1],["block",["each"],[["get",["topRatedLadderQueues"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["l","isSelected"]],null],["dynamic-attr","data-leaguetype",["unknown",["l","leagueType"]],null],["dynamic-attr","data-queuetype",["unknown",["l","queueType"]],null],["flush-element"],["append",["unknown",["l","queueTypeDisplay"]],false],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["l","isSelected"]],null],["dynamic-attr","data-leaguetype",["unknown",["l","leagueType"]],null],["dynamic-attr","data-queuetype",["unknown",["l","queueType"]],null],["flush-element"],["append",["unknown",["l","queueTypeDisplay"]],false],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["text","          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["l","isSelected"]],null],["static-attr","data-leaguetype","summoner"],["dynamic-attr","data-queuetype",["concat",[["unknown",["l","queue","queueType"]]]]],["flush-element"],["text","\\n            "],["append",["unknown",["l","queue","queueTypeDisplay"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["l","index"]},{"statements":[["block",["each"],[["get",["summonerLeagues"]]],null,2]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-dropdown-optgroup",[]],["static-attr","slot","lol-uikit-dropdown-optgroup"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-uikit-dropdown-optgroup-header"],["static-attr","slot","lol-uikit-dropdown-optgroup-header"],["flush-element"],["append",["unknown",["tra","LEAGUES_QUEUE_NAME_UNRANKED"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["leagues","summonerLeagues"]]],null,3],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2621,8 +2670,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "n01bMOj9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rated-badge-container"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","rated-badge-icon"],["dynamic-attr","src",["concat",[["unknown",["ratedTierImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,0],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-rating-text"],["flush-element"],["text","\\n    "],["append",["unknown",["displayedRatedRating"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-divider"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-player-container"],["flush-element"],["text","\\n    "],["open-element","lol-social-avatar-icon",[]],["dynamic-attr","icon-id",["unknown",["summoner","profileIconId"]],null],["static-attr","availability","online"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","rated-badge-player-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid"],["short",["get",["summoner","puuid"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-lottie",[]],["static-attr","class","rated-badge-highlight"],["static-attr","image-path","/fe/lol-static-assets/lottie/tft-rated/images/"],["static-attr","src","/fe/lol-static-assets/lottie/tft-rated/Badge_Highlight_EOG.json"],["static-attr","resize-to-fit","true"],["static-attr","loop","true"],["static-attr","autoplay","true"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "iW6VlM8y",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-badge\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rated-badge-container"],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","rated-badge-icon"],["dynamic-attr","src",["concat",[["unknown",["ratedTierImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isTft"]]],null,0],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-rating-text"],["flush-element"],["text","\\n    "],["append",["unknown",["displayedRatedRating"]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-divider"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-badge-player-container"],["flush-element"],["text","\\n    "],["open-element","lol-social-avatar-icon",[]],["dynamic-attr","icon-id",["unknown",["summoner","profileIconId"]],null],["static-attr","availability","online"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","rated-badge-player-name"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid"],["short",["get",["summoner","puuid"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","lol-uikit-lottie",[]],["static-attr","class","rated-badge-highlight"],["static-attr","image-path","/fe/lol-static-assets/lottie/tft-rated/images/"],["static-attr","src","/fe/lol-static-assets/lottie/tft-rated/Badge_Highlight_EOG.json"],["static-attr","resize-to-fit","true"],["static-attr","loop","true"],["static-attr","autoplay","true"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2669,8 +2718,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "n0zbdZoQ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["countdown-label ",["helper",["if"],[["get",["isUrgent"]],"urgent"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["countdownLabel"]],false],["text"," \\n"],["close-element"],["text","\\n \\n"],["block",["if"],[["get",["hasTimeLeft"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["unknown",["onRefresh"]],null],["static-attr","class","countdown-refresh-button"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","RANKED_REFRESH_LABEL"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["countdown-time-left ",["helper",["if"],[["get",["isUrgent"]],"urgent"],null]]]],["flush-element"],["text","\\n    "],["append",["unknown",["countdownTimeLeft"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "RcH7WZW8",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\countdown-timer-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["countdown-label ",["helper",["if"],[["get",["isUrgent"]],"urgent"],null]]]],["flush-element"],["text","\\n  "],["append",["unknown",["countdownLabel"]],false],["text"," \\n"],["close-element"],["text","\\n \\n"],["block",["if"],[["get",["hasTimeLeft"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["unknown",["onRefresh"]],null],["static-attr","class","countdown-refresh-button"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","RANKED_REFRESH_LABEL"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["countdown-time-left ",["helper",["if"],[["get",["isUrgent"]],"urgent"],null]]]],["flush-element"],["text","\\n    "],["append",["unknown",["countdownTimeLeft"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2828,8 +2877,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "ajWjjC7N",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-vignette-parallax-background ",["unknown",["vignetteSize"]]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["headerText"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-promotion-vignette-subheader"],["flush-element"],["text","\\n  "],["append",["helper",["sanitize"],[["get",["subheaderText"]]],null],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-promotion-vignette-label\\n    ",["helper",["unless"],[["get",["isLowSpec"]],"animated"],null],"\\n    ",["helper",["if"],[["get",["isCompletedProvisionals"]],"provisional"],null],"\\n    ",["helper",["if"],[["get",["isTierPromotion"]],"tier"],null],"\\n    ",["unknown",["tierLowerCase"]],"\\n    ",["helper",["if"],[["get",["animationStarted"]],"fadeIn"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowProfileIcon"]]],null,2],["text","  "],["append",["helper",["player-name"],null,[["format"],["full"]]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLowSpec"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","\\n  "],["open-element","img",[]],["static-attr","class","leagues-promotion-emblem hidden"],["dynamic-attr","src",["unknown",["outroImagePath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","class","ceremony-video"],["static-attr","id","ceremony-intro"],["static-attr","fade-in","250"],["static-attr","fade-out","0"],["static-attr","signal-before-end","0.1"],["dynamic-attr","src",["unknown",["introVideoPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","class","ceremony-video"],["static-attr","id","ceremony-outro"],["static-attr","fade-in","0"],["static-attr","fade-out","0"],["static-attr","signal-before-end","0.15"],["dynamic-attr","src",["unknown",["outroVideoPath"]],null],["flush-element"],["close-element"],["text","\\n\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","leagues-promotion-emblem"],["dynamic-attr","src",["unknown",["outroImagePath"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","leagues-promotion-vignette-profile-icon-border"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["profileIconPath"]]]]],["static-attr","class","leagues-promotion-vignette-profile-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "cMG7w8Rs",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-promotion-vignette-v2-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-vignette-parallax-background ",["unknown",["vignetteSize"]]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["headerText"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-promotion-vignette-subheader"],["flush-element"],["text","\\n  "],["append",["helper",["sanitize"],[["get",["subheaderText"]]],null],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-promotion-vignette-label\\n    ",["helper",["unless"],[["get",["isLowSpec"]],"animated"],null],"\\n    ",["helper",["if"],[["get",["isCompletedProvisionals"]],"provisional"],null],"\\n    ",["helper",["if"],[["get",["isTierPromotion"]],"tier"],null],"\\n    ",["unknown",["tierLowerCase"]],"\\n    ",["helper",["if"],[["get",["animationStarted"]],"fadeIn"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowProfileIcon"]]],null,2],["text","  "],["append",["helper",["player-name"],null,[["format"],["full"]]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isLowSpec"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","\\n  "],["open-element","img",[]],["static-attr","class","leagues-promotion-emblem hidden"],["dynamic-attr","src",["unknown",["outroImagePath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","class","ceremony-video"],["static-attr","id","ceremony-intro"],["static-attr","fade-in","250"],["static-attr","fade-out","0"],["static-attr","signal-before-end","0.1"],["dynamic-attr","src",["unknown",["introVideoPath"]],null],["flush-element"],["close-element"],["text","\\n  "],["open-element","lol-uikit-video",[]],["static-attr","class","ceremony-video"],["static-attr","id","ceremony-outro"],["static-attr","fade-in","0"],["static-attr","fade-out","0"],["static-attr","signal-before-end","0.15"],["dynamic-attr","src",["unknown",["outroVideoPath"]],null],["flush-element"],["close-element"],["text","\\n\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","leagues-promotion-emblem"],["dynamic-attr","src",["unknown",["outroImagePath"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","leagues-promotion-vignette-profile-icon-border"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["profileIconPath"]]]]],["static-attr","class","leagues-promotion-vignette-profile-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2856,8 +2905,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "q10fXlPf",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-vignette-parallax-background ",["unknown",["vignetteSize"]]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-reward-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","LEAGUES_REWARD_VIGNETTE_HEADER"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-reward-vignette-subheader"],["flush-element"],["text","\\n  "],["append",["helper",["sanitize"],[["get",["notification","rewardEarnedTitle"]]],null],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-reward-vignette-container\\n    ",["unknown",["notification","rewardEarnedType"]],"\\n    ",["helper",["if"],[["get",["showChromaBackground"]],"chromabackground"],null],"\\n    ",["helper",["if"],[["get",["showGoldBackgroundGlow"]],"glow"],null]]]],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","leagues-reward-vignette-image"],["dynamic-attr","src",["concat",[["unknown",["rewardImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "wAjpgZfc",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\leagues-reward-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-vignette-parallax-background ",["unknown",["vignetteSize"]]]]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-parallax-background",[]],["dynamic-attr","animated",["concat",[["unknown",["isAnimationEnabled"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-reward-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","LEAGUES_REWARD_VIGNETTE_HEADER"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","leagues-reward-vignette-subheader"],["flush-element"],["text","\\n  "],["append",["helper",["sanitize"],[["get",["notification","rewardEarnedTitle"]]],null],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["leagues-reward-vignette-container\\n    ",["unknown",["notification","rewardEarnedType"]],"\\n    ",["helper",["if"],[["get",["showChromaBackground"]],"chromabackground"],null],"\\n    ",["helper",["if"],[["get",["showGoldBackgroundGlow"]],"glow"],null]]]],["flush-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","leagues-reward-vignette-image"],["dynamic-attr","src",["concat",[["unknown",["rewardImagePath"]]]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2907,8 +2956,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "SIzeRGd9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rated-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","rated_promotion_vignette_header"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","rated-vignette-lottie-frame"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-vignette-lottie-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-lottie",[]],["dynamic-attr","src",["concat",[["unknown",["lottiePath"]]]]],["dynamic-attr","image-path",["concat",[["unknown",["lottieImagePath"]]]]],["dynamic-attr","text-tierlabel",["concat",[["unknown",["tierText"]]]]],["static-attr","autoplay","true"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "tudUGfGi",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\rated-promotion-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rated-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","rated_promotion_vignette_header"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","rated-vignette-lottie-frame"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","rated-vignette-lottie-container"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-lottie",[]],["dynamic-attr","src",["concat",[["unknown",["lottiePath"]]]]],["dynamic-attr","image-path",["concat",[["unknown",["lottieImagePath"]]]]],["dynamic-attr","text-tierlabel",["concat",[["unknown",["tierText"]]]]],["static-attr","autoplay","true"],["flush-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -2994,8 +3043,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "GJNr3uRG",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","cherry-rated-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","rated_promotion_vignette_header"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","cherry-promotion-vignette-body"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","cherry-promotion-vignette-video-container"],["flush-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","preload",""],["dynamic-attr","src",["unknown",["cherryRatingVideoSrc"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","cherry-promotion-vignette-background"],["dynamic-attr","src",["concat",[["unknown",["backgroundSrc"]]]]],["static-attr","alt",""],["static-attr","role","presentation"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","cherry-rated-promotion-tier-text"],["flush-element"],["text","\\n  "],["append",["unknown",["tierText"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "Ezp8ggFB",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\cherry-rated-promotion-vignette-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","cherry-rated-promotion-vignette-header"],["flush-element"],["text","\\n  "],["append",["unknown",["tra","rated_promotion_vignette_header"]],false],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","cherry-promotion-vignette-body"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","cherry-promotion-vignette-video-container"],["flush-element"],["text","\\n    "],["open-element","uikit-video",[]],["static-attr","preload",""],["dynamic-attr","src",["unknown",["cherryRatingVideoSrc"]],null],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","img",[]],["static-attr","class","cherry-promotion-vignette-background"],["dynamic-attr","src",["concat",[["unknown",["backgroundSrc"]]]]],["static-attr","alt",""],["static-attr","role","presentation"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","cherry-rated-promotion-tier-text"],["flush-element"],["text","\\n  "],["append",["unknown",["tierText"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3003,17 +3052,23 @@
             e.exports = n.p + "cherry-promotion-vignette-background.png"
         }, (e, t, n) => {
             "use strict";
-            var s = n(1);
-            n(5);
-            const a = ["Matchmaking", "ReadyCheck", "ChampSelect", "GameStart", "FailedToLaunch", "InProgress", "Reconnect", "WaitingForStats", "PreEndOfGame", "EndOfGame", "TerminatedInError"];
-            e.exports = s.Ember.Component.extend({
+            var s, a = n(1),
+                i = (n(5), (s = n(113)) && s.__esModule ? s : {
+                    default: s
+                });
+            const o = "ranked-5s-ftux-seen",
+                l = ["Matchmaking", "ReadyCheck", "ChampSelect", "GameStart", "FailedToLaunch", "InProgress", "Reconnect", "WaitingForStats", "PreEndOfGame", "EndOfGame", "TerminatedInError"];
+            e.exports = a.Ember.Component.extend({
                 classNames: ["notifications-root"],
-                layout: n(113),
+                layout: n(114),
                 init() {
-                    this._super(...arguments), this.seasonMemorialEnabledDefault = true, s.db.observe("/lol-login/v1/session", this, this.handleLoginSession), s.db.observe("/lol-settings/v2/ready", this, this.handleSettingsReady), s.db.observe("/lol-ranked/v1/current-ranked-stats", this, this.handleRankedStats), s.db.observe("/riotclient/region-locale", this, this.handleRegionLocale), s.db.observe("/lol-summoner/v1/current-summoner", this, this.handleCurrentSummoner), s.db.observe("/lol-gameflow/v1/session", this, this.handleGameflowSession), s.db.observe("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.season_memorial_modal_enabled", this, this.handleSeasonMemorialEnabled), s.db.observe("/lol-ranked/v1/eos-memorial", this, this.handleSeasonMemorialDebugModel)
+                    this._super(...arguments), this.seasonMemorialEnabledDefault = true, a.db.observe("/lol-login/v1/session", this, this.handleLoginSession), a.db.observe("/lol-settings/v2/ready", this, this.handleSettingsReady), a.db.observe("/lol-ranked/v1/current-ranked-stats", this, this.handleRankedStats), a.db.observe("/riotclient/region-locale", this, this.handleRegionLocale), a.db.observe("/lol-summoner/v1/current-summoner", this, this.handleCurrentSummoner), a.db.observe("/lol-gameflow/v1/session", this, this.handleGameflowSession), a.db.observe("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.season_memorial_modal_enabled", this, this.handleSeasonMemorialEnabled), a.db.observe("/lol-ranked/v1/eos-memorial", this, this.handleSeasonMemorialDebugModel)
                 },
                 willDestroyElement() {
-                    this._super(...arguments), s.db.unobserve(this)
+                    this._super(...arguments), a.db.unobserve(this)
+                },
+                didRender() {
+                    this._super(...arguments), this._showRankedInfoModal()
                 },
                 handleAccountLeaguesSettings(e) {
                     this.set("accountLeaguesSettings", e)
@@ -3022,10 +3077,10 @@
                     this.set("session", e)
                 },
                 handleSettingsReady(e) {
-                    e && s.db.observe("/lol-settings/v2/account/LCUPreferences/lol-leagues", this, this.handleAccountLeaguesSettings), this.set("settingsReady", e)
+                    e && a.db.observe("/lol-settings/v2/account/LCUPreferences/lol-leagues", this, this.handleAccountLeaguesSettings), this.set("settingsReady", e)
                 },
                 handleRankedStats(e) {
-                    this.set("currentRankedStats", e), this.get("recentSeasons") || s.db.post("/lol-seasons/v1/allSeasons/product/LOL", {
+                    this.set("currentRankedStats", e), this.get("recentSeasons") || a.db.post("/lol-seasons/v1/allSeasons/product/LOL", {
                         lastNYears: 2
                     }).then((e => {
                         this.set("recentSeasons", e)
@@ -3046,33 +3101,33 @@
                 handleSeasonMemorialDebugModel(e) {
                     e && this.setProperties(e)
                 },
-                hasSeenSeasonMemorialModal: s.Ember.computed("previousSeason.seasonId", "accountLeaguesSettings.data.season-memorial-modal", (function() {
+                hasSeenSeasonMemorialModal: a.Ember.computed("previousSeason.seasonId", "accountLeaguesSettings.data.season-memorial-modal", (function() {
                     const e = this.get("previousSeason.seasonId");
                     return (this.get("accountLeaguesSettings.data.season-memorial-modal") || 0) >= e
                 })),
-                isGameflowPhaseValid: s.Ember.computed("gameflowSession.phase", (function() {
+                isGameflowPhaseValid: a.Ember.computed("gameflowSession.phase", (function() {
                     const e = this.get("gameflowSession.phase");
-                    return !a.includes(e)
+                    return !l.includes(e)
                 })),
-                shouldShowSeasonMemorialModal: s.Ember.computed("hasSeenSeasonMemorialModal", "isGameflowPhaseValid", "isSeasonMemorialModalEnabled", "activeSeason", (function() {
+                shouldShowSeasonMemorialModal: a.Ember.computed("hasSeenSeasonMemorialModal", "isGameflowPhaseValid", "isSeasonMemorialModalEnabled", "activeSeason", (function() {
                     const e = this.get("hasSeenSeasonMemorialModal"),
                         t = this.get("isGameflowPhaseValid"),
                         n = this.get("isSeasonMemorialModalEnabled"),
                         s = Boolean(this.get("activeSeason"));
                     return !e && t && n && s
                 })),
-                activeSeason: s.Ember.computed("recentSeasons.@each.seasonStart", "recentSeasons.@each.seasonEnd", (function() {
+                activeSeason: a.Ember.computed("recentSeasons.@each.seasonStart", "recentSeasons.@each.seasonEnd", (function() {
                     const e = this.get("recentSeasons") || [],
                         t = Date.now();
                     return e.find((e => t >= e.seasonStart && t < e.seasonEnd))
                 })),
-                previousSeason: s.Ember.computed("recentSeasons.@each.seasonEnd", (function() {
+                previousSeason: a.Ember.computed("recentSeasons.@each.seasonEnd", (function() {
                     const e = this.get("recentSeasons") || [];
                     e.sort(((e, t) => t.seasonEnd - e.seasonEnd));
                     const t = Date.now();
                     return e.find((e => t > e.seasonEnd))
                 })),
-                isDependenciesInitialized: s.Ember.computed("session.state", "currentSummoner.unnamed", "currentSummoner.nameChangeFlag", "activeSeason", "previousSeason", "currentRankedStats", "settingsReady", "accountLeaguesSettings", "regionLocale", (function() {
+                isDependenciesInitialized: a.Ember.computed("session.state", "currentSummoner.unnamed", "currentSummoner.nameChangeFlag", "activeSeason", "previousSeason", "currentRankedStats", "settingsReady", "accountLeaguesSettings", "regionLocale", (function() {
                     const e = this.get("session.state"),
                         t = this.get("currentSummoner"),
                         n = Boolean(this.get("activeSeason")),
@@ -3083,20 +3138,76 @@
                         l = Boolean(this.get("regionLocale"));
                     return !this._isLoginSessionInvalid(e) && this._isNamedSummoner(t) && n && s && a && i && o && l
                 })),
+                _showRankedInfoModal() {
+                    if (!!this.get("accountLeaguesSettings.data.ranked-5s-ftux-seen") || void 0 === this.get("accountLeaguesSettings")) return !1;
+                    const e = a.componentFactory.create("RankedFtuxModalComponent"),
+                        t = a.ModalManager.add({
+                            type: "DialogAlert",
+                            data: {
+                                contents: e.domNode,
+                                okText: this.get("tra.RANKED_FIVES_FTUX_CLOSE_BUTTON_TEXT"),
+                                dismissible: !0,
+                                dismissibleType: "inside",
+                                onClose: () => this._saveRankedFivesFtuxModalSeen()
+                            },
+                            show: !0
+                        });
+                    t.okPromise.then((() => {
+                        a.ModalManager.remove(t), e && e.componentPromise && e.componentPromise.then((e => a.Ember.run((() => {
+                            e.app.destroy()
+                        }))))
+                    })).catch((e => {
+                        a.logger.error(`Failed to destroy modal: ${e}`)
+                    }))
+                },
                 _isLoginSessionInvalid: e => "SUCCEEDED" !== e,
-                _isNamedSummoner: e => e && !e.unnamed && !e.nameChangeFlag
+                _isNamedSummoner: e => e && !e.unnamed && !e.nameChangeFlag,
+                _saveRankedFivesFtuxModalSeen() {
+                    try {
+                        return i.default.saveAccountSetting(o, !0)
+                    } catch (e) {
+                        a.logger.warning(`Failed to save ${o} setting: ${e}`)
+                    }
+                }
             })
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var s = n(1);
+            var a = {
+                saveLocalSetting: (e, t) => {
+                    const n = {
+                        [e]: t
+                    };
+                    return (0, s.dataBinding)("/lol-settings").patch("/v1/local/lol-leagues", {
+                        data: n,
+                        schemaVersion: 1
+                    })
+                },
+                saveAccountSetting: (e, t) => {
+                    const n = {
+                        [e]: t
+                    };
+                    return (0, s.dataBinding)("/lol-settings").patch("/v2/account/LCUPreferences/lol-leagues", {
+                        data: n,
+                        schemaVersion: 1
+                    })
+                }
+            };
+            t.default = a
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "onOKLVp7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isDependenciesInitialized"]]],null,2],["text","\\n"],["block",["if"],[["get",["previousSeason"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["leagues-dialogs"],null,[["previousSeason","activeSeason"],[["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["season-memorial-modal"],null,[["accountLeaguesSettings","activeSeason","previousSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["activeSeason"]],["get",["previousSeason"]],["get",["regionLocale"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["split-notifications"],null,[["accountLeaguesSettings","currentSummoner","currentRankedStats","activeSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["currentSummoner"]],["get",["currentRankedStats"]],["get",["activeSeason"]],["get",["regionLocale"]]]]],false],["text","\\n  "],["append",["helper",["eos-notifications"],null,[["regionLocale","previousSeason","activeSeason"],[["get",["regionLocale"]],["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowSeasonMemorialModal"]]],null,1],["text","\\n  "],["append",["helper",["season-start-modal"],null,[["activeSeason","accountLeaguesSettings"],[["get",["activeSeason"]],["get",["accountLeaguesSettings"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "qf3xrpLw",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isDependenciesInitialized"]]],null,2],["text","\\n"],["block",["if"],[["get",["previousSeason"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["leagues-dialogs"],null,[["previousSeason","activeSeason"],[["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["season-memorial-modal"],null,[["accountLeaguesSettings","activeSeason","previousSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["activeSeason"]],["get",["previousSeason"]],["get",["regionLocale"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["split-notifications"],null,[["accountLeaguesSettings","currentSummoner","currentRankedStats","activeSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["currentSummoner"]],["get",["currentRankedStats"]],["get",["activeSeason"]],["get",["regionLocale"]]]]],false],["text","\\n  "],["append",["helper",["eos-notifications"],null,[["regionLocale","previousSeason","activeSeason"],[["get",["regionLocale"]],["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowSeasonMemorialModal"]]],null,1],["text","\\n  "],["append",["helper",["season-start-modal"],null,[["activeSeason","accountLeaguesSettings"],[["get",["activeSeason"]],["get",["accountLeaguesSettings"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                i = (s = n(115)) && s.__esModule ? s : {
+                i = (s = n(113)) && s.__esModule ? s : {
                     default: s
                 };
             n(116);
@@ -3142,40 +3253,13 @@
             })
         }, (e, t, n) => {
             "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var s = n(1);
-            var a = {
-                saveLocalSetting: (e, t) => {
-                    const n = {
-                        [e]: t
-                    };
-                    return (0, s.dataBinding)("/lol-settings").patch("/v1/local/lol-leagues", {
-                        data: n,
-                        schemaVersion: 1
-                    })
-                },
-                saveAccountSetting: (e, t) => {
-                    const n = {
-                        [e]: t
-                    };
-                    return (0, s.dataBinding)("/lol-settings").patch("/v2/account/LCUPreferences/lol-leagues", {
-                        data: n,
-                        schemaVersion: 1
-                    })
-                }
-            };
-            t.default = a
-        }, (e, t, n) => {
-            "use strict";
             n.r(t)
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
                 i = n(29),
                 o = n(32),
-                l = (s = n(115)) && s.__esModule ? s : {
+                l = (s = n(113)) && s.__esModule ? s : {
                     default: s
                 };
             n(118);
@@ -3362,9 +3446,9 @@
                         default:
                             return
                     }
-                    let h = null,
-                        _ = null;
-                    if (E ? (h = E.metadata.currentSplit, _ = E.seasonStart) : (h = this.get("activeSeason.metadata.currentSplit"), _ = this.get("activeSeason.seasonStart")), !h && !(0, i.isTftQueueType)(u)) return;
+                    let _ = null,
+                        h = null;
+                    if (E ? (_ = E.metadata.currentSplit, h = E.seasonStart) : (_ = this.get("activeSeason.metadata.currentSplit"), h = this.get("activeSeason.seasonStart")), !_ && !(0, i.isTftQueueType)(u)) return;
                     const S = e.seasonEndTime - 36e5,
                         T = {
                             source: r,
@@ -3377,10 +3461,10 @@
                                     month: "long",
                                     day: "numeric"
                                 }),
-                                year: (0, a.convertDateMillisToString)(_, l, {
+                                year: (0, a.convertDateMillisToString)(h, l, {
                                     year: "numeric"
                                 }),
-                                split: h ? h.toString() : "",
+                                split: _ ? _.toString() : "",
                                 rank: s.LeagueTierNames.getFullTierDivisionName(d, m),
                                 queue: s.LeagueTierNames.getRankedQueueName(u)
                             }
@@ -3438,7 +3522,7 @@
             var s, a = n(1),
                 i = n(5),
                 o = n(32),
-                l = (s = n(115)) && s.__esModule ? s : {
+                l = (s = n(113)) && s.__esModule ? s : {
                     default: s
                 };
             n(124);
@@ -3592,8 +3676,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "VonA+ttv",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_11\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","closeButton","dismissibleType","okText","onClose"],[["get",["showSeasonMemorialModal"]],"DialogAlert",true,true,"inside",["get",["tra","SPLIT_START_TAKEOVER_CLOSE_BUTTON_TEXT"]],["helper",["action"],[["get",[null]],"closeSeasonMemorialModal"],null]]],2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","rewards-container-restricted"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","honor-ineligible-panel"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","honor-ineligible-text"],["flush-element"],["append",["unknown",["honorIneligibleText"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","honor-ineligible-crest"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","reward-container-column"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-image-container"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["rewardItem","imagePath"]]]]],["dynamic-attr","class",["concat",["rewards-image ",["unknown",["rewardItem","cssClass"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-description"],["flush-element"],["append",["unknown",["rewardItem","description"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["rewardItem"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","season-memorial-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-background"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-title-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-metalwork left"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-season-title"],["flush-element"],["append",["unknown",["seasonTitle"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-metalwork right"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-season-duration"],["flush-element"],["append",["unknown",["splitDurationTitle"]],false],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-container"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","season-rewards-pending-disclaimer-info-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-spacer"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-text"],["flush-element"],["append",["unknown",["tra","SEASON_MEMORIAL_MODAL_REWARDS_PENDING_DISCLAIMER"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-header-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-content-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-details"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-title-text"],["flush-element"],["append",["unknown",["tra","SEASON_MEMORIAL_TAKEOVER_FINAL_RANK_TEXT"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-text"],["flush-element"],["append",["unknown",["previousSeasonHighestRankText"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-ranked-queue-text"],["flush-element"],["append",["unknown",["previousSeasonRankedQueueText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-emblem-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rank-crest-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","crest"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","crest-sizer"],["flush-element"],["text","\\n                "],["open-element","lol-regalia-emblem-element",[]],["static-attr","animations","false"],["dynamic-attr","ranked-tier",["concat",[["unknown",["highestRankQueue","tier"]]]]],["flush-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["season-memorial-modal-content-separator-pike ",["helper",["unless"],[["get",["isHonorEligible"]],"hidden"],null]]]],["flush-element"],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-bg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-title-text"],["flush-element"],["append",["unknown",["seasonRewardsTitleText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-content-spacer"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","scrollable-container"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","class",["concat",["season-memorial-rewards-scroller-container ",["helper",["unless"],[["get",["isHonorEligible"]],"restricted"],null]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rewards-images-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["seasonAndSplitRewards"]]],null,1],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["unless"],[["get",["isHonorEligible"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "e6bp7i+e",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\season-memorial-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","closeButton","dismissibleType","okText","onClose"],[["get",["showSeasonMemorialModal"]],"DialogAlert",true,true,"inside",["get",["tra","SPLIT_START_TAKEOVER_CLOSE_BUTTON_TEXT"]],["helper",["action"],[["get",[null]],"closeSeasonMemorialModal"],null]]],2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","rewards-container-restricted"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","honor-ineligible-panel"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","honor-ineligible-text"],["flush-element"],["append",["unknown",["honorIneligibleText"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","honor-ineligible-crest"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","reward-container-column"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-image-container"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["rewardItem","imagePath"]]]]],["dynamic-attr","class",["concat",["rewards-image ",["unknown",["rewardItem","cssClass"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","reward-description"],["flush-element"],["append",["unknown",["rewardItem","description"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["rewardItem"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","season-memorial-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-background"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-title-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-metalwork left"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-season-title"],["flush-element"],["append",["unknown",["seasonTitle"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-metalwork right"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-season-duration"],["flush-element"],["append",["unknown",["splitDurationTitle"]],false],["close-element"],["text","\\n      \\n      "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-container"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","season-rewards-pending-disclaimer-info-icon"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-spacer"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-rewards-pending-disclaimer-text"],["flush-element"],["append",["unknown",["tra","SEASON_MEMORIAL_MODAL_REWARDS_PENDING_DISCLAIMER"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-header-spacer"],["flush-element"],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","season-memorial-modal-content-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-details"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-title-text"],["flush-element"],["append",["unknown",["tra","SEASON_MEMORIAL_TAKEOVER_FINAL_RANK_TEXT"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-text"],["flush-element"],["append",["unknown",["previousSeasonHighestRankText"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","season-memorial-modal-ranked-queue-text"],["flush-element"],["append",["unknown",["previousSeasonRankedQueueText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-modal-rank-emblem-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","rank-crest-container"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","crest"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","crest-sizer"],["flush-element"],["text","\\n                "],["open-element","lol-regalia-emblem-element",[]],["static-attr","animations","false"],["dynamic-attr","ranked-tier",["concat",[["unknown",["highestRankQueue","tier"]]]]],["flush-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["dynamic-attr","class",["concat",["season-memorial-modal-content-separator-pike ",["helper",["unless"],[["get",["isHonorEligible"]],"hidden"],null]]]],["flush-element"],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-bg"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-title-text"],["flush-element"],["append",["unknown",["seasonRewardsTitleText"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","season-memorial-rewards-content-spacer"],["flush-element"],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","scrollable-container"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","class",["concat",["season-memorial-rewards-scroller-container ",["helper",["unless"],[["get",["isHonorEligible"]],"restricted"],null]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","rewards-images-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["seasonAndSplitRewards"]]],null,1],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["unless"],[["get",["isHonorEligible"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -3602,7 +3686,7 @@
                 a = n(5),
                 i = n(32);
             n(127);
-            var o, l = (o = n(115)) && o.__esModule ? o : {
+            var o, l = (o = n(113)) && o.__esModule ? o : {
                 default: o
             };
             const r = n(128),
@@ -3622,31 +3706,31 @@
                 g = "INACTIVITY",
                 E = "FIRST_CHALLENGER_OF_SEASON",
                 f = "FINAL_RANK_ONE_OF_SEASON",
-                h = "RATED_SEEDED",
-                _ = "RATED_TIER_PROMOTED",
+                _ = "RATED_SEEDED",
+                h = "RATED_TIER_PROMOTED",
                 S = "CHERRY_RATED_TIER_PROMOTED",
                 T = {
                     [u]: "LeaguesPromotionVignetteV2Component",
                     [d]: "LeaguesRewardVignetteComponent",
                     [m]: "LeaguesPromotionVignetteV2Component",
-                    [h]: "RatedPromotionVignetteComponent",
                     [_]: "RatedPromotionVignetteComponent",
+                    [h]: "RatedPromotionVignetteComponent",
                     [S]: "CherryRatedPromotionVignetteComponent"
                 },
                 v = {
                     [u]: 500,
                     [d]: 1e3,
                     [m]: 500,
-                    [h]: 1e3,
                     [_]: 1e3,
+                    [h]: 1e3,
                     [S]: 1e3
                 },
                 R = {
                     [u]: "LARGE",
                     [d]: "SMALL",
                     [m]: "LARGE",
-                    [h]: "LARGE",
                     [_]: "LARGE",
+                    [h]: "LARGE",
                     [S]: "LARGE"
                 };
             e.exports = s.Ember.Component.extend(c, {
@@ -3783,8 +3867,8 @@
                                 rankedStats: this.get("rankedStats"),
                                 tiers: c
                             }),
-                            d = e.notifyReason === _ && e.queueType === a.QUEUES.RANKED_CHERRY_QUEUE_TYPE;
-                        if (e.notifyReason === h && e.queueType === a.QUEUES.RANKED_CHERRY_QUEUE_TYPE) return void l(e);
+                            d = e.notifyReason === h && e.queueType === a.QUEUES.RANKED_CHERRY_QUEUE_TYPE;
+                        if (e.notifyReason === _ && e.queueType === a.QUEUES.RANKED_CHERRY_QUEUE_TYPE) return void l(e);
                         const m = d ? T.CHERRY_RATED_TIER_PROMOTED : T[o],
                             p = s.componentFactory.create({
                                 type: m,
@@ -3992,6 +4076,34 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
+            }), t.default = void 0;
+            var s = n(1);
+            n(130);
+            var a = s.Ember.Component.extend({
+                layout: n(131),
+                classNames: ["ranked-ftux-modal"],
+                queueTypeQueueId: 710,
+                gameModeTitleText: s.Ember.computed("tra", (function() {
+                    return this.get("tra").formatString("RANKED_FIVES_FTUX_TITLE_TEXT_1", {
+                        url: "https://www.leagueoflegends.com/news/dev/dev-the-return-of-ranked-5s"
+                    })
+                }))
+            });
+            t.default = a
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            const s = n(1).Ember;
+            e.exports = s.HTMLBars.template({
+                id: "ncOUo5pM",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-image-wrapper"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","content-image"],["static-attr","src","lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Ranked/tutorial-modal-landscape.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title external-link"],["flush-element"],["append",["helper",["sanitize"],[["get",["gameModeTitleText"]]],null],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_1"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_2"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_2"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_3"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_3"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
             }), t.default = function(e, t, n) {
                 const a = document.createElement("div");
                 a.className = "lol-leagues lol-leagues-full", a.type = "LeaguesRootComponent";
@@ -4027,24 +4139,21 @@
             };
             var s = n(1),
                 a = n(29),
-                i = n(130);
+                i = n(133);
             const o = "/lol-ranked",
                 l = "/v1/league-ladders/";
 
             function r(e, t, n, a, i, o) {
-                e.addEventListener("selected", (l => {
-                    let r = null,
-                        c = null;
-                    if (s.Telemetry.startTracingEvent("profile-ranked-rendered"), !l || !l.summonerId) return o && o.set("refreshTopChamps", !0), i || (i = n.create("LeaguesRootComponent", o)), void i.componentPromise.then((() => {
-                        t.appendChild(i.domNode)
-                    }));
-                    r = l.summonerId, c = l.puuid;
-                    const u = n.create("LeaguesRootComponent", l ? s.Ember.Object.create({
-                        summonerId: r,
-                        puuid: c,
+                e.addEventListener("selected", (i => {
+                    let o = null,
+                        l = null;
+                    s.Telemetry.startTracingEvent("profile-ranked-rendered"), i && i.summonerId && (o = i.summonerId, l = i.puuid);
+                    const r = n.create("LeaguesRootComponent", i ? s.Ember.Object.create({
+                        summonerId: o,
+                        puuid: l,
                         overlayMode: a
                     }) : s.Ember.Object.create());
-                    t.appendChild(u.domNode), e.lastDisplayedLeagueComponent = u
+                    t.appendChild(r.domNode), e.lastDisplayedLeagueComponent = r
                 })), e.addEventListener("deselected", (() => c(e, t)))
             }
 
@@ -4196,7 +4305,7 @@
                     } = e.default, l = (0, t.default)(s, i);
                     e.default.tra = i;
                     const r = n(3).default,
-                        c = n(129).default;
+                        c = n(132).default;
                     return r(o, a, l), c(e.default.getProvider(), o, i), {}
                 }))
             }))
