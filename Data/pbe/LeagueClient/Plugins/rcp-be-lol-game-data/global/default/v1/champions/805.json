@@ -28,7 +28,8 @@
     "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/805.ogg",
     "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/805.ogg",
     "roles": [
-        "assassin"
+        "assassin",
+        "mage"
     ],
     "recommendedItemDefaults": [],
     "skins": [
@@ -231,8 +232,8 @@
     "passive": {
         "name": "Silver Stake",
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Locke/HUD/Icons2D/Locke_Passive.Locke.png",
-        "abilityVideoPath": "",
-        "abilityVideoImagePath": "",
+        "abilityVideoPath": "champion-abilities/0805/ability_0805_P1.webm",
+        "abilityVideoImagePath": "champion-abilities/0805/ability_0805_P1.jpg",
         "description": "Locke's attacks deal additional magic damage On-Hit, increased based on enemy missing Health."
     },
     "spells": [
@@ -240,8 +241,8 @@
             "spellKey": "q",
             "name": "Ritual Nails",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Locke/HUD/Icons2D/Locke_Q.Locke.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/0805/ability_0805_Q1.webm",
+            "abilityVideoImagePath": "champion-abilities/0805/ability_0805_Q1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Locke readies a set of Soul Nails to throw, dealing damage to and marking enemies hit. Locke can consume the marks to deal bonus damage with his attacks.",
@@ -390,8 +391,8 @@
             "spellKey": "w",
             "name": "Soul Ignition",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Locke/HUD/Icons2D/Locke_W.Locke.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/0805/ability_0805_W1.webm",
+            "abilityVideoImagePath": "champion-abilities/0805/ability_0805_W1.jpg",
             "cost": "@Cost@ Mana and <font color='#CC3300'>@HealthCost*100@% Current Health</font> Per Second",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Locke ignites his soul, gaining Attack Speed and Move Speed, and dealing damage to himself. At the end of the duration, Locke will heal back a portion of the damage he takes during the effect.",
@@ -406,19 +407,19 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                55.0,
+                60.0,
+                65.0,
+                70.0,
+                75.0
             ],
             "cooldownCoefficients": [
-                20.0,
                 18.0,
+                17.0,
                 16.0,
+                15.0,
                 14.0,
-                12.0,
-                12.0
+                13.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -540,12 +541,12 @@
             "spellKey": "e",
             "name": "Ashen Pursuit",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Locke/HUD/Icons2D/Locke_E.Locke.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/0805/ability_0805_E1.webm",
+            "abilityVideoImagePath": "champion-abilities/0805/ability_0805_E1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Locke teleports to a location before dashing to attack his next target, dealing damage to enemies passed through.",
-            "dynamicDescription": "Locke teleports to a location, dealing <magicDamage>@OnHitDamage@ magic damage</magicDamage> around him on arrival. <br><br>On his next Attack, he dashes to his target, dealing <magicDamage>@DashDamage@ magic damage</magicDamage> to all enemies in his path. Each hit consumes <keywordMajor>Soul Nails</keywordMajor>.<br><br>If Locke scores a takedown, the Cooldown of this Ability is reset.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Locke teleports to a location, dealing <magicDamage>@OnHitDamage@ magic damage</magicDamage> to nearby enemies on arrival. <br><br>On his next Attack, he dashes to his target, dealing <magicDamage>@DashDamage@ magic damage</magicDamage> to all enemies in his path. Each hit consumes <keywordMajor>Soul Nails</keywordMajor>.<br><br>If Locke scores a takedown, the Cooldown of this Ability is reset.@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,
@@ -690,8 +691,8 @@
             "spellKey": "r",
             "name": "Purgatory",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Locke/HUD/Icons2D/Locke_R.Locke.png",
-            "abilityVideoPath": "",
-            "abilityVideoImagePath": "",
+            "abilityVideoPath": "champion-abilities/0805/ability_0805_R1.webm",
+            "abilityVideoImagePath": "champion-abilities/0805/ability_0805_R1.jpg",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Locke throws a binding artifact that deals damage and potentially executes enemies hit. Locke gains additional power for sealing away enemy champions.",

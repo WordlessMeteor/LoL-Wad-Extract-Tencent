@@ -357,7 +357,11 @@
             "mSpellTags": [
                 "Trait_PlayerSelectedDashDirection",
                 "PositiveEffect_Teleport",
-                "Trait_DamageAbility"
+                "Trait_DamageAbility",
+                "PositiveEffect_MoveBlock",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_Melee_SmallWindup",
+                "Trait_AoE"
             ],
             "DataValues": [
                 {
@@ -422,6 +426,19 @@
                         275.0,
                         275.0,
                         275.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "E2AttackDelay",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1222,7 +1239,9 @@
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mSpellTags": [
-                "Trait_Ultimate"
+                "Trait_Ultimate",
+                "Trait_DamageAbility",
+                "Trait_AoE"
             ],
             "DataValues": [
                 {
@@ -1374,6 +1393,25 @@
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
+                        {
+                            "mBuffName": "{b5c3348f}",
+                            "mIconKey": "%i:LockeR%",
+                            "mScalingTagKey": "font color='#0bf7de'",
+                            "mDataValue": "ExecuteThresholdPerStack",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "{6c540a3a}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{efaff808}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
                         {
                             "mBuffName": "{b5c3348f}",
                             "mIconKey": "%i:LockeR%",
@@ -1605,17 +1643,21 @@
                     "__type": "HasBuffCastRequirement"
                 }
             ],
+            "mSpellTags": [
+                "Trait_SelfHeal",
+                "PositiveEffect_Boon"
+            ],
             "DataValues": [
                 {
                     "name": "BaseMoveSpeed",
                     "values": [
+                        0.3499999940395355,
+                        0.4000000059604645,
                         0.44999998807907104,
                         0.5,
                         0.550000011920929,
                         0.6000000238418579,
-                        0.6499999761581421,
-                        0.699999988079071,
-                        0.75
+                        0.6499999761581421
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1762,12 +1804,12 @@
                 "{035921bc}": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 250.0,
-                            "mEndValue": 590.0,
+                            "mStartValue": 150.0,
+                            "mEndValue": 450.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
                         {
-                            "mCoefficient": 1.0,
+                            "mCoefficient": 0.6000000238418579,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1820,14 +1862,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    20.0,
-                    20.0,
+                    19.0,
                     18.0,
+                    17.0,
                     16.0,
+                    15.0,
                     14.0,
-                    12.0,
-                    12.0
+                    13.0
                 ],
+                "{0a3e0478}": 19.0,
                 "__type": "{0a0eddc9}"
             },
             "mAmmoUsed": [
@@ -1908,11 +1951,11 @@
             "{210f9ec0}": {
                 "values": [
                     50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    55.0,
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0
                 ],
                 "{0a3e0478}": 50.0,
                 "__type": "{630af303}"
@@ -1951,6 +1994,10 @@
                                     "nameOverride": "Spell_ListType_MovementSpeed",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
                                 }
                             ],
                             "__type": "TooltipInstanceList"
@@ -1982,6 +2029,7 @@
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 8192,
+            "mAffectsStatusFlags": 32,
             "mCastRequirementsCaster": [
                 {
                     "mBuffName": "{df165b56}",
@@ -2290,6 +2338,15 @@
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_SignatureSpell",
+                "Trait_Ammo",
+                "Trait_DamageAbility",
+                "PositiveEffect_EmpowerAttack",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_Ranged_StopsFirstHit",
+                "Trait_Ranged_Piercing"
+            ],
             "DataValues": [
                 {
                     "name": "BaseMissileDamage",
@@ -2485,6 +2542,32 @@
                         40.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "QMissileMinionMod",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "QMarkMinionMod",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2651,6 +2734,11 @@
                                 {
                                     "type": "Cooldown",
                                     "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MarkDamage",
+                                    "nameOverride": "Spell_ListType_DamageperStack",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -3455,11 +3543,11 @@
         ],
         "category": "{024e22b2}",
         "Milestones": [
-            99999,
-            99999,
-            99999,
-            99999,
-            99999
+            3,
+            9,
+            15,
+            20,
+            25
         ],
         "EpicStatStone": true,
         "TriggeredFromScript": true,
@@ -3482,11 +3570,11 @@
         ],
         "category": "{024e22b2}",
         "Milestones": [
-            99999,
-            99999,
-            99999,
-            99999,
-            99999
+            150000,
+            400000,
+            800000,
+            950000,
+            1250000
         ],
         "EpicStatStone": true,
         "TriggeredFromScript": true,
@@ -3510,11 +3598,11 @@
         ],
         "category": "{06fc9407}",
         "Milestones": [
-            99999,
-            99999,
-            99999,
-            99999,
-            99999
+            20,
+            50,
+            100,
+            150,
+            200
         ],
         "EpicStatStone": true,
         "TriggeredFromScript": true,
@@ -3551,11 +3639,11 @@
         ],
         "category": "{0899c06d}",
         "Milestones": [
-            99999,
-            99999,
-            99999,
-            99999,
-            99999
+            10000,
+            25000,
+            40000,
+            55000,
+            70000
         ],
         "EpicStatStone": true,
         "TriggeredFromScript": true,
@@ -3578,11 +3666,11 @@
         ],
         "category": "{06fc9407}",
         "Milestones": [
-            99999,
-            99999,
-            99999,
-            99999,
-            99999
+            5,
+            12,
+            20,
+            30,
+            40
         ],
         "EpicStatStone": true,
         "TriggeredFromScript": true,
@@ -3605,11 +3693,11 @@
         ],
         "category": "{06fc9407}",
         "Milestones": [
-            99999,
-            99999,
-            99999,
-            99999,
-            99999
+            80,
+            200,
+            300,
+            400,
+            500
         ],
         "EpicStatStone": true,
         "TriggeredFromScript": true,
@@ -3691,11 +3779,11 @@
         ],
         "category": "{6ce57a50}",
         "Milestones": [
-            99999,
-            99999,
-            99999,
-            99999,
-            99999
+            3,
+            10,
+            20,
+            22,
+            25
         ],
         "EpicStatStone": true,
         "stoneName": "LockeEpicMonstersKilled",
@@ -3731,11 +3819,11 @@
         ],
         "category": "{5c6e96a2}",
         "Milestones": [
-            99999,
-            99999,
-            99999,
-            99999,
-            99999
+            25,
+            65,
+            125,
+            150,
+            185
         ],
         "EpicStatStone": true,
         "stoneName": "LockeTakedowns",
@@ -3757,11 +3845,11 @@
         ],
         "category": "{6ce57a50}",
         "Milestones": [
-            99999,
-            99999,
-            99999,
-            99999,
-            99999
+            5,
+            15,
+            25,
+            30,
+            40
         ],
         "EpicStatStone": true,
         "stoneName": "LockeStructuresDestroyed",
@@ -3978,6 +4066,7 @@
         ],
         "characterToolData": {
             "searchTags": "assassin",
+            "searchTagsSecondary": "mage",
             "championId": 805,
             "roles": "BRAWLER",
             "magicRank": 2,
