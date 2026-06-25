@@ -77527,7 +77527,6 @@
                             "mAllyEventName": "Taunt3DGeneral",
                             "mEnemyEventName": "Taunt3DGeneral",
                             "mSpectatorEventName": "Taunt3DGeneral",
-                            "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
                         },
                         "CooldownModifications": {
@@ -77540,6 +77539,7 @@
                 "__type": "ContextualSituation"
             },
             "EnemyEncounter": {
+                "mCoolDownTime": 15.0,
                 "mRules": [
                     {
                         "mRuleName": "TwitchSkin55",
@@ -78031,7 +78031,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DRammusSkin26",
-                            "mAllyEventName": "Kill3DRammusSkin26",
                             "mEnemyEventName": "Kill3DRammusSkin26",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78065,7 +78064,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DGragas",
-                            "mAllyEventName": "Kill3DGragas",
                             "mEnemyEventName": "Kill3DGragas",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78099,7 +78097,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DTahmKench",
-                            "mAllyEventName": "Kill3DTahmKench",
                             "mEnemyEventName": "Kill3DTahmKench",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78133,7 +78130,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DNunu",
-                            "mAllyEventName": "Kill3DNunu",
                             "mEnemyEventName": "Kill3DNunu",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78167,7 +78163,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DIvernMaokaiZyra",
-                            "mAllyEventName": "Kill3DIvernMaokaiZyra",
                             "mEnemyEventName": "Kill3DIvernMaokaiZyra",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78201,7 +78196,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DIvernMaokaiZyra",
-                            "mAllyEventName": "Kill3DIvernMaokaiZyra",
                             "mEnemyEventName": "Kill3DIvernMaokaiZyra",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78235,7 +78229,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DIvernMaokaiZyra",
-                            "mAllyEventName": "Kill3DIvernMaokaiZyra",
                             "mEnemyEventName": "Kill3DIvernMaokaiZyra",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78265,7 +78258,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DVoid",
-                            "mAllyEventName": "Kill3DVoid",
                             "mEnemyEventName": "Kill3DVoid",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78281,7 +78273,6 @@
                         "mRuleName": "General",
                         "mAudioAction": {
                             "mSelfEventName": "Kill3DGeneral",
-                            "mAllyEventName": "Kill3DGeneral",
                             "mEnemyEventName": "Kill3DGeneral",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78491,6 +78482,136 @@
             "SpellCast": {
                 "mRules": [
                     {
+                        "mRuleName": "R",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Velkoz/Spells/VelkozRAbility/VelkozR",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mSpellLevel": 1,
+                                "__type": "ContextualConditionSpellLevel"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 100,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Velkoz/Spells/VelkozWAbility/VelkozW",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 40,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "E",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Velkoz/Spells/VelkozEAbility/VelkozE",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 40,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Q",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Velkoz/Spells/VelkozQAbility/VelkozQ",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 40,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Crit",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mSpell": "Characters/Velkoz/Spells/VelkozCritAttack",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
                         "mRuleName": "Basic 1",
                         "mConditions": [
                             {
@@ -78520,7 +78641,7 @@
                         "mRuleName": "Basic 2",
                         "mConditions": [
                             {
-                                "mPercentChanceToPlay": 25,
+                                "mPercentChanceToPlay": 30,
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
@@ -78546,125 +78667,11 @@
                         "mRuleName": "Basic 3",
                         "mConditions": [
                             {
-                                "mPercentChanceToPlay": 25,
+                                "mPercentChanceToPlay": 30,
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
                                 "mSpell": "Characters/Velkoz/Spells/VelkozBasicAttack3",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "DontResetTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "Crit",
-                        "mConditions": [
-                            {
-                                "mPercentChanceToPlay": 25,
-                                "__type": "ContextualConditionChanceToPlay"
-                            },
-                            {
-                                "mSpell": "Characters/Velkoz/Spells/VelkozCritAttack",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "DontResetTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "Q",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Velkoz/Spells/VelkozQAbility/VelkozQ",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "DontResetTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "W",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Velkoz/Spells/VelkozWAbility/VelkozW",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "DontResetTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "E",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Velkoz/Spells/VelkozEAbility/VelkozE",
-                                "__type": "ContextualConditionSpellName"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "cast3D",
-                            "mAllyEventName": "cast3D",
-                            "mEnemyEventName": "cast3D",
-                            "mSpectatorEventName": "cast3D",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "DontResetTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "R",
-                        "mConditions": [
-                            {
-                                "mSpell": "Characters/Velkoz/Spells/VelkozRAbility/VelkozR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -78823,7 +78830,7 @@
                             }
                         ],
                         "mAudioAction": {
-                            "mMaxOccurences": 1,
+                            "mMaxOccurences": 4,
                             "mSelfEventName": "UseItem2DWard",
                             "mWaitTimeout": -1.0,
                             "__type": "ContextualActionPlayVO"
@@ -78843,12 +78850,12 @@
                         "mRuleName": "Kill Ward",
                         "mConditions": [
                             {
-                                "mPercentChanceToPlay": 75,
+                                "mPercentChanceToPlay": 50,
                                 "__type": "ContextualConditionChanceToPlay"
                             }
                         ],
                         "mAudioAction": {
-                            "mMaxOccurences": 3,
+                            "mMaxOccurences": 4,
                             "mSelfEventName": "Kill3DWard",
                             "__type": "ContextualActionPlayVO"
                         },
@@ -78864,46 +78871,11 @@
             "SpellBuffCast": {
                 "mRules": [
                     {
-                        "mRuleName": "Passive Max Stacks",
-                        "mConditions": [
-                            {
-                                "SpellBuff": "Characters/Velkoz/Spells/VelkozPassiveAbility/VelkozPassive",
-                                "__type": "ContextualConditionSpellBuffName"
-                            },
-                            {
-                                "mPercentChanceToPlay": 50,
-                                "__type": "ContextualConditionChanceToPlay"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mSelfEventName": "Spell3DPMax",
-                            "mAllyEventName": "Spell3DPMax",
-                            "mEnemyEventName": "Spell3DPMax",
-                            "mSpectatorEventName": "Spell3DPMax",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
-                    }
-                ],
-                "__type": "ContextualSituation"
-            },
-            "BuffCounterSet": {
-                "mRules": [
-                    {
                         "mRuleName": "Velkoz Passive",
                         "mConditions": [
                             {
-                                "mBuff": "Characters/Velkoz/Spells/VelkozPassiveAbility/VelkozPassive",
-                                "mCounterHighestReached": 3,
-                                "__type": "ContextualConditionBuffCounterReachedLimitFromZero"
-                            },
-                            {
-                                "mPercentChanceToPlay": 50,
-                                "__type": "ContextualConditionChanceToPlay"
+                                "SpellBuff": "{2bba4fd3}",
+                                "__type": "ContextualConditionSpellBuffName"
                             }
                         ],
                         "mAudioAction": {
@@ -78913,6 +78885,7 @@
                             "mSpectatorEventName": "Spell3DPMax",
                             "__type": "ContextualActionPlayVO"
                         },
+                        "mPriority": -10,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"
