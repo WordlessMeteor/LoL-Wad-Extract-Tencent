@@ -100,20 +100,19 @@
                     },
                     {
                         "items": [
-                            "Items/3115",
-                            "Items/224646",
-                            "Items/4645"
+                            "Items/2510",
+                            "Items/4646",
+                            "Items/3100"
                         ],
                         "MaxCompletedItems": 2,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "Items/4646",
-                            "Items/3089",
                             "Items/4645",
                             "Items/3157",
-                            "Items/3102"
+                            "Items/3102",
+                            "Items/3115"
                         ],
                         "MaxCompletedItems": 3,
                         "__type": "ItemRecOverrideRange"
@@ -1389,7 +1388,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{708b59ae}": {
+                "ExecuteBonusCalc": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
@@ -1409,7 +1408,7 @@
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{efaff808}",
+                            "mDataValue": "ExecutionThreshold",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -1768,7 +1767,7 @@
                     "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 },
-                "{098c0d8e}": {
+                "DamageRestoreAmount": {
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamageRestoreAmount",
@@ -1801,7 +1800,7 @@
                     "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 },
-                "{035921bc}": {
+                "MaxHealingThreshold": {
                     "mFormulaParts": [
                         {
                             "mStartValue": 150.0,
@@ -1815,7 +1814,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{7ec943a6}": {
+                "AdditionalHeal": {
                     "mFormulaParts": [
                         {
                             "mStartValue": 40.0,
@@ -1829,7 +1828,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{a375ef54}": {
+                "DecayTimeHelper": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
@@ -2157,7 +2156,7 @@
                     "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 },
-                "{098c0d8e}": {
+                "DamageRestoreAmount": {
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamageRestoreAmount",
@@ -2584,7 +2583,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{ae806e50}": {
+                "NailDamage": {
                     "mFormulaParts": [
                         {
                             "mDataValue": "MarkRatio",
@@ -2597,7 +2596,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{ac10fc3d}": {
+                "AmmoCooldownReset": {
                     "mFormulaParts": [
                         {
                             "mStartValue": 0.20000000298023224,
@@ -3020,7 +3019,7 @@
         "mScriptName": "LockePassive",
         "mSpell": {
             "mSpellCalculations": {
-                "{4228a892}": {
+                "MinOnHitDamage": {
                     "mFormulaParts": [
                         {
                             "mStartValue": 5.0,
@@ -3034,7 +3033,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{65750594}": {
+                "MaxOnHitDamage": {
                     "mFormulaParts": [
                         {
                             "mStartValue": 10.0,
@@ -3051,7 +3050,7 @@
             },
             "{fe87f21e}": [
                 {
-                    "{6166b756}": "{4228a892}",
+                    "{6166b756}": "MinOnHitDamage",
                     "{01987941}": [
                         {
                             "mCurrentPercentHealth": 0.30000001192092896,
@@ -3061,7 +3060,7 @@
                     "__type": "{fe87f21e}"
                 },
                 {
-                    "{6166b756}": "{65750594}",
+                    "{6166b756}": "MaxOnHitDamage",
                     "{01987941}": [
                         {
                             "mInvertResult": true,
@@ -3537,7 +3536,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeESkillshotsDodged",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3564,7 +3563,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeWDistanceTraveled",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3592,7 +3591,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeRMultiHits",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3633,7 +3632,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeWHealingTotal",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3660,7 +3659,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeRChampsExecuted",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3687,7 +3686,7 @@
         "mDescriptionTraKey": "stat_stone_description_LockeQMarksTriggered",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3813,7 +3812,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 229,
+                "EventToTrack": 230,
                 "__type": "StatStoneEventToTrack"
             }
         ],
