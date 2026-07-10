@@ -25458,6 +25458,10 @@
             {
                 "name": "USE_ALPHA",
                 "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "__type": "ShaderStaticSwitch"
             }
         ],
         "textures": [
@@ -27963,6 +27967,17 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -27978,6 +27993,10 @@
             },
             {
                 "name": "IRIDESCENCE_ON",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_BLOOM_MASK",
                 "__type": "ShaderStaticSwitch"
             }
         ],
@@ -27996,14 +28015,20 @@
                 "name": "iridescentTex",
                 "defaultTexturePath": "ASSETS/Shared/Materials/Default_Gradient.tex",
                 "__type": "ShaderTexture"
+            },
+            {
+                "name": "Bloom_Mask",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "ShaderTexture"
             }
         ],
         "featureDefines": {
+            "FEATURE_BLOOM": "1",
             "FEATURE_SHADOW": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 16,
+        "featureMask": 17,
         "objectPath": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
         "__type": "CustomShaderDef"
     },

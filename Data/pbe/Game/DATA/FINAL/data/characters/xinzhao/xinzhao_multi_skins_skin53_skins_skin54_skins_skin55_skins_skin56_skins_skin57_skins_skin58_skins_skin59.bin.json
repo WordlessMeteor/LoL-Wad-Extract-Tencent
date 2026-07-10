@@ -11163,35 +11163,35 @@
             },
             {
                 "rate": {
-                    "constantValue": 1.0,
+                    "constantValue": 2.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 1.5,
+                    "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 2.200000047683716,
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "physicalDecal",
+                "particleLinger": 11.0,
+                "lifetime": 3.799999952316284,
+                "emitterName": "Body_Circle",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        5.0,
-                        11.82232666015625
+                        125.0,
+                        0.0
                     ],
                     "__type": "ValueVector3"
                 },
-                "primitive": {
-                    "__type": "VfxPrimitiveArbitraryQuad"
-                },
-                "blendMode": 1,
+                "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.7700007557868958,
-                        0.7700007557868958,
-                        0.7700007557868958,
-                        0.0
+                        1.0,
+                        0.6899977326393127,
+                        0.14000152051448822,
+                        0.11000228673219681
                     ],
                     "__type": "ValueColor"
                 },
@@ -11199,8 +11199,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.09658246487379074,
-                            0.30000001192092896,
+                            0.20000000298023224,
+                            0.800000011920929,
                             1.0
                         ],
                         "values": [
@@ -11233,73 +11233,368 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 2,
-                "alphaErosionDefinition": {
-                    "erosionDriveCurve": {
-                        "dynamics": {
-                            "times": [
-                                0.009380863048136234,
-                                0.04422558471560478,
-                                0.21294735372066498,
-                                0.42679038643836975,
-                                0.6328853368759155,
-                                0.8358611464500427,
-                                0.9868667721748352
-                            ],
-                            "values": [
-                                0.0,
-                                0.0,
-                                0.11764705926179886,
-                                0.25970134139060974,
-                                0.5547824501991272,
-                                0.7506289482116699,
-                                0.8280254602432251
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "erosionFeatherIn": 0.30000001192092896,
-                    "erosionFeatherOut": 0.30000001192092896,
-                    "erosionMapName": "ASSETS/Characters/XinZhao/Skins/Skin53/Particles/Jayce_Skin36_BasicAttack_Trail_axe_Dissolve.SKINS_XinZhao_Skin53.tex",
-                    "erosionMapChannelMixer": {
-                        "constantValue": [
-                            0.0,
-                            1.0,
-                            0.0,
-                            0.0
-                        ],
-                        "__type": "ValueColor"
-                    },
-                    "erosionMapAddressMode": 0,
-                    "__type": "VfxAlphaErosionDefinitionData"
-                },
-                "depthBiasFactors": [
-                    -1.0,
-                    -60.0
-                ],
+                "pass": 10,
+                "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isFollowingTerrain": 1,
                 "isGroundLayer": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        89.98020935058594,
-                        0.0,
-                        90.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
-                        200.0,
-                        280.0,
-                        100.0
+                        100.0,
+                        10.0,
+                        0.0
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/XinZhao/Skins/Skin53/Particles/XinZhao_Skin53_R_Crater.SKINS_XinZhao_Skin53.tex",
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                2.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/XinZhao/Skins/Skin53/Particles/AurelionSol_Base_R_Ringlight.SKINS_XinZhao_Skin53.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.6899999976158142,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.6899999976158142
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 0.20000000298023224,
+                "emitterName": "AoE_Edge_FlameNoise",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.5
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        0.0,
+                        3.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        100.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/XinZhao/Skins/Skin05/Particles/Smolder_Base_Q_GroundSwirls.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.9833981990814209,
+                                0.6876935958862305,
+                                0.01916533149778843,
+                                0.0
+                            ],
+                            [
+                                0.9811703562736511,
+                                0.5490043759346008,
+                                0.1284809708595276,
+                                1.0
+                            ],
+                            [
+                                0.8344243764877319,
+                                0.07348745316267014,
+                                0.07348745316267014,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "modulationFactor": [
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.0
+                ],
+                "depthBiasFactors": [
+                    -1.0,
+                    -200.0
+                ],
+                "disableBackfaceCull": true,
+                "isUniformScale": 1,
+                "useNavmeshMask": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -360.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        15.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        2.299999952316284,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.17000000178813934,
+                            0.3569999933242798,
+                            0.6280182003974915,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.699999988079071,
+                                0.5210000276565552,
+                                0.5210000276565552
+                            ],
+                            [
+                                0.800000011920929,
+                                0.7250000238418579,
+                                0.7250000238418579
+                            ],
+                            [
+                                0.8999999761581421,
+                                0.8600000143051147,
+                                0.8600000143051147
+                            ],
+                            [
+                                0.949999988079071,
+                                0.9555109739303589,
+                                0.9555109739303589
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/XinZhao/Skins/Skin53/Particles/Smolder_W_Mis_LeadGradientMask.SKINS_XinZhao_Skin53.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        -0.30000001192092896
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        2.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/XinZhao/Skins/Skin53/Particles/Smolder_E_FlameOutline_BW.SKINS_XinZhao_Skin53.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            3.0,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "ParticleIntegratedUvScrollMult": {
+                        "constantValue": [
+                            0.20000000298023224,
+                            2.4000000953674316
+                        ],
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                0.031180931255221367,
+                                0.08313710987567902,
+                                0.15777777135372162,
+                                0.2425544708967209,
+                                0.3795521855354309,
+                                1.0
+                            ],
+                            "values": [
+                                [
+                                    0.6000000238418579,
+                                    7.199999809265137
+                                ],
+                                [
+                                    0.28239724040031433,
+                                    3.2629141807556152
+                                ],
+                                [
+                                    0.15890686213970184,
+                                    1.88013756275177
+                                ],
+                                [
+                                    0.09581238776445389,
+                                    1.1839516162872314
+                                ],
+                                [
+                                    0.07586207240819931,
+                                    0.8077972531318665
+                                ],
+                                [
+                                    0.04515604302287102,
+                                    0.6646513342857361
+                                ],
+                                [
+                                    0.021551724523305893,
+                                    0.2006896585226059
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector2fVariableData"
+                        },
+                        "__type": "IntegratedValueVector2"
+                    },
+                    "birthUVOffsetMult": {
+                        "constantValue": [
+                            0.0,
+                            0.20000000298023224
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -11954,6 +12249,7 @@
                     "__type": "ValueFloat"
                 },
                 "emitterName": "Sphere_1",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -12160,6 +12456,7 @@
                     "__type": "ValueFloat"
                 },
                 "emitterName": "Sphere_2",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -15206,6 +15503,7 @@
                     "__type": "ValueFloat"
                 },
                 "emitterName": "Sphere_4",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -15413,6 +15711,7 @@
                     "__type": "ValueFloat"
                 },
                 "emitterName": "Sphere_6",
+                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -34624,6 +34923,7 @@
                 },
                 "lifetime": 5.0,
                 "emitterName": "Experiment1",
+                "importance": 3,
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -37589,6 +37889,7 @@
                 },
                 "lifetime": 10.0,
                 "emitterName": "Basic",
+                "importance": 3,
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
@@ -37938,6 +38239,7 @@
                 },
                 "lifetime": 10.0,
                 "emitterName": "Experiment1",
+                "importance": 3,
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -55311,69 +55613,130 @@
             },
             {
                 "rate": {
-                    "constantValue": 1.0,
+                    "constantValue": 5.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 1.5,
+                    "constantValue": 0.6899999976158142,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.6899999976158142
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 2.200000047683716,
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "physicalDecal",
+                "lifetime": 0.20000000298023224,
+                "emitterName": "AoE_Edge_FlameNoise",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.5
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        0.0,
+                        3.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        5.0,
-                        11.82232666015625
+                        100.0,
+                        0.0
                     ],
                     "__type": "ValueVector3"
                 },
                 "primitive": {
-                    "__type": "VfxPrimitiveArbitraryQuad"
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/XinZhao/Skins/Skin05/Particles/Smolder_Base_Q_GroundSwirls.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
                 },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        0.7700007557868958,
-                        0.7700007557868958,
-                        0.7700007557868958,
-                        0.0
-                    ],
-                    "__type": "ValueColor"
-                },
+                "blendMode": 4,
                 "Color": {
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.09658246487379074,
-                            0.30000001192092896,
+                            0.20000000298023224,
                             1.0
                         ],
                         "values": [
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.9833981990814209,
+                                0.6876935958862305,
+                                0.01916533149778843,
                                 0.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.9811703562736511,
+                                0.5490043759346008,
+                                0.1284809708595276,
                                 1.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.8344243764877319,
+                                0.07348745316267014,
+                                0.07348745316267014,
                                 0.0
                             ]
                         ],
@@ -55381,73 +55744,197 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 2,
-                "alphaErosionDefinition": {
-                    "erosionDriveCurve": {
-                        "dynamics": {
-                            "times": [
-                                0.009380863048136234,
-                                0.04422558471560478,
-                                0.21294735372066498,
-                                0.42679038643836975,
-                                0.6328853368759155,
-                                0.8358611464500427,
-                                0.9868667721748352
-                            ],
-                            "values": [
-                                0.0,
-                                0.0,
-                                0.11764705926179886,
-                                0.25970134139060974,
-                                0.5547824501991272,
-                                0.7506289482116699,
-                                0.8280254602432251
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "erosionFeatherIn": 0.30000001192092896,
-                    "erosionFeatherOut": 0.30000001192092896,
-                    "erosionMapName": "ASSETS/Characters/XinZhao/Skins/Skin53/Particles/Jayce_Skin36_BasicAttack_Trail_axe_Dissolve.SKINS_XinZhao_Skin53.tex",
-                    "erosionMapChannelMixer": {
-                        "constantValue": [
-                            0.0,
-                            1.0,
-                            0.0,
-                            0.0
-                        ],
-                        "__type": "ValueColor"
-                    },
-                    "erosionMapAddressMode": 0,
-                    "__type": "VfxAlphaErosionDefinitionData"
-                },
+                "modulationFactor": [
+                    1.5,
+                    1.5,
+                    1.5,
+                    1.0
+                ],
                 "depthBiasFactors": [
                     -1.0,
-                    -60.0
+                    -200.0
                 ],
-                "miscRenderFlags": 1,
+                "disableBackfaceCull": true,
                 "isUniformScale": 1,
-                "isFollowingTerrain": 1,
-                "isGroundLayer": 1,
+                "useNavmeshMask": 1,
                 "birthRotation0": {
                     "constantValue": [
-                        89.98020935058594,
                         0.0,
-                        90.0
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -360.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        15.0,
+                        0.0
                     ],
                     "__type": "ValueVector3"
                 },
-                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
-                        200.0,
-                        280.0,
-                        100.0
+                        2.299999952316284,
+                        1.0,
+                        1.0
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/XinZhao/Skins/Skin53/Particles/XinZhao_Skin53_R_Crater.SKINS_XinZhao_Skin53.tex",
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.17000000178813934,
+                            0.3569999933242798,
+                            0.6280182003974915,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.699999988079071,
+                                0.5210000276565552,
+                                0.5210000276565552
+                            ],
+                            [
+                                0.800000011920929,
+                                0.7250000238418579,
+                                0.7250000238418579
+                            ],
+                            [
+                                0.8999999761581421,
+                                0.8600000143051147,
+                                0.8600000143051147
+                            ],
+                            [
+                                0.949999988079071,
+                                0.9555109739303589,
+                                0.9555109739303589
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/XinZhao/Skins/Skin53/Particles/Smolder_W_Mis_LeadGradientMask.SKINS_XinZhao_Skin53.tex",
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        -0.30000001192092896
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "uvScale": {
+                    "constantValue": [
+                        2.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/XinZhao/Skins/Skin53/Particles/Smolder_E_FlameOutline_BW.SKINS_XinZhao_Skin53.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            3.0,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "ParticleIntegratedUvScrollMult": {
+                        "constantValue": [
+                            0.20000000298023224,
+                            2.4000000953674316
+                        ],
+                        "dynamics": {
+                            "times": [
+                                0.0,
+                                0.031180931255221367,
+                                0.08313710987567902,
+                                0.15777777135372162,
+                                0.2425544708967209,
+                                0.3795521855354309,
+                                1.0
+                            ],
+                            "values": [
+                                [
+                                    0.6000000238418579,
+                                    7.199999809265137
+                                ],
+                                [
+                                    0.28239724040031433,
+                                    3.2629141807556152
+                                ],
+                                [
+                                    0.15890686213970184,
+                                    1.88013756275177
+                                ],
+                                [
+                                    0.09581238776445389,
+                                    1.1839516162872314
+                                ],
+                                [
+                                    0.07586207240819931,
+                                    0.8077972531318665
+                                ],
+                                [
+                                    0.04515604302287102,
+                                    0.6646513342857361
+                                ],
+                                [
+                                    0.021551724523305893,
+                                    0.2006896585226059
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector2fVariableData"
+                        },
+                        "__type": "IntegratedValueVector2"
+                    },
+                    "birthUVOffsetMult": {
+                        "constantValue": [
+                            0.0,
+                            0.20000000298023224
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -79082,9 +79569,9 @@
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
-                        90.0,
+                        -90.0,
                         0.0,
-                        90.0
+                        -90.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -132440,6 +132927,7 @@
                 },
                 "lifetime": 10.0,
                 "emitterName": "Basic",
+                "importance": 3,
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
@@ -134055,6 +134543,7 @@
                 },
                 "lifetime": 10.0,
                 "emitterName": "Experiment1",
+                "importance": 3,
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -154302,7 +154791,7 @@
                 "disableBackfaceCull": true,
                 "birthRotation0": {
                     "constantValue": [
-                        90.0,
+                        -90.0,
                         -90.0,
                         0.0
                     ],

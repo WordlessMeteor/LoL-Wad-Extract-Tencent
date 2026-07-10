@@ -379,6 +379,12 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
+        "mEmblems": [
+            {
+                "mEmblemData": "{aa951c53}",
+                "__type": "SkinEmblem"
+            }
+        ],
         "mResourceResolver": "Characters/MissFortune/Skins/Skin70/Resources",
         "PersistentEffectConditions": [
             {
@@ -414,6 +420,15 @@
                         },
                         {
                             "__type": "HasGearDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mAnimationNames": [
+                                    "{87c147cf}"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -481,6 +496,15 @@
                         {
                             "mGearIndex": 1,
                             "__type": "HasGearDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mAnimationNames": [
+                                    "{87c147cf}"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -548,6 +572,15 @@
                         {
                             "mGearIndex": 2,
                             "__type": "HasGearDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mAnimationNames": [
+                                    "{87c147cf}"
+                                ],
+                                "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -1756,6 +1789,11 @@
         "name": "Characters/MissFortune/Skins/Skin70/Materials/Gun23",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_TX_CM.SKINS_MissFortune_Skin69.tex",
                 "addressU": 1,
@@ -1778,6 +1816,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -1900,6 +1942,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -3275,6 +3322,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
