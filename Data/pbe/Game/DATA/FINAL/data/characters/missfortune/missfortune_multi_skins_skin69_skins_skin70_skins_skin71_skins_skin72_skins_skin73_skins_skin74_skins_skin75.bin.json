@@ -187408,10 +187408,9 @@
                                         "__type": "ContextualConditionCharacterName"
                                     },
                                     {
-                                        "mSkinIDs": [
-                                            86
-                                        ],
-                                        "__type": "ContextualConditionCharacterSkinID"
+                                        "mCategory": "skinline",
+                                        "mData": "risenlegends",
+                                        "__type": "ContextualConditionCharacterMetadata"
                                     }
                                 ],
                                 "__type": "ContextualConditionAnyOtherHero"
@@ -187924,9 +187923,14 @@
                                     }
                                 ],
                                 "__type": "ContextualConditionAnyOtherHero"
+                            },
+                            {
+                                "mRuleCooldown": 60.0,
+                                "__type": "ContextualConditionRuleCooldown"
                             }
                         ],
                         "mAudioAction": {
+                            "mMaxOccurences": 5,
                             "mSelfEventName": "Move2DAllyNear",
                             "__type": "ContextualActionPlayVO"
                         },
@@ -187938,11 +187942,6 @@
                             {
                                 "mDistance": 400.0,
                                 "mCompareOp": 2,
-                                "__type": "ContextualConditionMoveDistance"
-                            },
-                            {
-                                "mDistance": 2000.0,
-                                "mCompareOp": 4,
                                 "__type": "ContextualConditionMoveDistance"
                             }
                         ],
@@ -187971,7 +187970,6 @@
                             }
                         ],
                         "mAudioAction": {
-                            "mMaxOccurences": 1,
                             "mSelfEventName": "Ping2DAssistMe",
                             "__type": "ContextualActionPlayVO"
                         },
@@ -188222,7 +188220,7 @@
                         "mRuleName": "Q",
                         "mConditions": [
                             {
-                                "mPercentChanceToPlay": 30,
+                                "mPercentChanceToPlay": 40,
                                 "__type": "ContextualConditionChanceToPlay"
                             },
                             {
@@ -188449,7 +188447,7 @@
                     {
                         "mRuleName": "Kill Turret",
                         "mAudioAction": {
-                            "mMaxOccurences": 1,
+                            "mMaxOccurences": 3,
                             "mSelfEventName": "Kill3DTurret",
                             "mAllyEventName": "Kill3DTurret",
                             "mWaitForAnnouncerQueue": true,
@@ -188479,7 +188477,6 @@
                             }
                         ],
                         "mAudioAction": {
-                            "mMaxOccurences": 9,
                             "mSelfEventName": "Ping2DTarget",
                             "__type": "ContextualActionPlayVO"
                         },
@@ -188514,38 +188511,6 @@
                             "__type": "ContextualActionCooldownModifications"
                         },
                         "__type": "ContextualRule"
-                    },
-                    {
-                        "mRuleName": "General",
-                        "mConditions": [
-                            {
-                                "mPercentChanceToPlay": 30,
-                                "__type": "ContextualConditionChanceToPlay"
-                            },
-                            {
-                                "mRuleCooldown": 30.0,
-                                "__type": "ContextualConditionRuleCooldown"
-                            },
-                            {
-                                "mChildConditions": [
-                                    {
-                                        "mIsAlly": true,
-                                        "__type": "ContextualConditionIsAlly"
-                                    }
-                                ],
-                                "__type": "ContextualConditionAnyOtherHero"
-                            }
-                        ],
-                        "mAudioAction": {
-                            "mMaxOccurences": 3,
-                            "mSelfEventName": "SpellBuffReceive2DGeneral",
-                            "__type": "ContextualActionPlayVO"
-                        },
-                        "CooldownModifications": {
-                            "IgnoreTimer": true,
-                            "__type": "ContextualActionCooldownModifications"
-                        },
-                        "__type": "ContextualRule"
                     }
                 ],
                 "__type": "ContextualSituation"
@@ -188564,6 +188529,72 @@
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DBaronSteal",
                             "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "ReceiveHeal": {
+                "mRules": [
+                    {
+                        "mRuleName": "Heal",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "__type": "ContextualConditionIsSelf"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mPercentChanceToPlay": 100,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Receive3DHealShield",
+                            "mAllyEventName": "Receive3DHealShield",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "ReceiveShield": {
+                "mRules": [
+                    {
+                        "mRuleName": "Shield",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "__type": "ContextualConditionIsSelf"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mPercentChanceToPlay": 20,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Receive3DHealShield",
+                            "mAllyEventName": "Receive3DHealShield",
                             "__type": "ContextualActionPlayVO"
                         },
                         "CooldownModifications": {
