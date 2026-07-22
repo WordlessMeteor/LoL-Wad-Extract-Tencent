@@ -249,7 +249,7 @@
             "mCoefficient2": 0.800000011920929,
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Nullblade.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Nullblade.dds"
             ],
             "cooldownTime": [
                 12.0,
@@ -581,7 +581,7 @@
             "mCoefficient2": 0.800000011920929,
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Nullblade.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Nullblade.dds"
             ],
             "cooldownTime": [
                 12.0,
@@ -1073,7 +1073,7 @@
             },
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_ForcePulse_Charging.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_ForcePulse_Charging.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -1327,7 +1327,7 @@
             },
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_ForcePulse.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_ForcePulse.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -1581,7 +1581,7 @@
             },
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_ForcePulse.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_ForcePulse.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -1960,7 +1960,7 @@
             "mCoefficient2": 0.4000000059604645,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Averdrian_AstralBeam.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Averdrian_AstralBeam.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -2302,6 +2302,19 @@
                         110.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2312,8 +2325,36 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.699999988079071,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{50a3f8e1}": {
+                    "mFormulaParts": [
+                        {
+                            "mBuffName": "{f791e40e}",
+                            "mDataValue": "Damage",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{40d36ab1}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "Damage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mBuffName": "{f791e40e}",
+                            "mDataValue": "Damage",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2321,7 +2362,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Riftwalk.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Riftwalk.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -2514,7 +2555,7 @@
         "mScriptName": "Jade_KassadinPassive_AttackSpeedBoost",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.dds"
             ],
             "castRange": [
                 0.0,
@@ -2564,7 +2605,7 @@
         "mScriptName": "Jade_KassadinPassive",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.dds"
             ],
             "castRange": [
                 0.0,
@@ -2721,6 +2762,18 @@
                     }
                 ],
                 "__type": "RootScriptSequence"
+            },
+            "{012590a0}": {
+                "__type": "RootScriptSequence"
+            },
+            "{3ab2bdd3}": {
+                "__type": "RootScriptSequence"
+            },
+            "{f25fa290}": {
+                "__type": "RootScriptSequence"
+            },
+            "{6a420564}": {
+                "__type": "RootScriptSequence"
             }
         },
         "__type": "CharScript"
@@ -2794,7 +2847,7 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 17.200000762939453,
+            "baseValue": 21.200000762939453,
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {
@@ -2895,7 +2948,7 @@
         "passiveName": "game_character_passiveName_Jade_Kassadin",
         "passiveLuaName": "Jade_Kassadin_VoidStone",
         "passiveToolTip": "game_character_passiveDescription_Jade_Kassadin",
-        "passive1IconName": "ASSETS/Characters/Jade_Kassadin/HUD/Icons2D/Jade_Kassadin_Passive.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Kassadin/HUD/Icons2D/Jade_Kassadin_Passive.dds",
         "name": "game_character_displayname_Jade_Kassadin",
         "weaponMaterials": [
             "ArmsmasterBasicAttack"

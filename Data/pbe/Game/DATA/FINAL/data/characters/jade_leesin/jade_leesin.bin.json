@@ -20,7 +20,7 @@
             "mCoefficient": 0.699999988079071,
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkETwo.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkETwo.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -79,8 +79,25 @@
                 710.0
             ],
             "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "behaviors": [
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "CastOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1600.0,
+            "mMissileEffectKey": "Jade_LeeSin_E_mis_01",
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "selectionPriority": 1,
             "mClientData": {
@@ -118,13 +135,13 @@
                 {
                     "name": "SlowAmount",
                     "values": [
-                        10.0,
-                        20.0,
+                        22.5,
                         30.0,
-                        40.0,
-                        50.0,
+                        37.5,
+                        45.0,
+                        52.5,
                         60.0,
-                        70.0
+                        67.5
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -201,7 +218,7 @@
             "mCoefficient": 1.0,
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkEOne.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkEOne.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -231,6 +248,15 @@
                 "{0a3e0478}": 350.0,
                 "__type": "{0a0eddc9}"
             },
+            "castRangeDisplayOverride": [
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0
+            ],
             "castRadius": [
                 350.0,
                 350.0,
@@ -312,7 +338,7 @@
                                 {
                                     "type": "SlowAmount",
                                     "typeIndex": 2,
-                                    "nameOverride": "Spell_ListType_LeeSinESlow",
+                                    "nameOverride": "Spell_ListType_Jade_LeeSinE_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -387,7 +413,7 @@
             "mCoefficient": 1.0,
             "mAnimationName": "Spell3b",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkETwo.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkETwo.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -437,6 +463,15 @@
                 "{0a3e0478}": 575.0,
                 "__type": "{0a0eddc9}"
             },
+            "castRangeDisplayOverride": [
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0
+            ],
             "castRadius": [
                 575.0,
                 575.0,
@@ -554,7 +589,7 @@
         "mScriptName": "Jade_LeeSinWOneShield",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkWOne.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkWOne.dds"
             ],
             "SpellEventToAudioEventSuffix": {
                 "18": "Play_sfx_LeeSin_LeeSinWOneShield_OnBuffActivate",
@@ -662,7 +697,7 @@
             "mCoefficient": 1.0,
             "mAnimationName": "Spell2b",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkWTwo.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkWTwo.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -864,13 +899,13 @@
                 {
                     "name": "LifestealAndSpellVamp",
                     "values": [
-                        0.0,
+                        1.0,
                         5.0,
-                        10.0,
-                        15.0,
-                        20.0,
-                        25.0,
-                        30.0
+                        9.0,
+                        13.0,
+                        17.0,
+                        21.0,
+                        25.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -942,13 +977,26 @@
                 {
                     "name": "LifestealAndSpellVampTime",
                     "values": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorBonus",
+                    "values": [
+                        5.0,
+                        10.0,
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -971,7 +1019,7 @@
             },
             "mCoefficient": 0.800000011920929,
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkWOne.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkWOne.dds"
             ],
             "cooldownTime": [
                 9.0,
@@ -1079,8 +1127,13 @@
                                 {
                                     "type": "LifestealAndSpellVamp",
                                     "typeIndex": 2,
-                                    "nameOverride": "Spell_ListType_LeeSinWLifesteal",
+                                    "nameOverride": "Spell_ListType_Jade_LeeSinW_Lifesteal",
                                     "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ArmorBonus",
+                                    "nameOverride": "Spell_ListType_Jade_LeeSinW_Armor",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1230,7 +1283,7 @@
         "mScriptName": "Jade_LeeSinBlindedEgg",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonk_BlindingStrike.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonk_BlindingStrike.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1315,7 +1368,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.dds"
             ],
             "castRange": [
                 0.0,
@@ -1364,7 +1417,7 @@
         "mScriptName": "Jade_LeeSinPassive_Cosmetic",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/LeeSinPassive.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1769,7 +1822,7 @@
         "mScriptName": "Jade_LeeSinQManager",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonKQOne.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonKQOne.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1806,7 +1859,7 @@
             "mCoefficient2": 2.0,
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkQTwo.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkQTwo.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2092,7 +2145,7 @@
             "mCoefficient2": 2.0,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonKQOne.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonKQOne.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2374,7 +2427,7 @@
             "mAlternateName": "Jade_LeeSinQTwo",
             "mCoefficient": 0.5,
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkQTwo.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkQTwo.dds"
             ],
             "cooldownTime": [
                 2.5,
@@ -2477,9 +2530,9 @@
             "mCoefficient2": 2.0,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonk_Hardiness.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonk_Hardiness.dds"
             ],
-            "ImgIconPath": "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonk_Hardiness.project_jade.tex",
+            "ImgIconPath": "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonk_Hardiness.tex",
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
             "cooldownTime": [
@@ -2747,7 +2800,7 @@
             "mCoefficient2": 0.5,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkR.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/BlindMonkR.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -3120,7 +3173,7 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 19.700000762939453,
+            "baseValue": 23.700000762939453,
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {
@@ -3245,7 +3298,7 @@
         "passiveName": "game_character_passiveName_Jade_LeeSin",
         "passiveLuaName": "Jade_LeeSinPassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_LeeSin",
-        "passive1IconName": "ASSETS/Characters/Jade_LeeSin/HUD/Icons2D/Jade_LeeSinPassive.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_LeeSin/HUD/Icons2D/Jade_LeeSinPassive.dds",
         "name": "game_character_displayname_Jade_LeeSin",
         "weaponMaterials": [
             "Jade_LeeSinBasicAttack"
@@ -8111,7 +8164,7 @@
         "{55bb9b57}": 12,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
-            "image": "ASSETS/Characters/Jade_LeeSin/Skins/Base/Jade_LeeSinLoadScreen_Feeney.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_LeeSin/Skins/Base/Jade_LeeSinLoadScreen_Feeney.tex",
             "__type": "CensoredImage"
         },
         "__type": "{3018b0da}"
@@ -8127,7 +8180,7 @@
         "{55bb9b57}": 11,
         "{ff3c9ff8}": "{79c259f7}",
         "image": {
-            "image": "ASSETS/Characters/Jade_LeeSin/Skins/Base/Jade_LeeSinLoadScreen_Legacy_01.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_LeeSin/Skins/Base/Jade_LeeSinLoadScreen_Legacy_01.tex",
             "__type": "CensoredImage"
         },
         "__type": "{3018b0da}"

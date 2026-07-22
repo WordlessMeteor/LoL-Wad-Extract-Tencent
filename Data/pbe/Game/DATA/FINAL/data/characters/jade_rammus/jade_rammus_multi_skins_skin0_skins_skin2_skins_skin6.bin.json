@@ -1,5 +1,5 @@
 {
-    "{656713f5}": {
+    "Characters/Jade_Rammus/Skins/Skin0/Particles/Jade_Rammus_Base_W_out_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7,39 +7,41 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.20000000298023224,
+                    "constantValue": 0.4000000059604645,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
-                "emitterName": "sphereon1",
-                "importance": 3,
+                "emitterName": "sphereon",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        50.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            50.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Rammus/skins/base/Particles/common_shieldball.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Rammus/skins/Skin303/Particles/shieldball.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Rammus/skins/base/Particles/DefaultColorOverlifetime.project_jade.tex",
+                "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
                         1.0,
-                        0.8431373238563538,
-                        0.5254902243614197,
-                        0.6000000238418579
+                        1.0,
+                        1.0,
+                        0.7499961853027344
                     ],
                     "__type": "ValueColor"
                 },
@@ -47,7 +49,7 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.699999988079071,
+                            0.26837804913520813,
                             1.0
                         ],
                         "values": [
@@ -58,15 +60,15 @@
                                 1.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.7818722724914551,
+                                0.4307011663913727,
+                                0.3491416871547699,
                                 1.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0,
+                                0.5081712007522583,
+                                0.21065080165863037,
+                                0.6384221911430359,
                                 0.0
                             ]
                         ],
@@ -75,7 +77,6 @@
                     "__type": "ValueColor"
                 },
                 "disableBackfaceCull": true,
-                "isUniformScale": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -86,24 +87,24 @@
                 },
                 "birthScale0": {
                     "constantValue": [
-                        110.0,
+                        100.0,
                         100.0,
                         100.0
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Rammus/skins/base/Particles/Jade_Rammus_Base_ShieldSwipe.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Rammus/skins/Skin301/Particles/ShieldSwipe.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
-                        -3.0
+                        2.0
                     ],
                     "__type": "ValueVector2"
                 },
                 "birthUVOffset": {
                     "constantValue": [
                         0.0,
-                        0.20000000298023224
+                        -1.2000000476837158
                     ],
                     "__type": "ValueVector2"
                 },
@@ -118,40 +119,47 @@
                     "constantValue": 0.25,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.5,
-                "lifetime": 0.10000000149011612,
+                "lifetime": 1.0,
                 "isSingleParticle": 1,
-                "emitterName": "Shield",
+                "emitterName": "spherestatic",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        50.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            50.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Rammus/skins/base/Particles/DefaultColorOverlifetime.project_jade.tex",
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.7411764860153198,
-                        0.5568627715110779,
-                        0.501960813999176
-                    ],
-                    "__type": "ValueColor"
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Rammus/skins/Skin303/Particles/magicball.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
                 },
                 "Color": {
                     "dynamics": {
                         "times": [
                             0.0,
+                            0.05000000074505806,
+                            0.07999999821186066,
+                            0.6559036374092102,
                             1.0
                         ],
                         "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
                             [
                                 1.0,
                                 1.0,
@@ -162,6 +170,18 @@
                                 1.0,
                                 1.0,
                                 1.0,
+                                1.0
+                            ],
+                            [
+                                0.5993150472640991,
+                                0.0,
+                                0.11966124922037125,
+                                0.6301369667053223
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.8401617407798767,
                                 0.0
                             ]
                         ],
@@ -169,127 +189,119 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 20,
-                "depthBiasFactors": [
-                    -1.0,
-                    -1.0
-                ],
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthScale0": {
+                "particleIsLocalOrientation": 1,
+                "birthRotation0": {
                     "constantValue": [
-                        140.0,
-                        0.4489000141620636,
-                        0.4489000141620636
+                        1.0,
+                        1.0,
+                        0.0
                     ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
                     "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
                         "times": [
-                            0.5,
-                            1.0
+                            0.0
                         ],
                         "values": [
                             [
                                 1.0,
                                 1.0,
-                                1.0
-                            ],
-                            [
-                                0.800000011920929,
-                                1.0,
-                                1.0
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Rammus/skins/base/Particles/Jade_Rammus_Base_SoccerShield.project_jade.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.3499999940395355,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 0.5,
-                "lifetime": 0.10000000149011612,
-                "isSingleParticle": 1,
-                "emitterName": "SpikeShield",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        50.0,
-                        0.0
+                "birthScale0": {
+                    "constantValue": [
+                        9.0,
+                        9.0,
+                        9.0
                     ],
-                    "__type": "{ee39916f}"
+                    "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Rammus/skins/base/Particles/DefaultColorOverlifetime.project_jade.tex",
-                "blendMode": 4,
-                "Color": {
+                "texture": "ASSETS/Characters/Jade_Rammus/skins/Skin301/Particles/vertlines.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        1.0,
+                        1.0
+                    ],
                     "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
                         "times": [
-                            0.0,
-                            0.20000000298023224,
-                            1.0
+                            0.0
                         ],
                         "values": [
                             [
                                 1.0,
-                                0.9215689897537231,
-                                0.6745100021362305,
                                 1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.20999465882778168
-                            ],
-                            [
-                                1.0,
-                                0.43999388813972473,
-                                0.36000609397888184,
-                                0.0
                             ]
                         ],
-                        "__type": "VfxAnimatedColorVariableData"
+                        "__type": "VfxAnimatedVector2fVariableData"
                     },
-                    "__type": "ValueColor"
+                    "__type": "ValueVector2"
                 },
-                "pass": 21,
-                "depthBiasFactors": [
-                    -1.0,
-                    -1.0
-                ],
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthScale0": {
-                    "constantValue": [
-                        180.0,
-                        0.4490000009536743,
-                        0.4490000009536743
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Rammus/skins/base/Particles/Jade_Rammus_Base_W_SpikeShield.project_jade.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
         "particleName": "Jade_Rammus_Base_W_out_01",
         "particlePath": "Characters/Jade_Rammus/Skins/Skin0/Particles/Jade_Rammus_Base_W_out_01",
-        "flags": 196,
         "__type": "VfxSystemDefinitionData"
     },
     "__linked": []

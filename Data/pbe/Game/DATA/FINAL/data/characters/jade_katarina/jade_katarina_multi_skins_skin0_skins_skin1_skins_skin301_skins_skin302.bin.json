@@ -1,5 +1,5 @@
 {
-    "{020ffb9f}": {
+    "Characters/Jade_Katarina/Skins/Skin0/Particles/Jade_Katarina_Base_E_Trail_mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -97,7 +97,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_E_trail.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_E_trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         2.0,
@@ -620,7 +620,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_E_LeadingEdge.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_E_LeadingEdge.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -666,7 +666,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_E_Mis_Ring.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_E_Mis_Ring.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -805,7 +805,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_E_Mis_Ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_E_Mis_Ring.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -821,7 +821,7 @@
         "flags": 198,
         "__type": "VfxSystemDefinitionData"
     },
-    "{3257aa2b}": {
+    "Characters/Jade_Katarina/Skins/Skin0/Particles/Jade_Katarina_Base_W_Indicator_Enemy": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -829,151 +829,75 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.30000001192092896,
+                    "constantValue": 4.5,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 10.300000190734863,
+                "lifetime": 1.0,
                 "isSingleParticle": 1,
-                "emitterName": "Initial_Spawn_Soft_Blend1",
+                "emitterName": "HeadMarker",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
-                    "emitRotationAngles": [
-                        {
-                            "constantValue": 1.0,
-                            "dynamics": {
-                                "probabilityTables": [
-                                    {
-                                        "keyTimes": [
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "keyValues": [
-                                            0.0,
-                                            360.0
-                                        ],
-                                        "__type": "VfxProbabilityTableData"
-                                    }
-                                ],
-                                "times": [
-                                    0.0
-                                ],
-                                "values": [
-                                    1.0
-                                ],
-                                "__type": "VfxAnimatedFloatVariableData"
-                            },
-                            "__type": "ValueFloat"
-                        },
-                        {
-                            "constantValue": 1.0,
-                            "dynamics": {
-                                "probabilityTables": [
-                                    {
-                                        "keyTimes": [
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "keyValues": [
-                                            0.0,
-                                            360.0
-                                        ],
-                                        "__type": "VfxProbabilityTableData"
-                                    }
-                                ],
-                                "times": [
-                                    0.0
-                                ],
-                                "values": [
-                                    1.0
-                                ],
-                                "__type": "VfxAnimatedFloatVariableData"
-                            },
-                            "__type": "ValueFloat"
-                        }
-                    ],
-                    "emitRotationAxes": [
-                        [
-                            1.0000001192092896,
+                    "emitOffset": {
+                        "constantValue": [
                             0.0,
+                            50.0,
                             0.0
                         ],
-                        [
-                            0.0,
-                            1.0000001192092896,
-                            0.0
-                        ]
-                    ],
+                        "__type": "ValueVector3"
+                    },
                     "__type": "VfxShapeLegacy"
                 },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.6000000238418579,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                0.8156859874725342,
-                                0.6313729882240295,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                0.0,
-                                0.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 7,
-                "miscRenderFlags": 1,
-                "birthScale0": {
+                "EmitterPosition": {
                     "constantValue": [
-                        400.0,
-                        400.0,
-                        400.0
+                        0.0,
+                        150.0,
+                        0.0
                     ],
                     "__type": "ValueVector3"
                 },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.20000000298023224,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224
-                            ],
-                            [
-                                1.2000000476837158,
-                                1.2300000190734863,
-                                1.2000000476837158
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/Katarina_Blade.scb",
+                        "__type": "VfxMeshDefinitionData"
                     },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": 100,
+                "birthRotation0": {
+                    "constantValue": [
+                        0.0,
+                        90.0,
+                        0.0
+                    ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Particles/Orianna_Base_Z_Flare-Omnimax.tex",
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        150.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/katarina_Skin301.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -982,520 +906,470 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.3499999940395355,
+                    "constantValue": 0.800000011920929,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 10.350000381469727,
-                "isSingleParticle": 1,
-                "fieldCollectionDefinition": {
-                    "fieldAttractionDefinitions": [
-                        {
-                            "radius": {
-                                "constantValue": 1000.0,
-                                "__type": "ValueFloat"
-                            },
-                            "acceleration": {
-                                "constantValue": 3000.0,
-                                "__type": "ValueFloat"
-                            },
-                            "__type": "VfxFieldAttractionDefinitionData"
-                        }
-                    ],
-                    "__type": "VfxFieldCollectionDefinitionData"
-                },
-                "emitterName": "Initial_Spawn_Bits_Red",
-                "birthDrag": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.699999988079071,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.0,
-                                    0.30000001192092896,
-                                    3.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.699999988079071,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.0,
-                                    0.30000001192092896,
-                                    3.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.699999988079071,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.0,
-                                    0.30000001192092896,
-                                    3.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "SpawnShape": {
-                    "radius": 150.0,
-                    "__type": "VfxShapeSphere"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.5882353186607361
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.800000011920929,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.20000000298023224,
-                                    0.4000000059604645,
-                                    1.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0,
-                            0.05000000074505806,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.564706027507782,
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            [
-                                0.2980389893054962,
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "isDirectionOriented": 1,
-                "isRandomStartFrame": 1,
-                "directionVelocityScale": 0.0020000000949949026,
-                "birthScale0": {
-                    "constantValue": [
-                        200.0,
-                        200.0,
-                        200.0
-                    ],
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.800000011920929,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.7599999904632568,
-                                    1.0,
-                                    1.600000023841858
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.800000011920929,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.7599999904632568,
-                                    1.0,
-                                    1.600000023841858
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.800000011920929,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.7599999904632568,
-                                    1.0,
-                                    1.600000023841858
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                200.0,
-                                200.0,
-                                200.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Tar_Impact.project_jade.tex",
-                "numFrames": 4,
-                "texDiv": [
-                    2.0,
-                    2.0
-                ],
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 30.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.3499999940395355,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 10.350000381469727,
-                "isSingleParticle": 1,
-                "fieldCollectionDefinition": {
-                    "fieldAttractionDefinitions": [
-                        {
-                            "radius": {
-                                "constantValue": 1000.0,
-                                "__type": "ValueFloat"
-                            },
-                            "acceleration": {
-                                "constantValue": 3000.0,
-                                "__type": "ValueFloat"
-                            },
-                            "__type": "VfxFieldAttractionDefinitionData"
-                        }
-                    ],
-                    "__type": "VfxFieldCollectionDefinitionData"
-                },
-                "emitterName": "Initial_Spawn_Bits_Black",
-                "birthDrag": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.699999988079071,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.0,
-                                    0.30000001192092896,
-                                    3.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.699999988079071,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.0,
-                                    0.30000001192092896,
-                                    3.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.699999988079071,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.0,
-                                    0.30000001192092896,
-                                    3.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "SpawnShape": {
-                    "radius": 150.0,
-                    "__type": "VfxShapeSphere"
-                },
-                "EmitterPosition": {
-                    "constantValue": [
-                        1.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.800000011920929,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.6000000238418579,
-                                    0.699999988079071,
-                                    1.0
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0,
-                            0.05000000074505806,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "isDirectionOriented": 1,
-                "isRandomStartFrame": 1,
-                "directionVelocityScale": 0.0020000000949949026,
-                "birthScale0": {
-                    "constantValue": [
-                        100.0,
-                        100.0,
-                        100.0
-                    ],
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.800000011920929,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.7599999904632568,
-                                    1.0,
-                                    1.600000023841858
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.800000011920929,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.7599999904632568,
-                                    1.0,
-                                    1.600000023841858
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    0.800000011920929,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.7599999904632568,
-                                    1.0,
-                                    1.600000023841858
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                100.0,
-                                100.0,
-                                100.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Tar_Impact.project_jade.tex",
-                "numFrames": 4,
-                "texDiv": [
-                    2.0,
-                    2.0
-                ],
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
+                "lifetime": 3.0,
+                "emitterName": "Red_Decal",
+                "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleLifetime": {
-                    "constantValue": 0.30000001192092896,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 10.300000190734863,
-                "isSingleParticle": 1,
-                "emitterName": "Secondary_Flash",
                 "SpawnShape": {
-                    "emitRotationAngles": [
-                        {
-                            "constantValue": 1.0,
-                            "dynamics": {
-                                "probabilityTables": [
-                                    {
-                                        "keyTimes": [
-                                            0.0,
-                                            1.0
-                                        ],
-                                        "keyValues": [
-                                            0.0,
-                                            360.0
-                                        ],
-                                        "__type": "VfxProbabilityTableData"
-                                    }
-                                ],
-                                "times": [
-                                    0.0
-                                ],
-                                "values": [
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        150.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/color-darkblood.tex",
+                "blendMode": 1,
+                "pass": -100,
+                "meshRenderFlags": 0,
+                "colorLookUpTypeY": 2,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
                                     1.0
                                 ],
-                                "__type": "VfxAnimatedFloatVariableData"
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
                             },
-                            "__type": "ValueFloat"
-                        },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                -90.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        20.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                20.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        50.0,
+                        75.0,
+                        75.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/demonblade_wind_black.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 6.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.699999988079071,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 3.0,
+                "emitterName": "Shadow",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        150.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/color-bellcurve.tex",
+                "blendMode": 2,
+                "pass": -100,
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                -90.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                10.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        70.0,
+                        85.0,
+                        85.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/OrbGlow.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 80.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.5
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.009999999776482582,
+                "lifetime": 3.0,
+                "fieldCollectionDefinition": {
+                    "fieldAccelerationDefinitions": [
+                        {
+                            "isLocalSpace": false,
+                            "acceleration": {
+                                "constantValue": [
+                                    0.0,
+                                    135.0,
+                                    0.0
+                                ],
+                                "__type": "ValueVector3"
+                            },
+                            "__type": "VfxFieldAccelerationDefinitionData"
+                        }
+                    ],
+                    "fieldDragDefinitions": [
+                        {
+                            "Position": {
+                                "constantValue": [
+                                    0.0,
+                                    -10.0,
+                                    0.0
+                                ],
+                                "__type": "ValueVector3"
+                            },
+                            "radius": {
+                                "constantValue": 1000.0,
+                                "__type": "ValueFloat"
+                            },
+                            "strength": {
+                                "constantValue": 1.0,
+                                "__type": "ValueFloat"
+                            },
+                            "__type": "VfxFieldDragDefinitionData"
+                        }
+                    ],
+                    "fieldNoiseDefinitions": [
+                        {
+                            "radius": {
+                                "constantValue": 500.0,
+                                "__type": "ValueFloat"
+                            },
+                            "frequency": {
+                                "constantValue": 2.0,
+                                "__type": "ValueFloat"
+                            },
+                            "velocityDelta": {
+                                "constantValue": 10.0,
+                                "__type": "ValueFloat"
+                            },
+                            "axisFraction": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "VfxFieldNoiseDefinitionData"
+                        }
+                    ],
+                    "__type": "VfxFieldCollectionDefinitionData"
+                },
+                "emitterName": "Flame",
+                "birthVelocity": {
+                    "constantValue": [
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                10.0,
+                                10.0,
+                                10.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            50.0,
+                            0.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
                         {
                             "constantValue": 1.0,
                             "dynamics": {
@@ -1525,453 +1399,41 @@
                     ],
                     "emitRotationAxes": [
                         [
-                            1.0000001192092896,
                             0.0,
-                            0.0
-                        ],
-                        [
-                            0.0,
-                            1.0000001192092896,
+                            1.0,
                             0.0
                         ]
                     ],
                     "__type": "VfxShapeLegacy"
                 },
-                "blendMode": 4,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.30000001192092896,
-                            0.6000000238418579,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                0.7019609808921814,
-                                0.5607839822769165,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                0.36078399419784546,
-                                0.37254899740219116,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                0.0,
-                                0.0,
-                                1.0
-                            ],
-                            [
-                                0.0,
-                                0.7019609808921814,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 7,
-                "miscRenderFlags": 1,
-                "birthScale0": {
-                    "constantValue": [
-                        700.0,
-                        700.0,
-                        700.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.6000000238418579,
-                                0.6000000238418579,
-                                0.6000000238418579
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Glow.project_jade.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 3.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 1.7999999523162842,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 6.0,
-                "isSingleParticle": 1,
-                "emitterName": "Inital_Indicator_Blend",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Tar_Blade_Indicator_Typhoon.project_jade.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.4549019932746887,
-                                0.10196100175380707,
-                                0.10196100175380707,
-                                1.0
-                            ],
-                            [
-                                0.1529410034418106,
-                                0.04705899953842163,
-                                0.04705899953842163,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": -12,
-                "alphaRef": 0,
-                "disableBackfaceCull": true,
-                "miscRenderFlags": 1,
-                "birthRotation0": {
+                "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        20.0,
+                        150.0,
                         0.0
                     ],
                     "__type": "ValueVector3"
                 },
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        0.0,
-                        5.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
                 },
-                "birthScale0": {
-                    "constantValue": [
-                        15.0,
-                        15.0,
-                        15.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.05000000074505806,
-                            0.07999999821186066,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224
-                            ],
-                            [
-                                1.100000023841858,
-                                1.100000023841858,
-                                1.100000023841858
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_V2.project_jade.tex",
-                "birthUvScrollRate": {
-                    "constantValue": [
-                        0.0,
-                        1.2000000476837158
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "birthUVOffset": {
-                    "constantValue": [
-                        0.0,
-                        0.20000000298023224
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "texDiv": [
-                    2.0,
-                    1.0
-                ],
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 3.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 1.7999999523162842,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 6.0,
-                "isSingleParticle": 1,
-                "emitterName": "Inital_Indicator_Add",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Tar_Blade_Indicator_Typhoon.project_jade.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.003921568859368563,
-                        0.003921568859368563,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.15000000596046448,
-                            0.6000000238418579
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.8352940082550049
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.6706029772758484
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": -10,
-                "alphaRef": 0,
-                "disableBackfaceCull": true,
-                "miscRenderFlags": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        20.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        0.0,
-                        5.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        15.0,
-                        15.0,
-                        15.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.05000000074505806,
-                            0.07999999821186066,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224
-                            ],
-                            [
-                                1.100000023841858,
-                                1.100000023841858,
-                                1.100000023841858
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_V2.project_jade.tex",
-                "birthUvScrollRate": {
-                    "constantValue": [
-                        0.0,
-                        1.2000000476837158
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "birthUVOffset": {
-                    "constantValue": [
-                        0.0,
-                        0.20000000298023224
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "texDiv": [
-                    2.0,
-                    1.0
-                ],
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 0.8999999761581421,
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 6.900000095367432,
-                "emitterName": "Circle_Add_AOE_Ind",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Tar_Blade_Indicator.project_jade.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.19215688109397888
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.30000001192092896,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                0.11372499912977219,
-                                0.11372499912977219,
-                                0.0
-                            ],
-                            [
-                                0.8666669726371765,
-                                0.05098000168800354,
-                                0.05098000168800354,
-                                1.0
-                            ],
-                            [
-                                0.16862699389457703,
-                                0.01176500041037798,
-                                0.015685999765992165,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": -10,
-                "alphaRef": 0,
-                "disableBackfaceCull": true,
-                "miscRenderFlags": 1,
+                "particleColorTexture": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/color-bluewind.tex",
+                "blendMode": 2,
+                "pass": -100,
+                "meshRenderFlags": 0,
+                "colorLookUpTypeY": 3,
                 "isUniformScale": 1,
+                "isRandomStartFrame": 1,
                 "birthRotation0": {
                     "constantValue": [
-                        0.0,
                         1.0,
+                        0.0,
                         0.0
                     ],
                     "dynamics": {
                         "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
                             {
                                 "keyTimes": [
                                     0.0,
@@ -1985,6 +1447,9 @@
                             },
                             {
                                 "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
                             }
                         ],
                         "times": [
@@ -1992,8 +1457,8 @@
                         ],
                         "values": [
                             [
-                                0.0,
                                 1.0,
+                                0.0,
                                 0.0
                             ]
                         ],
@@ -2003,145 +1468,352 @@
                 },
                 "birthRotationalVelocity0": {
                     "constantValue": [
+                        40.0,
                         0.0,
-                        20.0,
                         0.0
                     ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        32.0,
-                        28.0,
-                        28.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
                     "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
                         "times": [
-                            0.0,
-                            0.05000000074505806,
-                            0.07999999821186066,
-                            1.0
+                            0.0
                         ],
                         "values": [
                             [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224
-                            ],
-                            [
-                                1.100000023841858,
-                                1.100000023841858,
-                                1.100000023841858
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
+                                40.0,
+                                0.0,
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Mis_Trail.project_jade.tex",
-                "birthUvScrollRate": {
+                "birthScale0": {
                     "constantValue": [
-                        0.20000000298023224,
-                        0.0
+                        50.0,
+                        50.0,
+                        50.0
                     ],
-                    "__type": "ValueVector2"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 0.8999999761581421,
-                "rate": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 1.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 6.900000095367432,
-                "emitterName": "Circle_Alpha_AOE_Ind",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Tar_Blade_Indicator.project_jade.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.4784314036369324
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
                     "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
                         "times": [
-                            0.0,
-                            0.30000001192092896,
-                            1.0
+                            0.0
                         ],
                         "values": [
                             [
-                                1.0,
-                                0.3058820068836212,
-                                0.09803900122642517,
-                                0.0
-                            ],
-                            [
-                                0.8823530077934265,
-                                0.035294000059366226,
-                                0.05098000168800354,
-                                1.0
-                            ],
-                            [
-                                0.10196100175380707,
-                                0.015685999765992165,
-                                0.10196100175380707,
-                                0.0
+                                50.0,
+                                50.0,
+                                50.0
                             ]
                         ],
-                        "__type": "VfxAnimatedColorVariableData"
+                        "__type": "VfxAnimatedVector3fVariableData"
                     },
-                    "__type": "ValueColor"
+                    "__type": "ValueVector3"
                 },
-                "pass": -12,
-                "alphaRef": 0,
-                "disableBackfaceCull": true,
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        0.0,
-                        1.0,
-                        0.0
-                    ],
+                "scale0": {
                     "dynamics": {
                         "probabilityTables": [
                             {
                                 "__type": "VfxProbabilityTableData"
                             },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            0.800000011920929,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.100000023841858,
+                                1.100000023841858,
+                                1.100000023841858
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/flames05.tex",
+                "numFrames": 16,
+                "startFrame": 8,
+                "texDiv": [
+                    4.0,
+                    4.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 80.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.5
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 0.009999999776482582,
+                "lifetime": 4.5,
+                "fieldCollectionDefinition": {
+                    "fieldAccelerationDefinitions": [
+                        {
+                            "isLocalSpace": false,
+                            "acceleration": {
+                                "constantValue": [
+                                    0.0,
+                                    -400.0,
+                                    0.0
+                                ],
+                                "__type": "ValueVector3"
+                            },
+                            "__type": "VfxFieldAccelerationDefinitionData"
+                        }
+                    ],
+                    "fieldDragDefinitions": [
+                        {
+                            "Position": {
+                                "constantValue": [
+                                    0.0,
+                                    -10.0,
+                                    0.0
+                                ],
+                                "__type": "ValueVector3"
+                            },
+                            "radius": {
+                                "constantValue": 1000.0,
+                                "__type": "ValueFloat"
+                            },
+                            "strength": {
+                                "constantValue": 1.0,
+                                "__type": "ValueFloat"
+                            },
+                            "__type": "VfxFieldDragDefinitionData"
+                        }
+                    ],
+                    "fieldNoiseDefinitions": [
+                        {
+                            "radius": {
+                                "constantValue": 500.0,
+                                "__type": "ValueFloat"
+                            },
+                            "frequency": {
+                                "constantValue": 2.0,
+                                "__type": "ValueFloat"
+                            },
+                            "velocityDelta": {
+                                "constantValue": 10.0,
+                                "__type": "ValueFloat"
+                            },
+                            "axisFraction": [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "VfxFieldNoiseDefinitionData"
+                        }
+                    ],
+                    "__type": "VfxFieldCollectionDefinitionData"
+                },
+                "emitterName": "HeadFlame",
+                "birthVelocity": {
+                    "constantValue": [
+                        10.0,
+                        -10.0,
+                        10.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                10.0,
+                                -10.0,
+                                10.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            5.0,
+                            50.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            1.0,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        150.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/color-bluewind.tex",
+                "blendMode": 2,
+                "pass": -100,
+                "meshRenderFlags": 0,
+                "colorLookUpTypeY": 3,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
                             {
                                 "keyTimes": [
                                     0.0,
@@ -2155,6 +1827,9 @@
                             },
                             {
                                 "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
                             }
                         ],
                         "times": [
@@ -2162,8 +1837,8 @@
                         ],
                         "values": [
                             [
+                                1.0,
                                 0.0,
-                                1.0,
                                 0.0
                             ]
                         ],
@@ -2173,167 +1848,100 @@
                 },
                 "birthRotationalVelocity0": {
                     "constantValue": [
+                        40.0,
                         0.0,
-                        20.0,
                         0.0
                     ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        32.0,
-                        28.0,
-                        28.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
                     "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
                         "times": [
-                            0.0,
-                            0.05000000074505806,
-                            0.07999999821186066,
-                            1.0
+                            0.0
                         ],
                         "values": [
                             [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224
-                            ],
-                            [
-                                1.100000023841858,
-                                1.100000023841858,
-                                1.100000023841858
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Mis_Trail.project_jade.tex",
-                "birthUvScrollRate": {
-                    "constantValue": [
-                        0.20000000298023224,
-                        0.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 3.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 6.0,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Circle_Alpha_TEAM_RED",
-                "importance": 3,
-                "Filtering": {
-                    "spectatorPolicy": 1,
-                    "__type": "VfxEmitterFiltering"
-                },
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Tar_Blade_Indicator.project_jade.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.0,
-                        0.01568627543747425,
-                        0.38431376218795776
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.03999999910593033,
-                            0.09000000357627869,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
+                                40.0,
+                                0.0,
                                 0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.5136950016021729
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.403905987739563
                             ]
                         ],
-                        "__type": "VfxAnimatedColorVariableData"
+                        "__type": "VfxAnimatedVector3fVariableData"
                     },
-                    "__type": "ValueColor"
-                },
-                "pass": -12,
-                "alphaRef": 0,
-                "disableBackfaceCull": true,
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        0.0,
-                        20.0,
-                        0.0
-                    ],
                     "__type": "ValueVector3"
                 },
                 "birthScale0": {
                     "constantValue": [
-                        34.0,
-                        34.0,
-                        34.0
+                        40.0,
+                        40.0,
+                        40.0
                     ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                40.0,
+                                40.0,
+                                40.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
                     "__type": "ValueVector3"
                 },
                 "scale0": {
                     "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
                         "times": [
                             0.0,
-                            0.029999999329447746,
-                            0.05000000074505806,
+                            0.800000011920929,
                             1.0
                         ],
                         "values": [
@@ -2343,29 +1951,26 @@
                                 0.20000000298023224
                             ],
                             [
-                                1.0499999523162842,
-                                1.0499999523162842,
-                                1.0499999523162842
-                            ],
-                            [
                                 1.0,
                                 1.0,
                                 1.0
                             ],
                             [
-                                1.0,
-                                1.0,
-                                1.0
+                                0.0,
+                                0.0,
+                                0.0
                             ]
                         ],
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_V4.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Skin301/Particles/flames05.tex",
+                "numFrames": 16,
+                "startFrame": 8,
                 "texDiv": [
-                    2.0,
-                    1.0
+                    4.0,
+                    4.0
                 ],
                 "__type": "VfxEmitterDefinitionData"
             }
@@ -2375,7 +1980,7 @@
         "flags": 228,
         "__type": "VfxSystemDefinitionData"
     },
-    "{49b9c420}": {
+    "Characters/Jade_Katarina/Skins/Skin0/Particles/Jade_Katarina_Base_Dagger_Ground_Indicator_Death": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2566,7 +2171,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Blade.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Blade.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -2635,7 +2240,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Jade_Katarina_base_2012_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Jade_Katarina_base_2012_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -2644,7 +2249,7 @@
         "soundOnCreateDefault": "Play_sfx_Katarina_Dagger_GroundIndicator_death",
         "__type": "VfxSystemDefinitionData"
     },
-    "{5efba706}": {
+    "Characters/Jade_Katarina/Skins/Skin0/Particles/JADE/Jade_Katarina_Base_W_Buf_Hands": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2697,7 +2302,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Loopies.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Loopies.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -2854,7 +2459,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Loopies.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Loopies.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -3414,7 +3019,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Tar_Impact.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Tar_Impact.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -3665,7 +3270,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Glows.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Glows.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -3779,7 +3384,7 @@
         "particlePath": "Characters/Jade_Katarina/Skins/Skin0/Particles/JADE/Jade_Katarina_Base_W_Buf_Hands",
         "__type": "VfxSystemDefinitionData"
     },
-    "{6ae1532e}": {
+    "Characters/Jade_Katarina/Skins/Skin0/Particles/Jade_Katarina_Base_R_Indicator_Ring": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -3800,7 +3405,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -3879,7 +3484,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_Blur.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_Blur.tex",
                 "texDiv": [
                     0.10000000149011612,
                     1.0
@@ -3905,7 +3510,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -3985,7 +3590,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_Blur.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_Blur.tex",
                 "texDiv": [
                     0.10000000149011612,
                     1.0
@@ -4011,7 +3616,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -4111,7 +3716,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_V2.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_V2.tex",
                 "texDiv": [
                     0.10000000149011612,
                     1.0
@@ -4137,7 +3742,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -4237,13 +3842,13 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_V2.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_V2.tex",
                 "texDiv": [
                     0.10000000149011612,
                     1.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Color.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Color.tex",
                     "texDivMult": [
                         0.20000000298023224,
                         1.0
@@ -4278,7 +3883,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Indicator_Ring.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -4386,7 +3991,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_V2.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Ring_Indicator_V2.tex",
                 "texDiv": [
                     0.10000000149011612,
                     1.0
@@ -4398,7 +4003,7 @@
         "particlePath": "Characters/Jade_Katarina/Skins/Skin0/Particles/Jade_Katarina_Base_R_Indicator_Ring",
         "__type": "VfxSystemDefinitionData"
     },
-    "{8c448db9}": {
+    "Characters/Jade_Katarina/Skins/Skin0/Particles/Jade_Katarina_Base_W_mis_Trail": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -4567,7 +4172,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Mis_Trail.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Mis_Trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -4988,7 +4593,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Trail.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Trail.tex",
                 "texDiv": [
                     0.3330000042915344,
                     1.0
@@ -5129,7 +4734,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Glow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -5233,7 +4838,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_BlurryBlades_v5.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_BlurryBlades_v5.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -5357,7 +4962,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{cfe2d47e}": {
+    "Characters/Jade_Katarina/Skins/Skin0/Particles/Jade_Katarina_Base_W_mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -5465,7 +5070,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Blade.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Blade.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -5551,7 +5156,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Jade_Katarina_base_2012_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Jade_Katarina_base_2012_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -5659,7 +5264,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Blade.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Blade.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -5708,7 +5313,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Jade_Katarina_base_2012_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Jade_Katarina_base_2012_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -5717,7 +5322,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{df529077}": {
+    "Characters/Jade_Katarina/Skins/Skin0/Particles/Jade_Katarina_Base_W_Missile_TopArc": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -5867,7 +5472,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_W_BlastShape.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_W_BlastShape.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -6131,7 +5736,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Tar_Impact.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_R_Tar_Impact.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -6183,7 +5788,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Loopies.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Loopies.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -6358,7 +5963,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Loopies.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Q_Blade_Loopies.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -6642,7 +6247,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Blade.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Katarina/Skins/Base/Particles/Jade_Katarina_Base_Blade.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -6657,7 +6262,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Jade_Katarina_base_2012_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Katarina/Skins/Base/Jade_Katarina_base_2012_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

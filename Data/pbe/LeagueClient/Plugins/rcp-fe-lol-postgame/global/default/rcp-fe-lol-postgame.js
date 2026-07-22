@@ -1002,8 +1002,8 @@
                     PostgameScoreboardReplayButtonComponent: A.default,
                     TftHeaderComponent: R.default,
                     TftPartnerGroupPlacementComponent: M.default,
-                    TftPlayerComponent: L.default,
-                    TftTooltipComponent: I.default,
+                    TftPlayerComponent: I.default,
+                    TftTooltipComponent: L.default,
                     TftSkilltreeScoreboardComponent: N.default,
                     TftSkilltreeScoreRowComponent: O.default,
                     TftSkilltreeProgressionComponent: D.default,
@@ -1122,8 +1122,8 @@
                         "components/strawberry-scoreboard-row": wt.default,
                         "components/render-timer": Rt.default,
                         "components/eternals-token": Mt.default,
-                        "components/postgame-root": Lt.default,
-                        "components/postgame-sub-navigation": It.default,
+                        "components/postgame-root": It.default,
+                        "components/postgame-sub-navigation": Lt.default,
                         "components/postgame-progression": Nt.default,
                         "components/prestige-progression": Ot.default,
                         "components/prestige-progression-tooltip": Dt.default,
@@ -1154,8 +1154,8 @@
                         "components/tft-partner-group-placement": we.default,
                         "components/tft-player": Re.default,
                         "components/tft-tooltip": Me.default,
-                        "components/tft-skilltree-scoreboard": Le.default,
-                        "components/tft-skilltree-score-row": Ie.default,
+                        "components/tft-skilltree-scoreboard": Ie.default,
+                        "components/tft-skilltree-score-row": Le.default,
                         "components/tft-skilltree-progression": Ne.default,
                         "components/tft-skilltree-progression-banner-spine": Oe.default
                     }
@@ -1188,7 +1188,7 @@
                     wn = n(235).default,
                     Rn = n(237).default,
                     Mn = n(239).default,
-                    Ln = n(241).default;
+                    In = n(241).default;
                 Object.assign(e, {
                     JadeLevelProgressionComponent: t,
                     JadePostgameComponent: ln,
@@ -1198,9 +1198,9 @@
                     JadeScoreboardRowComponent: Rn,
                     JadeScoreboardScreenComponent: Cn,
                     JadeSeasonPassProgressionComponent: Mn,
-                    SummonersJourneyService: Ln
+                    SummonersJourneyService: In
                 });
-                const In = n(242),
+                const Ln = n(242),
                     Nn = n(243),
                     On = n(244),
                     Dn = n(245),
@@ -1209,7 +1209,7 @@
                     Un = n(248),
                     Hn = n(249);
                 Object.assign(e.TEMPLATES, {
-                    "components/jade-level-progression": In,
+                    "components/jade-level-progression": Ln,
                     "components/jade-postgame": Nn,
                     "components/jade-progression-screen": On,
                     "components/jade-ranked-progression": Dn,
@@ -1276,8 +1276,8 @@
                 w = ln(n(63)),
                 R = ln(n(64)),
                 M = ln(n(65)),
-                L = ln(n(66)),
-                I = ln(n(67)),
+                I = ln(n(66)),
+                L = ln(n(67)),
                 N = ln(n(68)),
                 O = ln(n(69)),
                 D = ln(n(70)),
@@ -1330,8 +1330,8 @@
                 we = ln(n(118)),
                 Re = ln(n(119)),
                 Me = ln(n(120)),
-                Le = ln(n(121)),
-                Ie = ln(n(122)),
+                Ie = ln(n(121)),
+                Le = ln(n(122)),
                 Ne = ln(n(123)),
                 Oe = ln(n(124)),
                 De = ln(n(125)),
@@ -1384,8 +1384,8 @@
                 wt = ln(n(194)),
                 Rt = ln(n(195)),
                 Mt = ln(n(196)),
-                Lt = ln(n(197)),
-                It = ln(n(198)),
+                It = ln(n(197)),
+                Lt = ln(n(198)),
                 Nt = ln(n(199)),
                 Ot = ln(n(200)),
                 Dt = ln(n(201)),
@@ -10619,15 +10619,14 @@
                     }), "start+=0.35"), this.set("animationTimeline", m), m.play()
                 },
                 currentXpTotal: a.Ember.computed.alias("summonersJourneyService.xpTotal"),
-                xpRequirementPerLevel: a.Ember.computed.alias("summonersJourneyService.xpRequirementPerLevel"),
+                xpRequirementPerLevel: a.Ember.computed.alias("summonersJourneyService.xpForNextLevel"),
                 currentLevel: a.Ember.computed.alias("summonersJourneyService.currentLevel"),
                 currentProgressTowardsNextLevel: a.Ember.computed.alias("summonersJourneyService.currentLevelXp"),
                 isMaxLevel: a.Ember.computed.alias("summonersJourneyService.isMaxLevel"),
-                wasAlreadyMaxLevel: a.Ember.computed("preGameJadeXp", "xpRequirementPerLevel", (function() {
+                wasAlreadyMaxLevel: a.Ember.computed("preGameJadeXp", (function() {
                     const e = this.get("preGameJadeXp"),
-                        t = this.get("xpRequirementPerLevel"),
-                        n = this.get("summonersJourneyService");
-                    return !!(t && e && n) && 30 === n.calculateLevel(e, t)
+                        t = this.get("summonersJourneyService");
+                    return !(!e || !t) && 30 === t.levelForXp(e)
                 })),
                 xpDelta: a.Ember.computed("currentXpTotal", "preGameJadeXp", (function() {
                     return this.get("currentXpTotal") - this.get("preGameJadeXp")
@@ -10881,12 +10880,13 @@
             const a = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
                 o = `/lol-progression/v1/groups/${a}/configuration`,
                 l = `/lol-progression/v1/groups/${a}/instanceData`,
-                i = {
+                i = 30,
+                r = {
                     MASTERY: 3,
                     VOTING: 5,
                     SUMMONERS_JOURNEY: 10
                 };
-            var r = s.Ember.Service.extend({
+            var m = s.Ember.Service.extend({
                 init() {
                     this._super(...arguments), s.db.observe(o, this, this.handleProgressionTrackConfig), s.db.observe(l, this, this.handleProgressionInstanceData)
                 },
@@ -10899,33 +10899,62 @@
                 handleProgressionInstanceData(e) {
                     this.set("classicLevelInstanceData", e)
                 },
-                getUnlockLevels: () => i,
+                getUnlockLevels: () => r,
                 xpTotal: s.Ember.computed("classicLevelInstanceData.counters.0.counterValue", (function() {
                     return this.get("classicLevelInstanceData.counters.0.counterValue") || 0
                 })),
-                currentLevelXp: s.Ember.computed("xpTotal", "xpRequirementPerLevel", (function() {
-                    const e = this.get("xpRequirementPerLevel");
-                    return this.get("xpTotal") % e
+                milestoneThresholds: s.Ember.computed("classicLevelProgressionConfig", (function() {
+                    return this._buildThresholds(this.get("classicLevelProgressionConfig"))
                 })),
-                calculateLevel: (e, t) => Math.max(1, Math.min(Math.floor(e / t), 30)),
-                currentLevel: s.Ember.computed("xpTotal", "xpRequirementPerLevel", (function() {
-                    const e = this.get("xpRequirementPerLevel") || 0,
+                _buildThresholds(e) {
+                    if (!e) return [];
+                    const t = (e.milestones || []).map((e => e && e.triggers && e.triggers[0] && e.triggers[0].triggerValue)).filter((e => "number" == typeof e)).sort(((e, t) => e - t)).slice(0, i),
+                        n = e.repeat && e.repeat.repeatTriggers && e.repeat.repeatTriggers[0] && e.repeat.repeatTriggers[0].increaseBy || 0;
+                    if (n > 0 && t.length > 0) {
+                        let e = t[t.length - 1];
+                        for (; t.length < i;) e += n, t.push(e)
+                    }
+                    return t
+                },
+                levelForXpTotal(e, t) {
+                    let n = 0;
+                    for (let s = 0; s < e.length && t >= e[s]; s++) n = s + 1;
+                    return Math.min(n, i)
+                },
+                levelForXp(e) {
+                    const t = this.get("milestoneThresholds") || [];
+                    return t.length ? Math.max(1, this.levelForXpTotal(t, e || 0)) : 1
+                },
+                currentLevelXp: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
+                    const e = this.get("milestoneThresholds") || [],
+                        t = this.get("xpTotal") || 0,
+                        n = this.levelForXpTotal(e, t);
+                    return t - (n > 0 ? e[n - 1] : 0)
+                })),
+                currentLevel: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
+                    const e = this.get("milestoneThresholds") || [],
                         t = this.get("xpTotal") || 0;
-                    return e ? this.calculateLevel(t, e) : 1
+                    return e.length ? Math.max(1, this.levelForXpTotal(e, t)) : 1
                 })),
                 nextLevel: s.Ember.computed("currentLevel", (function() {
-                    return Math.min(30, this.get("currentLevel") + 1)
+                    return Math.min(i, this.get("currentLevel") + 1)
                 })),
                 isMaxLevel: s.Ember.computed("currentLevel", (function() {
-                    return this.get("currentLevel") >= 30
+                    return this.get("currentLevel") >= i
                 })),
-                xpRequirementPerLevel: s.Ember.computed("classicLevelProgressionConfig.repeat.repeatTriggers.0.increaseBy", (function() {
-                    return this.get("classicLevelProgressionConfig.repeat.repeatTriggers.0.increaseBy") || 100
+                xpForNextLevel: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
+                    const e = this.get("milestoneThresholds") || [],
+                        t = this.get("xpTotal") || 0;
+                    if (!e.length) return 100;
+                    const n = this.levelForXpTotal(e, t);
+                    if (n >= i || n >= e.length) return 0;
+                    const s = n > 0 ? e[n - 1] : 0;
+                    return e[n] - s
                 })),
-                eligibleForMasteries: s.Ember.computed.gte("currentLevel", i.MASTERY),
-                eligibleForSummonersJourney: s.Ember.computed.gte("currentLevel", i.SUMMONERS_JOURNEY)
+                eligibleForMasteries: s.Ember.computed.gte("currentLevel", r.MASTERY),
+                eligibleForSummonersJourney: s.Ember.computed.gte("currentLevel", r.SUMMONERS_JOURNEY)
             });
-            t.default = r
+            t.default = m
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({

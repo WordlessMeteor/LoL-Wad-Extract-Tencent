@@ -19,19 +19,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "TriggerRadius",
-                    "values": [
-                        160.0,
-                        160.0,
-                        160.0,
-                        160.0,
-                        160.0,
-                        160.0,
-                        160.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "MaxAmmo",
                     "values": [
                         3.0,
@@ -41,19 +28,6 @@
                         3.0,
                         3.0,
                         3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MaxBounceDistance",
-                    "values": [
-                        360.0,
-                        360.0,
-                        440.0,
-                        550.0,
-                        550.0,
-                        550.0,
-                        550.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -136,19 +110,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ExplosionRadius",
-                    "values": [
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "MaxTraps",
                     "values": [
                         25000.0,
@@ -158,71 +119,6 @@
                         25000.0,
                         25000.0,
                         25000.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MinTossDistanceBounceThreshold",
-                    "values": [
-                        150.0,
-                        220.0,
-                        500.0,
-                        500.0,
-                        500.0,
-                        500.0,
-                        500.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "VisionRadius",
-                    "values": [
-                        210.0,
-                        210.0,
-                        210.0,
-                        210.0,
-                        210.0,
-                        210.0,
-                        210.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PickUpDuration",
-                    "values": [
-                        45.0,
-                        45.0,
-                        45.0,
-                        45.0,
-                        45.0,
-                        45.0,
-                        45.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PickUpAmmoRefundPercent",
-                    "values": [
-                        0.30000001192092896,
-                        0.4000000059604645,
-                        0.5,
-                        0.6000000238418579,
-                        0.699999988079071,
-                        0.800000011920929,
-                        0.8999999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PickUpRadius",
-                    "values": [
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -242,10 +138,9 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -361,10 +256,11 @@
                     75.0,
                     100.0,
                     125.0,
-                    50.0,
-                    50.0,
-                    0.0
+                    150.0,
+                    175.0,
+                    200.0
                 ],
+                "{0a3e0478}": 75.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
@@ -405,6 +301,11 @@
                                 {
                                     "type": "Cost",
                                     "nameOverride": "Spell_ListType_ManaCost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AmmoRechargeTime",
+                                    "nameOverride": "Spell_ListType_AmmoRecharge",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -509,25 +410,8 @@
                 "BonusAttackSpeed": {
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 0.20000000298023224,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 5,
-                                    "mAdditionalBonusAtThisLevel": 0.20000000298023224,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 10,
-                                    "mAdditionalBonusAtThisLevel": 0.20000000298023224,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 15,
-                                    "mAdditionalBonusAtThisLevel": 0.20000000298023224,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                            "mNumber": 0.4000000059604645,
+                            "__type": "NumberCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -535,7 +419,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.dds"
             ],
             "castRange": [
                 0.0,
@@ -589,7 +473,7 @@
         "mScriptName": "Jade_TeemoPAttackSpeedBuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -661,7 +545,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.dds"
             ],
             "castRange": [
                 0.0,
@@ -724,7 +608,7 @@
         "mScriptName": "Jade_TeemoPassive_StealthBuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -959,10 +843,9 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "mCoefficient": 1.0,
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.dds"
             ],
             "{11704a2b}": 0.5286999940872192,
             "cooldownTime": [
@@ -1036,8 +919,9 @@
                     40.0,
                     40.0,
                     40.0,
-                    0.0
+                    40.0
                 ],
+                "{0a3e0478}": 40.0,
                 "__type": "{630af303}"
             },
             "mTargetingTypeData": {
@@ -1071,7 +955,9 @@
                                 },
                                 {
                                     "type": "ActiveMoveSpeedBonus",
+                                    "multiplier": 100.0,
                                     "nameOverride": "SpellList_TeemoW_Jade_Active",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1142,7 +1028,7 @@
         "mScriptName": "Jade_TeemoWPassive",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1452,7 +1338,7 @@
             ],
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -1779,67 +1665,8 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MinionMonsterDurationMod",
-                    "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "BaseDamage",
-                            "values": [
-                                30.0,
-                                70.0,
-                                110.0,
-                                150.0,
-                                190.0,
-                                230.0,
-                                270.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "APRatio",
-                            "values": [
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "BlindDuration",
-                            "values": [
-                                1.25,
-                                1.5,
-                                1.75,
-                                2.0,
-                                2.25,
-                                2.5,
-                                2.75
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "CalculatedDamage": {
                     "mFormulaParts": [
@@ -1853,25 +1680,11 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "{0f87e4ba}": {
-                    "mMultiplier": {
-                        "mDataValue": "MinionMonsterDurationMod",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "BlindDuration",
-                            "__type": "NamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1976,8 +1789,9 @@
                     90.0,
                     100.0,
                     110.0,
-                    0.0
+                    120.0
                 ],
+                "{0a3e0478}": 70.0,
                 "__type": "{630af303}"
             },
             "SpellEventToAudioEventSuffix": {
@@ -2000,7 +1814,9 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Cost",
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -2010,9 +1826,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "BaseDamage",
-                                    "typeIndex": 1,
-                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2070,7 +1884,7 @@
         "mScriptName": "Jade_Teemo_Calculations_Buff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick2.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick2.dds"
             ],
             "castRange": [
                 0.0,
@@ -5718,7 +5532,7 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 17.75,
+            "baseValue": 21.75,
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {
@@ -5822,7 +5636,7 @@
         "passiveName": "game_character_passiveName_Jade_Teemo",
         "passiveLuaName": "Jade_TeemoPassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Teemo",
-        "passive1IconName": "ASSETS/Characters/Jade_Teemo/HUD/Icons2D/Jade_TeemoPassive.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Teemo/HUD/Icons2D/Jade_TeemoPassive.dds",
         "name": "game_character_displayname_Jade_Teemo",
         "mUseCCAnimations": true,
         "selectionHeight": 100.0,

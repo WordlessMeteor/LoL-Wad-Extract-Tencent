@@ -315,57 +315,6 @@
             "mAffectsTypeFlags": 14346,
             "mAffectsStatusFlags": 32,
             "mAlternateName": "Jade_AhriOrbofDeception",
-            "mEffectAmount": [
-                {
-                    "value": [
-                        35.0,
-                        55.0,
-                        75.0,
-                        95.0,
-                        115.0,
-                        135.0,
-                        155.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "LuxLightStrikeKugel.dds"
@@ -464,7 +413,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 60.0,
-            "mMissileEffectKey": "{6226922b}",
+            "mMissileEffectKey": "Jade_Ahri_Q_mis_02",
             "mLineWidth": 100.0,
             "selectionPriority": 1,
             "mTargetingTypeData": {
@@ -491,7 +440,7 @@
         "mScriptName": "Jade_AhriQ_Speed",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_OrbofDeception.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_OrbofDeception.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -510,7 +459,7 @@
                     "PersistentVfxs": [
                         {
                             "boneName": "C_Buffbone_Glb_Center_Loc",
-                            "effectKey": "{8dae86bc}",
+                            "effectKey": "Jade_Ahri_Q_Speed",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -546,24 +495,10 @@
                         165.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "FlatMovementSpeedMod",
-                    "values": [
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "TotalDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -579,8 +514,8 @@
             },
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_OrbofDeception.project_jade.dds",
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_OrbofDeception.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_OrbofDeception.dds",
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_OrbofDeception.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -919,7 +854,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{96c817ac}",
+            "mMissileEffectKey": "Jade_Ahri_Q_mis",
             "mLineWidth": 100.0,
             "selectionPriority": 1,
             "mTargetingTypeData": {
@@ -962,6 +897,924 @@
         },
         "__type": "SpellObject"
     },
+    "Characters/Jade_Ahri/Spells/Jade_AhriEAbility": {
+        "mRootSpell": "Characters/Jade_Ahri/Spells/Jade_AhriEAbility/Jade_AhriE",
+        "mChildSpells": [
+            "Characters/Jade_Ahri/Spells/Jade_AhriEAbility/Jade_AhriE",
+            "{3ffe014e}"
+        ],
+        "mName": "Jade_AhriEAbility",
+        "__type": "AbilityObject"
+    },
+    "{0e547714}": {
+        "ObjectName": "Jade_AhriE_Amp",
+        "mScriptName": "Jade_AhriE_Amp",
+        "mSpell": {
+            "mAffectsTypeFlags": 13327,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_AhriSeduce",
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell",
+                "Trait_SignatureSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        60.0,
+                        90.0,
+                        120.0,
+                        150.0,
+                        180.0,
+                        210.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CharmDuration",
+                    "values": [
+                        0.75,
+                        1.0,
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAmp",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAmpDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_Charm.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "missileSpeed": 1200.0,
+            "mLineWidth": 60.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "head",
+            "mana": [
+                50.0,
+                65.0,
+                80.0,
+                95.0,
+                110.0,
+                110.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    65.0,
+                    80.0,
+                    95.0,
+                    110.0,
+                    125.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Ahri_AhriE_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AhriE_Amp",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_AhriE_Jade_Name",
+                        "keySummary": "Spell_AhriE_Jade_Summary",
+                        "keyTooltip": "Spell_AhriE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "CharmDuration",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_Duration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_AhriE_Amp",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_AhriE_Jade_Name",
+                    "keyTooltip": "Buff_Jade_AhriEAbility_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "PersistentEffectConditions": [
+                {
+                    "__type": "PersistentEffectConditionData"
+                }
+            ],
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{3ffe014e}": {
+        "ObjectName": "Jade_AhriE_Missile",
+        "mScriptName": "Jade_AhriE_Missile",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_AhriSeduce",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        25.0,
+                        80.0,
+                        135.0,
+                        190.0,
+                        245.0,
+                        300.0,
+                        355.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.75,
+                        2.0,
+                        2.25,
+                        2.5,
+                        2.75,
+                        3.0,
+                        3.25
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.8999999761581421,
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "FallenAngel_DarkBinding.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1550.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnHit"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.5,
+            "missileSpeed": 1550.0,
+            "mMissileEffectKey": "Jade_Ahri_E_mis",
+            "mLineWidth": 60.0,
+            "mHitEffectKey": "Jade_Ahri_E_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "spine",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Ahri_AhriEMissile_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Ahri/Spells/Jade_AhriEAbility/Jade_AhriE": {
+        "ObjectName": "Jade_AhriE",
+        "mScriptName": "Jade_AhriE",
+        "mSpell": {
+            "mAffectsTypeFlags": 13327,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_AhriSeduce",
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell",
+                "Trait_SignatureSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        60.0,
+                        90.0,
+                        120.0,
+                        150.0,
+                        180.0,
+                        210.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421,
+                        -0.6499999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CharmDuration",
+                    "values": [
+                        0.75,
+                        1.0,
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAmp",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAmpDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_Charm.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "missileSpeed": 1200.0,
+            "mLineWidth": 60.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "head",
+            "mana": [
+                50.0,
+                65.0,
+                80.0,
+                95.0,
+                110.0,
+                110.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    65.0,
+                    80.0,
+                    95.0,
+                    110.0,
+                    125.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Ahri_AhriE_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AhriE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_AhriE_Jade_Name",
+                        "keySummary": "Spell_AhriE_Jade_Summary",
+                        "keyTooltip": "Spell_AhriE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "CharmDuration",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_Duration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_AhriE_Jade_Tooltip",
+            "PersistentEffectConditions": [
+                {
+                    "PersistentVfxs": [
+                        {
+                            "boneName": "C_BUFFBONE_GLB_HEAD_LOC",
+                            "effectKey": "Jade_Ahri_E_buf",
+                            "__type": "PersistentVfxData"
+                        },
+                        {
+                            "boneName": "C_BUFFBONE_GLB_LAYOUT_LOC",
+                            "effectKey": "{0b3d2567}",
+                            "__type": "PersistentVfxData"
+                        }
+                    ],
+                    "__type": "PersistentEffectConditionData"
+                }
+            ],
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "SlowPercent",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "CharmDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "CharmDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 32768,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 60.0,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
     "{427f0534}": {
         "mRootSpell": "{5b07a289}",
         "mChildSpells": [
@@ -976,7 +1829,7 @@
         "mScriptName": "Jade_AhriPassive_Counter",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater2.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater2.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -994,19 +1847,6 @@
             "mAffectsStatusFlags": 32,
             "DataValues": [
                 {
-                    "name": "TakedownWindow",
-                    "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "MaxStacks",
                     "values": [
                         9.0,
@@ -1018,40 +1858,39 @@
                         9.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealAPRatio",
+                    "values": [
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "ChampionHeal": {
+                "{29c2c1eb}": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 75.0,
-                            "mEndValue": 165.0,
+                            "mStartValue": 3.0,
+                            "mEndValue": 20.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.30000001192092896,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "MinionHeal": {
-                    "mFormulaParts": [
-                        {
-                            "mStartValue": 35.0,
-                            "mEndValue": 95.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 0.20000000298023224,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "HealAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -1232,8 +2071,8 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 1750.0,
-            "mMissileEffectKey": "{b074d1cc}",
-            "mHitEffectKey": "{8d552388}",
+            "mMissileEffectKey": "Jade_Ahri_BA_mis",
+            "mHitEffectKey": "Jade_Ahri_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1293,6 +2132,32 @@
                         165.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SecondaryHitMod",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1303,16 +2168,16 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.4000000059604645,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
                 "HalfDamage": {
                     "mMultiplier": {
-                        "mNumber": 0.5,
-                        "__type": "NumberCalculationPart"
+                        "mDataValue": "SecondaryHitMod",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "mModifiedGameCalculation": "TotalDamage",
                     "__type": "GameCalculationModified"
@@ -1320,7 +2185,7 @@
             },
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_FoxFire.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_FoxFire.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -1342,7 +2207,7 @@
                     7.0,
                     6.0,
                     5.0,
-                    5.0
+                    4.0
                 ],
                 "__type": "{0a0eddc9}"
             },
@@ -1429,14 +2294,14 @@
             ],
             "{210f9ec0}": {
                 "values": [
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0,
-                    60.0
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0
                 ],
-                "{0a3e0478}": 60.0,
+                "{0a3e0478}": 50.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
@@ -1658,7 +2523,7 @@
             "mCastType": 4,
             "castFrame": 7.5,
             "missileSpeed": 900.0,
-            "mMissileEffectKey": "{e18f67ce}",
+            "mMissileEffectKey": "Jade_Ahri_W_mis",
             "bHaveHitBone": true,
             "mHitBoneName": "spine",
             "selectionPriority": 1,
@@ -1892,8 +2757,8 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{d72afce1}",
-            "mHitEffectKey": "{20838fda}",
+            "mMissileEffectKey": "Jade_Ahri_W_mis_02",
+            "mHitEffectKey": "Jade_Ahri_W_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -2045,8 +2910,8 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 1750.0,
-            "mMissileEffectKey": "{b074d1cc}",
-            "mHitEffectKey": "{8d552388}",
+            "mMissileEffectKey": "Jade_Ahri_BA_mis",
+            "mHitEffectKey": "Jade_Ahri_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2063,611 +2928,6 @@
                 "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Jade_Ahri/Spells/Jade_AhriEAbility": {
-        "mRootSpell": "Characters/Jade_Ahri/Spells/Jade_AhriEAbility/Jade_AhriE",
-        "mChildSpells": [
-            "Characters/Jade_Ahri/Spells/Jade_AhriEAbility/Jade_AhriE",
-            "{3ffe014e}"
-        ],
-        "mName": "Jade_AhriEAbility",
-        "__type": "AbilityObject"
-    },
-    "{3ffe014e}": {
-        "ObjectName": "Jade_AhriE_Missile",
-        "mScriptName": "Jade_AhriE_Missile",
-        "mSpell": {
-            "mAffectsTypeFlags": 6154,
-            "mAlternateName": "Jade_AhriSeduce",
-            "mEffectAmount": [
-                {
-                    "value": [
-                        25.0,
-                        80.0,
-                        135.0,
-                        190.0,
-                        245.0,
-                        300.0,
-                        355.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.75,
-                        2.0,
-                        2.25,
-                        2.5,
-                        2.75,
-                        3.0,
-                        3.25
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "mCoefficient": 0.8999999761581421,
-            "mAnimationName": "Spell3",
-            "mImgIconName": [
-                "FallenAngel_DarkBinding.dds"
-            ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
-            "cooldownTime": [
-                12.0,
-                12.0,
-                12.0,
-                12.0,
-                12.0,
-                12.0,
-                12.0
-            ],
-            "Cooldown": {
-                "values": [
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0
-                ],
-                "{0a3e0478}": 12.0,
-                "__type": "{0a0eddc9}"
-            },
-            "mCantCancelWhileWindingUp": true,
-            "bHaveHitEffect": true,
-            "castRange": [
-                1000.0,
-                1000.0,
-                1000.0,
-                1000.0,
-                1000.0,
-                1000.0,
-                1000.0
-            ],
-            "{0e1136d1}": {
-                "values": [
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0
-                ],
-                "{0a3e0478}": 1000.0,
-                "__type": "{0a0eddc9}"
-            },
-            "castRangeDisplayOverride": [
-                1175.0,
-                1175.0,
-                1175.0,
-                1175.0,
-                1175.0,
-                1175.0,
-                1175.0
-            ],
-            "castRadius": [
-                210.0,
-                210.0,
-                210.0,
-                210.0,
-                210.0,
-                210.0,
-                210.0
-            ],
-            "castConeDistance": 100.0,
-            "mMissileSpec": {
-                "mMissileWidth": 60.0,
-                "movementComponent": {
-                    "mUseHeightOffsetAtEnd": true,
-                    "mTracksTarget": false,
-                    "mOffsetInitialTargetHeight": 100.0,
-                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
-                    "mProjectTargetToCastRange": true,
-                    "mSpeed": 1550.0,
-                    "__type": "FixedSpeedMovement"
-                },
-                "heightSolver": {
-                    "__type": "BlendedLinearHeightSolver"
-                },
-                "verticalFacing": {
-                    "__type": "VerticalFacingFaceTarget"
-                },
-                "behaviors": [
-                    {
-                        "__type": "CastOnHit"
-                    },
-                    {
-                        "__type": "DestroyOnMovementComplete"
-                    },
-                    {
-                        "__type": "DestroyOnHit"
-                    }
-                ],
-                "__type": "MissileSpecification"
-            },
-            "mCastType": 3,
-            "castFrame": 7.5,
-            "missileSpeed": 1550.0,
-            "mMissileEffectKey": "{6a7c87a0}",
-            "mLineWidth": 60.0,
-            "mHitEffectKey": "{aa0e806c}",
-            "bHaveHitBone": true,
-            "mHitBoneName": "spine",
-            "selectionPriority": 2,
-            "mTargetingTypeData": {
-                "__type": "Direction"
-            },
-            "SpellEventToAudioEventSuffix": {
-                "15": "Play_sfx_Ahri_AhriEMissile_OnMissileLaunch"
-            },
-            "mClientData": {
-                "mTargeterDefinitions": [
-                    {
-                        "hideWithLineIndicator": true,
-                        "useCasterBoundingBox": false,
-                        "__type": "TargeterDefinitionRange"
-                    },
-                    {
-                        "endLocator": {
-                            "basePosition": 3,
-                            "__type": "DrawablePositionLocator"
-                        },
-                        "lineStopsAtEndPosition": false,
-                        "lineWidth": {
-                            "mPerLevelValues": [
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0
-                            ],
-                            "mValueType": 2,
-                            "__type": "FloatPerSpellLevel"
-                        },
-                        "__type": "TargeterDefinitionLine"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "__type": "SpellObject"
-    },
-    "Characters/Jade_Ahri/Spells/Jade_AhriEAbility/Jade_AhriE": {
-        "ObjectName": "Jade_AhriE",
-        "mScriptName": "Jade_AhriE",
-        "mSpell": {
-            "mAffectsTypeFlags": 13327,
-            "mRequiredUnitTags": {
-                "mObjectTagList": [
-                    "{ea595ca6}"
-                ],
-                "__type": "ObjectTags"
-            },
-            "mAlternateName": "Jade_AhriSeduce",
-            "mSpellTags": [
-                "Trait_ImmobilizingCCSpell",
-                "Trait_SignatureSpell"
-            ],
-            "DataValues": [
-                {
-                    "name": "BaseDamage",
-                    "values": [
-                        30.0,
-                        60.0,
-                        90.0,
-                        120.0,
-                        150.0,
-                        180.0,
-                        210.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "SlowPercent",
-                    "values": [
-                        -0.6499999761581421,
-                        -0.6499999761581421,
-                        -0.6499999761581421,
-                        -0.6499999761581421,
-                        -0.6499999761581421,
-                        -0.6499999761581421,
-                        -0.6499999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "CharmDuration",
-                    "values": [
-                        0.75,
-                        1.0,
-                        1.25,
-                        1.5,
-                        1.75,
-                        2.0,
-                        2.25
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "APRatio",
-                    "values": [
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        12.0,
-                        12.0,
-                        12.0,
-                        12.0,
-                        12.0,
-                        12.0,
-                        12.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
-            "mSpellCalculations": {
-                "TotalDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "BaseDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mDataValue": "APRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                }
-            },
-            "mAnimationName": "Spell3",
-            "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_Charm.project_jade.dds"
-            ],
-            "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
-            "cooldownTime": [
-                12.0,
-                12.0,
-                12.0,
-                12.0,
-                12.0,
-                12.0,
-                12.0
-            ],
-            "Cooldown": {
-                "values": [
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0,
-                    12.0
-                ],
-                "{0a3e0478}": 12.0,
-                "__type": "{0a0eddc9}"
-            },
-            "mCantCancelWhileWindingUp": true,
-            "alwaysSnapFacing": true,
-            "useAnimatorFramerate": true,
-            "castRange": [
-                10000.0,
-                10000.0,
-                10000.0,
-                10000.0,
-                10000.0,
-                10000.0,
-                10000.0
-            ],
-            "{0e1136d1}": {
-                "values": [
-                    10000.0,
-                    10000.0,
-                    10000.0,
-                    10000.0,
-                    10000.0,
-                    10000.0,
-                    10000.0
-                ],
-                "{0a3e0478}": 10000.0,
-                "__type": "{0a0eddc9}"
-            },
-            "castRangeDisplayOverride": [
-                975.0,
-                975.0,
-                975.0,
-                975.0,
-                975.0,
-                975.0,
-                975.0
-            ],
-            "castRadius": [
-                210.0,
-                210.0,
-                210.0,
-                210.0,
-                210.0,
-                210.0,
-                210.0
-            ],
-            "castConeDistance": 100.0,
-            "missileSpeed": 1200.0,
-            "mLineWidth": 60.0,
-            "bHaveHitBone": true,
-            "mHitBoneName": "head",
-            "mana": [
-                50.0,
-                65.0,
-                80.0,
-                95.0,
-                110.0,
-                110.0
-            ],
-            "{210f9ec0}": {
-                "values": [
-                    50.0,
-                    65.0,
-                    80.0,
-                    95.0,
-                    110.0,
-                    110.0
-                ],
-                "__type": "{630af303}"
-            },
-            "selectionPriority": 2,
-            "mTargetingTypeData": {
-                "__type": "Location"
-            },
-            "SpellEventToAudioEventSuffix": {
-                "12": "Play_sfx_Ahri_AhriE_OnCast"
-            },
-            "mCastingBreaksStealth": true,
-            "mClientData": {
-                "mTooltipData": {
-                    "mObjectName": "Jade_AhriE",
-                    "mFormat": "{d7c27163}",
-                    "mLocKeys": {
-                        "keyName": "Spell_AhriE_Jade_Name",
-                        "keySummary": "Spell_AhriE_Jade_Summary",
-                        "keyTooltip": "Spell_AhriE_Jade_Tooltip"
-                    },
-                    "mLists": {
-                        "LevelUp": {
-                            "levelCount": 5,
-                            "Elements": [
-                                {
-                                    "type": "BaseDamage",
-                                    "typeIndex": 1,
-                                    "nameOverride": "Spell_ListType_Damage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "CharmDuration",
-                                    "typeIndex": 2,
-                                    "nameOverride": "Spell_ListType_Duration",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Cost",
-                                    "__type": "TooltipInstanceListElement"
-                                }
-                            ],
-                            "__type": "TooltipInstanceList"
-                        }
-                    },
-                    "__type": "TooltipInstanceSpell"
-                },
-                "mTargeterDefinitions": [
-                    {
-                        "hideWithLineIndicator": true,
-                        "useCasterBoundingBox": false,
-                        "__type": "TargeterDefinitionRange"
-                    },
-                    {
-                        "endLocator": {
-                            "basePosition": 3,
-                            "__type": "DrawablePositionLocator"
-                        },
-                        "lineStopsAtEndPosition": false,
-                        "lineWidth": {
-                            "mPerLevelValues": [
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0,
-                                60.0
-                            ],
-                            "mValueType": 2,
-                            "__type": "FloatPerSpellLevel"
-                        },
-                        "__type": "TargeterDefinitionLine"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "mBuff": {
-            "mDescription": "Buff_AhriE_Jade_Tooltip",
-            "PersistentEffectConditions": [
-                {
-                    "PersistentVfxs": [
-                        {
-                            "boneName": "C_BUFFBONE_GLB_HEAD_LOC",
-                            "effectKey": "{f110b5f2}",
-                            "__type": "PersistentVfxData"
-                        },
-                        {
-                            "boneName": "C_BUFFBONE_GLB_LAYOUT_LOC",
-                            "effectKey": "{0b3d2567}",
-                            "__type": "PersistentVfxData"
-                        }
-                    ],
-                    "__type": "PersistentEffectConditionData"
-                }
-            ],
-            "__type": "BuffData"
-        },
-        "BotData": {
-            "DamageTag": 1,
-            "{6d548702}": {
-                "mFormulaParts": [
-                    {
-                        "mSpellCalculationKey": "TotalDamage",
-                        "__type": "{f3cbe7b2}"
-                    }
-                ],
-                "__type": "GameCalculation"
-            },
-            "{ec17e271}": [
-                {
-                    "EffectTag": 1,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mDataValue": "SlowPercent",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                },
-                {
-                    "EffectTag": 2048,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mDataValue": "CharmDuration",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                },
-                {
-                    "EffectTag": 4096,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mDataValue": "CharmDuration",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                },
-                {
-                    "EffectTag": 16384,
-                    "EffectCalculation": {
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                },
-                {
-                    "EffectTag": 32768,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mNumber": 60.0,
-                                "__type": "NumberCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                }
-            ],
-            "{38382c53}": [
-                {
-                    "{e38f54f7}": 1,
-                    "{0717e686}": false,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 4,
-                    "{0717e686}": false,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 1024,
-                    "{0717e686}": false,
-                    "__type": "{150d1b92}"
-                },
-                {
-                    "{e38f54f7}": 8192,
-                    "{0717e686}": false,
-                    "__type": "{150d1b92}"
-                }
-            ],
-            "__type": "BotsSpellData"
         },
         "__type": "SpellObject"
     },
@@ -2711,13 +2971,26 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        45.0,
-                        85.0,
-                        125.0,
-                        165.0,
-                        205.0,
-                        245.0,
-                        285.0
+                        30.0,
+                        70.0,
+                        110.0,
+                        150.0,
+                        190.0,
+                        230.0,
+                        270.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2730,8 +3003,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.3499999940395355,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2739,7 +3012,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SpiritRush.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SpiritRush.dds"
             ],
             "cooldownTime": [
                 110.0,
@@ -2752,14 +3025,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    110.0,
+                    125.0,
                     110.0,
                     95.0,
                     80.0,
-                    80.0,
-                    80.0,
-                    80.0
+                    65.0,
+                    50.0,
+                    35.0
                 ],
+                "{0a3e0478}": 125.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -2924,7 +3198,7 @@
                     "PersistentVfxs": [
                         {
                             "boneName": "C_Buffbone_Glb_Layout_Loc",
-                            "effectKey": "{c9bfefcf}",
+                            "effectKey": "Jade_Ahri_R_Indicator_1",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -2945,7 +3219,7 @@
                     "PersistentVfxs": [
                         {
                             "boneName": "C_Buffbone_Glb_Layout_Loc",
-                            "effectKey": "{cabff162}",
+                            "effectKey": "Jade_Ahri_R_Indicator_2",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -2966,7 +3240,7 @@
                     "PersistentVfxs": [
                         {
                             "boneName": "C_Buffbone_Glb_Layout_Loc",
-                            "effectKey": "{cbbff2f5}",
+                            "effectKey": "Jade_Ahri_R_Indicator_3",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -3128,8 +3402,8 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{58537d04}",
-            "mHitEffectKey": "{168abb05}",
+            "mMissileEffectKey": "Jade_Ahri_R_mis_02",
+            "mHitEffectKey": "Jade_Ahri_R_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -3236,8 +3510,8 @@
             "mCastType": 1,
             "castFrame": 10.0,
             "missileSpeed": 1750.0,
-            "mMissileEffectKey": "{b074d1cc}",
-            "mHitEffectKey": "{8d552388}",
+            "mMissileEffectKey": "Jade_Ahri_BA_mis",
+            "mHitEffectKey": "Jade_Ahri_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -7112,7 +7386,7 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 14.5,
+            "baseValue": 18.5,
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {
@@ -7224,7 +7498,7 @@
         "passiveName": "game_character_passiveName_Jade_Ahri",
         "passiveLuaName": "Jade_AhriPassive",
         "passiveToolTip": "game_character_passiveDescription_Jade_Ahri",
-        "passive1IconName": "ASSETS/Characters/Jade_Ahri/HUD/Icons2D/Jade_Ahri_SoulEater2.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Ahri/HUD/Icons2D/Jade_Ahri_SoulEater2.dds",
         "name": "game_character_displayname_Jade_Ahri",
         "weaponMaterials": [
             "Jade_AhriBasicAttack"
@@ -7484,7 +7758,8 @@
                             "__type": "ScriptTableSet"
                         },
                         "__type": "SetVarInTableBlock"
-                    }
+                    },
+                    null
                 ],
                 "__type": "RootScriptSequence"
             },
@@ -7795,7 +8070,7 @@
         "{55bb9b57}": 2,
         "{ff3c9ff8}": "{da1d5efa}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Ahri/Skins/Base/Jade_AhriLoadScreen_ClassicReborn.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Ahri/Skins/Base/Jade_AhriLoadScreen_ClassicReborn.tex",
             "__type": "CensoredImage"
         },
         "__type": "{3018b0da}"

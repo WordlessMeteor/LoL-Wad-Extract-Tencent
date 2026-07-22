@@ -134,6 +134,7 @@ champ-select:
             59: 59000
             6: 6000
             60: 60000
+            60011: 60011301
             61: 61000
             62: 62000
             63: 63000
@@ -214,9 +215,15 @@ champ-select:
             3230:
             - 4
             - 32
+            3260:
+            - 74
+            - 712
             3270:
             - 4
             - 32
+            3280:
+            - 4
+            - 6
             4210:
             - 3
             - 14
@@ -273,11 +280,11 @@ event-hub:
             73375b59-ae68-4442-bb4a-42d847246b88:
                 lastSeenTokenBalance: 0
                 lastSeenTokenShopOffersVersion: 0
-                lastTimeSeen: "2026-07-15T17:59:18.682Z"
+                lastTimeSeen: "2026-07-20T08:38:21.960Z"
             97267a01-5d78-469a-8fea-d9083298d572:
                 lastSeenTokenBalance: 0
                 lastSeenTokenShopOffersVersion: 0
-                lastTimeSeen: "2026-06-19T15:10:58.331Z"
+                lastTimeSeen: "2026-07-20T08:38:21.019Z"
     schemaVersion: 1
 event-shop:
     data:
@@ -287,9 +294,14 @@ event-shop:
     schemaVersion: 1
 jade-ftux:
     data:
+        hasSeenChampSelectMasteriesFtux: true
         hasSeenHomeFtux: true
         hasSeenRunesFtux: true
     schemaVersion: 1
+jadePositionPreferencesEncountered:
+    data:
+        encountered: "true"
+    schemaVersion: 0
 lol-challenges:
     data:
         introCollectionModalShown: true
@@ -323,7 +335,7 @@ lol-clash:
 lol-collection-champions:
     data:
         groupingDropdownKey: ""
-        lastVisitTime: 1777029293588
+        lastVisitTime: 1784546482002
         lcm-eat-seen: true
         sortingDropdownKey: ""
         unownedFilter: "none"
@@ -360,6 +372,44 @@ lol-collection-wards:
         unavailableFilter: false
         unownedFilter: false
     schemaVersion: 3
+lol-cosmetics-queue-snapshots:
+    data:
+        snapshotsByQueueId:
+            3140:
+                companion:
+                    contentId: ""
+                    hasSelection: false
+                    itemId: 0
+                damageSkin:
+                    contentId: ""
+                    hasSelection: false
+                    itemId: 0
+                mapSkin:
+                    contentId: ""
+                    hasSelection: false
+                    itemId: 0
+                zoomSkin:
+                    contentId: ""
+                    hasSelection: false
+                    itemId: 0
+            6110:
+                companion:
+                    contentId: ""
+                    hasSelection: false
+                    itemId: 0
+                damageSkin:
+                    contentId: ""
+                    hasSelection: false
+                    itemId: 0
+                mapSkin:
+                    contentId: ""
+                    hasSelection: false
+                    itemId: 0
+                zoomSkin:
+                    contentId: ""
+                    hasSelection: false
+                    itemId: 0
+    schemaVersion: 1
 lol-customizer-banners:
     data:
         lastVisitTime: 1773464779819
@@ -489,12 +539,13 @@ lol-perks:
 lol-premade-voice:
     data:
         autoJoin: true
+        autoJoinTeamVoice: false
         inputMode: "voiceActivity"
         muteOnConnect: false
         pushToTalkKey: "null"
         pushToTalkTeamKey: "[0]"
-        showFirstExperienceInGame: false
-        showFirstExperienceInLCU: false
+        showFirstExperienceInGame: true
+        showFirstExperienceInLCU: true
         teamVoiceEnabled: false
     schemaVersion: 1
 lol-quick-play:
@@ -570,7 +621,10 @@ lol-tutorial:
         Map12_ARAM_TutorialSeen: true
         Map12_BRAWL_TutorialSeen: true
         Map12_KIWI_16_03_TutorialSeen: true
+        Map12_KIWI_16_12_TutorialSeen: true
+        Map12_KIWI_JADE_TutorialSeen: true
         Map12_KIWI_TutorialSeen: true
+        Map12_PRACTICETOOL_TutorialSeen: true
         Map21_CLASSIC_TutorialSeen: true
         Map22_TFT_TFT_Event_PM_TutorialSeen: true
         Map22_TFT_TFT_Set4_Stage2_Revival_TutorialSeen: true
@@ -599,8 +653,11 @@ parties-settings:
     schemaVersion: 0
 partiesPositionPreferences:
     data:
-        firstPreference: "UTILITY"
-        secondPreference: "FILL"
+        fifthPreference: "UNSELECTED"
+        firstPreference: "FILL"
+        fourthPreference: "UNSELECTED"
+        secondPreference: "UNSELECTED"
+        thirdPreference: "UNSELECTED"
     schemaVersion: 0
 ranked-eos-notification-20-RANKED_SOLO_5x5-FIRST_WARNING:
     data:
@@ -615,6 +672,10 @@ ranked-eos-notification-21-RANKED_SOLO_5x5-SECOND_WARNING:
         notificationShown: true
     schemaVersion: 1
 ranked-eos-notification-22-RANKED_SOLO_5x5-FIRST_WARNING:
+    data:
+        notificationShown: true
+    schemaVersion: 1
+ranked-eos-notification-22-RANKED_SOLO_5x5-SECOND_WARNING:
     data:
         notificationShown: true
     schemaVersion: 1

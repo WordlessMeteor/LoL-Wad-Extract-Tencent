@@ -31,13 +31,13 @@
                 {
                     "name": "AttackSpeedDuration",
                     "values": [
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -57,20 +57,20 @@
                 {
                     "name": "Range",
                     "values": [
-                        20000.0,
-                        20000.0,
-                        20000.0,
-                        20000.0,
-                        20000.0,
-                        20000.0,
-                        20000.0
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mAnimationName": "Spell3_Howl",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_FrenziedStrikes.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_FrenziedStrikes.dds"
             ],
             "mCastTime": 0.5,
             "{11704a2b}": 0.43950000405311584,
@@ -120,25 +120,34 @@
             ],
             "{0e1136d1}": {
                 "values": [
-                    20000.0,
-                    20000.0,
-                    20000.0,
-                    20000.0,
-                    20000.0,
-                    20000.0,
-                    20000.0
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0
                 ],
-                "{0a3e0478}": 20000.0,
+                "{0a3e0478}": 1200.0,
                 "__type": "{0a0eddc9}"
             },
+            "castRangeDisplayOverride": [
+                1250.0,
+                1250.0,
+                1250.0,
+                1250.0,
+                1250.0,
+                1250.0,
+                1250.0
+            ],
             "castRadius": [
-                2200.0,
-                2200.0,
-                2200.0,
-                2200.0,
-                2200.0,
-                2200.0,
-                2200.0
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0
             ],
             "castConeDistance": 100.0,
             "castFrame": 16.09000015258789,
@@ -328,7 +337,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{49345ac2}",
+            "mHitEffectKey": "Jade_Warwick_Basic_Attack_Hit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -363,7 +372,7 @@
         "mScriptName": "Jade_WarwickETarget",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_BloodScent.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_BloodScent.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -386,7 +395,7 @@
         "mScriptName": "Jade_WarwickEInternal",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/20.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/20.dds"
             ],
             "SpellEventToAudioEventSuffix": {
                 "18": "Play_sfx_Warwick_WarwickE2_OnBuffActivate"
@@ -439,7 +448,7 @@
             ],
             "mAnimationName": "None",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_BloodScent.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_BloodScent.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -679,7 +688,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{2f2e75c2}",
+            "mHitEffectKey": "Jade_Warwick_Crit_Attack_Hit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -720,7 +729,7 @@
         "mScriptName": "Jade_WarwickPassiveStacks",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InnerHunger.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InnerHunger.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -777,7 +786,7 @@
                 }
             ],
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InnerHunger.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InnerHunger.dds"
             ],
             "castRange": [
                 0.0,
@@ -883,9 +892,13 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{18595b00}",
+            "mHitEffectKey": "Jade_Warwick_Basic_Attack_Hit_Passive_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickBasicAttack_OnCast",
+                "13": "Play_sfx_Warwick_WarwickBasicAttack_OnHit"
+            },
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -964,9 +977,13 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{18595b00}",
+            "mHitEffectKey": "Jade_Warwick_Basic_Attack_Hit_Passive_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickBasicAttack_OnCast",
+                "13": "Play_sfx_Warwick_WarwickBasicAttack_OnHit"
+            },
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -1045,9 +1062,13 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{18595b00}",
+            "mHitEffectKey": "Jade_Warwick_Basic_Attack_Hit_Passive_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickBasicAttack_OnCast",
+                "13": "Play_sfx_Warwick_WarwickBasicAttack_OnHit"
+            },
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -1126,9 +1147,13 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{18595b00}",
+            "mHitEffectKey": "Jade_Warwick_Basic_Attack_Hit_Passive_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickBasicAttack_OnCast",
+                "13": "Play_sfx_Warwick_WarwickBasicAttack_OnHit"
+            },
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -1157,7 +1182,7 @@
         "mScriptName": "Jade_WarwickRSound",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InfiniteDuress.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InfiniteDuress.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1280,7 +1305,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InfiniteDuress.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InfiniteDuress.dds"
             ],
             "mCastTime": 0.10000000149011612,
             "{11704a2b}": 0.25,
@@ -1582,7 +1607,7 @@
             "mCoefficient": 1.0,
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InfiniteDuress.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InfiniteDuress.dds"
             ],
             "mCastTime": 0.0010000000474974513,
             "{11704a2b}": 0.25,
@@ -1746,7 +1771,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{49345ac2}",
+            "mHitEffectKey": "Jade_Warwick_Basic_Attack_Hit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1831,7 +1856,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{49345ac2}",
+            "mHitEffectKey": "Jade_Warwick_Basic_Attack_Hit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1916,7 +1941,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{49345ac2}",
+            "mHitEffectKey": "Jade_Warwick_Basic_Attack_Hit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2122,7 +2147,7 @@
             "mCoefficient2": 1.0,
             "mAnimationName": "Jade_Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_SeverArmor.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_SeverArmor.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -3395,7 +3420,7 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 19.5,
+            "baseValue": 23.5,
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {
@@ -3562,7 +3587,7 @@
         "passiveLuaName": "Jade_WarwickPassive_Jade",
         "passiveToolTip": "Spell_Jade_WarwickP_Summary",
         "passiveSpell": "Jade_WarwickP",
-        "passive1IconName": "ASSETS/Characters/Jade_Warwick/HUD/Icons2D/Jade_WarwickP.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Warwick/HUD/Icons2D/Jade_WarwickP.dds",
         "name": "game_character_displayname_Jade_Warwick",
         "weaponMaterials": [
             "OlafBasicAttack"

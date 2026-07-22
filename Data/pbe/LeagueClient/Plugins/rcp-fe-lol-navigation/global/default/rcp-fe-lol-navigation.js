@@ -3961,6 +3961,13 @@
                 addEphemeralNavBarMenuItem(e, t) {
                     Object.prototype.hasOwnProperty.call(y.NAV_BAR_MENU_ITEM_NAME_TO_ID, e) || (y.NAV_BAR_MENU_ITEM_NAME_TO_ID[e] = t, y.NAV_BAR_MENU_ITEMS.EPHEMERAL_EVENT.push(t))
                 }
+                removeEphemeralNavBarMenuItem(e) {
+                    if (Object.prototype.hasOwnProperty.call(y.NAV_BAR_MENU_ITEM_NAME_TO_ID, e)) {
+                        const t = y.NAV_BAR_MENU_ITEM_NAME_TO_ID[e];
+                        delete y.NAV_BAR_MENU_ITEM_NAME_TO_ID[e];
+                        const n = y.NAV_BAR_MENU_ITEMS.EPHEMERAL_EVENT.indexOf(t); - 1 !== n && y.NAV_BAR_MENU_ITEMS.EPHEMERAL_EVENT.splice(n, 1)
+                    }
+                }
                 getYourshopManager() {
                     return this._yourshopManager
                 }
@@ -14140,7 +14147,7 @@
                 u = "rcp-fe-lol-event-hub";
             t.default = class {
                 constructor(e) {
-                    this.NavigationPlugin = e, this.navItems = [], this.navItem = null, this.navigationData = null, this.eventsById = {}, this.isSubmenuEnabled = !1, this.eventHubDataBinding = (0, a.dataBinding)("/lol-event-hub/v1", a.websocket), this.settingsBinding = (0, a.dataBinding)("/lol-settings", a.websocket), this.clientConfigDataBinding = (0, a.dataBinding)("/lol-client-config", a.websocket), this.requiredDataToDisplayEAT = {
+                    this.NavigationPlugin = e, this.navItems = [], this.legacyEphemeralShortNames = [], this.navItem = null, this.navigationData = null, this.eventsById = {}, this.isSubmenuEnabled = !1, this.eventHubDataBinding = (0, a.dataBinding)("/lol-event-hub/v1", a.websocket), this.settingsBinding = (0, a.dataBinding)("/lol-settings", a.websocket), this.clientConfigDataBinding = (0, a.dataBinding)("/lol-client-config", a.websocket), this.requiredDataToDisplayEAT = {
                         seenEvents: null,
                         events: null,
                         isNavReady: !1,
@@ -14253,7 +14260,9 @@
                 hideAndRemoveNavigationButtons() {
                     this.navigationData = null, s.default.requestPluginToHide("rcp-fe-lol-event-hub"), this.navItems.forEach((e => {
                         this.NavigationPlugin.removeItem(e)
-                    })), this.navItems = [], this.navItem && (this.NavigationPlugin.removeItem(this.navItem), this.navItem = null)
+                    })), this.navItems = [], this.legacyEphemeralShortNames.forEach((e => {
+                        this.NavigationPlugin.removeEphemeralNavBarMenuItem(e)
+                    })), this.legacyEphemeralShortNames = [], this.navItem && (this.NavigationPlugin.removeItem(this.navItem), this.navItem = null)
                 }
                 createNavigationAndCallToAction() {
                     this.setupNavigationButton(), this.isSubmenuEnabled ? this.navItem && (this.NavigationPlugin.setItemGlow(this.navItem, this.shouldShowGlow()), this.NavigationPlugin.setItemAlert(this.navItem, this.shouldShowPip())) : this.navItems.forEach(((e, t) => {
@@ -14316,8 +14325,9 @@
                     this.navigationData?.forEach(((e, t) => {
                         const n = `rcp-fe-lol-event-hub#${e.activeEventId}`;
                         if (!this.navItems.some((e => e?.id === n))) {
-                            this.NavigationPlugin.addEphemeralNavBarMenuItem(`EVENT_HUB_${e.activeEventId}`, n);
-                            const i = {
+                            const i = `EVENT_HUB_${e.activeEventId}`;
+                            this.NavigationPlugin.addEphemeralNavBarMenuItem(i, n), this.legacyEphemeralShortNames.push(i);
+                            const a = {
                                     show: t => {
                                         const n = {
                                             showPip: e.showPip,
@@ -14331,16 +14341,16 @@
                                     hide: () => s.default.requestPluginToHide("rcp-fe-lol-event-hub"),
                                     id: n
                                 },
-                                a = 20,
-                                o = {
+                                o = 20,
+                                r = {
                                     id: n,
                                     displayName: e.eventName,
-                                    priority: a - t,
+                                    priority: o - t,
                                     active: !1,
                                     iconPath: e.iconPath,
                                     rawEventId: e.activeEventId
                                 };
-                            this.navItems.push(this.NavigationPlugin.addItem(i, o))
+                            this.navItems.push(this.NavigationPlugin.addItem(a, r))
                         }
                     }))
                 }
@@ -21987,8 +21997,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "Qz4SgKTE",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\lib\\\\activity-center\\\\addon\\\\app\\\\templates\\\\components\\\\activity-templates\\\\activity-center-battlepass-activity.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","section",[]],["static-attr","class","activity-center-battlepass-activity"],["flush-element"],["text","\\n"],["block",["if"],[["get",["data"]]],null,8],["block",["if"],[["get",["isLoading"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["unknown",["activity-center-loading-screen"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","section",[]],["static-attr","class","activity-center-battlepass-activity__footer_battlepass-banner-container"],["flush-element"],["text","\\n              "],["append",["helper",["season-pass-banner"],null,[["bannerItems","rewardImagePath","cta","telemetryEventOrigin","telemetryPageId"],[["get",["seasonPassItems"]],["get",["seasonPassRewardImagePath"]],["get",["footerCTA"]],["get",["telemetryEventOrigin"]],["get",["id"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["passBannerContent"]]],null,1]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","activity-center-battlepass-activity__thematic-timeline_footer"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","activity_center_new_season_rollover_message"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","section",[]],["static-attr","class","activity-center-battlepass-activity__thematic-timeline"],["flush-element"],["text","\\n            "],["append",["helper",["thematic-timeline"],null,[["milestones","title","telemetryEventOrigin","telemetryPageId","locale"],[["get",["thematicTimeline","links"]],["get",["thematicTimeline","title"]],["get",["telemetryEventOrigin"]],["get",["id"]],["get",["locale"]]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","activity-center-battlepass-activity__right-cta"],["flush-element"],["text","\\n            "],["append",["helper",["cta-button"],null,[["title","action","telemetryEventOrigin","telemetryPageId","locale"],[["get",["headerContent","mainCta","title"]],["get",["headerContent","mainCta","action"]],["get",["telemetryEventOrigin"]],["get",["id"]],["get",["locale"]]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["activity-background"],null,[["pageId","backgroundContent","onMediaLoaded"],[["get",["id"]],["get",["backgroundContent"]],["helper",["action"],[["get",[null]],"onMediaLoaded"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["activity-parallax-background"],null,[["parallaxBackgroundContent","onMediaLoaded"],[["get",["parallaxBackgroundContent"]],["helper",["action"],[["get",[null]],"onMediaLoaded"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["backgroundType"]],"parallax"],null]],null,7],["block",["if"],[["helper",["eq"],[["get",["backgroundType"]],"default"],null]],null,6],["text","    "],["open-element","section",[]],["dynamic-attr","class",["concat",["activity-center-battlepass-activity__content \\n      ",["helper",["if"],[["get",["isLoading"]],"loading","ready"],null]," \\n      ",["helper",["if"],[["get",["shouldShowEventHubContent"]],"activity-center-battlepass-activity__content--active","activity-center-battlepass-activity__content--inactive"],null]]]],["flush-element"],["text","\\n      "],["open-element","main",[]],["static-attr","class","activity-center-battlepass-activity__main-content"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","activity-center-battlepass-activity__content-header"],["flush-element"],["text","\\n          "],["append",["helper",["activity-header"],null,[["headerData","telemetryEventOrigin","telemetryPageId","locale","endDateTime"],[["get",["headerContent"]],["get",["telemetryEventOrigin"]],["get",["id"]],["get",["locale"]],["get",["endDateTime"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["headerContent","mainCta"]]],null,5],["text","      "],["close-element"],["text","\\n      "],["open-element","footer",[]],["static-attr","class","activity-center-battlepass-activity__footer"],["flush-element"],["text","\\n"],["block",["if"],[["get",["thematicTimeline"]]],null,4],["block",["unless"],[["get",["shouldShowEventHubContent"]]],null,3],["block",["if"],[["get",["shouldShowEventHubContent"]]],null,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "niSvctrp",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\lib\\\\activity-center\\\\addon\\\\app\\\\templates\\\\components\\\\activity-templates\\\\activity-center-battlepass-activity.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","section",[]],["static-attr","class","activity-center-battlepass-activity"],["flush-element"],["text","\\n"],["block",["if"],[["get",["data"]]],null,8],["block",["if"],[["get",["isLoading"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["unknown",["activity-center-loading-screen"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","section",[]],["static-attr","class","activity-center-battlepass-activity__footer_battlepass-banner-container"],["flush-element"],["text","\\n              "],["append",["helper",["season-pass-banner"],null,[["bannerItems","rewardImagePath","cta","telemetryEventOrigin","telemetryPageId"],[["get",["seasonPassItems"]],["get",["seasonPassRewardImagePath"]],["get",["footerCTA"]],["get",["telemetryEventOrigin"]],["get",["id"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["passBannerContent"]]],null,1]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","activity-center-battlepass-activity__thematic-timeline_footer"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","activity_center_new_season_rollover_message"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","section",[]],["static-attr","class","activity-center-battlepass-activity__thematic-timeline"],["flush-element"],["text","\\n            "],["append",["helper",["thematic-timeline"],null,[["milestones","title","telemetryEventOrigin","telemetryPageId","locale"],[["get",["thematicTimeline","links"]],["get",["thematicTimeline","title"]],["get",["telemetryEventOrigin"]],["get",["id"]],["get",["locale"]]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","activity-center-battlepass-activity__right-cta"],["flush-element"],["text","\\n            "],["append",["helper",["cta-button"],null,[["title","action","telemetryEventOrigin","telemetryPageId","locale"],[["get",["headerContent","mainCta","title"]],["get",["headerContent","mainCta","action"]],["get",["telemetryEventOrigin"]],["get",["id"]],["get",["locale"]]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["activity-background"],null,[["pageId","backgroundContent","onMediaLoaded"],[["get",["id"]],["get",["backgroundContent"]],["helper",["action"],[["get",[null]],"onMediaLoaded"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["activity-parallax-background"],null,[["parallaxBackgroundContent","onMediaLoaded"],[["get",["parallaxBackgroundContent"]],["helper",["action"],[["get",[null]],"onMediaLoaded"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["backgroundType"]],"parallax"],null]],null,7],["block",["if"],[["helper",["eq"],[["get",["backgroundType"]],"default"],null]],null,6],["text","    "],["open-element","section",[]],["dynamic-attr","class",["concat",["activity-center-battlepass-activity__content \\n      ",["helper",["if"],[["get",["isLoading"]],"loading","ready"],null]," \\n      ",["helper",["if"],[["get",["shouldShowEventHubContent"]],"activity-center-battlepass-activity__content--active","activity-center-battlepass-activity__content--inactive"],null]]]],["flush-element"],["text","\\n      "],["open-element","main",[]],["static-attr","class","activity-center-battlepass-activity__main-content"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","activity-center-battlepass-activity__content-header"],["flush-element"],["text","\\n          "],["append",["helper",["activity-header"],null,[["headerData","telemetryEventOrigin","telemetryPageId","locale","endDateTime"],[["get",["headerContent"]],["get",["telemetryEventOrigin"]],["get",["id"]],["get",["locale"]],["get",["endDateTime"]]]]],false],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["headerContent","mainCta"]]],null,5],["text","      "],["close-element"],["text","\\n      "],["open-element","footer",[]],["dynamic-attr","class",["concat",["activity-center-battlepass-activity__footer ",["helper",["unless"],[["get",["thematicTimeline"]],"banner-only"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["thematicTimeline"]]],null,4],["block",["unless"],[["get",["shouldShowEventHubContent"]]],null,3],["block",["if"],[["get",["shouldShowEventHubContent"]]],null,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -24925,6 +24935,7 @@
                 rightItems: i.Ember.computed.filterBy("sortedItems", "alignment", "right"),
                 configurationService: i.Ember.inject.service("configuration"),
                 isRewardsProgramEnabled: i.Ember.computed.alias("configurationService.enableRewardsProgram"),
+                loyaltyClassicRewards: i.Ember.computed.alias("configurationService.loyaltyClassicRewards"),
                 isTextAndIconsDisplayMode: i.Ember.computed.equal("configurationService.navBarDisplayMode", "TEXT_AND_ICONS"),
                 getMenuItemsFromIds(e) {
                     const t = [];
@@ -25455,14 +25466,15 @@
             e.exports = a.Ember.Component.extend({
                 classNames: ["navigation-badge-container"],
                 loyaltyData: null,
+                loyaltyClassicRewards: null,
                 addLoyaltyTooltip: function() {
                     const e = this.get("loyaltyData");
-                    s.default.useNewRewardsProgram = this.get("isRewardsProgramEnabled"), s.default.addTooltip(this.element, e)
+                    s.default.useNewRewardsProgram = this.get("isRewardsProgramEnabled"), s.default.classicRewardsOverride = this.get("loyaltyClassicRewards"), s.default.addTooltip(this.element, e)
                 },
                 didInsertElement() {
                     this._super(...arguments), this.addLoyaltyTooltip()
                 },
-                onLoyaltyDataUpdate: a.Ember.observer("loyaltyData", "isRewardsProgramEnabled", (function() {
+                onLoyaltyDataUpdate: a.Ember.observer("loyaltyData", "isRewardsProgramEnabled", "loyaltyClassicRewards", (function() {
                     this.addLoyaltyTooltip()
                 }))
             })
@@ -25497,116 +25509,153 @@
                     return e ? n : t
                 })(e)
             }
-            const o = {
-                showTooltip: function(e, t = i.lolUikit) {
-                    t.getTooltipManager().show(e)
+            const o = ["loyalty", "xbox", "classic_launch"],
+                r = {
+                    classic_launch: 1
                 },
-                hideTooltip: function(e, t = i.lolUikit) {
-                    t.getTooltipManager().hide(e)
-                },
-                _displayTooltipTemporary(e) {
-                    o.showTooltip(e), setTimeout((function() {
-                        o.hideTooltip(e)
-                    }), 4e3)
-                },
-                addTooltip: function(e, t) {
-                    if (!e) return !1;
-                    const n = {
-                        heading: this.useNewRewardsProgram ? "" : this._createHeadText(t, i.tra),
-                        body: this._createBodyText(t, i.tra)
-                    };
-                    i.default.dataBinding("/lol-platform-config").get("/v1/namespaces/LcuLoyalty").then((e => this._verifyModifiedBody(e, n))).then((t => {
-                        this._createTooltip(e, n, t)
-                    }))
-                },
-                _createTooltip: function(e, t, n, a = i.lolUikit) {
-                    n && (t.body = n);
-                    a.getTooltipManager().assign(e, this._tooltipRenderer(t, a), t, {
-                        type: "info",
-                        targetAnchor: {
-                            x: "center",
-                            y: "bottom"
-                        },
-                        tooltipAnchor: {
-                            x: "center",
-                            y: "top"
-                        }
-                    }), n && this._displayTooltipTemporary(e)
-                },
-                _verifyModifiedBody: function(e, t) {
-                    if (this.useNewRewardsProgram || !e) return;
-                    let n;
-                    return e.LeagueUnlockedEnabled ? n = this._createNAUnlockedBody(t.body) : e.LolcafeEnabled && (n = this._createTRLolcafeBody(t.body)), n
-                },
-                _tooltipRenderer: function(e, t) {
-                    const n = t.getTemplateHelper().contentBlockTooltip(e.heading, e.body, "dialog-small"),
-                        i = document.createElement("lol-uikit-tooltip");
-                    return i.className = "loyalty-navbar-badge-tooltip", i.appendChild(n), i
-                },
-                _createNAUnlockedBody: function(e) {
-                    const t = document.createElement("div");
-                    t.className = "loyalty-tooltip-unlocked-wrapper";
-                    const n = document.createElement("div");
-                    n.className = "loyalty-tooltip-unlocked-logo";
-                    const i = document.createElement("div");
-                    i.className = "loyalty-tooltip-unlocked-desc";
-                    const a = document.createElement("p");
-                    return a.innerHTML = e, i.appendChild(a), t.appendChild(n), t.appendChild(i), t
-                },
-                _createTRLolcafeBody: function(e) {
-                    const t = document.createElement("div");
-                    t.className = "loyalty-tooltip-lolcafe-wrapper";
-                    const n = document.createElement("div");
-                    n.className = "loyalty-tooltip-lolcafe-logo";
-                    const i = document.createElement("div");
-                    i.className = "loyalty-tooltip-lolcafe-desc";
-                    const a = document.createElement("p");
-                    return a.innerHTML = e, i.appendChild(a), t.appendChild(n), t.appendChild(i), t
-                },
-                _createHeadText: function(e, t) {
-                    if (!e) return "";
-                    return t.get("loyalty_navbar_badge_title")
-                },
-                _createBodyText: function(e, t) {
-                    return e ? this.useNewRewardsProgram ? this._buildRewardsBody(e.rewards, t) : this._buildLoyaltyBody(e.rewards, t) : ""
-                },
-                _buildLoyaltyBody: function(e, t) {
-                    let n = t.get("loyalty_navbar_badge_new");
-                    const i = e;
-                    return Object.keys(i).sort().forEach((e => {
-                        const t = i[e],
-                            s = a.rewardsKeys[e];
-                        t > 0 && "object" == typeof s && (n += this._buildRewardString(s, t))
-                    })), n
-                },
-                _buildRewardsBody: function(e, t) {
-                    let n;
-                    n = `\n        <h4 class="loyalty-navbar-badge-tooltip__title">${t.get("rewards_program_navbar_badge_title")}</h4>\n        <hr />\n      `, Object.keys(e.loyaltySources).forEach((e => {
-                        const i = e.toLowerCase();
-                        n += `<div class="loyalty-navbar-badge-tooltip__programs">\n                        <img class="loyalty-navbar-badge-tooltip__programs-logo" src="/fe/lol-static-assets/images/rewards_programs_${i}.svg"/>\n                        <p class="loyalty-navbar-badge-tooltip__programs-name">${t.get("rewards_program_"+i+"_name")}</p>\n                    </div>`
-                    })), n += `<h6 class="loyalty-navbar-badge-tooltip__subtitle">\n                      ${t.get("rewards_program_granted_subtitle")}\n                  </h6>`;
-                    let i = a.rewardsMap[0].game;
-                    return a.rewardsMap.forEach((a => {
-                        let s = e[a.rewardKey];
-                        0 !== s && (a.game !== i && (i = a.game, n += "<hr />"), "percentage" === a.type && (s += "%"), n += `<div class="loyalty-navbar-badge-tooltip__reward">\n                      <div class="loyalty-navbar-badge-tooltip__reward-identifier">\n                        <img class="loyalty-navbar-badge-tooltip__reward-image" src="${a.icon}"/>\n                        <p class="loyalty-navbar-badge-tooltip__reward-name">${t.get(a.locKey)}</p>\n                      </div>\n                      <div class="loyalty-navbar-badge-tooltip__reward-quantity">${s}</div>\n                    </div>`)
-                    })), n
-                },
-                _buildRewardString: function(e, t) {
-                    const {
-                        locKey: n
-                    } = e, {
-                        rewardValueKey: a
-                    } = e, s = {};
-                    return s[a] = t, "<br>" + i.tra.formatString(n, s)
-                }
-            };
-            var r = o;
-            t.default = r
+                l = {
+                    showTooltip: function(e, t = i.lolUikit) {
+                        t.getTooltipManager().show(e)
+                    },
+                    hideTooltip: function(e, t = i.lolUikit) {
+                        t.getTooltipManager().hide(e)
+                    },
+                    _displayTooltipTemporary(e) {
+                        l.showTooltip(e), setTimeout((function() {
+                            l.hideTooltip(e)
+                        }), 4e3)
+                    },
+                    addTooltip: function(e, t) {
+                        if (!e) return !1;
+                        const n = {
+                            heading: this.useNewRewardsProgram ? "" : this._createHeadText(t, i.tra),
+                            body: this._createBodyText(t, i.tra)
+                        };
+                        i.default.dataBinding("/lol-platform-config").get("/v1/namespaces/LcuLoyalty").then((e => this._verifyModifiedBody(e, n))).then((t => {
+                            this._createTooltip(e, n, t)
+                        }))
+                    },
+                    _createTooltip: function(e, t, n, a = i.lolUikit) {
+                        n && (t.body = n);
+                        a.getTooltipManager().assign(e, this._tooltipRenderer(t, a), t, {
+                            type: "info",
+                            targetAnchor: {
+                                x: "center",
+                                y: "bottom"
+                            },
+                            tooltipAnchor: {
+                                x: "center",
+                                y: "top"
+                            }
+                        }), n && this._displayTooltipTemporary(e)
+                    },
+                    _verifyModifiedBody: function(e, t) {
+                        if (this.useNewRewardsProgram || !e) return;
+                        let n;
+                        return e.LeagueUnlockedEnabled ? n = this._createNAUnlockedBody(t.body) : e.LolcafeEnabled && (n = this._createTRLolcafeBody(t.body)), n
+                    },
+                    _tooltipRenderer: function(e, t) {
+                        const n = t.getTemplateHelper().contentBlockTooltip(e.heading, e.body, "dialog-small"),
+                            i = document.createElement("lol-uikit-tooltip");
+                        return i.className = "loyalty-navbar-badge-tooltip", i.appendChild(n), i
+                    },
+                    _createNAUnlockedBody: function(e) {
+                        const t = document.createElement("div");
+                        t.className = "loyalty-tooltip-unlocked-wrapper";
+                        const n = document.createElement("div");
+                        n.className = "loyalty-tooltip-unlocked-logo";
+                        const i = document.createElement("div");
+                        i.className = "loyalty-tooltip-unlocked-desc";
+                        const a = document.createElement("p");
+                        return a.innerHTML = e, i.appendChild(a), t.appendChild(n), t.appendChild(i), t
+                    },
+                    _createTRLolcafeBody: function(e) {
+                        const t = document.createElement("div");
+                        t.className = "loyalty-tooltip-lolcafe-wrapper";
+                        const n = document.createElement("div");
+                        n.className = "loyalty-tooltip-lolcafe-logo";
+                        const i = document.createElement("div");
+                        i.className = "loyalty-tooltip-lolcafe-desc";
+                        const a = document.createElement("p");
+                        return a.innerHTML = e, i.appendChild(a), t.appendChild(n), t.appendChild(i), t
+                    },
+                    _createHeadText: function(e, t) {
+                        if (!e) return "";
+                        return t.get("loyalty_navbar_badge_title")
+                    },
+                    _createBodyText: function(e, t) {
+                        return e ? this.useNewRewardsProgram ? this._buildRewardsBody(e.rewards, t) : this._buildLoyaltyBody(e.rewards, t) : ""
+                    },
+                    _buildLoyaltyBody: function(e, t) {
+                        let n = t.get("loyalty_navbar_badge_new");
+                        const i = e;
+                        return Object.keys(i || {}).sort().forEach((e => {
+                            const t = i[e],
+                                s = a.rewardsKeys[e];
+                            t > 0 && "object" == typeof s && (n += this._buildRewardString(s, t))
+                        })), n
+                    },
+                    _getProgramSortPriority: function(e) {
+                        return r[e.toLowerCase()] ?? 0
+                    },
+                    _applyClassicRewardsOverride: function(e) {
+                        const t = this.classicRewardsOverride;
+                        if (!t || "object" != typeof t || !Object.keys(t).length) return e;
+                        const n = Object.assign({}, e, t),
+                            i = Object.assign({}, e?.loyaltySources, t?.loyaltySources);
+                        return Object.keys(i).length && (n.loyaltySources = i), n.classicFreeRewardedChampionsCount = e?.freeRewardedChampionsCount, n
+                    },
+                    _buildRewardsBody: function(e, t) {
+                        let n;
+                        return e = this._applyClassicRewardsOverride(e), n = `\n        <h4 class="loyalty-navbar-badge-tooltip__title">${t.get("rewards_program_navbar_badge_title")}</h4>\n        <hr />\n      `, Object.keys(e?.loyaltySources || {}).sort(((e, t) => this._getProgramSortPriority(e) - this._getProgramSortPriority(t))).forEach((e => {
+                            const i = e.toLowerCase(),
+                                a = o.includes(i) ? i : "pcb";
+                            n += `<div class="loyalty-navbar-badge-tooltip__programs">\n                        <img class="loyalty-navbar-badge-tooltip__programs-logo" src="/fe/lol-static-assets/images/rewards_programs_${a}.svg"/>\n                        <p class="loyalty-navbar-badge-tooltip__programs-name">${t.get("rewards_program_"+i+"_name")}</p>\n                    </div>`
+                        })), n += `<h6 class="loyalty-navbar-badge-tooltip__subtitle">\n                      ${t.get("rewards_program_granted_subtitle")}\n                  </h6>`, n += this._buildRewardGroups(e, t), n
+                    },
+                    _buildRewardGroups: function(e, t) {
+                        const n = {},
+                            i = [];
+                        a.rewardsMap.forEach((e => {
+                            n[e.game] || (n[e.game] = [], i.push(e.game)), n[e.game].push(e)
+                        }));
+                        let s = "",
+                            o = !0;
+                        return i.forEach((i => {
+                            const r = n[i].filter((t => this._hasReward(e?.[t.rewardKey]))).map((n => this._buildRewardRow(n, e?.[n.rewardKey], t))).join("");
+                            r && (o || (s += "<hr />"), o = !1, s += `<p class="loyalty-navbar-badge-tooltip__game">${t.get(a.gameLabelKeys[i])}</p>`, s += r)
+                        })), s
+                    },
+                    _buildRewardRow: function(e, t, n) {
+                        return `<div class="loyalty-navbar-badge-tooltip__reward${"launchBonus"===e.type?" loyalty-navbar-badge-tooltip__reward--launch-bonus":""}">\n              <div class="loyalty-navbar-badge-tooltip__reward-identifier">\n                <img class="loyalty-navbar-badge-tooltip__reward-image" src="${e.icon}"/>\n                <p class="loyalty-navbar-badge-tooltip__reward-name">${n.get(e.locKey)}</p>\n              </div>\n              <div class="loyalty-navbar-badge-tooltip__reward-quantity">${this._formatRewardValue(e,t,n)}</div>\n            </div>`
+                    },
+                    _formatRewardValue: function(e, t, n) {
+                        return this._isAllValue(t) ? n.get("rewards_program_granted_all") : "launchBonus" === e.type ? n.formatString("rewards_program_ip_launch_bonus_value", {
+                            amount: t
+                        }) : "percentage" === e.type ? t + "%" : t
+                    },
+                    _hasReward: function(e) {
+                        return this._isAllValue(e) || "number" == typeof e && e > 0
+                    },
+                    _isAllValue: function(e) {
+                        return "string" == typeof e && "all" === e.toLowerCase()
+                    },
+                    _buildRewardString: function(e, t) {
+                        const {
+                            locKey: n
+                        } = e, {
+                            rewardValueKey: a
+                        } = e, s = {};
+                        return s[a] = t, "<br>" + i.tra.formatString(n, s)
+                    }
+                };
+            var c = l;
+            t.default = c
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.rewardsMap = t.rewardsKeys = void 0;
+            }), t.rewardsMap = t.rewardsKeys = t.gameLabelKeys = void 0;
             t.rewardsKeys = {
                 freeRewardedChampionsCount: {
                     locKey: "loyalty_navbar_badge_unlocked_champions_numerous",
@@ -25660,6 +25709,30 @@
                 game: "lol",
                 type: "percentage"
             }, {
+                locKey: "rewards_program_champions",
+                rewardKey: "classicFreeRewardedChampionsCount",
+                icon: "/fe/lol-static-assets/images/champions_rewards.svg",
+                game: "classic",
+                type: "number"
+            }, {
+                locKey: "rewards_program_skins",
+                rewardKey: "classicFreeRewardedSkinsCount",
+                icon: "/fe/lol-static-assets/images/skins_rewards.svg",
+                game: "classic",
+                type: "number"
+            }, {
+                locKey: "rewards_program_xp_boost",
+                rewardKey: "classicXpBoost",
+                icon: "/fe/lol-static-assets/images/xpBoost_rewards.svg",
+                game: "classic",
+                type: "percentage"
+            }, {
+                locKey: "rewards_program_ip_launch_bonus",
+                rewardKey: "ipLaunchBonusPerWin",
+                icon: "/fe/lol-static-assets/images/currency-ip-mini.png",
+                game: "classic",
+                type: "launchBonus"
+            }, {
                 locKey: "rewards_program_loyalty_tft_companion",
                 rewardKey: "loyaltyTFTCompanionCount",
                 icon: "/fe/lol-static-assets/images/loyaltyTFTCompanionCount_rewards.svg",
@@ -25683,7 +25756,12 @@
                 icon: "/fe/lol-static-assets/images/loyaltyTFTZoomSkinCount_rewards.svg",
                 game: "tft",
                 type: "number"
-            }]
+            }];
+            t.gameLabelKeys = {
+                lol: "rewards_program_game_league",
+                tft: "rewards_program_game_tft",
+                classic: "rewards_program_game_classic"
+            }
         }, (e, t, n) => {
             "use strict";
             var i, a = n(1),
@@ -27346,24 +27424,26 @@
                 a = n(204);
             const s = "/lol-client-config/v3/client-config",
                 o = `${s}/lol.client_settings.navigation.navBarDisplayMode`,
-                r = `${s}/lol.client_settings.navigation.enableRewardsProgram`;
-            var l = i.Ember.Service.extend({
+                r = `${s}/lol.client_settings.navigation.enableRewardsProgram`,
+                l = `${s}/lol.client_settings.navigation.loyaltyClassicRewards`;
+            var c = i.Ember.Service.extend({
                 init() {
                     this._super(...arguments), this.initConfigObservers()
                 },
                 initConfigObservers() {
-                    this.observeConfig("enableRewardsProgram", r), this.observeConfig("navBarDisplayMode", o, "ICONS", a.NAV_BAR_DISPLAY_MODES)
+                    this.observeConfig("enableRewardsProgram", r), this.observeConfig("navBarDisplayMode", o, "ICONS", a.NAV_BAR_DISPLAY_MODES), this.observeConfig("loyaltyClassicRewards", l, null, (e => Boolean(e) && "object" == typeof e))
                 },
                 observeConfig(e, t, n = !1, a = [!0, !1]) {
                     i.db.observe(t, this, (t => {
-                        this.isDestroying || this.isDestroyed || (a.includes(t) || (i.logger.warning(`Configuration: ${JSON.stringify(t)} for ${e} is not an accepted value in ${JSON.stringify(a)}. Using default value: ${JSON.stringify(n)}`), t = n), this.set(e, t))
+                        if (this.isDestroying || this.isDestroyed) return;
+                        ("function" == typeof a ? a(t) : a.includes(t)) || (i.logger.warning(`Configuration: ${JSON.stringify(t)} for ${e} is not an accepted value in ${JSON.stringify(a)}. Using default value: ${JSON.stringify(n)}`), t = n), this.set(e, t)
                     }))
                 },
                 willDestroyElement() {
                     this._super(...arguments), i.db.unobserve(this)
                 }
             });
-            t.default = l
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -28807,7 +28887,7 @@
             var r = i.Ember.Service.extend({
                 isInitialized: !1,
                 notificationEnabled: !1,
-                isOnWindows7: !1,
+                isOnWindowsOlderThan10: !1,
                 lastSeenBuildVersion: null,
                 buildVersion: null,
                 init() {
@@ -28819,8 +28899,9 @@
                             this.set("notificationEnabled", e)
                         })),
                         n = i.db.get("/riotclient/system-info/v1/basic-info").then((e => {
-                            const t = "Windows" === e.operatingSystem.platform && "7" === e.operatingSystem.versionMajor;
-                            this.set("isOnWindows7", t)
+                            const t = parseInt(e.operatingSystem.versionMajor, 10) || 0,
+                                n = "Windows" === e.operatingSystem.platform && t < 10;
+                            this.set("isOnWindowsOlderThan10", n)
                         })),
                         a = i.db.get(s).then((e => {
                             this.set("lastSeenBuildVersion", e?.data?.lastSeenBuildVersion)
@@ -28830,7 +28911,7 @@
                             this.set("buildVersion", t)
                         }));
                     await Promise.allSettled([t, n, a, o]), this.set("isInitialized", !0);
-                    this.get("notificationEnabled") && this.get("isOnWindows7") && this.get("buildVersion") !== this.get("lastSeenBuildVersion") && this.showNotification()
+                    this.get("notificationEnabled") && this.get("isOnWindowsOlderThan10") && this.get("buildVersion") !== this.get("lastSeenBuildVersion") && this.showNotification()
                 },
                 showNotification() {
                     const e = "WINDOWS_7_NOTIFICATION",
@@ -28978,8 +29059,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "viwRJmi/",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\templates\\\\components\\\\nav-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\components\\\\nav-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","left-nav-menu"],["static-attr","data-dd-action-name","button.navigation.left_nav.menu_item"],["flush-element"],["text","\\n"],["block",["each"],[["get",["mainCategoryItems"]]],null,3],["text","  "],["open-element","div",[]],["static-attr","class","deep-links-promo"],["flush-element"],["text","\\n    "],["append",["unknown",["deep-links-promo"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n\\n"],["open-element","div",[]],["static-attr","class","right-nav-menu"],["static-attr","data-dd-action-name","button.navigation.right_nav.menu_item"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rightNavBarCategories"]]],null,2],["text","\\n  "],["open-element","div",[]],["static-attr","class","wallet-and-badges"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLoyaltyEnabled"]]],null,0],["text","\\n    "],["append",["unknown",["currency-container"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["loyalty-badge"],null,[["loyaltyData","isRewardsProgramEnabled"],[["get",["loyaltyData"]],["get",["isRewardsProgramEnabled"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["menu-item"],null,[["item","action"],[["get",["item"]],"deactivateMenuItems"]]],false],["text","\\n"]],"locals":["item"]},{"statements":[["block",["each"],[["get",["items"]]],null,1],["text","    "],["open-element","div",[]],["static-attr","class","right-nav-vertical-rule"],["flush-element"],["close-element"],["text","\\n"]],"locals":["items"]},{"statements":[["text","    "],["append",["helper",["menu-item"],null,[["item","action","forceTextLabels"],[["get",["item"]],"deactivateMenuItems",true]]],false],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
+                id: "Gc9ZReTP",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\templates\\\\components\\\\nav-bar.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-navigation\\\\src\\\\app\\\\components\\\\nav-bar.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","left-nav-menu"],["static-attr","data-dd-action-name","button.navigation.left_nav.menu_item"],["flush-element"],["text","\\n"],["block",["each"],[["get",["mainCategoryItems"]]],null,3],["text","  "],["open-element","div",[]],["static-attr","class","deep-links-promo"],["flush-element"],["text","\\n    "],["append",["unknown",["deep-links-promo"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n\\n"],["open-element","div",[]],["static-attr","class","right-nav-menu"],["static-attr","data-dd-action-name","button.navigation.right_nav.menu_item"],["flush-element"],["text","\\n"],["block",["each"],[["get",["rightNavBarCategories"]]],null,2],["text","\\n  "],["open-element","div",[]],["static-attr","class","wallet-and-badges"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLoyaltyEnabled"]]],null,0],["text","\\n    "],["append",["unknown",["currency-container"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["loyalty-badge"],null,[["loyaltyData","isRewardsProgramEnabled","loyaltyClassicRewards"],[["get",["loyaltyData"]],["get",["isRewardsProgramEnabled"]],["get",["loyaltyClassicRewards"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["menu-item"],null,[["item","action"],[["get",["item"]],"deactivateMenuItems"]]],false],["text","\\n"]],"locals":["item"]},{"statements":[["block",["each"],[["get",["items"]]],null,1],["text","    "],["open-element","div",[]],["static-attr","class","right-nav-vertical-rule"],["flush-element"],["close-element"],["text","\\n"]],"locals":["items"]},{"statements":[["text","    "],["append",["helper",["menu-item"],null,[["item","action","forceTextLabels"],[["get",["item"]],"deactivateMenuItems",true]]],false],["text","\\n"]],"locals":["item"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -32834,7 +32915,7 @@
                     if (!this._bridgeEnabled) return;
                     const t = e.operatingSystem.versionMajor,
                         n = parseInt(t) || 0;
-                    if (this._isPlatformSupported = "Windows" === e.operatingSystem.platform && n > 7, !0 === this._isPlatformSupported) return;
+                    if (this._isPlatformSupported = "Windows" === e.operatingSystem.platform && n >= 10, !0 === this._isPlatformSupported) return;
                     if (!this._disabledButtonMessageInnerHTML) return;
                     if (null !== this._incompatibleDeviceModal) return;
                     let i;

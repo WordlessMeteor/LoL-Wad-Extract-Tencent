@@ -698,8 +698,8 @@
                 f = [m, _],
                 M = [...h, ...f],
                 y = [...c, ...h],
-                L = [...f, ...p];
-            var g = {
+                g = [...f, ...p];
+            var L = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: s,
                 RANKED_PREMADE_5X5_QUEUE_TYPE: i,
@@ -716,10 +716,10 @@
                 RATED_TFT_QUEUE_TYPES: f,
                 RANKED_AND_RATED_TFT_QUEUE_TYPES: M,
                 ALL_RANKED_QUEUE_TYPES: y,
-                ALL_RATED_QUEUE_TYPES: L,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...y, ...L]
+                ALL_RATED_QUEUE_TYPES: g,
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...y, ...g]
             };
-            t.default = g
+            t.default = L
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2354,7 +2354,7 @@
                     return e._isValid
                 }
 
-                function L(e) {
+                function g(e) {
                     var t = h(NaN);
                     return null != e ? p(M(t), e) : M(t).userInvalidated = !0, t
                 }
@@ -2363,12 +2363,12 @@
                         if (s in t && e.call(this, t[s], s, t)) return !0;
                     return !1
                 };
-                var g = a.momentProperties = [];
+                var L = a.momentProperties = [];
 
                 function k(e, t) {
                     var n, s, a;
-                    if (d(t._isAMomentObject) || (e._isAMomentObject = t._isAMomentObject), d(t._i) || (e._i = t._i), d(t._f) || (e._f = t._f), d(t._l) || (e._l = t._l), d(t._strict) || (e._strict = t._strict), d(t._tzm) || (e._tzm = t._tzm), d(t._isUTC) || (e._isUTC = t._isUTC), d(t._offset) || (e._offset = t._offset), d(t._pf) || (e._pf = M(t)), d(t._locale) || (e._locale = t._locale), g.length > 0)
-                        for (n = 0; n < g.length; n++) d(a = t[s = g[n]]) || (e[s] = a);
+                    if (d(t._isAMomentObject) || (e._isAMomentObject = t._isAMomentObject), d(t._i) || (e._i = t._i), d(t._f) || (e._f = t._f), d(t._l) || (e._l = t._l), d(t._strict) || (e._strict = t._strict), d(t._tzm) || (e._tzm = t._tzm), d(t._isUTC) || (e._isUTC = t._isUTC), d(t._offset) || (e._offset = t._offset), d(t._pf) || (e._pf = M(t)), d(t._locale) || (e._locale = t._locale), L.length > 0)
+                        for (n = 0; n < L.length; n++) d(a = t[s = L[n]]) || (e[s] = a);
                     return e
                 }
                 var v = !1;
@@ -2604,8 +2604,8 @@
                     fe = /[+-]?\d{6}/,
                     Me = /\d\d?/,
                     ye = /\d\d\d\d?/,
-                    Le = /\d\d\d\d\d\d?/,
-                    ge = /\d{1,3}/,
+                    ge = /\d\d\d\d\d\d?/,
+                    Le = /\d{1,3}/,
                     ke = /\d{1,4}/,
                     ve = /[+-]?\d{1,6}/,
                     be = /\d+/,
@@ -2793,15 +2793,15 @@
                 var ht = Ee;
 
                 function ft(e) {
-                    return this._monthsParseExact ? (c(this, "_monthsRegex") || Lt.call(this), e ? this._monthsShortStrictRegex : this._monthsShortRegex) : (c(this, "_monthsShortRegex") || (this._monthsShortRegex = ht), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
+                    return this._monthsParseExact ? (c(this, "_monthsRegex") || gt.call(this), e ? this._monthsShortStrictRegex : this._monthsShortRegex) : (c(this, "_monthsShortRegex") || (this._monthsShortRegex = ht), this._monthsShortStrictRegex && e ? this._monthsShortStrictRegex : this._monthsShortRegex)
                 }
                 var Mt = Ee;
 
                 function yt(e) {
-                    return this._monthsParseExact ? (c(this, "_monthsRegex") || Lt.call(this), e ? this._monthsStrictRegex : this._monthsRegex) : (c(this, "_monthsRegex") || (this._monthsRegex = Mt), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex)
+                    return this._monthsParseExact ? (c(this, "_monthsRegex") || gt.call(this), e ? this._monthsStrictRegex : this._monthsRegex) : (c(this, "_monthsRegex") || (this._monthsRegex = Mt), this._monthsStrictRegex && e ? this._monthsStrictRegex : this._monthsRegex)
                 }
 
-                function Lt() {
+                function gt() {
                     function e(e, t) {
                         return t.length - e.length
                     }
@@ -2814,7 +2814,7 @@
                     this._monthsRegex = new RegExp("^(" + i.join("|") + ")", "i"), this._monthsShortRegex = this._monthsRegex, this._monthsStrictRegex = new RegExp("^(" + a.join("|") + ")", "i"), this._monthsShortStrictRegex = new RegExp("^(" + s.join("|") + ")", "i")
                 }
 
-                function gt(e, t, n, s, a, i, r) {
+                function Lt(e, t, n, s, a, i, r) {
                     var o;
                     return e < 100 && e >= 0 ? (o = new Date(e + 400, t, n, s, a, i, r), isFinite(o.getFullYear()) && o.setFullYear(e)) : o = new Date(e, t, n, s, a, i, r), o
                 }
@@ -3027,7 +3027,7 @@
                     return "" + this.hours() + ne(this.minutes(), 2)
                 })), oe("Hmmss", 0, 0, (function() {
                     return "" + this.hours() + ne(this.minutes(), 2) + ne(this.seconds(), 2)
-                })), tn("a", !0), tn("A", !1), Q("hour", "h"), ee("hour", 13), xe("a", nn), xe("A", nn), xe("H", Me), xe("h", Me), xe("k", Me), xe("HH", Me, ce), xe("hh", Me, ce), xe("kk", Me, ce), xe("hmm", ye), xe("hmmss", Le), xe("Hmm", ye), xe("Hmmss", Le), Ne(["H", "HH"], Fe), Ne(["k", "kk"], (function(e, t, n) {
+                })), tn("a", !0), tn("A", !1), Q("hour", "h"), ee("hour", 13), xe("a", nn), xe("A", nn), xe("H", Me), xe("h", Me), xe("k", Me), xe("HH", Me, ce), xe("hh", Me, ce), xe("kk", Me, ce), xe("hmm", ye), xe("hmmss", ge), xe("Hmm", ye), xe("Hmmss", ge), Ne(["H", "HH"], Fe), Ne(["k", "kk"], (function(e, t, n) {
                     var s = S(e);
                     t[Fe] = 24 === s ? 0 : s
                 })), Ne(["a", "A"], (function(e, t, n) {
@@ -3139,11 +3139,11 @@
                     return cn(e)
                 }
 
-                function Ln() {
+                function gn() {
                     return x(mn)
                 }
 
-                function gn(e) {
+                function Ln(e) {
                     var t, n = e._a;
                     return n && -2 === M(e).overflow && (t = n[Re] < 0 || n[Re] > 11 ? Re : n[We] < 1 || n[We] > at(n[je], n[Re]) ? We : n[Fe] < 0 || n[Fe] > 24 || 24 === n[Fe] && (0 !== n[Ue] || 0 !== n[Be] || 0 !== n[Ve]) ? Fe : n[Ue] < 0 || n[Ue] > 59 ? Ue : n[Be] < 0 || n[Be] > 59 ? Be : n[Ve] < 0 || n[Ve] > 999 ? Ve : -1, M(e)._overflowDayOfYear && (t < je || t > We) && (t = We), M(e)._overflowWeeks && -1 === t && (t = ze), M(e)._overflowWeekday && -1 === t && (t = Ge), M(e).overflow = t), e
                 }
@@ -3162,7 +3162,7 @@
                     if (!e._d) {
                         for (s = vn(e), e._w && null == e._a[We] && null == e._a[Re] && Tn(e), null != e._dayOfYear && (i = kn(e._a[je], s[je]), (e._dayOfYear > Je(i) || 0 === e._dayOfYear) && (M(e)._overflowDayOfYear = !0), n = kt(i, 0, e._dayOfYear), e._a[Re] = n.getUTCMonth(), e._a[We] = n.getUTCDate()), t = 0; t < 3 && null == e._a[t]; ++t) e._a[t] = r[t] = s[t];
                         for (; t < 7; t++) e._a[t] = r[t] = null == e._a[t] ? 2 === t ? 1 : 0 : e._a[t];
-                        24 === e._a[Fe] && 0 === e._a[Ue] && 0 === e._a[Be] && 0 === e._a[Ve] && (e._nextDay = !0, e._a[Fe] = 0), e._d = (e._useUTC ? kt : gt).apply(null, r), a = e._useUTC ? e._d.getUTCDay() : e._d.getDay(), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[Fe] = 24), e._w && void 0 !== e._w.d && e._w.d !== a && (M(e).weekdayMismatch = !0)
+                        24 === e._a[Fe] && 0 === e._a[Ue] && 0 === e._a[Be] && 0 === e._a[Ve] && (e._nextDay = !0, e._a[Fe] = 0), e._d = (e._useUTC ? kt : Lt).apply(null, r), a = e._useUTC ? e._d.getUTCDay() : e._d.getDay(), null != e._tzm && e._d.setUTCMinutes(e._d.getUTCMinutes() - e._tzm), e._nextDay && (e._a[Fe] = 24), e._w && void 0 !== e._w.d && e._w.d !== a && (M(e).weekdayMismatch = !0)
                     }
                 }
 
@@ -3291,7 +3291,7 @@
                                 l = o.length,
                                 d = 0;
                             for (s = _e(e._f, e._locale).match(se) || [], t = 0; t < s.length; t++) i = s[t], (n = (o.match(He(i, e)) || [])[0]) && ((r = o.substr(0, o.indexOf(n))).length > 0 && M(e).unusedInput.push(r), o = o.slice(o.indexOf(n) + n.length), d += n.length), re[i] ? (n ? M(e).empty = !1 : M(e).unusedTokens.push(i), Ae(i, n, e)) : e._strict && !n && M(e).unusedTokens.push(i);
-                            M(e).charsLeftOver = l - d, o.length > 0 && M(e).unusedInput.push(o), e._a[Fe] <= 12 && !0 === M(e).bigHour && e._a[Fe] > 0 && (M(e).bigHour = void 0), M(e).parsedDateParts = e._a.slice(0), M(e).meridiem = e._meridiem, e._a[Fe] = Un(e._locale, e._a[Fe], e._meridiem), bn(e), gn(e)
+                            M(e).charsLeftOver = l - d, o.length > 0 && M(e).unusedInput.push(o), e._a[Fe] <= 12 && !0 === M(e).bigHour && e._a[Fe] > 0 && (M(e).bigHour = void 0), M(e).parsedDateParts = e._a.slice(0), M(e).meridiem = e._meridiem, e._a[Fe] = Un(e._locale, e._a[Fe], e._meridiem), bn(e), Ln(e)
                         } else Rn(e);
                     else Hn(e)
                 }
@@ -3318,16 +3318,16 @@
                 }
 
                 function zn(e) {
-                    var t = new b(gn(Gn(e)));
+                    var t = new b(Ln(Gn(e)));
                     return t._nextDay && (t.add(1, "d"), t._nextDay = void 0), t
                 }
 
                 function Gn(e) {
                     var t = e._i,
                         n = e._f;
-                    return e._locale = e._locale || yn(e._l), null === t || void 0 === n && "" === t ? L({
+                    return e._locale = e._locale || yn(e._l), null === t || void 0 === n && "" === t ? g({
                         nullInput: !0
-                    }) : ("string" == typeof t && (e._i = t = e._locale.preparse(t)), T(t) ? new b(gn(t)) : (_(t) ? e._d = t : r(n) ? Bn(e) : n ? Fn(e) : Jn(e), y(e) || (e._d = null), e))
+                    }) : ("string" == typeof t && (e._i = t = e._locale.preparse(t)), T(t) ? new b(Ln(t)) : (_(t) ? e._d = t : r(n) ? Bn(e) : n ? Fn(e) : Jn(e), y(e) || (e._d = null), e))
                 }
 
                 function Jn(e) {
@@ -3350,11 +3350,11 @@
                 })), a.ISO_8601 = function() {}, a.RFC_2822 = function() {};
                 var Qn = w("moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/", (function() {
                         var e = Kn.apply(null, arguments);
-                        return this.isValid() && e.isValid() ? e < this ? this : e : L()
+                        return this.isValid() && e.isValid() ? e < this ? this : e : g()
                     })),
                     $n = w("moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/", (function() {
                         var e = Kn.apply(null, arguments);
-                        return this.isValid() && e.isValid() ? e > this ? this : e : L()
+                        return this.isValid() && e.isValid() ? e > this ? this : e : g()
                     }));
 
                 function Xn(e, t) {
@@ -3478,11 +3478,11 @@
                     return this
                 }
 
-                function Ls(e) {
+                function gs(e) {
                     return !!this.isValid() && (e = e ? Kn(e).utcOffset() : 0, (this.utcOffset() - e) % 60 == 0)
                 }
 
-                function gs() {
+                function Ls() {
                     return this.utcOffset() > this.clone().month(0).utcOffset() || this.utcOffset() > this.clone().month(5).utcOffset()
                 }
 
@@ -3848,11 +3848,11 @@
                     return y(this)
                 }
 
-                function La() {
+                function ga() {
                     return p({}, M(this))
                 }
 
-                function ga() {
+                function La() {
                     return M(this).overflow
                 }
 
@@ -3922,7 +3922,7 @@
                     var t = Math.round((this.clone().startOf("day") - this.clone().startOf("year")) / 864e5) + 1;
                     return null == e ? t : this.add(e - t, "d")
                 }
-                oe("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), Q("dayOfYear", "DDD"), ee("dayOfYear", 4), xe("DDD", ge), xe("DDDD", pe), Ne(["DDD", "DDDD"], (function(e, t, n) {
+                oe("DDD", ["DDDD", 3], "DDDo", "dayOfYear"), Q("dayOfYear", "DDD"), ee("dayOfYear", 4), xe("DDD", Le), xe("DDDD", pe), Ne(["DDD", "DDDD"], (function(e, t, n) {
                     n._dayOfYear = S(e)
                 })), oe("m", ["mm", 2], 0, "minute"), Q("minute", "m"), ee("minute", 14), xe("m", Me), xe("mm", Me, ce), Ne(["m", "mm"], Ue);
                 var Oa = Xe("Minutes", !1);
@@ -3944,7 +3944,7 @@
                         return 1e5 * this.millisecond()
                     })), oe(0, ["SSSSSSSSS", 9], 0, (function() {
                         return 1e6 * this.millisecond()
-                    })), Q("millisecond", "ms"), ee("millisecond", 16), xe("S", ge, ue), xe("SS", ge, ce), xe("SSS", ge, pe), Ia = "SSSS"; Ia.length <= 9; Ia += "S") xe(Ia, be);
+                    })), Q("millisecond", "ms"), ee("millisecond", 16), xe("S", Le, ue), xe("SS", Le, ce), xe("SSS", Le, pe), Ia = "SSSS"; Ia.length <= 9; Ia += "S") xe(Ia, be);
 
                 function Na(e, t) {
                     t[Ve] = S(1e3 * ("0." + e))
@@ -3973,7 +3973,7 @@
                 function Ua(e) {
                     return e
                 }
-                Ra.add = Is, Ra.calendar = Cs, Ra.clone = As, Ra.diff = Vs, Ra.endOf = _a, Ra.format = Ks, Ra.from = Qs, Ra.fromNow = $s, Ra.to = Xs, Ra.toNow = Zs, Ra.get = tt, Ra.invalidAt = ga, Ra.isAfter = js, Ra.isBefore = Rs, Ra.isBetween = Ws, Ra.isSame = Fs, Ra.isSameOrAfter = Us, Ra.isSameOrBefore = Bs, Ra.isValid = ya, Ra.lang = ta, Ra.locale = ea, Ra.localeData = na, Ra.max = $n, Ra.min = Qn, Ra.parsingFlags = La, Ra.set = nt, Ra.startOf = ma, Ra.subtract = Ps, Ra.toArray = ha, Ra.toObject = fa, Ra.toDate = pa, Ra.toISOString = Js, Ra.inspect = qs, Ra.toJSON = Ma, Ra.toString = Gs, Ra.unix = ca, Ra.valueOf = ua, Ra.creationData = ka, Ra.year = Qe, Ra.isLeapYear = $e, Ra.weekYear = ba, Ra.isoWeekYear = Ta, Ra.quarter = Ra.quarters = wa, Ra.month = ct, Ra.daysInMonth = pt, Ra.week = Ra.weeks = xt, Ra.isoWeek = Ra.isoWeeks = Ht, Ra.weeksInYear = Sa, Ra.isoWeeksInYear = Ya, Ra.date = xa, Ra.day = Ra.days = Bt, Ra.weekday = Vt, Ra.isoWeekday = zt, Ra.dayOfYear = Ha, Ra.hour = Ra.hours = ln, Ra.minute = Ra.minutes = Oa, Ra.second = Ra.seconds = Pa, Ra.millisecond = Ra.milliseconds = Ca, Ra.utcOffset = ps, Ra.utc = fs, Ra.local = Ms, Ra.parseZone = ys, Ra.hasAlignedHourOffset = Ls, Ra.isDST = gs, Ra.isLocal = vs, Ra.isUtcOffset = bs, Ra.isUtc = Ts, Ra.isUTC = Ts, Ra.zoneAbbr = Aa, Ra.zoneName = ja, Ra.dates = w("dates accessor is deprecated. Use date instead.", xa), Ra.months = w("months accessor is deprecated. Use month instead", ct), Ra.years = w("years accessor is deprecated. Use year instead", Qe), Ra.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", hs), Ra.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", ks);
+                Ra.add = Is, Ra.calendar = Cs, Ra.clone = As, Ra.diff = Vs, Ra.endOf = _a, Ra.format = Ks, Ra.from = Qs, Ra.fromNow = $s, Ra.to = Xs, Ra.toNow = Zs, Ra.get = tt, Ra.invalidAt = La, Ra.isAfter = js, Ra.isBefore = Rs, Ra.isBetween = Ws, Ra.isSame = Fs, Ra.isSameOrAfter = Us, Ra.isSameOrBefore = Bs, Ra.isValid = ya, Ra.lang = ta, Ra.locale = ea, Ra.localeData = na, Ra.max = $n, Ra.min = Qn, Ra.parsingFlags = ga, Ra.set = nt, Ra.startOf = ma, Ra.subtract = Ps, Ra.toArray = ha, Ra.toObject = fa, Ra.toDate = pa, Ra.toISOString = Js, Ra.inspect = qs, Ra.toJSON = Ma, Ra.toString = Gs, Ra.unix = ca, Ra.valueOf = ua, Ra.creationData = ka, Ra.year = Qe, Ra.isLeapYear = $e, Ra.weekYear = ba, Ra.isoWeekYear = Ta, Ra.quarter = Ra.quarters = wa, Ra.month = ct, Ra.daysInMonth = pt, Ra.week = Ra.weeks = xt, Ra.isoWeek = Ra.isoWeeks = Ht, Ra.weeksInYear = Sa, Ra.isoWeeksInYear = Ya, Ra.date = xa, Ra.day = Ra.days = Bt, Ra.weekday = Vt, Ra.isoWeekday = zt, Ra.dayOfYear = Ha, Ra.hour = Ra.hours = ln, Ra.minute = Ra.minutes = Oa, Ra.second = Ra.seconds = Pa, Ra.millisecond = Ra.milliseconds = Ca, Ra.utcOffset = ps, Ra.utc = fs, Ra.local = Ms, Ra.parseZone = ys, Ra.hasAlignedHourOffset = gs, Ra.isDST = Ls, Ra.isLocal = vs, Ra.isUtcOffset = bs, Ra.isUtc = Ts, Ra.isUTC = Ts, Ra.zoneAbbr = Aa, Ra.zoneName = ja, Ra.dates = w("dates accessor is deprecated. Use date instead.", xa), Ra.months = w("months accessor is deprecated. Use month instead", ct), Ra.years = w("years accessor is deprecated. Use year instead", Qe), Ra.zone = w("moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/", hs), Ra.isDSTShifted = w("isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information", ks);
                 var Ba = C.prototype;
 
                 function Va(e, t, n, s) {
@@ -4112,11 +4112,11 @@
                     Mi = di("Q"),
                     yi = di("y");
 
-                function Li() {
+                function gi() {
                     return Ds(this)
                 }
 
-                function gi(e) {
+                function Li(e) {
                     return e = $(e), this.isValid() ? this[e + "s"]() : NaN
                 }
 
@@ -4203,11 +4203,11 @@
                     return u + "P" + (i ? c + i + "Y" : "") + (r ? c + r + "M" : "") + (o ? p + o + "D" : "") + (l || d || m ? "T" : "") + (l ? h + l + "H" : "") + (d ? h + d + "M" : "") + (m ? h + m + "S" : "")
                 }
                 var Wi = rs.prototype;
-                return Wi.isValid = as, Wi.abs = Za, Wi.add = ti, Wi.subtract = ni, Wi.as = oi, Wi.asMilliseconds = mi, Wi.asSeconds = _i, Wi.asMinutes = ui, Wi.asHours = ci, Wi.asDays = pi, Wi.asWeeks = hi, Wi.asMonths = fi, Wi.asQuarters = Mi, Wi.asYears = yi, Wi.valueOf = li, Wi._bubble = ai, Wi.clone = Li, Wi.get = gi, Wi.milliseconds = vi, Wi.seconds = bi, Wi.minutes = Ti, Wi.hours = Yi, Wi.days = Si, Wi.weeks = wi, Wi.months = Di, Wi.years = Ei, Wi.humanize = Ci, Wi.toISOString = Ri, Wi.toString = Ri, Wi.toJSON = Ri, Wi.locale = ea, Wi.localeData = na, Wi.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", Ri), Wi.lang = ta, oe("X", 0, 0, "unix"), oe("x", 0, 0, "valueOf"), xe("x", Te), xe("X", De), Ne("X", (function(e, t, n) {
+                return Wi.isValid = as, Wi.abs = Za, Wi.add = ti, Wi.subtract = ni, Wi.as = oi, Wi.asMilliseconds = mi, Wi.asSeconds = _i, Wi.asMinutes = ui, Wi.asHours = ci, Wi.asDays = pi, Wi.asWeeks = hi, Wi.asMonths = fi, Wi.asQuarters = Mi, Wi.asYears = yi, Wi.valueOf = li, Wi._bubble = ai, Wi.clone = gi, Wi.get = Li, Wi.milliseconds = vi, Wi.seconds = bi, Wi.minutes = Ti, Wi.hours = Yi, Wi.days = Si, Wi.weeks = wi, Wi.months = Di, Wi.years = Ei, Wi.humanize = Ci, Wi.toISOString = Ri, Wi.toString = Ri, Wi.toJSON = Ri, Wi.locale = ea, Wi.localeData = na, Wi.toIsoString = w("toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)", Ri), Wi.lang = ta, oe("X", 0, 0, "unix"), oe("x", 0, 0, "valueOf"), xe("x", Te), xe("X", De), Ne("X", (function(e, t, n) {
                     n._d = new Date(1e3 * parseFloat(e, 10))
                 })), Ne("x", (function(e, t, n) {
                     n._d = new Date(S(e))
-                })), a.version = "2.24.0", i(Kn), a.fn = Ra, a.min = Zn, a.max = es, a.now = ts, a.utc = h, a.unix = Wa, a.months = Ja, a.isDate = _, a.locale = hn, a.invalid = L, a.duration = Ds, a.isMoment = T, a.weekdays = Ka, a.parseZone = Fa, a.localeData = yn, a.isDuration = os, a.monthsShort = qa, a.weekdaysMin = $a, a.defineLocale = fn, a.updateLocale = Mn, a.locales = Ln, a.weekdaysShort = Qa, a.normalizeUnits = $, a.relativeTimeRounding = Pi, a.relativeTimeThreshold = Ni, a.calendarFormat = Ns, a.prototype = Ra, a.HTML5_FMT = {
+                })), a.version = "2.24.0", i(Kn), a.fn = Ra, a.min = Zn, a.max = es, a.now = ts, a.utc = h, a.unix = Wa, a.months = Ja, a.isDate = _, a.locale = hn, a.invalid = g, a.duration = Ds, a.isMoment = T, a.weekdays = Ka, a.parseZone = Fa, a.localeData = yn, a.isDuration = os, a.monthsShort = qa, a.weekdaysMin = $a, a.defineLocale = fn, a.updateLocale = Mn, a.locales = gn, a.weekdaysShort = Qa, a.normalizeUnits = $, a.relativeTimeRounding = Pi, a.relativeTimeThreshold = Ni, a.calendarFormat = Ns, a.prototype = Ra, a.HTML5_FMT = {
                     DATETIME_LOCAL: "YYYY-MM-DDTHH:mm",
                     DATETIME_LOCAL_SECONDS: "YYYY-MM-DDTHH:mm:ss",
                     DATETIME_LOCAL_MS: "YYYY-MM-DDTHH:mm:ss.SSS",
@@ -13703,12 +13703,13 @@
             const a = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
                 i = `/lol-progression/v1/groups/${a}/configuration`,
                 r = `/lol-progression/v1/groups/${a}/instanceData`,
-                o = {
+                o = 30,
+                l = {
                     MASTERY: 3,
                     VOTING: 5,
                     SUMMONERS_JOURNEY: 10
                 };
-            var l = s.Ember.Service.extend({
+            var d = s.Ember.Service.extend({
                 init() {
                     this._super(...arguments), s.db.observe(i, this, this.handleProgressionTrackConfig), s.db.observe(r, this, this.handleProgressionInstanceData)
                 },
@@ -13721,33 +13722,62 @@
                 handleProgressionInstanceData(e) {
                     this.set("classicLevelInstanceData", e)
                 },
-                getUnlockLevels: () => o,
+                getUnlockLevels: () => l,
                 xpTotal: s.Ember.computed("classicLevelInstanceData.counters.0.counterValue", (function() {
                     return this.get("classicLevelInstanceData.counters.0.counterValue") || 0
                 })),
-                currentLevelXp: s.Ember.computed("xpTotal", "xpRequirementPerLevel", (function() {
-                    const e = this.get("xpRequirementPerLevel");
-                    return this.get("xpTotal") % e
+                milestoneThresholds: s.Ember.computed("classicLevelProgressionConfig", (function() {
+                    return this._buildThresholds(this.get("classicLevelProgressionConfig"))
                 })),
-                calculateLevel: (e, t) => Math.max(1, Math.min(Math.floor(e / t), 30)),
-                currentLevel: s.Ember.computed("xpTotal", "xpRequirementPerLevel", (function() {
-                    const e = this.get("xpRequirementPerLevel") || 0,
+                _buildThresholds(e) {
+                    if (!e) return [];
+                    const t = (e.milestones || []).map((e => e && e.triggers && e.triggers[0] && e.triggers[0].triggerValue)).filter((e => "number" == typeof e)).sort(((e, t) => e - t)).slice(0, o),
+                        n = e.repeat && e.repeat.repeatTriggers && e.repeat.repeatTriggers[0] && e.repeat.repeatTriggers[0].increaseBy || 0;
+                    if (n > 0 && t.length > 0) {
+                        let e = t[t.length - 1];
+                        for (; t.length < o;) e += n, t.push(e)
+                    }
+                    return t
+                },
+                levelForXpTotal(e, t) {
+                    let n = 0;
+                    for (let s = 0; s < e.length && t >= e[s]; s++) n = s + 1;
+                    return Math.min(n, o)
+                },
+                levelForXp(e) {
+                    const t = this.get("milestoneThresholds") || [];
+                    return t.length ? Math.max(1, this.levelForXpTotal(t, e || 0)) : 1
+                },
+                currentLevelXp: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
+                    const e = this.get("milestoneThresholds") || [],
+                        t = this.get("xpTotal") || 0,
+                        n = this.levelForXpTotal(e, t);
+                    return t - (n > 0 ? e[n - 1] : 0)
+                })),
+                currentLevel: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
+                    const e = this.get("milestoneThresholds") || [],
                         t = this.get("xpTotal") || 0;
-                    return e ? this.calculateLevel(t, e) : 1
+                    return e.length ? Math.max(1, this.levelForXpTotal(e, t)) : 1
                 })),
                 nextLevel: s.Ember.computed("currentLevel", (function() {
-                    return Math.min(30, this.get("currentLevel") + 1)
+                    return Math.min(o, this.get("currentLevel") + 1)
                 })),
                 isMaxLevel: s.Ember.computed("currentLevel", (function() {
-                    return this.get("currentLevel") >= 30
+                    return this.get("currentLevel") >= o
                 })),
-                xpRequirementPerLevel: s.Ember.computed("classicLevelProgressionConfig.repeat.repeatTriggers.0.increaseBy", (function() {
-                    return this.get("classicLevelProgressionConfig.repeat.repeatTriggers.0.increaseBy") || 100
+                xpForNextLevel: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
+                    const e = this.get("milestoneThresholds") || [],
+                        t = this.get("xpTotal") || 0;
+                    if (!e.length) return 100;
+                    const n = this.levelForXpTotal(e, t);
+                    if (n >= o || n >= e.length) return 0;
+                    const s = n > 0 ? e[n - 1] : 0;
+                    return e[n] - s
                 })),
-                eligibleForMasteries: s.Ember.computed.gte("currentLevel", o.MASTERY),
-                eligibleForSummonersJourney: s.Ember.computed.gte("currentLevel", o.SUMMONERS_JOURNEY)
+                eligibleForMasteries: s.Ember.computed.gte("currentLevel", l.MASTERY),
+                eligibleForSummonersJourney: s.Ember.computed.gte("currentLevel", l.SUMMONERS_JOURNEY)
             });
-            t.default = l
+            t.default = d
         }, (e, t, n) => {
             "use strict";
             var s = n(1);

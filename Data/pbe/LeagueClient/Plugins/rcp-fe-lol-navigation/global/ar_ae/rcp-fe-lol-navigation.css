@@ -1301,6 +1301,12 @@
     text-align: left
 }
 
+.loyalty-navbar-badge-tooltip__game {
+    color: #f0e6d2;
+    font-size: 14px;
+    padding: 6px 0 2px
+}
+
 .loyalty-navbar-badge-tooltip__reward {
     align-items: center;
     display: flex;
@@ -1319,12 +1325,17 @@
 }
 
 .loyalty-navbar-badge-tooltip__reward-name {
+    color: #a09b8c;
     font-size: 12px
 }
 
 .loyalty-navbar-badge-tooltip__reward-quantity {
     color: #f0e6d2;
     font-weight: 700
+}
+
+.loyalty-navbar-badge-tooltip__reward--launch-bonus {
+    background: linear-gradient(270deg, rgba(208, 154, 0, 0), rgba(208, 154, 0, .2) 10%, rgba(208, 154, 0, .2) 42.79%, rgba(208, 154, 0, 0))
 }
 
 .screen-root[data-screen-name=lol-kr-rating-screen] {
@@ -9084,6 +9095,12 @@ lol-uikit-content-block[type=tooltip-system].persistent-header-opal__disabled-to
     left: 2px;
     position: relative;
     width: 840px
+}
+
+.activity-center-battlepass-activity__footer.banner-only {
+    bottom: 0;
+    height: unset;
+    position: absolute
 }
 
 .activity-center-battlepass-activity__content--inactive .activity-center-cta-button-container {

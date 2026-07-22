@@ -15968,6 +15968,14 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     margin-bottom: 19.22px
 }
 
+.jade-position-pref-valor-text {
+    font-family: var(--font-gill-sans-mt)
+}
+
+.jade-position-pref-valor-text:lang(vi-VN) {
+    font-family: var(--font-body)
+}
+
 .jade-position-preference-modal lol-uikit-dialog-frame {
     background: none;
     border: none;
@@ -16297,7 +16305,6 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 
 .jade-position-pref-valor-text {
     color: #9b9ea4;
-    font-family: Gill Sans MT Pro;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -16402,6 +16409,26 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 .jade-progression-widget .next-reward-xp-label,
 .jade-progression-widget.is-max-level .max-level-description {
     font-family: var(--font-body)
+}
+
+.jade-progression-modal__level-info,
+.jade-progression-modal__level-marker-text,
+.jade-progression-modal__level-number,
+.jade-progression-modal__selected-reward-info,
+.jade-progression-modal__subtitle,
+.jade-progression-modal__title,
+.jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content {
+    font-family: var(--font-frizquadrata)
+}
+
+.jade-progression-modal__level-info:lang(vi-VN),
+.jade-progression-modal__level-marker-text:lang(vi-VN),
+.jade-progression-modal__level-number:lang(vi-VN),
+.jade-progression-modal__selected-reward-info:lang(vi-VN),
+.jade-progression-modal__subtitle:lang(vi-VN),
+.jade-progression-modal__title:lang(vi-VN),
+.jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content:lang(vi-VN) {
+    font-family: var(--font-display)
 }
 
 .jade-progression-widget .next-reward-label,
@@ -16541,12 +16568,8 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 }
 
 .jade-progression-widget.is-max-level .max-level-text {
-    margin-left: 10px
-}
-
-[dir=rtl] .jade-progression-widget.is-max-level .max-level-text {
-    margin-left: 0;
-    margin-right: 10px
+    margin-left: 10px;
+    margin-right: 0
 }
 
 .jade-progression-widget.is-max-level .max-level-title {
@@ -16585,10 +16608,6 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     flex-grow: 1;
     padding: 0 10px;
     text-align: right
-}
-
-[dir=rtl] .jade-progression-widget .pass-progression-widget-next-reward-wrapper {
-    text-align: left
 }
 
 .jade-progression-widget .next-reward-title {
@@ -16633,29 +16652,20 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 }
 
 .jade-progression-widget .pass-progression-widget-level:first-child {
+    margin-left: 0;
     margin-right: -3px
-}
-
-[dir=rtl] .jade-progression-widget .pass-progression-widget-level:first-child {
-    margin-left: -3px;
-    margin-right: 0
 }
 
 .jade-progression-widget .pass-progression-widget-level:last-child {
     background: #3c3c41;
-    margin-left: -3px
-}
-
-[dir=rtl] .jade-progression-widget .pass-progression-widget-level:last-child {
-    margin-left: 0;
-    margin-right: -3px
+    margin-left: -3px;
+    margin-right: 0
 }
 
 .jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content {
     background: transparent;
     clip-path: none;
     color: #fff;
-    font-family: FrizQuadrata Pro;
     height: 20px;
     line-height: 20px;
     text-align: center;
@@ -16696,13 +16706,10 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 .jade-progression-modal__header {
     left: 54px;
     position: absolute;
+    right: auto;
+    text-align: left;
     top: 41px;
     width: 462px
-}
-
-[dir=rtl] .jade-progression-modal__header {
-    left: auto;
-    right: 54px
 }
 
 .jade-progression-modal__heading {
@@ -16727,7 +16734,6 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 
 .jade-progression-modal__title {
     color: #600;
-    font-family: FrizQuadrata Pro;
     font-size: 18px;
     line-height: 22px;
     padding-top: 5px;
@@ -16737,7 +16743,6 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 
 .jade-progression-modal__subtitle {
     color: #000;
-    font-family: FrizQuadrata Pro;
     font-size: 12px;
     line-height: 14px;
     margin-top: 5px
@@ -16752,16 +16757,12 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     display: flex;
     height: 20px;
     justify-content: center;
+    left: auto;
     padding: 4px;
     position: absolute;
     right: 26px;
     top: 10px;
     width: 20px
-}
-
-[dir=rtl] .jade-progression-modal__close-btn {
-    left: 26px;
-    right: auto
 }
 
 .jade-progression-modal__close-btn:hover {
@@ -16780,15 +16781,11 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 .jade-progression-modal__selected-reward-area {
     align-items: flex-start;
     display: flex;
+    flex-direction: row;
     left: 453px;
     position: absolute;
+    right: auto;
     top: 170px
-}
-
-[dir=rtl] .jade-progression-modal__selected-reward-area {
-    flex-direction: row-reverse;
-    left: auto;
-    right: 453px
 }
 
 .jade-progression-modal__selected-reward-box {
@@ -16811,15 +16808,11 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 }
 
 .jade-progression-modal__selected-reward-info {
-    font-family: FrizQuadrata Pro;
     margin-left: 40px;
+    margin-right: 0;
     padding: 8px;
+    text-align: left;
     width: 300px
-}
-
-[dir=rtl] .jade-progression-modal__selected-reward-info {
-    margin-left: 0;
-    margin-right: 40px
 }
 
 .jade-progression-modal__selected-reward-type {
@@ -16847,12 +16840,8 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     gap: 44px;
     left: 115px;
     position: absolute;
+    right: auto;
     top: 402px
-}
-
-[dir=rtl] .jade-progression-modal__rewards-row {
-    left: auto;
-    right: 115px
 }
 
 .jade-progression-modal__reward-box {
@@ -16915,34 +16904,22 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 }
 
 .jade-progression-modal__nav-next {
+    left: auto;
     right: 30px
-}
-
-[dir=rtl] .jade-progression-modal__nav-next {
-    left: 30px;
-    right: auto
 }
 
 .jade-progression-modal__nav-prev {
-    left: 30px
-}
-
-[dir=rtl] .jade-progression-modal__nav-prev {
-    left: auto;
-    right: 30px
+    left: 30px;
+    right: auto
 }
 
 .jade-progression-modal__progress-bar {
     height: 20px;
     left: 125px;
     position: absolute;
+    right: auto;
     top: 485px;
     width: 813px
-}
-
-[dir=rtl] .jade-progression-modal__progress-bar {
-    left: auto;
-    right: 125px
 }
 
 .jade-progression-modal__progress-track {
@@ -16961,10 +16938,6 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     height: 4px;
     max-width: 100%;
     transition: width .3s ease
-}
-
-[dir=rtl] .jade-progression-modal__progress-fill {
-    background: linear-gradient(270deg, #09bfd8 63%, #d3faff)
 }
 
 .jade-progression-modal__levels {
@@ -17017,7 +16990,6 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 
 .jade-progression-modal__level-marker-text {
     color: #fff;
-    font-family: FrizQuadrata Pro;
     font-size: 12px;
     line-height: 20px;
     position: relative;
@@ -17027,16 +16999,11 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 .jade-progression-modal__level-info {
     align-items: center;
     display: flex;
-    font-family: FrizQuadrata Pro;
     gap: 4px;
     left: 42px;
     position: absolute;
+    right: auto;
     top: 515px
-}
-
-[dir=rtl] .jade-progression-modal__level-info {
-    left: auto;
-    right: 42px
 }
 
 .jade-progression-modal__level-circle {
@@ -17072,7 +17039,6 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 
 .jade-progression-modal__level-number {
     color: #fff;
-    font-family: FrizQuadrata Pro;
     font-size: 18px;
     position: absolute;
     text-align: center
@@ -17081,23 +17047,15 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 .jade-progression-modal__xp-value {
     color: #000;
     font-size: 14px;
-    padding-left: 4px
-}
-
-[dir=rtl] .jade-progression-modal__xp-value {
-    padding-left: 0;
-    padding-right: 4px
+    padding-left: 4px;
+    padding-right: 0
 }
 
 .jade-progression-modal__xp-label {
     color: #000;
     font-size: 14px;
-    margin-left: 4px
-}
-
-[dir=rtl] .jade-progression-modal__xp-label {
-    margin-left: 0;
-    margin-right: 4px
+    margin-left: 4px;
+    margin-right: 0
 }
 
 .jade-eat .jade-eat__title {
@@ -17250,6 +17208,14 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     width: 0
 }
 
+.jade-rank-unlock-footer-tooltip-content {
+    font-family: var(--font-frizquadrata)
+}
+
+.jade-rank-unlock-footer-tooltip-content:lang(vi-VN) {
+    font-family: var(--font-display)
+}
+
 .jade-rank-unlock-footer-content {
     align-items: center;
     background-color: #000;
@@ -17276,7 +17242,6 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 }
 
 .jade-rank-unlock-footer-tooltip-content {
-    font-family: FrizQuadrata Pro;
     font-size: 14px;
     font-style: Roman;
     font-weight: 400;
@@ -20091,11 +20056,13 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     padding: 40px 40px 60px
 }
 
-.one-page-tutorial-wrapper-KIWI .tutorial-header-icon {
+.one-page-tutorial-wrapper-KIWI .tutorial-header-icon,
+.one-page-tutorial-wrapper-KIWI_JADE .tutorial-header-icon {
     display: none !important
 }
 
-.one-page-tutorial-wrapper-KIWI .header {
+.one-page-tutorial-wrapper-KIWI .header,
+.one-page-tutorial-wrapper-KIWI_JADE .header {
     order: 2
 }
 

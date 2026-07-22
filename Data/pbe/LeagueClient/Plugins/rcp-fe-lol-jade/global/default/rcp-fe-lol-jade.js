@@ -871,18 +871,18 @@
                         MasteriesController: n(97).default,
                         StoreController: n(100).default,
                         BattlepassController: n(106).default,
-                        CollectionController: n(108).default,
-                        CollectionChampionsController: n(109).default,
-                        CollectionSpellsController: n(110).default,
-                        CollectionItemsController: n(112).default,
-                        CollectionPortraitsController: n(113).default,
-                        LoadoutsService: n(114).default,
-                        PatcherService: n(115).default,
-                        JadeHomePcsService: n(116).default,
+                        CollectionController: n(109).default,
+                        CollectionChampionsController: n(110).default,
+                        CollectionSpellsController: n(111).default,
+                        CollectionItemsController: n(113).default,
+                        CollectionPortraitsController: n(114).default,
+                        LoadoutsService: n(115).default,
+                        PatcherService: n(116).default,
+                        JadeHomePcsService: n(117).default,
                         PageNameValidationService: n(92).default,
                         MasteryPagesService: n(99).default,
-                        RunePagesService: n(117).default,
-                        SummonersJourneyService: n(119).default,
+                        RunePagesService: n(118).default,
+                        SummonersJourneyService: n(120).default,
                         ShoppefrontService: a.default.ShoppefrontComponents.ShoppefrontService,
                         ShoppefrontCatalogItemEnricherService: a.default.ShoppefrontComponents.ShoppefrontCatalogItemEnricherService,
                         ShoppefrontLootService: a.default.ShoppefrontComponents.ShoppefrontLootService,
@@ -893,141 +893,141 @@
                         PurchaseModalPrerequisitesComponent: a.default.ShoppefrontComponents.PurchaseModalPrerequisitesComponent,
                         DialogModalComponent: a.default.ShoppefrontComponents.DialogModalComponent,
                         ConfirmToastService: a.default.ShoppefrontComponents.ConfirmToastService,
-                        EventHubService: n(120).default,
-                        RegionInfoService: n(123).default,
-                        JadeSubNavComponent: n(124).default,
-                        CollectionSubNavComponent: n(127).default,
-                        RunePlateComponent: n(129).default,
-                        RuneInventoryComponent: n(132).default,
-                        MasteriesHeaderComponent: n(135).default,
-                        MasteryTreeComponent: n(138).default,
-                        MasteryNodeComponent: n(141).default,
-                        MasteryPrereqBarComponent: n(144).default,
-                        TooltipComponent: n(147).default,
-                        DemaciaSpellTooltipContentComponent: n(150).default,
-                        MasteryTooltipContentComponent: n(153).default,
-                        MasteryPageSummaryComponent: n(156).default,
-                        RunePageSummaryComponent: n(159).default,
+                        EventHubService: n(121).default,
+                        RegionInfoService: n(124).default,
+                        JadeSubNavComponent: n(125).default,
+                        CollectionSubNavComponent: n(128).default,
+                        RunePlateComponent: n(130).default,
+                        RuneInventoryComponent: n(133).default,
+                        MasteriesHeaderComponent: n(136).default,
+                        MasteryTreeComponent: n(139).default,
+                        MasteryNodeComponent: n(142).default,
+                        MasteryPrereqBarComponent: n(145).default,
+                        TooltipComponent: n(148).default,
+                        DemaciaSpellTooltipContentComponent: n(151).default,
+                        MasteryTooltipContentComponent: n(154).default,
+                        MasteryPageSummaryComponent: n(157).default,
+                        RunePageSummaryComponent: n(160).default,
                         JadeSelectComponent: n(44).default,
-                        JadeLoadoutsEditComponent: n(162).default,
-                        ChampionSelectCenterContainerComponent: n(165).default,
-                        ChampionsPaneComponent: n(168).default,
-                        SkinsPaneComponent: n(175).default,
-                        JadeTimerStatusComponent: n(178).default,
-                        JadeHomeShopGridComponent: n(181).default,
-                        JadeHomeErrorComponent: n(184).default,
-                        JadeSkinChromaModalComponent: n(187),
-                        JadeSkinChromaButtonComponent: n(190),
-                        SpellVideoWrapperComponent: n(193).default,
-                        DemaciaSummonerSpellSelectComponent: n(196).default,
-                        DemaciaFlyoutSelectorTriggerButtonComponent: n(200).default,
-                        DemaciaSpellPopupComponent: n(203).default,
-                        DemaciaFlyoutSelectorPopupButtonComponent: n(206).default,
-                        JadeWardSkinRendererComponent: n(209).default,
-                        JadeWardSkinPopupButtonComponent: n(212).default,
-                        JadeWardSkinSelectComponent: n(215).default,
-                        JadeWardSkinPopupComponent: n(218).default,
+                        JadeLoadoutsEditComponent: n(163).default,
+                        ChampionSelectCenterContainerComponent: n(166).default,
+                        ChampionsPaneComponent: n(169).default,
+                        SkinsPaneComponent: n(176).default,
+                        JadeTimerStatusComponent: n(179).default,
+                        JadeHomeShopGridComponent: n(182).default,
+                        JadeHomeErrorComponent: n(185).default,
+                        JadeSkinChromaModalComponent: n(188),
+                        JadeSkinChromaButtonComponent: n(191),
+                        SpellVideoWrapperComponent: n(194).default,
+                        DemaciaSummonerSpellSelectComponent: n(197).default,
+                        DemaciaFlyoutSelectorTriggerButtonComponent: n(201).default,
+                        DemaciaSpellPopupComponent: n(204).default,
+                        DemaciaFlyoutSelectorPopupButtonComponent: n(207).default,
+                        JadeWardSkinRendererComponent: n(210).default,
+                        JadeWardSkinPopupButtonComponent: n(213).default,
+                        JadeWardSkinSelectComponent: n(216).default,
+                        JadeWardSkinPopupComponent: n(219).default,
                         JadeEmoteInventoryComponent: n(46).default,
                         JadeEmoteWheelComponent: n(51).default,
                         JadeEmoteWheelSlotComponent: n(53).default,
                         JadeNavigationComponent: n(55).default,
-                        ItemBuildTreeComponent: n(221).default,
-                        ItemTooltipComponent: n(224).default,
-                        JadeSwapButtonComponent: n(226),
-                        JadeSwapDialogComponent: n(229).default,
-                        JadeBanShowcaseComponent: n(233).default,
-                        JadeProgressionWidgetComponent: n(236).default,
-                        BattlepassChaseModalComponent: n(239).default,
-                        JadeDropRatesModalComponent: n(242).default,
-                        ViewAbilitiesPaneComponent: n(244).default,
-                        JadeChampionCardComponent: n(247).default,
-                        JadeChampionModalComponent: n(250).default,
-                        JadeCollectionsChromaFlyoutContentComponent: n(253).default,
-                        JadeHomeVotingCardComponent: n(256).default,
-                        VotingSystemComponent: n(259).default,
-                        JadeFtuxParchmentModalComponent: n(262),
-                        PortraitCardComponent: n(265).default,
-                        JadeStoreHoloComponent: n(268).default,
-                        JadeFiatPurchaseModalComponent: n(271).default,
-                        JadeQuantityPurchaseModalComponent: n(274).default,
-                        JadeCelebrationVideoComponent: n(271).JadeCelebrationVideo,
-                        JadeDefaultTemplateComponent: n(277).default,
-                        JadePaginationComponent: n(281).default,
-                        JadeCtaComponent: n(284).default,
-                        PurchaseBundlesModalComponent: n(287).default,
-                        EventShopFallbackComponent: n(288).default,
+                        ItemBuildTreeComponent: n(222).default,
+                        ItemTooltipComponent: n(225).default,
+                        JadeSwapButtonComponent: n(227),
+                        JadeSwapDialogComponent: n(230).default,
+                        JadeBanShowcaseComponent: n(234).default,
+                        JadeProgressionWidgetComponent: n(237).default,
+                        BattlepassChaseModalComponent: n(240).default,
+                        JadeDropRatesModalComponent: n(243).default,
+                        ViewAbilitiesPaneComponent: n(245).default,
+                        JadeChampionCardComponent: n(248).default,
+                        JadeChampionModalComponent: n(251).default,
+                        JadeCollectionsChromaFlyoutContentComponent: n(254).default,
+                        JadeHomeVotingCardComponent: n(257).default,
+                        VotingSystemComponent: n(260).default,
+                        JadeFtuxParchmentModalComponent: n(263),
+                        PortraitCardComponent: n(266).default,
+                        JadeStoreHoloComponent: n(269).default,
+                        JadeFiatPurchaseModalComponent: n(272).default,
+                        JadeQuantityPurchaseModalComponent: n(275).default,
+                        JadeCelebrationVideoComponent: n(272).JadeCelebrationVideo,
+                        JadeDefaultTemplateComponent: n(278).default,
+                        JadePaginationComponent: n(282).default,
+                        JadeCtaComponent: n(285).default,
+                        PurchaseBundlesModalComponent: n(288).default,
+                        EventShopFallbackComponent: n(289).default,
                         DigitalGoodsDisclaimerComponent: a.default.SharedEmberComponents.DigitalGoodsDisclaimerComponent,
                         CallToActionPipComponent: a.default.SharedEmberComponents.CallToActionPipComponent,
                         ResetTimerComponent: a.default.SharedEmberComponents.ResetTimerComponent,
-                        InventoryTypeNameHelper: n(289).default,
-                        SafeImagePathHelper: n(290).default,
+                        InventoryTypeNameHelper: n(290).default,
+                        SafeImagePathHelper: n(291).default,
                         TEMPLATES: {
-                            application: n(291),
-                            home: n(292),
-                            runes: n(293),
-                            masteries: n(294),
-                            battlepass: n(295),
-                            store: n(296),
-                            collection: n(297),
-                            "collection/champions": n(298),
-                            "collection/spells": n(299),
-                            "collection/items": n(300),
-                            "collection/portraits": n(301),
-                            "components/jade-sub-nav": n(126),
-                            "components/collection-sub-nav": n(128),
-                            "components/rune-plate": n(131),
-                            "components/rune-inventory": n(134),
-                            "components/masteries-header": n(137),
-                            "components/mastery-tree": n(140),
-                            "components/mastery-node": n(143),
+                            application: n(292),
+                            home: n(293),
+                            runes: n(294),
+                            masteries: n(295),
+                            battlepass: n(296),
+                            store: n(297),
+                            collection: n(298),
+                            "collection/champions": n(299),
+                            "collection/spells": n(300),
+                            "collection/items": n(301),
+                            "collection/portraits": n(302),
+                            "components/jade-sub-nav": n(127),
+                            "components/collection-sub-nav": n(129),
+                            "components/rune-plate": n(132),
+                            "components/rune-inventory": n(135),
+                            "components/masteries-header": n(138),
+                            "components/mastery-tree": n(141),
+                            "components/mastery-node": n(144),
                             "components/jade-select": n(38),
-                            "components/jade-loadouts-edit": n(164),
-                            "components/rune-page-summary": n(161),
-                            "components/champion-select-center-container": n(167),
-                            "components/champions-pane": n(174),
-                            "components/skins-pane": n(177),
-                            "components/jade-timer-status": n(180),
-                            "components/spell-video-wrapper": n(195),
-                            "components/jade-skin-chroma-modal": n(189),
-                            "components/jade-skin-chroma-button": n(192),
-                            "components/jade-ward-skin-renderer": n(211),
-                            "components/jade-ward-skin-popup-button": n(214),
-                            "components/jade-ward-skin-select": n(217),
-                            "components/jade-ward-skin-popup": n(220),
-                            "components/demacia-summoner-spell-select": n(199),
-                            "components/demacia-flyout-selector-trigger-button": n(202),
-                            "components/demacia-summoner-spell-popup": n(205),
-                            "components/demacia-flyout-selector-popup-button": n(208),
-                            "components/jade-swap-button": n(228),
-                            "components/jade-swap-dialog": n(232),
-                            "components/jade-ban-showcase": n(235),
-                            "components/jade-progression-widget": n(238),
-                            "components/battlepass-chase-modal": n(241),
-                            "components/jade-drop-rates-modal": n(243),
-                            "components/view-abilities-pane": n(246),
-                            "components/jade-champion-card": n(249),
-                            "components/jade-champion-modal": n(252),
-                            "components/jade-home-voting-card": n(258),
-                            "components/voting-system": n(261),
-                            "components/jade-ftux-parchment-modal": n(264),
-                            "components/portrait-card": n(267),
-                            "components/jade-store-holo": n(270),
-                            "components/jade-default-template": n(280),
-                            "components/jade-pagination": n(283),
-                            "components/jade-cta": n(286),
-                            "components/jade-quantity-purchase-modal": n(276),
+                            "components/jade-loadouts-edit": n(165),
+                            "components/rune-page-summary": n(162),
+                            "components/champion-select-center-container": n(168),
+                            "components/champions-pane": n(175),
+                            "components/skins-pane": n(178),
+                            "components/jade-timer-status": n(181),
+                            "components/spell-video-wrapper": n(196),
+                            "components/jade-skin-chroma-modal": n(190),
+                            "components/jade-skin-chroma-button": n(193),
+                            "components/jade-ward-skin-renderer": n(212),
+                            "components/jade-ward-skin-popup-button": n(215),
+                            "components/jade-ward-skin-select": n(218),
+                            "components/jade-ward-skin-popup": n(221),
+                            "components/demacia-summoner-spell-select": n(200),
+                            "components/demacia-flyout-selector-trigger-button": n(203),
+                            "components/demacia-summoner-spell-popup": n(206),
+                            "components/demacia-flyout-selector-popup-button": n(209),
+                            "components/jade-swap-button": n(229),
+                            "components/jade-swap-dialog": n(233),
+                            "components/jade-ban-showcase": n(236),
+                            "components/jade-progression-widget": n(239),
+                            "components/battlepass-chase-modal": n(242),
+                            "components/jade-drop-rates-modal": n(244),
+                            "components/view-abilities-pane": n(247),
+                            "components/jade-champion-card": n(250),
+                            "components/jade-champion-modal": n(253),
+                            "components/jade-home-voting-card": n(259),
+                            "components/voting-system": n(262),
+                            "components/jade-ftux-parchment-modal": n(265),
+                            "components/portrait-card": n(268),
+                            "components/jade-store-holo": n(271),
+                            "components/jade-default-template": n(281),
+                            "components/jade-pagination": n(284),
+                            "components/jade-cta": n(287),
+                            "components/jade-quantity-purchase-modal": n(277),
                             "components/jade-emote-inventory": n(39),
                             "components/jade-emote-wheel": n(40),
                             "components/jade-emote-wheel-slot": n(41),
                             "components/jade-navigation-component": n(42),
-                            "components/item-build-tree": n(223),
-                            "components/item-tooltip": n(225),
-                            "components/purchase-modal": n(302),
-                            "components/purchase-modal-payment-options": n(303),
-                            "components/purchase-modal-prerequisites": n(304),
-                            "components/dialog-modal": n(305),
-                            "components/purchase-bundles-modal": n(306),
-                            "components/event-shop-fallback": n(307)
+                            "components/item-build-tree": n(224),
+                            "components/item-tooltip": n(226),
+                            "components/purchase-modal": n(303),
+                            "components/purchase-modal-payment-options": n(304),
+                            "components/purchase-modal-prerequisites": n(305),
+                            "components/dialog-modal": n(306),
+                            "components/purchase-bundles-modal": n(307),
+                            "components/event-shop-fallback": n(308)
                         }
                     };
                     a.default.SharedEmberComponents.EmberCollectionApi.registerToFactoryDefinition(l), e.setFactoryDefinition(o, l, {
@@ -1035,12 +1035,12 @@
                     }), e.setFactoryDefinition("rcp-fe-lol-jade-battlepass-reward-celebration", {
                         tra: s,
                         ComponentFactory: a.default.ComponentFactory,
-                        RewardCelebrationComponent: n(308).default
+                        RewardCelebrationComponent: n(309).default
                     }), e.setFactoryDefinition({
                         name: "JadeRpTopupModalComponent",
                         tra: s,
                         ComponentFactory: t,
-                        JadeRpTopupModalComponent: n(311)
+                        JadeRpTopupModalComponent: n(312)
                     })
                 }
                 createJadeHomeComponent() {
@@ -1058,71 +1058,71 @@
                 static registerToFactoryDefinition(e) {
                     const t = Object.assign({}, e.TEMPLATES || {}, {
                         "components/jade-select": n(38),
-                        "components/demacia-emotes-edit": n(314),
-                        "components/demacia-loadouts-edit": n(164),
-                        "components/champion-select-center-container": n(167),
-                        "components/champions-pane": n(174),
-                        "components/skins-pane": n(177),
-                        "components/jade-timer-status": n(180),
-                        "components/jade-ward-skin-renderer": n(211),
-                        "components/jade-ward-skin-popup-button": n(214),
-                        "components/jade-ward-skin-select": n(217),
-                        "components/jade-ward-skin-popup": n(220),
-                        "components/demacia-summoner-spell-select": n(199),
-                        "components/demacia-flyout-selector-trigger-button": n(202),
-                        "components/demacia-summoner-spell-popup": n(205),
-                        "components/demacia-flyout-selector-popup-button": n(208),
-                        "components/demacia-summoner-array": n(315),
-                        "components/demacia-summoner-object": n(316),
-                        "components/demacia-skin-chroma-modal": n(189),
-                        "components/demacia-skin-chroma-button": n(192),
-                        "components/demacia-swap-button": n(228),
-                        "components/demacia-swap-dialog": n(232),
-                        "components/demacia-ban-showcase": n(235),
-                        "components/demacia-progression-widget": n(238),
-                        "components/view-abilities-pane": n(246)
+                        "components/demacia-emotes-edit": n(315),
+                        "components/demacia-loadouts-edit": n(165),
+                        "components/champion-select-center-container": n(168),
+                        "components/champions-pane": n(175),
+                        "components/skins-pane": n(178),
+                        "components/jade-timer-status": n(181),
+                        "components/jade-ward-skin-renderer": n(212),
+                        "components/jade-ward-skin-popup-button": n(215),
+                        "components/jade-ward-skin-select": n(218),
+                        "components/jade-ward-skin-popup": n(221),
+                        "components/demacia-summoner-spell-select": n(200),
+                        "components/demacia-flyout-selector-trigger-button": n(203),
+                        "components/demacia-summoner-spell-popup": n(206),
+                        "components/demacia-flyout-selector-popup-button": n(209),
+                        "components/demacia-summoner-array": n(316),
+                        "components/demacia-summoner-object": n(317),
+                        "components/demacia-skin-chroma-modal": n(190),
+                        "components/demacia-skin-chroma-button": n(193),
+                        "components/demacia-swap-button": n(229),
+                        "components/demacia-swap-dialog": n(233),
+                        "components/demacia-ban-showcase": n(236),
+                        "components/demacia-progression-widget": n(239),
+                        "components/view-abilities-pane": n(247)
                     });
                     return Object.assign(e, {
                         JadeSelectComponent: n(44).default,
-                        DemaciaEmotesEditComponent: n(317),
-                        DemaciaLoadoutsEditComponent: n(162).default,
-                        MasteryTreeComponent: n(138).default,
-                        MasteryNodeComponent: n(141).default,
-                        MasteryPrereqBarComponent: n(144).default,
-                        MasteryTooltipContentComponent: n(153).default,
-                        MasteryPageSummaryComponent: n(156).default,
-                        RunePageSummaryComponent: n(159).default,
-                        TooltipComponent: n(147).default,
-                        DemaciaSpellTooltipContentComponent: n(150).default,
-                        ChampionSelectCenterContainerComponent: n(165).default,
-                        ChampionsPaneComponent: n(168).default,
-                        SkinsPaneComponent: n(175).default,
-                        DemaciaTimerStatusComponent: n(178).default,
-                        DemaciaSummonerArrayComponent: n(322).default,
-                        DemaciaSummonerObjectComponent: n(325).default,
-                        ViewAbilitiesPaneComponent: n(244).default,
-                        DemaciaSummonerSpellPopupComponent: n(203).default,
-                        DemaciaSummonerSpellSelectComponent: n(196).default,
-                        DemaciaFlyoutSelectorTriggerButtonComponent: n(200).default,
-                        DemaciaFlyoutSelectorPopupButtonComponent: n(206).default,
-                        DemaciaWardSkinRendererComponent: n(209).default,
-                        DemaciaWardSkinPopupButtonComponent: n(212).default,
-                        DemaciaWardSkinSelectComponent: n(215).default,
-                        DemaciaWardSkinPopupComponent: n(218).default,
-                        DemaciaSkinChromaModalComponent: n(187),
-                        DemaciaSkinChromaButtonComponent: n(190),
-                        DemaciaSwapButtonComponent: n(226),
-                        DemaciaSwapDialogComponent: n(229).default,
-                        DemaciaBanShowcaseComponent: n(233).default,
-                        DemaciaProgressionWidgetComponent: n(236).default,
-                        LoadoutsService: n(114).default,
+                        DemaciaEmotesEditComponent: n(318),
+                        DemaciaLoadoutsEditComponent: n(163).default,
+                        MasteryTreeComponent: n(139).default,
+                        MasteryNodeComponent: n(142).default,
+                        MasteryPrereqBarComponent: n(145).default,
+                        MasteryTooltipContentComponent: n(154).default,
+                        MasteryPageSummaryComponent: n(157).default,
+                        RunePageSummaryComponent: n(160).default,
+                        TooltipComponent: n(148).default,
+                        DemaciaSpellTooltipContentComponent: n(151).default,
+                        ChampionSelectCenterContainerComponent: n(166).default,
+                        ChampionsPaneComponent: n(169).default,
+                        SkinsPaneComponent: n(176).default,
+                        DemaciaTimerStatusComponent: n(179).default,
+                        DemaciaSummonerArrayComponent: n(323).default,
+                        DemaciaSummonerObjectComponent: n(326).default,
+                        ViewAbilitiesPaneComponent: n(245).default,
+                        DemaciaSummonerSpellPopupComponent: n(204).default,
+                        DemaciaSummonerSpellSelectComponent: n(197).default,
+                        DemaciaFlyoutSelectorTriggerButtonComponent: n(201).default,
+                        DemaciaFlyoutSelectorPopupButtonComponent: n(207).default,
+                        DemaciaWardSkinRendererComponent: n(210).default,
+                        DemaciaWardSkinPopupButtonComponent: n(213).default,
+                        DemaciaWardSkinSelectComponent: n(216).default,
+                        DemaciaWardSkinPopupComponent: n(219).default,
+                        DemaciaSkinChromaModalComponent: n(188),
+                        DemaciaSkinChromaButtonComponent: n(191),
+                        DemaciaSwapButtonComponent: n(227),
+                        DemaciaSwapDialogComponent: n(230).default,
+                        DemaciaBanShowcaseComponent: n(234).default,
+                        DemaciaProgressionWidgetComponent: n(237).default,
+                        LoadoutsService: n(115).default,
                         MasteryPagesService: n(99).default,
-                        RunePagesService: n(117).default,
-                        SummonersJourneyService: n(119).default,
-                        AndHelper: n(327).default,
-                        EqHelper: n(328).default,
-                        NotHelper: n(329).default,
-                        AddHelper: n(330).default,
+                        RunePagesService: n(118).default,
+                        SummonersJourneyService: n(120).default,
+                        AndHelper: n(328).default,
+                        EqHelper: n(329).default,
+                        NotHelper: n(330).default,
+                        AddHelper: n(331).default,
                         TEMPLATES: t
                     })
                 }
@@ -1402,7 +1402,8 @@
                     if (o) {
                         const e = s.pawApi.createPAWModal({
                             itemId: o,
-                            inventoryType: t
+                            inventoryType: t,
+                            isJadeStore: !0
                         }, "collections", null, null, n, l);
                         this.set("isPAWOpen", e)
                     }
@@ -2789,20 +2790,21 @@
                         const e = this.get("tra");
                         return e ? e.get("shoppefront_error_no_longer_available") : this.get("catalogItemErrorText")
                     })),
-                    _openPurchaseModal(e, t = !1) {
+                    _openPurchaseModal(e, t = !1, n = {}) {
                         const {
-                            modalItem: n,
-                            errorText: s
+                            modalItem: s,
+                            errorText: l
                         } = (0, a.buildPurchaseModalData)(e, {
                             ownedItemInstanceIds: this.get("lolInventoryService.ownedItemInstanceIds") || new Set,
                             ownedInventoryContent: this.get("lolInventoryService.ownedInventoryContent") || {},
                             currencyCount: this.get("lolInventoryService.currencyCount") || {},
                             shoppefrontId: this.get("shoppefrontService.shoppefrontId"),
-                            tra: this.get("tra")
+                            tra: this.get("tra"),
+                            videoPath: n.videoPath
                         });
                         this.setProperties({
-                            purchaseModalItem: n,
-                            catalogItemErrorText: s,
+                            purchaseModalItem: s,
+                            catalogItemErrorText: l,
                             showClassicExclusiveFlagInModal: t
                         })
                     },
@@ -2842,16 +2844,17 @@
                     ownedItemInstanceIds: n,
                     ownedInventoryContent: s,
                     shoppefrontId: a,
-                    tra: o
-                } = t, i = p(e, n), r = [e, ...i], c = e.isSkinWithBorderIcon && n.has(e.purchaseUnits?.[0]?.fulfillment?.itemId), m = _(h(r, c)), d = function(e, t) {
+                    tra: o,
+                    videoPath: i
+                } = t, r = p(e, n), c = [e, ...r], m = e.isSkinWithBorderIcon && n.has(e.purchaseUnits?.[0]?.fulfillment?.itemId), d = _(h(c, m)), g = function(e, t) {
                     const n = e.prerequisites?.some((e => e?.catalogEntry?.inventoryTypeId === l.CHAMPION_SKIN));
                     if (n) return !1;
                     const s = e.parentSkinId;
                     if (s) return !t[l.CHAMPION_SKIN]?.has(s);
                     return !1
-                }(e, s), g = u(e, s), f = d && !g;
-                let v = null;
-                g ? v = o.get("shoppefront_error_requires_champion") : d && (v = o.get("shoppefront_error_requires_skin"));
+                }(e, s), f = u(e, s), v = g && !f;
+                let b = null;
+                f ? b = o.get("shoppefront_error_requires_champion") : g && (b = o.get("shoppefront_error_requires_skin"));
                 return {
                     modalItem: {
                         itemId: e.itemId,
@@ -2862,15 +2865,19 @@
                         purchaseModalSplashPath: e.purchaseModalSplashPath,
                         isPurchasable: !0,
                         item: e,
-                        showDisclaimer: f,
+                        showDisclaimer: v,
                         isChroma: e.isChroma,
                         walletBalance: t.currencyCount || 0,
                         shoppefrontId: a,
-                        paymentOptions: m,
-                        prerequisites: i
+                        paymentOptions: d,
+                        prerequisites: r,
+                        videoPath: i || null
                     },
-                    errorText: v
+                    errorText: b
                 }
+            }, t.getMapAvailability = function(e, t) {
+                if ((e?.tags || e?.catalogItem?.tags || []).includes("jade_exclusive")) return t.get("cat_paw_jade_exclusive_flavor_text");
+                return null
             }, t.getPaymentOptions = h, t.getRequirementText = function(e, t) {
                 let n = u(e, t),
                     s = !1;
@@ -2890,9 +2897,14 @@
             }, t.getUnownedPrerequisiteCatalogEntries = p, t.hasUnsatisfiedPrerequisite = function(e) {
                 return e?.prerequisites?.some((e => "NOT_SATISFIED" === e.status && !e.catalogEntry)) || !1
             }, t.isItemOwned = function(e, t) {
-                const n = e?.purchaseUnits?.[0]?.fulfillment?.itemId;
-                if (!n) return !1;
-                return t.has(n)
+                const n = e?.purchaseUnits || [];
+                if (n.length > 1) {
+                    const e = n.map((e => e?.fulfillment?.itemId)).filter((e => !!e));
+                    return 0 !== e.length && e.every((e => t.has(e)))
+                }
+                const s = n[0]?.fulfillment?.itemId;
+                if (!s) return !1;
+                return t.has(s)
             }, t.isMissingRequiredChampion = u, t.sortPaymentOptionsByCurrency = _;
             var s, a = (s = n(1)) && s.__esModule ? s : {
                 default: s
@@ -3860,13 +3872,6 @@
                     checkboxes: ["showOwned"],
                     showCurrencies: ["lol_jade_ip"]
                 },
-                RUNE_PAGES: {
-                    showSearch: !1,
-                    dropdown: null,
-                    dropdownOptions: null,
-                    dropdownFilterField: null,
-                    checkboxes: []
-                },
                 PORTRAITS: {
                     dropdown: "sort",
                     dropdownOptions: [{
@@ -4149,33 +4154,6 @@
                     dropdownFilterField: null,
                     checkboxes: ["showOwned", "championOwned", "skinOwned", "classicExclusive", "availableForBE"]
                 },
-                CLASSIC_SKINS: {
-                    dropdown: "sort",
-                    dropdownOptions: [{
-                        id: "release-date-desc",
-                        traKey: "jade_store_sort_release_date",
-                        field: "index",
-                        asc: !1
-                    }, {
-                        id: "release-date-asc",
-                        traKey: "jade_store_sort_release_date",
-                        field: "index",
-                        asc: !0
-                    }, {
-                        id: "alpha-desc",
-                        traKey: "jade_store_sort_alphabetical",
-                        field: "name",
-                        asc: !1
-                    }, {
-                        id: "alpha-asc",
-                        traKey: "jade_store_sort_alphabetical",
-                        field: "name",
-                        asc: !0
-                    }],
-                    dropdownFilterField: null,
-                    checkboxes: ["showOwned", "championOwned"],
-                    showCurrencies: ["lol_jade_skin_token"]
-                },
                 SKINS_BUNDLES: {
                     dropdown: "sort",
                     dropdownOptions: [{
@@ -4353,11 +4331,10 @@
                     n.clear(), s.forEach(((s, l) => {
                         const i = e.getMasteryPage(s),
                             r = t.get(`MASTERY_PAGE_${s}_NAME`),
-                            c = o.getDefaultPageName(s),
-                            m = r && r.data && r.data.name ? r.data.name : c;
+                            c = o.resolvePageName(r, s);
                         n.pushObject({
                             id: s,
-                            name: m,
+                            name: c,
                             current: s === a,
                             masteries: i,
                             displayNumber: l + 1,
@@ -4860,6 +4837,15 @@
                     return this.get("tra").formatString("jade_mastery_page_default_name", {
                         pageNumber: e
                     })
+                },
+                resolvePageName(e, t) {
+                    const n = e && e.data;
+                    if (n && n.nameKey) {
+                        const e = this.get("tra"),
+                            t = e && e.get(n.nameKey);
+                        if (t) return t
+                    }
+                    return n && n.name ? n.name : this.getDefaultPageName(t)
                 }
             });
             t.default = a
@@ -4891,11 +4877,8 @@
                     INVENTORY_TYPE_IDS: b
                 } = a.ShoppefrontComponents,
                 y = [{
-                    flag: "showOwnedOnly",
-                    predicate: e => e.isOwned
-                }, {
                     flag: "championOwned",
-                    predicate: e => !e.hasRequirements
+                    predicate: e => !e._prereqKey
                 }, {
                     flag: "onSale",
                     predicate: e => e.hasDiscount
@@ -4918,7 +4901,6 @@
                 activeCategory: v.FEATURED.ID,
                 activeSubcategory: null,
                 searchQuery: "",
-                showOwnedOnly: !1,
                 showOwned: !1,
                 championOwned: !1,
                 classicExclusive: !1,
@@ -4948,21 +4930,22 @@
                         [n]: s
                     })
                 },
-                _openPurchaseModal(e, t = !1) {
+                _openPurchaseModal(e, t = !1, n = {}) {
                     this._openPurchaseCatalogItem = e;
                     const {
-                        modalItem: n,
-                        errorText: s
+                        modalItem: s,
+                        errorText: a
                     } = (0, o.buildPurchaseModalData)(e, {
                         ownedItemInstanceIds: this.get("lolInventoryService.ownedItemInstanceIds") || new Set,
                         ownedInventoryContent: this._ownedInventoryContentWithJadeChampions(),
                         currencyCount: this.get("lolInventoryService.currencyCount") || {},
                         shoppefrontId: this.get("shoppefrontService.shoppefrontId"),
-                        tra: this.get("tra")
+                        tra: this.get("tra"),
+                        videoPath: n.videoPath
                     });
                     this.setProperties({
-                        purchaseModalItem: n,
-                        catalogItemErrorText: s,
+                        purchaseModalItem: s,
+                        catalogItemErrorText: a,
                         showClassicExclusiveFlagInModal: t
                     })
                 },
@@ -5018,13 +5001,13 @@
                 _teardownSortDropdownHandler() {
                     this._sortDropdownCloseHandler && (document.removeEventListener("mousedown", this._sortDropdownCloseHandler, !0), this._sortDropdownCloseHandler = null)
                 },
-                enrichedItems: a.Ember.computed("storeItems.[]", "_walletBalance", (function() {
+                enrichedItems: a.Ember.computed("storeItems.[]", "_walletBalance", "tra.metadata.locale.id", (function() {
                     let e = this.get("storeItems") || [];
                     const t = this.get("_walletBalance") || {},
                         n = this.get("tra");
                     e = e.map((e => (0, l.enrichItemWithWalletStatus)(e, t, n)));
                     const s = Date.now();
-                    return e = e.map((e => (0, c.enrichItemWithLimitedBadge)(e, s))), e
+                    return e = e.map((e => (0, c.enrichItemWithLimitedBadge)(e, s, n))), e
                 })),
                 marqueeItems: a.Ember.computed("enrichedItems.[]", (function() {
                     return (this.get("enrichedItems") || []).filter((e => (e.shopCategories || []).includes(p.CATEGORY_ID.MARQUEE)))
@@ -5073,11 +5056,6 @@
                     const e = this.get("activeSubcategory"),
                         t = this.get("activeCategory");
                     return p.SUBCATEGORY_TOOLBAR[e] || p.SUBCATEGORY_TOOLBAR[t] || {}
-                })),
-                hasToolbarEntry: a.Ember.computed("activeSubcategory", "activeCategory", (function() {
-                    const e = this.get("activeSubcategory"),
-                        t = this.get("activeCategory");
-                    return !(!p.SUBCATEGORY_TOOLBAR[e] && !p.SUBCATEGORY_TOOLBAR[t])
                 })),
                 toolbarShowSearch: a.Ember.computed("toolbarConfig", (function() {
                     return !1 !== this.get("toolbarConfig").showSearch
@@ -5215,7 +5193,7 @@
                     }))
                 })),
                 isStoreLoaded: a.Ember.computed.gt("storeItems.length", 0),
-                filteredItems: a.Ember.computed("enrichedItems.[]", "activeCategory", "activeSubcategory", "searchQuery", "_deepLinkItemIds", "showOwnedOnly", "showOwned", "championOwned", "onSale", "skinOwned", "availableForBE", "limitedAvailability", "activeSort", "activeDropdownFilter", "toolbarConfig", (function() {
+                filteredItems: a.Ember.computed("enrichedItems.[]", "activeCategory", "activeSubcategory", "searchQuery", "_deepLinkItemIds", "showOwned", "championOwned", "onSale", "skinOwned", "availableForBE", "limitedAvailability", "activeSort", "activeDropdownFilter", "toolbarConfig", (function() {
                     let e = this.get("enrichedItems") || [];
                     const t = this.get("activeCategory"),
                         n = this.get("activeSubcategory"),
@@ -5274,6 +5252,11 @@
                 _clearDeepLinkFilter() {
                     this.get("_deepLinkItemIds") && this.set("_deepLinkItemIds", null)
                 },
+                _resetFilters() {
+                    Object.keys(p.CHECKBOX_FILTERS).forEach((e => {
+                        this.set(p.CHECKBOX_FILTERS[e].property, !1)
+                    })), this.set("activeDropdownFilter", p.DROPDOWN_FILTER_ALL)
+                },
                 _resolveDeepLinkCategory(e) {
                     if (!e) return null;
                     const t = String(e).toUpperCase();
@@ -5295,13 +5278,15 @@
                             quantityPurchaseItem: e,
                             isQuantityPurchaseModalOpen: !0,
                             showClassicExclusiveFlagInModal: !0
-                        }) : e.hasFiatPrice || t.inventoryTypeId === b.EVENT_PASS ? this.setProperties({
+                        }) : e.hasFiatPrice || t.inventoryTypeId === b.EVENT_PASS || e.isBundle ? this.setProperties({
                             fiatPurchaseItem: e,
                             isFiatPurchaseModalOpen: !0
-                        }) : this._openPurchaseModal(t, n))
+                        }) : this._openPurchaseModal(t, n, {
+                            videoPath: e.holoFoilPath
+                        }))
                     },
                     selectCategory(e) {
-                        if (d.default.playSound("sfx-ui", `${u.JADE_AUDIO_PATH}sfx-ui-jade-buttonpress-1.ogg`), this._clearDeepLinkFilter(), this.set("searchQuery", ""), this.set("activeCategory", e), k.has(e)) {
+                        if (d.default.playSound("sfx-ui", `${u.JADE_AUDIO_PATH}sfx-ui-jade-buttonpress-1.ogg`), this._clearDeepLinkFilter(), this.set("searchQuery", ""), this._resetFilters(), this.set("activeCategory", e), k.has(e)) {
                             const t = S[e] || [];
                             this.set("activeSubcategory", t[0] || null)
                         } else this.set("activeSubcategory", null);
@@ -5320,12 +5305,6 @@
                     },
                     updateSearch(e) {
                         this._clearDeepLinkFilter(), this.set("searchQuery", e)
-                    },
-                    toggleOwnedFilter() {
-                        this.set("showOwnedOnly", !0)
-                    },
-                    clearOwnedFilter() {
-                        this.set("showOwnedOnly", !1)
                     },
                     toggleSortDirection() {
                         const e = this.get("activeSort"),
@@ -5426,7 +5405,14 @@
                 } catch (n) {
                     return `${(e/100).toFixed(2)} ${t}`
                 }
-            }, t.getAllPrices = s, t.getDiscountInfo = function(e) {
+            }, t.getAllPrices = s, t.getBundleTotalCost = function(e, t) {
+                let n = null;
+                return (e?.purchaseUnits || []).forEach((e => {
+                    (e?.paymentOptions?.[0]?.payments || []).forEach((e => {
+                        null != t && e.name !== t || null == e.finalDelta || (n = (n || 0) + Math.abs(e.finalDelta))
+                    }))
+                })), n
+            }, t.getDiscountInfo = function(e) {
                 const t = e.filter((e => e.isOnSale)),
                     n = t.length > 0,
                     s = n ? Math.max(...t.map((e => e.discountPercent))) : 0,
@@ -5504,35 +5490,35 @@
                     skuByItemId: a,
                     sharedPricesBySku: r,
                     fiatMap: d,
-                    currenciesByName: E,
-                    ownedItemInstanceIds: x,
-                    ownedInventoryContent: S,
-                    classicExclusiveChampionSkinItemIds: k,
-                    runeInventoryCounts: P,
-                    holoFoilByContentId: I,
-                    tra: C
-                } = n, w = (0, l.getItemCost)(e), T = a.get(e.id), A = T ? T.toUpperCase() : null, R = A ? d[A] : null;
-                if (null == w && !A) return null;
-                const M = (0, l.getPricesWithIcons)(e, E),
-                    O = M.length > 0 ? M : r.get(T) || [],
-                    D = O.find((e => e.currency !== p)),
-                    L = D?.currency ?? O[0]?.currency ?? (0, l.getItemCurrency)(e),
-                    j = E[L],
-                    N = D?.cost ?? w ?? O[0]?.cost ?? null,
+                    currenciesByName: h,
+                    ownedItemInstanceIds: S,
+                    ownedInventoryContent: k,
+                    classicExclusiveChampionSkinItemIds: P,
+                    runeInventoryCounts: I,
+                    holoFoilByContentId: C,
+                    tra: w
+                } = n, T = (0, l.getItemCost)(e), A = a.get(e.id), R = A ? A.toUpperCase() : null, M = R ? d[R] : null;
+                if (null == T && !R) return null;
+                const O = (0, l.getPricesWithIcons)(e, h),
+                    D = O.length > 0 ? O : r.get(A) || [],
+                    L = D.find((e => e.currency !== p)),
+                    j = L?.currency ?? D[0]?.currency ?? (0, l.getItemCurrency)(e),
+                    N = h[j],
+                    B = L?.cost ?? T ?? D[0]?.cost ?? null,
                     U = [...s.get(e.id) || []],
-                    B = U.includes(u.PORTRAITS?.ID),
-                    F = e.overrideTileSize || (B ? "tall-tile" : null),
-                    H = e.purchaseUnits?.[0]?.fulfillment,
-                    V = H?.itemId || H?.itemInstanceId || null,
-                    q = B && I && V && I.get(V) || "",
-                    Y = !!q,
-                    G = (0, o.getRequirementText)(e, S),
-                    W = v.has(e.inventoryTypeId),
-                    K = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_PAGE,
-                    J = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE,
-                    $ = W || K ? function(e, t, n = {}) {
+                    F = U.includes(u.PORTRAITS?.ID),
+                    H = e.overrideTileSize || (F ? "tall-tile" : null),
+                    V = e.purchaseUnits?.[0]?.fulfillment,
+                    q = V?.itemId || V?.itemInstanceId || null,
+                    Y = F && C && q && C.get(q) || "",
+                    G = !!Y,
+                    W = (0, o.getRequirementText)(e, k),
+                    K = y.has(e.inventoryTypeId),
+                    J = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_PAGE,
+                    $ = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE,
+                    X = K || J ? function(e, t, n = {}) {
                         let s = 0;
-                        const a = h[e.inventoryTypeId];
+                        const a = _[e.inventoryTypeId];
                         if (t) {
                             const e = n[a] || {};
                             s = Object.values(e).reduce(((e, t) => e + (t || 0)), 0) + m.FREE_RUNE_PAGES
@@ -5540,84 +5526,89 @@
                             s = (n[a] || {})[e.itemId] || 0
                         }
                         return s
-                    }(e, K, P) : 0,
-                    X = function(e, t, n, s) {
+                    }(e, J, I) : 0,
+                    z = function(e, t, n, s) {
                         const a = e && e.purchaseUnits && e.purchaseUnits[0] && e.purchaseUnits[0].fulfillment,
                             l = a && "number" == typeof a.maxQuantity ? a.maxQuantity : 0;
                         if (l > 0) return l;
-                        if (s) return f;
-                        if (t) return n ? g : _;
+                        if (s) return b;
+                        if (t) return n ? f : v;
                         return
-                    }(e, W, J, K),
-                    z = b.has(e.inventoryTypeId),
-                    Q = $ === X,
-                    Z = (0, o.isItemOwned)(e, x) || z && Q,
-                    ee = !Z && !(0, o.hasUnsatisfiedPrerequisite)(e),
+                    }(e, K, $, J),
+                    Q = E.has(e.inventoryTypeId),
+                    Z = X === z,
+                    ee = (0, o.isItemOwned)(e, S) || Q && Z,
+                    te = !ee && !(0, o.hasUnsatisfiedPrerequisite)(e),
                     {
-                        hasDiscount: te,
-                        discountPercent: ne,
-                        discountLabel: se
-                    } = (0, l.getDiscountInfo)(O),
-                    ae = (0, i.getDisplayType)(e, C),
-                    le = !!R,
-                    oe = R ? (0, l.formatFiatPrice)(R.realAmountCents, R.realCurrencyCode) : null;
+                        hasDiscount: ne,
+                        discountPercent: se,
+                        discountLabel: ae
+                    } = (0, l.getDiscountInfo)(D),
+                    le = (0, i.getDisplayType)(e, w),
+                    oe = !!M,
+                    ie = M ? (0, l.formatFiatPrice)(M.realAmountCents, M.realCurrencyCode) : null,
+                    re = (e.purchaseUnits || []).length > 1,
+                    ce = re ? (0, l.getBundleTotalCost)(e, j) : null,
+                    me = re ? e.name || e.traTitle || e.itemName : null,
+                    de = null != ce ? ce : B;
                 return {
                     id: e.id,
-                    name: e.traTitle || e.itemName,
-                    formattedName: e.formattedName || e.traTitle || e.itemName,
+                    name: me || e.traTitle || e.itemName,
+                    formattedName: me || e.formattedName || e.traTitle || e.itemName,
                     description: e.itemDescription,
                     index: t,
-                    cost: N,
-                    originalCost: D?.originalCost ?? O[0]?.originalCost ?? N,
-                    currency: L,
-                    currencyIconPath: j ? j.iconPath : null,
-                    prices: O.length > 1 ? O : null,
-                    hasMultiplePrices: O.length > 1,
-                    hasDiscount: te,
-                    discountPercent: ne,
-                    discountLabel: se,
-                    salePrices: te ? O : null,
-                    iconUrl: e.tilePath || e.splashPath || null,
-                    tileSize: F,
-                    tileSizeClass: F ? "jade-tile-" + F : "",
-                    holoFoilPath: q,
-                    hasHoloFoil: Y,
-                    isPortrait: B,
-                    isOwned: Z,
-                    isPurchasable: ee,
-                    _prereqKey: G,
+                    cost: de,
+                    originalCost: null != ce ? ce : L?.originalCost ?? D[0]?.originalCost ?? B,
+                    currency: j,
+                    currencyIconPath: N ? N.iconPath : null,
+                    prices: D.length > 1 ? D : null,
+                    hasMultiplePrices: D.length > 1,
+                    hasDiscount: ne,
+                    discountPercent: se,
+                    discountLabel: ae,
+                    salePrices: ne ? D : null,
+                    iconUrl: g(e.id) || e.tilePath || e.splashPath || null,
+                    tileSize: H,
+                    tileSizeClass: H ? "jade-tile-" + H : "",
+                    holoFoilPath: Y,
+                    hasHoloFoil: G,
+                    isPortrait: F,
+                    isOwned: ee,
+                    isPurchasable: te,
+                    _prereqKey: W,
                     catalogItem: e,
                     shopCategories: U,
-                    contentType: ae,
-                    isQuantityPurchasable: z,
-                    isRune: W,
-                    isRunePage: K,
-                    isQuintessence: J,
-                    maxOwnable: X,
-                    quantityPurchasableItemCount: $,
-                    isMaxQuantityOwned: Q,
+                    contentType: le,
+                    isBundle: re,
+                    isQuantityPurchasable: Q,
+                    isRune: K,
+                    isRunePage: J,
+                    isQuintessence: $,
+                    maxOwnable: z,
+                    quantityPurchasableItemCount: X,
+                    isMaxQuantityOwned: Z,
                     runeType: e.inventoryTypeId || null,
-                    showClassicExclusiveFlag: y(e, k),
+                    showClassicExclusiveFlag: x(e, P),
                     needsSkinPrereq: !(!e.isChroma || !(e.prerequisites || []).some((e => "NOT_SATISFIED" === e.status))),
-                    hasBlueEssencePrice: O.some((e => e.currency === p)),
-                    costBE: (O.find((e => e.currency === p)) || {}).cost || 0,
-                    hasFiatPrice: le,
-                    fiatPriceFormatted: oe,
-                    fiatPricePointId: R ? R.id : null,
-                    fiatAmountCents: R ? R.realAmountCents : null,
-                    fiatCurrencyCode: R ? R.realCurrencyCode : null
+                    hasBlueEssencePrice: D.some((e => e.currency === p)),
+                    costBE: (D.find((e => e.currency === p)) || {}).cost || 0,
+                    hasFiatPrice: oe,
+                    fiatPriceFormatted: ie,
+                    fiatPricePointId: M ? M.id : null,
+                    fiatAmountCents: M ? M.realAmountCents : null,
+                    fiatCurrencyCode: M ? M.realCurrencyCode : null
                 }
-            }, t.enrichItemWithLimitedBadge = function(e, t) {
-                const n = e.catalogItem && e.catalogItem.endTime;
-                if (!n) return e;
-                const s = new Date(n).getTime() - t;
-                if (s <= 0 || s >= r.MS_PER_YEAR) return e;
+            }, t.enrichItemWithLimitedBadge = function(e, t, n) {
+                const s = e.catalogItem && e.catalogItem.endTime;
+                if (!s) return e;
+                const a = new Date(s).getTime() - t;
+                if (a <= 0 || a >= r.MS_PER_YEAR) return e;
                 return Object.assign({}, e, {
                     hasLimitedBadge: !0,
-                    limitedBadgeText: (0, r.formatDuration)(s),
-                    limitedBadgeUrgent: s < r.MS_PER_WEEK
+                    limitedBadgeText: (0, r.formatDuration)(a, n),
+                    limitedBadgeUrgent: a < r.MS_PER_WEEK
                 })
-            }, t.sortStoreItems = function(e, t) {
+            }, t.getStoreItemImageOverride = g, t.sortStoreItems = function(e, t) {
                 return e.slice().sort(((e, n) => {
                     let s;
                     return s = "name" === t.field ? (n.name || "").localeCompare(e.name || "") : "cost" === t.field || "costBE" === t.field ? (n[t.field] || 0) - (e[t.field] || 0) : (n.index || 0) - (e.index || 0), t.asc ? s : -s
@@ -5635,11 +5626,26 @@
             const {
                 INVENTORY_TYPE_IDS: d,
                 CATEGORIES: u
-            } = a.default.ShoppefrontComponents, p = "lol_blue_essence", h = Object.fromEntries(Object.entries(c.RUNE_INVENTORY_TYPE_IDS).map((e => [e[1], e[0]]))), g = 3, _ = 9, f = 20, v = new Set([c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_MARK, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_SEAL, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_GLYPH, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE]), b = new Set(Object.values(c.RUNE_INVENTORY_TYPE_IDS));
+            } = a.default.ShoppefrontComponents, p = "lol_blue_essence", h = {
+                "365ac3ea-1510-432a-91c0-51099c65b008": "/fe/lol-jade/images/store/welcome_bundle_champions.png",
+                "6ca58eed-a59e-4517-95c1-d26748a1dbe9": "/fe/lol-jade/images/store/classic_welcome_bundle.png",
+                "772d6059-0987-46e0-87ac-0fda95af6148": "/fe/lol-jade/images/store/legendary_welcome_bundle.png",
+                "13a93ab0-da9c-421b-b39c-38908209af81": "/fe/lol-jade/images/store/classic_pass_image.png"
+            };
 
-            function y(e, t) {
+            function g(e) {
+                return h[e] || null
+            }
+            const _ = Object.fromEntries(Object.entries(c.RUNE_INVENTORY_TYPE_IDS).map((e => [e[1], e[0]]))),
+                f = 3,
+                v = 9,
+                b = 20,
+                y = new Set([c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_MARK, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_SEAL, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_GLYPH, c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE]),
+                E = new Set(Object.values(c.RUNE_INVENTORY_TYPE_IDS));
+
+            function x(e, t) {
                 const n = e.inventoryTypeId;
-                return !!b.has(n) || n === d.CHAMPION_SKIN && (!!t && t.has(e.itemId))
+                return !!E.has(n) || n === d.CHAMPION_SKIN && (!!t && t.has(e.itemId))
             }
         }, (e, t, n) => {
             "use strict";
@@ -5648,6 +5654,9 @@
             }), t.EVENT_PASS_INVENTORY_TYPE_ID = t.CHAMPION_INVENTORY_TYPE_ID = void 0, t.getDisplayType = function(e, t) {
                 const n = e.isChroma ? i : o[e.inventoryTypeId] || r;
                 return t.get(n)
+            }, t.getInventoryTypeLabel = function(e, t) {
+                const n = o[e];
+                return n ? t.get(n) : null
             }, t.getLocalTypeImage = function(e) {
                 if (!e) return null;
                 const t = c[e.inventoryTypeId];
@@ -5702,26 +5711,35 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.MS_PER_YEAR = t.MS_PER_WEEK = t.MS_PER_MINUTE = t.MS_PER_HOUR = t.MS_PER_DAY = void 0, t.formatDuration = function(e) {
+            }), t.MS_PER_YEAR = t.MS_PER_WEEK = t.MS_PER_MINUTE = t.MS_PER_HOUR = t.MS_PER_DAY = void 0, t.formatDuration = function(e, t) {
                 e = Math.max(e, 0);
-                const t = Math.floor(e / l),
-                    o = Math.floor(e / a) % 7,
-                    i = Math.floor(e / s) % 24,
-                    r = Math.ceil(e / n) % 60,
-                    c = [{
-                        value: t,
-                        unit: "w"
-                    }, {
-                        value: o,
-                        unit: "d"
-                    }, {
-                        value: i,
-                        unit: "h"
-                    }, {
+                const r = Math.floor(e / l),
+                    c = Math.floor(e / a) % 7,
+                    m = Math.floor(e / s) % 24,
+                    d = Math.ceil(e / n) % 60,
+                    u = [{
                         value: r,
-                        unit: "m"
-                    }].find((e => e.value > 0));
-                return c ? c.value + c.unit : "0m"
+                        unit: "week"
+                    }, {
+                        value: c,
+                        unit: "day"
+                    }, {
+                        value: m,
+                        unit: "hour"
+                    }, {
+                        value: d,
+                        unit: "minute"
+                    }].find((e => e.value > 0)) || {
+                        value: 0,
+                        unit: "minute"
+                    };
+                if (t && t.formatString) {
+                    const e = o[u.unit];
+                    return t.formatString(e.key, {
+                        [e.param]: u.value
+                    })
+                }
+                return u.value + i[u.unit]
             };
             const n = 6e4;
             t.MS_PER_MINUTE = n;
@@ -5731,7 +5749,31 @@
             t.MS_PER_DAY = a;
             const l = 6048e5;
             t.MS_PER_WEEK = l;
-            t.MS_PER_YEAR = 31556952e3
+            t.MS_PER_YEAR = 31556952e3;
+            const o = {
+                    week: {
+                        key: "jade_store_time_abbreviation_week",
+                        param: "weeks"
+                    },
+                    day: {
+                        key: "jade_store_time_abbreviation_day",
+                        param: "days"
+                    },
+                    hour: {
+                        key: "jade_store_time_abbreviation_hour",
+                        param: "hours"
+                    },
+                    minute: {
+                        key: "jade_store_time_abbreviation_minute",
+                        param: "minutes"
+                    }
+                },
+                i = {
+                    week: "w",
+                    day: "d",
+                    hour: "h",
+                    minute: "m"
+                }
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -5766,16 +5808,18 @@
             var s = n(1),
                 a = n(101),
                 l = n(82),
-                o = n(61),
-                i = n(107),
-                r = n(103),
-                c = n(84);
-            const m = "chase:",
-                d = "sku:",
-                u = "lol_jade_skin_token",
-                p = ["lol_jade_random_champ", "lol_jade_random_rune", "lol_jade_random_skin_1350", "lol_jade_random_skin_1350orless", "lol_jade_random_ward"],
-                h = "client.xp.jade.battlepass.drop_autospend",
-                g = [{
+                o = n(107),
+                i = n(61),
+                r = n(108),
+                c = n(103),
+                m = n(84),
+                d = n(102);
+            const u = "chase:",
+                p = "sku:",
+                h = "lol_jade_skin_token",
+                g = ["lol_jade_random_champ", "lol_jade_random_rune", "lol_jade_random_skin_1350", "lol_jade_random_skin_1350orless", "lol_jade_random_ward"],
+                _ = "client.xp.jade.battlepass.drop_autospend",
+                f = [{
                     number: 1,
                     categoryId: "BP_TIER_1",
                     requiredMilestone: 0
@@ -5801,37 +5845,43 @@
                     requiredMilestone: 5
                 }];
 
-            function _(e) {
+            function v(e) {
                 return e?.purchaseUnits?.[0]?.fulfillment?.dropTableId || null
             }
 
-            function f(e, t, n) {
-                const s = t && t.nameTraKey;
-                return s && n && n.exists && n.exists(s) ? n.get(s) : e && e.name || ""
+            function b(e, t, n, s) {
+                const a = t && t.nameTraKey;
+                if (a && n && n.exists && n.exists(a)) return n.get(a);
+                const l = e && e.name || "";
+                return function(e, t) {
+                    if (!e || !t) return null;
+                    const n = (Array.isArray(t) ? t : Object.values(t)).find((t => t.lolCurrencyId === e));
+                    return n && (n.title || n.name) || null
+                }(l, s) || l
             }
 
-            function v(e, t, n, s, a, l) {
-                const o = e.nodes || {},
-                    i = e.nodeHierarchy || {},
-                    r = e.nodeTraKeys || {},
-                    c = o[t] || {},
-                    m = l.concat(t),
-                    d = (i[t] && i[t].edges || []).filter((e => -1 === m.indexOf(e.targetNodeId))).map((t => v(e, t.targetNodeId, t.odds, s, a, m)));
-                let u = 1;
-                return "number" == typeof n && (u = s ? n : n / 100), {
+            function y(e, t, n, s, a, l, o) {
+                const i = e.nodes || {},
+                    r = e.nodeHierarchy || {},
+                    c = e.nodeTraKeys || {},
+                    m = i[t] || {},
+                    d = l.concat(t),
+                    u = (r[t] && r[t].edges || []).filter((e => -1 === d.indexOf(e.targetNodeId))).map((t => y(e, t.targetNodeId, t.odds, s, a, d, o)));
+                let p = 1;
+                return "number" == typeof n && (p = s ? n : n / 100), {
                     lootId: t,
-                    label: f(c, r[t], a),
-                    dropRate: u,
-                    quantity: c.rewardQuantity || 1,
-                    displayPriority: c.displayPriority || 0,
-                    children: d
+                    label: b(m, c[t], a, o),
+                    dropRate: p,
+                    quantity: m.rewardQuantity || 1,
+                    displayPriority: m.displayPriority || 0,
+                    children: u
                 }
             }
 
-            function b(e, t) {
+            function E(e, t, n) {
                 if (!e || !e.rootNodeId) return null;
-                const n = e.nodeHierarchy || {},
-                    s = function(e) {
+                const s = e.nodeHierarchy || {},
+                    a = function(e) {
                         const t = e.nodeHierarchy || {};
                         let n = 0;
                         return Object.keys(t).forEach((e => {
@@ -5842,12 +5892,12 @@
                     }(e);
                 return {
                     guaranteedToContain: [],
-                    chanceToContain: (n[e.rootNodeId] && n[e.rootNodeId].edges || []).map((n => v(e, n.targetNodeId, n.odds, s, t, [e.rootNodeId]))),
+                    chanceToContain: (s[e.rootNodeId] && s[e.rootNodeId].edges || []).map((s => y(e, s.targetNodeId, s.odds, a, t, [e.rootNodeId], n))),
                     checksOwnership: !1,
                     hasPityRules: !1
                 }
             }
-            var y = s.Ember.Controller.extend(l.PurchaseModalMixin, {
+            var x = s.Ember.Controller.extend(l.PurchaseModalMixin, o.KrPurchaseConfirmMixin, {
                 gameDataMapperService: s.Ember.inject.service("game-data-mapper"),
                 catalogItemEnricher: s.Ember.inject.service("shoppefront-catalog-item-enricher"),
                 _eventDataLoaded: !1,
@@ -5867,7 +5917,7 @@
                     const e = this.get("eventHubService.info.startDate") || this.get("eventHubService.eventDetailsData.startDate");
                     if (!e) return null;
                     const t = new Date(e);
-                    return isNaN(t.getTime()) || t <= new Date ? null : (0, o.formatLocalizedDate)(t, this.get("tra.metadata.locale.id"))
+                    return isNaN(t.getTime()) || t <= new Date ? null : (0, i.formatLocalizedDate)(t, this.get("tra.metadata.locale.id"))
                 })),
                 emptyStateText: s.Ember.computed("passReturnDate", "tra", (function() {
                     const e = this.get("tra"),
@@ -5899,10 +5949,10 @@
                 passUpgraded: s.Ember.computed("eventHubService.bundles.[]", "lolInventoryService.ownedInventoryContent", "lolInventoryService.ownedItemInstanceIds", "_eventPassCatalogEntry", (function() {
                     const e = this.get("_eventPassCatalogEntry"),
                         t = this.get("lolInventoryService.ownedItemInstanceIds");
-                    if (e && (0, r.isOwnedByInventory)(e, t)) return !0;
+                    if (e && (0, c.isOwnedByInventory)(e, t)) return !0;
                     const n = this.get("eventHubService.bundles") || [],
                         s = this.get("lolInventoryService.ownedInventoryContent"),
-                        a = s?.[r.EVENT_PASS_INVENTORY_TYPE_ID];
+                        a = s?.[c.EVENT_PASS_INVENTORY_TYPE_ID];
                     return !(!a || !n.length) && n.some((e => (e.bundledItems || []).some((e => "EVENT_PASS" === e.inventoryType && a.has(e.itemId)))))
                 })),
                 showUpgradeModal: !1,
@@ -5918,7 +5968,7 @@
                             Object.keys(e).forEach((n => {
                                 const s = e[n]?.tags || [];
                                 for (const e of s)
-                                    if (e.startsWith(m)) {
+                                    if (e.startsWith(u)) {
                                         t.set(n, e.slice(6));
                                         break
                                     }
@@ -5955,7 +6005,7 @@
                 tokenIconPath: s.Ember.computed("_primaryCurrency", "gameDataMapperService.gameDataCurrencies", (function() {
                     const e = this.get("_primaryCurrency"),
                         t = this.get("gameDataMapperService.gameDataCurrencies");
-                    return (0, o.getCurrencyIconPath)(e, t)
+                    return (0, i.getCurrencyIconPath)(e, t)
                 })),
                 lockedTokenCount: s.Ember.computed("eventHubService.unclaimedRewards", "eventHubService.info", (function() {
                     const e = this.get("eventHubService.unclaimedRewards"),
@@ -5966,11 +6016,11 @@
                 showTokenBank: s.Ember.computed("passUpgraded", (function() {
                     return !this.get("passUpgraded")
                 })),
-                skinTokenBalance: s.Ember.computed(`lolInventoryService.currencyCount.${u}`, (function() {
-                    return this.get(`lolInventoryService.currencyCount.${u}`) || 0
+                skinTokenBalance: s.Ember.computed(`lolInventoryService.currencyCount.${h}`, (function() {
+                    return this.get(`lolInventoryService.currencyCount.${h}`) || 0
                 })),
                 skinTokenIconPath: s.Ember.computed("gameDataMapperService.gameDataCurrencies", (function() {
-                    return (0, o.getCurrencyIconPath)(u, this.get("gameDataMapperService.gameDataCurrencies"))
+                    return (0, i.getCurrencyIconPath)(h, this.get("gameDataMapperService.gameDataCurrencies"))
                 })),
                 coinsTooltipCount: s.Ember.computed("tokenBalance", "tra", (function() {
                     return this.get("tra").formatString("battlepass_currency_coins_tooltip_count", {
@@ -6018,12 +6068,12 @@
                     s.Ember.run.scheduleOnce("afterRender", this, this._maybeSpendAllRedeemables)
                 })),
                 _maybeSpendAllRedeemables() {
-                    this.isDestroying || this.isDestroyed || !this._redeemableState || p.forEach((e => {
+                    this.isDestroying || this.isDestroyed || !this._redeemableState || g.forEach((e => {
                         this._maybeSpendRedeemable(e)
                     }))
                 },
                 _resumeOtherRedeemables(e) {
-                    this.isDestroying || this.isDestroyed || !this._redeemableState || p.forEach((t => {
+                    this.isDestroying || this.isDestroyed || !this._redeemableState || g.forEach((t => {
                         t !== e && this._maybeSpendRedeemable(t)
                     }))
                 },
@@ -6038,37 +6088,37 @@
                     const l = this._resolveDropCatalogItem(e);
                     if (!l) return void s.logger.warning(`[Battlepass] No drop item found for ${e} despite balance ${n}.`);
                     const o = (0, a.getItemCost)(l) || 1,
-                        r = Math.floor(n / o);
-                    if (r < 1) return;
+                        i = Math.floor(n / o);
+                    if (i < 1) return;
                     t.autoSpending = !0;
                     const c = this.get("tra");
-                    s.datadogRum.startOperation(h, {
+                    s.datadogRum.startOperation(_, {
                         currency: e,
-                        quantity: r
-                    }), (0, i.executeBulkPurchase)({
+                        quantity: i
+                    }), (0, r.executeBulkPurchase)({
                         catalogItem: l,
-                        quantity: r,
+                        quantity: i,
                         db: s.db,
                         logger: s.logger,
                         tra: c,
                         observerCtx: this,
                         onSuccess: n => {
-                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, t.retryCount = 0, s.datadogRum.stopOperationWithOk(h, {
+                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, t.retryCount = 0, s.datadogRum.stopOperationWithOk(_, {
                                 currency: e
                             }), this._celebrateRollResults(n && n.rollResults || []), this._maybeSpendAllRedeemables())
                         },
                         onError: n => {
-                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Failed to auto-spend ${e}:`, n), s.datadogRum.stopOperationWithError(h, n instanceof Error ? n : new Error(String(n)), {
+                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Failed to auto-spend ${e}:`, n), s.datadogRum.stopOperationWithError(_, n instanceof Error ? n : new Error(String(n)), {
                                 currency: e
                             }), t.retryCount < 5 ? (t.retryCount += 1, s.logger.info(`[Battlepass] Retrying ${e} auto-spend (attempt ${t.retryCount}/5) in 2000ms.`), s.Ember.run.later(this, this._maybeSpendRedeemable, e, 2e3)) : (s.logger.warning(`[Battlepass] Giving up ${e} auto-spend after max retries.`), t.retryCount = 0, this._resumeOtherRedeemables(e)))
                         }
                     }).then((n => {
-                        n || this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.datadogRum.stopOperationWithAbort(h, {
+                        n || this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.datadogRum.stopOperationWithAbort(_, {
                             currency: e,
                             reason: "not_submitted"
                         }), this._resumeOtherRedeemables(e))
                     })).catch((n => {
-                        this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Error auto-spending ${e}:`, n), s.datadogRum.stopOperationWithError(h, n, {
+                        this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Error auto-spending ${e}:`, n), s.datadogRum.stopOperationWithError(_, n, {
                             currency: e
                         }), this._resumeOtherRedeemables(e))
                     }))
@@ -6089,12 +6139,12 @@
                 },
                 _celebrateCurrency(e, t) {
                     const n = this.get("gameDataMapperService.gameDataCurrencies"),
-                        s = (0, o.getCurrencyIconPath)(e, n),
+                        s = (0, i.getCurrencyIconPath)(e, n),
                         a = (Array.isArray(n) ? n : Object.values(n || {})).find((t => t.lolCurrencyId === e)),
                         l = a?.name || a?.title || "",
-                        i = l ? `${t} ${l}` : `${t}`;
+                        o = l ? `${t} ${l}` : `${t}`;
                     this._celebrateRewardClaim({
-                        name: i,
+                        name: o,
                         iconUrl: s,
                         previewUrl: s
                     })
@@ -6114,7 +6164,7 @@
                 _eventPassCatalogEntry: null,
                 _eventPassSku: null,
                 _observeRedeemableWallets() {
-                    this._redeemableState = {}, p.forEach((e => {
+                    this._redeemableState = {}, g.forEach((e => {
                         const t = `/lol-inventory/v1/wallet/${e}`,
                             n = {
                                 balance: 0,
@@ -6154,7 +6204,7 @@
                         n = this.get("_milestoneLevel"),
                         s = this.get("_rewardTrackItems") || [],
                         a = this.get("_rewardTrackProgress.passProgress") || 0;
-                    return g.map(((l, o) => {
+                    return f.map(((l, o) => {
                         const i = e.find((e => e.categoryId === l.categoryId)),
                             r = n < l.requiredMilestone;
                         let c = null;
@@ -6196,8 +6246,8 @@
                         n = this.get("selectedItemIndex"),
                         s = this.get("_claimedIds"),
                         l = this.get("passUpgraded"),
-                        i = this.get("shoppefrontService.purchaseLimitsMap") || {},
-                        c = this.get("_walletBalance") || {},
+                        o = this.get("shoppefrontService.purchaseLimitsMap") || {},
+                        r = this.get("_walletBalance") || {},
                         m = !!t && t.isLocked;
                     if (!t) return [];
                     const d = e.find((e => e.categoryId === t.categoryId));
@@ -6213,20 +6263,20 @@
                             "tall-tile": "tall-tile.webm"
                         },
                         f = d.items.map(((e, t) => {
-                            const d = (e.prerequisites || []).some((e => e.itemTypeId === r.EVENT_PASS_INVENTORY_TYPE_ID)),
+                            const d = (e.prerequisites || []).some((e => e.itemTypeId === c.EVENT_PASS_INVENTORY_TYPE_ID)),
                                 f = d && !l,
                                 v = s.includes(e.id),
-                                b = (0, r.isOwnedByInventory)(e, g),
-                                y = (0, r.isPurchaseLimitReached)(e, i),
+                                b = (0, c.isOwnedByInventory)(e, g),
+                                y = (0, c.isPurchaseLimitReached)(e, o),
                                 E = v || b || y,
                                 x = (0, a.getItemCost)(e),
                                 S = (0, a.getItemCurrency)(e),
-                                k = (c[S] || 0) >= x,
+                                k = (r[S] || 0) >= x,
                                 P = e.overrideTileSize || null,
                                 I = e.purchaseUnits?.[0]?.fulfillment,
                                 C = I?.currencyId || null,
                                 w = C && (I.delta || I.finalDelta) || 0,
-                                T = (0, r.isVotingPowerGrant)(e),
+                                T = (0, c.isVotingPowerGrant)(e),
                                 A = T && (I.delta || I.finalDelta) || 0,
                                 R = e.traTitle || u.get("battlepass_unknown_item");
                             let M, O = R;
@@ -6236,8 +6286,8 @@
                             }) : T && (O = u.formatString("battlepass_currency_reward_name", {
                                 amount: A,
                                 name: u.get("battlepass_inventory_type_voting_power")
-                            })), M = T ? u.get("battlepass_inventory_type_voting_power") : C ? u.get("battlepass_inventory_type_currency") : (0, r.getDisplayType)(e, u);
-                            const D = (0, r.getLocalTypeImage)(e);
+                            })), M = T ? u.get("battlepass_inventory_type_voting_power") : C ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
+                            const D = (0, c.getLocalTypeImage)(e);
                             return {
                                 id: e.id,
                                 catalogItem: e,
@@ -6246,7 +6296,7 @@
                                 description: e.itemDescription,
                                 cost: x,
                                 currencyKey: S,
-                                currencyIconPath: (0, o.getCurrencyIconPath)(S, p),
+                                currencyIconPath: (0, i.getCurrencyIconPath)(S, p),
                                 isChaseItem: 0 === t,
                                 tileSize: P,
                                 tileSizeClass: P ? "jade-tile-" + P : "",
@@ -6263,14 +6313,14 @@
                                 canAfford: k,
                                 iconUrl: D || e.tilePath || null,
                                 previewUrl: D || e.splashPath || e.tilePath || null,
-                                hasFullScreenSplash: (0, r.hasFullScreenSplash)(e)
+                                hasFullScreenSplash: (0, c.hasFullScreenSplash)(e)
                             }
                         })),
                         v = new Set;
                     f.forEach((e => {
                         e.chaseCategoryId && v.add(e.chaseCategoryId)
                     }));
-                    const b = this._findClaimedChaseItem(e, s, i, v);
+                    const b = this._findClaimedChaseItem(e, s, o, v);
                     return b && f.forEach((e => {
                         e.isChaseTagged && (e.iconUrl = b.iconUrl || e.iconUrl, e.previewUrl = b.previewUrl || e.previewUrl, e.isClaimed = !0, e.tileVideoPath = null, e.name = b.name)
                     })), f
@@ -6315,15 +6365,15 @@
                 selectedItemDropTableId: s.Ember.computed("selectedItem.catalogItem", "shoppefrontService.categories.[]", "shoppefrontService.stores.[]", "gameDataMapperService.gameDataCurrencies", (function() {
                     const e = this.get("selectedItem.catalogItem");
                     if (!e) return null;
-                    const t = _(e);
+                    const t = v(e);
                     if (t) return t;
                     const n = this._grantedCurrencyName(e);
-                    return n ? _(this._resolveDropCatalogItem(n)) : null
+                    return n ? v(this._resolveDropCatalogItem(n)) : null
                 })),
                 selectedItemHasDropRates: s.Ember.computed.notEmpty("selectedItemDropTableId"),
                 selectedItemOddsTree: null,
-                selectedItemLootOddsData: s.Ember.computed("selectedItemOddsTree", "tra", (function() {
-                    return b(this.get("selectedItemOddsTree"), this.get("tra"))
+                selectedItemLootOddsData: s.Ember.computed("selectedItemOddsTree", "tra", "gameDataMapperService.gameDataCurrencies", (function() {
+                    return E(this.get("selectedItemOddsTree"), this.get("tra"), this.get("gameDataMapperService.gameDataCurrencies"))
                 })),
                 _observeDropTableOdds(e) {
                     if (this._unobserveDropTableOdds(), !e) return;
@@ -6358,8 +6408,8 @@
                         if (s)
                             for (const e of s.items) {
                                 const s = t.includes(e.id),
-                                    l = (0, r.isOwnedByInventory)(e, a),
-                                    o = (0, r.isPurchaseLimitReached)(e, n);
+                                    l = (0, c.isOwnedByInventory)(e, a),
+                                    o = (0, c.isPurchaseLimitReached)(e, n);
                                 if (s || l || o) return {
                                     name: e.traTitle || "",
                                     iconUrl: e.tilePath || null,
@@ -6375,33 +6425,47 @@
                         if (!Array.isArray(e) || !e.length) return;
                         const t = {};
                         let n = null;
-                        for (const s of e) {
+                        for (const n of e) {
                             const e = e => {
                                 Object.keys(e).forEach((n => {
                                     const s = e[n]?.tags || [];
                                     for (const e of s)
-                                        if (e.startsWith(d)) {
+                                        if (e.startsWith(p)) {
                                             t[n] = e.slice(4).toUpperCase();
                                             break
                                         }
                                 }))
                             };
-                            if (e(s.displayMetadata?.rowMetadata || {}), (s.displayMetadata?.slotMetadata || []).forEach((t => {
-                                    e(t?.rowMetadata || {})
-                                })), !n) {
+                            e(n.displayMetadata?.rowMetadata || {}), (n.displayMetadata?.slotMetadata || []).forEach((t => {
+                                e(t?.rowMetadata || {})
+                            }))
+                        }
+                        const a = e => {
+                            const t = e?.purchaseUnits || [];
+                            return 1 === t.length && t[0]?.fulfillment?.itemTypeId === c.EVENT_PASS_INVENTORY_TYPE_ID
+                        };
+                        for (const t of e) {
+                            if (n) break;
+                            const e = (t.catalogEntries || []).find(a);
+                            e && (n = e, n.storeId = t.id)
+                        }
+                        if (!n)
+                            for (const s of e) {
+                                if (n) break;
                                 const e = (s.catalogEntries || []).find((e => t[e.id]));
                                 e && (n = e, n.storeId = s.id)
                             }
-                        }
-                        const s = n && t[n.id] || null,
-                            a = n ? n.storeId : null;
+                        const l = n && t[n.id] || null,
+                            o = n ? n.storeId : null;
                         n ? this.get("catalogItemEnricher").enrichItem(n).then((e => {
                             if (this.isDestroying || this.isDestroyed) return;
                             const t = e || n;
-                            t && !t.storeId && a && (t.storeId = a), this.set("_eventPassCatalogEntry", t), this.set("_eventPassSku", s)
-                        })) : (this.set("_eventPassCatalogEntry", null), this.set("_eventPassSku", s))
-                    })).catch((() => {
-                        this.set("_eventPassCatalogEntry", null), this.set("_eventPassSku", null)
+                            t && !t.storeId && o && (t.storeId = o), this.set("_eventPassCatalogEntry", t), this.set("_eventPassSku", l)
+                        })).catch((e => {
+                            s.logger.error("[Battlepass] Failed to enrich event pass catalog entry:", e)
+                        })) : (this.set("_eventPassCatalogEntry", null), this.set("_eventPassSku", l))
+                    })).catch((e => {
+                        s.logger.error("[Battlepass] Failed to fetch JADE_SHOP event pass catalog:", e), this.set("_eventPassCatalogEntry", null), this.set("_eventPassSku", null)
                     }))
                 },
                 _buildEventPassFiatItem() {
@@ -6411,48 +6475,73 @@
                         n = this.get("gameDataMapperService.gameDataCurrencies"),
                         s = (0, a.getAllPrices)(e),
                         l = (0, a.getItemCost)(e),
-                        i = (0, a.getItemCurrency)(e),
+                        o = (0, a.getItemCurrency)(e),
                         r = s.find((e => "RP" === e.currency)),
                         c = r ? r.originalCost : l,
                         {
                             hasDiscount: m,
-                            discountPercent: d
+                            discountPercent: u
                         } = (0, a.getDiscountInfo)(s),
-                        u = (0, o.getCurrencyIconPath)(i, n),
-                        p = e.traTitle || this.get("battlepassName"),
-                        h = e.splashPath || e.tilePath || null,
-                        g = this.get("_eventPassSku"),
-                        _ = this.get("_fiatPricePointsBySku") || {},
-                        f = g ? _[g] : null,
-                        v = !!f;
+                        p = (0, i.getCurrencyIconPath)(o, n),
+                        h = e.traTitle || this.get("battlepassName"),
+                        g = (0, d.getStoreItemImageOverride)(e.id) || e.splashPath || e.tilePath || null,
+                        _ = this.get("_eventPassSku"),
+                        f = this.get("_fiatPricePointsBySku") || {},
+                        v = _ ? f[_] : null,
+                        b = !!v;
                     return {
                         id: e.id,
-                        name: p,
+                        name: h,
                         description: e.itemDescription || null,
                         cost: l,
                         originalCost: c || l,
-                        currency: i,
-                        currencyIconPath: u,
-                        iconUrl: h,
+                        currency: o,
+                        currencyIconPath: p,
+                        iconUrl: g,
                         isOwned: !1,
                         catalogItem: e,
                         contentType: t.get("battlepass_inventory_type_event_pass"),
                         hasDiscount: m,
-                        discountPercent: d,
-                        hasFiatPrice: v,
-                        fiatPriceFormatted: f ? (0, a.formatFiatPrice)(f.realAmountCents, f.realCurrencyCode) : null,
-                        fiatPricePointId: f ? f.id : null,
-                        fiatAmountCents: f ? f.realAmountCents : null,
-                        fiatCurrencyCode: f ? f.realCurrencyCode : null
+                        discountPercent: u,
+                        hasFiatPrice: b,
+                        fiatPriceFormatted: v ? (0, a.formatFiatPrice)(v.realAmountCents, v.realCurrencyCode) : null,
+                        fiatPricePointId: v ? v.id : null,
+                        fiatAmountCents: v ? v.realAmountCents : null,
+                        fiatCurrencyCode: v ? v.realCurrencyCode : null
                     }
                 },
                 _openChaseModal(e) {
                     this.set("chaseCategoryId", e), this.set("showChaseModal", !0)
                 },
+                async _executePurchase(e) {
+                    if (!e || this.get("purchasingItem")) return;
+                    this.set("purchaseError", null), this.set("purchasingItem", !0);
+                    const t = this.get("tra");
+                    try {
+                        await (0, r.executeBulkPurchase)({
+                            catalogItem: e.catalogItem,
+                            db: s.db,
+                            logger: s.logger,
+                            tra: t,
+                            observerCtx: this,
+                            onSuccess: () => {
+                                this.isDestroying || this.isDestroyed || (this.get("_claimedIds").pushObject(e.catalogItem.id), this.set("purchaseError", null), this.set("purchasingItem", !1), this._celebrateRewardClaim(e))
+                            },
+                            onError: e => {
+                                this.isDestroying || this.isDestroyed || (this.set("purchaseError", e), this.set("purchasingItem", !1))
+                            }
+                        }) || this.set("purchasingItem", !1)
+                    } catch (e) {
+                        const n = e?.data?.detail || e?.text || e?.message || JSON.stringify(e);
+                        this.set("purchaseError", t.formatString("battlepass_purchase_failed", {
+                            detail: n
+                        })), this.set("purchasingItem", !1)
+                    }
+                },
                 _grantsRedeemableCurrency(e) {
                     const t = e && e.catalogItem || e,
                         n = t?.purchaseUnits?.[0]?.fulfillment;
-                    return !!n && p.includes(n.name)
+                    return !!n && g.includes(n.name)
                 },
                 _celebrateRewardClaim(e) {
                     if (e && !this._grantsRedeemableCurrency(e)) try {
@@ -6488,6 +6577,9 @@
                         s.logger.error("[Battlepass] Error showing celebration:", e)
                     }
                 },
+                _executeKrConfirmedPurchase(e) {
+                    this._executePurchase(e)
+                },
                 actions: {
                     positionCurrencyTooltip(e) {
                         const t = e && e.currentTarget;
@@ -6499,60 +6591,41 @@
                         n.style.left = `${s.left+s.width/2}px`, n.style.top = `${a.bottom+14}px`
                     },
                     selectTier(e) {
-                        e.isLocked ? c.BATTLEPASS_SFX.buttonLocked.play() : c.BATTLEPASS_SFX.buttonPress.play();
+                        e.isLocked ? m.BATTLEPASS_SFX.buttonLocked.play() : m.BATTLEPASS_SFX.buttonPress.play();
                         const t = this.get("tiers").findIndex((t => t.number === e.number));
                         t >= 0 && (this.set("selectedTierIndex", t), this.set("selectedItemIndex", 0))
                     },
                     selectItem(e) {
-                        c.BATTLEPASS_SFX.buttonPress.play();
+                        m.BATTLEPASS_SFX.buttonPress.play();
                         const t = this.get("items").findIndex((t => t.id === e.id));
                         t >= 0 && this.set("selectedItemIndex", t)
                     },
                     openDropRatesModal() {
-                        c.BATTLEPASS_SFX.buttonPress.play(), this.get("selectedItemHasDropRates") && (this.set("showDropRatesModal", !0), this._observeDropTableOdds(this.get("selectedItemDropTableId")))
+                        m.BATTLEPASS_SFX.buttonPress.play(), this.get("selectedItemHasDropRates") && (this.set("showDropRatesModal", !0), this._observeDropTableOdds(this.get("selectedItemDropTableId")))
                     },
                     closeDropRatesModal() {
-                        c.BATTLEPASS_SFX.buttonPress.play(), this.set("showDropRatesModal", !1), this._unobserveDropTableOdds(), this.set("selectedItemOddsTree", null)
+                        m.BATTLEPASS_SFX.buttonPress.play(), this.set("showDropRatesModal", !1), this._unobserveDropTableOdds(), this.set("selectedItemOddsTree", null)
                     },
                     dismissPurchaseError() {
                         this.set("purchaseError", null)
                     },
                     async upgradeBattlepass() {
                         if (this.get("passUpgraded")) return;
-                        c.BATTLEPASS_SFX.openStore.play(), await (0, o.ensurePassEventActive)(this.get("eventHubService"));
+                        if (m.BATTLEPASS_SFX.openStore.play(), await (0, i.ensurePassEventActive)(this.get("eventHubService")), !this.get("_eventPassCatalogEntry")) try {
+                            await this._fetchEventPassCatalogData()
+                        } catch (e) {
+                            s.logger.error("[Battlepass] Failed to re-fetch event pass catalog on upgrade click:", e)
+                        }
                         const e = this._buildEventPassFiatItem();
                         e && this.setProperties({
                             fiatPurchaseItem: e,
                             isFiatPurchaseModalOpen: !0
                         })
                     },
-                    async purchaseItem() {
-                        c.BATTLEPASS_SFX.buttonPress.play();
+                    purchaseItem() {
+                        m.BATTLEPASS_SFX.buttonPress.play();
                         const e = this.get("selectedItem");
-                        if (e && e.isChaseTagged) return void this._openChaseModal(e.chaseCategoryId);
-                        if (!e || e.isClaimed || e.isLocked || e.hasUnmetPrerequisites || this.get("purchasingItem")) return;
-                        this.set("purchaseError", null), this.set("purchasingItem", !0);
-                        const t = this.get("tra");
-                        try {
-                            await (0, i.executeBulkPurchase)({
-                                catalogItem: e.catalogItem,
-                                db: s.db,
-                                logger: s.logger,
-                                tra: t,
-                                observerCtx: this,
-                                onSuccess: () => {
-                                    this.isDestroying || this.isDestroyed || (this.get("_claimedIds").pushObject(e.catalogItem.id), this.set("purchaseError", null), this.set("purchasingItem", !1), this._celebrateRewardClaim(e))
-                                },
-                                onError: e => {
-                                    this.isDestroying || this.isDestroyed || (this.set("purchaseError", e), this.set("purchasingItem", !1))
-                                }
-                            }) || this.set("purchasingItem", !1)
-                        } catch (e) {
-                            const n = e?.data?.detail || e?.text || e?.message || JSON.stringify(e);
-                            this.set("purchaseError", t.formatString("battlepass_purchase_failed", {
-                                detail: n
-                            })), this.set("purchasingItem", !1)
-                        }
+                        e && e.isChaseTagged ? this._openChaseModal(e.chaseCategoryId) : !e || e.isClaimed || e.isLocked || e.hasUnmetPrerequisites || this.get("purchasingItem") || (this.get("isKREnv") ? this._openKrPurchaseConfirm(e) : this._executePurchase(e))
                     },
                     closeChaseModal() {
                         this.set("showChaseModal", !1), this.set("chaseCategoryId", null)
@@ -6562,7 +6635,53 @@
                     }
                 }
             });
-            t.default = y
+            t.default = x
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.KrPurchaseConfirmMixin = void 0;
+            var s = n(1),
+                a = n(84);
+            const l = s.Ember.Mixin.create({
+                tra: s.Ember.inject.service(),
+                region: null,
+                patchline: null,
+                showKrPurchaseConfirm: !1,
+                _pendingKrPurchaseItem: null,
+                _initRegionData: s.Ember.on("init", (function() {
+                    s.db.get("/riotclient/region-locale").then((e => {
+                        this.isDestroying || this.isDestroyed || this.set("region", e?.region)
+                    })).catch((e => s.logger.warning("[Battlepass][KR] Failed to fetch region-locale:", e))), s.db.get("/system/v1/builds").then((e => {
+                        this.isDestroying || this.isDestroyed || this.set("patchline", e?.patchline)
+                    })).catch((e => s.logger.warning("[Battlepass][KR] Failed to fetch build info:", e)))
+                })),
+                isKREnv: s.Ember.computed("region", "patchline", (function() {
+                    return !0
+                })),
+                krRefundAgreementText: s.Ember.computed("tra.battlepass_kr_refund_criteria_agree", "tra.battlepass_kr_refund_criteria_disclosures_link", "tra.battlepass_kr_refund_criteria_disclosures_link_text", (function() {
+                    const e = this.get("tra"),
+                        t = `<a class="battlepass-kr-confirm-modal__link" href="${e.get("battlepass_kr_refund_criteria_disclosures_link")}" target="_blank" onclick="event.stopPropagation()">${e.get("battlepass_kr_refund_criteria_disclosures_link_text")}</a>`;
+                    return s.Ember.String.htmlSafe(e.formatString("battlepass_kr_refund_criteria_agree", {
+                        disclosuresLink: t
+                    }))
+                })),
+                _openKrPurchaseConfirm(e) {
+                    this.set("_pendingKrPurchaseItem", e), this.set("showKrPurchaseConfirm", !0)
+                },
+                _executeKrConfirmedPurchase() {},
+                actions: {
+                    confirmKrPurchase() {
+                        a.BATTLEPASS_SFX.buttonPress.play();
+                        const e = this.get("_pendingKrPurchaseItem");
+                        this.set("showKrPurchaseConfirm", !1), this.set("_pendingKrPurchaseItem", null), this._executeKrConfirmedPurchase(e)
+                    },
+                    cancelKrPurchase() {
+                        a.BATTLEPASS_SFX.buttonPress.play(), this.set("showKrPurchaseConfirm", !1), this.set("_pendingKrPurchaseItem", null)
+                    }
+                }
+            });
+            t.KrPurchaseConfirmMixin = l
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -6581,26 +6700,25 @@
                 const c = e?.purchaseUnits?.[0],
                     m = c?.paymentOptions?.[0]?.key;
                 if (!m) return !1;
-                const d = null != r ? r : c.fulfillment.delta || 1,
-                    u = await t.post("/lol-shoppefront/v1/bulk-purchases", {
-                        purchaseItems: [{
-                            catalogEntryId: e.id,
-                            paymentOptions: [m],
-                            quantity: d,
-                            storeId: e.storeId
-                        }],
-                        purchaseTimeOut: 1e4
-                    });
-                if (!u) return o(s.get("battlepass_purchase_rejected")), !1;
-                const p = `/lol-shoppefront/v1/purchases/${u}`,
-                    h = setTimeout((() => {
-                        t.unobserve(p, a), a.isDestroying || a.isDestroyed || (n.error("[Battlepass] Purchase timed out:", u), o(s.get("battlepass_purchase_timed_out")))
+                const d = await t.post("/lol-shoppefront/v1/bulk-purchases", {
+                    purchaseItems: [{
+                        catalogEntryId: e.id,
+                        paymentOptions: [m],
+                        quantity: 1,
+                        storeId: e.storeId
+                    }],
+                    purchaseTimeOut: 1e4
+                });
+                if (!d) return o(s.get("battlepass_purchase_rejected")), !1;
+                const u = `/lol-shoppefront/v1/purchases/${d}`,
+                    p = setTimeout((() => {
+                        t.unobserve(u, a), a.isDestroying || a.isDestroyed || (n.error("[Battlepass] Purchase timed out:", d), o(s.get("battlepass_purchase_timed_out")))
                     }), i),
-                    g = () => {
-                        clearTimeout(h), t.unobserve(p, a)
+                    h = () => {
+                        clearTimeout(p), t.unobserve(u, a)
                     };
-                return t.observe(p, a, (e => {
-                    a.isDestroying || a.isDestroyed ? g() : "Success" === e?.status ? (g(), l(e)) : "Failure" === e?.status && (g(), o(s.formatString("battlepass_purchase_failed", {
+                return t.observe(u, a, (e => {
+                    a.isDestroying || a.isDestroyed ? h() : "Success" === e?.status ? (h(), l(e)) : "Failure" === e?.status && (h(), o(s.formatString("battlepass_purchase_failed", {
                         detail: e.failureReason || e.message || JSON.stringify(e)
                     })))
                 })), !0
@@ -6781,7 +6899,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(111),
+                a = n(112),
                 l = n(98),
                 o = s.Ember.Controller.extend({
                     selectedSpell: null,
@@ -7334,7 +7452,11 @@
                     openPortraitPurchase: function(e) {
                         const t = e.get ? e.get("contentId") : e.contentId,
                             n = (this.get("_portraitCatalogByContentId") || {})[t];
-                        n && (this._openPurchaseModal(n), this._applyInsufficientRpError())
+                        if (!n) return;
+                        const s = e.get ? e.get("holoFoilPath") : e.holoFoilPath;
+                        this._openPurchaseModal(n, !1, {
+                            videoPath: s
+                        }), this._applyInsufficientRpError()
                     },
                     toggleShowUnowned: function() {
                         this.toggleProperty("isUnownedShown")
@@ -7505,6 +7627,7 @@
                 _savedRuneSnapshot: null,
                 _savedRuneLoadout: null,
                 _defaultRuneSlots: null,
+                _defaultRuneSlotsByPosition: null,
                 _runeSaveTimer: null,
                 localMasteryLoadout: null,
                 currentMasteryPageNumber: 1,
@@ -7548,16 +7671,25 @@
                 })),
                 _isDefaultRuneSlot: e => !(!e || !e.data || !0 !== e.data.default && "true" !== e.data.default),
                 _captureDefaultRuneSlots(e) {
-                    const t = {};
-                    e && Object.keys(e).forEach((n => {
-                        const s = e[n];
-                        /_(RED|YELLOW|BLUE|QUINT)_\d+$/.test(n) && this._isDefaultRuneSlot(s) && (t[n] = {
-                            itemId: s.itemId,
-                            contentId: s.contentId || "",
-                            inventoryType: s.inventoryType,
-                            data: Object.assign({}, s.data)
-                        })
-                    })), this.set("_defaultRuneSlots", t)
+                    const t = {},
+                        n = Object.assign({}, this.get("_defaultRuneSlotsByPosition") || {});
+                    e && Object.keys(e).forEach((s => {
+                        const a = e[s],
+                            l = s.match(/_((?:RED|YELLOW|BLUE|QUINT)_\d+)$/);
+                        if (l && this._isDefaultRuneSlot(a)) {
+                            const e = {
+                                itemId: a.itemId,
+                                contentId: a.contentId || "",
+                                inventoryType: a.inventoryType,
+                                data: Object.assign({}, a.data)
+                            };
+                            t[s] = e, n[l[1]] = e
+                        }
+                    })), this.set("_defaultRuneSlots", t), this.set("_defaultRuneSlotsByPosition", n)
+                },
+                getDefaultRuneForPosition(e, t) {
+                    const n = this.get("_defaultRuneSlotsByPosition");
+                    return n && n[`${e}_${t}`] || null
                 },
                 _serializeRuneSlots(e) {
                     return e ? Object.keys(e).filter((e => /_(RED|YELLOW|BLUE|QUINT)_\d+$/.test(e))).filter((t => e[t] && -1 !== e[t].itemId)).filter((t => !this._isDefaultRuneSlot(e[t]))).sort().map((t => `${t}:${e[t].itemId}`)).join("|") : ""
@@ -7633,12 +7765,12 @@
                         inventoryType: r
                     };
                     else {
-                        const e = this.get("_defaultRuneSlots") && this.get("_defaultRuneSlots")[o];
-                        s[o] = e ? {
-                            itemId: e.itemId,
-                            contentId: e.contentId || "",
-                            inventoryType: e.inventoryType || r,
-                            data: Object.assign({}, e.data)
+                        const n = this.get("_defaultRuneSlots") && this.get("_defaultRuneSlots")[o] || this.getDefaultRuneForPosition(e, t);
+                        s[o] = n ? {
+                            itemId: n.itemId,
+                            contentId: n.contentId || "",
+                            inventoryType: n.inventoryType || r,
+                            data: Object.assign({}, n.data)
                         } : {
                             itemId: -1,
                             inventoryType: r
@@ -7955,7 +8087,12 @@
                         "_super" === e || e.startsWith("__") || (n[e] = t.get(e))
                     })), this.updateLoadout(e, {
                         loadout: n
-                    })
+                    }).then((e => {
+                        const t = this.get("accountLoadout.loadout");
+                        return t && Object.keys(n).forEach((e => {
+                            i.set(t, e, n[e])
+                        })), e
+                    }))
                 },
                 setActiveDemaciaPage(e, t, n, a) {
                     const l = {
@@ -8092,7 +8229,7 @@
             var s = n(1),
                 a = n(94),
                 l = n(93),
-                o = r(n(118)),
+                o = r(n(119)),
                 i = r(n(89));
 
             function r(e) {
@@ -8129,30 +8266,38 @@
                     }))
                 },
                 createRuneSlotsFromLoadout(e, t, n) {
-                    const a = s.Ember.A();
+                    const a = s.Ember.A(),
+                        r = this.get("loadoutsService");
                     for (let s = 0; s < c.length; s++) {
-                        const r = c[s],
-                            m = o.default.create(Object.assign({}, r, {
-                                loadoutsService: this.get("loadoutsService")
-                            }));
-                        if (e) {
-                            const s = (0, l.getColorAndSlotNum)(m.id);
-                            if (s) {
-                                const a = e[(0, l.buildSlotKey)(t, s.color, s.slotNum)],
-                                    o = a?.itemId;
+                        const m = c[s],
+                            d = o.default.create(Object.assign({}, m, {
+                                loadoutsService: r
+                            })),
+                            u = (0, l.getColorAndSlotNum)(d.id);
+                        if (u) {
+                            let s, a = !1;
+                            if (e) {
+                                const n = e[(0, l.buildSlotKey)(t, u.color, u.slotNum)],
+                                    o = n?.itemId;
                                 if (o && -1 !== o) {
-                                    const e = n?.find((e => e.id === o));
-                                    if (e) {
-                                        const t = a?.data?.default,
-                                            n = !0 === t || "true" === t;
-                                        m.set("rune", i.default.create(Object.assign({}, e, {
-                                            isDefault: n
-                                        })))
-                                    }
+                                    s = o;
+                                    const e = n?.data?.default;
+                                    a = !0 === e || "true" === e
                                 }
                             }
+                            if (void 0 === s && r) {
+                                const e = r.getDefaultRuneForPosition(u.color, u.slotNum),
+                                    t = e?.itemId;
+                                t && -1 !== t && (s = t, a = !0)
+                            }
+                            if (void 0 !== s) {
+                                const e = n?.find((e => e.id === s));
+                                e && d.set("rune", i.default.create(Object.assign({}, e, {
+                                    isDefault: a
+                                })))
+                            }
                         }
-                        a.pushObject(m)
+                        a.pushObject(d)
                     }
                     return a
                 },
@@ -8239,12 +8384,13 @@
             const a = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
                 l = `/lol-progression/v1/groups/${a}/configuration`,
                 o = `/lol-progression/v1/groups/${a}/instanceData`,
-                i = {
+                i = 30,
+                r = {
                     MASTERY: 3,
                     VOTING: 5,
                     SUMMONERS_JOURNEY: 10
                 };
-            var r = s.Ember.Service.extend({
+            var c = s.Ember.Service.extend({
                 init() {
                     this._super(...arguments), s.db.observe(l, this, this.handleProgressionTrackConfig), s.db.observe(o, this, this.handleProgressionInstanceData)
                 },
@@ -8257,40 +8403,69 @@
                 handleProgressionInstanceData(e) {
                     this.set("classicLevelInstanceData", e)
                 },
-                getUnlockLevels: () => i,
+                getUnlockLevels: () => r,
                 xpTotal: s.Ember.computed("classicLevelInstanceData.counters.0.counterValue", (function() {
                     return this.get("classicLevelInstanceData.counters.0.counterValue") || 0
                 })),
-                currentLevelXp: s.Ember.computed("xpTotal", "xpRequirementPerLevel", (function() {
-                    const e = this.get("xpRequirementPerLevel");
-                    return this.get("xpTotal") % e
+                milestoneThresholds: s.Ember.computed("classicLevelProgressionConfig", (function() {
+                    return this._buildThresholds(this.get("classicLevelProgressionConfig"))
                 })),
-                calculateLevel: (e, t) => Math.max(1, Math.min(Math.floor(e / t), 30)),
-                currentLevel: s.Ember.computed("xpTotal", "xpRequirementPerLevel", (function() {
-                    const e = this.get("xpRequirementPerLevel") || 0,
+                _buildThresholds(e) {
+                    if (!e) return [];
+                    const t = (e.milestones || []).map((e => e && e.triggers && e.triggers[0] && e.triggers[0].triggerValue)).filter((e => "number" == typeof e)).sort(((e, t) => e - t)).slice(0, i),
+                        n = e.repeat && e.repeat.repeatTriggers && e.repeat.repeatTriggers[0] && e.repeat.repeatTriggers[0].increaseBy || 0;
+                    if (n > 0 && t.length > 0) {
+                        let e = t[t.length - 1];
+                        for (; t.length < i;) e += n, t.push(e)
+                    }
+                    return t
+                },
+                levelForXpTotal(e, t) {
+                    let n = 0;
+                    for (let s = 0; s < e.length && t >= e[s]; s++) n = s + 1;
+                    return Math.min(n, i)
+                },
+                levelForXp(e) {
+                    const t = this.get("milestoneThresholds") || [];
+                    return t.length ? Math.max(1, this.levelForXpTotal(t, e || 0)) : 1
+                },
+                currentLevelXp: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
+                    const e = this.get("milestoneThresholds") || [],
+                        t = this.get("xpTotal") || 0,
+                        n = this.levelForXpTotal(e, t);
+                    return t - (n > 0 ? e[n - 1] : 0)
+                })),
+                currentLevel: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
+                    const e = this.get("milestoneThresholds") || [],
                         t = this.get("xpTotal") || 0;
-                    return e ? this.calculateLevel(t, e) : 1
+                    return e.length ? Math.max(1, this.levelForXpTotal(e, t)) : 1
                 })),
                 nextLevel: s.Ember.computed("currentLevel", (function() {
-                    return Math.min(30, this.get("currentLevel") + 1)
+                    return Math.min(i, this.get("currentLevel") + 1)
                 })),
                 isMaxLevel: s.Ember.computed("currentLevel", (function() {
-                    return this.get("currentLevel") >= 30
+                    return this.get("currentLevel") >= i
                 })),
-                xpRequirementPerLevel: s.Ember.computed("classicLevelProgressionConfig.repeat.repeatTriggers.0.increaseBy", (function() {
-                    return this.get("classicLevelProgressionConfig.repeat.repeatTriggers.0.increaseBy") || 100
+                xpForNextLevel: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
+                    const e = this.get("milestoneThresholds") || [],
+                        t = this.get("xpTotal") || 0;
+                    if (!e.length) return 100;
+                    const n = this.levelForXpTotal(e, t);
+                    if (n >= i || n >= e.length) return 0;
+                    const s = n > 0 ? e[n - 1] : 0;
+                    return e[n] - s
                 })),
-                eligibleForMasteries: s.Ember.computed.gte("currentLevel", i.MASTERY),
-                eligibleForSummonersJourney: s.Ember.computed.gte("currentLevel", i.SUMMONERS_JOURNEY)
+                eligibleForMasteries: s.Ember.computed.gte("currentLevel", r.MASTERY),
+                eligibleForSummonersJourney: s.Ember.computed.gte("currentLevel", r.SUMMONERS_JOURNEY)
             });
-            t.default = r
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(121),
-                a = n(122),
+            var s = n(122),
+                a = n(123),
                 l = n(1);
             const o = e => {
                 const t = e?.eventInfo?.startDate,
@@ -8700,7 +8875,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.getRouteByEventHubType = t.getOfferPurchaseConstraints = t.getCategoryOffersId = t.default = void 0;
-            var s = n(121);
+            var s = n(122);
             const a = e => `event_shop_offers_category_${e.toLowerCase()}`;
             t.getCategoryOffersId = a;
             const l = e => {
@@ -8734,7 +8909,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(121),
+            var s = n(122),
                 a = n(1),
                 l = a.Ember.Service.extend({
                     init() {
@@ -8760,11 +8935,11 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(98);
-            n(125);
+            n(126);
             var l = n(2),
                 o = s.Ember.Component.extend({
                     classNames: ["jade-sub-nav"],
-                    layout: n(126),
+                    layout: n(127),
                     classNameBindings: ["isParchment:jade-sub-nav--parchment"],
                     jadeNavRoutes: l.JADE_NAV_ROUTES,
                     navRoutesConfig: null,
@@ -8803,7 +8978,7 @@
                 a = n(98),
                 l = s.Ember.Component.extend({
                     classNames: ["jade-page-sub-nav", "jade-sub-nav--parchment"],
-                    layout: n(128),
+                    layout: n(129),
                     actions: {
                         playButtonSound() {
                             a.MASTERY_SFX.buttonPress.play()
@@ -8828,14 +9003,14 @@
                 },
                 l = n(93),
                 o = n(91);
-            n(130);
+            n(131);
             const {
                 Ember: i
             } = a.default;
             var r = i.Component.extend({
                 classNames: ["rune-plate-component"],
                 classNameBindings: ["pageChanging:page-changing"],
-                layout: n(131),
+                layout: n(132),
                 loadoutsService: i.inject.service("loadouts"),
                 runeSlots: null,
                 runePicker: null,
@@ -8925,13 +9100,13 @@
                     default: e
                 }
             }
-            n(133);
+            n(134);
             const {
                 Ember: c
             } = s.default;
             var m = c.Component.extend({
                 classNames: ["rune-inventory-component"],
-                layout: n(134),
+                layout: n(135),
                 loadoutsService: c.inject.service("loadouts"),
                 runes: null,
                 runePicker: null,
@@ -9053,10 +9228,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(136);
+            n(137);
             var a = s.Ember.Component.extend({
                 classNames: ["masteries-header"],
-                layout: n(137),
+                layout: n(138),
                 pointsUsed: 0,
                 pages: null,
                 actions: {
@@ -9086,11 +9261,11 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(2);
-            n(139);
+            n(140);
             var l = s.Ember.Component.extend({
                 classNames: ["mastery-tree-component"],
                 classNameBindings: ["treeType"],
-                layout: n(140),
+                layout: n(141),
                 tree: null,
                 treeType: null,
                 currentPage: null,
@@ -9161,11 +9336,11 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(142);
+            n(143);
             var a = s.Ember.Component.extend({
                 classNames: ["mastery-node-component"],
                 classNameBindings: ["isAvailable:available", "isFullyAllocated:fully-allocated", "isLocked:locked", "isUsingOffImage:off-image"],
-                layout: n(143),
+                layout: n(144),
                 mastery: null,
                 masteries: null,
                 isUnlocked: !1,
@@ -9278,7 +9453,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(145);
+            n(146);
             var a = n(2);
             const l = "disabled",
                 o = "available",
@@ -9286,7 +9461,7 @@
             var r = s.Ember.Component.extend({
                 classNames: ["mastery-prereq-bar"],
                 classNameBindings: ["isLongBar:long-bar"],
-                layout: n(146),
+                layout: n(147),
                 targetMastery: null,
                 masteries: null,
                 allMasteries: null,
@@ -9342,13 +9517,13 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(148);
+            n(149);
             const a = 15;
             var l = s.Ember.Component.extend({
                 classNames: ["tooltip-component"],
                 classNameBindings: ["isVisible:show"],
                 attributeBindings: ["style"],
-                layout: n(149),
+                layout: n(150),
                 isVisible: !1,
                 _isPositioned: !1,
                 _positionSide: null,
@@ -9439,10 +9614,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(151);
+            n(152);
             var a = s.Ember.Component.extend({
                 classNames: ["demacia-spell-tooltip-content"],
-                layout: n(152)
+                layout: n(153)
             });
             t.default = a
         }, (e, t, n) => {
@@ -9461,11 +9636,11 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(154);
+            n(155);
             var a = s.Ember.Component.extend({
                 classNames: ["mastery-tooltip-content"],
                 classNameBindings: ["treeType", "state", "isCompact:compact", "isMaxRank:max-rank"],
-                layout: n(155),
+                layout: n(156),
                 name: s.Ember.computed.reads("data.name"),
                 rank: s.Ember.computed.reads("data.rank"),
                 description: s.Ember.computed.reads("data.description"),
@@ -9493,10 +9668,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(157);
+            n(158);
             var a = s.Ember.Component.extend({
                 classNames: ["mastery-page-summary"],
-                layout: n(158),
+                layout: n(159),
                 pageName: s.Ember.computed.reads("data.pageName"),
                 offenseIcon: s.Ember.computed.reads("data.offenseIcon"),
                 offensePoints: s.Ember.computed.reads("data.offensePoints"),
@@ -9525,9 +9700,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(160);
+            n(161);
             var a = s.Ember.Component.extend({
-                layout: n(161),
+                layout: n(162),
                 classNames: ["rune-page-summary"],
                 data: null,
                 pageName: s.Ember.computed.reads("data.pageName"),
@@ -9555,12 +9730,12 @@
                 l = n(2),
                 o = n(99),
                 i = n(93);
-            n(163);
+            n(164);
             const r = l.INVENTORY_TYPES.RUNE_PAGE,
                 c = l.INVENTORY_TYPES.MASTERY_PAGE,
                 m = l.INVENTORY_TYPES.MASTERY;
             var d = s.Ember.Component.extend({
-                layout: n(164),
+                layout: n(165),
                 classNames: ["jade-loadouts-edit-component"],
                 loadoutsService: s.Ember.inject.service("loadouts"),
                 summonersJourneyService: s.Ember.inject.service("summoners-journey"),
@@ -9630,22 +9805,20 @@
                     const t = e.loadout,
                         n = [];
                     Object.keys(t).forEach((e => {
-                        const a = e.match(/^MASTERY_PAGE_(\d+)_NAME$/);
-                        if (a) {
-                            const l = parseInt(a[1], 10),
-                                o = t[e];
-                            if (o && 0 === o.itemId) return;
-                            const i = o && o.data && o.data.name || s.tra.formatString("jade_mastery_default_page_name", {
-                                pageNum: l
-                            });
+                        const s = e.match(/^MASTERY_PAGE_(\d+)_NAME$/);
+                        if (s) {
+                            const a = parseInt(s[1], 10),
+                                l = t[e];
+                            if (l && 0 === l.itemId) return;
+                            const o = this.get("masteryPagesService").resolvePageName(l, a);
                             n.push({
-                                id: l,
-                                name: i
+                                id: a,
+                                name: o
                             })
                         }
                     }));
-                    const a = n.sort(((e, t) => e.id - t.id));
-                    return this.get("isMasteriesLocked") ? a.slice(0, 1) : a
+                    const s = n.sort(((e, t) => e.id - t.id));
+                    return this.get("isMasteriesLocked") ? s.slice(0, 1) : s
                 })),
                 selectedJadeRunePageId: s.Ember.computed("accountLoadout.loadout.ACTIVE_RUNE_PAGE.itemId", "_optimisticRunePageId", (function() {
                     const e = this.get("_optimisticRunePageId");
@@ -9908,10 +10081,15 @@
                     showMasteryPageSummaryTooltip(e, t) {
                         const n = this.get("tooltipComponent");
                         if (!n || !e) return;
-                        const s = this.get("loadoutsService");
-                        s?.refreshMasteryLoadoutFromRemote();
-                        const a = s?.getMasteryPage(e?.id) || {},
-                            l = this.get("masteryPagesService"),
+                        const s = this.get("accountLoadout.loadout"),
+                            a = {};
+                        if (s)
+                            for (let t = 1; t <= 30; t++) {
+                                const n = `MASTERY_PAGE_${e.id}_MASTERY_${t}`,
+                                    l = s.get ? s.get(n) : s[n];
+                                l && l.itemId > 0 && (a[l.itemId] = (a[l.itemId] || 0) + 1)
+                            }
+                        const l = this.get("masteryPagesService"),
                             i = e.name || l.getDefaultPageName(e?.id),
                             r = l.getPointsInTreeForMasteryPage(o.MASTERY_TREE_NAMES.offense, a),
                             c = l.getPointsInTreeForMasteryPage(o.MASTERY_TREE_NAMES.defense, a),
@@ -9999,10 +10177,10 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(2);
-            n(166);
+            n(167);
             const l = "/lol-settings/v2/account/LCUPreferences/jade-ftux";
             var o = s.Ember.Component.extend({
-                layout: n(167),
+                layout: n(168),
                 classNames: ["champion-select-center-container"],
                 classNameBindings: ["showSkinTabGlowing:champion-select-center-container--picking-skins", "shouldHideCenter:champion-select-center-container--ban-showcase", "isSpectating"],
                 shouldHideCenter: s.Ember.computed("summoner.isBanningNow", "isBanShowcase", (function() {
@@ -10128,10 +10306,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = c(n(169)),
-                l = n(170),
+                a = c(n(170)),
+                l = n(171),
                 o = n(2),
-                i = n(172),
+                i = n(173),
                 r = c(n(105));
 
             function c(e) {
@@ -10139,11 +10317,11 @@
                     default: e
                 }
             }
-            n(173);
+            n(174);
             var m = s.Ember.Component.extend({
                 classNames: ["champions-pane"],
                 classNameBindings: ["isSpectating"],
-                layout: n(174),
+                layout: n(175),
                 gridWidth: 500,
                 gridHeight: 400,
                 summoner: null,
@@ -10255,34 +10433,30 @@
                 })),
                 filterAndSortChampions() {
                     const e = this.get("championConfigurations") || [],
-                        t = (this.get("debouncedSearchText") || "").toLowerCase().trim(),
-                        n = this.get("sortCollator"),
-                        a = this.get("activePositionFilter"),
-                        l = this.get("summoner.isBanningNow"),
-                        i = l ? this.get("bannableChampionSet") : this.get("pickableChampionSet");
+                        t = this.get("sortCollator"),
+                        n = this.get("activePositionFilter"),
+                        a = this.get("summoner.isBanningNow"),
+                        l = a ? this.get("bannableChampionSet") : this.get("pickableChampionSet");
                     if (0 === e.length) return;
-                    const r = e.filter((e => {
-                        const n = e.get("champion");
-                        if (n.id === o.NONE_CHAMP.championId || n.id === o.RANDOM_CHAMP.championId) return !1;
-                        if (i && i.size > 0 && !i.has(n.id)) return !1;
-                        if (a && !a.matches(n)) return !1;
-                        if (t) {
-                            if (!(n.name || "").toLowerCase().includes(t)) return !1
-                        }
-                        return !0
-                    })).slice().sort(((e, t) => {
+                    const i = e.filter((e => {
+                        const t = e.get("champion");
+                        if (t.id === o.NONE_CHAMP.championId || t.id === o.RANDOM_CHAMP.championId) return !1;
+                        if (l && l.size > 0 && !l.has(t.id)) return !1;
+                        if (n && !n.matches(t)) return !1;
+                        return !(e.get("searchScore") < 0)
+                    })).slice().sort(((e, n) => {
                         const s = e.get("champion.name") || "",
-                            a = t.get("champion.name") || "";
-                        return n.compare(s, a)
+                            a = n.get("champion.name") || "";
+                        return t.compare(s, a)
                     }));
-                    if (l) {
+                    if (a) {
                         const e = this.get("noneChampionConfiguration");
-                        r.unshift(e)
-                    } else if (this.get("isRandomChampionEnabled") && r.length > 1) {
+                        i.unshift(e)
+                    } else if (this.get("isRandomChampionEnabled") && i.length > 1) {
                         const e = this.get("randomChampionConfiguration");
-                        r.unshift(e)
+                        i.unshift(e)
                     }
-                    this.set("gridScrollTop", void 0), this.set("championConfigurationsSorted", s.Ember.A(r))
+                    this.set("gridScrollTop", void 0), this.set("championConfigurationsSorted", s.Ember.A(i))
                 },
                 hasChampions: s.Ember.computed.notEmpty("championConfigurationsSorted"),
                 _select(e) {
@@ -10392,7 +10566,7 @@
             }), t.ViewChampionClass = void 0;
             var s = n(1),
                 a = n(2);
-            const l = n(171),
+            const l = n(172),
                 o = s.Ember.Object.extend({
                     id: s.Ember.computed.alias("champion.id"),
                     isFreeToPlay: s.Ember.computed("champion.id", "grid.freeToPlayByJadeId", (function() {
@@ -10400,7 +10574,7 @@
                             t = this.get("champion.id");
                         return !!(e && t && e[t])
                     })),
-                    searchScore: s.Ember.computed("champion", "_searchScore", "grid.championFilters", "grid.debouncedSearchText", (function() {
+                    searchScore: s.Ember.computed("champion.relatedPrimeItemId", "_searchScore", "grid.championFilters", "grid.debouncedSearchText", (function() {
                         const e = this.get("champion"),
                             t = this.get("grid.championFilters");
                         if (e.id === a.RANDOM_CHAMP.championId) return 90;
@@ -10416,9 +10590,9 @@
                         const s = l.filter(t, n);
                         return s.length > 0 && s[0].score && (e += s[0].score, n.indexOf(t) >= 0 && (e += 100)), e
                     })),
-                    searchMatchingTerms: s.Ember.computed("champion.id", (function() {
+                    searchMatchingTerms: s.Ember.computed("champion.id", "champion.relatedPrimeItemId", (function() {
                         const e = this.get("tra"),
-                            t = `champion_local_search_colloq_${this.get("id")}`;
+                            t = `champion_local_search_colloq_${this.get("champion.relatedPrimeItemId")}`;
                         let n = [this.get("champion.name").toLocaleLowerCase()];
                         return e.exists(t) && (n = s.Lodash.uniq(n.concat((e.get(t) || "").split(";").filter((e => e.length > 0)).map((e => e.toLocaleLowerCase()))))), s.Lodash.uniq(n)
                     })),
@@ -10535,15 +10709,16 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(176);
+            n(177);
             var a, l = n(2),
                 o = (a = n(105)) && a.__esModule ? a : {
                     default: a
                 };
             const i = "left",
-                r = "right";
-            var c = s.Ember.Component.extend({
-                layout: n(177),
+                r = "right",
+                c = 1e3;
+            var m = s.Ember.Component.extend({
+                layout: n(178),
                 classNames: ["skins-pane"],
                 skinPurchaseService: s.Ember.inject.service("skin-purchase"),
                 carouselSkins: [],
@@ -10685,21 +10860,44 @@
                 _handleUxSettingsChanged(e) {
                     this.set("largeAreaAnimationsEnabled", !!e?.largeAreaAnimationsEnabled)
                 },
+                _classicSkinNumberForChampion: e => 60010 === e ? 302 : 301,
+                isClassicSkin(e) {
+                    return !(!e || "number" != typeof e.id) && e.id % c === this._classicSkinNumberForChampion(e.championId)
+                },
+                isBaseDefaultSkin: e => !(!e || "number" != typeof e.id) && e.id % c == 0,
+                getDefaultSkin(e) {
+                    const t = e || this.get("carouselSkins") || [];
+                    return t.find((e => this.isClassicSkin(e))) || t[0] || null
+                },
+                sortClassicSkinFirst(e) {
+                    const t = (e || []).findIndex((e => this.isClassicSkin(e)));
+                    if (t > 0) {
+                        const [n] = e.splice(t, 1);
+                        e.unshift(n)
+                    }
+                    return e
+                },
+                persistDefaultSkin(e) {
+                    e && e.unlocked && this.get("allowSkinSelection") && this.requestSetSkin(e)
+                },
+                _shouldReplacePersistedSelection: e => "number" == typeof e && e % c == 0,
                 handleSkinCarouselSkins(e) {
-                    const t = (e || []).filter((e => !e.disabled));
-                    this.set("carouselSkins", t);
-                    const n = this.get("baseSkin");
-                    if (n && this.get("isFlyoutOpen")) {
-                        const e = t.find((e => e.id === n.id));
+                    const t = (e || []).filter((e => !e.disabled)),
+                        n = t.some((e => this.isClassicSkin(e))) ? t.filter((e => !this.isBaseDefaultSkin(e))) : t;
+                    this.sortClassicSkinFirst(n), this.set("carouselSkins", n);
+                    const s = this.get("baseSkin");
+                    if (s && this.get("isFlyoutOpen")) {
+                        const e = n.find((e => e.id === s.id));
                         e && this.set("baseSkin", e)
                     }
-                    const s = this.get("selectedSkinId") || this.get("viewSkin.id"),
-                        a = this.getSkin(s);
-                    if (a) {
-                        const e = this.getSkinIndex(a);
+                    const a = this.get("selectedSkinId"),
+                        l = a || this.get("viewSkin.id");
+                    let o = this.getSkin(l);
+                    if (o || (o = this.getDefaultSkin(n), this._shouldReplacePersistedSelection(a) && this.persistDefaultSkin(o)), o) {
+                        const e = this.getSkinIndex(o);
                         e >= 0 && this.set("centerIndex", e)
                     } else this.set("centerIndex", 0);
-                    this.setViewSkin(a || (t.length > 0 ? t[0] : null)), this.updateParentSkinIdToSelectedChromaIdMap(a)
+                    this.setViewSkin(o || (n.length > 0 ? n[0] : null)), this.updateParentSkinIdToSelectedChromaIdMap(o)
                 },
                 handleSkinSelectorInfo(e) {
                     if (!e) return;
@@ -10708,11 +10906,12 @@
                         showSkinSelector: e.showSkinSelector,
                         skinSelectionDisabled: e.skinSelectionDisabled
                     });
-                    if (0 === (this.get("carouselSkins") || []).length) return;
-                    const t = this.getSkin(e.selectedSkinId);
-                    if (t) {
-                        const e = this.getSkinIndex(t);
-                        e >= 0 && this.set("centerIndex", e), this.setViewSkin(t), this.updateParentSkinIdToSelectedChromaIdMap(t)
+                    const t = this.get("carouselSkins") || [];
+                    if (0 === t.length) return;
+                    let n = this.getSkin(e.selectedSkinId);
+                    if (n || (n = this.getDefaultSkin(t), this._shouldReplacePersistedSelection(e.selectedSkinId) && this.persistDefaultSkin(n)), n) {
+                        const e = this.getSkinIndex(n);
+                        e >= 0 && this.set("centerIndex", e), this.setViewSkin(n), this.updateParentSkinIdToSelectedChromaIdMap(n)
                     }
                 },
                 getSkin(e) {
@@ -10804,7 +11003,7 @@
                     }
                 }
             });
-            t.default = c
+            t.default = m
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -10821,7 +11020,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(179);
+            n(180);
             var a, l = n(2),
                 o = (a = n(105)) && a.__esModule ? a : {
                     default: a
@@ -10829,7 +11028,7 @@
             const i = "sfx-notifications";
             var r = s.Ember.Component.extend({
                 classNames: ["jade-timer-status"],
-                layout: n(180),
+                layout: n(181),
                 champSelectScreen: null,
                 summoner: null,
                 formattedTime: null,
@@ -11005,10 +11204,10 @@
                     return e ? n : t
                 })(e)
             }
-            n(182);
+            n(183);
             var i = s.Ember.Component.extend({
                 classNames: ["jade-home-shop-grid"],
-                layout: n(183),
+                layout: n(184),
                 shoppefrontService: s.Ember.inject.service("shoppefront"),
                 lolInventoryService: s.Ember.inject.service("shoppefront-lol-inventory"),
                 gameDataMapperService: s.Ember.inject.service("game-data-mapper"),
@@ -11100,10 +11299,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(185);
+            n(186);
             var a = s.Ember.Component.extend({
                 classNames: ["jade-home-error"],
-                layout: n(186)
+                layout: n(187)
             });
             t.default = a
         }, (e, t, n) => {
@@ -11119,11 +11318,11 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(188);
+            n(189);
             const a = s.Ember.Component.extend({
                 classNames: ["jade-champ-select-chroma-modal"],
                 classNameBindings: ["baseSkin.chromaPreviewPath:chroma-view"],
-                layout: n(189),
+                layout: n(190),
                 didReceiveAttrs: function() {
                     this._super(...arguments);
                     const e = this.get("baseSkin"),
@@ -11179,7 +11378,7 @@
                 {
                     EmberHelpers: i
                 } = l;
-            n(191);
+            n(192);
             const r = l.EmberDataBinding({
                 Ember: o,
                 websocket: l.getProvider().getSocket(),
@@ -11189,7 +11388,7 @@
             });
             e.exports = o.Component.extend(r, {
                 tagName: "div",
-                layout: n(192),
+                layout: n(193),
                 skinPurchaseService: o.inject.service("skin-purchase"),
                 meetsChampionRequirement: o.computed.alias("skin.isChampionUnlocked"),
                 isSelected: o.computed("skin.id", "selectedSkinId", (function() {
@@ -11254,7 +11453,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(194);
+            n(195);
             const a = {
                     masterSoundEnabled: !0,
                     sfxEnabled: !0,
@@ -11266,7 +11465,7 @@
                     spellVolume: "volume"
                 };
             var o = s.Ember.Component.extend({
-                layout: n(195),
+                layout: n(196),
                 classNames: ["spell-video-wrapper"],
                 muted: !1,
                 spellVolume: 1,
@@ -11368,7 +11567,7 @@
                 }(n(1)),
                 a = n(2),
                 l = i(n(105)),
-                o = i(n(197));
+                o = i(n(198));
 
             function i(e) {
                 return e && e.__esModule ? e : {
@@ -11384,7 +11583,7 @@
                     return e ? n : t
                 })(e)
             }
-            n(198);
+            n(199);
             const {
                 DataBinding: c
             } = s.default, {
@@ -11393,7 +11592,7 @@
                 RunMixin: u
             } = s.EmberAddons.EmberLifeline, p = s.UiKitPlugin.getContextualNotificationManager();
             var h = s.Ember.Component.extend(u, {
-                layout: n(199),
+                layout: n(200),
                 classNames: ["demacia-summoner-spell-container"],
                 disabled: !1,
                 requestInProgress: !1,
@@ -11733,9 +11932,9 @@
                 RunMixin: i,
                 DomMixin: r
             } = a.EmberAddons.EmberLifeline;
-            n(201);
+            n(202);
             var c = a.Ember.Component.extend(i, r, {
-                layout: n(202),
+                layout: n(203),
                 classNames: ["demacia-flyout-selector-trigger-button"],
                 classNameBindings: ["disabled:disabled:enabled", "animateButton", "isSpellLocked:locked", "isSpellLocked:swap-jungle-button"],
                 disabled: !1,
@@ -11795,13 +11994,13 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0, n(204);
+            }), t.default = void 0, n(205);
             const s = n(1),
                 {
                     Ember: a
                 } = s;
             var l = a.Component.extend({
-                layout: n(205),
+                layout: n(206),
                 classNames: ["demacia-spell-select-flyout"],
                 spells: null,
                 hoveredSpell: null,
@@ -11846,7 +12045,7 @@
                 o = (s = n(105)) && s.__esModule ? s : {
                     default: s
                 };
-            n(207);
+            n(208);
             const {
                 RunMixin: i
             } = a.EmberAddons.EmberLifeline;
@@ -11855,7 +12054,7 @@
                 classNames: ["demacia-flyout-selector-button-container"],
                 classNameBindings: ["item.locked:disabled", "isSelectedItem:selected-item", "isSpell1FlyoutOpened:spell1", "isSpell2FlyoutOpened:spell2", "isHovered:is-hovered"],
                 attributeBindings: ["data-id"],
-                layout: n(208),
+                layout: n(209),
                 isItemVisible: !1,
                 isHovered: !1,
                 "data-id": a.Ember.computed.alias("item.id"),
@@ -11903,13 +12102,13 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(210);
+            n(211);
             const {
                 RunMixin: a,
                 DomMixin: l
             } = s.EmberAddons.EmberLifeline;
             var o = s.Ember.Component.extend(a, l, {
-                layout: n(211),
+                layout: n(212),
                 classNames: ["jade-ward-skin-renderer-component"],
                 classNameBindings: ["disabled:disabled:enabled", "animateButton", "isFlyoutOpen:flyout-open"],
                 disabled: !1,
@@ -11964,13 +12163,13 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(213);
+            n(214);
             const {
                 RunMixin: a
             } = s.EmberAddons.EmberLifeline;
             let l;
             var o = s.Ember.Component.extend(a, {
-                layout: n(214),
+                layout: n(215),
                 classNames: ["jade-ward-skin-popup-button-component"],
                 classNameBindings: ["item.locked:disabled", "isSelectedItem:selected-item"],
                 attributeBindings: ["data-id"],
@@ -12024,12 +12223,12 @@
                     default: s
                 },
                 o = n(2);
-            n(216);
+            n(217);
             const i = a.UiKitPlugin.getFlyoutManager(),
                 r = "/fe/lol-champ-select/sounds",
                 c = "sfx-ui";
             var m = a.Ember.Component.extend({
-                layout: n(217),
+                layout: n(218),
                 classNames: ["jade-ward-skin-select-component"],
                 accountLoadout: {},
                 wardSkins: [],
@@ -12123,9 +12322,9 @@
                     default: s
                 },
                 o = n(2);
-            n(219);
+            n(220);
             var i = a.Ember.Component.extend({
-                layout: n(220),
+                layout: n(221),
                 classNames: ["jade-ward-skin-popup-component"],
                 selectedWardSkin: {},
                 hoveredWardSkin: null,
@@ -12163,9 +12362,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(222);
+            n(223);
             var a = s.Ember.Component.extend({
-                layout: n(223),
+                layout: n(224),
                 classNames: ["item-build-tree-component"],
                 node: null,
                 itemsById: null,
@@ -12198,7 +12397,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1).Ember.Component.extend({
-                layout: n(225),
+                layout: n(226),
                 tagName: "",
                 item: null
             });
@@ -12213,7 +12412,7 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
-                a = i(n(197)),
+                a = i(n(198)),
                 l = i(n(105)),
                 o = n(2);
 
@@ -12222,8 +12421,8 @@
                     default: e
                 }
             }
-            n(227), e.exports = s.Ember.Component.extend({
-                layout: n(228),
+            n(228), e.exports = s.Ember.Component.extend({
+                layout: n(229),
                 classNames: ["jade-swap-button-component"],
                 classNameBindings: ["hidden"],
                 requestInProgress: !1,
@@ -12342,9 +12541,9 @@
                         } s.default = e, n && n.set(e, s);
                     return s
                 }(n(1)),
-                a = i(n(197)),
+                a = i(n(198)),
                 l = i(n(105)),
-                o = n(230);
+                o = n(231);
 
             function i(e) {
                 return e && e.__esModule ? e : {
@@ -12363,9 +12562,9 @@
             const {
                 RunMixin: c
             } = s.EmberAddons.EmberLifeline;
-            n(231);
+            n(232);
             var m = s.Ember.Component.extend(c, {
-                layout: n(232),
+                layout: n(233),
                 classNames: ["jade-swap-dialog-component"],
                 subteamDataList: [],
                 isFiveSecondsBeforeGameStart: !1,
@@ -12655,9 +12854,9 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(2);
-            n(234);
+            n(235);
             var l = s.Ember.Component.extend({
-                layout: n(235),
+                layout: n(236),
                 classNames: ["jade-ban-showcase"],
                 classNameBindings: ["isVisible::jade-ban-showcase--hidden"],
                 myTeamBans: null,
@@ -12720,12 +12919,13 @@
                 l = (s = n(105)) && s.__esModule ? s : {
                     default: s
                 };
-            n(237);
+            n(238);
             const o = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
-                i = 100 / 7,
-                r = "calc(27px - " + i + "%)",
-                c = (0, a.getProvider)().getSocket(),
-                m = {
+                i = 30,
+                r = 100 / 7,
+                c = "calc(27px - " + r + "%)",
+                m = (0, a.getProvider)().getSocket(),
+                d = {
                     ACHIEVEMENT_TITLE: "jade_inventory_type_achievement_title",
                     BOOST: "jade_inventory_type_boost",
                     CHAMPION_PERMANENT: "jade_inventory_type_champion",
@@ -12733,15 +12933,17 @@
                     CURRENCY: "jade_inventory_type_currency",
                     EMOTE: "jade_inventory_type_emote",
                     HEXTECH_CRAFTING: "jade_inventory_type_loot",
+                    JADE_RUNE_PAGE: "jade_inventory_type_rune_page",
                     JADE_RUNE_SLOT: "jade_inventory_type_rune_slot",
+                    PORTRAIT: "jade_inventory_type_portrait",
                     REGALIA_BANNER: "jade_inventory_type_banner",
                     SKIN_BORDER: "jade_inventory_type_skin_border",
                     SKIN_PERMANENT: "jade_inventory_type_champion_skin",
                     SUMMONER_ICON: "jade_inventory_type_icon",
                     WARD_SKIN: "jade_inventory_type_ward_skin"
                 };
-            var d = a.Ember.Component.extend({
-                layout: n(238),
+            var u = a.Ember.Component.extend({
+                layout: n(239),
                 classNames: ["jade-progression-widget"],
                 classNameBindings: ["isLevelZero:is-level-zero", "isMaxLevel:is-max-level"],
                 summonersJourneyService: a.Ember.inject.service("summoners-journey"),
@@ -12762,12 +12964,12 @@
                     }, this.element.addEventListener("click", this._onWidgetClick)
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this._onWidgetClick && this.element.removeEventListener("click", this._onWidgetClick), this._cleanupModalBackdrop(), (0, a.dataBinding)("/lol-progression", c).unobserve(`/v1/groups/${o}/instanceData`, this)
+                    this._super(...arguments), this._onWidgetClick && this.element.removeEventListener("click", this._onWidgetClick), this._cleanupModalBackdrop(), (0, a.dataBinding)("/lol-progression", m).unobserve(`/v1/groups/${o}/instanceData`, this)
                 },
                 _initProgressionData() {
-                    (0, a.dataBinding)("/lol-progression", c).get(`/v1/groups/${o}/configuration`).then((e => {
+                    (0, a.dataBinding)("/lol-progression", m).get(`/v1/groups/${o}/configuration`).then((e => {
                         !e || this.isDestroying || this.isDestroyed || (this.set("_configuration", e), this._checkDataLoaded(), this._fetchRewardGroups(e))
-                    })), this._fetchRewardTrackItems(), (0, a.dataBinding)("/lol-progression", c).observe(`/v1/groups/${o}/instanceData`, this, (e => {
+                    })), this._fetchRewardTrackItems(), (0, a.dataBinding)("/lol-progression", m).observe(`/v1/groups/${o}/instanceData`, this, (e => {
                         !e || this.isDestroying || this.isDestroyed || (this.set("_instanceData", e), this._checkDataLoaded())
                     }))
                 },
@@ -12816,25 +13018,27 @@
                 _checkDataLoaded() {
                     this.get("_instanceData") && this.get("_configuration") && this.get("_rewardGroupMap") && this.get("_rewardTrackItemMap") && this.set("dataLoaded", !0)
                 },
-                _xpPerLevel: a.Ember.computed.alias("summonersJourneyService.xpRequirementPerLevel"),
                 nextLevel: a.Ember.computed("currentLevel", (function() {
                     return this.get("currentLevel") + 1
                 })),
-                isMaxLevel: a.Ember.computed.alias("summonersJourneyService.isMaxLevel"),
-                currentLevelXP: a.Ember.computed.alias("summonersJourneyService.currentLevelXp"),
-                totalLevelXP: a.Ember.computed.alias("_xpPerLevel"),
-                currentLevel: a.Ember.computed("summonersJourneyService.xpTotal", "_xpPerLevel", (function() {
-                    const e = this.get("_xpPerLevel") || 0,
-                        t = this.get("summonersJourneyService.xpTotal") || 0;
-                    return e ? Math.min(30, Math.floor(t / e)) : 0
+                isMaxLevel: a.Ember.computed("currentLevel", (function() {
+                    return this.get("currentLevel") >= i
                 })),
-                isLevelZero: a.Ember.computed("summonersJourneyService.xpTotal", (function() {
-                    this.get("currentLevel");
-                    return this.get("summonersJourneyService.xpTotal") < this.get("_xpPerLevel")
+                currentLevelXP: a.Ember.computed.alias("summonersJourneyService.currentLevelXp"),
+                totalLevelXP: a.Ember.computed.alias("summonersJourneyService.xpForNextLevel"),
+                currentLevel: a.Ember.computed("summonersJourneyService.xpTotal", "summonersJourneyService.milestoneThresholds", (function() {
+                    const e = this.get("summonersJourneyService.milestoneThresholds") || [],
+                        t = this.get("summonersJourneyService.xpTotal") || 0;
+                    let n = 0;
+                    for (let s = 0; s < e.length && t >= e[s]; s++) n = s + 1;
+                    return Math.min(i, n)
+                })),
+                isLevelZero: a.Ember.computed("currentLevel", (function() {
+                    return 0 === this.get("currentLevel")
                 })),
                 progressBarPercentage: a.Ember.computed("currentLevelXP", "totalLevelXP", (function() {
                     const e = this.get("totalLevelXP");
-                    return e <= 0 ? 0 : Math.min(100, Math.round(this.get("currentLevelXP") / e * 100))
+                    return e <= 0 ? 100 : Math.min(100, Math.round(this.get("currentLevelXP") / e * 100))
                 })),
                 currentLevelXPLabel: a.Ember.computed("currentLevelXP", "totalLevelXP", (function() {
                     return a.tra.formatString("pass_progression_widget_current_level_xp", {
@@ -12853,10 +13057,17 @@
                 nextLevelRewardLabel: a.Ember.computed("nextLevel", "_rewardGroupMap", (function() {
                     return this._nameFromGroup(this._rewardGroupForLevel(this.get("nextLevel")))
                 })),
-                modalXPDisplay: a.Ember.computed("currentLevelXP", "totalLevelXP", (function() {
+                _maxLevelSpan: a.Ember.computed("summonersJourneyService.milestoneThresholds", (function() {
+                    const e = this.get("summonersJourneyService.milestoneThresholds") || [],
+                        t = e.length;
+                    return t < 2 ? 0 : e[t - 1] - e[t - 2]
+                })),
+                modalXPDisplay: a.Ember.computed("currentLevelXP", "totalLevelXP", "isMaxLevel", "_maxLevelSpan", (function() {
+                    const e = this.get("isMaxLevel"),
+                        t = this.get("_maxLevelSpan");
                     return a.tra.formatString("jade_progression_modal_xp_value", {
-                        currentXP: this.get("currentLevelXP"),
-                        totalXP: this.get("totalLevelXP")
+                        currentXP: e ? t : this.get("currentLevelXP"),
+                        totalXP: e ? t : this.get("totalLevelXP")
                     })
                 })),
                 _rewardOptionForLevel(e) {
@@ -12870,7 +13081,7 @@
                     if (!t) return "";
                     const n = t.rewardInventoryTypes;
                     if (!n || !n.length) return "";
-                    const s = m[n[0]];
+                    const s = d[n[0]];
                     return s ? a.tra.get(s) : n[0]
                 },
                 _descriptionFromTrackItem(e) {
@@ -12886,7 +13097,7 @@
                         n = [];
                     for (let s = 0; s < 8; s++) {
                         const a = e + s;
-                        if (a > 30) break;
+                        if (a > i) break;
                         const l = a > 0 ? this._rewardGroupForLevel(a) : null;
                         n.push({
                             level: a,
@@ -12910,22 +13121,22 @@
                         t = 8 * this.get("modalCurrentPage"),
                         n = this.get("_modalPageLevelCount"),
                         s = this.get("hasModalPrevPage"),
-                        a = t + n - 1 >= 30,
+                        a = t + n - 1 >= i,
                         l = a ? n - 1 : n,
                         o = l + (s ? 1 : 0);
                     if (o <= 0) return 0;
-                    let i = 0;
-                    if (e >= t + n) i = o;
+                    let r = 0;
+                    if (e >= t + n) r = o;
                     else if (e >= t) {
                         const n = e - t,
                             o = this._xpFraction(),
-                            r = !a && n >= l - 1 ? 2 : 1;
-                        i = (s ? 1 : 0) + Math.min(l, n + o * r)
+                            i = !a && n >= l - 1 ? 2 : 1;
+                        r = (s ? 1 : 0) + Math.min(l, n + o * i)
                     } else if (s && e === t - 1) {
                         const e = this._xpFraction();
-                        i = Math.max(0, 2 * (e - .5))
+                        r = Math.max(0, 2 * (e - .5))
                     }
-                    return Math.min(100, i / o * 100)
+                    return Math.min(100, r / o * 100)
                 })),
                 _xpFraction() {
                     const e = this.get("totalLevelXP");
@@ -12939,7 +13150,7 @@
                 })),
                 _modalPageLevelCount: a.Ember.computed("modalCurrentPage", (function() {
                     const e = 8 * this.get("modalCurrentPage");
-                    return Math.min(8, 30 - e + 1)
+                    return Math.min(8, i - e + 1)
                 })),
                 _trackFormulaParts: a.Ember.computed("_modalPageLevelCount", "modalLevelsScale", (function() {
                     const e = this.get("_modalPageLevelCount"),
@@ -12960,10 +13171,10 @@
                         pct: e,
                         px: t
                     } = this.get("_trackFormulaParts");
-                    return this.get("hasModalPrevPage") ? e + i + "% - " + (t + 6) + "px" : e + "% - " + t + "px"
+                    return this.get("hasModalPrevPage") ? e + r + "% - " + (t + 6) + "px" : e + "% - " + t + "px"
                 })),
                 modalTrackLeftStyle: a.Ember.computed("hasModalPrevPage", (function() {
-                    return this.get("hasModalPrevPage") ? r : "21px"
+                    return this.get("hasModalPrevPage") ? c : "21px"
                 })),
                 modalLevelsScale: a.Ember.computed("_modalPageLevelCount", (function() {
                     const e = this.get("_modalPageLevelCount");
@@ -12998,7 +13209,7 @@
                     }
                 }
             });
-            t.default = d
+            t.default = u
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -13015,15 +13226,16 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(240);
+            n(241);
             var a = n(101),
                 l = n(61),
-                o = n(107),
+                o = n(108),
                 i = n(103),
                 r = n(84),
-                c = s.Ember.Component.extend({
+                c = n(107),
+                m = s.Ember.Component.extend(c.KrPurchaseConfirmMixin, {
                     classNames: ["battlepass-chase-modal"],
-                    layout: n(241),
+                    layout: n(242),
                     shoppefrontService: s.Ember.inject.service("shoppefront"),
                     lolInventoryService: s.Ember.inject.service("shoppefront-lol-inventory"),
                     gameDataMapperService: s.Ember.inject.service("game-data-mapper"),
@@ -13106,6 +13318,37 @@
                         const e = this.get("selectedChaseItem");
                         return !(!e || e.isClaimed || e.hasUnmetPrerequisites || this.get("purchasingChaseItem")) && e.canAfford
                     })),
+                    async _executeChasePurchase(e) {
+                        if (!e || this.get("purchasingChaseItem")) return;
+                        this.set("purchasingChaseItem", !0), this.set("purchaseError", null);
+                        const t = this.get("tra");
+                        try {
+                            await (0, o.executeBulkPurchase)({
+                                catalogItem: e.catalogItem,
+                                db: s.db,
+                                logger: s.logger,
+                                tra: t,
+                                observerCtx: this,
+                                onSuccess: () => {
+                                    if (this.isDestroying || this.isDestroyed) return;
+                                    const t = this.get("onItemClaimed");
+                                    t && t(e), this.set("purchasingChaseItem", !1), this.set("selectedChaseIndex", null)
+                                },
+                                onError: e => {
+                                    this.isDestroying || this.isDestroyed || (this.set("purchaseError", e), this.set("purchasingChaseItem", !1))
+                                }
+                            }) || this.set("purchasingChaseItem", !1)
+                        } catch (e) {
+                            if (this.isDestroying || this.isDestroyed) return;
+                            const n = e?.data?.detail || e?.text || e?.message || JSON.stringify(e);
+                            this.set("purchaseError", t.formatString("battlepass_purchase_failed", {
+                                detail: n
+                            })), this.set("purchasingChaseItem", !1)
+                        }
+                    },
+                    _executeKrConfirmedPurchase(e) {
+                        this._executeChasePurchase(e)
+                    },
                     actions: {
                         selectChaseItem(e) {
                             r.BATTLEPASS_SFX.buttonPress.play(), this.get("chaseAlreadyClaimed") || this.set("selectedChaseIndex", e)
@@ -13116,49 +13359,22 @@
                             e && e()
                         },
                         preventBubble() {},
-                        async purchaseChaseItem() {
+                        purchaseChaseItem() {
                             r.BATTLEPASS_SFX.buttonPress.play();
                             const e = this.get("selectedChaseItem");
-                            if (!e || e.isClaimed || e.hasUnmetPrerequisites || this.get("purchasingChaseItem")) return;
-                            if (!e.canAfford) return;
-                            this.set("purchasingChaseItem", !0), this.set("purchaseError", null);
-                            const t = this.get("tra"),
-                                n = s.dataBinding.bindTo(s.socket);
-                            try {
-                                await (0, o.executeBulkPurchase)({
-                                    catalogItem: e.catalogItem,
-                                    db: n,
-                                    logger: s.logger,
-                                    tra: t,
-                                    observerCtx: this,
-                                    onSuccess: () => {
-                                        if (this.isDestroying || this.isDestroyed) return;
-                                        const t = this.get("onItemClaimed");
-                                        t && t(e), this.set("purchasingChaseItem", !1), this.set("selectedChaseIndex", null)
-                                    },
-                                    onError: e => {
-                                        this.isDestroying || this.isDestroyed || (this.set("purchaseError", e), this.set("purchasingChaseItem", !1))
-                                    }
-                                }) || this.set("purchasingChaseItem", !1)
-                            } catch (e) {
-                                if (this.isDestroying || this.isDestroyed) return;
-                                const n = e?.data?.detail || e?.text || e?.message || JSON.stringify(e);
-                                this.set("purchaseError", t.formatString("battlepass_purchase_failed", {
-                                    detail: n
-                                })), this.set("purchasingChaseItem", !1)
-                            }
+                            !e || e.isClaimed || e.hasUnmetPrerequisites || this.get("purchasingChaseItem") || e.canAfford && (this.get("isKREnv") ? this._openKrPurchaseConfirm(e) : this._executeChasePurchase(e))
                         }
                     }
                 });
-            t.default = c
+            t.default = m
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "oxkN9ddc",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-chase-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-chase-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-chase-modal\\\\index.js\\" "],["text","\\n"],["text","\\n"],["block",["if"],[["get",["isVisible"]]],null,8]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__error"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-chase-modal__purchase-btn ",["helper",["unless"],[["get",["canPurchaseChaseItem"]],"battlepass-chase-modal__purchase-btn--disabled"],null]," ",["helper",["if"],[["get",["purchasingChaseItem"]],"battlepass-chase-modal__purchase-btn--loading"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseChaseItem"],null],null],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","battlepass-chase-modal__purchase-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedCurrencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["selectedCanAfford"]],"battlepass-chase-modal__purchase-cost--insufficient"],null]]]],["flush-element"],["append",["unknown",["selectedCost"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__purchase-btn battlepass-chase-modal__purchase-btn--claimed"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_claimed"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__item-badge"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-check-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/checkmark.svg"],["static-attr","alt","claimed"],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["chaseItem","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["chaseItem","name"]]]]],["flush-element"],["close-element"],["text","\\n                "]],"locals":[]},{"statements":[["block",["if"],[["get",["chaseItem","iconUrl"]]],null,4]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["chaseItem","previewUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["chaseItem","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-chase-modal__item-wrapper ",["helper",["if"],[["get",["chaseAlreadyClaimed"]],"battlepass-chase-modal__item-wrapper--locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectChaseItem",["get",["index"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-chase-modal__item ",["helper",["if"],[["helper",["eq"],[["get",["index"]],["get",["selectedChaseIndex"]]],null],"battlepass-chase-modal__item--selected"],null]," ",["helper",["if"],[["get",["chaseItem","isClaimed"]],"battlepass-chase-modal__item--claimed"],null]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__item-image"],["flush-element"],["text","\\n"],["block",["if"],[["get",["chaseItem","previewUrl"]]],null,6,5],["text","              "],["close-element"],["text","\\n"],["block",["if"],[["get",["chaseItem","isClaimed"]]],null,3],["text","            "],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","battlepass-chase-modal__item-name"],["flush-element"],["append",["unknown",["chaseItem","name"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["chaseItem","index"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__overlay"],["modifier",["action"],[["get",[null]],"closeChaseModal"],[["on"],["click"]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__container"],["modifier",["action"],[["get",[null]],"preventBubble"],[["on","bubbles"],["click",false]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__header"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__close"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeChaseModal"],null],null],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-uikit/eat-close-gold.svg"],["static-attr","alt","close"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__content"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__select-label"],["flush-element"],["append",["unknown",["tra","battlepass_chase_select_one"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__items"],["flush-element"],["text","\\n"],["block",["each"],[["get",["chaseItems"]]],null,7],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__footer"],["flush-element"],["text","\\n"],["block",["if"],[["get",["chaseAlreadyClaimed"]]],null,2,1],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["purchaseError"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "szi/Bv6R",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-chase-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-chase-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-chase-modal\\\\index.js\\" "],["text","\\n"],["text","\\n"],["block",["if"],[["get",["isVisible"]]],null,10]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal__title"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_title"]],false],["close-element"],["text","\\n        "],["open-element","ul",[]],["static-attr","class","battlepass-kr-confirm-modal__list"],["flush-element"],["text","\\n          "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_1"]],false],["close-element"],["text","\\n          "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_2"]],false],["close-element"],["text","\\n          "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["krRefundAgreementText"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal__actions"],["flush-element"],["text","\\n          "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","battlepass-kr-confirm-modal__btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"cancelKrPurchase"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","battlepass_kr_purchase_confirm_cancel"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","battlepass-kr-confirm-modal__btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmKrPurchase"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","battlepass_kr_purchase_confirm_accept"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[true,"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"cancelKrPurchase"],null]]],0]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__error"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-chase-modal__purchase-btn ",["helper",["unless"],[["get",["canPurchaseChaseItem"]],"battlepass-chase-modal__purchase-btn--disabled"],null]," ",["helper",["if"],[["get",["purchasingChaseItem"]],"battlepass-chase-modal__purchase-btn--loading"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseChaseItem"],null],null],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","battlepass-chase-modal__purchase-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedCurrencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["selectedCanAfford"]],"battlepass-chase-modal__purchase-cost--insufficient"],null]]]],["flush-element"],["append",["unknown",["selectedCost"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__purchase-btn battlepass-chase-modal__purchase-btn--claimed"],["flush-element"],["text","\\n            "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_claimed"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__item-badge"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-check-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/checkmark.svg"],["static-attr","alt","claimed"],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["chaseItem","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["chaseItem","name"]]]]],["flush-element"],["close-element"],["text","\\n                "]],"locals":[]},{"statements":[["block",["if"],[["get",["chaseItem","iconUrl"]]],null,6]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["chaseItem","previewUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["chaseItem","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-chase-modal__item-wrapper ",["helper",["if"],[["get",["chaseAlreadyClaimed"]],"battlepass-chase-modal__item-wrapper--locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectChaseItem",["get",["index"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-chase-modal__item ",["helper",["if"],[["helper",["eq"],[["get",["index"]],["get",["selectedChaseIndex"]]],null],"battlepass-chase-modal__item--selected"],null]," ",["helper",["if"],[["get",["chaseItem","isClaimed"]],"battlepass-chase-modal__item--claimed"],null]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__item-image"],["flush-element"],["text","\\n"],["block",["if"],[["get",["chaseItem","previewUrl"]]],null,8,7],["text","              "],["close-element"],["text","\\n"],["block",["if"],[["get",["chaseItem","isClaimed"]]],null,5],["text","            "],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","battlepass-chase-modal__item-name"],["flush-element"],["append",["unknown",["chaseItem","name"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["chaseItem","index"]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-chase-modal__overlay ",["helper",["if"],[["get",["showKrPurchaseConfirm"]],"battlepass-chase-modal__overlay--hidden"],null]]]],["modifier",["action"],[["get",[null]],"closeChaseModal"],[["on"],["click"]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__container"],["modifier",["action"],[["get",[null]],"preventBubble"],[["on","bubbles"],["click",false]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__header"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__close"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"closeChaseModal"],null],null],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/jade-uikit/eat-close-gold.svg"],["static-attr","alt","close"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__content"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__select-label"],["flush-element"],["append",["unknown",["tra","battlepass_chase_select_one"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__items"],["flush-element"],["text","\\n"],["block",["each"],[["get",["chaseItems"]]],null,9],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-chase-modal__footer"],["flush-element"],["text","\\n"],["block",["if"],[["get",["chaseAlreadyClaimed"]]],null,4,3],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["purchaseError"]]],null,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showKrPurchaseConfirm"]]],null,1]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -13212,7 +13428,7 @@
             }
             var i = s.Ember.Component.extend({
                 classNames: ["loot-odds-root-component"],
-                layout: n(243),
+                layout: n(244),
                 tra: s.Ember.inject.service(),
                 oddsData: null,
                 title: null,
@@ -13302,11 +13518,11 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(245);
+            n(246);
             var a = s.Ember.Component.extend({
                 classNames: ["view-abilities-pane"],
                 classNameBindings: ["hidden:view-abilities-pane--hidden"],
-                layout: n(246),
+                layout: n(247),
                 selectedChampionAssets: null,
                 hidden: !0,
                 abilityName: "",
@@ -13406,9 +13622,9 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(98);
-            n(248);
+            n(249);
             var l = s.Ember.Component.extend({
-                layout: n(249),
+                layout: n(250),
                 classNames: ["jade-champion-card"],
                 champion: null,
                 isRewardsProgramEnabled: !1,
@@ -13471,7 +13687,7 @@
                 o = n(98),
                 i = n(82),
                 r = n(83);
-            n(251);
+            n(252);
             c(n(14));
 
             function c(e) {
@@ -13497,9 +13713,11 @@
                 g = "/v1/session",
                 _ = ["champion_ability_key_passive", "champion_ability_key_q", "champion_ability_key_w", "champion_ability_key_e", "champion_ability_key_r"],
                 f = "https://lol.dyn.riotcdn.net/x/videos/",
-                v = 112;
-            var b = s.Ember.Component.extend(i.PurchaseModalMixin, {
-                layout: n(252),
+                v = 112,
+                b = "abilities",
+                y = "/lol-client-config/v3/client-config/lol.client_settings.jade.tencentChampionLearnMoreUrl";
+            var E = s.Ember.Component.extend(i.PurchaseModalMixin, {
+                layout: n(253),
                 classNames: ["jade-champion-modal-component"],
                 isOpen: !1,
                 champion: null,
@@ -13519,6 +13737,7 @@
                 _inventoryPath: null,
                 _splashOnlyTimeout: null,
                 _onSplashOnlyMouseMove: null,
+                _tencentLearnMoreUrl: null,
                 abilities: s.Ember.computed("championData", "tra", (function() {
                     const e = this.get("championData");
                     if (!e) return [];
@@ -13550,6 +13769,9 @@
                 selectedAbilityVideoImageUrl: s.Ember.computed("selectedAbility", (function() {
                     return this.get("selectedAbility.videoImageUrl")
                 })),
+                showAbilityVideo: s.Ember.computed("selectedAbilityVideoUrl", "activeTab", (function() {
+                    return !!this.get("selectedAbilityVideoUrl") && this.get("activeTab") === b
+                })),
                 selectedAbilityName: s.Ember.computed("selectedAbility", (function() {
                     return this.get("selectedAbility.name")
                 })),
@@ -13572,6 +13794,9 @@
                 })),
                 isChampionOwned: s.Ember.computed("championData", (function() {
                     return !!this.get("championData")?._championOwned
+                })),
+                isTencentRegion: s.Ember.computed((function() {
+                    return "TENCENT" === window.RIOT?.CONSTANTS?.regionLocale?.region
                 })),
                 masteryLevel: s.Ember.computed("champion.masteryLevel", (function() {
                     return this.get("champion.masteryLevel") || 1
@@ -13600,7 +13825,7 @@
                     return ((this.get("champion.masteryPointsSinceLastLevel") || 0) + (this.get("champion.masteryPointsUntilNextLevel") || 0)).toLocaleString()
                 })),
                 isOverviewTab: s.Ember.computed.equal("activeTab", "overview"),
-                isAbilitiesTab: s.Ember.computed.equal("activeTab", "abilities"),
+                isAbilitiesTab: s.Ember.computed.equal("activeTab", b),
                 isSkinTab: s.Ember.computed.equal("activeTab", "skins"),
                 splashPath: s.Ember.computed("championData", (function() {
                     const e = this.get("championData.skins")?.[0];
@@ -13686,6 +13911,9 @@
                 _openChanged: s.Ember.observer("isOpen", (function() {
                     this.get("isOpen") ? s.Ember.run.scheduleOnce("afterRender", this, this._initModal) : this._cleanupModal()
                 })),
+                _syncVideoWithTab: s.Ember.observer("activeTab", "selectedAbilityVideoUrl", (function() {
+                    s.Ember.run.scheduleOnce("afterRender", this, this._applyVideoPlaybackForTab)
+                })),
                 _initModal() {
                     if (this._backdropEl) return;
                     const e = this.element.querySelector(".jade-champion-modal-backdrop");
@@ -13693,7 +13921,7 @@
                     this._originalParent = this.element.parentNode, this._originalNextSibling = this.element.nextSibling;
                     (document.getElementById("lol-uikit-layer-manager-wrapper") || document.getElementById("lol-uikit-layer-manager") || document.body).appendChild(this.element), this._onBackdropClick = t => {
                         t.target === e && this._close()
-                    }, e.addEventListener("click", this._onBackdropClick), this._backdropEl = e, this.set("activeTab", "overview"), this.set("isLoading", !0), this._observeGameflow(), this._loadShoppefrontStore(), this._registerPurchaseSuccessHandler(), this.addObserver("lolInventoryService.ownedInventoryContent", this, this._onInventoryChanged), this._fetchChampionData()
+                    }, e.addEventListener("click", this._onBackdropClick), this._backdropEl = e, this.set("activeTab", "overview"), this.set("isLoading", !0), this._observeGameflow(), this._observeTencentLearnMoreUrl(), this._loadShoppefrontStore(), this._registerPurchaseSuccessHandler(), this.addObserver("lolInventoryService.ownedInventoryContent", this, this._onInventoryChanged), this._fetchChampionData()
                 },
                 _loadShoppefrontStore() {
                     const e = this.get("shoppefrontService");
@@ -13804,7 +14032,7 @@
                 },
                 actions: {
                     switchTab(e) {
-                        this.get("activeTab") !== e && (o.MASTERY_SFX.buttonPress.play(), this.set("activeTab", e), "skins" === e ? (this._pauseVideo(), !this._skinsInitialized && this.get("skins.length") && (this._skinsInitialized = !0, this.set("selectedSkinIndex", 0), this._updateSkinSelection(0), this._carouselOffset = this.get("carouselInitialOffset"))) : "abilities" === e ? this._resumeVideo() : this._pauseVideo())
+                        this.get("activeTab") !== e && (o.MASTERY_SFX.buttonPress.play(), this.set("activeTab", e), "skins" === e ? (this._pauseVideo(), !this._skinsInitialized && this.get("skins.length") && (this._skinsInitialized = !0, this.set("selectedSkinIndex", 0), this._updateSkinSelection(0), this._carouselOffset = this.get("carouselInitialOffset"))) : e === b ? this._resumeVideo() : this._pauseVideo())
                     },
                     selectAbility(e) {
                         if (!this.get("championData") || e === this.get("selectedAbilityIndex")) return;
@@ -13819,15 +14047,19 @@
                         const t = this.get("championData");
                         s.pawApi.createPAWModal({
                             itemId: t && t.relatedPrimeItemId || e.id,
-                            inventoryType: a.PAW.INVENTORY_TYPES.CHAMPION
+                            inventoryType: a.PAW.INVENTORY_TYPES.CHAMPION,
+                            isJadeStore: !0
                         }, "jade-champion-modal", null, null, (() => this._refreshOwnership()))
                     },
                     learnMore() {
-                        o.MASTERY_SFX.buttonPress.play();
-                        const e = this.get("championData.name");
+                        if (o.MASTERY_SFX.buttonPress.play(), this.get("isTencentRegion")) {
+                            const e = this.get("_tencentLearnMoreUrl");
+                            return void(e ? window.open(e, "_blank") : s.logger.warning("[JadeChampionModal] No Tencent learn more URL set in client config"))
+                        }
+                        const e = this.get("championData.id");
                         if (!e) return;
                         const t = document.documentElement.lang || "en_US";
-                        window.open("https://universe.leagueoflegends.com/" + t + "/champion/" + e + "/", "_blank")
+                        window.open("https://www.leagueoflegends.com/" + t + "/classic/champions/" + e + "/", "_blank")
                     },
                     prevSkin() {
                         const e = this.get("skins");
@@ -13864,7 +14096,8 @@
                                 const t = this.get("championData");
                                 s.pawApi.createPAWModal({
                                     itemId: t && t.relatedPrimeItemId || e.id,
-                                    inventoryType: a.PAW.INVENTORY_TYPES.CHAMPION
+                                    inventoryType: a.PAW.INVENTORY_TYPES.CHAMPION,
+                                    isJadeStore: !0
                                 }, "jade-champion-modal", a.PAW.MODAL_TYPES.CHAMPION_MODAL, null, (() => this._refreshOwnership()))
                             } else {
                                 const t = e.skinClassification === d;
@@ -13925,6 +14158,9 @@
                 _resumeVideo() {
                     const e = this._getVideoElement();
                     e && e.play().catch((() => {}))
+                },
+                _applyVideoPlaybackForTab() {
+                    this.get("activeTab") === b ? this._resumeVideo() : this._pauseVideo()
                 },
                 _waitForVideoPlaying() {
                     const e = this._getVideoElement(),
@@ -13988,7 +14224,7 @@
                 _cleanupModal() {
                     const e = this._backdropEl;
                     if (!e) return;
-                    this._unobserveGameflow(), this._unobserveInventory(), this.removeObserver("lolInventoryService.ownedInventoryContent", this, this._onInventoryChanged);
+                    this._unobserveGameflow(), this._unobserveTencentLearnMoreUrl(), this._unobserveInventory(), this.removeObserver("lolInventoryService.ownedInventoryContent", this, this._onInventoryChanged);
                     const t = this._getVideoElement();
                     t && (t.pause(), t.src = "", t.load()), e.removeEventListener("click", this._onBackdropClick), this._originalParent && (this._originalParent.insertBefore(this.element, this._originalNextSibling), this._originalParent = null, this._originalNextSibling = null), this._backdropEl = null, this._audioVolume = null, this._carouselOffset = 0, this._skinsInitialized = !1, this._clearSplashOnlyMode(), this._openPurchaseSkin = null, this._openPurchaseCatalogItem = null, this.setProperties({
                         championData: null,
@@ -14027,6 +14263,14 @@
                 _unobserveGameflow() {
                     s.db.unobserve(`/lol-gameflow/${g}`, this)
                 },
+                _observeTencentLearnMoreUrl() {
+                    this.get("isTencentRegion") && s.db.observe(y, this, (e => {
+                        this.set("_tencentLearnMoreUrl", e || null)
+                    }))
+                },
+                _unobserveTencentLearnMoreUrl() {
+                    this.get("isTencentRegion") && s.db.unobserve(y, this)
+                },
                 _observeInventory(e) {
                     this._unobserveInventory();
                     const t = this.get("summonerId");
@@ -14059,15 +14303,15 @@
                     this._super(...arguments), this._cleanupModal()
                 }
             });
-            t.default = b
+            t.default = E
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "A+wBmEub",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-champion-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-champion-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-champion-modal\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isOpen"]]],null,18]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive","purchaseModalItemBadge"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]],["get",["classicExclusiveFlagNode"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"unlockChampion"],null],null],["flush-element"],["append",["unknown",["tra","cdp_actions_unlock"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn jade-champion-modal__cta-btn--disabled"],["flush-element"],["append",["unknown",["tra","cdp_store_owned_message"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-separator-v"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["index"]],1],null]],null,3],["text","          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectAbility",["get",["index"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__ability-icon-wrap\\n              ",["helper",["if"],[["helper",["eq"],[["get",["index"]],["get",["selectedAbilityIndex"]]],null],"jade-champion-modal__ability-icon-wrap--selected","jade-champion-modal__ability-icon-wrap--default"],null]]]],["flush-element"],["text","\\n              "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["ability","iconPath"]]]]],["static-attr","draggable","false"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-key"],["flush-element"],["append",["unknown",["ability","key"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["ability","index"]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","jade-champion-modal__mastery-crest"],["dynamic-attr","src",["unknown",["masteryCrestPath"]],null],["static-attr","draggable","false"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__chroma-flyout-toggle-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleChromaFlyout"],null],null],["flush-element"],["text","\\n            "],["open-element","lc-flyout",[]],["dynamic-attr","didShow",["helper",["action"],[["get",[null]],"repositionCaret"],null],null],["dynamic-attr","open",["unknown",["showChromaFlyout"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"onChromaFlyoutHide"],null],null],["dynamic-attr","uiKitOptionOverrides",["unknown",["chromaFlyoutOptions"]],null],["flush-element"],["text","\\n              "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n                "],["append",["helper",["jade-collections-chroma-flyout-content"],null,[["unlockSkin","chromas"],[["helper",["action"],[["get",[null]],"unlockSkin"],null],["get",["selectedSkin","chromas"]]]]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"unlockSkin",["get",["selectedSkin"]]],null],null],["flush-element"],["append",["unknown",["skinCtaLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn jade-champion-modal__cta-btn--disabled"],["flush-element"],["append",["unknown",["skinCtaLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-arrow-button",[]],["static-attr","direction","right"],["static-attr","class","jade-champion-modal__skin-arrow--right"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"nextSkin"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-thumb\\n                  ",["helper",["if"],[["get",["skin","isSelected"]],"jade-champion-modal__skin-thumb--selected"],null],"\\n                  ",["helper",["unless"],[["get",["skin","ownership","owned"]],"jade-champion-modal__skin-thumb--not-owned"],null]]]],["dynamic-attr","style",["concat",["background-image:url(",["helper",["if"],[["get",["skin","tilePath"]],["get",["skin","tilePath"]],["get",["skin","splashPath"]]],null],")"]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"skinThumbnailClicked",["get",["index"]],"right"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["skin","index"]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-thumb\\n                  ",["helper",["if"],[["get",["skin","isSelected"]],"jade-champion-modal__skin-thumb--selected"],null],"\\n                  ",["helper",["unless"],[["get",["skin","ownership","owned"]],"jade-champion-modal__skin-thumb--not-owned"],null]]]],["dynamic-attr","style",["concat",["background-image:url(",["helper",["if"],[["get",["skin","tilePath"]],["get",["skin","tilePath"]],["get",["skin","splashPath"]]],null],")"]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"skinThumbnailClicked",["get",["index"]],"center"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["skin","index"]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-thumb\\n                  ",["helper",["if"],[["get",["skin","isSelected"]],"jade-champion-modal__skin-thumb--selected"],null],"\\n                  ",["helper",["unless"],[["get",["skin","ownership","owned"]],"jade-champion-modal__skin-thumb--not-owned"],null]]]],["dynamic-attr","style",["concat",["background-image:url(",["helper",["if"],[["get",["skin","tilePath"]],["get",["skin","tilePath"]],["get",["skin","splashPath"]]],null],")"]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"skinThumbnailClicked",["get",["index"]],"left"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["skin","index"]},{"statements":[["text","          "],["open-element","lol-uikit-arrow-button",[]],["static-attr","direction","left"],["static-attr","class","jade-champion-modal__skin-arrow--left"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"prevSkin"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","li",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-pip ",["helper",["if"],[["get",["skin","isSelected"]],"jade-champion-modal__skin-pip--selected"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"skinPipClicked",["get",["index"]]],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["skin","index"]},{"statements":[["text","          "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["splashPath"]]]]],["static-attr","draggable","false"],["flush-element"],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["splashPath"]]],null,15]],"locals":[]},{"statements":[["text","          "],["open-element","video",[]],["static-attr","loop",""],["static-attr","autoplay",""],["static-attr","preload","auto"],["dynamic-attr","src",["concat",[["unknown",["selectedAbilityVideoUrl"]]]]],["dynamic-attr","poster",["concat",[["unknown",["selectedAbilityVideoImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","jade-champion-modal-backdrop"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal\\n    ",["helper",["if"],[["get",["isLoading"]],"jade-champion-modal--loading"],null],"\\n    ",["helper",["if"],[["get",["isOverviewTab"]],"jade-champion-modal--overview-tab"],null],"\\n    ",["helper",["if"],[["get",["isAbilitiesTab"]],"jade-champion-modal--abilities-tab"],null],"\\n    ",["helper",["if"],[["get",["isSkinTab"]],"jade-champion-modal--skins-tab"],null],"\\n    ",["helper",["if"],[["get",["isSplashOnly"]],"jade-champion-modal--splash-only"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__content"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__video-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-section jade-champion-modal__ability-section--active"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedAbilityVideoUrl"]]],null,17,16],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__video-overlay"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skins-view"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-splash"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["skinSplashPath"]],")"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-overlay"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-info"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-name"],["flush-element"],["append",["unknown",["selectedSkinName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-description"],["flush-element"],["append",["helper",["sanitize"],[["get",["selectedSkinDescription"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-metadata-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-classic ",["helper",["if"],[["get",["isSelectedSkinClassicExclusive"]],"jade-champion-modal__skin-classic--visible"],null]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-classic-exclusive-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-classic-exclusive-label"],["flush-element"],["append",["unknown",["tra","jade_collection_champions_skins_classic_exclusive"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-legacy ",["helper",["if"],[["get",["isSelectedSkinLegacy"]],"jade-champion-modal__skin-legacy--visible"],null]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-legacy-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-legacy-label"],["flush-element"],["append",["unknown",["tra","showcase_legacy_skin"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-pips"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-pip-line jade-champion-modal__skin-pip-line--left"],["flush-element"],["close-element"],["text","\\n        "],["open-element","ul",[]],["static-attr","class","jade-champion-modal__skin-pip-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["skins"]]],null,14],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-pip-line jade-champion-modal__skin-pip-line--right"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-carousel"],["flush-element"],["text","\\n"],["block",["if"],[["get",["longCarousel"]]],null,13],["text","        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-thumbnails"],["dynamic-attr","style",["concat",["width:",["unknown",["carouselContainerWidth"]],"px"]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-track"],["dynamic-attr","style",["concat",["transform:translateX(",["unknown",["carouselInitialOffset"]],"px)"]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["leftCarouselBuffer"]]],null,12],["block",["each"],[["get",["skins"]]],null,11],["block",["each"],[["get",["rightCarouselBuffer"]]],null,10],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["longCarousel"]]],null,9],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-cta"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isSkinCtaDisabled"]]],null,8,7],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__footer-buttons"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__toggle-ui"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleSplashOnly"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__toggle-ui-icon"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedSkin","chromas"]]],null,6],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__champ-info"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__role-icon"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["roleIconUrl"]],")"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__champ-text"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__champ-name"],["flush-element"],["append",["unknown",["championName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__champ-title"],["flush-element"],["append",["unknown",["championTitle"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__tabs"],["flush-element"],["text","\\n      "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-champion-modal__tab ",["helper",["if"],[["get",["isOverviewTab"]],"jade-champion-modal__tab--active","jade-champion-modal__tab--inactive"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"switchTab","overview"],null],null],["flush-element"],["append",["unknown",["tra","jade_champion_modal_overview"]],false],["close-element"],["text","\\n      "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-champion-modal__tab ",["helper",["if"],[["get",["isAbilitiesTab"]],"jade-champion-modal__tab--active","jade-champion-modal__tab--inactive"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"switchTab","abilities"],null],null],["flush-element"],["append",["unknown",["tra","cdp_navigation_abilities"]],false],["close-element"],["text","\\n      "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-champion-modal__tab ",["helper",["if"],[["get",["isSkinTab"]],"jade-champion-modal__tab--active","jade-champion-modal__tab--inactive"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"switchTab","skins"],null],null],["flush-element"],["append",["unknown",["tra","cdp_navigation_skins"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__overview"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__mastery-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["masteryCrestPath"]]],null,5],["text","        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__mastery-text"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__mastery-level"],["flush-element"],["append",["unknown",["masteryLevelLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__mastery-points"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-champion-modal__mastery-points-current"],["flush-element"],["append",["unknown",["formattedMasteryPoints"]],false],["close-element"],["text","/"],["append",["unknown",["formattedMasteryGoal"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__overview-bio"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__overview-bio-heading"],["flush-element"],["append",["unknown",["tra","jade_champion_modal_classic_changes"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__overview-bio-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["championShortBio"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__abilities"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-icons"],["flush-element"],["text","\\n"],["block",["each"],[["get",["abilities"]]],null,4],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-separator-h"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-desc"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-name"],["flush-element"],["append",["unknown",["selectedAbilityName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-description"],["flush-element"],["append",["helper",["sanitize"],[["get",["selectedAbilityDescription"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__cta"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isChampionOwned"]]],null,2,1],["text","      "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"learnMore"],null],null],["flush-element"],["append",["unknown",["tra","cdp_actions_learn_more"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__close-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"close"],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__close-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,0],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "i/McDjhr",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-champion-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-champion-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-champion-modal\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isOpen"]]],null,18]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive","purchaseModalItemBadge"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]],["get",["classicExclusiveFlagNode"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"unlockChampion"],null],null],["flush-element"],["append",["unknown",["tra","cdp_actions_unlock"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn jade-champion-modal__cta-btn--disabled"],["flush-element"],["append",["unknown",["tra","cdp_store_owned_message"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-separator-v"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["helper",["eq"],[["get",["index"]],1],null]],null,3],["text","          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectAbility",["get",["index"]]],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__ability-icon-wrap\\n              ",["helper",["if"],[["helper",["eq"],[["get",["index"]],["get",["selectedAbilityIndex"]]],null],"jade-champion-modal__ability-icon-wrap--selected","jade-champion-modal__ability-icon-wrap--default"],null]]]],["flush-element"],["text","\\n              "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["ability","iconPath"]]]]],["static-attr","draggable","false"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-key"],["flush-element"],["append",["unknown",["ability","key"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["ability","index"]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","jade-champion-modal__mastery-crest"],["dynamic-attr","src",["unknown",["masteryCrestPath"]],null],["static-attr","draggable","false"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__chroma-flyout-toggle-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleChromaFlyout"],null],null],["flush-element"],["text","\\n            "],["open-element","lc-flyout",[]],["dynamic-attr","didShow",["helper",["action"],[["get",[null]],"repositionCaret"],null],null],["dynamic-attr","open",["unknown",["showChromaFlyout"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"onChromaFlyoutHide"],null],null],["dynamic-attr","uiKitOptionOverrides",["unknown",["chromaFlyoutOptions"]],null],["flush-element"],["text","\\n              "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n                "],["append",["helper",["jade-collections-chroma-flyout-content"],null,[["unlockSkin","chromas"],[["helper",["action"],[["get",[null]],"unlockSkin"],null],["get",["selectedSkin","chromas"]]]]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"unlockSkin",["get",["selectedSkin"]]],null],null],["flush-element"],["append",["unknown",["skinCtaLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn jade-champion-modal__cta-btn--disabled"],["flush-element"],["append",["unknown",["skinCtaLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-arrow-button",[]],["static-attr","direction","right"],["static-attr","class","jade-champion-modal__skin-arrow--right"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"nextSkin"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-thumb\\n                  ",["helper",["if"],[["get",["skin","isSelected"]],"jade-champion-modal__skin-thumb--selected"],null],"\\n                  ",["helper",["unless"],[["get",["skin","ownership","owned"]],"jade-champion-modal__skin-thumb--not-owned"],null]]]],["dynamic-attr","style",["concat",["background-image:url(",["helper",["if"],[["get",["skin","tilePath"]],["get",["skin","tilePath"]],["get",["skin","splashPath"]]],null],")"]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"skinThumbnailClicked",["get",["index"]],"right"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["skin","index"]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-thumb\\n                  ",["helper",["if"],[["get",["skin","isSelected"]],"jade-champion-modal__skin-thumb--selected"],null],"\\n                  ",["helper",["unless"],[["get",["skin","ownership","owned"]],"jade-champion-modal__skin-thumb--not-owned"],null]]]],["dynamic-attr","style",["concat",["background-image:url(",["helper",["if"],[["get",["skin","tilePath"]],["get",["skin","tilePath"]],["get",["skin","splashPath"]]],null],")"]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"skinThumbnailClicked",["get",["index"]],"center"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["skin","index"]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-thumb\\n                  ",["helper",["if"],[["get",["skin","isSelected"]],"jade-champion-modal__skin-thumb--selected"],null],"\\n                  ",["helper",["unless"],[["get",["skin","ownership","owned"]],"jade-champion-modal__skin-thumb--not-owned"],null]]]],["dynamic-attr","style",["concat",["background-image:url(",["helper",["if"],[["get",["skin","tilePath"]],["get",["skin","tilePath"]],["get",["skin","splashPath"]]],null],")"]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"skinThumbnailClicked",["get",["index"]],"left"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["skin","index"]},{"statements":[["text","          "],["open-element","lol-uikit-arrow-button",[]],["static-attr","direction","left"],["static-attr","class","jade-champion-modal__skin-arrow--left"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"prevSkin"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","li",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-pip ",["helper",["if"],[["get",["skin","isSelected"]],"jade-champion-modal__skin-pip--selected"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"skinPipClicked",["get",["index"]]],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":["skin","index"]},{"statements":[["text","          "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["splashPath"]]]]],["static-attr","draggable","false"],["flush-element"],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["block",["if"],[["get",["splashPath"]]],null,15]],"locals":[]},{"statements":[["text","          "],["open-element","video",[]],["static-attr","loop",""],["static-attr","preload","auto"],["dynamic-attr","src",["concat",[["unknown",["selectedAbilityVideoUrl"]]]]],["dynamic-attr","poster",["concat",[["unknown",["selectedAbilityVideoImageUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","jade-champion-modal-backdrop"],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal\\n    ",["helper",["if"],[["get",["isLoading"]],"jade-champion-modal--loading"],null],"\\n    ",["helper",["if"],[["get",["isOverviewTab"]],"jade-champion-modal--overview-tab"],null],"\\n    ",["helper",["if"],[["get",["isAbilitiesTab"]],"jade-champion-modal--abilities-tab"],null],"\\n    ",["helper",["if"],[["get",["isSkinTab"]],"jade-champion-modal--skins-tab"],null],"\\n    ",["helper",["if"],[["get",["isSplashOnly"]],"jade-champion-modal--splash-only"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__content"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__video-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-section jade-champion-modal__ability-section--active"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showAbilityVideo"]]],null,17,16],["text","        "],["open-element","img",[]],["static-attr","class","jade-champion-modal-ability-section-shroud"],["static-attr","src","/fe/lol-jade/images/collections/champion-details-shroud.png"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__video-overlay"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skins-view"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-splash"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["skinSplashPath"]],")"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-overlay"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-info"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-name"],["flush-element"],["append",["unknown",["selectedSkinName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-description"],["flush-element"],["append",["helper",["sanitize"],[["get",["selectedSkinDescription"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-metadata-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-classic ",["helper",["if"],[["get",["isSelectedSkinClassicExclusive"]],"jade-champion-modal__skin-classic--visible"],null]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-classic-exclusive-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-classic-exclusive-label"],["flush-element"],["append",["unknown",["tra","jade_collection_champions_skins_classic_exclusive"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-champion-modal__skin-legacy ",["helper",["if"],[["get",["isSelectedSkinLegacy"]],"jade-champion-modal__skin-legacy--visible"],null]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-legacy-icon"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-legacy-label"],["flush-element"],["append",["unknown",["tra","showcase_legacy_skin"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-pips"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-pip-line jade-champion-modal__skin-pip-line--left"],["flush-element"],["close-element"],["text","\\n        "],["open-element","ul",[]],["static-attr","class","jade-champion-modal__skin-pip-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["skins"]]],null,14],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-pip-line jade-champion-modal__skin-pip-line--right"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-carousel"],["flush-element"],["text","\\n"],["block",["if"],[["get",["longCarousel"]]],null,13],["text","        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-thumbnails"],["dynamic-attr","style",["concat",["width:",["unknown",["carouselContainerWidth"]],"px"]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-track"],["dynamic-attr","style",["concat",["transform:translateX(",["unknown",["carouselInitialOffset"]],"px)"]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["leftCarouselBuffer"]]],null,12],["block",["each"],[["get",["skins"]]],null,11],["block",["each"],[["get",["rightCarouselBuffer"]]],null,10],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["longCarousel"]]],null,9],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__skin-cta"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isSkinCtaDisabled"]]],null,8,7],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__footer-buttons"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__toggle-ui"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"toggleSplashOnly"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__toggle-ui-icon"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedSkin","chromas"]]],null,6],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__champ-info"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__role-icon"],["dynamic-attr","style",["concat",["background-image:url(",["unknown",["roleIconUrl"]],")"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__champ-text"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__champ-name"],["flush-element"],["append",["unknown",["championName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__champ-title"],["flush-element"],["append",["unknown",["championTitle"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__tabs"],["flush-element"],["text","\\n      "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-champion-modal__tab ",["helper",["if"],[["get",["isOverviewTab"]],"jade-champion-modal__tab--active","jade-champion-modal__tab--inactive"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"switchTab","overview"],null],null],["flush-element"],["append",["unknown",["tra","jade_champion_modal_overview"]],false],["close-element"],["text","\\n      "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-champion-modal__tab ",["helper",["if"],[["get",["isAbilitiesTab"]],"jade-champion-modal__tab--active","jade-champion-modal__tab--inactive"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"switchTab","abilities"],null],null],["flush-element"],["append",["unknown",["tra","cdp_navigation_abilities"]],false],["close-element"],["text","\\n      "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-champion-modal__tab ",["helper",["if"],[["get",["isSkinTab"]],"jade-champion-modal__tab--active","jade-champion-modal__tab--inactive"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"switchTab","skins"],null],null],["flush-element"],["append",["unknown",["tra","cdp_navigation_skins"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__overview"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__mastery-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["masteryCrestPath"]]],null,5],["text","        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__mastery-text"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__mastery-level"],["flush-element"],["append",["unknown",["masteryLevelLabel"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-champion-modal__mastery-points"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-champion-modal__mastery-points-current"],["flush-element"],["append",["unknown",["formattedMasteryPoints"]],false],["close-element"],["text","/"],["append",["unknown",["formattedMasteryGoal"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__overview-bio"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__overview-bio-heading"],["flush-element"],["append",["unknown",["tra","jade_champion_modal_classic_changes"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__overview-bio-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["championShortBio"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__abilities"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-icons"],["flush-element"],["text","\\n"],["block",["each"],[["get",["abilities"]]],null,4],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-separator-h"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-desc"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-name"],["flush-element"],["append",["unknown",["selectedAbilityName"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-champion-modal__ability-description"],["flush-element"],["append",["helper",["sanitize"],[["get",["selectedAbilityDescription"]]],null],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__cta"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isChampionOwned"]]],null,2,1],["text","      "],["open-element","button",[]],["static-attr","class","jade-champion-modal__cta-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"learnMore"],null],null],["flush-element"],["append",["unknown",["tra","cdp_actions_learn_more"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-champion-modal__close-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"close"],null],null],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-champion-modal__close-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,0],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14076,9 +14320,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(254);
+            n(255);
             var a = s.Ember.Component.extend({
-                layout: n(255),
+                layout: n(256),
                 classNames: ["jade-collections-chroma-flyout-content"],
                 actions: {
                     onChromaClick(e) {
@@ -14103,9 +14347,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(257);
+            n(258);
             var a = s.Ember.Component.extend({
-                layout: n(258),
+                layout: n(259),
                 classNames: ["jade-home-voting-card-component"],
                 summonersJourneyService: s.Ember.inject.service("summoners-journey"),
                 votingInactiveStatusLoc: s.Ember.computed("votingData.isVotingConcluded", "votingData.isVotingResultsPhase", (function() {
@@ -14154,7 +14398,7 @@
                 value: !0
             }), t.default = void 0;
             var s = r(n(1)),
-                a = r(n(197)),
+                a = r(n(198)),
                 l = n(98),
                 o = n(2),
                 i = n(61);
@@ -14168,7 +14412,7 @@
                 Ember: c,
                 TelemetryService: m
             } = s.default;
-            n(260);
+            n(261);
             const d = "jade-voting-system",
                 u = "voting_modal_opened",
                 p = "voting_modal_time_spent",
@@ -14181,7 +14425,7 @@
                 y = "learnMore",
                 E = "results";
             var x = c.Component.extend({
-                layout: n(261),
+                layout: n(262),
                 classNames: ["voting-system"],
                 showModal: !1,
                 votingData: null,
@@ -14479,8 +14723,8 @@
             const {
                 Ember: o
             } = a.default;
-            n(263), e.exports = o.Component.extend({
-                layout: n(264),
+            n(264), e.exports = o.Component.extend({
+                layout: n(265),
                 classNames: ["jade-ftux-parchment-modal"],
                 showModal: !1,
                 buttonText: null,
@@ -14516,12 +14760,12 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(61);
-            n(266);
+            n(267);
             const l = s.UiKitPlugin.getTooltipManager();
             var o = s.Ember.Component.extend({
                 classNames: ["portrait-card"],
                 classNameBindings: ["portrait.isFavorite:portrait-card--favorite", "isLocked:portrait-card--locked", "portrait.isOwned:portrait-card--owned"],
-                layout: n(267),
+                layout: n(268),
                 portrait: null,
                 holoAnimationsEnabled: !0,
                 _tooltipAttached: !1,
@@ -14635,10 +14879,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(269);
+            n(270);
             var a = s.Ember.Component.extend({
                 classNames: ["jade-store-holo"],
-                layout: n(270),
+                layout: n(271),
                 holoFoilPath: null,
                 holoAnimationsEnabled: !0,
                 _holoVideo: null,
@@ -14704,13 +14948,15 @@
                 value: !0
             }), t.default = t.JadeCelebrationVideo = void 0;
             var s = n(1),
-                a = n(107);
-            n(272);
-            const l = "/lol-client-config/v3/client-config/",
-                o = l + "lol.client_settings.paw.enableRPTopUp",
-                i = l + "lol.client_settings.jade.tencentTosLink",
-                r = s.dataBinding.bindTo(s.socket),
-                c = s.Ember.Component.extend({
+                a = n(108),
+                l = n(83),
+                o = n(103);
+            n(273);
+            const i = "/lol-client-config/v3/client-config/",
+                r = i + "lol.client_settings.paw.enableRPTopUp",
+                c = i + "lol.client_settings.jade.tencentTosLink",
+                m = s.dataBinding.bindTo(s.socket),
+                d = s.Ember.Component.extend({
                     tagName: "lol-uikit-video",
                     classNames: ["jade-fiat-modal__celebration-video"],
                     attributeBindings: ["src", "type"],
@@ -14720,28 +14966,64 @@
                         this.element.play()
                     }
                 });
-            t.JadeCelebrationVideo = c;
-            var m = s.Ember.Component.extend({
-                layout: n(273),
+            t.JadeCelebrationVideo = d;
+            var u = s.Ember.Component.extend({
+                layout: n(274),
                 classNames: ["jade-fiat-purchase-modal-component"],
                 tra: s.Ember.inject.service(),
+                lolInventoryService: s.Ember.inject.service("shoppefront-lol-inventory"),
                 isRPTopUpEnabled: !1,
                 item: null,
+                ownedItemInstanceIds: null,
+                bundledItems: null,
+                bundleNetCost: null,
+                bundleOriginalCost: null,
+                bundleSavings: null,
                 isPurchasing: !1,
                 purchaseSuccess: !1,
                 purchaseError: null,
-                itemName: s.Ember.computed.reads("item.name"),
+                itemName: s.Ember.computed("item.id", "item.name", "isBundle", "tra", (function() {
+                    const e = this.get("tra");
+                    if (this.get("isBundle")) {
+                        const t = `jade_bundle_item_title_${this.get("item.id")}`;
+                        return e.exists(t) ? e.get(t) : e.get("jade_bundle_item_title_default")
+                    }
+                    return this.get("item.name")
+                })),
                 itemImage: s.Ember.computed.reads("item.iconUrl"),
                 itemDescription: null,
+                resolvedDescription: s.Ember.computed("item.id", "isBundle", "itemDescription", "tra", (function() {
+                    if (this.get("isBundle")) {
+                        const e = this.get("tra"),
+                            t = `jade_bundle_item_description_${this.get("item.id")}`;
+                        return e.exists(t) ? e.get(t) : ""
+                    }
+                    return this.get("itemDescription")
+                })),
                 itemContentType: s.Ember.computed.reads("item.contentType"),
                 fiatPriceFormatted: s.Ember.computed.reads("item.fiatPriceFormatted"),
                 fiatPricePointId: s.Ember.computed.reads("item.fiatPricePointId"),
                 hasFiatPrice: s.Ember.computed.reads("item.hasFiatPrice"),
-                rpCost: s.Ember.computed.reads("item.cost"),
+                rpCost: s.Ember.computed("item.cost", "isBundle", "bundleNetCost", (function() {
+                    return this.get("isBundle") && null != this.get("bundleNetCost") ? this.get("bundleNetCost") : this.get("item.cost")
+                })),
                 rpCurrencyIconPath: s.Ember.computed.reads("item.currencyIconPath"),
-                rpOriginalCost: s.Ember.computed.reads("item.originalCost"),
-                hasDiscount: s.Ember.computed.reads("item.hasDiscount"),
-                discountPercent: s.Ember.computed("item.discountPercent", (function() {
+                mapAvailability: s.Ember.computed("item", (function() {
+                    return (0, l.getMapAvailability)(this.get("item"), this.get("tra"))
+                })),
+                rpOriginalCost: s.Ember.computed("item.originalCost", "isBundle", "bundleOriginalCost", (function() {
+                    return this.get("isBundle") && null != this.get("bundleOriginalCost") ? this.get("bundleOriginalCost") : this.get("item.originalCost")
+                })),
+                hasDiscount: s.Ember.computed("item.hasDiscount", "isBundle", "bundleSavings", (function() {
+                    return this.get("isBundle") ? (this.get("bundleSavings") || 0) > 0 : this.get("item.hasDiscount")
+                })),
+                showOwnershipCreditNote: s.Ember.computed.and("hasDiscount", "hasFiatPrice"),
+                discountPercent: s.Ember.computed("item.discountPercent", "isBundle", "bundleSavings", "bundleOriginalCost", (function() {
+                    if (this.get("isBundle")) {
+                        const e = this.get("bundleSavings") || 0,
+                            t = this.get("bundleOriginalCost") || 0;
+                        return e > 0 && t > 0 ? Math.round(e / t * 100) : 0
+                    }
                     const e = this.get("item.discountPercent");
                     return null == e || 0 === e ? 0 : Math.round(100 * e)
                 })),
@@ -14774,20 +15056,113 @@
                         disclaimerLink: t
                     }))
                 })),
+                isBundle: s.Ember.computed("item.catalogItem.purchaseUnits.[]", (function() {
+                    return (this.get("item.catalogItem.purchaseUnits") || []).length > 1
+                })),
+                purchaseDisclaimer: s.Ember.computed("isBundle", "termsOfServiceDisclaimer", "tra", (function() {
+                    return this.get("isBundle") ? s.Ember.String.htmlSafe(this.get("tra").get("jade_fiat_modal_bundle_non_refundable")) : this.get("termsOfServiceDisclaimer")
+                })),
                 init() {
-                    this._super(...arguments), r.observe(o, this, (function(e) {
+                    this._super(...arguments), m.observe(r, this, (function(e) {
                         this.set("isRPTopUpEnabled", !!e)
-                    })), this.get("isTencentRegion") && r.observe(i, this, (function(e) {
+                    })), this.get("isTencentRegion") && m.observe(c, this, (function(e) {
                         this.set("tencentTosLink", e || null)
                     }))
                 },
+                _debugAfford: s.Ember.observer("wallet.RP", "rpCost", "item.currency", (function() {
+                    this._logAffordDebug("observer")
+                })),
+                _logAffordDebug(e) {
+                    console.log("[jade-fiat-modal] afford debug (" + e + ")", {
+                        itemId: this.get("item.id"),
+                        itemName: this.get("item.name"),
+                        itemCurrency: this.get("item.currency"),
+                        itemCost: this.get("item.cost"),
+                        rpCost: this.get("rpCost"),
+                        walletRP: this.get("wallet.RP"),
+                        wallet: this.get("wallet"),
+                        prices: this.get("item.prices"),
+                        hasFiatPrice: this.get("hasFiatPrice"),
+                        isBundle: this.get("isBundle"),
+                        rpNewBalance: this.get("rpNewBalance"),
+                        cantAffordRp: this.get("cantAffordRp")
+                    })
+                },
                 didInsertElement() {
-                    this._super(...arguments), this._onPaymentMessage = e => {
+                    this._super(...arguments), this._logAffordDebug("didInsertElement"), this._resolveBundledItems(), this._onPaymentMessage = e => {
                         e.data && "closePaymentsWindow" === e.data.action && s.Ember.run((() => this._closePaymentWindow()))
                     }, window.addEventListener("message", this._onPaymentMessage)
                 },
                 willDestroyElement() {
-                    this._super(...arguments), r.unobserve(o, this), this.get("isTencentRegion") && r.unobserve(i, this), this._onPaymentMessage && (window.removeEventListener("message", this._onPaymentMessage), this._onPaymentMessage = null), this._cleanupPaymentWindow(), this._cleanupRpTopUpModal()
+                    this._super(...arguments), m.unobserve(r, this), this.get("isTencentRegion") && m.unobserve(c, this), this._onPaymentMessage && (window.removeEventListener("message", this._onPaymentMessage), this._onPaymentMessage = null), this._cleanupPaymentWindow(), this._cleanupRpTopUpModal()
+                },
+                _resolveBundledItems() {
+                    const e = this.get("item.catalogItem"),
+                        t = e && e.purchaseUnits || [];
+                    if (t.length <= 1) return void this.set("bundledItems", null);
+                    const n = this.get("tra"),
+                        a = this.get("ownedItemInstanceIds") || this.get("lolInventoryService.ownedItemInstanceIds"),
+                        l = t.map(((e, t) => {
+                            const s = e && e.fulfillment || {},
+                                l = s.finalDelta || s.delta || 1;
+                            let i = (0, o.getInventoryTypeLabel)(s.itemTypeId, n);
+                            !i && s.currencyId && (i = n.get("battlepass_inventory_type_currency"));
+                            const r = !!(s.itemId && a && a.has && a.has(s.itemId)),
+                                c = Math.abs(e && e.paymentOptions?.[0]?.payments?.[0]?.finalDelta || 0);
+                            return {
+                                key: s.itemId || s.currencyId || String(t),
+                                name: s.name,
+                                contentType: i,
+                                quantity: l,
+                                showQuantity: l > 1,
+                                owned: r,
+                                price: c,
+                                iconUrl: null
+                            }
+                        }));
+                    this.set("bundledItems", l);
+                    let i = 0,
+                        r = 0;
+                    l.forEach((e => {
+                        i += e.price, e.owned && (r += e.price)
+                    })), this.setProperties({
+                        bundleOriginalCost: i,
+                        bundleSavings: r,
+                        bundleNetCost: i - r
+                    }), t.forEach(((e, t) => {
+                        const n = e && e.fulfillment || {};
+                        this._resolveBundleDisplay(n).then((e => {
+                            if (this.isDestroying || this.isDestroyed || !e) return;
+                            const n = this.get("bundledItems"),
+                                a = n && n[t];
+                            a && s.Ember.run((() => {
+                                e.iconUrl && s.Ember.set(a, "iconUrl", e.iconUrl), e.name && s.Ember.set(a, "name", e.name)
+                            }))
+                        }))
+                    }))
+                },
+                _resolveBundleDisplay(e) {
+                    if (e.currencyId) return m.get("/lol-game-data/assets/v1/lolcurrency.json").then((t => {
+                        const n = (t || []).find((t => t.capCurrencyId === e.currencyId));
+                        return {
+                            iconUrl: n ? n.iconPath : null,
+                            name: n ? n.title : null
+                        }
+                    })).catch((() => ({
+                        iconUrl: null,
+                        name: null
+                    })));
+                    const t = e.itemId || e.itemInstanceId;
+                    return t ? m.get(`/lol-game-data-inventory/v1/items/contentIds/${t}`).then((e => ({
+                        iconUrl: e && (e.gipImage || e.splashPath || e.tilePath) || null,
+                        name: null
+                    }))).catch((() => ({
+                        iconUrl: null,
+                        name: null
+                    }))) : Promise.resolve({
+                        iconUrl: null,
+                        name: null
+                    })
                 },
                 _openRpTopUp() {
                     const e = Math.abs(this.get("rpNewBalance")),
@@ -14913,7 +15288,7 @@
                     try {
                         if (!await (0, a.executeBulkPurchase)({
                                 catalogItem: t,
-                                db: r,
+                                db: m,
                                 logger: s.logger,
                                 tra: n,
                                 observerCtx: this,
@@ -14955,15 +15330,15 @@
                     }
                 }
             });
-            t.default = m
+            t.default = u
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "aPp9l7Cm",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-fiat-purchase-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-fiat-purchase-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-fiat-purchase-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[true,"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"close"],null]]],17]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__button-group"],["flush-element"],["text","\\n                  "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","jade-fiat-modal__purchase-button"],["dynamic-attr","disabled",["helper",["unless"],[["get",["purchaseEnabled"]],true],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"buyWithFiat"],null],null],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-fiat-modal__btn-price"],["flush-element"],["append",["unknown",["fiatPriceFormatted"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__balance-info"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","jade-fiat-modal__new-balance-label"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_new_balance"]],false],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","jade-fiat-modal__currency-remaining"],["flush-element"],["append",["unknown",["rpNewBalance"]],false],["text"," "],["append",["unknown",["tra","jade_fiat_modal_currency_rp"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasRpNewBalance"]]],null,1]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__balance-info"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","jade-fiat-modal__cant-afford"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_cant_afford"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__btn-currency-icon jade-fiat-modal__btn-currency-icon--rp"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__error"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseError"]]],null,5],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__disclaimers"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","jadeFiatDisclaimer"],["static-attr","class","jade-fiat-modal__disclaimer-checkbox"],["flush-element"],["text","\\n                "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","jadeFiatDisclaimer"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosCheck"],null],null],["flush-element"],["close-element"],["text","\\n                "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","jadeFiatDisclaimer"],["static-attr","class","jade-fiat-modal__disclaimer-text"],["flush-element"],["text","\\n                  "],["append",["unknown",["termsOfServiceDisclaimer"]],true],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["jade-fiat-modal__digital-goods-disclaimer"]]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__buttons"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__button-group"],["flush-element"],["text","\\n                "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","jade-fiat-modal__purchase-button"],["dynamic-attr","disabled",["helper",["if"],[["get",["rpPurchaseDisabled"]],true],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"buyWithRp"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["rpCurrencyIconPath"]]],null,4],["text","                  "],["open-element","span",[]],["static-attr","class","jade-fiat-modal__btn-price"],["flush-element"],["append",["unknown",["rpCost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"],["block",["if"],[["get",["cantAffordRp"]]],null,3,2],["text","              "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["hasFiatPrice"]]],null,0],["text","            "],["close-element"],["text","\\n          "]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__spinner-footer"],["flush-element"],["text","\\n              "],["append",["unknown",["uikit-spinner"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,7,6]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__unlocked"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","jade-fiat-modal__unlocked-message"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_item_unlocked"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__done-button-row"],["flush-element"],["text","\\n                "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"close"],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","jade_fiat_modal_done"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-discount"],["flush-element"],["append",["unknown",["rpOriginalCost"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-percent"],["flush-element"],["text","-"],["append",["unknown",["discountPercent"]],false],["text","%"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","img",[]],["static-attr","class","jade-fiat-modal__price-icon"],["dynamic-attr","src",["concat",[["unknown",["rpCurrencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-type"],["flush-element"],["append",["unknown",["itemContentType"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-thumbnail"],["flush-element"],["text","\\n                      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["itemImage"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__description"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__description-text"],["flush-element"],["append",["unknown",["itemDescription"]],true],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["jade-celebration-video"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__image-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__image-wrapper"],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","jade-fiat-modal__image"],["dynamic-attr","src",["concat",[["unknown",["itemImage"]]]]],["dynamic-attr","alt",["concat",[["unknown",["itemName"]]]]],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__divider-vertical"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-fiat-modal"],["flush-element"],["text","\\n"],["block",["if"],[["get",["itemImage"]]],null,16],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,15],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__info"],["flush-element"],["text","\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__title"],["flush-element"],["append",["unknown",["itemName"]],false],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__divider"],["flush-element"],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__shrinking-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["itemDescription"]]],null,14],["text","\\n"],["text","          "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__items"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__items-header"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_purchase_summary"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__items-wrapper"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-row"],["flush-element"],["text","\\n"],["block",["if"],[["get",["itemImage"]]],null,13],["text","                  "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-info"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-name"],["flush-element"],["append",["unknown",["itemName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["itemContentType"]]],null,12],["text","                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__divider"],["flush-element"],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-details"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-total"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_total"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["rpCurrencyIconPath"]]],null,11],["text","          "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-amount"],["flush-element"],["append",["unknown",["rpCost"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDiscount"]]],null,10],["text","        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__divider"],["flush-element"],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__footer"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,9,8],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "HmzgZsXg",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-fiat-purchase-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-fiat-purchase-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-fiat-purchase-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[true,"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"close"],null]]],26]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__button-group"],["flush-element"],["text","\\n                  "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","jade-fiat-modal__purchase-button"],["dynamic-attr","disabled",["helper",["unless"],[["get",["purchaseEnabled"]],true],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"buyWithFiat"],null],null],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-fiat-modal__btn-price"],["flush-element"],["append",["unknown",["fiatPriceFormatted"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__balance-info"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","jade-fiat-modal__new-balance-label"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_new_balance"]],false],["close-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","jade-fiat-modal__currency-remaining"],["flush-element"],["append",["unknown",["rpNewBalance"]],false],["text"," "],["append",["unknown",["tra","jade_fiat_modal_currency_rp"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "]],"locals":[]},{"statements":[["block",["if"],[["get",["hasRpNewBalance"]]],null,1]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__balance-info"],["flush-element"],["text","\\n                    "],["open-element","p",[]],["static-attr","class","jade-fiat-modal__cant-afford"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_cant_afford"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__btn-currency-icon jade-fiat-modal__btn-currency-icon--rp"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__error"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["purchaseError"]]],null,5],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__disclaimers"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","jadeFiatDisclaimer"],["static-attr","class","jade-fiat-modal__disclaimer-checkbox"],["flush-element"],["text","\\n                "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","jadeFiatDisclaimer"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosCheck"],null],null],["flush-element"],["close-element"],["text","\\n                "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","jadeFiatDisclaimer"],["static-attr","class","jade-fiat-modal__disclaimer-text"],["flush-element"],["text","\\n                  "],["append",["unknown",["purchaseDisclaimer"]],true],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["jade-fiat-modal__digital-goods-disclaimer"]]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__buttons"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__button-group"],["flush-element"],["text","\\n                "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","jade-fiat-modal__purchase-button"],["dynamic-attr","disabled",["helper",["if"],[["get",["rpPurchaseDisabled"]],true],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"buyWithRp"],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["rpCurrencyIconPath"]]],null,4],["text","                  "],["open-element","span",[]],["static-attr","class","jade-fiat-modal__btn-price"],["flush-element"],["append",["unknown",["rpCost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"],["block",["if"],[["get",["cantAffordRp"]]],null,3,2],["text","              "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["hasFiatPrice"]]],null,0],["text","            "],["close-element"],["text","\\n          "]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__spinner-footer"],["flush-element"],["text","\\n              "],["append",["unknown",["uikit-spinner"]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,7,6]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__unlocked"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","jade-fiat-modal__unlocked-message"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_item_unlocked"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__done-button-row"],["flush-element"],["text","\\n                "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"close"],null],null],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","jade_fiat_modal_done"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","jade-fiat-modal__price-note"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_ownership_credit_message"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-discount"],["flush-element"],["append",["unknown",["rpOriginalCost"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-percent"],["flush-element"],["text","-"],["append",["unknown",["discountPercent"]],false],["text","%"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","img",[]],["static-attr","class","jade-fiat-modal__price-icon"],["dynamic-attr","src",["concat",[["unknown",["rpCurrencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-type"],["flush-element"],["append",["unknown",["itemContentType"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-thumbnail"],["flush-element"],["text","\\n                        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["itemImage"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-row"],["flush-element"],["text","\\n"],["block",["if"],[["get",["itemImage"]]],null,14],["text","                    "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-info"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-name"],["flush-element"],["append",["unknown",["itemName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["itemContentType"]]],null,13],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-purchased"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_item_purchased"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                          "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-type"],["flush-element"],["append",["unknown",["bundleItem","contentType"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["append",["unknown",["bundleItem","quantity"]],false],["text","x "]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-thumbnail"],["flush-element"],["text","\\n                          "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["bundleItem","iconUrl"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-row"],["flush-element"],["text","\\n"],["block",["if"],[["get",["bundleItem","iconUrl"]]],null,19],["text","                      "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-info"],["flush-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__item-name"],["flush-element"],["block",["if"],[["get",["bundleItem","showQuantity"]]],null,18],["append",["unknown",["bundleItem","name"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["bundleItem","contentType"]]],null,17],["text","                      "],["close-element"],["text","\\n"],["block",["if"],[["get",["bundleItem","owned"]]],null,16],["text","                    "],["close-element"],["text","\\n"]],"locals":["bundleItem"]},{"statements":[["block",["each"],[["get",["bundledItems"]]],null,20]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__map-availability"],["flush-element"],["append",["unknown",["mapAvailability"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__description"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__description-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["resolvedDescription"]]],null],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__divider"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["jade-celebration-video"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__image-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__image-wrapper"],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","jade-fiat-modal__image"],["dynamic-attr","src",["concat",[["unknown",["itemImage"]]]]],["dynamic-attr","alt",["concat",[["unknown",["itemName"]]]]],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__divider-vertical"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-fiat-modal"],["flush-element"],["text","\\n"],["block",["if"],[["get",["itemImage"]]],null,25],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,24],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__info"],["flush-element"],["text","\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__title"],["flush-element"],["append",["unknown",["itemName"]],false],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__divider"],["flush-element"],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__shrinking-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["resolvedDescription"]]],null,23],["text","\\n"],["block",["if"],[["get",["mapAvailability"]]],null,22],["text","\\n"],["text","          "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__items"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__items-header"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_purchase_summary"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__items-wrapper"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-scrollable",[]],["flush-element"],["text","\\n"],["block",["if"],[["get",["bundledItems"]]],null,21,15],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__divider"],["flush-element"],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-details"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-total"],["flush-element"],["append",["unknown",["tra","jade_fiat_modal_total"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["rpCurrencyIconPath"]]],null,12],["text","          "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__price-amount"],["flush-element"],["append",["unknown",["rpCost"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["hasDiscount"]]],null,11],["text","        "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["showOwnershipCreditNote"]]],null,10],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__divider"],["flush-element"],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-fiat-modal__footer"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,9,8],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -14971,10 +15346,11 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(1);
-            n(275);
-            var a = s.Ember.Component.extend({
-                layout: n(276),
+            var s = n(1),
+                a = n(83);
+            n(276);
+            var l = s.Ember.Component.extend({
+                layout: n(277),
                 classNames: ["jade-quantity-purchase-modal-component"],
                 tra: s.Ember.inject.service(),
                 lolInventoryService: s.Ember.inject.service("shoppefront-lol-inventory"),
@@ -14990,6 +15366,9 @@
                 itemDescription: s.Ember.computed.reads("item.description"),
                 isRune: s.Ember.computed.reads("item.isRune"),
                 isRunePage: s.Ember.computed.reads("item.isRunePage"),
+                mapAvailability: s.Ember.computed("item", (function() {
+                    return (0, a.getMapAvailability)(this.get("item"), this.get("tra"))
+                })),
                 remainingPurchasable: s.Ember.computed("item.maxOwnable", "item.quantityPurchasableItemCount", (function() {
                     return Math.max(0, this.get("item.maxOwnable") - this.get("item.quantityPurchasableItemCount"))
                 })),
@@ -15121,15 +15500,15 @@
                     }
                 }
             });
-            t.default = a
+            t.default = l
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "qYphnuU9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-quantity-purchase-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-quantity-purchase-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-quantity-purchase-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[true,"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"close"],null]]],13]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__new-balance"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_remaining_balance"]],false],["text"," "],["append",["unknown",["priceInfo","remaining"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__new-balance jade-quantity-modal__cant-afford"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_cant_afford"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["priceInfo","cantAfford"]]],null,1,0]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__new-balance jade-quantity-modal__cant-afford"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_max_owned"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-quantity-modal__btn-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["priceInfo","iconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__purchase"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","jade-quantity-modal__purchase-button"],["dynamic-attr","disabled",["helper",["if"],[["get",["priceInfo","disabled"]],true],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchase",["get",["priceInfo","key"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["priceInfo","iconPath"]]],null,4],["text","              "],["open-element","span",[]],["static-attr","class","jade-quantity-modal__btn-price"],["flush-element"],["append",["unknown",["priceInfo","totalCost"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["if"],[["get",["priceInfo","maxReached"]]],null,3,2],["text","          "],["close-element"],["text","\\n"]],"locals":["priceInfo"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__error"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__description"],["flush-element"],["append",["unknown",["itemDescription"]],true],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__text"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__title"],["flush-element"],["append",["unknown",["itemName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["itemDescription"]]],null,7],["text","        "],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__quantity-info"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__quantity"],["flush-element"],["text","\\n            "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-quantity-modal__btn-round jade-quantity-modal__btn-minus ",["helper",["if"],[["get",["decrementDisabled"]],"jade-quantity-modal__btn-round--disabled"],null]]]],["dynamic-attr","disabled",["unknown",["decrementDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"decrementQuantity"],null],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-quantity-modal__quantity-value"],["flush-element"],["append",["unknown",["quantity"]],false],["close-element"],["text","\\n            "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-quantity-modal__btn-round jade-quantity-modal__btn-plus ",["helper",["if"],[["get",["incrementDisabled"]],"jade-quantity-modal__btn-round--disabled"],null]]]],["dynamic-attr","disabled",["unknown",["incrementDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"incrementQuantity"],null],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__owned"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_owned"]],false],["text"," "],["append",["unknown",["item","quantityPurchasableItemCount"]],false],["text","/"],["append",["unknown",["item","maxOwnable"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__divider"],["flush-element"],["close-element"],["text","\\n\\n        "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["jade-quantity-modal__disclaimer"]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseError"]]],null,6],["text","\\n"],["block",["each"],[["get",["balanceInfo"]]],null,5],["text","      "]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__spinner"],["flush-element"],["text","\\n          "],["append",["unknown",["uikit-spinner"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,9,8]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__success"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","jade-quantity-modal__success-message"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_purchase_success"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__done-row"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"close"],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["tra","jade_quantity_modal_done"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__image-box"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["jade-quantity-modal__image ",["helper",["if"],[["get",["isRune"]],"jade-quantity-modal__image--rune"],null]]]],["dynamic-attr","src",["concat",[["unknown",["itemImage"]]]]],["dynamic-attr","alt",["concat",[["unknown",["itemName"]]]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-quantity-modal"],["flush-element"],["text","\\n"],["text","    "],["append",["unknown",["classicExclusiveBadge"]],false],["text","\\n\\n"],["block",["if"],[["get",["itemImage"]]],null,12],["text","\\n"],["text","    "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,11,10],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "kyTnxIls",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-quantity-purchase-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-quantity-purchase-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-quantity-purchase-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[true,"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"close"],null]]],14]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__new-balance"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_remaining_balance"]],false],["text"," "],["append",["unknown",["priceInfo","remaining"]],false],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__new-balance jade-quantity-modal__cant-afford"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_cant_afford"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["priceInfo","cantAfford"]]],null,1,0]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__new-balance jade-quantity-modal__cant-afford"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_max_owned"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-quantity-modal__btn-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["priceInfo","iconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__purchase"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-purchase-button",[]],["static-attr","class","jade-quantity-modal__purchase-button"],["dynamic-attr","disabled",["helper",["if"],[["get",["priceInfo","disabled"]],true],null],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchase",["get",["priceInfo","key"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["priceInfo","iconPath"]]],null,4],["text","              "],["open-element","span",[]],["static-attr","class","jade-quantity-modal__btn-price"],["flush-element"],["append",["unknown",["priceInfo","totalCost"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"],["block",["if"],[["get",["priceInfo","maxReached"]]],null,3,2],["text","          "],["close-element"],["text","\\n"]],"locals":["priceInfo"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__error"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__map-availability"],["flush-element"],["append",["unknown",["mapAvailability"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__description"],["flush-element"],["append",["unknown",["itemDescription"]],true],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__text"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__title"],["flush-element"],["append",["unknown",["itemName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["itemDescription"]]],null,8],["block",["if"],[["get",["mapAvailability"]]],null,7],["text","        "],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__quantity-info"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__quantity"],["flush-element"],["text","\\n            "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-quantity-modal__btn-round jade-quantity-modal__btn-minus ",["helper",["if"],[["get",["decrementDisabled"]],"jade-quantity-modal__btn-round--disabled"],null]]]],["dynamic-attr","disabled",["unknown",["decrementDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"decrementQuantity"],null],null],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-quantity-modal__quantity-value"],["flush-element"],["append",["unknown",["quantity"]],false],["close-element"],["text","\\n            "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-quantity-modal__btn-round jade-quantity-modal__btn-plus ",["helper",["if"],[["get",["incrementDisabled"]],"jade-quantity-modal__btn-round--disabled"],null]]]],["dynamic-attr","disabled",["unknown",["incrementDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"incrementQuantity"],null],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__owned"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_owned"]],false],["text"," "],["append",["unknown",["item","quantityPurchasableItemCount"]],false],["text","/"],["append",["unknown",["item","maxOwnable"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__divider"],["flush-element"],["close-element"],["text","\\n\\n        "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["jade-quantity-modal__disclaimer"]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseError"]]],null,6],["text","\\n"],["block",["each"],[["get",["balanceInfo"]]],null,5],["text","      "]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__spinner"],["flush-element"],["text","\\n          "],["append",["unknown",["uikit-spinner"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isPurchasing"]]],null,10,9]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__success"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","jade-quantity-modal__success-message"],["flush-element"],["append",["unknown",["tra","jade_quantity_modal_purchase_success"]],false],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__done-row"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"close"],null],null],["flush-element"],["text","\\n              "],["append",["unknown",["tra","jade_quantity_modal_done"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__image-box"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["jade-quantity-modal__image ",["helper",["if"],[["get",["isRune"]],"jade-quantity-modal__image--rune"],null]]]],["dynamic-attr","src",["concat",[["unknown",["itemImage"]]]]],["dynamic-attr","alt",["concat",[["unknown",["itemName"]]]]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-quantity-modal"],["flush-element"],["text","\\n"],["text","    "],["append",["unknown",["classicExclusiveBadge"]],false],["text","\\n\\n"],["block",["if"],[["get",["itemImage"]]],null,13],["text","\\n"],["text","    "],["open-element","div",[]],["static-attr","class","jade-quantity-modal__info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseSuccess"]]],null,12,11],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15138,11 +15517,11 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(278);
-            var a = n(279);
+            n(279);
+            var a = n(280);
             var l = s.Ember.Component.extend({
                 classNames: ["jade-default-template"],
-                layout: n(280),
+                layout: n(281),
                 eventOrigin: a.TELEMETRY_EVENT_ORIGIN_LOCATIONS.JADE_HOME,
                 mastheadAlignment: s.Ember.computed.alias("data.mastheadAlignment"),
                 imageUrl: s.Ember.computed.alias("data.header.media.url"),
@@ -15216,13 +15595,13 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(282);
+            n(283);
             const a = 8e3,
                 l = ["jade-text-group-hovered"],
                 o = ["jade-text-group-unhovered"];
             var i = s.Ember.Component.extend({
                 classNames: ["jade-pagination"],
-                layout: n(283),
+                layout: n(284),
                 totalItems: 0,
                 activeIndex: 0,
                 onPageChange: null,
@@ -15346,12 +15725,12 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(285);
-            var a = n(279),
+            n(286);
+            var a = n(280),
                 l = n(2),
                 o = s.Ember.Component.extend({
                     classNames: ["jade-cta"],
-                    layout: n(286),
+                    layout: n(287),
                     ctaData: null,
                     disabled: !1,
                     eventOrigin: null,
@@ -15389,7 +15768,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(121);
+                a = n(122);
             const l = {
                     1: {
                         CSS_CLASS: "eh-purchase-bundles-modal-option-single",
@@ -15470,7 +15849,9 @@
                                 e.displayName = e.name, e.quantity > 1 && (e.displayName = s.tra.formatString("event_hub_purchase_modal_summary_item_name_quantity", {
                                     name: e.name,
                                     quantity: e.quantity
-                                }))
+                                }));
+                                const t = e.tags || [];
+                                t.includes("jade_exclusive") ? e.mapAvailability = s.tra.get("cat_paw_jade_exclusive_flavor_text") : t.includes("jade_compatible") ? e.mapAvailability = s.tra.get("cat_paw_jade_compatible_flavor_text") : e.mapAvailability = s.tra.get("cat_paw_jade_not_available_on_classic_flavor_text")
                             }));
                             return {
                                 ...this.formatOption(e, 0),
@@ -15750,8 +16131,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "Uy4PnAxX",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\home.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home__top-nav-bg"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home__home-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isError"]]],null,8,7],["text","\\n"],["block",["if"],[["get",["votingTileError"]]],null,6,5],["text","  "],["open-element","div",[]],["static-attr","class","jade-home__shop-grid"],["flush-element"],["text","\\n    "],["append",["helper",["jade-home-shop-grid"],null,[["maxItems","onShopItemPurchase","shopLoadFailed","forceShopError"],[2,["helper",["action"],[["get",[null]],"openShopItemPurchase"],null],["get",["shopLoadFailed"]],["get",["forceShopError"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-home__play-button"],["flush-element"],["text","\\n    "],["open-element","button",[]],["static-attr","class","jade-home__play-button-img"],["dynamic-attr","disabled",["unknown",["patcher","isPlayButtonDisabled"]],null],["modifier",["action"],[["get",[null]],"createRegularGame"]],["flush-element"],["text","\\n      "],["append",["unknown",["tra","jade_home_play_game"]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["patcher","playButtonTooltip"]]],null,3],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["voting-system"],null,[["showModal","votingData","votingPower","onVoteChanged","onResultsViewed"],[["get",["showVotingModal"]],["get",["votingDataModel"]],["get",["votingPower"]],["helper",["action"],[["get",[null]],"onVoteChanged"],null],["helper",["action"],[["get",[null]],"onResultsViewed"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,2],["text","\\n"],["block",["if"],[["get",["showUpgradeModal"]]],null,1],["text","\\n"],["block",["jade-ftux-parchment-modal"],null,[["showModal","onClose","buttonText","onButtonClick"],[["get",["showHomeFtux"]],["helper",["action"],[["get",[null]],"closeHomeFtux"],null],["get",["tra","jade_ftux_home_explore"]],["helper",["action"],[["get",[null]],"exploreHomeFtux"],null]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-ftux-heading"],["flush-element"],["text","\\n    "],["open-element","h1",[]],["static-attr","class","jade-ftux-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","jade-ftux-subtitle"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-ftux-columns jade-ftux-columns"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-loadouts.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col1_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col1_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-gameplay.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col2_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col2_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-champions.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col3_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col3_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showUpgradeModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home__play-button-tooltip"],["flush-element"],["text","\\n        "],["append",["unknown",["patcher","playButtonTooltip"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["jade-home-voting-card"],null,[["votingData","hasVoted","isVotingActive","showPip","votingPower","onOpenVotingSystem"],[["get",["votingDataModel"]],["get",["hasVoted"]],["get",["votingDataModel","isVotingActive"]],["get",["votingDataModel","showPip"]],["get",["votingPower"]],["helper",["action"],[["get",[null]],"openVotingSystem"],null]]]],false],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["votingData"]]],null,4]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-home__voting-card jade-home__voting-card--error"],["flush-element"],["text","\\n      "],["open-element","svg",[]],["static-attr","class","jade-home__voting-error-icon"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["static-attr","aria-hidden","true"],["flush-element"],["text","\\n        "],["open-element","path",[]],["static-attr","d","M8.79 2.4 1.3 15.1a1.4 1.4 0 0 0 1.21 2.1h14.98a1.4 1.4 0 0 0 1.21-2.1L11.21 2.4a1.4 1.4 0 0 0-2.42 0Z"],["static-attr","fill","#ff2345"],["flush-element"],["close-element"],["text","\\n        "],["open-element","path",[]],["static-attr","d","M10 7v4"],["static-attr","stroke","#0a0e12"],["static-attr","stroke-width","1.6"],["static-attr","stroke-linecap","round"],["flush-element"],["close-element"],["text","\\n        "],["open-element","circle",[]],["static-attr","cx","10"],["static-attr","cy","13.8"],["static-attr","r","1"],["static-attr","fill","#0a0e12"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","jade-home__voting-error-text"],["flush-element"],["append",["unknown",["tra","jade_home_error_tile"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-promo-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["jade-default-template"],null,[["data"],[["get",["selectedPage"]]]]],false],["text","\\n    "],["append",["helper",["jade-pagination"],null,[["totalItems","activeIndex","onPageChange"],[["get",["pages","length"]],["get",["selectedPageIndex"]],["helper",["action"],[["get",[null]],"selectPage"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["jade-home-error"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "smmNNhuL",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\home.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home__top-nav-bg"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home__home-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isError"]]],null,8,7],["text","\\n"],["block",["if"],[["get",["votingTileError"]]],null,6,5],["text","  "],["open-element","div",[]],["static-attr","class","jade-home__shop-grid"],["flush-element"],["text","\\n    "],["append",["helper",["jade-home-shop-grid"],null,[["maxItems","onShopItemPurchase","shopLoadFailed","forceShopError"],[2,["helper",["action"],[["get",[null]],"openShopItemPurchase"],null],["get",["shopLoadFailed"]],["get",["forceShopError"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-home__play-button"],["flush-element"],["text","\\n    "],["open-element","button",[]],["static-attr","class","jade-home__play-button-img"],["dynamic-attr","disabled",["unknown",["patcher","isPlayButtonDisabled"]],null],["modifier",["action"],[["get",[null]],"createRegularGame"]],["flush-element"],["text","\\n      "],["append",["unknown",["tra","jade_home_play_game"]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["patcher","playButtonTooltip"]]],null,3],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["voting-system"],null,[["showModal","votingData","votingPower","onVoteChanged","onResultsViewed"],[["get",["showVotingModal"]],["get",["votingDataModel"]],["get",["votingPower"]],["helper",["action"],[["get",[null]],"onVoteChanged"],null],["helper",["action"],[["get",[null]],"onResultsViewed"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,2],["text","\\n"],["block",["if"],[["get",["showUpgradeModal"]]],null,1],["text","\\n"],["block",["jade-ftux-parchment-modal"],null,[["showModal","onClose","buttonText","onButtonClick"],[["get",["showHomeFtux"]],["helper",["action"],[["get",[null]],"closeHomeFtux"],null],["get",["tra","jade_ftux_home_explore"]],["helper",["action"],[["get",[null]],"exploreHomeFtux"],null]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-ftux-heading"],["flush-element"],["text","\\n    "],["open-element","h1",[]],["static-attr","class","jade-ftux-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","jade-ftux-subtitle"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-ftux-columns jade-ftux-columns"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-gameplay.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col2_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col2_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-champions.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col3_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col3_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-loadouts.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col1_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col1_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showUpgradeModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home__play-button-tooltip"],["flush-element"],["text","\\n        "],["append",["unknown",["patcher","playButtonTooltip"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["jade-home-voting-card"],null,[["votingData","hasVoted","isVotingActive","showPip","votingPower","onOpenVotingSystem"],[["get",["votingDataModel"]],["get",["hasVoted"]],["get",["votingDataModel","isVotingActive"]],["get",["votingDataModel","showPip"]],["get",["votingPower"]],["helper",["action"],[["get",[null]],"openVotingSystem"],null]]]],false],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["votingData"]]],null,4]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-home__voting-card jade-home__voting-card--error"],["flush-element"],["text","\\n      "],["open-element","svg",[]],["static-attr","class","jade-home__voting-error-icon"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["static-attr","aria-hidden","true"],["flush-element"],["text","\\n        "],["open-element","path",[]],["static-attr","d","M8.79 2.4 1.3 15.1a1.4 1.4 0 0 0 1.21 2.1h14.98a1.4 1.4 0 0 0 1.21-2.1L11.21 2.4a1.4 1.4 0 0 0-2.42 0Z"],["static-attr","fill","#ff2345"],["flush-element"],["close-element"],["text","\\n        "],["open-element","path",[]],["static-attr","d","M10 7v4"],["static-attr","stroke","#0a0e12"],["static-attr","stroke-width","1.6"],["static-attr","stroke-linecap","round"],["flush-element"],["close-element"],["text","\\n        "],["open-element","circle",[]],["static-attr","cx","10"],["static-attr","cy","13.8"],["static-attr","r","1"],["static-attr","fill","#0a0e12"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","jade-home__voting-error-text"],["flush-element"],["append",["unknown",["tra","jade_home_error_tile"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-promo-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["jade-default-template"],null,[["data"],[["get",["selectedPage"]]]]],false],["text","\\n    "],["append",["helper",["jade-pagination"],null,[["totalItems","activeIndex","onPageChange"],[["get",["pages","length"]],["get",["selectedPageIndex"]],["helper",["action"],[["get",[null]],"selectPage"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["jade-home-error"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15771,15 +16152,15 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "+LlnUNAy",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\battlepass.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\styles\\\\battlepass.styl\\" js-path=\\"null\\" "],["text","\\n"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-battlepass-page ",["helper",["if"],[["get",["showEmptyState"]],"is-empty"],null]]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["_eventDataLoaded"]]],null,48,47],["close-element"],["text","\\n\\n"],["append",["helper",["battlepass-chase-modal"],null,[["isVisible","chaseCategoryId","claimedIds","passUpgraded","onClose","onItemClaimed"],[["get",["showChaseModal"]],["get",["chaseCategoryId"]],["get",["_claimedIds"]],["get",["passUpgraded"]],["helper",["action"],[["get",[null]],"closeChaseModal"],null],["helper",["action"],[["get",[null]],"onChaseItemClaimed"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseError"]]],null,4],["text","\\n"],["block",["if"],[["get",["isFiatPurchaseModalOpen"]]],null,2],["text","\\n"],["block",["if"],[["get",["showDropRatesModal"]]],null,1],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["jade-drop-rates-modal"],null,[["oddsData","title"],[["get",["selectedItemLootOddsData"]],["get",["selectedItem","name"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","onClose","show"],["DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeDropRatesModal"],null],true]],0]],"locals":[]},{"statements":[["text","  "],["append",["helper",["jade-fiat-purchase-modal"],null,[["item","bundles","itemDescription","wallet","onClose","onRpPurchase"],[["get",["fiatPurchaseItem"]],["get",["passBundles"]],["get",["fiatPurchaseDescription"]],["get",["_walletBalance"]],["helper",["action"],[["get",[null]],"closeFiatModal"],null],["helper",["action"],[["get",[null]],"rpFallbackPurchase"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","battlepass-error-modal"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-title"],["flush-element"],["append",["unknown",["tra","battlepass_purchase_failed_title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-message"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-actions"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissPurchaseError"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_purchase_ok"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissible","dismissibleType","onClose"],["DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"dismissPurchaseError"],null]]],3]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","battlepass-empty__text"],["flush-element"],["append",["unknown",["emptyStateText","full"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","battlepass-empty__text"],["flush-element"],["append",["unknown",["emptyStateText","before"]],false],["open-element","span",[]],["static-attr","class","battlepass-empty__date"],["flush-element"],["append",["unknown",["emptyStateText","date"]],false],["close-element"],["append",["unknown",["emptyStateText","after"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-empty"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","battlepass-empty__image"],["static-attr","src","/fe/lol-jade/images/battlepass/battlepass-image.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["emptyStateText","hasDate"]]],null,6,5],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_requires_premium_pass"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","hasUnmetPrerequisites"]]],null,8],["text","                "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"upgradeBattlepass"],null],null],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-upgrade-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/premium-pass-icon.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_upgrade_pass"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-premium-unlocked"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown"],["static-attr","src","/fe/lol-jade/images/battlepass/crown.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["static-attr","class","battlepass-premium-label"],["flush-element"],["append",["unknown",["tra","battlepass_button_upgraded"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-action-btn is-purchase ",["helper",["if"],[["get",["purchasingItem"]],"is-loading"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseItem"],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","battlepass-loading-spinner"],["flush-element"],["close-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","battlepass-coin-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedItem","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-insufficient"],["flush-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","battlepass-coin-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedItem","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["cannotAffordSelectedItem"]]],null,12,11]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","battlepass-claim-section"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_unlock_spend_tokens"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-locked"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","isLocked"]]],null,14,13]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","battlepass-claim-section"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_requires_premium_pass"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-premium-locked"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","hasUnmetPrerequisites"]]],null,16,15]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-claimed"],["flush-element"],["text","\\n                "],["open-element","svg",[]],["static-attr","class","battlepass-owned-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                  "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#1E282D"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_owned"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","battlepass-preview-placeholder"],["flush-element"],["append",["unknown",["tra","battlepass_item_preview"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","battlepass-preview-drop-rates"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDropRatesModal"],null],null],["flush-element"],["append",["unknown",["tra","battlepass_view_drop_rates"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","battlepass-preview-description"],["flush-element"],["append",["unknown",["selectedItem","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","battlepass-preview-placeholder"],["flush-element"],["append",["unknown",["tra","battlepass_item_preview"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["selectedItem","previewUrl"]]],null,22],["text","              "],["open-element","div",[]],["static-attr","class","battlepass-preview-info"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","battlepass-preview-type"],["flush-element"],["append",["unknown",["selectedItem","type"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","battlepass-preview-name"],["flush-element"],["append",["unknown",["selectedItem","name"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedItem","description"]]],null,21],["block",["if"],[["get",["selectedItemHasDropRates"]]],null,20],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-frame"],["flush-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-tl"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-left.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-tr"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-right.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-br"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-right.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-bl"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-left.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/crown-muted.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/crown-blue.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-lock-overlay"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passUpgraded"]]],null,26,25],["text","                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-cost-coin"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","battlepass-cost-lock"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-item-cost ",["helper",["unless"],[["get",["item","canAfford"]],"is-insufficient"],null]," ",["helper",["if"],[["get",["item","isLocked"]],"is-locked"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","isLocked"]]],null,29,28],["text","                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-claimed"],["flush-element"],["text","\\n                      "],["open-element","svg",[]],["static-attr","class","battlepass-claimed-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                        "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#E9E2D2"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","video",[]],["static-attr","class","battlepass-item-video"],["dynamic-attr","src",["concat",[["unknown",["item","tileVideoPath"]]]]],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","img",[]],["static-attr","class","battlepass-item-icon"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-item ",["unknown",["item","tileSizeClass"]]," ",["helper",["if"],[["get",["item","isSelected"]],"is-selected"],null]," ",["helper",["if"],[["get",["item","hasUnmetPrerequisites"]],"has-prereqs"],null]," ",["helper",["if"],[["get",["item","isPremiumUnlocked"]],"is-premium-unlocked"],null]," ",["helper",["if"],[["get",["item","isClaimed"]],"is-claimed"],null]," ",["helper",["if"],[["get",["item","isLocked"]],"is-locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectItem",["get",["item"]]],null],null],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-item-bg"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,33],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","tileVideoPath"]]],null,32],["block",["if"],[["get",["item","isClaimed"]]],null,31,30],["block",["if"],[["get",["item","isPassGated"]]],null,27,24],["text","                "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","                  "],["open-element","svg",[]],["static-attr","class","battlepass-claimed-counter-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                    "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#00A741"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-claimed-counter ",["helper",["if"],[["get",["allClaimed"]],"is-all-claimed"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["allClaimed"]]],null,35],["text","                "],["open-element","span",[]],["flush-element"],["append",["unknown",["claimedCountText"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","battlepass-unlock-progress"],["flush-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["unlockProgressParts","beforeCoin"]],false],["close-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","battlepass-unlock-coin"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["unlockProgressParts","afterCoin"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","span",[]],["static-attr","class","battlepass-tier-number"],["flush-element"],["append",["unknown",["tier","number"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-tier-btn ",["helper",["if"],[["get",["tier","isSelected"]],"is-selected"],null]," ",["helper",["if"],[["get",["tier","isLocked"]],"is-locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTier",["get",["tier"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["tier","isLocked"]]],null,39,38],["text","                "],["close-element"],["text","\\n"]],"locals":["tier"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-content"],["flush-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-left-panel"],["flush-element"],["text","\\n\\n"],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-tier-section"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-tier-buttons"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tiers"]]],null,40],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n\\n"],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-items-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedTier","isLocked"]]],null,37,36],["text","            "],["open-element","div",[]],["static-attr","class","battlepass-items-grid"],["flush-element"],["text","\\n"],["block",["each"],[["get",["items"]]],null,34],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-right-panel"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-preview"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedItem"]]],null,23,19],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-actions"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedItem","isClaimed"]]],null,18,17],["text","            "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passUpgraded"]]],null,10,9],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","battlepass-currency battlepass-currency--banked"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["lockedTokenCount"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_banked_tooltip_desc"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["bankedTooltipCount"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","battlepass-title-timer"],["flush-element"],["text","\\n          "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer","transparentBackground"],[["get",["_passEndTimeMs"]],true,false,false,false,true,1," ","{{remainingTime}}",true,true]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-title-container"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","battlepass-title-name"],["flush-element"],["append",["unknown",["battlepassName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["_passEndTimeMs"]]],null,43],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-currencies"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showTokenBank"]]],null,42],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-currency"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["tokenBalance"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_coins_tooltip_desc"]],false],["close-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["coinsTooltipCount"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-currency"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["skinTokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["skinTokenBalance"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_skin_token_tooltip_desc"]],false],["close-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["skinTokenTooltipCount"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-preview-backdrop"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["battlepass-preview-backdrop-image ",["helper",["if"],[["get",["selectedItem","hasFullScreenSplash"]],"has-full-screen-splash"],null]]]],["dynamic-attr","src",["concat",[["unknown",["selectedItem","previewUrl"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","previewUrl"]]],null,45]],"locals":[]},{"statements":[["block",["if"],[["get",["hasActiveEvent"]]],null,46],["text","  "],["open-element","div",[]],["static-attr","class","jade-battlepass-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","battlepass-main-container"],["flush-element"],["text","\\n\\n"],["block",["if"],[["get",["hasActiveEvent"]]],null,44],["text","\\n"],["block",["if"],[["get",["hasActiveEvent"]]],null,41,7],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","battlepass-loading"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["50px","50px"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "IaVuOFgi",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\battlepass.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\styles\\\\battlepass.styl\\" js-path=\\"null\\" "],["text","\\n"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-battlepass-page ",["helper",["if"],[["get",["showEmptyState"]],"is-empty"],null]]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["_eventDataLoaded"]]],null,50,49],["close-element"],["text","\\n\\n"],["append",["helper",["battlepass-chase-modal"],null,[["isVisible","chaseCategoryId","claimedIds","passUpgraded","onClose","onItemClaimed"],[["get",["showChaseModal"]],["get",["chaseCategoryId"]],["get",["_claimedIds"]],["get",["passUpgraded"]],["helper",["action"],[["get",[null]],"closeChaseModal"],null],["helper",["action"],[["get",[null]],"onChaseItemClaimed"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseError"]]],null,6],["text","\\n"],["block",["if"],[["get",["showKrPurchaseConfirm"]]],null,4],["text","\\n"],["block",["if"],[["get",["isFiatPurchaseModalOpen"]]],null,2],["text","\\n"],["block",["if"],[["get",["showDropRatesModal"]]],null,1],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["jade-drop-rates-modal"],null,[["oddsData","title"],[["get",["selectedItemLootOddsData"]],["get",["selectedItem","name"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","onClose","show"],["DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeDropRatesModal"],null],true]],0]],"locals":[]},{"statements":[["text","  "],["append",["helper",["jade-fiat-purchase-modal"],null,[["item","bundles","itemDescription","wallet","onClose","onRpPurchase"],[["get",["fiatPurchaseItem"]],["get",["passBundles"]],["get",["fiatPurchaseDescription"]],["get",["_walletBalance"]],["helper",["action"],[["get",[null]],"closeFiatModal"],null],["helper",["action"],[["get",[null]],"rpFallbackPurchase"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal__title"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_title"]],false],["close-element"],["text","\\n      "],["open-element","ul",[]],["static-attr","class","battlepass-kr-confirm-modal__list"],["flush-element"],["text","\\n        "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_1"]],false],["close-element"],["text","\\n        "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_2"]],false],["close-element"],["text","\\n        "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["krRefundAgreementText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal__actions"],["flush-element"],["text","\\n        "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","battlepass-kr-confirm-modal__btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"cancelKrPurchase"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_kr_purchase_confirm_cancel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","battlepass-kr-confirm-modal__btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmKrPurchase"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_kr_purchase_confirm_accept"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissible","dismissibleType","onClose"],["DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"cancelKrPurchase"],null]]],3]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","battlepass-error-modal"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-title"],["flush-element"],["append",["unknown",["tra","battlepass_purchase_failed_title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-message"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-actions"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissPurchaseError"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_purchase_ok"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissible","dismissibleType","onClose"],["DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"dismissPurchaseError"],null]]],5]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","battlepass-empty__text"],["flush-element"],["append",["unknown",["emptyStateText","full"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","battlepass-empty__text"],["flush-element"],["append",["unknown",["emptyStateText","before"]],false],["open-element","span",[]],["static-attr","class","battlepass-empty__date"],["flush-element"],["append",["unknown",["emptyStateText","date"]],false],["close-element"],["append",["unknown",["emptyStateText","after"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-empty"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","battlepass-empty__image"],["static-attr","src","/fe/lol-jade/images/battlepass/battlepass-image.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["emptyStateText","hasDate"]]],null,8,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                        "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_requires_premium_pass"]],false],["close-element"],["text","\\n                      "],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","hasUnmetPrerequisites"]]],null,10],["text","                  "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"upgradeBattlepass"],null],null],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-upgrade-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/premium-pass-icon.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_upgrade_pass"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","battlepass-premium-unlocked"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown"],["static-attr","src","/fe/lol-jade/images/battlepass/crown.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","battlepass-premium-label"],["flush-element"],["append",["unknown",["tra","battlepass_button_upgraded"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-action-btn is-purchase ",["helper",["if"],[["get",["purchasingItem"]],"is-loading"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseItem"],null],null],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-loading-spinner"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-coin-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedItem","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-insufficient"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-coin-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedItem","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["cannotAffordSelectedItem"]]],null,14,13]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-claim-section"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_unlock_spend_tokens"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-locked"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","isLocked"]]],null,16,15]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-claim-section"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_requires_premium_pass"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-premium-locked"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","hasUnmetPrerequisites"]]],null,18,17]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-claimed"],["flush-element"],["text","\\n                  "],["open-element","svg",[]],["static-attr","class","battlepass-owned-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                    "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#1E282D"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_owned"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","battlepass-preview-placeholder"],["flush-element"],["append",["unknown",["tra","battlepass_item_preview"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","battlepass-preview-drop-rates"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDropRatesModal"],null],null],["flush-element"],["append",["unknown",["tra","battlepass_view_drop_rates"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","battlepass-preview-description"],["flush-element"],["append",["unknown",["selectedItem","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","battlepass-preview-placeholder"],["flush-element"],["append",["unknown",["tra","battlepass_item_preview"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["selectedItem","previewUrl"]]],null,24],["text","              "],["open-element","div",[]],["static-attr","class","battlepass-preview-info"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","battlepass-preview-type"],["flush-element"],["append",["unknown",["selectedItem","type"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","battlepass-preview-name"],["flush-element"],["append",["unknown",["selectedItem","name"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedItem","description"]]],null,23],["block",["if"],[["get",["selectedItemHasDropRates"]]],null,22],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-frame"],["flush-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-tl"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-left.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-tr"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-right.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-br"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-right.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-bl"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-left.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/crown-muted.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/crown-blue.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-lock-overlay"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passUpgraded"]]],null,28,27],["text","                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-cost-coin"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","battlepass-cost-lock"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-item-cost ",["helper",["unless"],[["get",["item","canAfford"]],"is-insufficient"],null]," ",["helper",["if"],[["get",["item","isLocked"]],"is-locked"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","isLocked"]]],null,31,30],["text","                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-claimed"],["flush-element"],["text","\\n                      "],["open-element","svg",[]],["static-attr","class","battlepass-claimed-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                        "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#E9E2D2"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","video",[]],["static-attr","class","battlepass-item-video"],["dynamic-attr","src",["concat",[["unknown",["item","tileVideoPath"]]]]],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","img",[]],["static-attr","class","battlepass-item-icon"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-item ",["unknown",["item","tileSizeClass"]]," ",["helper",["if"],[["get",["item","isSelected"]],"is-selected"],null]," ",["helper",["if"],[["get",["item","hasUnmetPrerequisites"]],"has-prereqs"],null]," ",["helper",["if"],[["get",["item","isPremiumUnlocked"]],"is-premium-unlocked"],null]," ",["helper",["if"],[["get",["item","isClaimed"]],"is-claimed"],null]," ",["helper",["if"],[["get",["item","isLocked"]],"is-locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectItem",["get",["item"]]],null],null],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-item-bg"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,35],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","tileVideoPath"]]],null,34],["block",["if"],[["get",["item","isClaimed"]]],null,33,32],["block",["if"],[["get",["item","isPassGated"]]],null,29,26],["text","                "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","                  "],["open-element","svg",[]],["static-attr","class","battlepass-claimed-counter-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                    "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#00A741"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-claimed-counter ",["helper",["if"],[["get",["allClaimed"]],"is-all-claimed"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["allClaimed"]]],null,37],["text","                "],["open-element","span",[]],["flush-element"],["append",["unknown",["claimedCountText"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","battlepass-unlock-progress"],["flush-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["unlockProgressParts","beforeCoin"]],false],["close-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","battlepass-unlock-coin"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["unlockProgressParts","afterCoin"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","span",[]],["static-attr","class","battlepass-tier-number"],["flush-element"],["append",["unknown",["tier","number"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-tier-btn ",["helper",["if"],[["get",["tier","isSelected"]],"is-selected"],null]," ",["helper",["if"],[["get",["tier","isLocked"]],"is-locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTier",["get",["tier"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["tier","isLocked"]]],null,41,40],["text","                "],["close-element"],["text","\\n"]],"locals":["tier"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-content"],["flush-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-left-panel"],["flush-element"],["text","\\n\\n"],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-tier-section"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-tier-buttons"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tiers"]]],null,42],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n\\n"],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-items-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedTier","isLocked"]]],null,39,38],["text","            "],["open-element","div",[]],["static-attr","class","battlepass-items-grid"],["flush-element"],["text","\\n"],["block",["each"],[["get",["items"]]],null,36],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-right-panel"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-preview"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedItem"]]],null,25,21],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-actions-wrapper"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-actions"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedItem","isClaimed"]]],null,20,19],["text","              "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passUpgraded"]]],null,12,11],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["battlepass-disclaimer"]]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","battlepass-currency battlepass-currency--banked"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["lockedTokenCount"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_banked_tooltip_desc"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["bankedTooltipCount"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","battlepass-title-timer"],["flush-element"],["text","\\n          "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer","transparentBackground"],[["get",["_passEndTimeMs"]],true,false,false,false,true,1," ","{{remainingTime}}",true,true]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-title-container"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","battlepass-title-name"],["flush-element"],["append",["unknown",["battlepassName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["_passEndTimeMs"]]],null,45],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-currencies"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showTokenBank"]]],null,44],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-currency"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["tokenBalance"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_coins_tooltip_desc"]],false],["close-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["coinsTooltipCount"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-currency"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["skinTokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["skinTokenBalance"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_skin_token_tooltip_desc"]],false],["close-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["skinTokenTooltipCount"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-preview-backdrop"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["battlepass-preview-backdrop-image ",["helper",["if"],[["get",["selectedItem","hasFullScreenSplash"]],"has-full-screen-splash"],null]]]],["dynamic-attr","src",["concat",[["unknown",["selectedItem","previewUrl"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","previewUrl"]]],null,47]],"locals":[]},{"statements":[["block",["if"],[["get",["hasActiveEvent"]]],null,48],["text","  "],["open-element","div",[]],["static-attr","class","jade-battlepass-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","battlepass-main-container"],["flush-element"],["text","\\n\\n"],["block",["if"],[["get",["hasActiveEvent"]]],null,46],["text","\\n"],["block",["if"],[["get",["hasActiveEvent"]]],null,43,9],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","battlepass-loading"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["50px","50px"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "hIXy0bPw",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\store.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\styles\\\\store.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-store-page"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-store-layout"],["flush-element"],["text","\\n"],["block",["if"],[["get",["toolbarShowSidebar"]]],null,68],["text","\\n"],["text","    "],["open-element","div",[]],["static-attr","class","jade-store-main"],["flush-element"],["text","\\n"],["block",["if"],[["get",["toolbarCurrencies","length"]]],null,47],["text","\\n"],["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-grid ",["helper",["unless"],[["get",["filteredItems","length"]],"jade-store-grid--empty"],null]," ",["helper",["unless"],[["get",["toolbarShowSidebar"]],"jade-store-grid--wide"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showMarquee"]]],null,44],["block",["if"],[["get",["filteredItems","length"]]],null,35,7],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-page-sub-nav jade-sub-nav--parchment"],["flush-element"],["text","\\n"],["block",["each"],[["get",["categoryTabs"]]],null,4],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,3],["text","\\n"],["block",["if"],[["get",["showUpgradeModal"]]],null,2],["text","\\n"],["block",["if"],[["get",["isFiatPurchaseModalOpen"]]],null,1],["text","\\n"],["block",["if"],[["get",["isQuantityPurchaseModalOpen"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["jade-quantity-purchase-modal"],null,[["classicExclusiveBadge","item","onClose"],[["get",["classicExclusiveFlagNode"]],["get",["quantityPurchaseItem"]],["helper",["action"],[["get",[null]],"closeQuantityPurchaseModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["jade-fiat-purchase-modal"],null,[["item","itemDescription","wallet","onClose","onRpPurchase"],[["get",["fiatPurchaseItem"]],["get",["fiatPurchaseDescription"]],["get",["_walletBalance"]],["helper",["action"],[["get",[null]],"closeFiatModal"],null],["helper",["action"],[["get",[null]],"rpFallbackPurchase"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showUpgradeModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive","classicExclusiveBadge"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]],["get",["classicExclusiveFlagNode"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","a",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["tab","isActive"]],"active"],null]]]],["modifier",["action"],[["get",[null]],"selectCategory",["get",["tab","id"]]]],["flush-element"],["text","\\n      "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","jade-sub-nav-btn"],["flush-element"],["text","\\n        "],["append",["unknown",["tab","label"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["tab"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-shop-loading-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["uikit-spinner"]],false],["text","\\n          "],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-no-results"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-no-results__text"],["flush-element"],["append",["unknown",["tra","jade_store_no_results"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isStoreLoaded"]]],null,6,5]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-store-item-description"],["flush-element"],["append",["unknown",["item","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["append",["unknown",["item","name"]],false]],"locals":[]},{"statements":[["append",["unknown",["item","formattedName"]],true]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","jade-store-item-req-text"],["flush-element"],["append",["unknown",["item","requirementText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","currencyIconPath"]]],null,12],["text","                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n                    "]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["price","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","jade-store-price-entry"],["flush-element"],["text","\\n"],["block",["if"],[["get",["price","currencyIconPath"]]],null,14],["text","                          "],["open-element","span",[]],["flush-element"],["append",["unknown",["price","cost"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":["price"]},{"statements":[["block",["each"],[["get",["item","prices"]]],null,15]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasMultiplePrices"]]],null,16,13]],"locals":[]},{"statements":[["text","                            "],["open-element","span",[]],["static-attr","class","jade-store-original-cost"],["flush-element"],["append",["unknown",["sp","originalCost"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["sp","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","jade-store-price-entry"],["flush-element"],["text","\\n"],["block",["if"],[["get",["sp","currencyIconPath"]]],null,19],["text","                          "],["open-element","span",[]],["flush-element"],["append",["unknown",["sp","cost"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["sp","isOnSale"]]],null,18],["text","                        "],["close-element"],["text","\\n"]],"locals":["sp"]},{"statements":[["block",["each"],[["get",["item","salePrices"]]],null,20]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasDiscount"]]],null,21,17]],"locals":[]},{"statements":[["text","                    "],["open-element","span",[]],["static-attr","class","jade-store-price-entry jade-store-fiat-price"],["flush-element"],["append",["unknown",["item","fiatPriceFormatted"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasFiatPrice"]]],null,23],["block",["if"],[["get",["item","cost"]]],null,22],["text","                "]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","jade_store_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","isOwned"]]],null,25,24]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","jade_store_item_max_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-limited-badge ",["helper",["if"],[["get",["item","limitedBadgeUrgent"]],"jade-store-limited-badge--urgent"],null]]]],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__icon"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__text"],["flush-element"],["append",["unknown",["item","limitedBadgeText"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-discount-tag"],["flush-element"],["append",["unknown",["item","discountLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-classic-exclusive-flag-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["append",["helper",["jade-store-holo"],null,[["holoFoilPath","holoAnimationsEnabled"],[["get",["item","holoFoilPath"]],["get",["holoAnimationsEnabled"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-store-item-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-item-image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-item ",["unknown",["item","tileSizeClass"]]," ",["helper",["unless"],[["get",["item","isOwned"]],"jade-store-item-clickable"],null]," ",["helper",["if"],[["get",["item","isOwned"]],"jade-store-item-owned"],null]," ",["helper",["if"],[["get",["item","isRune"]],"jade-store-item--rune"],null]," ",["helper",["if"],[["get",["item","isQuintessence"]],"jade-store-item--quint"],null]," ",["helper",["if"],[["get",["item","isPortrait"]],"jade-store-item--portrait"],null]," ",["helper",["if"],[["get",["item","showClassicExclusiveFlag"]],"classic-exclusive"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,33,32],["block",["if"],[["get",["item","hasHoloFoil"]]],null,31],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-badges"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","showClassicExclusiveFlag"]]],null,30],["block",["if"],[["get",["item","hasDiscount"]]],null,29],["text","              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasLimitedBadge"]]],null,28],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-item-price ",["helper",["if"],[["get",["item","hasRequirements"]],"jade-store-has-requirements"],null]]]],["flush-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-item-price-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","isMaxQuantityOwned"]]],null,27,26],["text","              "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","hasRequirements"]]],null,11],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-label"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-name"],["flush-element"],["block",["if"],[["get",["item","isPortrait"]]],null,10,9],["close-element"],["text","\\n"],["block",["if"],[["get",["item","isRune"]]],null,8],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-border-outer"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-border-inner"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-price-line"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-hover-border"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["block",["each"],[["get",["filteredItems"]]],null,34]],"locals":[]},{"statements":[["text","                  "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-store-marquee__pip ",["helper",["if"],[["get",["dot","isActive"]],"jade-store-marquee__pip--active"],null]]]],["modifier",["action"],[["get",[null]],"marqueeGoTo",["get",["dot","index"]]]],["flush-element"],["append",["unknown",["dot","number"]],false],["close-element"],["text","\\n"]],"locals":["dot"]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-store-marquee__pager"],["flush-element"],["text","\\n"],["block",["each"],[["get",["marqueeDots"]]],null,36],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-limited-badge ",["helper",["if"],[["get",["item","limitedBadgeUrgent"]],"jade-store-limited-badge--urgent"],null]]]],["flush-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__icon"],["flush-element"],["close-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__text"],["flush-element"],["append",["unknown",["item","limitedBadgeText"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-store-discount-tag"],["flush-element"],["append",["unknown",["item","discountLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-store-classic-exclusive-flag-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","jade-store-marquee__placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-marquee__image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-marquee__slide ",["helper",["if"],[["get",["item","showClassicExclusiveFlag"]],"classic-exclusive"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,42,41],["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-item-badges"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","showClassicExclusiveFlag"]]],null,40],["block",["if"],[["get",["item","hasDiscount"]]],null,39],["text","                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasLimitedBadge"]]],null,38],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","jade-store-marquee__caption"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-marquee__title"],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-marquee"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"marqueePause"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"marqueeResume"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-marquee__track"],["dynamic-attr","style",["unknown",["marqueeTrackStyle"]],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["marqueeItems"]]],null,43],["text","            "],["close-element"],["text","\\n"],["block",["if"],[["get",["marqueeDots","length"]]],null,37],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-token-badge__icon"],["dynamic-attr","src",["concat",[["unknown",["token","iconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-store-token-badge"],["flush-element"],["text","\\n"],["block",["if"],[["get",["token","iconPath"]]],null,45],["text","              "],["open-element","span",[]],["static-attr","class","jade-store-token-badge__count"],["flush-element"],["append",["unknown",["token","balance"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["token"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-store-token-balances"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarCurrencies"]]],null,46],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"toggleCheckboxFilter",["get",["filter","id"]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-checkbox ",["helper",["if"],[["get",["filter","isChecked"]],"jade-store-checkbox-on"],null]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["filter","label"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["filter"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-filters"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarCheckboxes"]]],null,48],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-check"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-check.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-down.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-up.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["opt","asc"]]],null,52,51]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-sort-option ",["helper",["if"],[["get",["opt","isSelected"]],"jade-store-sort-option-selected"],null]]]],["modifier",["action"],[["get",[null]],"selectDropdownOption",["get",["opt","id"]]]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","jade-store-sort-option-label"],["flush-element"],["append",["unknown",["opt","label"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isSortDropdown"]]],null,53],["block",["if"],[["get",["opt","isSelected"]]],null,50],["text","              "],["close-element"],["text","\\n"]],"locals":["opt"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-sort-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarDropdownOptions"]]],null,54],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-sort-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-down.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-sort-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-up.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["activeSort","asc"]]],null,57,56]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-sort-wrapper"],["flush-element"],["text","\\n        "],["open-element","button",[]],["static-attr","class","jade-store-sort-control"],["modifier",["action"],[["get",[null]],"toggleSortDropdown"]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-store-sort-inner"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-sort-label"],["flush-element"],["append",["unknown",["toolbarDropdownLabel"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isSortDropdown"]]],null,58],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-store-sort-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","jade-store-sort-dropdown-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-dropdown-caret.svg"],["static-attr","alt",""],["static-attr","width","8"],["static-attr","height","6"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["sortDropdownOpen"]]],null,55],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-search"],["flush-element"],["text","\\n        "],["open-element","input",[]],["static-attr","type","text"],["static-attr","class","jade-store-search-input"],["dynamic-attr","placeholder",["unknown",["tra","jade_store_search_placeholder"]],null],["dynamic-attr","value",["unknown",["searchQuery"]],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"updateSearch"],[["value"],["target.value"]]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","jade-store-divider"],["flush-element"],["close-element"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-store-filters"],["flush-element"],["text","\\n          "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"toggleOwnedFilter"]],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["if"],[["get",["showOwnedOnly"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["tra","jade_store_filter_owned"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"clearOwnedFilter"]],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["unless"],[["get",["showOwnedOnly"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["tra","jade_store_filter_all_items"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["block",["if"],[["get",["toolbarShowSearch"]]],null,61],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["hasToolbarEntry"]]],null,62]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","jade-store-divider"],["flush-element"],["close-element"]],"locals":[]},{"statements":[["text","            "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"selectSubcategory",["get",["subcat","id"]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["if"],[["get",["subcat","isActive"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["subcat","label"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["subcat"]},{"statements":[["text","            "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"selectSubcategory",null]],["flush-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["unless"],[["get",["activeSubcategory"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["activeCategoryLabel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-store-filters"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isSubcategoryOnly"]]],null,66],["block",["each"],[["get",["subcategoriesForActiveCategory"]]],null,65],["text","        "],["close-element"],["text","\\n        "],["block",["if"],[["get",["toolbarShowSearch"]]],null,64],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-store-sidebar"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSubcategories"]]],null,67,63],["text","\\n"],["block",["if"],[["get",["toolbarShowSearch"]]],null,60],["text","\\n"],["block",["if"],[["get",["toolbarHasDropdown"]]],null,59],["text","\\n"],["block",["if"],[["get",["toolbarCheckboxes","length"]]],null,49],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "d7Wdw/Fh",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\store.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\styles\\\\store.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-store-page"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-store-layout"],["flush-element"],["text","\\n"],["block",["if"],[["get",["toolbarShowSidebar"]]],null,65],["text","\\n"],["text","    "],["open-element","div",[]],["static-attr","class","jade-store-main"],["flush-element"],["text","\\n"],["block",["if"],[["get",["toolbarCurrencies","length"]]],null,47],["text","\\n"],["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-grid ",["helper",["unless"],[["get",["filteredItems","length"]],"jade-store-grid--empty"],null]," ",["helper",["unless"],[["get",["toolbarShowSidebar"]],"jade-store-grid--wide"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showMarquee"]]],null,44],["block",["if"],[["get",["filteredItems","length"]]],null,35,7],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-page-sub-nav jade-sub-nav--parchment"],["flush-element"],["text","\\n"],["block",["each"],[["get",["categoryTabs"]]],null,4],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,3],["text","\\n"],["block",["if"],[["get",["showUpgradeModal"]]],null,2],["text","\\n"],["block",["if"],[["get",["isFiatPurchaseModalOpen"]]],null,1],["text","\\n"],["block",["if"],[["get",["isQuantityPurchaseModalOpen"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["jade-quantity-purchase-modal"],null,[["classicExclusiveBadge","item","onClose"],[["get",["classicExclusiveFlagNode"]],["get",["quantityPurchaseItem"]],["helper",["action"],[["get",[null]],"closeQuantityPurchaseModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["jade-fiat-purchase-modal"],null,[["item","itemDescription","wallet","ownedItemInstanceIds","onClose","onRpPurchase"],[["get",["fiatPurchaseItem"]],["get",["fiatPurchaseDescription"]],["get",["_walletBalance"]],["get",["lolInventoryService","ownedItemInstanceIds"]],["helper",["action"],[["get",[null]],"closeFiatModal"],null],["helper",["action"],[["get",[null]],"rpFallbackPurchase"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showUpgradeModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive","classicExclusiveBadge"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]],["get",["classicExclusiveFlagNode"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","a",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["tab","isActive"]],"active"],null]]]],["modifier",["action"],[["get",[null]],"selectCategory",["get",["tab","id"]]]],["flush-element"],["text","\\n      "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","jade-sub-nav-btn"],["flush-element"],["text","\\n        "],["append",["unknown",["tab","label"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["tab"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-shop-loading-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["uikit-spinner"]],false],["text","\\n          "],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-no-results"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-no-results__text"],["flush-element"],["append",["unknown",["tra","jade_store_no_results"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isStoreLoaded"]]],null,6,5]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-store-item-description"],["flush-element"],["append",["unknown",["item","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["append",["unknown",["item","name"]],false]],"locals":[]},{"statements":[["append",["unknown",["item","formattedName"]],true]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","jade-store-item-req-text"],["flush-element"],["append",["unknown",["item","requirementText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","currencyIconPath"]]],null,12],["text","                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n                    "]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["price","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","jade-store-price-entry"],["flush-element"],["text","\\n"],["block",["if"],[["get",["price","currencyIconPath"]]],null,14],["text","                          "],["open-element","span",[]],["flush-element"],["append",["unknown",["price","cost"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":["price"]},{"statements":[["block",["each"],[["get",["item","prices"]]],null,15]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasMultiplePrices"]]],null,16,13]],"locals":[]},{"statements":[["text","                            "],["open-element","span",[]],["static-attr","class","jade-store-original-cost"],["flush-element"],["append",["unknown",["sp","originalCost"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["sp","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","jade-store-price-entry"],["flush-element"],["text","\\n"],["block",["if"],[["get",["sp","currencyIconPath"]]],null,19],["text","                          "],["open-element","span",[]],["flush-element"],["append",["unknown",["sp","cost"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["sp","isOnSale"]]],null,18],["text","                        "],["close-element"],["text","\\n"]],"locals":["sp"]},{"statements":[["block",["each"],[["get",["item","salePrices"]]],null,20]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasDiscount"]]],null,21,17]],"locals":[]},{"statements":[["text","                    "],["open-element","span",[]],["static-attr","class","jade-store-price-entry jade-store-fiat-price"],["flush-element"],["append",["unknown",["item","fiatPriceFormatted"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasFiatPrice"]]],null,23],["block",["if"],[["get",["item","cost"]]],null,22],["text","                "]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","jade_store_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","isOwned"]]],null,25,24]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","jade_store_item_max_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-limited-badge ",["helper",["if"],[["get",["item","limitedBadgeUrgent"]],"jade-store-limited-badge--urgent"],null]]]],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__icon"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__text"],["flush-element"],["append",["unknown",["item","limitedBadgeText"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-discount-tag"],["flush-element"],["append",["unknown",["item","discountLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-classic-exclusive-flag-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["append",["helper",["jade-store-holo"],null,[["holoFoilPath","holoAnimationsEnabled"],[["get",["item","holoFoilPath"]],["get",["holoAnimationsEnabled"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-store-item-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-item-image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-item ",["unknown",["item","tileSizeClass"]]," ",["helper",["unless"],[["get",["item","isOwned"]],"jade-store-item-clickable"],null]," ",["helper",["if"],[["get",["item","isOwned"]],"jade-store-item-owned"],null]," ",["helper",["if"],[["get",["item","isRune"]],"jade-store-item--rune"],null]," ",["helper",["if"],[["get",["item","isQuintessence"]],"jade-store-item--quint"],null]," ",["helper",["if"],[["get",["item","isPortrait"]],"jade-store-item--portrait"],null]," ",["helper",["if"],[["get",["item","showClassicExclusiveFlag"]],"classic-exclusive"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,33,32],["block",["if"],[["get",["item","hasHoloFoil"]]],null,31],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-badges"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","showClassicExclusiveFlag"]]],null,30],["block",["if"],[["get",["item","hasDiscount"]]],null,29],["text","              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasLimitedBadge"]]],null,28],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-item-price ",["helper",["if"],[["get",["item","hasRequirements"]],"jade-store-has-requirements"],null]]]],["flush-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-item-price-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","isMaxQuantityOwned"]]],null,27,26],["text","              "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","hasRequirements"]]],null,11],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-label"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-name"],["flush-element"],["block",["if"],[["get",["item","isPortrait"]]],null,10,9],["close-element"],["text","\\n"],["block",["if"],[["get",["item","isRune"]]],null,8],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-border-outer"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-border-inner"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-price-line"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-hover-border"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["block",["each"],[["get",["filteredItems"]]],null,34]],"locals":[]},{"statements":[["text","                  "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-store-marquee__pip ",["helper",["if"],[["get",["dot","isActive"]],"jade-store-marquee__pip--active"],null]]]],["modifier",["action"],[["get",[null]],"marqueeGoTo",["get",["dot","index"]]]],["flush-element"],["append",["unknown",["dot","number"]],false],["close-element"],["text","\\n"]],"locals":["dot"]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-store-marquee__pager"],["flush-element"],["text","\\n"],["block",["each"],[["get",["marqueeDots"]]],null,36],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-limited-badge ",["helper",["if"],[["get",["item","limitedBadgeUrgent"]],"jade-store-limited-badge--urgent"],null]]]],["flush-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__icon"],["flush-element"],["close-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__text"],["flush-element"],["append",["unknown",["item","limitedBadgeText"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-store-discount-tag"],["flush-element"],["append",["unknown",["item","discountLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-store-classic-exclusive-flag-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","jade-store-marquee__placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-marquee__image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-marquee__slide ",["helper",["if"],[["get",["item","showClassicExclusiveFlag"]],"classic-exclusive"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,42,41],["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-item-badges"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","showClassicExclusiveFlag"]]],null,40],["block",["if"],[["get",["item","hasDiscount"]]],null,39],["text","                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasLimitedBadge"]]],null,38],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","jade-store-marquee__caption"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-marquee__title"],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-marquee"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"marqueePause"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"marqueeResume"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-marquee__track"],["dynamic-attr","style",["unknown",["marqueeTrackStyle"]],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["marqueeItems"]]],null,43],["text","            "],["close-element"],["text","\\n"],["block",["if"],[["get",["marqueeDots","length"]]],null,37],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-token-badge__icon"],["dynamic-attr","src",["concat",[["unknown",["token","iconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-store-token-badge"],["flush-element"],["text","\\n"],["block",["if"],[["get",["token","iconPath"]]],null,45],["text","              "],["open-element","span",[]],["static-attr","class","jade-store-token-badge__count"],["flush-element"],["append",["unknown",["token","balance"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["token"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-store-token-balances"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarCurrencies"]]],null,46],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"toggleCheckboxFilter",["get",["filter","id"]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-checkbox ",["helper",["if"],[["get",["filter","isChecked"]],"jade-store-checkbox-on"],null]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["filter","label"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["filter"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-filters"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarCheckboxes"]]],null,48],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-check"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-check.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-down.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-up.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["opt","asc"]]],null,52,51]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-sort-option ",["helper",["if"],[["get",["opt","isSelected"]],"jade-store-sort-option-selected"],null]]]],["modifier",["action"],[["get",[null]],"selectDropdownOption",["get",["opt","id"]]]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","jade-store-sort-option-label"],["flush-element"],["append",["unknown",["opt","label"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isSortDropdown"]]],null,53],["block",["if"],[["get",["opt","isSelected"]]],null,50],["text","              "],["close-element"],["text","\\n"]],"locals":["opt"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-sort-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarDropdownOptions"]]],null,54],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-sort-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-down.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-sort-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-up.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["activeSort","asc"]]],null,57,56]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-sort-wrapper"],["flush-element"],["text","\\n        "],["open-element","button",[]],["static-attr","class","jade-store-sort-control"],["modifier",["action"],[["get",[null]],"toggleSortDropdown"]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-store-sort-inner"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-sort-label"],["flush-element"],["append",["unknown",["toolbarDropdownLabel"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isSortDropdown"]]],null,58],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-store-sort-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","jade-store-sort-dropdown-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-dropdown-caret.svg"],["static-attr","alt",""],["static-attr","width","8"],["static-attr","height","6"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["sortDropdownOpen"]]],null,55],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-search"],["flush-element"],["text","\\n        "],["open-element","input",[]],["static-attr","type","text"],["static-attr","class","jade-store-search-input"],["dynamic-attr","placeholder",["unknown",["tra","jade_store_search_placeholder"]],null],["dynamic-attr","value",["unknown",["searchQuery"]],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"updateSearch"],[["value"],["target.value"]]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","jade-store-divider"],["flush-element"],["close-element"]],"locals":[]},{"statements":[["text","            "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"selectSubcategory",["get",["subcat","id"]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["if"],[["get",["subcat","isActive"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["subcat","label"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["subcat"]},{"statements":[["text","            "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"selectSubcategory",null]],["flush-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["unless"],[["get",["activeSubcategory"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["activeCategoryLabel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-store-filters"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isSubcategoryOnly"]]],null,63],["block",["each"],[["get",["subcategoriesForActiveCategory"]]],null,62],["text","        "],["close-element"],["text","\\n        "],["block",["if"],[["get",["toolbarShowSearch"]]],null,61],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-store-sidebar"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSubcategories"]]],null,64],["text","\\n"],["block",["if"],[["get",["toolbarShowSearch"]]],null,60],["text","\\n"],["block",["if"],[["get",["toolbarHasDropdown"]]],null,59],["text","\\n"],["block",["if"],[["get",["toolbarCheckboxes","length"]]],null,49],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15820,8 +16201,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "H+m2Mo3Q",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\shoppefront\\\\addon\\\\templates\\\\purchase-modal.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["dialog-modal"],null,[["onClose"],[["helper",["action"],[["get",[null]],"handleModalClose"],null]]],11]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["unknown",["modalUnlockedText"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-error-text"],["flush-element"],["text","\\n            "],["append",["unknown",["modalErrorText"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","purchaseDisclaimer"],["static-attr","class","shoppefront-purchase-modal-kr-disclaimer-checkbox"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","purchaseDisclaimer"],["dynamic-attr","checked",["unknown",["isPurchaseDisclaimerChecked"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"togglePurchaseDisclaimerCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","purchaseDisclaimer"],["static-attr","class","shoppefront-purchase-modal-kr-disclaimer-label"],["flush-element"],["text","\\n                "],["append",["unknown",["purchaseDisclaimerText"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","shopefront-purchase-modal-checkbox"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","id","chroma-disclaimer-acknowledgement"],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"enablePurchaseButton"],[["value"],["target.checked"]]],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","label",[]],["static-attr","for","chroma-disclaimer-acknowledgement"],["static-attr","slot","label"],["flush-element"],["append",["unknown",["chromaDisclaimer"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["purchase-modal-prerequisites"],null,[["prerequisites"],[["get",["prerequisites"]]]]],false],["text","\\n          "],["append",["unknown",["digital-goods-disclaimer"]],false],["text","\\n"],["block",["if"],[["get",["showDisclaimer"]]],null,3],["block",["if"],[["get",["shouldDisplayPurchaseDisclaimerCheckbox"]]],null,2]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-classic-exclusive-disclaimer"],["flush-element"],["append",["unknown",["tra","shoppefront_purchase_modal_classic_exclusive_disclaimer"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-title"],["flush-element"],["text","\\n            "],["append",["unknown",["modalTitle"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-tile-header"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","shoppefront-purchase-modal-header-img"],["dynamic-attr","src",["concat",[["unknown",["tilePath"]]]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["tilePath"]]],null,7]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-splash-header"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","shoppefront-purchase-modal-header-img"],["dynamic-attr","src",["concat",[["unknown",["splashPath"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-splash-vignette"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-title"],["flush-element"],["text","\\n            "],["append",["unknown",["modalTitle"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-tos"],["flush-element"],["text","\\n        "],["append",["unknown",["termsAndConditions"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","shoppefront-purchase-modal-wrapper"],["static-attr","type","dialog-xlarge"],["flush-element"],["text","\\n    "],["append",["unknown",["classicExclusiveBadge"]],false],["text","\\n"],["block",["if"],[["get",["termsAndConditions"]]],null,10],["text","\\n    "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-main"],["flush-element"],["text","\\n"],["block",["if"],[["get",["splashPath"]]],null,9,8],["text","\\n      "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-content"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["splashPath"]]],null,6],["text","\\n"],["block",["if"],[["get",["isClassicExclusiveItem"]]],null,5],["text","\\n"],["block",["if"],[["get",["isPurchasable"]]],null,4],["text","\\n"],["block",["if"],[["get",["modalErrorText"]]],null,1],["text","\\n"],["block",["unless"],[["get",["isPurchasable"]]],null,0],["text","      "],["close-element"],["text","\\n\\n      "],["append",["helper",["purchase-modal-payment-options"],null,[["isPurchasable","payments","modalAcceptDisabled","handleModalAccept","handleModalClose","walletBalance"],[["get",["isPurchasable"]],["get",["paymentOptions"]],["get",["modalAcceptDisabled"]],["helper",["action"],[["get",[null]],"handleModalAccept"],null],["helper",["action"],[["get",[null]],"handleModalClose"],null],["get",["walletBalance"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "n/NRiZ2E",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\shoppefront\\\\addon\\\\templates\\\\purchase-modal.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["block",["dialog-modal"],null,[["onClose"],[["helper",["action"],[["get",[null]],"handleModalClose"],null]]],14]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["unknown",["modalUnlockedText"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-error-text"],["flush-element"],["text","\\n            "],["append",["unknown",["modalErrorText"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","name","purchaseDisclaimer"],["static-attr","class","shoppefront-purchase-modal-kr-disclaimer-checkbox"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","type","checkbox"],["static-attr","name","purchaseDisclaimer"],["dynamic-attr","checked",["unknown",["isPurchaseDisclaimerChecked"]],null],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"togglePurchaseDisclaimerCheckbox"],null],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","purchaseDisclaimer"],["static-attr","class","shoppefront-purchase-modal-kr-disclaimer-label"],["flush-element"],["text","\\n                "],["append",["unknown",["purchaseDisclaimerText"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","shopefront-purchase-modal-checkbox"],["flush-element"],["text","\\n              "],["open-element","input",[]],["static-attr","id","chroma-disclaimer-acknowledgement"],["static-attr","slot","input"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"enablePurchaseButton"],[["value"],["target.checked"]]],null],["flush-element"],["close-element"],["text","\\n              "],["open-element","label",[]],["static-attr","for","chroma-disclaimer-acknowledgement"],["static-attr","slot","label"],["flush-element"],["append",["unknown",["chromaDisclaimer"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["purchase-modal-prerequisites"],null,[["prerequisites"],[["get",["prerequisites"]]]]],false],["text","\\n          "],["append",["unknown",["digital-goods-disclaimer"]],false],["text","\\n"],["block",["if"],[["get",["showDisclaimer"]]],null,3],["block",["if"],[["get",["shouldDisplayPurchaseDisclaimerCheckbox"]]],null,2]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-map-availability"],["flush-element"],["append",["unknown",["mapAvailability"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-classic-exclusive-disclaimer"],["flush-element"],["append",["unknown",["tra","shoppefront_purchase_modal_classic_exclusive_disclaimer"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-title"],["flush-element"],["text","\\n            "],["append",["unknown",["modalTitle"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-tile-header"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","shoppefront-purchase-modal-header-img"],["dynamic-attr","src",["concat",[["unknown",["tilePath"]]]]],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["tilePath"]]],null,8]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-splash-header"],["flush-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","shoppefront-purchase-modal-header-img"],["dynamic-attr","src",["concat",[["unknown",["splashPath"]]]]],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-splash-vignette"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-title"],["flush-element"],["text","\\n            "],["append",["unknown",["modalTitle"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["splashPath"]]],null,10,9]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-video-header"],["flush-element"],["text","\\n          "],["open-element","video",[]],["static-attr","class","shoppefront-purchase-modal-header-video"],["static-attr","preload","none"],["static-attr","draggable","false"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-tos"],["flush-element"],["text","\\n        "],["append",["unknown",["termsAndConditions"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["static-attr","class","shoppefront-purchase-modal-wrapper"],["static-attr","type","dialog-xlarge"],["flush-element"],["text","\\n    "],["append",["unknown",["classicExclusiveBadge"]],false],["text","\\n"],["block",["if"],[["get",["termsAndConditions"]]],null,13],["text","\\n    "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-main"],["flush-element"],["text","\\n"],["block",["if"],[["get",["videoPath"]]],null,12,11],["text","\\n      "],["open-element","div",[]],["static-attr","class","shoppefront-purchase-modal-content"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["splashPath"]]],null,7],["text","\\n"],["block",["if"],[["get",["isClassicExclusiveItem"]]],null,6],["block",["if"],[["get",["mapAvailability"]]],null,5],["block",["if"],[["get",["isPurchasable"]]],null,4],["text","\\n"],["block",["if"],[["get",["modalErrorText"]]],null,1],["text","\\n"],["block",["unless"],[["get",["isPurchasable"]]],null,0],["text","      "],["close-element"],["text","\\n\\n      "],["append",["helper",["purchase-modal-payment-options"],null,[["isPurchasable","payments","modalAcceptDisabled","handleModalAccept","handleModalClose","walletBalance"],[["get",["isPurchasable"]],["get",["paymentOptions"]],["get",["modalAcceptDisabled"]],["helper",["action"],[["get",[null]],"handleModalAccept"],null],["helper",["action"],[["get",[null]],"handleModalClose"],null],["get",["walletBalance"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15848,8 +16229,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "X6HeQCmy",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\purchase-bundles-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\purchase-bundles-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\purchase-bundles-modal.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[["get",["showPurchaseModal"]],"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null]]],27],["block",["if"],[["get",["showDropRatesModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["loot-table-root"],null,[["name"],[["get",["dropRatesLootItemName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["show","type","dismissibleType","onClose"],["true","DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeDropRatesModal"],null]]],0]],"locals":[]},{"statements":[["text","              "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-choose-text"],["flush-element"],["append",["unknown",["tra","event_hub_purchase_modal_summary_choose"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                          "],["append",["unknown",["tra","event_hub_purchase_modal_buy_rp"]],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["helper",["uikit-spinner"],null,[["width","height"],["15px","15px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance-not-enough-rp"],["flush-element"],["text","\\n                      "],["append",["unknown",["tra","event_hub_purchase_modal_not_enough_rp"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openRPPurchaseModal"],null],null],["dynamic-attr","disabled",["unknown",["rpPurchaseInProgress"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["rpPurchaseInProgress"]]],null,4,3],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance"],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_modal_balance"]],false],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                    "],["append",["unknown",["newBalance"]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-tos"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","eh-purchase-bundles-modal-summary-tos-checkbox"],["flush-element"],["text","\\n                      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","id","tosChecked"],["static-attr","name","tosChecked"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosChecked"],null],null],["dynamic-attr","disabled",["unknown",["tosDisabled"]],null],["dynamic-attr","checked",["unknown",["tosChecked"]],null],["flush-element"],["close-element"],["text","\\n                      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","tosChecked"],["static-attr","class","eh-purchase-bundles-modal-tos-text"],["flush-element"],["text","\\n                        "],["append",["unknown",["tosText"]],false],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["eh-purchase-bundles-modal-digital-goods-disclaimer"]]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["dynamic-attr","disabled",["unknown",["unlockButtonDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"unlockPass"],null],null],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                        "],["append",["unknown",["tra","event_hub_purchase_modal_unlock_now"]],false],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-discount"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-discount-text"],["flush-element"],["append",["unknown",["discountPercentage"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-initial-price"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-initial-price-text"],["flush-element"],["append",["unknown",["initialPrice"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["initialPrice"]]],null,8],["block",["if"],[["get",["discountPercentage"]]],null,7]],"locals":[]},{"statements":[["text","                              "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDropRatesModal",["get",["item"]]],null],null],["static-attr","class","eh-purchase-bundles-modal-summary-item-drop-rates"],["flush-element"],["text","\\n                                "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-dice-icon"],["flush-element"],["close-element"],["text","\\n                                "],["append",["unknown",["tra","event_hub_purchase_modal_see_drop_rates"]],false],["text","\\n                              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                                "],["append",["helper",["inventory-type-name"],[["get",["item","inventoryType"]],["get",["item","subInventoryType"]]],null],false],["text","\\n"]],"locals":[]},{"statements":[["text","                                "],["append",["unknown",["tra","event_shop_offer_card_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-summary-item\\n                          ",["helper",["if"],[["get",["item","owned"]],"eh-purchase-bundles-modal-summary-item-owned"],null]]]],["flush-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-img-wrapper"],["flush-element"],["text","\\n                          "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-img"],["dynamic-attr","src",["helper",["safe-image-path"],[["get",["item","splashImage"]]],null],null],["flush-element"],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-details"],["flush-element"],["text","\\n                          "],["open-element","p",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-name"],["flush-element"],["text","\\n                            "],["append",["unknown",["item","displayName"]],false],["text","\\n                          "],["close-element"],["text","\\n                          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-description"],["flush-element"],["text","\\n                            "],["open-element","p",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-inventory-type"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","owned"]]],null,12,11],["text","                            "],["close-element"],["text","\\n"],["block",["if"],[["helper",["eq"],[["get",["item","subInventoryType"]],"CHEST"],null]],null,10],["text","                          "],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","                        "],["append",["unknown",["tra","event_shop_see_more"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["unknown",["tra","event_shop_see_less"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["static-attr","class","eh-purchase-bundles-modal-summary-scrollable-area"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","id","eh-purchase-bundles-modal-summary-description"],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-summary-description\\n                    ",["unknown",["descriptionElementAdditionalClassName"]],"\\n                    ",["helper",["if"],[["get",["isDescriptionExpanded"]],"eh-purchase-bundles-modal-summary-description-expanded"],null]]]],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","id","eh-purchase-bundles-modal-summary-description-text"],["static-attr","class","eh-purchase-bundles-modal-summary-description-text"],["flush-element"],["text","\\n                    "],["append",["unknown",["selectedOption","details","description"]],true],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"expandOrCollapseDescription"],null],null],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDescriptionExpanded"]]],null,15,14],["text","                    "],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more-chevron"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-items"],["flush-element"],["text","\\n                  "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-items-header"],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_modal_purchse_summary"]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["selectedOption","bundledItems"]]],null,13],["text","                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-price"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-final-price"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-final-price-text"],["flush-element"],["append",["unknown",["finalPrice"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["displayDiscount"]]],null,9],["text","                "],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedOption","isPurchasable"]]],null,6,5],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-details"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displaySelectedOption"]]],null,16,2],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-header"],["flush-element"],["text","\\n          "],["open-element","h4",[]],["static-attr","class","eh-purchase-bundles-modal-summary-title"],["flush-element"],["append",["unknown",["summaryTitle"]],false],["close-element"],["text","\\n          "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-subtitle"],["flush-element"],["append",["unknown",["summarySubtitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["isExecutingPurchase"]]],null,18,17]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-header"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-lock-icon"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-text"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","event_hub_purchase_modal_success_header"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-item-name"],["flush-element"],["text","\\n              "],["append",["unknown",["summaryTitle"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-message"],["flush-element"],["text","\\n              "],["append",["unknown",["successMessage"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-footer"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","event_hub_purchase_modal_awesome"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-spinner"],["flush-element"],["text","\\n          "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-price"],["flush-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-price-text"],["flush-element"],["append",["unknown",["option","finalPrice"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-quantity"],["flush-element"],["append",["unknown",["option","bundledItems","length"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-owned-text"],["flush-element"],["append",["unknown",["tra","event_shop_offer_card_owned"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-decorator-badge"],["dynamic-attr","src",["unknown",["option","details","decoratorBadgeURL"]],null],["static-attr","onerror","this.onerror=null; this.remove();"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-option\\n                ",["unknown",["option","optionTypeCssClass"]],"\\n                ",["unknown",["option","selectedCssClass"]],"\\n                ",["unknown",["option","ownedClass"]],"\\n                ",["unknown",["optionsPointerClass"]],"\\n                ",["unknown",["optionsExecutingPurchaseClass"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectOption",["get",["option"]]],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-image-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","details","decoratorBadgeURL"]]],null,24],["text","                "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-option-image"],["dynamic-attr","src",["unknown",["option","details","splashImage"]],null],["dynamic-attr","alt",["unknown",["option","details","name"]],null],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-details-wrapper"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-details"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-title"],["flush-element"],["append",["unknown",["option","details","name"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-bottom-row"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","isOwned"]]],null,23,22],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-options-wrapper ",["unknown",["numberOfOptionsWrapperCssClass"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["options"]]],null,25],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayBundleOptions"]]],null,26,21],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseCompleted"]]],null,20,19],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "6He2JNqV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\templates\\\\components\\\\purchase-bundles-modal.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\styles\\\\components\\\\purchase-bundles-modal.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-event-hub\\\\src\\\\app\\\\components\\\\purchase-bundles-modal.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","dismissibleType","onClose"],[["get",["showPurchaseModal"]],"DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null]]],28],["block",["if"],[["get",["showDropRatesModal"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["loot-table-root"],null,[["name"],[["get",["dropRatesLootItemName"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["show","type","dismissibleType","onClose"],["true","DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeDropRatesModal"],null]]],0]],"locals":[]},{"statements":[["text","              "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-choose-text"],["flush-element"],["append",["unknown",["tra","event_hub_purchase_modal_summary_choose"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                          "],["append",["unknown",["tra","event_hub_purchase_modal_buy_rp"]],false],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["helper",["uikit-spinner"],null,[["width","height"],["15px","15px"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance-not-enough-rp"],["flush-element"],["text","\\n                      "],["append",["unknown",["tra","event_hub_purchase_modal_not_enough_rp"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openRPPurchaseModal"],null],null],["dynamic-attr","disabled",["unknown",["rpPurchaseInProgress"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["rpPurchaseInProgress"]]],null,4,3],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-balance"],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_modal_balance"]],false],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                    "],["append",["unknown",["newBalance"]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-tos"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","eh-purchase-bundles-modal-summary-tos-checkbox"],["flush-element"],["text","\\n                      "],["open-element","input",[]],["static-attr","slot","input"],["static-attr","id","tosChecked"],["static-attr","name","tosChecked"],["static-attr","type","checkbox"],["dynamic-attr","onchange",["helper",["action"],[["get",[null]],"toggleTosChecked"],null],null],["dynamic-attr","disabled",["unknown",["tosDisabled"]],null],["dynamic-attr","checked",["unknown",["tosChecked"]],null],["flush-element"],["close-element"],["text","\\n                      "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","tosChecked"],["static-attr","class","eh-purchase-bundles-modal-tos-text"],["flush-element"],["text","\\n                        "],["append",["unknown",["tosText"]],false],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["append",["helper",["digital-goods-disclaimer"],null,[["class"],["eh-purchase-bundles-modal-digital-goods-disclaimer"]]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n                    "],["open-element","lol-uikit-flat-button",[]],["static-attr","primary","true"],["dynamic-attr","disabled",["unknown",["unlockButtonDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"unlockPass"],null],null],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                        "],["append",["unknown",["tra","event_hub_purchase_modal_unlock_now"]],false],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-discount"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-discount-text"],["flush-element"],["append",["unknown",["discountPercentage"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-initial-price"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-initial-price-text"],["flush-element"],["append",["unknown",["initialPrice"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["initialPrice"]]],null,8],["block",["if"],[["get",["discountPercentage"]]],null,7]],"locals":[]},{"statements":[["text","                              "],["open-element","div",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDropRatesModal",["get",["item"]]],null],null],["static-attr","class","eh-purchase-bundles-modal-summary-item-drop-rates"],["flush-element"],["text","\\n                                "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-dice-icon"],["flush-element"],["close-element"],["text","\\n                                "],["append",["unknown",["tra","event_hub_purchase_modal_see_drop_rates"]],false],["text","\\n                              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                                "],["append",["helper",["inventory-type-name"],[["get",["item","inventoryType"]],["get",["item","subInventoryType"]]],null],false],["text","\\n"]],"locals":[]},{"statements":[["text","                                "],["append",["unknown",["tra","event_shop_offer_card_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","p",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-map-availability"],["flush-element"],["append",["unknown",["item","mapAvailability"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-summary-item\\n                          ",["helper",["if"],[["get",["item","owned"]],"eh-purchase-bundles-modal-summary-item-owned"],null]]]],["flush-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-img-wrapper"],["flush-element"],["text","\\n                          "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-img"],["dynamic-attr","src",["helper",["safe-image-path"],[["get",["item","splashImage"]]],null],null],["flush-element"],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-details"],["flush-element"],["text","\\n                          "],["open-element","p",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-name"],["flush-element"],["append",["unknown",["item","displayName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["item","mapAvailability"]]],null,13],["text","                          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-description"],["flush-element"],["text","\\n\\n                            "],["open-element","p",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-inventory-type"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","owned"]]],null,12,11],["text","                            "],["close-element"],["text","\\n"],["block",["if"],[["helper",["eq"],[["get",["item","subInventoryType"]],"CHEST"],null]],null,10],["text","                          "],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","                        "],["append",["unknown",["tra","event_shop_see_more"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["append",["unknown",["tra","event_shop_see_less"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["static-attr","class","eh-purchase-bundles-modal-summary-scrollable-area"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","id","eh-purchase-bundles-modal-summary-description"],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-summary-description\\n                    ",["unknown",["descriptionElementAdditionalClassName"]],"\\n                    ",["helper",["if"],[["get",["isDescriptionExpanded"]],"eh-purchase-bundles-modal-summary-description-expanded"],null]]]],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","id","eh-purchase-bundles-modal-summary-description-text"],["static-attr","class","eh-purchase-bundles-modal-summary-description-text"],["flush-element"],["text","\\n                    "],["append",["unknown",["selectedOption","details","description"]],true],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"expandOrCollapseDescription"],null],null],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isDescriptionExpanded"]]],null,16,15],["text","                    "],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-summary-description-see-more-chevron"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-items"],["flush-element"],["text","\\n                  "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-items-header"],["flush-element"],["text","\\n                    "],["append",["unknown",["tra","event_hub_purchase_modal_purchse_summary"]],false],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-item-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["selectedOption","bundledItems"]]],null,14],["text","                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-price"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-final-price"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-final-price-text"],["flush-element"],["append",["unknown",["finalPrice"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["displayDiscount"]]],null,9],["text","                "],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedOption","isPurchasable"]]],null,6,5],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-details"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displaySelectedOption"]]],null,17,2],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-header"],["flush-element"],["text","\\n          "],["open-element","h4",[]],["static-attr","class","eh-purchase-bundles-modal-summary-title"],["flush-element"],["append",["unknown",["summaryTitle"]],false],["close-element"],["text","\\n          "],["open-element","h5",[]],["static-attr","class","eh-purchase-bundles-modal-summary-subtitle"],["flush-element"],["append",["unknown",["summarySubtitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["isExecutingPurchase"]]],null,19,18]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-header"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-lock-icon"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-text"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","event_hub_purchase_modal_success_header"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-item-name"],["flush-element"],["text","\\n              "],["append",["unknown",["summaryTitle"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-message"],["flush-element"],["text","\\n              "],["append",["unknown",["successMessage"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-success-footer"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button"],["flush-element"],["text","\\n              "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleCloseModalClick"],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary-unlock-button-content"],["flush-element"],["text","\\n                  "],["append",["unknown",["tra","event_hub_purchase_modal_awesome"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-spinner"],["flush-element"],["text","\\n          "],["append",["unknown",["event-shop-fallback"]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-price"],["flush-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","eh-purchase-bundles-modal-rp-icon"],["flush-element"],["close-element"],["text","\\n                          "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-price-text"],["flush-element"],["append",["unknown",["option","finalPrice"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-quantity"],["flush-element"],["append",["unknown",["option","bundledItems","length"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-owned-text"],["flush-element"],["append",["unknown",["tra","event_shop_offer_card_owned"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-decorator-badge"],["dynamic-attr","src",["unknown",["option","details","decoratorBadgeURL"]],null],["static-attr","onerror","this.onerror=null; this.remove();"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-option\\n                ",["unknown",["option","optionTypeCssClass"]],"\\n                ",["unknown",["option","selectedCssClass"]],"\\n                ",["unknown",["option","ownedClass"]],"\\n                ",["unknown",["optionsPointerClass"]],"\\n                ",["unknown",["optionsExecutingPurchaseClass"]]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectOption",["get",["option"]]],null],null],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-image-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","details","decoratorBadgeURL"]]],null,25],["text","                "],["open-element","img",[]],["static-attr","class","eh-purchase-bundles-modal-option-image"],["dynamic-attr","src",["unknown",["option","details","splashImage"]],null],["dynamic-attr","alt",["unknown",["option","details","name"]],null],["flush-element"],["close-element"],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-details-wrapper"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-details"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-title"],["flush-element"],["append",["unknown",["option","details","name"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-option-bottom-row"],["flush-element"],["text","\\n"],["block",["if"],[["get",["option","isOwned"]]],null,24,23],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["option"]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["eh-purchase-bundles-modal-options-wrapper ",["unknown",["numberOfOptionsWrapperCssClass"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["options"]]],null,26],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-options"],["flush-element"],["text","\\n"],["block",["if"],[["get",["displayBundleOptions"]]],null,27,22],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","eh-purchase-bundles-modal-summary"],["flush-element"],["text","\\n"],["block",["if"],[["get",["purchaseCompleted"]]],null,21,20],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -15865,10 +16246,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(309);
+            n(310);
             var a = s.Ember.Component.extend({
                 classNames: ["rcp-fe-lol-jade-battlepass-reward-celebration"],
-                layout: n(310),
+                layout: n(311),
                 name: null,
                 iconUrl: null
             });
@@ -15891,8 +16272,8 @@
                 computed: l
             } = s.Ember, o = a.extend({
                 classNames: ["jade-rp-topup-modal"],
-                layout: n(312),
-                style: n(313),
+                layout: n(313),
+                style: n(314),
                 dialogMessage: l("price", "itemName", (function() {
                     return this.get("tra").formatString("jade_fiat_modal_rp_topup_message", {
                         remainingPrice: this.get("price"),
@@ -15938,15 +16319,15 @@
                 l = (s = n(105)) && s.__esModule ? s : {
                     default: s
                 },
-                o = n(318),
-                i = n(320),
+                o = n(319),
+                i = n(321),
                 r = n(2);
-            n(321);
+            n(322);
             const {
                 DomMixin: c
             } = a.EmberAddons.EmberLifeline, m = a.UiKitPlugin.getLayerManager(), d = a.ViewportPlugin.fullScreen().getScreenRoot("rcp-fe-lol-champ-select");
             e.exports = a.Ember.Component.extend(c, {
-                layout: n(314),
+                layout: n(315),
                 classNames: ["emotes-edit-button-container"],
                 classNameBindings: ["disabled", "showingEmotes"],
                 showingEmotes: !1,
@@ -16041,7 +16422,7 @@
                 })
             };
             var s = n(1);
-            n(319);
+            n(320);
             s.ComponentFactory.setFactory("FullScreenModal", (function(e) {
                 const t = document.createElement("div");
                 t.className = e.elementClassName;
@@ -16094,15 +16475,15 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(323),
+                a = n(324),
                 l = n(2),
-                o = n(230);
-            n(324);
+                o = n(231);
+            n(325);
             const {
                 RunMixin: i
             } = s.EmberAddons.EmberLifeline, r = s.UiKitPlugin.getTemplateHelper();
             var c = s.Ember.Component.extend(i, {
-                layout: n(315),
+                layout: n(316),
                 classNames: ["jade-summoner-array"],
                 classNameBindings: ["isLeft:your-party:enemy-party", "shouldAlignTop:align-summoners-top"],
                 champSelectScreen: null,
@@ -16288,10 +16669,10 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(2),
-                l = n(230);
-            n(326);
+                l = n(231);
+            n(327);
             var o = s.Ember.Component.extend({
-                layout: n(316),
+                layout: n(317),
                 classNames: ["jade-summoner-object"],
                 classNameBindings: ["isLeft:left:right", "isPickingNow:is-picking-now", "summoner.isSelf", "isBanningNow:is-banning-now", "showIntroAnimation:intro-animation", "summoner.pickSnipedClass", "summoner.shouldShowSelectedSkin:skin-showcase-active", "slotIdClass", "isPickingNext:is-picking-next"],
                 summonerName: null,
@@ -16454,7 +16835,7 @@
                 return e ? n : t
             })(e)
         }
-        n(331);
+        n(332);
         const o = document.currentScript.ownerDocument;
         const i = window.getPluginAnnounceEventName("rcp-fe-lol-jade");
         o.addEventListener(i, (function(e) {
@@ -16488,7 +16869,7 @@
                     websocket: e => e.getSocket(),
                     lockAndLoadPlugin: e => e.get("rcp-fe-lol-lock-and-load")
                 }).then((async () => {
-                    const n = e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-collections/trans.json").overlay("/fe/lol-champion-details/trans.json").overlay("/fe/lol-collections/trans-item-sets.json").overlay("/fe/lol-shared-components/trans-shoppefront.json").overlay("/fe/lol-shared-components/trans-digital-goods-disclaimer.json").overlay("/fe/lol-event-hub/trans.json").overlay("/fe/lol-jade/trans.json"),
+                    const n = e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-collections/trans.json").overlay("/fe/lol-champion-details/trans.json").overlay("/fe/lol-collections/trans-item-sets.json").overlay("/fe/lol-shared-components/trans-shoppefront.json").overlay("/fe/lol-shared-components/trans-digital-goods-disclaimer.json").overlay("/fe/lol-event-hub/trans.json").overlay("/fe/lol-paw/trans.json").overlay("/fe/lol-jade/trans.json"),
                         s = t.default.emberL10n(t.default.Ember, n);
                     return await t.default.add({
                         tra: n,

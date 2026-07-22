@@ -46,7 +46,8 @@
             "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Images/Jade_MissFortune_splash_centered_0.project_jade.jpg",
             "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Images/Jade_MissFortune_splash_uncentered_0.project_jade.jpg",
             "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Images/Jade_MissFortune_splash_tile_0.project_jade.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Jade_MissFortuneLoadScreen.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Jade_MissFortuneLoadScreen_0.project_jade.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Jade_MissFortuneLoadScreen_0_LE.project_jade.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -384,6 +385,34 @@
                 }
             ],
             "description": "在前任队长锐雯神秘失踪后，莎拉 · 厄运是第二位担负“幻灵战斗队长”头衔的人。考虑到锐雯作为战争英雄的地位，这个头衔就好比一双大一码的兔靴，但莎拉聪明、老练并且勇敢，足以在为了人类的战斗中创造她自己的传奇。"
+        },
+        {
+            "id": 60021301,
+            "contentId": "7bf2d9cc-0096-4ef7-8994-168ca8c48c05",
+            "relatedPrimeContentId": "4f672056-a7ca-48ed-885c-c54ab23bebba",
+            "relatedPrimeItemId": 21000,
+            "isBase": false,
+            "name": "",
+            "skinClassification": "kChampion",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Images/Jade_MissFortune_splash_centered_0.project_jade.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Images/Jade_MissFortune_splash_uncentered_0.project_jade.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Images/Jade_MissFortune_splash_tile_0.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Jade_MissFortuneLoadScreen_0.project_jade.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_MissFortune/Skins/Base/Jade_MissFortuneLoadScreen_0_LE.project_jade.jpg",
+            "skinType": "",
+            "rarity": "kNoRarity",
+            "isLegacy": false,
+            "splashVideoPath": null,
+            "previewVideoUrl": null,
+            "collectionSplashVideoPath": null,
+            "collectionCardHoverVideoPath": null,
+            "featuresText": null,
+            "chromaPath": null,
+            "emblems": null,
+            "regionRarityId": 0,
+            "rarityGemPath": null,
+            "skinLines": null,
+            "description": null
         }
     ],
     "passive": {
@@ -470,15 +499,6 @@
                     0.0
                 ],
                 "Effect5Amount": [
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0
-                ],
-                "Effect6Amount": [
                     20.0,
                     20.0,
                     20.0,
@@ -487,32 +507,41 @@
                     20.0,
                     20.0
                 ],
+                "Effect6Amount": [
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
+                ],
                 "Effect7Amount": [
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0,
-                    40.0
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0,
+                    10.0
                 ],
                 "Effect8Amount": [
-                    55.0,
-                    55.0,
-                    55.0,
-                    55.0,
-                    55.0,
-                    55.0,
-                    55.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
                 "Effect9Amount": [
-                    80.0,
-                    80.0,
-                    80.0,
-                    80.0,
-                    80.0,
-                    80.0,
-                    80.0
+                    45.0,
+                    45.0,
+                    45.0,
+                    45.0,
+                    45.0,
+                    45.0,
+                    45.0
                 ],
                 "Effect10Amount": [
                     0.0,
@@ -553,7 +582,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "厄运小姐攻击同一目标时，每次命中造成的伤害会被动提升。该技能可激活，提升厄运小姐的攻击速度，并使她的攻击降低目标受到的治疗效果。",
-            "dynamicDescription": "<font color='#FF9900'>被动：</font>厄运小姐每次攻击会对目标造成<magicDamage>@TotalDamageOnHIt@魔法伤害</magicDamage>，对同一目标至多叠加@MaxStacks@层。<br><magicDamage>最大额外伤害：@MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>主动：</font>厄运小姐的<attackSpeed>攻击速度</attackSpeed>提升<attackSpeed>@ASMod@%</attackSpeed>，持续6秒，并使她的攻击施加<keyword>50%重伤</keyword>，持续3秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<font color='#FF9900'>被动：</font>厄运小姐每次攻击会对她的目标造成<magicDamage>@TotalDamageOnHIt@魔法伤害</magicDamage>，对同一目标至多叠加@MaxStacks@层。<br><magicDamage>最大额外伤害：@MaximumTotalDamageOnHit@</magicDamage><br><br><font color='#FF9900'>主动：</font>厄运小姐的<attackSpeed>攻击速度</attackSpeed>提升<attackSpeed>@ASMod@%</attackSpeed>，持续6秒，并使她的攻击施加持续3秒的<keyword>50%重伤</keyword>。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
