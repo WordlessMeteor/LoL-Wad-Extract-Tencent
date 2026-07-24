@@ -77953,7 +77953,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DTwitchSkin55",
-                            "mAllyEventName": "Kill3DTwitchSkin55",
                             "mEnemyEventName": "Kill3DTwitchSkin55",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -77992,7 +77991,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Kill3DZacSkin24",
-                            "mAllyEventName": "Kill3DZacSkin24",
                             "mEnemyEventName": "Kill3DZacSkin24",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
@@ -78304,7 +78302,6 @@
                         "mAudioAction": {
                             "mMaxOccurences": 1,
                             "mSelfEventName": "Ping2DAssistMe",
-                            "mAllyEventName": "Ping2DAssistMe",
                             "__type": "ContextualActionPlayVO"
                         },
                         "CooldownModifications": {
@@ -78487,10 +78484,6 @@
                             {
                                 "mSpell": "Characters/Velkoz/Spells/VelkozRAbility/VelkozR",
                                 "__type": "ContextualConditionSpellName"
-                            },
-                            {
-                                "mSpellLevel": 1,
-                                "__type": "ContextualConditionSpellLevel"
                             }
                         ],
                         "mAudioAction": {
@@ -78581,6 +78574,28 @@
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Passive",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Velkoz/Spells/VelkozPassiveAbility/VelkozPassive",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 100,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"
                         },
                         "__type": "ContextualRule"
@@ -78700,6 +78715,10 @@
                             {
                                 "mSpellSlot": 3,
                                 "__type": "ContextualConditionSpellSlot"
+                            },
+                            {
+                                "mSpellLevel": 1,
+                                "__type": "ContextualConditionSpellLevel"
                             }
                         ],
                         "mAudioAction": {
@@ -78800,7 +78819,7 @@
                     {
                         "mRuleName": "Assist Kill",
                         "mAudioAction": {
-                            "mMaxOccurences": 4,
+                            "mMaxOccurences": 5,
                             "mSelfEventName": "Assist3DGeneral",
                             "mAllyEventName": "Assist3DGeneral",
                             "mWaitForAnnouncerQueue": true,
