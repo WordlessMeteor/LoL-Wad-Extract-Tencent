@@ -1,0 +1,1664 @@
+{
+    "Characters/Jade_Jax/CAC/Jade_Jax_Base": {
+        "mCooldown": 15.0,
+        "mSituations": {
+            "AttackChampion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack Champion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Taunt": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt3DGeneral",
+                        "mAudioAction": {
+                            "mSelfEventName": "Taunt3DGeneral",
+                            "mAllyEventName": "Taunt3DGeneral",
+                            "mEnemyEventName": "Taunt3DGeneral",
+                            "mSpectatorEventName": "Taunt3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackMinion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack Minion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackNeutral2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Baron",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/SRU_Baron/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Attack2DBaron",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Herald",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/SRU_RiftHerald/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Attack2DHerald",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Attack Neutral",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "FirstMove2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "First Move",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Move2DFirst",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Joke": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DGeneral",
+                            "mAllyEventName": "Joke3DGeneral",
+                            "mEnemyEventName": "Joke3DGeneral",
+                            "mSpectatorEventName": "Joke3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "RecallLeadIn": {
+                "mRules": [
+                    {
+                        "mRuleName": "Recall",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 10.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Recall3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Laugh": {
+                "mRules": [
+                    {
+                        "mRuleName": "Laugh",
+                        "mAudioAction": {
+                            "mSelfEventName": "Laugh3DGeneral",
+                            "mAllyEventName": "Laugh3DGeneral",
+                            "mEnemyEventName": "Laugh3DGeneral",
+                            "mSpectatorEventName": "Laugh3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "KillChampion": {
+                "mRules": [
+                    {
+                        "mRuleName": "Pentakill",
+                        "mConditions": [
+                            {
+                                "mMultikillSize": 5,
+                                "__type": "ContextualConditionMultikillSize"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DPenta",
+                            "mAllyEventName": "Kill3DPenta",
+                            "mEnemyEventName": "Kill3DPenta",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Aatrox",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Aatrox/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DAatrox",
+                            "mEnemyEventName": "Kill3DAatrox",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Anivia",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{47291414}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DAnivia",
+                            "mEnemyEventName": "Kill3DAnivia",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Azir",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Azir/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DAzir",
+                            "mEnemyEventName": "Kill3DAzir",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Bel'Veth",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Belveth/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DBelVeth",
+                            "mEnemyEventName": "Kill3DBelVeth",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Cho'Gath",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{c315305c}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DChoGath",
+                            "mEnemyEventName": "Kill3DChoGath",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fiora",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Fiora/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DFiora",
+                            "mEnemyEventName": "Kill3DFiora",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Kai'Sa",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Kaisa/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DKaisa",
+                            "mEnemyEventName": "Kill3DKaisa",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "K'Sante",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/KSante/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DKSante",
+                            "mEnemyEventName": "Kill3DKSante",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Malzahar",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{d8700100}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DMalzahar",
+                            "mEnemyEventName": "Kill3DMalzahar",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Nasus",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{b1a2b9de}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DNasus",
+                            "mEnemyEventName": "Kill3DNasus",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Renekton",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Renekton/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DRenekton",
+                            "mEnemyEventName": "Kill3DRenekton",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "General",
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DGeneral",
+                            "mEnemyEventName": "Kill3DGeneral",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellCast": {
+                "mRules": [
+                    {
+                        "mRuleName": "Basic 1",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Jax/Spells/Jade_JaxBasicAttack",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Basic 2",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Jax/Spells/Jade_JaxBasicAttack2",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Crit",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Jax/Spells/Jade_JaxCritAttack",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Q",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Jax/Spells/Jade_JaxQAbility/Jade_JaxQ",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 40,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DQCast",
+                            "mAllyEventName": "Spell3DQCast",
+                            "mEnemyEventName": "Spell3DQCast",
+                            "mSpectatorEventName": "Spell3DQCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W",
+                        "mConditions": [
+                            {
+                                "mSpell": "{92738cf0}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DWCast",
+                            "mAllyEventName": "Spell3DWCast",
+                            "mEnemyEventName": "Spell3DWCast",
+                            "mSpectatorEventName": "Spell3DWCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "E",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Jax/Spells/Jade_JaxEAbility/Jade_JaxE",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 40,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 4.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DECast",
+                            "mAllyEventName": "Spell3DECast",
+                            "mEnemyEventName": "Spell3DECast",
+                            "mSpectatorEventName": "Spell3DECast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "R",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxR",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DRCast",
+                            "mAllyEventName": "Spell3DRCast",
+                            "mEnemyEventName": "Spell3DRCast",
+                            "mSpectatorEventName": "Spell3DRCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 100,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "JokeEndedNearby": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke Response",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "JokeResponse3DGeneral",
+                            "mAllyEventName": "JokeResponse3DGeneral",
+                            "mEnemyEventName": "JokeResponse3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "TauntEndedNearby": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt Response",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "TauntResponse3DGeneral",
+                            "mAllyEventName": "TauntResponse3DGeneral",
+                            "mEnemyEventName": "TauntResponse3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "EnemyEncounter": {
+                "mCoolDownTime": 15.0,
+                "mRules": [
+                    {
+                        "mRuleName": "Aatrox",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Aatrox/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DAatrox",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Bel'Veth",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Belveth/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DBelVeth",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Cho'Gath",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{c315305c}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DChoGath",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fiora",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Fiora/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DFiora",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Garen",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4ef8473d}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DGaren",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Gragas",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{de972da3}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DGragas",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Illaoi",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Illaoi/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DIllaoi",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Kai'Sa",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Kaisa/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DKaisa",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Kassadin",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{7d7b0f5e}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DKassadin",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Kayle",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{d54a3ee4}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DKayle",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "K'Sante",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/KSante/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DKSante",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Malzahar",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{d8700100}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DMalzahar",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Nasus",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{b1a2b9de}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DNasus",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Zilean",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{721d1ddf}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DZilean",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Ascended",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "race",
+                                        "mData": "ascended",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DAscended",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Darkin",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "race",
+                                        "mData": "darkin",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DDarkin",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Shurima",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "faction",
+                                        "mData": "shurima",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DShurima",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Void",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "faction",
+                                        "mData": "void",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DVoid",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "General",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Respawn2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Respawn",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Respawn2DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "GotFirstBlood": {
+                "mRules": [
+                    {
+                        "mRuleName": "First Blood",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DFirst",
+                            "mEnemyEventName": "Kill3DFirst",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 130,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "KillTurret": {
+                "mRules": [
+                    {
+                        "mRuleName": "Kill Turret",
+                        "mAudioAction": {
+                            "mMaxOccurences": 6,
+                            "mSelfEventName": "Kill3DTurret",
+                            "mAllyEventName": "Kill3DTurret",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "ShopOpen": {
+                "mRules": [
+                    {
+                        "mRuleName": "Open",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 4,
+                            "mSelfEventName": "Shop2DOpen",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "MoveOrder2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "River Top",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 2,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mRegionType": 4,
+                                "mRegionName": "AREA_River_Top",
+                                "__type": "ContextualConditionMapRegionName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Move2DRiver",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "River Bot",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mRegionType": 4,
+                                "mRegionName": "AREA_River_Bot",
+                                "__type": "ContextualConditionMapRegionName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Move2DRiver",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Long",
+                        "mConditions": [
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 2,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DLong",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Standard",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 5,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DStandard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "{ff6edd45}": {
+                "mRules": [
+                    {
+                        "mRuleName": "Fishing - Start",
+                        "mAudioAction": {
+                            "mSelfEventName": "Unique3DFishingStart",
+                            "mAllyEventName": "Unique3DFishingStart",
+                            "mEnemyEventName": "Unique3DFishingStart",
+                            "mSpectatorEventName": "Unique3DFishingStart",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "{9d6a480a}": {
+                "mRules": [
+                    {
+                        "mRuleName": "Fishing - End",
+                        "mAudioAction": {
+                            "mSelfEventName": "Unique3DFishingEnd",
+                            "mAllyEventName": "Unique3DFishingEnd",
+                            "mEnemyEventName": "Unique3DFishingEnd",
+                            "mSpectatorEventName": "Unique3DFishingEnd",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "{945e27f8}": {
+                "mRules": [
+                    {
+                        "mRuleName": "Fishing - End",
+                        "mAudioAction": {
+                            "mSelfEventName": "Unique3DFishingEnd",
+                            "mAllyEventName": "Unique3DFishingEnd",
+                            "mEnemyEventName": "Unique3DFishingEnd",
+                            "mSpectatorEventName": "Unique3DFishingEnd",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellLevelUp": {
+                "mRules": [
+                    {
+                        "mRuleName": "Learn R",
+                        "mConditions": [
+                            {
+                                "mSpellSlot": 3,
+                                "__type": "ContextualConditionSpellSlot"
+                            },
+                            {
+                                "mSpellLevel": 1,
+                                "__type": "ContextualConditionSpellLevel"
+                            },
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "legacy",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell2DRRankOne",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            }
+        },
+        "mObjectPath": "Characters/Jade_Jax/CAC/Jade_Jax_Base",
+        "__type": "ContextualActionData"
+    },
+    "__linked": []
+}

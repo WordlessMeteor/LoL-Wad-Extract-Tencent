@@ -617,7 +617,7 @@
 			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
-					<li>PBE: 16.14.794.9266 -> 16.15.799.7108</li>
+					<li>Latest: 16.14.794.9266 -> 16.15.799.7108</li>
 				</ul>
 			</td>
 		</tr>
@@ -626,7 +626,16 @@
 			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
-					<li>PBE: 16.15.799.7108 -> 16.15.800.8073</li>
+					<li>Latst: 16.15.799.7108 -> 16.15.800.8073</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-07-30 18=49-57</td>
+			<td style="text-align:center;">2</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>PBE: 16.15.798.3109 -> 16.15.799.7108</li>
 				</ul>
 			</td>
 		</tr>
