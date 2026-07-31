@@ -631,12 +631,22 @@
 			</td>
 		</tr>
 		<tr>
-			<td style="text-align:center;">2026-07-30 18=49-57</td>
+			<td style="text-align:center;">2026-07-30 18-49-57</td>
 			<td style="text-align:center;">2</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>PBE: 16.15.798.3109 -> 16.15.799.7108</li>
 				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-07-31 12-32-52<br></td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>Latest: 16.15.800.8073 -> 16.15.801.1398</li>
+				</ul>
+				Correct files split from map22
 			</td>
 		</tr>
 	</tbody>
