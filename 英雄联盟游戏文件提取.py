@@ -624,7 +624,9 @@ def format_text_files(convert_dir: Optional[str] = None, target_dir: Optional[st
                 objectType_data: dict[str, dict[str, dict[str, Any]]] = {}
                 for (key, value) in src_data.items():
                     if key != "__linked":
-                        objectType_data[value["__type"]] = value
+                        if not value["__type"] in objectType_data:
+                            objectType_data[value["__type"]] = {}
+                        objectType_data[value["__type"]][key] = value
                 #下面分对象类型逐个比对本地文件（Next, compare local files based on object types one by one）
                 for (key, value) in objectType_data.items():
                     split_file_path: str = os.path.splitext(dstpath)[0] + "." + key + ext
