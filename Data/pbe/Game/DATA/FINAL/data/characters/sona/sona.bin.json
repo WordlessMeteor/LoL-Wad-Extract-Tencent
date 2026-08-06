@@ -362,6 +362,7 @@
     },
     "{08b96f1c}": {
         "ObjectName": "SonaWPassiveAttack",
+        "objectPath": "{08b96f1c}",
         "mScriptName": "SonaWPassiveAttack",
         "mSpell": {
             "flags": 128,
@@ -370,7 +371,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_Passive_Charged.dds"
             ],
-            "{11704a2b}": 0.4236000180244446,
+            "spellCastTime": 0.4236000180244446,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -404,7 +405,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -470,6 +471,7 @@
     },
     "Characters/Sona/Spells/SonaWAbility/SonaWPassiveDebuff": {
         "ObjectName": "SonaWPassiveDebuff",
+        "objectPath": "Characters/Sona/Spells/SonaWAbility/SonaWPassiveDebuff",
         "mScriptName": "SonaWPassiveDebuff",
         "mBuff": {
             "mTooltipData": {
@@ -487,13 +489,14 @@
     },
     "Characters/Sona/Spells/SonaWAbility/SonaWMissile": {
         "ObjectName": "SonaWMissile",
+        "objectPath": "Characters/Sona/Spells/SonaWAbility/SonaWMissile",
         "mScriptName": "SonaWMissile",
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 17413,
             "mAnimationName": "",
-            "{11704a2b}": 0.42500001192092896,
-            "{f26881a0}": 0.7999999523162842,
+            "spellCastTime": 0.42500001192092896,
+            "spellTotalTime": 0.7999999523162842,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -526,7 +529,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -580,6 +583,7 @@
     },
     "Characters/Sona/Spells/SonaWAbility/SonaWShield": {
         "ObjectName": "SonaWShield",
+        "objectPath": "Characters/Sona/Spells/SonaWAbility/SonaWShield",
         "mScriptName": "SonaWShield",
         "mBuff": {
             "mTooltipData": {
@@ -597,6 +601,7 @@
     },
     "Characters/Sona/Spells/SonaWAbility/SonaW": {
         "ObjectName": "SonaW",
+        "objectPath": "Characters/Sona/Spells/SonaWAbility/SonaW",
         "mScriptName": "SonaW",
         "mSpell": {
             "flags": 4,
@@ -862,8 +867,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_W.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 1000.0,
@@ -874,7 +879,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -925,7 +930,7 @@
                 100.0,
                 105.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     80.0,
                     85.0,
@@ -1078,6 +1083,7 @@
     },
     "Characters/Sona/Spells/SonaEAbility/SonaESelfHaste": {
         "ObjectName": "SonaESelfHaste",
+        "objectPath": "Characters/Sona/Spells/SonaEAbility/SonaESelfHaste",
         "mScriptName": "SonaESelfHaste",
         "mBuff": {
             "mTooltipData": {
@@ -1095,6 +1101,7 @@
     },
     "Characters/Sona/Spells/SonaEAbility/SonaEHaste": {
         "ObjectName": "SonaEHaste",
+        "objectPath": "Characters/Sona/Spells/SonaEAbility/SonaEHaste",
         "mScriptName": "SonaEHaste",
         "mBuff": {
             "mDescription": "game_buff_tooltip_SonaEHaste",
@@ -1113,6 +1120,7 @@
     },
     "Characters/Sona/Spells/SonaEAbility/SonaE": {
         "ObjectName": "SonaE",
+        "objectPath": "Characters/Sona/Spells/SonaEAbility/SonaE",
         "mScriptName": "SonaE",
         "mSpell": {
             "flags": 4,
@@ -1294,8 +1302,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_E.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -1330,7 +1338,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -1391,7 +1399,7 @@
                 65.0,
                 65.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     65.0,
                     65.0,
@@ -1508,6 +1516,7 @@
     },
     "{d9604ade}": {
         "ObjectName": "SonaEPassiveDebuff",
+        "objectPath": "{d9604ade}",
         "mScriptName": "SonaEPassiveDebuff",
         "mBuff": {
             "mTooltipData": {
@@ -1525,6 +1534,7 @@
     },
     "{dd296114}": {
         "ObjectName": "SonaEPassiveAttack",
+        "objectPath": "{dd296114}",
         "mScriptName": "SonaEPassiveAttack",
         "mSpell": {
             "flags": 128,
@@ -1533,7 +1543,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_Passive_Charged.dds"
             ],
-            "{11704a2b}": 0.4236000180244446,
+            "spellCastTime": 0.4236000180244446,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1567,7 +1577,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -1624,6 +1634,7 @@
     },
     "Characters/Sona/Spells/SonaBasicAttack": {
         "ObjectName": "SonaBasicAttack",
+        "objectPath": "Characters/Sona/Spells/SonaBasicAttack",
         "mScriptName": "SonaBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 512,
@@ -1631,7 +1642,7 @@
             "mImgIconName": [
                 "ASSETS/Spells/Icons2D/1041_Long_Staff.dds"
             ],
-            "{11704a2b}": 0.4236000180244446,
+            "spellCastTime": 0.4236000180244446,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1664,7 +1675,7 @@
                 622.7000122070312,
                 622.7000122070312
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     622.7000122070312,
                     622.7000122070312,
@@ -1740,6 +1751,7 @@
     },
     "{2cf4ad94}": {
         "ObjectName": "SonaQPassiveAttack",
+        "objectPath": "{2cf4ad94}",
         "mScriptName": "SonaQPassiveAttack",
         "mSpell": {
             "flags": 128,
@@ -1748,7 +1760,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_Passive_Charged.dds"
             ],
-            "{11704a2b}": 0.4236000180244446,
+            "spellCastTime": 0.4236000180244446,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1782,7 +1794,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -1848,6 +1860,7 @@
     },
     "Characters/Sona/Spells/SonaQAbility/SonaQ": {
         "ObjectName": "SonaQ",
+        "objectPath": "Characters/Sona/Spells/SonaQAbility/SonaQ",
         "mScriptName": "SonaQ",
         "mSpell": {
             "flags": 4,
@@ -2049,8 +2062,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_Q.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 8.0,
                 8.0,
@@ -2084,7 +2097,7 @@
                 825.0,
                 825.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     825.0,
                     825.0,
@@ -2137,7 +2150,7 @@
                 70.0,
                 75.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -2268,6 +2281,7 @@
     },
     "Characters/Sona/Spells/SonaQAbility/SonaQMissile": {
         "ObjectName": "SonaQMissile",
+        "objectPath": "Characters/Sona/Spells/SonaQAbility/SonaQMissile",
         "mScriptName": "SonaQMissile",
         "mSpell": {
             "flags": 4,
@@ -2276,8 +2290,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_Q.dds"
             ],
-            "{11704a2b}": 0.42500001192092896,
-            "{f26881a0}": 0.7999999523162842,
+            "spellCastTime": 0.42500001192092896,
+            "spellTotalTime": 0.7999999523162842,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -2310,7 +2324,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -2364,6 +2378,7 @@
     },
     "Characters/Sona/Spells/SonaQAbility/SonaQOnHit": {
         "ObjectName": "SonaQOnHit",
+        "objectPath": "Characters/Sona/Spells/SonaQAbility/SonaQOnHit",
         "mScriptName": "SonaQOnHit",
         "mBuff": {
             "mTooltipData": {
@@ -2381,12 +2396,13 @@
     },
     "Characters/Sona/Spells/SonaBasicAttack2": {
         "ObjectName": "SonaBasicAttack2",
+        "objectPath": "Characters/Sona/Spells/SonaBasicAttack2",
         "mScriptName": "SonaBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 512,
             "mAlternateName": "SonaBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.4236000180244446,
+            "spellCastTime": 0.4236000180244446,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2419,7 +2435,7 @@
                 622.7000122070312,
                 622.7000122070312
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     622.7000122070312,
                     622.7000122070312,
@@ -2499,6 +2515,7 @@
     },
     "Characters/Sona/Spells/SonaPassiveAbility/SonaPMissile2": {
         "ObjectName": "SonaPMissile2",
+        "objectPath": "Characters/Sona/Spells/SonaPassiveAbility/SonaPMissile2",
         "mScriptName": "SonaPMissile2",
         "mSpell": {
             "flags": 4,
@@ -2506,8 +2523,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_Passive_Charged.dds"
             ],
-            "{11704a2b}": 0.42500001192092896,
-            "{f26881a0}": 0.7999999523162842,
+            "spellCastTime": 0.42500001192092896,
+            "spellTotalTime": 0.7999999523162842,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2540,7 +2557,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2586,6 +2603,7 @@
     },
     "Characters/Sona/Spells/SonaPassiveAbility/SonaPMissile3": {
         "ObjectName": "SonaPMissile3",
+        "objectPath": "Characters/Sona/Spells/SonaPassiveAbility/SonaPMissile3",
         "mScriptName": "SonaPMissile3",
         "mSpell": {
             "flags": 4,
@@ -2593,8 +2611,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_Passive_Charged.dds"
             ],
-            "{11704a2b}": 0.42500001192092896,
-            "{f26881a0}": 0.7999999523162842,
+            "spellCastTime": 0.42500001192092896,
+            "spellTotalTime": 0.7999999523162842,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2627,7 +2645,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2673,6 +2691,7 @@
     },
     "Characters/Sona/Spells/SonaPassiveAbility/SonaPassiveAccelerandoCount": {
         "ObjectName": "SonaPassiveAccelerandoCount",
+        "objectPath": "Characters/Sona/Spells/SonaPassiveAbility/SonaPassiveAccelerandoCount",
         "mScriptName": "SonaPassiveAccelerandoCount",
         "mBuff": {
             "mTooltipData": {
@@ -2691,6 +2710,7 @@
     },
     "Characters/Sona/Spells/SonaPassiveAbility/SonaPMissile": {
         "ObjectName": "SonaPMissile",
+        "objectPath": "Characters/Sona/Spells/SonaPassiveAbility/SonaPMissile",
         "mScriptName": "SonaPMissile",
         "mSpell": {
             "flags": 4,
@@ -2698,8 +2718,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_Passive_Charged.dds"
             ],
-            "{11704a2b}": 0.42500001192092896,
-            "{f26881a0}": 0.7999999523162842,
+            "spellCastTime": 0.42500001192092896,
+            "spellTotalTime": 0.7999999523162842,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2732,7 +2752,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2778,6 +2798,7 @@
     },
     "Characters/Sona/Spells/SonaPassiveAbility/SonaPassive": {
         "ObjectName": "SonaPassive",
+        "objectPath": "Characters/Sona/Spells/SonaPassiveAbility/SonaPassive",
         "mScriptName": "SonaPassive",
         "mSpell": {
             "DataValues": [
@@ -2956,7 +2977,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -2992,6 +3013,7 @@
     },
     "Characters/Sona/Spells/SonaPassiveAbility/SonaPassiveAttack": {
         "ObjectName": "SonaPassiveAttack",
+        "objectPath": "Characters/Sona/Spells/SonaPassiveAbility/SonaPassiveAttack",
         "mScriptName": "SonaPassiveAttack",
         "mSpell": {
             "flags": 128,
@@ -3000,7 +3022,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_Passive_Charged.dds"
             ],
-            "{11704a2b}": 0.4236000180244446,
+            "spellCastTime": 0.4236000180244446,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3033,7 +3055,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -3087,11 +3109,13 @@
     },
     "{5091a579}": {
         "ObjectName": "SonaSkin06Manager",
+        "objectPath": "{5091a579}",
         "mScriptName": "SonaSkin06Manager",
         "__type": "SpellObject"
     },
     "Characters/Sona/Spells/SonaDJTransition": {
         "ObjectName": "SonaDJTransition",
+        "objectPath": "Characters/Sona/Spells/SonaDJTransition",
         "mScriptName": "SonaDJTransition",
         "mSpell": {
             "flags": 4,
@@ -3104,8 +3128,8 @@
             },
             "mAnimationName": "",
             "mCastTime": 0.5,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3174,6 +3198,7 @@
     },
     "Characters/Sona/Spells/SonaRAbility/SonaR": {
         "ObjectName": "SonaR",
+        "objectPath": "Characters/Sona/Spells/SonaRAbility/SonaR",
         "mScriptName": "SonaR",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3231,8 +3256,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sona/HUD/Icons2D/Sona_R.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 140.0,
                 140.0,
@@ -3265,7 +3290,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -3359,7 +3384,7 @@
                 100.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -3498,16 +3523,18 @@
     },
     "Characters/Sona/Spells/SonaDJManager": {
         "ObjectName": "SonaDJManager",
+        "objectPath": "Characters/Sona/Spells/SonaDJManager",
         "mScriptName": "SonaDJManager",
         "__type": "SpellObject"
     },
     "Characters/Sona/Spells/SonaCritAttack": {
         "ObjectName": "SonaCritAttack",
+        "objectPath": "Characters/Sona/Spells/SonaCritAttack",
         "mScriptName": "SonaCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 512,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.4236000180244446,
+            "spellCastTime": 0.4236000180244446,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3540,7 +3567,7 @@
                 622.7000122070312,
                 622.7000122070312
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     622.7000122070312,
                     622.7000122070312,
@@ -3626,7 +3653,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mEarlyLevelOverrides": [
                     0,
                     1,
@@ -3805,7 +3832,7 @@
             "baseValue": 30.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -3881,7 +3908,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Sona/Spells/SonaPassiveAbility/SonaPassiveAttack",
             "{2cf4ad94}",
             "{08b96f1c}",

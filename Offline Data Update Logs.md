@@ -635,7 +635,12 @@
 			<td style="text-align:center;">2</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
-					<li>PBE: 16.15.798.3109 -> 16.15.799.7108</li>
+					<li>
+						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: 16.15.798.3109 -> 16.15.799.7108</li>
+							<li>TFT: 18.1.0.5168416</li>
+						</ul>
+					</li>
 				</ul>
 			</td>
 		</tr>
@@ -659,7 +664,21 @@
 			<td style="text-align:center;">1</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
-					<li>Latst: 16.15.801.1398 -> 16.15.801.3452</li>
+					<li>Latest: 16.15.801.1398 -> 16.15.801.3452</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-08-06 08-26-36</td>
+			<td style="text-align:center;">2</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: 16.15.799.7108 -> 16.16.801.9410</li>
+							<li>TFT: 18.1.0.5168416 -> 18.1.0.5224340</li>
+						</ul>
+					</li>
 				</ul>
 			</td>
 		</tr>

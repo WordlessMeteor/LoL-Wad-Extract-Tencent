@@ -1,0 +1,598 @@
+{
+    "Characters/BelvethVoidling/Skins/Skin34": {
+        "championSkinName": "BelvethVoidlingSkin34",
+        "skinParent": 29,
+        "skinUpgradeData": {
+            "mGearSkinUpgrades": [
+                "{a2c04f24}",
+                "{dbc86bab}"
+            ],
+            "__type": "SkinUpgradeData"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "BelvethVoidling"
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/BelvethVoidling/Animations/Skin29",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/BelvethVoidling/Skins/Skin29/BelvethVoidling_Skin29.skl",
+            "simpleSkin": "ASSETS/Characters/BelvethVoidling/Skins/Skin29/BelvethVoidling_Skin29.skn",
+            "texture": "ASSETS/Characters/BelvethVoidling/Skins/Skin34/BelvethVoidling_Skin34_Ranged_Melee_TX_CM.tex",
+            "selfIllumination": 0.699999988079071,
+            "Material": "Characters/BelvethVoidling/Skins/Skin34/Materials/BelvethVoidling_Skin34_Shell_Mat",
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "initialSubmeshToHide": "Ranged",
+            "rigPoseModifierData": [
+                {
+                    "mStartingJointName": "BackSpine1",
+                    "mEndingJointName": "BackSpine5",
+                    "mDefaultMaskName": "{4fc1e099}",
+                    "mMaxBoneAngle": 150.0,
+                    "mDampingValue": 20.0,
+                    "OnlyActivateInTurns": true,
+                    "__type": "ConformToPathRigPoseModifierData"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "defaultAnimations": [
+            "Jaw"
+        ],
+        "idleParticlesEffects": [
+            {
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/BelvethVoidling/Info/Voidling_Circle.tex",
+        "iconSquare": "ASSETS/Characters/BelvethVoidling/HUD/Voidling_Square.tex",
+        "mResourceResolver": "Characters/BelvethVoidling/Skins/Skin34/Resources",
+        "objectPath": "{c7aaea06}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/BelvethVoidling/Skins/Skin34/Materials/BelvethVoidling_Skin34_Shell_Mat": {
+        "name": "Characters/BelvethVoidling/Skins/Skin34/Materials/BelvethVoidling_Skin34_Shell_Mat",
+        "samplerValues": [
+            {
+                "TextureName": "Dissolve_Gradient_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/BelvethVoidling/Skins/Skin34/BelvethVoidling_Skin34_Ranged_Melee_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "ASSETS/Characters/BelvethVoidling/Skins/Skin29/BelvethVoidling_Skin29_Mask_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "MatCap_Tex",
+                "texturePath": "ASSETS/Characters/Nami/Skins/Skin68/Nami_Skin68_Pearl_Matcap_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "iridescentTex",
+                "texturePath": "ASSETS/Characters/Nami/Skins/Skin68/Nami_Skin68_Pearl_Iridescent_TX_CM.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Noise_Texture",
+                "texturePath": "ASSETS/Characters/Nami/Skins/Skin68/Nami_Skin68_Armor_Scolling_MAT.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Flowmap",
+                "texturePath": "ASSETS/Shared/Materials/flowmap.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Rim_Light_Power",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Rim_Light_Intensity",
+                "value": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Rim_Light_Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Sharpness",
+                "value": [
+                    0.0010000000474974513,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_SmoothStep",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Sharpness",
+                "value": [
+                    4.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCap_Strength",
+                "value": [
+                    0.36000001430511475,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCapSpecularPower",
+                "value": [
+                    2.0999999046325684,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MatCapSpecularTintColor",
+                "value": [
+                    0.1890135109424591,
+                    0.6890363693237305,
+                    0.930510401725769,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Iridescent_Strength",
+                "value": [
+                    2.119999885559082,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Iridescent_Value",
+                "value": [
+                    1.7999999523162842,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Iridescent_Power",
+                "value": [
+                    10.880000114440918,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Iridescent_Normal_Blend",
+                "value": [
+                    0.5099999904632568,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holo_Strength",
+                "value": [
+                    0.6000000238418579,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holo_Gradient_Contrast",
+                "value": [
+                    0.1209924966096878,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BaseNoiseUVTile",
+                "value": [
+                    20.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "BaseNoiseScrollSpeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "NoiseStrength",
+                "value": [
+                    0.699999988079071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Flowspeed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "ADD_FRESNEL_RIM",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_DISSOLVE",
+                "on": false,
+                "Group": "Dissolve",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FRESNEL_MASK_HOLOGRAPHIC",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_ON",
+                "Group": "Mat Cap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "MATCAP_MASK_ON",
+                "Group": "Mat Cap",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "IRIDESCENCE_ON",
+                "Group": "Iridescent",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "IRIDESCENT_MASK_ON",
+                "Group": "Iridescent",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "HOLOGRAPHIC_ON",
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "HOLOGRAPHIC_MASK_ON",
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FLOWMAP_ON",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Matcap_Iridescent_Holographic",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/BelvethVoidling/Skins/Skin34/Resources": {
+        "resourceMap": {
+            "{0048ed75}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{fc7fca11}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_E_Cas": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_Cas",
+            "Belveth_E_Tar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_Tar",
+            "{2df578f5}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_W_Tar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_W_Tar",
+            "Belveth_Q_Tar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Q_Tar",
+            "Belveth_BA_Crit_Tar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BACritTar",
+            "{fb84992b}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{d4de3200}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_R_DamageMis_Child": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{aeb12ac1}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{4af03083}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{6e6cd18c}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{1bebc727}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{f09fb0d7}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{9e96a4b3}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{262a72d6}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{cb980135}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_W_Tell",
+            "Belveth_E_pool": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_pool",
+            "{12a7d705}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{9537cb95}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{9d9b62ed}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{35c7c6bf}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_E_Tar_ChildParticle": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_TarChildParticle",
+            "Belveth_E_Tar_Chest": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_TarChest",
+            "Belveth_R_indicator_beam": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_IndicatorBeam",
+            "{9291e5bf}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_W_Tell_ChildParticle": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_W_TellChildParticle",
+            "Belveth_R_Tell": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_Tell",
+            "{f7815614}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_P_Target": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_P_Target",
+            "Belveth_R_Explosion": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_Explosion",
+            "Belveth_BA_Slow_01": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BASlow01",
+            "Belveth_BA_Slow_02": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BASlow02",
+            "Belveth_BA_Tar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BATar",
+            "Belveth_BA_Mid_01": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAMid01",
+            "Belveth_BA_Mid_02": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAMid02",
+            "Belveth_BA_Mid_WingTips": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAMidWingTips",
+            "Belveth_E_Cas_Faster": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_CasFaster",
+            "Belveth_BA_Ult_Fast_ChildParticle": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAUltFastChildParticle",
+            "Belveth_BA_Ult_Fast_02": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAUltFast02",
+            "Belveth_W_TailTell": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_W_TailTell",
+            "Belveth_W_Cas_Trail": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_W_CasTrail",
+            "{da85f75e}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Q_Direction",
+            "{6a6afb45}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{fe005efa}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_Q_Dash": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Q_Dash",
+            "{b2c536d5}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{32076c98}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_BA_Ult_Mid_01": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAUltMid01",
+            "Belveth_BA_Ult_Mid_02": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAUltMid02",
+            "Belveth_BA_Ult_Mid_WingTips": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAUltMidWingTips",
+            "Belveth_E_EyeGlow_ChildParticle": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_EyeGlowChildParticle",
+            "Belveth_Q_Dash_Ult": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Q_DashUlt",
+            "Belveth_E_Invuln": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_Invuln",
+            "{7ae2293d}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_ProjectileLaunch",
+            "Belveth_Q_Direction_BVOnly": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Q_DirectionBVOnly",
+            "{da3eb070}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{21fd40c1}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_R_Cas_Body": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_CasBody",
+            "Belveth_R_Explosion_Tar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_ExplosionTar",
+            "Belveth_R_End": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_End",
+            "Belveth_R_EyeGlow": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_EyeGlow",
+            "Belveth_R_Tell_Shred": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_TellShred",
+            "Belveth_R_Passive_Tar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_PassiveTar",
+            "Belveth_R_Minion_Transform": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_MinionTransform",
+            "Belveth_Emote_Joke_Minion_Spawn": "Characters/Belveth/Skins/Skin34/Particles/Belveth_Skin34_Emote_Joke_MinionSpawn",
+            "Belveth_Emote_Joke_Minion_Hearts": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Emote_Joke_MinionHearts",
+            "Belveth_Emote_Joke_Minion_Outro": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Emote_Joke_MinionOutro",
+            "Belveth_Q_Direction_Timer_BVOnly": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Q_DirectionTimerBVOnly",
+            "Belveth_P_Mis_Essence": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_P_MisEssence",
+            "Belveth_R_Minion_Transform_Impact": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_MinionTransformImpact",
+            "Belveth_R_Voidling_BA_Mis": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_VoidlingBAMis",
+            "Belveth_R_Voidling_BA_Tar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_VoidlingBATar",
+            "Belveth_R_Voidling_Melee_BA_Tar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_VoidlingMeleeBATar",
+            "Belveth_R_ring1": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_Ring01",
+            "{36408327}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{35408194}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{34408001}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_R_ring5": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_Ring05",
+            "{32407cdb}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{31407b48}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{304079b5}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "{2f407822}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_R_ring10": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_ring10",
+            "Belveth_BA_Ult_Fast_02_Avatar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAUltFast02Avatar",
+            "Belveth_Emote_Death": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Emote_Death",
+            "Belveth_Emote_Taunt": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Emote_Taunt",
+            "Belveth_Emote_Dance": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Emote_Dance",
+            "Belveth_Emote_Dance_Hands": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Emote_Dance_Hands",
+            "Belveth_P_Target_BV": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_P_TargetBV",
+            "Belveth_P_Target_ChildParticle_Death": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_P_Target_ChildParticle_Death",
+            "Belveth_R_TrackerLine": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_TrackerLine",
+            "Belveth_Idle_Voidling_Head_Ranged": "Characters/Belveth/Skins/Skin34/Particles/Belveth_Skin34_Idle_VoidlingHeadRanged",
+            "Belveth_R_Voidling_BA_Tar_Child": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_VoidlingBATarChild",
+            "Belveth_Idle_Voidling_Head_Melee": "Characters/Belveth/Skins/Skin34/Particles/Belveth_Skin34_Idle_VoidlingHeadMelee",
+            "Belveth_R_Voidling_Melee_BA_Tar_Child": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_VoidlingMeleeBATarChild",
+            "Belveth_Emote_Death_Avatar": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Emote_Death_Avatar",
+            "Belveth_Z_Blank": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Blank",
+            "Belveth_P_Target_Enemy": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_P_TargetEnemy",
+            "Belveth_BA_Ult_Slow_02": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAUltSlow02",
+            "Belveth_BA_Ult_Slow_01": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_BAUltSlow01",
+            "{37ea2a1e}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Q",
+            "Belveth_Q__01": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Q__01",
+            "{6409e06d}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Q_DashGroundChild01",
+            "{8411a00e}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_ButterflyChild01",
+            "{83119e7b}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_ButterflyChild02",
+            "{0b7b0990}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_W_TellChild01",
+            "{0e7b0e49}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_W_TellChild02",
+            "{8d7f2441}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_ExplosionChild",
+            "{c1fd511d}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_ExplosionChild01",
+            "{befd4c64}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_R_ExplosionChild02",
+            "{45e2a191}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_PoolChild01",
+            "{42e29cd8}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_E_PoolChild02",
+            "{bbf5cf4c}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Ground01",
+            "{357b028a}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_FairyGlow",
+            "{e8a547a8}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_FairyGlow02",
+            "{e9a5493b}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_FairyGlow03",
+            "Belveth_Z_Absorb": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Absorb",
+            "{d14d644a}": "Characters/Belveth/Skins/Skin34/Particles/Belveth_Skin34_Idle_Antenna01",
+            "{5a048948}": "Characters/Belveth/Skins/Skin34/Particles/Belveth_Skin34_Idle_Moths01",
+            "{15c4de1f}": "Characters/Belveth/Skins/Skin34/Particles/Belveth_Skin34_Idle_MothsChild01",
+            "{16c4dfb2}": "Characters/Belveth/Skins/Skin34/Particles/Belveth_Skin34_Idle_MothsChild02",
+            "{8544dc4d}": "Characters/Belveth/Skins/Skin34/Particles/Belveth_Skin34_Idle_Leaves01",
+            "{7dbf0d37}": "Characters/Belveth/Skins/Skin34/Particles/Belveth_Skin34_Z_FinalTar01",
+            "{6324033f}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Light01",
+            "{d35623d6}": "Characters/Belveth/Skins/Skin29/Particles/Belveth_Skin29_Z_Light01Child"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/BelvethVoidling/BelvethVoidling.bin",
+        "DATA/Characters/BelvethVoidling/Animations/Skin29.bin",
+        "DATA/Characters/BelvethVoidling/BelvethVoidling_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin28_Skins_Skin29_Skins_Skin3_Skins_Skin30_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin"
+    ]
+}
