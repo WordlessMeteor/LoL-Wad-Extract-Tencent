@@ -503,6 +503,15 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -521,9 +530,27 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
+                    "value": [
+                        125.0,
+                        125.0,
+                        125.0,
+                        125.0,
+                        125.0,
+                        125.0,
+                        125.0
+                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -592,13 +619,13 @@
                 {
                     "name": "OnHitDamageReduction",
                     "values": [
-                        0.6660000085830688,
-                        0.6660000085830688,
-                        0.6660000085830688,
-                        0.6660000085830688,
-                        0.6660000085830688,
-                        0.6660000085830688,
-                        0.6660000085830688
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -644,13 +671,13 @@
                 {
                     "name": "SlowResistance",
                     "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -664,6 +691,19 @@
                         4.0,
                         25000.0,
                         25000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedMod",
+                    "values": [
+                        125.0,
+                        125.0,
+                        125.0,
+                        125.0,
+                        125.0,
+                        125.0,
+                        125.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -703,6 +743,7 @@
             },
             "mSpellCalculations": {
                 "DamagePerShot": {
+                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -712,10 +753,6 @@
                             "mStat": 2,
                             "mDataValue": "ADRatioTT",
                             "__type": "StatByNamedDataValueCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 0.20000000298023224,
-                            "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -734,30 +771,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "MoveSpeedMod": {
-                    "mFormulaParts": [
-                        {
-                            "mNumber": -140.0,
-                            "__type": "NumberCalculationPart"
-                        },
-                        {
-                            "mStat": 4,
-                            "mStatFormula": 2,
-                            "mCoefficient": 100.0,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "{c13f8ded}": {
-                    "mMultiplier": {
-                        "mNumber": 1.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "tooltipOnly": true,
-                    "mModifiedGameCalculation": "MoveSpeedMod",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mCoefficient": 0.15000000596046448,
@@ -4378,9 +4391,35 @@
                         {
                             "mStat": 2,
                             "mSubpart": {
-                                "mStartValue": 0.30000001192092896,
-                                "mEndValue": 1.149999976158142,
-                                "__type": "ByCharLevelInterpolationCalculationPart"
+                                "mLevel1Value": 0.4000000059604645,
+                                "mBreakpoints": [
+                                    {
+                                        "mLevel": 6,
+                                        "mAdditionalBonusAtThisLevel": 0.11999999731779099,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 9,
+                                        "mAdditionalBonusAtThisLevel": 0.11999999731779099,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 11,
+                                        "mAdditionalBonusAtThisLevel": 0.11999999731779099,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 13,
+                                        "mAdditionalBonusAtThisLevel": 0.11999999731779099,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 15,
+                                        "mAdditionalBonusAtThisLevel": 0.11999999731779099,
+                                        "__type": "Breakpoint"
+                                    }
+                                ],
+                                "__type": "ByCharLevelBreakpointsCalculationPart"
                             },
                             "__type": "StatBySubPartCalculationPart"
                         }
@@ -4390,13 +4429,30 @@
                 "PercentHPRatio": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 0.014999999664723873,
-                            "mEndValue": 0.07999999821186066,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 0.0003000000142492354,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mLevel1Value": 0.019999999552965164,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 9,
+                                    "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 13,
+                                    "mAdditionalBonusAtThisLevel": 0.009999999776482582,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -5172,7 +5228,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.675000011920929,
+            "baseValue": 0.625,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -5180,7 +5236,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedPerLevelModifiable": {
-            "baseValue": 1.5,
+            "baseValue": 3.75,
             "__type": "ModifiableFloat"
         },
         "acquisitionRange": 550.0,

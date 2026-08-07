@@ -172743,14 +172743,20 @@
                     },
                     {
                         "mRuleName": "Kill Champion - R",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Viktor/Spells/ViktorRAbility/ViktorR",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
                         "mAudioAction": {
-                            "mMaxOccurences": 1,
+                            "mMaxOccurences": 3,
                             "mSelfEventName": "Kill3DR",
                             "mEnemyEventName": "Kill3DR",
                             "mWaitForAnnouncerQueue": true,
                             "__type": "ContextualActionPlayVO"
                         },
-                        "mPriority": 30,
+                        "mPriority": 120,
                         "CooldownModifications": {
                             "IgnoreTimer": true,
                             "__type": "ContextualActionCooldownModifications"

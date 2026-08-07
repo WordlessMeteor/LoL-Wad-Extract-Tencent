@@ -642,45 +642,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "TTDamage",
-                    "values": [
-                        270.0,
-                        480.0,
-                        690.0,
-                        900.0,
-                        1110.0,
-                        1320.0,
-                        1530.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "TTAPRatio",
-                    "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "TTADRatio",
-                    "values": [
-                        4.5,
-                        4.5,
-                        4.5,
-                        4.5,
-                        4.5,
-                        4.5,
-                        4.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "GrievousWoundsDuration",
                     "values": [
                         3.0,
@@ -718,6 +679,19 @@
                         2.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaximumHits",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -742,25 +716,13 @@
                     "__type": "GameCalculation"
                 },
                 "{3dd8ef4a}": {
+                    "mMultiplier": {
+                        "mDataValue": "MaximumHits",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
                     "tooltipOnly": true,
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "TTDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "TTADRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStatFormula": 2,
-                            "mDataValue": "TTAPRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                    "mModifiedGameCalculation": "DamageCalc",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "",
@@ -869,8 +831,9 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "TTDamage",
+                                    "type": "DamageInstance",
                                     "typeIndex": 1,
+                                    "multiplier": 10.0,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
