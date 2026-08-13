@@ -74,7 +74,7 @@ champ-select:
             235: 235000
             236: 236006
             238: 238029
-            24: 24013
+            24: 24012
             240: 240000
             245: 245000
             246: 246000
@@ -134,11 +134,12 @@ champ-select:
             59: 59012
             6: 6000
             60: 60000
+            60086: 60086301
             61: 61000
             62: 62000
             63: 63000
             64: 64038
-            67: 67055
+            67: 67066
             68: 68000
             69: 69000
             7: 7056
@@ -206,6 +207,9 @@ champ-select:
             2400:
             - 4
             - 6
+            2450:
+            - 4
+            - 6
             3100:
             - 4
             - 12
@@ -245,6 +249,9 @@ champ-select:
             430:
             - 4
             - 14
+            4320:
+            - 74
+            - 712
             440:
             - 4
             - 7
@@ -303,11 +310,11 @@ event-hub:
             1ce1ae5d-5987-4c83-9690-1a3d1abcd8b8:
                 lastSeenTokenBalance: 0
                 lastSeenTokenShopOffersVersion: 0
-                lastTimeSeen: "2026-07-31T08:51:28.634Z"
+                lastTimeSeen: "2026-08-12T16:55:07.243Z"
             97267a01-5d78-469a-8fea-d9083298d572:
                 lastSeenTokenBalance: 0
                 lastSeenTokenShopOffersVersion: 0
-                lastTimeSeen: "2026-07-31T04:13:10.651Z"
+                lastTimeSeen: "2026-08-06T10:01:59.268Z"
     schemaVersion: 1
 event-shop:
     data:
@@ -320,6 +327,10 @@ jade-ftux:
         hasSeenChampSelectMasteriesFtux: true
         hasSeenHomeFtux: true
     schemaVersion: 1
+jadePositionPreferencesEncountered:
+    data:
+        encountered: "true"
+    schemaVersion: 0
 lol-challenges:
     data:
         introCollectionModalShown: true
@@ -330,7 +341,7 @@ lol-challenges:
     schemaVersion: 1
 lol-challenges-latest-level-up:
     data:
-        lastLevelUpTime: 1785371361912
+        lastLevelUpTime: 0
     schemaVersion: 1
 lol-champ-select:
     data:
@@ -360,7 +371,7 @@ lol-clash:
 lol-collection-champions:
     data:
         groupingDropdownKey: "undefined"
-        lastVisitTime: 1783697514291
+        lastVisitTime: 1786180028264
         lcm-eat-seen: true
         sortingDropdownKey: "championMastery"
         unownedFilter: "none"
@@ -384,7 +395,7 @@ lol-collection-finishers:
 lol-collection-summoner-icons:
     data:
         groupingDropdownKey: "all"
-        lastVisitTime: 1780891559776
+        lastVisitTime: 1786180028265
         sortingDropdownKey: "releaseDate"
         unavailableFilter: false
         unownedFilter: false
@@ -399,11 +410,11 @@ lol-collection-wards:
     schemaVersion: 3
 lol-customizer-banners:
     data:
-        lastVisitTime: 1777748032022
+        lastVisitTime: 1785978012955
     schemaVersion: 1
 lol-customizer-icons:
     data:
-        lastVisitTime: 1780981216264
+        lastVisitTime: 1786011780866
     schemaVersion: 1
 lol-customizer-titles:
     data:
@@ -411,7 +422,7 @@ lol-customizer-titles:
     schemaVersion: 1
 lol-customizer-tokens:
     data:
-        lastVisitTime: 1773553921362
+        lastVisitTime: 1785978006064
     schemaVersion: 1
 lol-general:
     data:
@@ -705,18 +716,18 @@ lol-quick-play:
                 spell1: 6
                 spell2: 7
             480:
-            -   championId: 157
+            -   championId: 60011
                 perks: "{\"perkIds\":[8021,9101,9104,8299,8451,8444,5005,5008,5001],\"perkStyle\":8000,\"perkSubStyle\":8400}"
                 positionPreference: "MIDDLE"
-                skinId: 157057
+                skinId: 60011301
                 spell1: 4
-                spell2: 12
-            -   championId: 350
+                spell2: 14
+            -   championId: 60037
                 perks: "{\"perkIds\":[8214,8224,8210,8237,8009,9104,5005,5010,5013],\"perkStyle\":8200,\"perkSubStyle\":8000}"
                 positionPreference: "UTILITY"
-                skinId: 350018
-                spell1: 3
-                spell2: 14
+                skinId: 60037000
+                spell1: 4
+                spell2: 3
             890:
             -   championId: 11
                 perks: "{\"perkIds\":[8010,9111,9103,8014,8140,8105,5005,5010,5013],\"perkStyle\":8000,\"perkSubStyle\":8100}"
@@ -770,6 +781,7 @@ lol-tutorial:
         Map12_CLASSIC_TutorialSeen: true
         Map12_KIWI_16_03_TutorialSeen: true
         Map12_KIWI_16_12_TutorialSeen: true
+        Map12_KIWI_JADE_TutorialSeen: true
         Map12_KIWI_TutorialSeen: true
         Map12_PRACTICETOOL_TutorialSeen: true
         Map12_RUBY_TutorialSeen: true
@@ -811,8 +823,11 @@ parties-settings:
     schemaVersion: 0
 partiesPositionPreferences:
     data:
-        firstPreference: "MIDDLE"
-        secondPreference: "FILL"
+        fifthPreference: "UNSELECTED"
+        firstPreference: "FILL"
+        fourthPreference: "UNSELECTED"
+        secondPreference: "UNSELECTED"
+        thirdPreference: "UNSELECTED"
     schemaVersion: 0
 personalized-offers:
     data:
@@ -914,9 +929,13 @@ ranked-eos-notification-22-RANKED_SOLO_5x5-SECOND_WARNING:
     data:
         notificationShown: true
     schemaVersion: 1
+shoppefront_JADE_BP:
+    data:
+        lastViewed: "2026-08-12T16:54:51.906Z"
+    schemaVersion: 1
 shoppefront_MYTHIC_SHOP:
     data:
-        lastViewed: "2026-07-13T16:12:28.613Z"
+        lastViewed: "2026-08-12T16:56:18.150Z"
     schemaVersion: 1
 yourshop:
     data:

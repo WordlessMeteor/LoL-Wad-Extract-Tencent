@@ -1,0 +1,331 @@
+{
+    "Characters/LuluFaerie/Skins/Skin56": {
+        "championSkinName": "LuluFaerieSkin56",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/LuluFaerie/Animations/Skin56",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/LuluFaerie/Skins/Skin56/LuluFaerie_Skin56.skl",
+            "simpleSkin": "ASSETS/Characters/LuluFaerie/Skins/Skin56/LuluFaerie_Skin56.skn",
+            "texture": "ASSETS/Characters/LuluFaerie/Skins/Skin56/LuluFaerie_Skin56_TX_CM.tex",
+            "skinScale": 2.0,
+            "selfIllumination": 0.699999988079071,
+            "Material": "Characters/LuluFaerie/Skins/Skin56/Materials/LuluFaerie_Skin56_Fresnel_inst",
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "mResourceResolver": "Characters/LuluFaerie/Skins/Skin56/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDriver": {
+                        "mAnimationNames": [
+                            "Recall"
+                        ],
+                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                    },
+                    "__type": "NotMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Root",
+                        "effectKey": "{aaf47559}",
+                        "UseDifferentKeyForOtherTeam": true,
+                        "EffectKeyForOtherTeam": "{62841e65}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
+        "objectPath": "{1c23cfb2}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/LuluFaerie/Skins/Skin56/Materials/LuluFaerie_Skin56_Fresnel_inst": {
+        "name": "Characters/LuluFaerie/Skins/Skin56/Materials/LuluFaerie_Skin56_Fresnel_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Color",
+                "texturePath": "ASSETS/Characters/LuluFaerie/Skins/Skin56/LuluFaerie_Skin56_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask",
+                "texturePath": "ASSETS/Characters/LuluFaerie/Skins/Skin56/LuluFaerie_Skin56_FresnelMask_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "iridescentTex",
+                "texturePath": "ASSETS/Shared/Materials/Default_Gradient.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    0.0,
+                    0.9700007438659668,
+                    0.6785229444503784,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    0.75,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Shadow_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxSpec",
+                "value": [
+                    19.010000228881836,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LQ_Lighting_Intensity",
+                "value": [
+                    33.25,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimLightOffset",
+                "value": [
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SpecularColor",
+                "value": [
+                    0.886274516582489,
+                    0.9098039269447327,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "IridescentControl",
+                "value": [
+                    1.0,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "IRIDESCENCE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/LuluFaerie/Skins/Skin56/Resources": {
+        "resourceMap": {
+            "Lulu_BA_cas": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_BACas",
+            "Lulu_BA_cas_01": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_BACas01",
+            "Lulu_BA_mis": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_BAMis",
+            "Lulu_BA_tar": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_BATar",
+            "Lulu_emote_dance_sfx": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_emote_dance_sfx",
+            "Lulu_emote_death_sfx": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_emote_death_sfx",
+            "Lulu_emote_joke_sfx": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_emote_joke_sfx",
+            "Lulu_emote_laugh_sfx": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Emote_LaughSfx",
+            "Lulu_emote_taunt_sfx": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_emote_taunt_sfx",
+            "Lulu_E_tar_ally": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_E_TarAlly",
+            "Lulu_E_Tar_Enemy": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_E_TarEnemy",
+            "Lulu_idle": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_idle",
+            "Lulu_Pix_BA_mis": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_PixBAMis",
+            "Lulu_Pix_BA_tar": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_PixBATar",
+            "Lulu_Pix_E_Teleport": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Pix_E_PixTeleport",
+            "Lulu_Pix_idle_green": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Pix_Idle_PixGreen",
+            "Lulu_Pix_idle_red": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Pix_Idle_PixRed",
+            "Lulu_Pix_idle_red2": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Pix_Idle_PixRed02",
+            "Lulu_P_Faerie_Flash_01": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_P_FaerieFlash01",
+            "Lulu_Q_mis": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Q_mis",
+            "Lulu_Q_tar": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Q_tar",
+            "Lulu_Q_tar_slow": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Q_TarSlow",
+            "Lulu_R_cas": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_cas",
+            "Lulu_R_forward_01": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_Forward01",
+            "Lulu_R_tar_audio": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarAudio",
+            "Lulu_R_Tar_buf": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarBuf",
+            "Lulu_R_tar_buf_end": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarBufEnd",
+            "Lulu_R_Tar_Hit": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarHit",
+            "Lulu_R_tar_knockup": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarKnockup",
+            "Lulu_R_tar_slow": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarSlow",
+            "Lulu_W_audio_ally": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_AudioAlly",
+            "Lulu_W_audio_enemy": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_AudioEnemy",
+            "Lulu_W_buf_ally": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_BufAlly",
+            "Lulu_W_cas_buf_hand": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_CasBufHand",
+            "Lulu_W_Mis": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_mis",
+            "Lulu_W_tar_01": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_Tar01",
+            "Lulu_W_Tar_Ally": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_TarAlly",
+            "Lulu_W_Tar_Enemy": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_TarEnemy",
+            "{661daca3}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_TarAllyChild01",
+            "{20ea731a}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_TarAllyGrassChild",
+            "{147082d5}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_E_TarAllyChild",
+            "{f91347f8}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_TarAllyGrassChild02",
+            "{0d5d1418}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_Env",
+            "{89f57317}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_FaerieSpring",
+            "{6dfd42af}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_FaerieWinter",
+            "{3f57b540}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_FaerieAutumn",
+            "{827cf3ff}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_FaerieSummer",
+            "{e354a48a}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_Angry",
+            "{2d174927}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_Cry",
+            "{9d7acb9f}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_Heart",
+            "{00df0685}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_Staff",
+            "{413b8a5d}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_EnvChild",
+            "{89a03f60}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_SmokeGround",
+            "{d76e91b7}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_W_TarAllyFireChild",
+            "{1eddda77}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarBufFireChild",
+            "{92f4727a}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarAllyChild02",
+            "{0df74034}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_AppearTar",
+            "{63677d24}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_EnvGrassChild",
+            "{aaf47559}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Idle_PixGreen",
+            "{62841e65}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Idle_PixRed",
+            "{2c981cb2}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_Chanel05",
+            "{7083f332}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_ChannelEnd",
+            "{06415c6f}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_Wings",
+            "{5e335440}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarKnockupChild08",
+            "{683363fe}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarKnockupChild02",
+            "{57f72f6f}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_R_TarKnockupBugChild02",
+            "{5655eaf2}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Emote_Joke_Beam",
+            "{90108922}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Emote_Joke_01",
+            "{0849291c}": "Characters/Lulu/Skins/Skin56/Particles/Lulu_Skin56_Z_FaerieSummer_Enemy"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/LuluFaerie/LuluFaerie.bin",
+        "DATA/Characters/LuluFaerie/Animations/Skin56.bin"
+    ]
+}

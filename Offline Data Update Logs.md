@@ -696,5 +696,14 @@
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-08-13 18-54-22</td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>Latest: 16.15.801.3452 -> 16.16.805.0442</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
