@@ -5622,6 +5622,29 @@
                     }
                 ],
                 "__type": "ContextualSituation"
+            },
+            "{a6e34010}": {
+                "mRules": [
+                    {
+                        "mRuleName": "R Ready",
+                        "mConditions": [
+                            {
+                                "mSpell": "Characters/Sivir/Spells/SivirRAbility/SivirR",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DRReady",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
             }
         },
         "mObjectPath": "Characters/Sivir/CAC/CAC_Template",

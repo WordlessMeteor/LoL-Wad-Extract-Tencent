@@ -1126,9 +1126,9 @@
         },
         "__type": "SpellObject"
     },
-    "{0497850b}": {
+    "Characters/AurelionSol/Spells/AurelionSolSkin31Manager": {
         "ObjectName": "AurelionSolSkin31Manager",
-        "objectPath": "{0497850b}",
+        "objectPath": "Characters/AurelionSol/Spells/AurelionSolSkin31Manager",
         "mScriptName": "AurelionSolSkin31Manager",
         "__type": "SpellObject"
     },
@@ -3728,6 +3728,43 @@
                     ],
                     "mPrecision": 1,
                     "__type": "GameCalculation"
+                },
+                "ExecuteHealthThreshold": {
+                    "mFormulaParts": [
+                        {
+                            "{a8cb9c14}": true,
+                            "mStat": 12,
+                            "mSubpart": {
+                                "mSubparts": [
+                                    {
+                                        "mPart1": {
+                                            "mDataValue": "BaseExecutionThreshold",
+                                            "__type": "NamedDataValueCalculationPart"
+                                        },
+                                        "mPart2": {
+                                            "mNumber": 0.009999999776482582,
+                                            "__type": "NumberCalculationPart"
+                                        },
+                                        "__type": "ProductOfSubPartsCalculationPart"
+                                    },
+                                    {
+                                        "mPart1": {
+                                            "mSpellCalculationKey": "EPassiveScalingExecute",
+                                            "__type": "{f3cbe7b2}"
+                                        },
+                                        "mPart2": {
+                                            "mNumber": 0.009999999776482582,
+                                            "__type": "NumberCalculationPart"
+                                        },
+                                        "__type": "ProductOfSubPartsCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
                 }
             },
             "mAnimationName": "",
@@ -5122,7 +5159,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "{0497850b}",
+                "mParentPassiveBuff": "Characters/AurelionSol/Spells/AurelionSolSkin31Manager",
                 "SkinFilter": {
                     "skinIds": [
                         31
