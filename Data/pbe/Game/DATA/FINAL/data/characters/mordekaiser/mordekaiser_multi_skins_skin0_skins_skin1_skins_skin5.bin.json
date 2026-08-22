@@ -20444,6 +20444,7 @@
                     "__type": "ValueColor"
                 },
                 "pass": 306,
+                "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "softParticleParams": {
                     "deltaIn": 120.0,
@@ -22007,10 +22008,6 @@
                 },
                 "pass": 413,
                 "alphaRef": 0,
-                "softParticleParams": {
-                    "deltaIn": 120.0,
-                    "__type": "VfxSoftParticleDefinitionData"
-                },
                 "alphaErosionDefinition": {
                     "erosionMapName": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/common_trans-vladnbladeback.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
@@ -22152,10 +22149,6 @@
                 },
                 "pass": 414,
                 "alphaRef": 0,
-                "softParticleParams": {
-                    "deltaIn": 120.0,
-                    "__type": "VfxSoftParticleDefinitionData"
-                },
                 "alphaErosionDefinition": {
                     "erosionMapName": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/common_trans-vladnbladeback.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
@@ -23260,185 +23253,6 @@
                     "paletteTexture": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/Mordekaiser_Base_colorGrad_16.tex",
                     "paletteCount": 16,
                     "__type": "VfxPaletteDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 9.0,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "outerSpiral_TE5",
-                "disabled": true,
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        -30.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/Mordekaiser_Base_R_Pit_Souls.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "Color": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.6000000238418579
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.01792294718325138,
-                            0.9536013603210449,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.6000000238418579
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.6000000238418579
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 308,
-                "meshRenderFlags": 0,
-                "alphaRef": 0,
-                "disableBackfaceCull": true,
-                "miscRenderFlags": 1,
-                "stencilMode": 2,
-                "StencilReferenceId": "{4baf2874}",
-                "texture": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/Mordekaiser_Base_R_Malestrom.tex",
-                "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/Mordekaiser_Base_colorGrad_16.tex",
-                    "paletteCount": 16,
-                    "__type": "VfxPaletteDefinitionData"
-                },
-                "birthUvScrollRate": {
-                    "constantValue": [
-                        -0.05000000074505806,
-                        -0.05000000074505806
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "texDiv": [
-                    2.0,
-                    1.0
-                ],
-                "uvScale": {
-                    "constantValue": [
-                        4.0,
-                        2.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Mordekaiser/Skins/Base/Particles/Mordekaiser_Base_R_Malestrom.tex",
-                    "uvScaleMult": {
-                        "constantValue": [
-                            2.0,
-                            2.0
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "ParticleIntegratedUvScrollMult": {
-                        "constantValue": [
-                            0.02500000037252903,
-                            0.02500000037252903
-                        ],
-                        "dynamics": {
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                [
-                                    0.02500000037252903,
-                                    0.02500000037252903
-                                ]
-                            ],
-                            "__type": "VfxAnimatedVector2fVariableData"
-                        },
-                        "__type": "IntegratedValueVector2"
-                    },
-                    "birthUVOffsetMult": {
-                        "constantValue": [
-                            2.0,
-                            1.0
-                        ],
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        -1.0,
-                                        1.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                },
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        -1.0,
-                                        1.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                [
-                                    2.0,
-                                    1.0
-                                ]
-                            ],
-                            "__type": "VfxAnimatedVector2fVariableData"
-                        },
-                        "__type": "ValueVector2"
-                    },
-                    "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -52009,7 +51823,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/velvet_Nrm_pyke.tex",
+                "texturePath": "assets/shared/materials/velvet_nrm_pyke.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -52181,7 +51995,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/velvet_Nrm_pyke.tex",
+                "texturePath": "assets/shared/materials/velvet_nrm_pyke.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }

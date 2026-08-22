@@ -92,7 +92,7 @@
         "skinMeshProperties": {
             "skeleton": "ASSETS/Characters/Soraka/Skins/Skin63/Soraka_Skin63.skl",
             "simpleSkin": "ASSETS/Characters/Soraka/Skins/Skin63/Soraka_Skin63.skn",
-            "texture": "ASSETS/Characters/Soraka/Skins/Skin69/Soraka_Skin69_Main_TX_CM.tex",
+            "texture": "assets/characters/soraka/skins/skin69/soraka_skin69_main_tx_cm.tex",
             "skinScale": 1.2200000286102295,
             "selfIllumination": 0.699999988079071,
             "reflectionFresnelColor": [
@@ -195,15 +195,22 @@
             }
         ],
         "mContextualActionData": "Characters/Soraka/CAC/Soraka_Base",
-        "iconCircle": "ASSETS/Characters/Soraka/HUD/Soraka_Circle.tex",
-        "iconSquare": "ASSETS/Characters/Soraka/HUD/Soraka_Square.tex",
-        "iconAvatar": "ASSETS/Characters/Soraka/HUD/Soraka_Circle_63.tex",
+        "iconCircle": "assets/characters/soraka/hud/soraka_circle.tex",
+        "iconSquare": "assets/characters/soraka/hud/soraka_square.tex",
+        "iconAvatar": "assets/characters/soraka/hud/soraka_circle_63.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
+        "mEmblems": [
+            {
+                "mEmblemData": "{24aba2b0}",
+                "__type": "SkinEmblem"
+            }
+        ],
         "mResourceResolver": "Characters/Soraka/Skins/Skin69/Resources",
+        "{55d3758e}": "ASSETS/Characters/Soraka/Skins/Skin69/ChromaPreview.tex",
         "objectPath": "Characters/Soraka/Skins/Skin69",
         "__type": "SkinCharacterDataProperties"
     },
@@ -2699,11 +2706,11 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Soraka/Skins/Skin63/Particles/Recall_Weapon_02.tex",
+                "texture": "ASSETS/Characters/Soraka/Skins/Skin69/Particles/Soraka_Skin69_Recall_Weapon_02.tex",
                 "materialOverrideDefinitions": [
                     {
                         "subMeshName": "Weapon",
-                        "baseTexture": "ASSETS/Characters/Soraka/Skins/Skin63/Particles/Recall_Weapon_02.tex",
+                        "baseTexture": "assets/characters/soraka/skins/skin69/particles/soraka_skin69_recall_weapon_02.tex",
                         "__type": "VfxMaterialOverrideDefinitionData"
                     }
                 ],
@@ -3290,29 +3297,29 @@
         "samplerValues": [
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Shared/Materials/MatCap_ToonPlastic.tex",
+                "texturePath": "assets/shared/materials/matcap_toonplastic.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "MatCap_Mask",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin63/Soraka_Skin63_Overlay_Mask_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin63/soraka_skin63_overlay_mask_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Main_Texture",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin69/Soraka_Skin69_Main_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin69/soraka_skin69_main_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "OutlineMask_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "addressW": 2,
@@ -3818,17 +3825,17 @@
         "samplerValues": [
             {
                 "TextureName": "Dissolve_Gradient_Texture",
-                "texturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "texturePath": "assets/shared/materials/gradient_test_01.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Dissolve_Texture",
-                "texturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "texturePath": "assets/shared/particles/base_plasma_noise.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin69/Soraka_Skin69_Main_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin69/soraka_skin69_main_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -3836,7 +3843,7 @@
             },
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin63/Soraka_Skin63_Matcap_Mask_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin63/soraka_skin63_matcap_mask_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -3844,7 +3851,7 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin63/Jinx_Skin65_MatCap_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin63/jinx_skin65_matcap_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -3852,19 +3859,19 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin69/Soraka_Skin69_Iridescent_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin69/soraka_skin69_iridescent_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Noise_Texture",
-                "texturePath": "ASSETS/Shared/Materials/Waves_Sharp.tex",
+                "texturePath": "assets/shared/materials/waves_sharp.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Flowmap",
-                "texturePath": "ASSETS/Shared/Materials/flowmap.tex",
+                "texturePath": "assets/shared/materials/flowmap.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -4220,17 +4227,17 @@
         "samplerValues": [
             {
                 "TextureName": "Dissolve_Gradient_Texture",
-                "texturePath": "ASSETS/Shared/Materials/Gradient_test_01.tex",
+                "texturePath": "assets/shared/materials/gradient_test_01.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Dissolve_Texture",
-                "texturePath": "ASSETS/Shared/Particles/Base_plasma_noise.tex",
+                "texturePath": "assets/shared/particles/base_plasma_noise.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin69/Soraka_Skin69_Main_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin69/soraka_skin69_main_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -4238,7 +4245,7 @@
             },
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin63/Soraka_Skin63_Matcap_Mask_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin63/soraka_skin63_matcap_mask_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -4246,7 +4253,7 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin63/Jinx_Skin65_MatCap_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin63/jinx_skin65_matcap_tx_cm.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -4254,19 +4261,19 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin63/Soraka_Skin63_Iridescent_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin63/soraka_skin63_iridescent_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Noise_Texture",
-                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "texturePath": "assets/shared/materials/black.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Flowmap",
-                "texturePath": "ASSETS/Shared/Materials/flowmap.tex",
+                "texturePath": "assets/shared/materials/flowmap.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -4603,12 +4610,12 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "texturePath": "assets/shared/materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Bloom_Texture",
-                "texturePath": "ASSETS/Characters/Diana/Skins/Skin76/Diana_Skin76_Form1black.tex",
+                "texturePath": "assets/characters/diana/skins/skin76/diana_skin76_form1black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
@@ -4751,25 +4758,25 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin69/Soraka_Skin69_Main_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin69/soraka_skin69_main_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Bottom_Texture",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin63/Soraka_Skin63_Bottom_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin63/soraka_skin63_bottom_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Top_Texture",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin69/Soraka_Skin69_Wave_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin69/soraka_skin69_wave_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Alpha_Mask",
-                "texturePath": "ASSETS/Characters/Soraka/Skins/Skin63/Soraka_Skin63_Alpha_Mask_TX_CM.tex",
+                "texturePath": "assets/characters/soraka/skins/skin63/soraka_skin63_alpha_mask_tx_cm.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
