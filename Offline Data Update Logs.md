@@ -753,9 +753,22 @@
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>
-						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
+						Latest: <ul style="list-style-type: disc; margin-left: 2px;">
 							<li>LoL: 16.16.805.0442 -> 16.17.810.9341</li>
 							<li>TFT: 18.1.0.5369445</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-08-27 17-50-56</td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						Latest: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: 16.17.810.9341 -> 16.17.811.4409</li>
 						</ul>
 					</li>
 				</ul>
