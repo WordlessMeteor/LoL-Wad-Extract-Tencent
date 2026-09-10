@@ -804,13 +804,27 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-09-04 18-25-23</td>
-			<td style="text-align:center;">1</td>
+			<td style="text-align:center;">2</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>
 						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
 							<li>LoL: 16.17.810.4348 -> 16.18.814.2293</li>
 							<li>TFT: 18.1.0.5369445 -> 18.2.0.5437412</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-09-10 10-26-35</td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						Latest: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: 16.17.813.6575 -> 16.18.815.9841</li>
+							<li>TFT: 18.1.0.5423749 -> 18.2.0.5450971</li>
 						</ul>
 					</li>
 				</ul>
