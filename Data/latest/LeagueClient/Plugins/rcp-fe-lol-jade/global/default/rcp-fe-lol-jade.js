@@ -17693,7 +17693,7 @@
                     let r = null;
                     const c = i.getElement();
                     let m = null;
-                    const d = (() => {
+                    const d = "TENCENT" === window.RIOT?.CONSTANTS?.regionLocale?.region ? Promise.resolve(null) : (() => {
                         try {
                             return r = e.createJadeHomeComponent(), c.appendChild(r.domNode), r.emberAppInstancePromise ? r.emberAppInstancePromise.then((e => (e.__container__.lookup("router:main").transitionTo("home"), e))).catch((e => (o.error("[rcp-fe-lol-jade] Failed to preload home route", e), null))) : Promise.resolve(null)
                         } catch (e) {
