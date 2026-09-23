@@ -1,0 +1,91 @@
+{
+    "Characters/Akali/Skins/Skin0/Materials/Screen_Overlay_inst": {
+        "name": "Characters/Akali/Skins/Skin0/Materials/Screen_Overlay_inst",
+        "type": 4,
+        "paramValues": [
+            {
+                "name": "Inner_Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Outer_Color",
+                "value": [
+                    0.4901960790157318,
+                    0.5137255191802979,
+                    0.5254902243614197,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Vignette_Size",
+                "value": [
+                    1.774999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Desaturation_Blend",
+                "value": [
+                    0.2549999952316284,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/PostProcess/Desaturate_Color_Overlay",
+                        "depthEnable": false,
+                        "cullEnable": false,
+                        "writeMask": 15,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "normal_blend",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "BLEND": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "death",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "DEATH_EFFECT": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "death_blend",
+                "parentName": "death",
+                "shaderMacros": {
+                    "BLEND": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": []
+}
