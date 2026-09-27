@@ -925,5 +925,15 @@
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-09-27 19-22-04</td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ol style="list-style-type: disc; margin-left: 2px;">
+					<li>Upgrade cdtb library to the repo version</li>
+					<li>Debug binary entry converter</li>
+				</ol>
+			</td>
+		</tr>
 	</tbody>
 </table>
