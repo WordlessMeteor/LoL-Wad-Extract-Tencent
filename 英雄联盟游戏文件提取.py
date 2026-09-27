@@ -1,5 +1,6 @@
-import cssbeautifier, datetime, jsbeautifier, json, os, time, re, shutil, traceback, _io
+import cssbeautifier, datetime, jsbeautifier, json, os, struct, time, re, shutil, _io
 from humanize import naturalsize
+from io import BytesIO
 from cdtb.hashes import default_hashfile, HashFile
 from cdtb.wad import Wad
 from cdtb.binfile import BinFile
@@ -125,7 +126,7 @@ def CopyConvert(src: str, dst: str) -> None:
     with open(src, "rb") as fsrc, open(dst, "wb") as fdst:
         shutil.copyfileobj(fsrc, fdst)
 
-def BinConvert(src: str, dst: str) -> None:
+def BinConvert(src: str, dst: str, game_version: int = 1502) -> None:
     '''
     二进制描述文件转换函数。<br>A function to convert a binary description file.
     
@@ -133,18 +134,22 @@ def BinConvert(src: str, dst: str) -> None:
     :type src: str
     :param dst: 目标文件路径。建议以“.json”结尾。<br>Target file path. Better ends with ".json".
     :type dst: str
+    :param game_version: 对局版本，决定了二进制描述数据的键的加密方式。默认使用25.02版本的加密方式。<br>The patch of the stringtable, which determines the encryption method of keys in the binary description data. Encryption method in Patch 25.02 is adopted by default.
+    
+        这里的对局版本应沿用版本号变更前的格式，并去掉其中的点。例如，25.01版本应填“1501”，14.24版本应填“1424”。<br>This version should follow the format between the patch format change, and the dot should be eliminated. For example, to use Patch 25.01's encryption method, one should pass "1501"; on the other hand, to use Patch 14.24's encryption method, one should pass "1424".
+    :type game_version: int
     '''
     os.makedirs(os.path.dirname(dst), exist_ok = True)
+    binfile = BinFile(src, btype_version = game_version)
+    binData: dict[str, Any] = binfile.to_serializable()
+    if "__linked" in binData: #确保最后两个键一定是__linked和__patches（如有）【Make sure the last two keys must be __linked and __patches (if there they are)】
+        tmp: Any = binData.pop("__linked")
+        binData["__linked"] = tmp
+    if "__patches" in binData:
+        tmp: Any = binData.pop("__patches")
+        binData["__patches"] = tmp
     with open(dst, "w", encoding = "utf-8") as fdst:
-        binfile = BinFile(src)
-        binData: dict[str, Any] = binfile.to_serializable()
-        if "__linked" in binData: #确保最后两个键一定是__linked和__patches（如有）【Make sure the last two keys must be __linked and __patches (if there they are)】
-            tmp: Any = binData.pop("__linked")
-            binData["__linked"] = tmp
-        if "__patches" in binData:
-            tmp: Any = binData.pop("__patches")
-            binData["__patches"] = tmp
-        json.dump(binfile.to_serializable(), fdst, indent = 4, ensure_ascii = False) #这里的indent = 4实际上可以删掉，因为format_text_files函数中在读取json文件后会自动转化成缩进为4个空格的字符串，从而显著节省空间占用。下同（Here `indent = 4` can actually be deleted, because after `format_text_files` function reads the json file, the content will be transformed into a string with 4 spaces as an indentation unit, so that space cost can be saved significantly. So can the following）
+        json.dump(binData, fdst, indent = 4, ensure_ascii = False) #这里的indent = 4实际上可以删掉，因为format_text_files函数中在读取json文件后会自动转化成缩进为4个空格的字符串，从而显著节省空间占用。下同（Here `indent = 4` can actually be deleted, because after `format_text_files` function reads the json file, the content will be transformed into a string with 4 spaces as an indentation unit, so that space cost can be saved significantly. So can the following）
 
 def RstConvert(src: str, dst: str, game_version: int = 1502) -> None:
     '''
@@ -196,6 +201,35 @@ def championSkinInfoConvert(src: str, dst: str) -> None:
     '''
     with open(src, "rb") as fsrc, open(dst, "w", encoding = "utf-8") as fdst:
         json.dump(ChampionSkinInfoConverter.parse_championskininfo(fsrc), fdst, indent = 4, ensure_ascii = False)
+
+def BinEntryConvert(src: str, dst: str, game_version: int = 1502) -> None:
+    '''
+    二进制描述文件转换函数。<br>A function to convert a binary description file.
+    
+    :param src: 原二进制描述文件路径。<br>Original binary description file path.
+    :type src: str
+    :param dst: 目标文件路径。建议以“.json”结尾。<br>Target file path. Better ends with ".json".
+    :type dst: str
+    :param game_version: 对局版本，决定了二进制描述数据的键的加密方式。默认使用25.02版本的加密方式。<br>The patch of the stringtable, which determines the encryption method of keys in the binary description data. Encryption method in Patch 25.02 is adopted by default.
+    
+        这里的对局版本应沿用版本号变更前的格式，并去掉其中的点。例如，25.01版本应填“1501”，14.24版本应填“1424”。<br>This version should follow the format between the patch format change, and the dot should be eliminated. For example, to use Patch 25.01's encryption method, one should pass "1501"; on the other hand, to use Patch 14.24's encryption method, one should pass "1424".
+    :type game_version: int
+    '''
+    os.makedirs(os.path.dirname(dst), exist_ok = True)
+    with open(src, "rb") as fsrc:
+        raw_entry: bytes = fsrc.read()
+    entry_length, = struct.unpack("<L", raw_entry[4:8])
+    bin_data: bytes = b"PROP\3\0\0\0\0\0\0\0\1\0\0\0" + raw_entry[0:4] + struct.pack("<L", entry_length + 4) + b"\0\0\0\0" + raw_entry[8:]
+    binfile = BinFile(BytesIO(bin_data), btype_version = game_version)
+    binData: dict[str, Any] = binfile.to_serializable()
+    if "__linked" in binData: #确保最后两个键一定是__linked和__patches（如有）【Make sure the last two keys must be __linked and __patches (if there they are)】
+        tmp: Any = binData.pop("__linked")
+        binData["__linked"] = tmp
+    if "__patches" in binData:
+        tmp: Any = binData.pop("__patches")
+        binData["__patches"] = tmp
+    with open(dst, "w", encoding = "utf-8") as fdst:
+        json.dump(binData, fdst, indent = 4, ensure_ascii = False) #这里的indent = 4实际上可以删掉，因为format_text_files函数中在读取json文件后会自动转化成缩进为4个空格的字符串，从而显著节省空间占用。下同（Here `indent = 4` can actually be deleted, because after `format_text_files` function reads the json file, the content will be transformed into a string with 4 spaces as an indentation unit, so that space cost can be saved significantly. So can the following）
 
 def isPlainTextPath(path: str) -> bool:
     '''
@@ -380,6 +414,7 @@ def convert_bin_files(extract_dir: Optional[str] = None, target_dir: Optional[st
     #复制文本文件和转换bin文件（Copy text files and convert bin files）
     logPrint("正在整理文件列表……\nSorting out a file list ...", print_time = True)
     bin_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/.*\.bin$") #这里和cdtb库的正则表达式有区别，因为在游戏目录下，Game文件夹以及Game/DATA文件夹内含有其它内容。下同。另外需要说明，plugins文件夹中的.wad文件中不包含.bin文件。这是通过比对cdtb库的代码和CommunityDragon在线数据库的game和plugins文件夹得出的结论（Here the regular expression is different from that in cdtb library, because under the game directory, there're other content under Game/ and Game/DATA/ folders. So are the following regular expressions. Besides, worth mentioning, none of the .wad files under plugins/ folder contain any .bin file. This is concluded by comparison between cdtb library code and the game/ and plugins/ folders in CommunityDragon online database）
+    binEntry_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/ux/tftactivesets.bin")
     rst_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/(?:.*/)?data/menu/.*\.(txt|stringtable)$")
     atlasInfo_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/.*\.cdtb$|Game/DATA/FINAL/assets/items/icons2d/autoatlas/.*/atlas_info\.bin$") #注意到凡是能被atlasInfo_pattern识别到的字符串一定能被bin_pattern识别。所以，识别的顺序很重要（Note that any string matched by `atlasInfo_pattern` will be matched by `bin_pattern`. Hence, the order of finding a match really matters）
     championSkinInfo_pattern: re.Pattern[str] = re.compile(r"Game/DATA/FINAL/global/champions/championskins.info")
@@ -428,16 +463,10 @@ def convert_bin_files(extract_dir: Optional[str] = None, target_dir: Optional[st
         os.makedirs(os.path.dirname(dstpath), exist_ok = True)
         if atlasInfo_pattern.search(srcpath): #图册信息文件名模式是二进制文件名模式的一个特殊形式。要先处理特殊情形，再处理一般情形（`atlasInfo_pattern` belongs to `bin_pattern`. First deal with the special case, and then the general case）
             AtlasInfoConvert(srcpath, dstpath + ".json")
+        elif binEntry_pattern.search(srcpath):
+            BinEntryConvert(srcpath, dstpath + ".json", game_version)
         elif bin_pattern.search(srcpath):
-            try:
-                BinConvert(srcpath, dstpath + ".json")
-            except ValueError: #UI.wad.client/ux/tftactivesets.bin
-                traceback_info = traceback.format_exc()
-                logPrint(traceback_info, write_time = False)
-                logPrint("文件%s转换失败！\nFile %s conversion failure!" %(srcpath, srcpath), write_time = False)
-                if os.path.exists(dstpath + ".json"):
-                    os.remove(dstpath + ".json") #转换失败的文件为空，因此应当删除（Files fail to converted will be empty and thus should be removed）
-                error_files.append(srcpath)
+            BinConvert(srcpath, dstpath + ".json", game_version)
         elif rst_pattern.search(srcpath):
             RstConvert(srcpath, dstpath + ".json", game_version)
         elif championSkinInfo_pattern.search(srcpath):
