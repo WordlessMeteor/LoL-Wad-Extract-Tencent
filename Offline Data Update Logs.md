@@ -945,5 +945,18 @@
 				</ol>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-09-30 14-25-17</td>
+			<td style="text-align:center;">2</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						Latest: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: Within-patch change</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

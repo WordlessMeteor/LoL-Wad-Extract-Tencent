@@ -6,14 +6,14 @@ app:
   local_settings_file: RiotClientSettings.yaml
   log_dir: Riot Client Logs
   multitenant: true
-  project: Keystone
+  project: ''
   respawn:
     command: RiotClientServices.exe
     display_name: Riot Client Services
   splash: riot
 build:
-  patchline: KeystoneFoundationTencentLeagueLivePublicWin
-  patchline-visible-name: ''
+  patchline: KeystoneFoundationTencentLeagueDevSupportedReleaseDbgWin
+  patchline-visible-name: Tencent - League - Dev-Supported - ReleaseDbg
 default_region: TENCENT
 enable_bug_reporter: false
 enable_crashpad: false
@@ -44,6 +44,7 @@ partner_product:
   - --locale={locale}
   executable: LeagueClient.exe
   id: LoL
+  patchlineId: tencent
   relative_path: ../LeagueClient
 publisher: tencent
 region_data:
