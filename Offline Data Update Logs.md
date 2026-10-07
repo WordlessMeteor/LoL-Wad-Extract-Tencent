@@ -951,8 +951,22 @@
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>
-						Latest: <ul style="list-style-type: disc; margin-left: 2px;">
+						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
 							<li>LoL: Within-patch change</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-10-07 21-38-12</td>
+			<td style="text-align:center;">2</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: 16.19.819.1288 -> 16.20.823.9364</li>
+							<li>TFT: 18.3.0.5519412 -> 18.4.0.5616115</li>
 						</ul>
 					</li>
 				</ul>
