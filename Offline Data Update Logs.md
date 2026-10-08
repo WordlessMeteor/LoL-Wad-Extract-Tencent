@@ -972,5 +972,23 @@
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-10-08 18-40-58</td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ol style="list-style-type: disc; margin-left: 2px;">
+					<li>Change device</li>
+					<li>Maintain Live files</li>
+				</ol>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						Latest: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: 16.19.820.7193 -> 16.19.821.7343</li>
+							<li>TFT: 18.3.0.5555196 -> 18.3.0.5572723</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>

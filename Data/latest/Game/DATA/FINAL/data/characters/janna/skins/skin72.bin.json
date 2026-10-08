@@ -5,7 +5,7 @@
         "championSkinName": "JannaSkin72",
         "skinParent": 67,
         "metaDataTags": "faction:zaun,gender:female,element:wind,skinline:coven,",
-        "{c3a944e7}": {
+        "ChromaData": {
             "{7dd33afb}": 1,
             "__type": "{e7ee4f28}"
         },
@@ -322,21 +322,21 @@
             ],
             "rigPoseModifierData": [
                 {
-                    "mStartingJointName": "{8b49ab54}",
-                    "mEndingJointName": "{8449a04f}",
+                    "mStartingJointName": "Hair_M1",
+                    "mEndingJointName": "Hair_M8",
                     "mDefaultMaskName": "{8a46a180}",
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{ee5ada2c}",
-                    "mEndingJointName": "{f65ae6c4}",
+                    "mStartingJointName": "R_BigWings_1",
+                    "mEndingJointName": "R_BigWings_9",
                     "mDefaultMaskName": "{8a46a180}",
                     "OnlyActivateInTurns": true,
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{62f4cdbe}",
-                    "mEndingJointName": "{5af4c126}",
+                    "mStartingJointName": "L_BigWings_1",
+                    "mEndingJointName": "L_BigWings_9",
                     "mDefaultMaskName": "{8a46a180}",
                     "OnlyActivateInTurns": true,
                     "__type": "ConformToPathRigPoseModifierData"
@@ -356,15 +356,15 @@
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{256363ca}",
-                    "mEndingJointName": "{20635beb}",
+                    "mStartingJointName": "R_Wings_1",
+                    "mEndingJointName": "R_Wings_6",
                     "mDefaultMaskName": "{8a46a180}",
                     "OnlyActivateInTurns": true,
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{f2f1b440}",
-                    "mEndingJointName": "{f9f1bf45}",
+                    "mStartingJointName": "L_Wings_1",
+                    "mEndingJointName": "L_Wings_6",
                     "mDefaultMaskName": "{8a46a180}",
                     "OnlyActivateInTurns": true,
                     "__type": "ConformToPathRigPoseModifierData"
@@ -572,7 +572,7 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "Root",
-                        "effectKey": "{b798885e}",
+                        "effectKey": "Janna_R_BuffOut",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -593,14 +593,14 @@
                     "__type": "AllTrueMaterialDriver"
                 },
                 "SubmeshesToShow": [
-                    "{a9bc73d0}",
-                    "{de068f33}",
+                    "R_Eye_Mask",
+                    "WingsHair",
                     "r_ear"
                 ],
                 "SubmeshesToHide": [
                     "EyeMask",
                     "Ear",
-                    "{3c22ed79}"
+                    "Front_Hair"
                 ],
                 "__type": "PersistentEffectConditionData"
             },
@@ -620,7 +620,7 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "Root",
-                        "effectKey": "{b798885e}",
+                        "effectKey": "Janna_R_BuffOut",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -770,7 +770,7 @@
             "Janna_Emote_Dance_Loop": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Dance_Loop",
             "Janna_Emote_Dance_Glow001": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Dance_Glow001",
             "Janna_Emote_Taunt_01": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_Emote_Taunt_01",
-            "{b798885e}": "{dc57adf9}"
+            "Janna_R_BuffOut": "Characters/Janna/Skins/Skin67/Particles/Janna_Skin67_R_BuffOut"
         },
         "__type": "ResourceResolver"
     },
@@ -26148,10 +26148,10 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "BODY",
-                            "{982352e8}",
+                            "Cloths",
                             "r_ear",
-                            "{a9bc73d0}",
-                            "{3ef122f2}",
+                            "R_Eye_Mask",
+                            "R_WingsHair",
                             "Hair",
                             "Gem"
                         ],
@@ -55284,10 +55284,10 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "BODY",
-                            "{982352e8}",
+                            "Cloths",
                             "r_ear",
-                            "{a9bc73d0}",
-                            "{3ef122f2}",
+                            "R_Eye_Mask",
+                            "R_WingsHair",
                             "Hair",
                             "Gem"
                         ],
@@ -69819,20 +69819,20 @@
                     "mMesh": {
                         "mSubmeshesToDraw": [
                             "BODY",
-                            "{982352e8}",
+                            "Cloths",
                             "Hair",
                             "Ear",
-                            "{3c22ed79}",
-                            "{de068f33}",
+                            "Front_Hair",
+                            "WingsHair",
                             "EyeMask"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "BODY",
-                            "{982352e8}",
+                            "Cloths",
                             "Hair",
                             "Ear",
-                            "{3c22ed79}",
-                            "{de068f33}",
+                            "Front_Hair",
+                            "WingsHair",
                             "EyeMask"
                         ],
                         "mLockMeshToAttachment": true,
@@ -69931,30 +69931,30 @@
                         "mSubmeshesToDraw": [
                             "metal",
                             "Cloak01",
-                            "{39c28582}",
+                            "Metal02",
                             "Cloak02",
                             "Eyes",
                             "Gem",
                             "Glass",
-                            "{0bb80cdd}",
+                            "Pupil02",
                             "pupil",
                             "Skirt",
-                            "{3ac28715}",
+                            "Metal03",
                             "weapon",
                             "Wing"
                         ],
                         "mSubmeshesToDrawAlways": [
                             "metal",
                             "Cloak01",
-                            "{39c28582}",
+                            "Metal02",
                             "Cloak02",
                             "Eyes",
                             "Gem",
                             "Glass",
-                            "{0bb80cdd}",
+                            "Pupil02",
                             "pupil",
                             "Skirt",
-                            "{3ac28715}",
+                            "Metal03",
                             "weapon",
                             "Wing"
                         ],
