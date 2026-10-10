@@ -159465,18 +159465,6 @@
         "RootSpell": "Maps/ModeSpecificData/Augments/ARAM_Juiced/Augment_ARAM_Juiced",
         "mAugmentTags": 8,
         "mBuildTags": 512,
-        "TooltipData": {
-            "{c4182067}": "Kiwi_Juiced_Tooltip",
-            "__type": "{5b441d9b}"
-        },
-        "AugmentLevelData": {
-            "CapstoneData": {
-                "{c98a82ca}": "Cherry_ARAM_Juiced_Capstone",
-                "{05835d27}": "Cherry_ARAM_Juiced_Capstone",
-                "__type": "{ade7ce63}"
-            },
-            "__type": "{21dad86e}"
-        },
         "AugmentLargeIconPath": "assets/ux/kiwi/augments/icons/juiced_large.tex",
         "AugmentSmallIconPath": "assets/ux/kiwi/augments/icons/juiced_small.tex",
         "AugmentDisplayTags": [
@@ -255295,10 +255283,11 @@
         "mScriptName": "Augment_DeathDealer",
         "mSpell": {
             "flags": 4,
-            "mAffectsTypeFlags": 4107,
+            "mAffectsTypeFlags": 16387,
             "mRequiredUnitTags": {
                 "mObjectTagList": [
-                    "{ea595ca6}"
+                    "{ea595ca6}",
+                    "{c02a7870}"
                 ],
                 "__type": "ObjectTags"
             },
@@ -326671,41 +326660,28 @@
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "ManaPercentReduction",
-                    "values": [
-                        0.02500000037252903,
-                        0.02500000037252903,
-                        0.02500000037252903,
-                        0.02500000037252903,
-                        0.02500000037252903,
-                        0.02500000037252903,
-                        0.02500000037252903
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "ManaPercentDamagePercent",
                     "values": [
-                        0.04500000178813934,
-                        0.04500000178813934,
-                        0.04500000178813934,
-                        0.04500000178813934,
-                        0.04500000178813934,
-                        0.04500000178813934,
-                        0.04500000178813934
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "MaxLevel",
                     "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -326742,13 +326718,13 @@
                         {
                             "name": "ManaPercentDamagePercent",
                             "values": [
-                                0.04500000178813934,
-                                0.04500000178813934,
                                 0.09000000357627869,
-                                0.13500000536441803,
-                                0.13500000536441803,
-                                0.13500000536441803,
-                                0.13500000536441803
+                                0.09000000357627869,
+                                0.09000000357627869,
+                                0.09000000357627869,
+                                0.09000000357627869,
+                                0.09000000357627869,
+                                0.09000000357627869
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -326757,15 +326733,6 @@
                 }
             },
             "mSpellCalculations": {
-                "Calc_Mana_Cost": {
-                    "mFormulaParts": [
-                        {
-                            "mCoefficient": 0.02500000037252903,
-                            "__type": "AbilityResourceByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
                 "Calc_Damage": {
                     "mFormulaParts": [
                         {
@@ -326773,7 +326740,11 @@
                             "__type": "{2b25a73a}"
                         }
                     ],
-                    "__type": "GameCalculation"
+                    "mRangedMultiplier": {
+                        "mNumber": 0.800000011920929,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "__type": "{e9a3c91d}"
                 },
                 "{89615869}": {
                     "mMultiplier": {
@@ -326851,7 +326822,6 @@
                     },
                     "mLists": {
                         "LevelUp": {
-                            "levelCount": 2,
                             "Elements": [
                                 {
                                     "type": "ManaPercentDamagePercent",

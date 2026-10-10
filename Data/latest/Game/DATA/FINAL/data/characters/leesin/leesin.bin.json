@@ -23,7 +23,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinQLongRange",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -51,7 +51,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinRDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -79,7 +79,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinRQCombos",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -135,7 +135,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinRHitsTowardTeam",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -163,7 +163,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinW1Blocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -191,7 +191,7 @@
         "mDescriptionTraKey": "stat_stone_description_LeeSinQ2toKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 255,
+                "EventToTrack": 257,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -330,7 +330,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 232,
+                "EventToTrack": 234,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -422,6 +422,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "Kiwi": {
+                    "SpellDataValues": [
+                        {
+                            "name": "PassiveAS",
+                            "values": [
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "EnergyReturn": {
                     "mSimpleTooltipCalculationDisplay": 6,
@@ -453,6 +473,35 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mModifiedGameCalculation": "EnergyReturn",
                     "__type": "GameCalculationModified"
+                }
+            },
+            "{66185ec4}": {
+                "Kiwi": {
+                    "Calculations": {
+                        "EnergyReturn": {
+                            "mSimpleTooltipCalculationDisplay": 6,
+                            "mFormulaParts": [
+                                {
+                                    "mLevel1Value": 15.0,
+                                    "mBreakpoints": [
+                                        {
+                                            "mLevel": 7,
+                                            "mAdditionalBonusAtThisLevel": 5.0,
+                                            "__type": "Breakpoint"
+                                        },
+                                        {
+                                            "mLevel": 13,
+                                            "mAdditionalBonusAtThisLevel": 5.0,
+                                            "__type": "Breakpoint"
+                                        }
+                                    ],
+                                    "__type": "ByCharLevelBreakpointsCalculationPart"
+                                }
+                            ],
+                            "__type": "GameCalculation"
+                        }
+                    },
+                    "__type": "{4acf67d2}"
                 }
             },
             "mImgIconName": [
@@ -631,6 +680,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "Kiwi": {
+                    "SpellDataValues": [
+                        {
+                            "name": "Q2BaseDamage",
+                            "values": [
+                                80.0,
+                                80.0,
+                                120.0,
+                                160.0,
+                                200.0,
+                                240.0,
+                                280.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -2731,6 +2800,24 @@
                                 280.0,
                                 350.0,
                                 420.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                },
+                "Kiwi": {
+                    "SpellDataValues": [
+                        {
+                            "name": "ShieldValue",
+                            "values": [
+                                80.0,
+                                80.0,
+                                140.0,
+                                200.0,
+                                260.0,
+                                320.0,
+                                380.0
                             ],
                             "__type": "SpellDataValue"
                         }
