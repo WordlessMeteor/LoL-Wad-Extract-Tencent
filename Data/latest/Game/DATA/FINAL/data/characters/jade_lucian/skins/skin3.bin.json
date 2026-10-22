@@ -1,0 +1,211 @@
+{
+    "{c857496d}": {
+        "skinClassification": 2,
+        "championSkinId": 60236003,
+        "championSkinName": "Jade_Lucian_Test_01",
+        "skinParent": 0,
+        "metaDataTags": "faction:demacia,gender:male,race:human",
+        "ChromaData": {
+            "Chroma": "{08fa517e}",
+            "{a2cb8e03}": {
+                "riot": 0
+            },
+            "__type": "{c96d9140}"
+        },
+        "loadscreen": {
+            "image": "assets/characters/jade_lucian/skins/base/jade_lucianloadscreen.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Lucian",
+                "LucianSkin301"
+            ],
+            "bankUnits": [
+                {
+                    "name": "Lucian_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Lucian/Skins/Base/Lucian_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Lucian/Skins/Base/Lucian_Base_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Lucian_Skin301_VO",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Lucian/Skins/Skin301/Lucian_Skin301_VO_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Lucian/Skins/Skin301/Lucian_Skin301_VO_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Lucian/Skins/Skin301/Lucian_Skin301_VO_audio.wpk"
+                    ],
+                    "events": [
+                        "Play_vo_LucianSkin301_Attack2DGeneral",
+                        "Play_vo_LucianSkin301_Death3D",
+                        "Play_vo_LucianSkin301_Joke3DGeneral",
+                        "Play_vo_LucianSkin301_Laugh3DGeneral",
+                        "Play_vo_LucianSkin301_Move2DStandard",
+                        "Play_vo_LucianSkin301_Spell3DBasic",
+                        "Play_vo_LucianSkin301_Spell3DRCast",
+                        "Play_vo_LucianSkin301_Taunt3DGeneral"
+                    ],
+                    "voiceOver": true,
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "{1ac86d8d}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Jade_Lucian/Skins/Base/Jade_Lucian_Base.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Lucian/Skins/Base/Jade_Lucian_Base.skn",
+            "texture": "assets/characters/jade_lucian/skins/skin03/jade_lucian_base_rc01_tx_cm.tex",
+            "skinScale": 1.0499999523162842,
+            "selfIllumination": 0.699999988079071,
+            "brushAlphaOverride": 0.4000000059604645,
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "defaultAnimations": [
+            "Buffbones",
+            "idle1_BACKUP"
+        ],
+        "idleParticlesEffects": [
+            {
+                "effectName": "doesnotexist.troy",
+                "boneName": "buffbone_cstm_Lightgun",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            },
+            {
+                "effectName": "doesnotexist.troy",
+                "boneName": "buffbone_cstm_Darkgun",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "mContextualActionData": "Characters/Jade_Lucian/CAC/Jade_Lucian_Skin301",
+        "iconCircle": "assets/characters/jade_lucian/hud/jade_lucian_circle.tex",
+        "iconSquare": "assets/characters/jade_lucian/hud/jade_lucian_square.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "{96b24117}",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "mScriptName": "Jade_LucianPassiveBuff",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mScriptName": "Recall",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Buffbone_Cstm_Darkgun",
+                        "effectKey": "Jade_Lucian_P_buf_Right",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "Buffbone_Cstm_Lightgun",
+                        "effectKey": "Jade_Lucian_P_buf",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
+        "{55d3758e}": "ASSETS/Characters/Jade_Lucian/Skins/Skin03/ChromaPreview.tex",
+        "objectPath": "{c857496d}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{96b24117}": {
+        "resourceMap": {
+            "Jade_Lucian_AA_mis": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_AA_mis",
+            "Jade_Lucian_AA_mis_Crit": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_AA_mis_Crit",
+            "Jade_Lucian_AA_tar": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_AA_tar",
+            "Jade_Lucian_AA_tar_Crit": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_AA_tar_Crit",
+            "Jade_Lucian_emote_dance_sound": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_emote_dance_sound",
+            "Jade_Lucian_emote_joke_sound": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_emote_joke_sound",
+            "Jade_Lucian_emote_taunt_sound": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_emote_taunt_sound",
+            "Jade_Lucian_E_cas_trail": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_E_cas_trail",
+            "Jade_Lucian_Joke_01": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_Joke_01",
+            "Jade_Lucian_Joke_02": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_Joke_02",
+            "Jade_Lucian_Joke_03": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_Joke_03",
+            "Jade_Lucian_J_Face_01": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_J_Face_01",
+            "Jade_Lucian_J_Face_02": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_J_Face_02",
+            "Jade_Lucian_J_Face_03": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_J_Face_03",
+            "Jade_Lucian_P_buf": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_P_buf",
+            "Jade_Lucian_P_sound_only": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_P_sound_only",
+            "Jade_Lucian_Q_laser": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Q_laser",
+            "Jade_Lucian_Q_laser_red": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Q_laser_red",
+            "Jade_Lucian_Q_tar": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Q_tar",
+            "Jade_Lucian_R_mis": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_R_mis",
+            "Jade_Lucian_R_tar": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_R_tar",
+            "Jade_Lucian_R_Tar_Champ": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_R_Tar_Champ",
+            "Jade_Lucian_VO_Taunt_Generic": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_VO_Taunt_Generic",
+            "Jade_Lucian_VO_Taunt_Hecarim": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_VO_Taunt_Hecarim",
+            "Jade_Lucian_VO_Taunt_Mordekaiser": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_VO_Taunt_Mordekaiser",
+            "Jade_Lucian_VO_Taunt_Thresh": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_VO_Taunt_Thresh",
+            "Jade_Lucian_W_blowup": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_W_blowup",
+            "Jade_Lucian_W_Buf": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_W_Buf",
+            "Jade_Lucian_W_Buf_Self": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_W_Buf_Self",
+            "Jade_Lucian_W_Mark": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_W_Mark",
+            "Jade_Lucian_W_mis": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_W_mis",
+            "Jade_Lucian_W_tar": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_W_tar",
+            "Jade_Lucian_W_Tar_Champ": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_W_Tar_Champ",
+            "Jade_Lucian_Skin01_W_blowup_BV2": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Skin01_W_blowup",
+            "{1bdd3674}": "Characters/Jade_Lucian/CAC/Jade_Lucian_Conversation_Base",
+            "Jade_Lucian_P_buf_Right": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_P_buf",
+            "Jade_Lucian_P_Ally_Passive": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_P_Ally_Passive",
+            "Jade_Lucian_P_Ally_Gun_Glow": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_P_Ally_Gun_Glow",
+            "Jade_Lucian_P_Attribution_mis": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_P_Attribution_mis",
+            "Jade_Lucian_P_missile_fx": "Characters/Jade_Lucian/Skins/Skin0/Particles/Jade_Lucian_Base_P_missile_fx",
+            "Jade_Lucian_E_AA_tar": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_E_AA_tar",
+            "Jade_Lucian_E_Buf": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_E_Buf",
+            "Jade_Lucian_E_tar": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_E_tar",
+            "Jade_Lucian_E_Tar_Champ": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_E_Tar_Champ",
+            "Jade_Lucian_Lucian_J_Face_01": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_J_Face_01",
+            "Jade_Lucian_Lucian_J_Face_02": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_J_Face_02",
+            "Jade_Lucian_Lucian_J_Face_03": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_J_Face_03",
+            "Jade_Lucian_Lucian_Joke_01": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_Joke_01",
+            "Jade_Lucian_Lucian_Joke_02": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_Joke_02",
+            "Jade_Lucian_Lucian_Joke_03": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_Joke_03",
+            "Jade_Lucian_R_cas": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_R_cas",
+            "Jade_Lucian_R_refresh": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_R_refresh",
+            "Jade_Lucian_R_tar_crit": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_R_tar_crit",
+            "Jade_Lucian_lucian_skin01_recall_leadout_sound": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_lucian_skin01_recall_leadout_sound",
+            "Jade_Lucian_lucian_skin01_recall_start_sound": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_lucian_skin01_recall_start_sound",
+            "Jade_Lucian_Lucian_VO_Taunt_Generic": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_VO_Taunt_Generic",
+            "Jade_Lucian_Lucian_VO_Taunt_Hecarim": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_VO_Taunt_Hecarim",
+            "Jade_Lucian_Lucian_VO_Taunt_Mordekaiser": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_VO_Taunt_Mordekaiser",
+            "Jade_Lucian_Lucian_VO_Taunt_Thresh": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_Lucian_VO_Taunt_Thresh",
+            "Jade_Lucian_W_ASLeech_mis": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_W_ASLeech_mis",
+            "Jade_Lucian_W_self_AS": "Characters/Jade_Lucian/Skins/Skin0/Particles/ConvertedTroys/Jade_Lucian_Base_W_self_AS"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/Jade_Lucian/Jade_Lucian.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin12_Skins_Skin13_Skins_Skin15_Skins_Skin16_Skins_Skin3_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin5_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Lucian/Animations/Skin0.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin12_Skins_Skin13_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin3_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin3_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin71_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin3_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin3_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin18_Skins_Skin19_Skins_Skin3_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin5_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin3_Skins_Skin31_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin5_Skins_Skin6.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Skin0_Skins_Skin10_Skins_Skin12_Skins_Skin13_Skins_Skin15_Skins_Skin16_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin3_Skins_Skin4_Skins_Skin5.bin",
+        "DATA/Characters/Jade_Lucian/Jade_Lucian_Multi_Skins_Skin0_Skins_Skin3_Skins_Skin4_Skins_Skin5.bin"
+    ]
+}
