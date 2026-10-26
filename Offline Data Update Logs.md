@@ -1051,5 +1051,19 @@
 			<td style="text-align:center;">1</td>
 			<td>No changes</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-10-26 19-16-15</td>
+			<td style="text-align:center;">2</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: 16.21.828.4168 -> 16.22.831.3994</li>
+							<li>TFT: 18.5.0.5702416 -> 18.6.0.5761945</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
