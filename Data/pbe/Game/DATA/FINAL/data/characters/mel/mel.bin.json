@@ -426,12 +426,12 @@
         "mRootSpell": "Characters/Mel/Spells/MelWAbility/MelW",
         "mChildSpells": [
             "Characters/Mel/Spells/MelWAbility/MelW",
-            "{55ba8d50}",
-            "{58ba9209}",
-            "{57ba9076}",
-            "{5aba952f}",
-            "{59ba939c}",
-            "{c233979c}"
+            "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis1",
+            "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis2",
+            "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis3",
+            "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis4",
+            "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis5",
+            "Characters/Mel/Spells/MelWAbility/MelWAbsorbMis"
         ],
         "mLifetimeManuallyManaged": true,
         "mName": "MelWAbility",
@@ -450,9 +450,9 @@
         "mScriptName": "MelWReflectUltVO",
         "__type": "SpellObject"
     },
-    "{55ba8d50}": {
+    "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis1": {
         "ObjectName": "MelWRetaliationMis1",
-        "objectPath": "{55ba8d50}",
+        "objectPath": "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis1",
         "mScriptName": "MelWRetaliationMis1",
         "mSpell": {
             "flags": 4194308,
@@ -573,9 +573,9 @@
         },
         "__type": "SpellObject"
     },
-    "{57ba9076}": {
+    "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis3": {
         "ObjectName": "MelWRetaliationMis3",
-        "objectPath": "{57ba9076}",
+        "objectPath": "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis3",
         "mScriptName": "MelWRetaliationMis3",
         "mSpell": {
             "flags": 4194308,
@@ -697,9 +697,9 @@
         },
         "__type": "SpellObject"
     },
-    "{58ba9209}": {
+    "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis2": {
         "ObjectName": "MelWRetaliationMis2",
-        "objectPath": "{58ba9209}",
+        "objectPath": "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis2",
         "mScriptName": "MelWRetaliationMis2",
         "mSpell": {
             "flags": 4194308,
@@ -821,9 +821,9 @@
         },
         "__type": "SpellObject"
     },
-    "{59ba939c}": {
+    "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis5": {
         "ObjectName": "MelWRetaliationMis5",
-        "objectPath": "{59ba939c}",
+        "objectPath": "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis5",
         "mScriptName": "MelWRetaliationMis5",
         "mSpell": {
             "flags": 4194308,
@@ -944,9 +944,9 @@
         },
         "__type": "SpellObject"
     },
-    "{5aba952f}": {
+    "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis4": {
         "ObjectName": "MelWRetaliationMis4",
-        "objectPath": "{5aba952f}",
+        "objectPath": "Characters/Mel/Spells/MelWAbility/MelWRetaliationMis4",
         "mScriptName": "MelWRetaliationMis4",
         "mSpell": {
             "flags": 4194308,
@@ -1468,9 +1468,9 @@
         },
         "__type": "SpellObject"
     },
-    "{c233979c}": {
+    "Characters/Mel/Spells/MelWAbility/MelWAbsorbMis": {
         "ObjectName": "MelWAbsorbMis",
-        "objectPath": "{c233979c}",
+        "objectPath": "Characters/Mel/Spells/MelWAbility/MelWAbsorbMis",
         "mScriptName": "MelWAbsorbMis",
         "mSpell": {
             "flags": 4194436,
@@ -2514,9 +2514,9 @@
         "AbilityTraits": 258,
         "__type": "AbilityObject"
     },
-    "{22374325}": {
+    "Characters/Mel/Spells/MelQAbility/MelQShared": {
         "ObjectName": "MelQShared",
-        "objectPath": "{22374325}",
+        "objectPath": "Characters/Mel/Spells/MelQAbility/MelQShared",
         "mScriptName": "MelQShared",
         "__type": "SpellObject"
     },
@@ -4157,7 +4157,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "TotalDamage": {
+                "TotalDamageTT": {
                     "mFormulaParts": [
                         {
                             "mSubparts": [
@@ -4166,40 +4166,59 @@
                                     "__type": "NamedDataValueCalculationPart"
                                 },
                                 {
-                                    "mDataValue": "APRatioInitial",
-                                    "__type": "StatByNamedDataValueCalculationPart"
+                                    "mPart1": {
+                                        "mSubparts": [
+                                            {
+                                                "mDataValue": "COUNT",
+                                                "__type": "NamedDataValueCalculationPart"
+                                            },
+                                            {
+                                                "mNumber": -1.0,
+                                                "__type": "NumberCalculationPart"
+                                            }
+                                        ],
+                                        "__type": "SumOfSubPartsCalculationPart"
+                                    },
+                                    "mPart2": {
+                                        "mDataValue": "BaseDamageSubsequent",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "ProductOfSubPartsCalculationPart"
                                 }
                             ],
                             "__type": "SumOfSubPartsCalculationPart"
                         },
                         {
-                            "mPart1": {
+                            "mSubpart": {
                                 "mSubparts": [
                                     {
-                                        "mDataValue": "COUNT",
+                                        "mDataValue": "APRatioInitial",
                                         "__type": "NamedDataValueCalculationPart"
                                     },
                                     {
-                                        "mNumber": -1.0,
-                                        "__type": "NumberCalculationPart"
+                                        "mPart1": {
+                                            "mSubparts": [
+                                                {
+                                                    "mDataValue": "COUNT",
+                                                    "__type": "NamedDataValueCalculationPart"
+                                                },
+                                                {
+                                                    "mNumber": -1.0,
+                                                    "__type": "NumberCalculationPart"
+                                                }
+                                            ],
+                                            "__type": "SumOfSubPartsCalculationPart"
+                                        },
+                                        "mPart2": {
+                                            "mDataValue": "APRatioSubsuquent",
+                                            "__type": "NamedDataValueCalculationPart"
+                                        },
+                                        "__type": "ProductOfSubPartsCalculationPart"
                                     }
                                 ],
                                 "__type": "SumOfSubPartsCalculationPart"
                             },
-                            "mPart2": {
-                                "mSubparts": [
-                                    {
-                                        "mDataValue": "BaseDamageSubsequent",
-                                        "__type": "NamedDataValueCalculationPart"
-                                    },
-                                    {
-                                        "mDataValue": "APRatioSubsuquent",
-                                        "__type": "StatByNamedDataValueCalculationPart"
-                                    }
-                                ],
-                                "__type": "SumOfSubPartsCalculationPart"
-                            },
-                            "__type": "ProductOfSubPartsCalculationPart"
+                            "__type": "StatBySubPartCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -4259,7 +4278,7 @@
             },
             "mSpellPassives": [
                 {
-                    "mBuff": "{22374325}",
+                    "mBuff": "Characters/Mel/Spells/MelQAbility/MelQShared",
                     "mWhenToAddSpell": 0,
                     "mRemoveWhenOnCooldown": false,
                     "mDisplayFlags": 0,
@@ -4421,7 +4440,7 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mSpellCalculationKey": "TotalDamage",
+                        "mSpellCalculationKey": "TotalDamageTT",
                         "__type": "{f3cbe7b2}"
                     }
                 ],

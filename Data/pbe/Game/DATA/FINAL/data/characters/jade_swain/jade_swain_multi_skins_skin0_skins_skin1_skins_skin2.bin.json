@@ -2350,9 +2350,7 @@
                     "__type": "ValueVector2"
                 },
                 "__type": "VfxEmitterDefinitionData"
-            }
-        ],
-        "simpleEmitterDefinitionData": [
+            },
             {
                 "rate": {
                     "constantValue": 45.0,
@@ -2492,6 +2490,10 @@
                     },
                     "__type": "ValueVector3"
                 },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "emitOffset": {
                         "constantValue": [
@@ -2590,6 +2592,87 @@
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-eyefade32.tex",
                 "blendMode": 1,
                 "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -50.0,
+                                    50.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        13.0,
+                        13.0,
+                        13.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                13.0,
+                                13.0,
+                                13.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/AnimatedCrows.tex",
                 "frameRate": 30.0,
                 "numFrames": 11,
@@ -2597,65 +2680,6 @@
                     4.0,
                     4.0
                 ],
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 13.0,
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        1.0,
-                                        2.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                13.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": 1.0,
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        -50.0,
-                                        50.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                1.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "VfxEmitterLegacySimple"
-                },
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2671,6 +2695,10 @@
                 "lifetime": 3.0,
                 "emitterName": "base",
                 "importance": 4,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -2682,22 +2710,30 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-bellcurve.tex",
                 "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 250.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        0.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2713,41 +2749,44 @@
                 "lifetime": 3.0,
                 "emitterName": "base-proj",
                 "importance": 1,
-                "SpawnShape": {
-                    "__type": "VfxShapeLegacy"
+                "IsEmitterSpace": 1,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        35.0,
+                        5.0,
                         0.0
                     ],
                     "__type": "ValueVector3"
                 },
                 "primitive": {
-                    "mProjection": {
-                        "mYRange": 200.0,
-                        "__type": "VfxProjectionDefinitionData"
-                    },
-                    "__type": "VfxPrimitivePlanarProjection"
+                    "__type": "VfxPrimitiveArbitraryQuad"
                 },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-bellcurve.tex",
-                "pass": -1,
-                "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 250.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "{cb13aff1}": -50.0,
+                "isUniformScale": 1,
+                "isFollowingTerrain": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        0.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2763,8 +2802,9 @@
                 "lifetime": 3.0,
                 "emitterName": "base_02",
                 "importance": 3,
-                "SpawnShape": {
-                    "__type": "VfxShapeLegacy"
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "EmitterPosition": {
                     "constantValue": [
@@ -2774,26 +2814,30 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-bellcurve.tex",
                 "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 175.0,
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": 45.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        45.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        175.0,
+                        175.0,
+                        175.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2888,6 +2932,10 @@
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "SpawnShape": {
                     "emitOffset": {
@@ -2994,66 +3042,88 @@
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-smoke32_07.tex",
                 "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/Flare-Rainbow_purp_02.DDS",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 15.0,
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        1.0,
-                                        2.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                15.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": 1.0,
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        -50.0,
-                                        50.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                1.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
                         1.0,
-                        1.0
+                        0.0,
+                        0.0
                     ],
-                    "__type": "VfxEmitterLegacySimple"
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -50.0,
+                                    50.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                15.0,
+                                15.0,
+                                15.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/Flare-Rainbow_purp_02.DDS",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -3070,6 +3140,10 @@
                 "isSingleParticle": 1,
                 "emitterName": "base_04",
                 "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -3081,31 +3155,39 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-bellcurve.tex",
                 "pass": 1,
                 "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 165.0,
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": -30.0,
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotationalVelocity": {
-                        "constantValue": 130.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        -30.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        130.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        165.0,
+                        165.0,
+                        165.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -3120,6 +3202,10 @@
                 "lifetime": 1.0,
                 "emitterName": "border",
                 "importance": 4,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -3131,9 +3217,13 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultColorOverlifetime.tex",
                 "blendMode": 1,
+                "pass": 1,
                 "meshRenderFlags": 0,
                 "colorLookUpTypeY": 2,
                 "colorLookUpScales": [
@@ -3145,38 +3235,63 @@
                     0.8999999761581421
                 ],
                 "colorRenderFlags": 1,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/team_ring_red_02.DDS",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 250.0,
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": 20.0,
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                1.0
-                            ],
-                            "values": [
-                                0.0,
-                                -300.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotationalVelocity": {
-                        "constantValue": 360.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "{cb13aff1}": -20.0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        20.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                -90.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                -90.0,
+                                -300.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
                 },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        360.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/team_ring_red_02.DDS",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -3191,28 +3306,24 @@
                 "lifetime": 1.0,
                 "emitterName": "border-proj",
                 "importance": 1,
-                "SpawnShape": {
-                    "__type": "VfxShapeLegacy"
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        35.0,
+                        5.0,
                         0.0
                     ],
                     "__type": "ValueVector3"
                 },
                 "primitive": {
-                    "mProjection": {
-                        "mYRange": 200.0,
-                        "__type": "VfxProjectionDefinitionData"
-                    },
-                    "__type": "VfxPrimitivePlanarProjection"
+                    "__type": "VfxPrimitiveArbitraryQuad"
                 },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultColorOverlifetime.tex",
                 "blendMode": 1,
-                "meshRenderFlags": 0,
                 "colorLookUpTypeY": 2,
                 "colorLookUpScales": [
                     1.0,
@@ -3223,19 +3334,26 @@
                     0.8999999761581421
                 ],
                 "colorRenderFlags": 1,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/team_ring_red_02.DDS",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 250.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "{cb13aff1}": -50.0,
+                "isUniformScale": 1,
+                "isFollowingTerrain": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        0.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/team_ring_red_02.DDS",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -3255,11 +3373,9 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 1.5,
+                    "constantValue": -1.0,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": null,
-                "lifetime": 5.0,
                 "isSingleParticle": 1,
                 "emitterName": "spike_01",
                 "importance": 3,
@@ -3280,58 +3396,6 @@
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultColorOverlifetime.tex",
                 "blendMode": 1,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.15000000596046448,
-                            0.1599999964237213,
-                            0.8500000238418579,
-                            0.8600000143051147,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.8500000238418579
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
                 "disableBackfaceCull": true,
                 "birthRotation0": {
                     "constantValue": [
@@ -10708,9 +10772,7 @@
                     "__type": "ValueVector2"
                 },
                 "__type": "VfxEmitterDefinitionData"
-            }
-        ],
-        "simpleEmitterDefinitionData": [
+            },
             {
                 "rate": {
                     "constantValue": 45.0,
@@ -10850,6 +10912,10 @@
                     },
                     "__type": "ValueVector3"
                 },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "emitOffset": {
                         "constantValue": [
@@ -10948,6 +11014,87 @@
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-eyefade32.tex",
                 "blendMode": 1,
                 "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -50.0,
+                                    50.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        13.0,
+                        13.0,
+                        13.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                13.0,
+                                13.0,
+                                13.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
                 "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/AnimatedCrows.tex",
                 "frameRate": 30.0,
                 "numFrames": 11,
@@ -10955,65 +11102,6 @@
                     4.0,
                     4.0
                 ],
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 13.0,
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        1.0,
-                                        2.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                13.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": 1.0,
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        -50.0,
-                                        50.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                1.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "VfxEmitterLegacySimple"
-                },
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11029,6 +11117,10 @@
                 "lifetime": 3.0,
                 "emitterName": "base",
                 "importance": 4,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -11040,22 +11132,30 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-bellcurve.tex",
                 "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 250.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        0.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11071,41 +11171,44 @@
                 "lifetime": 3.0,
                 "emitterName": "base-proj",
                 "importance": 1,
-                "SpawnShape": {
-                    "__type": "VfxShapeLegacy"
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        35.0,
+                        5.0,
                         0.0
                     ],
                     "__type": "ValueVector3"
                 },
                 "primitive": {
-                    "mProjection": {
-                        "mYRange": 200.0,
-                        "__type": "VfxProjectionDefinitionData"
-                    },
-                    "__type": "VfxPrimitivePlanarProjection"
+                    "__type": "VfxPrimitiveArbitraryQuad"
                 },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-bellcurve.tex",
-                "pass": -1,
-                "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 250.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "pass": 1,
+                "{cb13aff1}": -50.0,
+                "isUniformScale": 1,
+                "isFollowingTerrain": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        0.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11121,6 +11224,10 @@
                 "lifetime": 3.0,
                 "emitterName": "base_02",
                 "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -11132,26 +11239,30 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-bellcurve.tex",
                 "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 175.0,
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": 45.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        45.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        175.0,
+                        175.0,
+                        175.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11246,6 +11357,10 @@
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "SpawnShape": {
                     "emitOffset": {
@@ -11352,66 +11467,88 @@
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-smoke32_07.tex",
                 "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/Flare-Rainbow_purp_02.DDS",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 15.0,
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        1.0,
-                                        2.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                15.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": 1.0,
-                        "dynamics": {
-                            "probabilityTables": [
-                                {
-                                    "keyTimes": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "keyValues": [
-                                        -50.0,
-                                        50.0
-                                    ],
-                                    "__type": "VfxProbabilityTableData"
-                                }
-                            ],
-                            "times": [
-                                0.0
-                            ],
-                            "values": [
-                                1.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
                         1.0,
-                        1.0
+                        0.0,
+                        0.0
                     ],
-                    "__type": "VfxEmitterLegacySimple"
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -50.0,
+                                    50.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                15.0,
+                                15.0,
+                                15.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/Flare-Rainbow_purp_02.DDS",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11428,6 +11565,10 @@
                 "isSingleParticle": 1,
                 "emitterName": "base_04",
                 "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -11439,31 +11580,39 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/color-bellcurve.tex",
                 "pass": 1,
                 "meshRenderFlags": 0,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 165.0,
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": -30.0,
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotationalVelocity": {
-                        "constantValue": 130.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        -30.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        130.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        165.0,
+                        165.0,
+                        165.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/deathGrasp_02.dds",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11478,6 +11627,10 @@
                 "lifetime": 1.0,
                 "emitterName": "border",
                 "importance": 4,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
                 "SpawnShape": {
                     "__type": "VfxShapeLegacy"
                 },
@@ -11488,6 +11641,9 @@
                         0.0
                     ],
                     "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
                 },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultColorOverlifetime.tex",
@@ -11503,38 +11659,63 @@
                     0.8999999761581421
                 ],
                 "colorRenderFlags": 1,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/team_ring_green_02.DDS",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 250.0,
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotation": {
-                        "constantValue": 20.0,
-                        "dynamics": {
-                            "times": [
-                                0.0,
-                                1.0
-                            ],
-                            "values": [
-                                0.0,
-                                -300.0
-                            ],
-                            "__type": "VfxAnimatedFloatVariableData"
-                        },
-                        "__type": "ValueFloat"
-                    },
-                    "birthRotationalVelocity": {
-                        "constantValue": 360.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "{cb13aff1}": -30.0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        20.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                -90.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                -90.0,
+                                -300.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
                 },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        0.0,
+                        360.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/team_ring_green_02.DDS",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11549,28 +11730,24 @@
                 "lifetime": 1.0,
                 "emitterName": "border-proj",
                 "importance": 1,
-                "SpawnShape": {
-                    "__type": "VfxShapeLegacy"
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
                 },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
-                        35.0,
+                        5.0,
                         0.0
                     ],
                     "__type": "ValueVector3"
                 },
                 "primitive": {
-                    "mProjection": {
-                        "mYRange": 200.0,
-                        "__type": "VfxProjectionDefinitionData"
-                    },
-                    "__type": "VfxPrimitivePlanarProjection"
+                    "__type": "VfxPrimitiveArbitraryQuad"
                 },
                 "falloffTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultFalloff.tex",
                 "particleColorTexture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/DefaultColorOverlifetime.tex",
                 "blendMode": 1,
-                "meshRenderFlags": 0,
                 "colorLookUpTypeY": 2,
                 "colorLookUpScales": [
                     1.0,
@@ -11581,19 +11758,26 @@
                     0.8999999761581421
                 ],
                 "colorRenderFlags": 1,
-                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/team_ring_green_02.DDS",
-                "LegacySimple": {
-                    "birthScale": {
-                        "constantValue": 250.0,
-                        "__type": "ValueFloat"
-                    },
-                    "particleBind": [
-                        1.0,
-                        1.0
+                "{cb13aff1}": -50.0,
+                "isUniformScale": 1,
+                "isFollowingTerrain": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        0.0,
+                        0.0
                     ],
-                    "orientation": 2,
-                    "__type": "VfxEmitterLegacySimple"
+                    "__type": "ValueVector3"
                 },
+                "birthScale0": {
+                    "constantValue": [
+                        250.0,
+                        250.0,
+                        250.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Swain/Skins/Base/Particles/Legacy311/team_ring_green_02.DDS",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -15843,7 +16027,6 @@
                     "constantValue": 0.30000001192092896,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 1.25,
                 "emitterName": "base",
                 "importance": 3,
                 "SpawnShape": {
@@ -15881,10 +16064,9 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 1.5,
+                    "constantValue": -1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 1.25,
                 "isSingleParticle": 1,
                 "emitterName": "base_02",
                 "importance": 3,
@@ -15930,7 +16112,6 @@
                     "constantValue": 0.30000001192092896,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 1.25,
                 "emitterName": "base_03",
                 "importance": 3,
                 "SpawnShape": {
