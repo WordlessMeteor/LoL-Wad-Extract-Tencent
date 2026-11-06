@@ -1107,5 +1107,19 @@
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-06 18-27-45</td>
+			<td style="text-align:center;">1</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						Latest: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: 16.22.834.9083 -> 16.22.836.1077</li>
+							<li>TFT: 18.6.0.5845453 -> 18.6.0.5879539</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
