@@ -1121,5 +1121,19 @@
 				</ul>
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-15 13-36-52</td>
+			<td style="text-align:center;">2</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>LoL: 16.22.833.4968 -> 16.23.837.9341</li>
+							<li>TFT: 18.6.0.5813418 -> 18.7.0.5928229</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
