@@ -1,0 +1,1242 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ErrorCode>
+    <!-- 字段说明
+        New_ID     统一外显的错误ID，7位，包括按照 [类别码2位] [场景码2位][错误码3位]
+        Old_ID     外部组件的错误码或历史错误码
+        ErrorDesc  统一外显的错误信息和解决办法
+        DetailMsg  对内部的详细错误说明解释
+    -->
+
+    <!-- WeGame自更新错误码 -->
+    <ErrorCodeType Type="6001">
+        <Item New_ID="6001000" Old_ID="6001000" ErrorDesc="磁盘空间不足" />
+        <Item New_ID="6001001" Old_ID="6001001" ErrorDesc="无法连接服务器" />
+        <Item New_ID="6001002" Old_ID="6001002" ErrorDesc="客户端版本过低" />
+        <Item New_ID="6001003" Old_ID="6001003" ErrorDesc="客户端版本非法" />
+        <Item New_ID="6001004" Old_ID="6001004" ErrorDesc="无法连接网络" />
+        <Item New_ID="6001005" Old_ID="6001005" ErrorDesc="版本服务器断开连接" />
+        <Item New_ID="6001006" Old_ID="6001006" ErrorDesc="服务器维护中" />
+        <Item New_ID="6001007" Old_ID="6001007" ErrorDesc="文件被占用" />
+        <Item New_ID="6001008" Old_ID="6001008" ErrorDesc="文件校验出错" />
+        <Item New_ID="6001009" Old_ID="6001009" ErrorDesc="文件被占用" />
+        <Item New_ID="6001010" Old_ID="6001010" ErrorDesc="下载文件超时" />
+        <Item New_ID="6001011" Old_ID="6001011" ErrorDesc="TCLS自升级失败，请重启电脑后重试" />
+        <Item New_ID="6001012" Old_ID="6001012" ErrorDesc="安装进程异常退出" />
+        <Item New_ID="6001013" Old_ID="6001013" ErrorDesc="CRC校验错误" />
+        <Item New_ID="6001014" Old_ID="6001014" ErrorDesc="创建安装进程失败" />
+        <Item New_ID="6001015" Old_ID="6001015" ErrorDesc="调用BeginUpdate失败" />
+        <Item New_ID="6001016" Old_ID="6001016" ErrorDesc="初始化下载配置失败" />
+        <Item New_ID="6001017" Old_ID="6001017" ErrorDesc="客户端正在运行" />
+        <Item New_ID="6001018" Old_ID="6001018" ErrorDesc="下载的文件异常丢失" />
+        <Item New_ID="6001019" Old_ID="6001019" ErrorDesc="下载文件失败" />
+        <Item New_ID="6001020" Old_ID="6001020" ErrorDesc="无效的产品线ID" />
+        <Item New_ID="6001021" Old_ID="6001021" ErrorDesc="创建下载组件失败" />
+        <Item New_ID="6001022" Old_ID="6001022" ErrorDesc="检查自更新失败(其他错误)" />
+        <Item New_ID="6001023" Old_ID="6001023" ErrorDesc="自更新失败(其他错误)" />
+    </ErrorCodeType>
+    <!--游戏下载 start
+        场景： 01： DownloadMgr里面的通用错误码； 02：TenioDll错误码； 03： Curl的错误码; 04: tinydl错误码
+    -->
+    <ErrorCodeType Type="6201">
+        <!--没有开启相同URL可创建多个任务特性时，创建重复任务返回此错误(看是否需要此注释) -->
+        <Item New_ID="6201001" Old_ID="1" ErrorDesc="磁盘空间不足，请清理磁盘" />
+        <Item New_ID="6201002" Old_ID="2" ErrorDesc="连接超时，请确认网络状况" />
+        <Item New_ID="6201003" Old_ID="3" ErrorDesc="下载任务修复失败" />
+        <Item New_ID="6201004" Old_ID="4" ErrorDesc="写文件失败，请重试" />
+        <Item New_ID="6201005" Old_ID="5" ErrorDesc="URL不存在，请确认链接是否正确" />
+        <Item New_ID="6201006" Old_ID="6" ErrorDesc="操作的任务已不存在" />
+        <Item New_ID="6201008" Old_ID="8" ErrorDesc="不支持断点续传，需重新下载" />
+        <Item New_ID="6201011" Old_ID="11" ErrorDesc="未知错误" />
+        <Item New_ID="6201012" Old_ID="12" ErrorDesc="下载内核未准备好，请稍候重试" />
+        <Item New_ID="6201013" Old_ID="13" ErrorDesc="下载内核未准备好，请稍候重试" />
+        <Item New_ID="6201014" Old_ID="14" ErrorDesc="连接断开，请尝试重新连接" />
+        <Item New_ID="6201015" Old_ID="15" ErrorDesc="分段下载超出文件长度" />
+        <Item New_ID="6201016" Old_ID="16" ErrorDesc="拷贝多任务发生错误，请重试" />
+        <Item New_ID="6201017" Old_ID="17" ErrorDesc="创建或分配文件空间出错，请重试" />
+        <Item New_ID="6201018" Old_ID="18" ErrorDesc="下载的文件已存在，无法覆盖" />
+        <Item New_ID="6201019" Old_ID="19" ErrorDesc="返回的文件大小不一致，请重试" />
+        <Item New_ID="6201022" Old_ID="22" ErrorDesc="服务器无数据返回超时" />
+        <Item New_ID="6201023" Old_ID="23" ErrorDesc="MD5校验失败，请尝试重新下载" />
+        <Item New_ID="6201024" Old_ID="24" ErrorDesc="HTTP连接错误" />        
+        <Item New_ID="6201099" Old_ID="99" ErrorDesc="产生其他错误" /> 
+        <Item New_ID="6201898" Old_ID="6201898" ErrorDesc="您的硬盘读写速度比较缓慢，可能会影响下载速度，增加安装耗时；建议将游戏目录迁移到SSD盘（{}盘），然后“手动添加应用”重新绑定游戏，提升游戏下载和加载体验。" />
+        <Item New_ID="6201899" Old_ID="6201899" ErrorDesc="您的硬盘读写速度比较缓慢，可能会影响下载速度，增加安装耗时；若您目前正执行其他频繁读写磁盘的操作，建议先暂停，避免影响游戏下载和加载体验。" />
+        <Item New_ID="6201998" Old_ID="4294967295" ErrorDesc="创建下载任务失败，请重试" />
+        <Item New_ID="6201999" Old_ID="4294967294" ErrorDesc="创建下载任务重复" />
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="6202">
+        <Item New_ID="6202000" Old_ID="2000" ErrorDesc="未知错误,请重新下载" />
+        <Item New_ID="6202001" Old_ID="2001" ErrorDesc="停止任务失败，请重试" />
+        <Item New_ID="6202002" Old_ID="2002" ErrorDesc="开始任务失败，请重试" />
+        <Item New_ID="6202003" Old_ID="2003" ErrorDesc="删除任务失败，请重试" />
+        <Item New_ID="6202004" Old_ID="2004" ErrorDesc="创建任务失败，请重试" />
+        <Item New_ID="6202005" Old_ID="2005" ErrorDesc="恢复任务失败，请重试" />
+        <Item New_ID="6202006" Old_ID="2006" ErrorDesc="取消任务失败，请重试" />
+        <Item New_ID="6202007" Old_ID="2007" ErrorDesc="暂停任务失败，请重试" />
+        <Item New_ID="6202008" Old_ID="6202008" ErrorDesc="安装包校验错误，请重新下载" />
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="6203">
+        <Item New_ID="6203001" Old_ID="1" ErrorDesc="未支持的协议，下载器不支持这一协议。" />
+        <Item New_ID="6203002" Old_ID="2" ErrorDesc="初始化失败" />
+        <Item New_ID="6203003" Old_ID="3" ErrorDesc="请求URL格式错误" />
+        <Item New_ID="6203004" Old_ID="4" ErrorDesc="" />
+        <Item New_ID="6203005" Old_ID="5" ErrorDesc="无法解析代理服务器" />
+        <Item New_ID="6203006" Old_ID="6" ErrorDesc="无法解析主机" />
+        <Item New_ID="6203007" Old_ID="7" ErrorDesc="无法连接至主机或代理服务器" />
+        <Item New_ID="6203008" Old_ID="8" ErrorDesc="收到了不正确的回复" />
+        <Item New_ID="6203009" Old_ID="9" ErrorDesc="无法访问网址中指定的资源" />
+        <Item New_ID="6203010" Old_ID="10" ErrorDesc="" />
+        <Item New_ID="6203011" Old_ID="11" ErrorDesc="连接返回错误" />
+        <Item New_ID="6203012" Old_ID="12" ErrorDesc="" />
+        <Item New_ID="6203013" Old_ID="13" ErrorDesc="无法从服务器端收到有用的结果，作为对 PASV 或 EPSV 命令的响应" />
+        <Item New_ID="6203014" Old_ID="14" ErrorDesc="FTP 服务器返回 227 行作为对 PASV 命令的响应" />
+        <Item New_ID="6203015" Old_ID="15" ErrorDesc="在查找用于新连接的主机时出现内部错误。" />
+        <Item New_ID="6203016" Old_ID="16" ErrorDesc="" />
+        <Item New_ID="6203017" Old_ID="17" ErrorDesc="尝试将传输模式设置为二进制或 ascii 时发生错误" />
+        <Item New_ID="6203018" Old_ID="18" ErrorDesc="文件传输尺寸小于或大于预期" />
+        <Item New_ID="6203019" Old_ID="19" ErrorDesc="RETR命令收到了不正常的回复" />
+        <Item New_ID="6203020" Old_ID="20" ErrorDesc="" />
+        <Item New_ID="6203021" Old_ID="21" ErrorDesc="命令无法成功完成" />
+        <Item New_ID="6203022" Old_ID="22" ErrorDesc="HTTP 服务器返回 >= 400 的错误代码" />
+        <Item New_ID="6203023" Old_ID="23" ErrorDesc="向本地文件写入所收到的数据时发生错误" />    
+        <Item New_ID="6203024" Old_ID="24" ErrorDesc="" />    
+        <Item New_ID="6203025" Old_ID="25" ErrorDesc="无法开始上传" />
+        <Item New_ID="6203026" Old_ID="26" ErrorDesc="读取本地文件时遇到问题" />
+        <Item New_ID="6203027" Old_ID="27" ErrorDesc="内存分配请求失败。" />
+        <Item New_ID="6203028" Old_ID="28" ErrorDesc="操作超时。" />
+        <Item New_ID="6203029" Old_ID="29" ErrorDesc="" />
+        <Item New_ID="6203030" Old_ID="30" ErrorDesc="FTP PORT 命令返回错误" />
+        <Item New_ID="6203031" Old_ID="31" ErrorDesc="FTP REST 命令返回错误" />
+        <Item New_ID="6203032" Old_ID="32" ErrorDesc="" />
+        <Item New_ID="6203033" Old_ID="33" ErrorDesc="服务器不支持或不接受范围请求" />
+        <Item New_ID="6203034" Old_ID="34" ErrorDesc="内部混乱引发" />
+        <Item New_ID="6203035" Old_ID="35" ErrorDesc="时使用 SSL/TLS 时可能会发生此错误" />
+        <Item New_ID="6203036" Old_ID="36" ErrorDesc="尝试恢复超过文件大小限制的 FTP 连接" />
+        <Item New_ID="6203037" Old_ID="37" ErrorDesc="无法打开 FILE:// 路径下的文件" />
+        <Item New_ID="6203038" Old_ID="38" ErrorDesc="LDAP 绑定操作失败" />
+        <Item New_ID="6203039" Old_ID="39" ErrorDesc="LDAP 搜索无法进行" />
+        <Item New_ID="6203040" Old_ID="40" ErrorDesc="" />
+        <Item New_ID="6203041" Old_ID="41" ErrorDesc="找不到必要的 zlib 函数" />
+        <Item New_ID="6203042" Old_ID="42" ErrorDesc="回调向 libcurl 返回了abort" />
+        <Item New_ID="6203043" Old_ID="43" ErrorDesc="使用了不正确的参数调用函数。" />
+        <Item New_ID="6203044" Old_ID="44" ErrorDesc="" />
+        <Item New_ID="6203045" Old_ID="45" ErrorDesc="指定的外部界面无法使用" />
+        <Item New_ID="6203046" Old_ID="46" ErrorDesc="" />
+        <Item New_ID="6203047" Old_ID="47" ErrorDesc="进行重定向时，libcurl 达到了网页点击上限" />
+        <Item New_ID="6203048" Old_ID="48" ErrorDesc="无法识别以 CURLOPT_TELNETOPTIONS 设置的选项" />
+        <Item New_ID="6203049" Old_ID="49" ErrorDesc="telnet 选项字符串的格式不正确" />
+        <Item New_ID="6203050" Old_ID="50" ErrorDesc="" />
+        <Item New_ID="6203051" Old_ID="51" ErrorDesc="远程服务器的 SSL 证书或 SSH md5 指纹不正确" />
+        <Item New_ID="6203052" Old_ID="52" ErrorDesc="服务器未返回任何数据" />
+        <Item New_ID="6203053" Old_ID="53" ErrorDesc="找不到指定的加密引擎" />
+        <Item New_ID="6203054" Old_ID="54" ErrorDesc="无法将选定的 SSL 加密引擎设为默认选项" />
+        <Item New_ID="6203055" Old_ID="55" ErrorDesc="无法发送网络数据" />
+        <Item New_ID="6203056" Old_ID="56" ErrorDesc="接收网络数据失败" />
+        <Item New_ID="6203057" Old_ID="57" ErrorDesc="" />
+        <Item New_ID="6203058" Old_ID="58" ErrorDesc="本地客户端证书有问题" />
+        <Item New_ID="6203059" Old_ID="59" ErrorDesc="无法使用指定的密钥" />
+        <Item New_ID="6203060" Old_ID="60" ErrorDesc="无法使用已知的 CA 证书验证对等证书" />
+        <Item New_ID="6203061" Old_ID="61" ErrorDesc="无法识别传输编码" />
+        <Item New_ID="6203062" Old_ID="62" ErrorDesc="LDAP 网址无效" />
+        <Item New_ID="6203063" Old_ID="63" ErrorDesc="超过了文件大小上限" />
+        <Item New_ID="6203064" Old_ID="64" ErrorDesc="请求的 FTP SSL 级别失败" />
+        <Item New_ID="6203065" Old_ID="65" ErrorDesc="回转操作未能成功" />
+        <Item New_ID="6203066" Old_ID="66" ErrorDesc="SSL 引擎初始化失败" />
+        <Item New_ID="6203067" Old_ID="67" ErrorDesc="远程服务器拒绝 curl 登录" />
+        <Item New_ID="6203068" Old_ID="68" ErrorDesc="在 TFTP 服务器上找不到文件" />
+        <Item New_ID="6203069" Old_ID="69" ErrorDesc="在 TFTP 服务器上遇到权限问题" />
+        <Item New_ID="6203070" Old_ID="70" ErrorDesc="服务器磁盘空间不足" />
+        <Item New_ID="6203071" Old_ID="71" ErrorDesc="TFTP 操作非法" />
+        <Item New_ID="6203072" Old_ID="72" ErrorDesc="TFTP 传输 ID 未知" />
+        <Item New_ID="6203073" Old_ID="73" ErrorDesc="文件已存在，无法覆盖" />
+        <Item New_ID="6203074" Old_ID="74" ErrorDesc="运行正常的 TFTP 服务器不会返回此错误" />
+        <Item New_ID="6203075" Old_ID="75" ErrorDesc="字符转换失败" />
+        <Item New_ID="6203076" Old_ID="76" ErrorDesc="调用方必须注册转换回调" />
+        <Item New_ID="6203077" Old_ID="77" ErrorDesc="读取 SSL CA 证书时遇到问题" />
+        <Item New_ID="6203078" Old_ID="78" ErrorDesc="网址中引用的资源不存在" />
+        <Item New_ID="6203079" Old_ID="79" ErrorDesc="SSH 会话中发生无法识别的错误" />
+        <Item New_ID="6203080" Old_ID="80" ErrorDesc="无法终止 SSL 连接 " />
+        <Item New_ID="6203081" Old_ID="81" ErrorDesc="" />
+        <Item New_ID="6203082" Old_ID="82" ErrorDesc="" />
+        <Item New_ID="6203083" Old_ID="83" ErrorDesc="" />
+        <Item New_ID="6203084" Old_ID="84" ErrorDesc="" />
+        <Item New_ID="6203085" Old_ID="85" ErrorDesc="" />
+        <Item New_ID="6203086" Old_ID="86" ErrorDesc="" />
+        <Item New_ID="6203087" Old_ID="87" ErrorDesc="" />
+        <Item New_ID="6203088" Old_ID="88" ErrorDesc="" />
+        <Item New_ID="6203089" Old_ID="89" ErrorDesc="" />
+        <Item New_ID="6203998" Old_ID="-1" ErrorDesc="" />
+        <Item New_ID="6203999" Old_ID="-2" ErrorDesc="" />
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="6204">
+        <Item New_ID="6204001" Old_ID="6204001" ErrorDesc="无效的下载链接或协议" DetailMsg="未支持的协议, 此版CURL 不支持这一协议"/>
+        <Item New_ID="6204002" Old_ID="6204002" ErrorDesc="下载组件初始化失败" DetailMsg="curl初始化失败"/>
+        <Item New_ID="6204003" Old_ID="6204003" ErrorDesc="无效的下载链接" DetailMsg="curl内部错误码3, URL格式错误"/>
+        <Item New_ID="6204004" Old_ID="6204004" ErrorDesc="下载组件功能不支持" DetailMsg="curl内部错误码4, 某些选项未被配置，可能需要重新编译"/>
+        <Item New_ID="6204005" Old_ID="6204005" ErrorDesc="无法解析代理服务器, 请确认网络状况后重试, 若本机开启了网络代理、加速工具，请先关闭" DetailMsg="curl内部错误码5, 无法解析代理。给定的代理主机无法解析"/>
+        <Item New_ID="6204006" Old_ID="6204006" ErrorDesc="无法解析主机, 请检查本机Host配置" DetailMsg="curl内部错误码6, Host解析失败"/>
+        <Item New_ID="6204007" Old_ID="6204007" ErrorDesc="连接服务器失败, 请确认网络状况后重试" DetailMsg="curl内部错误码7, 无法通过 connect() 连接至主机或代理服务器"/>
+        <Item New_ID="6204008" Old_ID="6204008" ErrorDesc="服务器回包解析错误" DetailMsg="curl内部错误码8, curl无法解析服务器发送的数据"/>
+        <Item New_ID="6204009" Old_ID="6204009" ErrorDesc="无法访问到下载链接指定的服务器资源" DetailMsg="curl内部错误码9, URL指定的资源被拒绝访问, 可能服务器的路径发生变更"/>
+        <Item New_ID="6204010" Old_ID="6204010" ErrorDesc="FTP连接返回错误" DetailMsg="curl内部错误码10, 在等待一个活动的ftp server返回时, 错误码被发送到错误连接或相似的地方"/>
+        <Item New_ID="6204011" Old_ID="6204011" ErrorDesc="FTP认证返回错误" DetailMsg="curl内部错误码11, 发送FTP密码到服务器后，curl未等到一个期望的返回。很大可能是密码有问题"/>
+        <Item New_ID="6204012" Old_ID="6204012" ErrorDesc="FTP应答超时" DetailMsg="curl内部错误码12, FTP应答超时"/>
+        <Item New_ID="6204013" Old_ID="6204013" ErrorDesc="FTP解析回包错误" DetailMsg="curl内部错误码13, 无法解析一个非正常的PASV或EPSV返回, 服务器可能不正常" />
+        <Item New_ID="6204014" Old_ID="6204014" ErrorDesc="FTP解析回包错误" DetailMsg="FTP无法解析服务器返回的非正常的PASV 227行响应"/>
+        <Item New_ID="6204015" Old_ID="6204015" ErrorDesc="FTP内部错误" DetailMsg="curl内部错误码15, 内部错误, 无法连接到主机"/>
+        <Item New_ID="6204016" Old_ID="6204016" ErrorDesc="未知的HTTP2错误, 请确认网络状况后重试" DetailMsg="curl内部错误码16, 一个存在于HTTP2框架层的问题"/>
+        <Item New_ID="6204017" Old_ID="6204017" ErrorDesc="FTP传输错误" DetailMsg="curl内部错误码17, FTP尝试将传输模式设置为二进制或 ascii 时发生错误"/>
+        <Item New_ID="6204018" Old_ID="6204018" ErrorDesc="文件传输错误" DetailMsg="curl内部错误码18, 文件传输尺寸小于或大于预期" />
+        <Item New_ID="6204019" Old_ID="6204019" ErrorDesc="FTP命令接收回包错误" DetailMsg="curl内部错误码19, FTP执行RETR命令收到了不正常的回复"/>
+        <Item New_ID="6204020" Old_ID="6204020" ErrorDesc="" DetailMsg="curl无此错误码"/>
+        <Item New_ID="6204021" Old_ID="6204021" ErrorDesc="FTP命令接收回包错误" DetailMsg="url内部错误码21, FTP执行QUOTE命令返回错误"/>
+        <Item New_ID="6204022" Old_ID="6204022" ErrorDesc="服务器返回失败" DetailMsg="curl内部错误码22, HTTP 服务器返回响应状态码 >= 400 "/>
+        <Item New_ID="6204023" Old_ID="6204023" ErrorDesc="下载数据写入失败, 请检查文件是否被占用或权限不足, 重启本机后再试" DetailMsg="curl内部错误码23, 向本地文件写入所收到的数据时发生错误, 一般是下载文件被占用或无写入权限"/>
+        <Item New_ID="6204024" Old_ID="6204024" ErrorDesc="" DetailMsg="curl无此错误码"/>    
+        <Item New_ID="6204025" Old_ID="6204025" ErrorDesc="上传数据失败" DetailMsg="curl内部错误码25, 上传数据失败"/>
+        <Item New_ID="6204026" Old_ID="6204026" ErrorDesc="读取本地文件失败" DetailMsg="curl内部错误码26, 读取本地文件失败"/>
+        <Item New_ID="6204027" Old_ID="6204027" ErrorDesc="内存分配失败，请重启本机后再试" DetailMsg="curl内部错误码27, 请求分配内存失败"/>
+        <Item New_ID="6204028" Old_ID="6204028" ErrorDesc="下载操作超时。请确认网络状况后重试, 若本机开启了网络代理、加速工具或其他Host配置，请先关闭" DetailMsg="curl内部错误码28, 请求超时，一般是本地网络环境异常，找到超时的url在浏览器测试是否正常, 关闭本地的网络代理、加速工具或其他Host配置"/>
+        <Item New_ID="6204029" Old_ID="6204029" ErrorDesc="" DetailMsg="curl无此错误码"/>
+        <Item New_ID="6204030" Old_ID="6204030" ErrorDesc="FTP端口错误" DetailMsg="curl内部错误码30, FTP端口错误"/>
+        <Item New_ID="6204031" Old_ID="6204031" ErrorDesc="FTP命令接收回包失败, 服务器错误" DetailMsg="curl内部错误码31, FTP REST命令返回错误, 服务器异常"/>
+        <Item New_ID="6204032" Old_ID="6204032" ErrorDesc="" DetailMsg="curl无此错误码"/>
+        <Item New_ID="6204033" Old_ID="6204033" ErrorDesc="服务器不支持的请求参数" DetailMsg="curl内部错误码33, 服务器不支持RANGE请求"/>
+        <Item New_ID="6204034" Old_ID="6204034" ErrorDesc="下载组件内部未知错误" DetailMsg="curl内部错误码34, 一个主要由内部混乱引发的未知错误"/>
+        <Item New_ID="6204035" Old_ID="6204035" ErrorDesc="SSL连接失败, 可能是证书或密码有问题, 请确认客户端运行环境正常" DetailMsg="curl内部错误码35, SSL连接失败。可能是证书、密码或其它的有问题"/>
+        <Item New_ID="6204036" Old_ID="6204036" ErrorDesc="下载文件偏移量错误, 请确认网络状况后重试" DetailMsg="curl内部错误码36, 因为指定的偏移量超出了文件范围，下载无法恢复, 可能服务器错误"/>
+        <Item New_ID="6204037" Old_ID="6204037" ErrorDesc="文件无法打开。 本地文件不存在或权限不足, 请重启本机后再试" DetailMsg="curl内部错误码37, 文件无法打开。可能因为文件不存在或权限问题"/>
+        <Item New_ID="6204038" Old_ID="6204038" ErrorDesc="LDAP 绑定操作失败" DetailMsg="curl内部错误码38, LDAP绑定失败"/>
+        <Item New_ID="6204039" Old_ID="6204039" ErrorDesc="LDAP 搜索无法进行" DetailMsg="curl内部错误码39, LDAP搜索失败"/>
+        <Item New_ID="6204040" Old_ID="6204040" ErrorDesc="" DetailMsg="curl无此错误码"/>
+        <Item New_ID="6204041" Old_ID="6204041" ErrorDesc="下载组件内部调用错误, 请重试" DetailMsg="curl内部错误码41, 找不到必要的 zlib 函数"/>
+        <Item New_ID="6204042" Old_ID="6204042" ErrorDesc="下载组件内部中止任务, 请重试" DetailMsg="curl内部错误码42, 回调函数中止curl执行"/>
+        <Item New_ID="6204043" Old_ID="6204043" ErrorDesc="下载组件内部参数错误, 请重试" DetailMsg="curl内部错误码43, 内部错误，参数不对"/>
+        <Item New_ID="6204044" Old_ID="6204044" ErrorDesc="" DetailMsg="curl无此错误码"/>
+        <Item New_ID="6204045" Old_ID="6204045" ErrorDesc="下载组件内部接口错误, 请重试" DetailMsg="curl内部错误码45, 指定的发送（输出）接口无法使用。使用选项CURLOPT_INTERFACE设置接口"/>
+        <Item New_ID="6204046" Old_ID="6204046" ErrorDesc="" DetailMsg="curl无此错误码"/>
+        <Item New_ID="6204047" Old_ID="6204047" ErrorDesc="下载重定向错误" DetailMsg="curl内部错误码47, 下载链接出现过多的重定向, 已超过CURLOPT_MAXREDIRS设置的最大阈值"/>
+        <Item New_ID="6204048" Old_ID="6204048" ErrorDesc="下载组件内部接收到未知设置选项" DetailMsg="curl内部错误码48, curl传入未知选项"/>
+        <Item New_ID="6204049" Old_ID="6204049" ErrorDesc="Telnet选项字符串的格式不正确" />
+        <Item New_ID="6204050" Old_ID="6204050" ErrorDesc="" DetailMsg="curl无此错误码"/>
+        <Item New_ID="6204051" Old_ID="6204051" ErrorDesc="服务器的SSL证书校验失败导致连接错误" DetailMsg="curl内部错误码51, SSL检验失败。远程服务器的SSL证书或SSH MD5加密不正确"/>
+        <Item New_ID="6204052" Old_ID="6204052" ErrorDesc="服务器无响应" DetailMsg="curl内部错误码52, 服务器没有返回"/>
+        <Item New_ID="6204053" Old_ID="6204053" ErrorDesc="下载组件使用SSL加密错误" DetailMsg="curl内部错误码53, 未找到指定的SSL加密引擎"/>
+        <Item New_ID="6204054" Old_ID="6204054" ErrorDesc="无法将选定的 SSL 加密引擎设为默认选项" DetailMsg="curl内部错误码54, 设置SSL默认加密方法失败"/>
+        <Item New_ID="6204055" Old_ID="6204055" ErrorDesc="发送网络数据失败" DetailMsg="curl内部错误码55, 发送网络数据失败"/>
+        <Item New_ID="6204056" Old_ID="6204056" ErrorDesc="接收网络数据失败" DetailMsg="curl内部错误码56, 接收网络数据失败"/>
+        <Item New_ID="6204057" Old_ID="6204057" ErrorDesc="" DetailMsg="curl无此错误码"/>
+        <Item New_ID="6204058" Old_ID="6204058" ErrorDesc="本地SSL客户端证书错误, 请重新下载客户端再试" DetailMsg="curl内部错误码58, 本地SSL客户端证书错误"/>
+        <Item New_ID="6204059" Old_ID="6204059" ErrorDesc="无法使用指定的SSL密码" DetailMsg="curl内部错误码59, 无法使用指定的密钥"/>
+        <Item New_ID="6204060" Old_ID="6204060" ErrorDesc="无法使用已知的CA证书验证对等证书" DetailMsg="curl内部错误码60, 已知的CA无法认证此对等证书"/>
+        <Item New_ID="6204061" Old_ID="6204061" ErrorDesc="编码方式错误" DetailMsg="curl内部错误码61, 错误的编码方式"/>
+        <Item New_ID="6204062" Old_ID="6204062" ErrorDesc="LDAP 链接无效" DetailMsg="curl内部错误码62, 无效的LDAP URL"/>
+        <Item New_ID="6204063" Old_ID="6204063" ErrorDesc="文件过大，超过限制" DetailMsg="curl内部错误码63, 超过了文件大小上限"/>
+        <Item New_ID="6204064" Old_ID="6204064" ErrorDesc="请求SSL等级的FTP失败" DetailMsg="curl内部错误码64, 请求的 FTP SSL 级别失败"/>
+        <Item New_ID="6204065" Old_ID="6204065" ErrorDesc="重传失败" DetailMsg="curl内部错误码65, 重传失败"/>
+        <Item New_ID="6204066" Old_ID="6204066" ErrorDesc="初始化SSL引擎失败" DetailMsg="curl内部错误码66, 初始化SSL引擎失败"/>
+        <Item New_ID="6204067" Old_ID="6204067" ErrorDesc="登录失败。远程服务器拒绝登录" DetailMsg="curl内部错误码67, 登录失败, 远程服务器拒绝登录"/>
+        <Item New_ID="6204068" Old_ID="6204068" ErrorDesc="在 TFTP 服务器上找不到文件" DetailMsg="curl内部错误码68, TFTP服务器上未找到文件"/>
+        <Item New_ID="6204069" Old_ID="6204069" ErrorDesc="在 TFTP 服务器上遇到权限问题" DetailMsg="curl内部错误码69, TFTP服务器有权限问题"/>
+        <Item New_ID="6204070" Old_ID="6204070" ErrorDesc="服务器磁盘空间不足" DetailMsg="curl内部错误码70, 服务器磁盘可用空间不足"/>
+        <Item New_ID="6204071" Old_ID="6204071" ErrorDesc="TFTP 操作非法" DetailMsg="curl内部错误码71, 非法的TFTP操作"/>
+        <Item New_ID="6204072" Old_ID="6204072" ErrorDesc="TFTP 传输 ID 未知" DetailMsg="curl内部错误码72, 未知的TFTP传输ID"/>
+        <Item New_ID="6204073" Old_ID="6204073" ErrorDesc="文件已存在且无法覆盖, 请重启本机后重试" DetailMsg="curl内部错误码73, 文件存在并且不会被覆盖"/>
+        <Item New_ID="6204074" Old_ID="6204074" ErrorDesc="TFTP服务器错误" DetailMsg="curl内部错误码74, 正常运行的TFTP服务器应该永远不会返回这个错误"/>
+        <Item New_ID="6204075" Old_ID="6204075" ErrorDesc="字符转换失败" DetailMsg="curl内部错误码75, 字符转换失败"/>
+        <Item New_ID="6204076" Old_ID="6204076" ErrorDesc="调用方式错误" DetailMsg="curl内部错误码76, 调用者必须注册转换回调方法"/>
+        <Item New_ID="6204077" Old_ID="6204077" ErrorDesc="读取 SSL CA 证书时遇到问题, 请检查本地SSL证书再重试" DetailMsg="curl内部错误码77, 读取SSL证书失败"/>
+        <Item New_ID="6204078" Old_ID="6204078" ErrorDesc="下载链接的资源不存在, 请检查服务器链接正常" DetailMsg="curl内部错误码78, URL引用的资源不存在, 请检查服务器资源路径位置"/>
+        <Item New_ID="6204079" Old_ID="6204079" ErrorDesc="未知的SSH 会话错误, 请重启本机后重试" DetailMsg="curl内部错误码79, 一个在SSH会话中发生的未指明的错误"/>
+        <Item New_ID="6204080" Old_ID="6204080" ErrorDesc="关闭SSL连接失败" DetailMsg="curl内部错误码80, 关闭SSL连接失败"/>
+        <Item New_ID="6204081" Old_ID="6204081" ErrorDesc="socket初始化错误, 请重启本机后再试" DetailMsg="curl内部错误码81, socket未准备好，等socket准备好后重试"/>
+        <Item New_ID="6204082" Old_ID="6204082" ErrorDesc="加载CRL文件失败" DetailMsg="curl内部错误码82, SSL加载CRL文件失败"/>
+        <Item New_ID="6204083" Old_ID="6204083" ErrorDesc="SSL发行机构检查失败" DetailMsg="curl内部错误码83, SSL发行机构检查失败"/>
+        <Item New_ID="6204084" Old_ID="6204084" ErrorDesc="FTP服务器执行PRET命令错误" DetailMsg="curl内部错误码84, FTP服务器不理解PRET命令，或不支持给定的参数"/>
+        <Item New_ID="6204085" Old_ID="6204085" ErrorDesc="RTSP CSeq号码不匹配" DetailMsg="curl内部错误码85, RTSP CSeq号码不匹配"/>
+        <Item New_ID="6204086" Old_ID="6204086" ErrorDesc="RTSP会话标识不匹配" DetailMsg="curl内部错误码86, RTSP会话标识不匹配"/>
+        <Item New_ID="6204087" Old_ID="6204087" ErrorDesc="FTP文件列表解析失败" DetailMsg="curl内部错误码87, FTP文件列表解析失败"/>
+        <Item New_ID="6204088" Old_ID="6204088" ErrorDesc="块回调报告错误" DetailMsg="curl内部错误码88, 块回调报告错误"/>
+        <Item New_ID="6204089" Old_ID="6204089" ErrorDesc="无可用连接" DetailMsg="curl内部错误码89, 没有可用连接，会话将会进入队列"/>
+        <Item New_ID="6204090" Old_ID="6204090" ErrorDesc="SSL指定的密钥失败" DetailMsg="curl内部错误码90, 匹配通过CURLOPT_PINNEDPUBLICKEY指定的密钥失败"/>
+        <Item New_ID="6204091" Old_ID="6204091" ErrorDesc="无效的证书状态" etailMsg="curl内部错误码91, 无效的证书状态, CURLOPT_SSL_VERIFYSTATUS"/>
+
+        <Item New_ID="6204100" Old_ID="6204100" ErrorDesc="连接超时, 请确认网络状况后重试, 若本机开启了网络代理、加速工具或其他Host配置，请先关闭" />
+    
+        <Item New_ID="6204101" Old_ID="6204101" ErrorDesc="下载组件初始化错误, 请重启本机后重试" DetailMsg="初始化CURL错误"/>
+        <Item New_ID="6204102" Old_ID="6204102" ErrorDesc="内部状态错误"/>
+        <Item New_ID="6204103" Old_ID="6204103" ErrorDesc="从服务器获取到文件大小信息错误" DetailMsg="错误的文件大小信息, 请后台检查分片信息是否正确"/>
+        <Item New_ID="6204104" Old_ID="6204104" ErrorDesc="无效的下载请求, 服务器返回404错误" DetailMsg="下载404错误, 请先浏览器检查url是否访问正常, 再确认做包上传文件是否正常"/>
+
+        <Item New_ID="6204105" Old_ID="6204105" ErrorDesc="文件MD5校验失败" DetailMsg=""/>
+        <Item New_ID="6204106" Old_ID="6204106" ErrorDesc="分片校验失败" DetailMsg="从多个源下载到的分片数据，均校验失败, 请检查做包的配置是否正常"/>
+        <Item New_ID="6204107" Old_ID="6204107" ErrorDesc="重命名文件失败, 文件被占用或权限不足, 请重启本机后再试" DetailMsg=""/>
+        <Item New_ID="6204108" Old_ID="6204108" ErrorDesc="下载数据长度错误" DetailMsg=""/>
+        <Item New_ID="6204109" Old_ID="6204109" ErrorDesc="下载数据MD5错误" DetailMsg=""/>
+        <Item New_ID="6204110" Old_ID="6204110" ErrorDesc="下载数据解压失败" DetailMsg=""/>
+
+        <Item New_ID="6204120" Old_ID="6204120" ErrorDesc="下载数据解压失败，请重启尝试" DetailMsg=""/>
+        <Item New_ID="6204121" Old_ID="6204121" ErrorDesc="加密数据解密出错" DetailMsg=""/>
+        <Item New_ID="6204122" Old_ID="6204122" ErrorDesc="网络返回错误" DetailMsg=""/>
+
+        <Item New_ID="6204130" Old_ID="6204130" ErrorDesc="无法解析域名" DetailMsg=""/>
+        <Item New_ID="6204131" Old_ID="6204131" ErrorDesc="验证文件失败" DetailMsg=""/>
+        <Item New_ID="6204132" Old_ID="6204132" ErrorDesc="创建链接失败" DetailMsg=""/>
+        <Item New_ID="6204133" Old_ID="6204133" ErrorDesc="启动线程失败" DetailMsg=""/>
+        <Item New_ID="6204134" Old_ID="6204134" ErrorDesc="系统错误，请重启尝试" DetailMsg="系统错误，内存不足，请重启尝试"/>
+        <Item New_ID="6204135" Old_ID="6204135" ErrorDesc="系统错误，请重启尝试" DetailMsg="系统错误，拒绝访问，请重启尝试"/>
+        <Item New_ID="6204136" Old_ID="6204136" ErrorDesc="系统错误，请重启尝试" DetailMsg="系统错误，找不到文件，请重启尝试"/>
+        <Item New_ID="6204137" Old_ID="6204137" ErrorDesc="系统错误，请重启尝试" DetailMsg="系统错误，超线程池上限，请重启尝试"/>
+        <Item New_ID="6204138" Old_ID="6204138" ErrorDesc="配置信息格式不正确" DetailMsg="分片信息格式不正确"/>
+
+        <Item New_ID="6204200" Old_ID="6204200" ErrorDesc="创建文件失败, 没有权限或文件被占用, 请重启本机并关闭安全软件后重试" DetailMsg=""/>
+        <Item New_ID="6204201" Old_ID="6204201" ErrorDesc="写文件失败, 没有权限或文件被占用, 请重启本机并关闭安全软件后重试" DetailMsg=""/>
+        <Item New_ID="6204202" Old_ID="6204202" ErrorDesc="定位文件位置失败, 请重试" DetailMsg=""/>
+        <Item New_ID="6204203" Old_ID="6204203" ErrorDesc="磁盘空间不足, 请先清理磁盘或切换下载安装目录后重试" DetailMsg=""/>
+        <Item New_ID="6204204" Old_ID="6204204" ErrorDesc="删除已经存在的文件失败" DetailMsg=""/>
+        <Item New_ID="6204205" Old_ID="6204205" ErrorDesc="设置文件大小失败" DetailMsg=""/>
+        <Item New_ID="6204206" Old_ID="6204206" ErrorDesc="分配文件磁盘空间失败" DetailMsg=""/>
+        <Item New_ID="6204207" Old_ID="6204207" ErrorDesc="启动下载任务失败, 请重启本机并关闭安全软件后重试" DetailMsg="下载任务启动阶段失败，原因：创建文件失败，可能被占用; 创建线程失败，内存不足;"/>
+        <Item New_ID="6204208" Old_ID="6204208" ErrorDesc="磁盘可能有坏扇区，请检查磁盘或切换下载安装目录后重试" DetailMsg=""/>
+        <Item New_ID="6204209" Old_ID="6204209" ErrorDesc="文件写入创建线程失败" DetailMsg=""/>
+        <Item New_ID="6204210" Old_ID="6204210" ErrorDesc="文件或文件夹结构损坏且无法读取, 请更换安装文件夹再重试" DetailMsg=""/>
+        <Item New_ID="6204211" Old_ID="6204211" ErrorDesc="磁盘结构损坏且无法读取, 请更换安装文件夹再重试" DetailMsg=""/>
+    </ErrorCodeType>
+    <!--游戏下载 end-->
+    
+    <!--游戏更新  start
+        场景： 01：TCLS合并Tenbase错误码后的错误码； 02：TCLS update时的错误码； 03：TCLS发生错误产生的错误码
+    -->
+    <ErrorCodeType Type="6101">
+        <Item New_ID="6101000" Old_ID="6101000" ErrorDesc="磁盘空间不足" />
+        <Item New_ID="6101001" Old_ID="6101001" ErrorDesc="无法连接服务器" />
+        <Item New_ID="6101002" Old_ID="6101002" ErrorDesc="客户端版本过低" />
+        <Item New_ID="6101003" Old_ID="6101003" ErrorDesc="客户端版本非法" />
+        <Item New_ID="6101004" Old_ID="6101004" ErrorDesc="无法连接网络" />
+        <Item New_ID="6101005" Old_ID="6101005" ErrorDesc="版本服务器断开连接" />
+        <Item New_ID="6101006" Old_ID="6101006" ErrorDesc="服务器维护中" />
+        <Item New_ID="6101007" Old_ID="6101007" ErrorDesc="文件被占用，建议重启系统后重试" />
+        <Item New_ID="6101008" Old_ID="6101008" ErrorDesc="文件校验出错" />
+        <Item New_ID="6101009" Old_ID="6101009" ErrorDesc="文件被占用" />
+        <Item New_ID="6101010" Old_ID="6101010" ErrorDesc="下载文件超时" />
+        <Item New_ID="6101011" Old_ID="6101011" ErrorDesc="TCLS自升级失败，请重启电脑后重试" />
+        <Item New_ID="6101012" Old_ID="6101012" ErrorDesc="安装进程异常退出" />
+        <Item New_ID="6101013" Old_ID="6101013" ErrorDesc="CRC校验错误" />
+        <Item New_ID="6101014" Old_ID="6101014" ErrorDesc="创建安装进程失败" />
+        <Item New_ID="6101015" Old_ID="6101015" ErrorDesc="调用BeginUpdate失败" />
+        <Item New_ID="6101016" Old_ID="6101016" ErrorDesc="初始化下载配置失败" />
+        <Item New_ID="6101017" Old_ID="6101017" ErrorDesc="游戏进程仍在运行，可重启电脑后重试" />
+        <Item New_ID="6101018" Old_ID="6101018" ErrorDesc="下载的文件异常丢失" />
+        <Item New_ID="6101019" Old_ID="6101019" ErrorDesc="下载文件失败" />
+        <Item New_ID="6101020" Old_ID="6101020" ErrorDesc="无效的产品线ID" />
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="6102">
+        <Item New_ID="6102000" Old_ID="800000000" ErrorDesc="等待服务器返回" />
+        <Item New_ID="6102001" Old_ID="800000001" ErrorDesc="创建mutex失败" />
+        <Item New_ID="6102002" Old_ID="800000002" ErrorDesc="创建TCLS升级组件失败" />
+        <Item New_ID="6102003" Old_ID="800000003" ErrorDesc="初始化TCLS升级组件失败" />
+        <Item New_ID="6102004" Old_ID="800000004" ErrorDesc="开始更新失败，请检测您的网络环境" />
+        <Item New_ID="6102005" Old_ID="800000005" ErrorDesc="自更新失败，请检测您的网络环境" />
+        <Item New_ID="6102006" Old_ID="800000006" ErrorDesc="加载IIPS库失败" />
+        <Item New_ID="6102007" Old_ID="800000007" ErrorDesc="IIPS GET PROC 失败" />
+        <Item New_ID="6102008" Old_ID="800000008" ErrorDesc="IIPS begin repair 失败" />
+        <Item New_ID="6102009" Old_ID="800000009" ErrorDesc="IIPS repair 失败" />
+        <Item New_ID="6102010" Old_ID="800000010" ErrorDesc="BNCLIENT自升级失败" />
+        <Item New_ID="6102011" Old_ID="800000011" ErrorDesc="拷贝临时升级文件失败" />
+        <Item New_ID="6102012" Old_ID="800000012" ErrorDesc="当前分支ID非法" />
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="6103">
+        <Item New_ID="6103003" Old_ID="6103003" ErrorDesc="未知消息" />
+        <Item New_ID="6103004" Old_ID="6103004" ErrorDesc="无效的消息参数" />
+        <Item New_ID="6103005" Old_ID="6103005" ErrorDesc="操作正忙" />
+        <Item New_ID="6103006" Old_ID="6103006" ErrorDesc="未设置登录信息" />
+        <Item New_ID="6103007" Old_ID="6103007" ErrorDesc="请稍候再试，目前网络异常，检查更新失败" />
+        <Item New_ID="6103008" Old_ID="6103008" ErrorDesc="TCLSHost有更新，需要重启" />
+        <Item New_ID="6103009" Old_ID="6103009" ErrorDesc="拉起TCLSHost时有自更新，但自更新失败" />
+        <Item New_ID="6103010" Old_ID="6103010" ErrorDesc="客户端需要灰度更新" />
+        <Item New_ID="6103011" Old_ID="6103011" ErrorDesc="TCLS正在运行，请关闭TCLS后重试" />
+        <Item New_ID="6103012" Old_ID="6103012" ErrorDesc="找不到应用ID" />
+        <Item New_ID="6103013" Old_ID="6103013" ErrorDesc="初始化内部模块失败" />
+    </ErrorCodeType>
+    <!--游戏更新  end-->
+    
+    <!--Tenbase  begin
+        场景：01：下载错误码; 02：安装错误码； 03：版本服务器相关； 04：Tensetup错误码； 05：X5安装包专用错误码； 06：其他错误码
+    -->
+    <ErrorCodeType Type="6501">
+        <Item New_ID="6501843" Old_ID="738197843" ErrorDesc="连接失败，请检测您的网络环境" />
+        <Item New_ID="6501844" Old_ID="738197844" ErrorDesc="收到未知消息" />
+        <Item New_ID="6501845" Old_ID="738197845" ErrorDesc="下载超时，请检测您的网络环境" />
+        <Item New_ID="6501846" Old_ID="738197846" ErrorDesc="删除任务失败，请重试" />
+        <Item New_ID="6501847" Old_ID="738197847" ErrorDesc="下载参数无效，请重试" />
+        <Item New_ID="6501848" Old_ID="738197848" ErrorDesc="写硬盘错误，请查看磁盘空间是否足够" />
+        <Item New_ID="6501849" Old_ID="738197849" ErrorDesc="服务器文件大小变化, 重新下载" />
+        <Item New_ID="6501850" Old_ID="738197850" ErrorDesc="文件未下载完，Socket被关闭" />
+        <Item New_ID="6501851" Old_ID="738197851" ErrorDesc="创建文件失败，建议您查看防火墙是否设置拦截" />
+        <Item New_ID="6501852" Old_ID="738197852" ErrorDesc="磁盘剩余空间不足，请清理您的磁盘" />
+        <Item New_ID="6501853" Old_ID="738197853" ErrorDesc="下载参数含有非法路径，请查看路径是否正确" />
+        <Item New_ID="6501854" Old_ID="738197854" ErrorDesc="删除旧文件失败，请重试" />
+        <Item New_ID="6501855" Old_ID="738197855" ErrorDesc="添加下载任务失败事件，请重试" />
+        <Item New_ID="6501856" Old_ID="738197856" ErrorDesc="下载任务同步执行失败事件，请重试" />
+        <Item New_ID="6501857" Old_ID="738197857" ErrorDesc="P2P下载，启动失败，请重试" />
+        <Item New_ID="6501858" Old_ID="738197858" ErrorDesc="下载参数无效，请重试" />
+        <Item New_ID="6501859" Old_ID="738197859" ErrorDesc="创建IPGroup窗口失败" />
+        <Item New_ID="6501860" Old_ID="738197860" ErrorDesc="测速失败，请检测您的网络环境" />
+        <Item New_ID="6501861" Old_ID="738197861" ErrorDesc="代理无效，请检查代理配置" />
+        <Item New_ID="6501862" Old_ID="738197862" ErrorDesc="没有找到对应的配置器，请重试" />
+        <Item New_ID="6501863" Old_ID="738197863" ErrorDesc="未知下载错误，请检测您的网络环境" />
+        <Item New_ID="6501864" Old_ID="738197864" ErrorDesc="发送消息失败，请检测您的网络环境" />
+        <Item New_ID="6501865" Old_ID="738197865" ErrorDesc="连接超时，请确认网络状况后重试" />
+        <Item New_ID="6501866" Old_ID="738197866" ErrorDesc="所有连接尝试失败，请检测您的网络环境" />
+        <Item New_ID="6501867" Old_ID="738197867" ErrorDesc="Tenio下载组件创建失败，请重试" />
+        <Item New_ID="6501868" Old_ID="738197868" ErrorDesc="域名解析失败，请重试" />
+        <Item New_ID="6501869" Old_ID="738197869" ErrorDesc="下载器未初始化或初始化失败，执行失败" />
+        <Item New_ID="6501870" Old_ID="738197870" ErrorDesc="下载器重复初始化" />
+        <Item New_ID="6501871" Old_ID="738197871" ErrorDesc="协议不支持" />
+        <Item New_ID="6501872" Old_ID="738197872" ErrorDesc="代理类型不支持" />
+        <Item New_ID="6501873" Old_ID="738197873" ErrorDesc="创建窗口失败，建议您查看防火墙是否设置拦截" />
+        <Item New_ID="6501874" Old_ID="738197874" ErrorDesc="应用正在运行，请查看您的客户端进程是否结束" />
+        <Item New_ID="6501875" Old_ID="738197875" ErrorDesc="MD5检查失败，建议手动更新" />
+        <Item New_ID="6501882" Old_ID="738197882" ErrorDesc="拷贝文件失败" />
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="6502">
+        <!--用户手动取消下载-->
+        <Item New_ID="6502905" Old_ID="738197905" ErrorDesc="错误码：6502905" />
+        <!--用户手动取消安装-->
+        <Item New_ID="6502906" Old_ID="738197906" ErrorDesc="错误码：6502906" />
+        <Item New_ID="6502907" Old_ID="738197907" ErrorDesc="安装包签名校验失败" />
+        <Item New_ID="6502908" Old_ID="738197908" ErrorDesc="有部分文件没有安装成功" />
+        <Item New_ID="6502909" Old_ID="738197909" ErrorDesc="检测不到版本服务器数据" />
+        <Item New_ID="6502910" Old_ID="738197910" ErrorDesc="升级启动参数无效" />
+        <Item New_ID="6502911" Old_ID="738197911" ErrorDesc="启动Liveupdate.exe失败" />
+        <Item New_ID="6502912" Old_ID="738197912" ErrorDesc="文件拷贝失败" />
+        <Item New_ID="6502913" Old_ID="738197913" ErrorDesc="错误码：6502913" />
+        
+        <Item New_ID="6502914" Old_ID="738197914" ErrorDesc="下载信息配置不正确" />
+        <Item New_ID="6502915" Old_ID="738197915" ErrorDesc="下载任务无效" />
+        <Item New_ID="6502916" Old_ID="738197916" ErrorDesc="启动下载、安装流程失败" />
+        <Item New_ID="6502917" Old_ID="738197917" ErrorDesc="解析Liveupdate.exe命令行参数失败" />
+        <Item New_ID="6502918" Old_ID="738197918" ErrorDesc="找不到liveupdate.cfg文件" />
+        <Item New_ID="6502919" Old_ID="738197919" ErrorDesc="请检查C盘空间是否不足，或者尝试重装游戏" />
+        <Item New_ID="6502920" Old_ID="738197920" ErrorDesc="读取liveupdate.cfg文件失败" />
+        <!--用户点击取消按钮-->
+        <Item New_ID="6502921" Old_ID="738197921" ErrorDesc="错误码：6502921" />
+        <!-- 推荐升级模式提示玩家是否升级时，玩家选择否。内部使用。 -->
+        <Item New_ID="6502922" Old_ID="738197922" ErrorDesc="错误码：6502922" />
+        <Item New_ID="6502923" Old_ID="738197923" ErrorDesc="请关闭客户端后重试" />
+        <Item New_ID="6502924" Old_ID="738197924" ErrorDesc="删除文件夹失败" />
+        <Item New_ID="6502925" Old_ID="738197925" ErrorDesc="错误码：6502925" />
+        <Item New_ID="6502927" Old_ID="738197927" ErrorDesc="拉起失败" />
+        <Item New_ID="6502957" Old_ID="738197957" ErrorDesc="安装VFS补丁包时，VFS组件初始化失败" />
+        <Item New_ID="6502958" Old_ID="738197958" ErrorDesc="安装VFS补丁包时，读取补丁包信息失败" />
+        <Item New_ID="6502959" Old_ID="738197959" ErrorDesc="安装VFS补丁包时，客户端文件释放失败" />
+        <Item New_ID="6502963" Old_ID="738197963" ErrorDesc="安装VFS补丁包时，补丁包文件已被破坏" />
+        <Item New_ID="6502964" Old_ID="738197964" ErrorDesc="安装成功后，写入版本号失败" />
+        
+        <Item New_ID="6502965" Old_ID="738197965" ErrorDesc="安装VFS补丁包时，补丁包所属项目不匹配" />
+        <!--cus_create_businesshandle失败，可能是mmog_data.tdr文件错误-->
+        <Item New_ID="6502967" Old_ID="738197967" ErrorDesc="协议文件有损坏" />
+        <Item New_ID="6502968" Old_ID="738197968" ErrorDesc="错误码：6502968" />
+        <Item New_ID="6502969" Old_ID="738197969" ErrorDesc="错误码：6502969" />
+        <Item New_ID="6502986" Old_ID="738197986" ErrorDesc="文件校验失败，可尝试清理安装目录的磁盘空间或卸载后重装" />
+        <Item New_ID="6502987" Old_ID="738197987" ErrorDesc="存在部分升级包未安装成功" />
+        <Item New_ID="6502988" Old_ID="738197988" ErrorDesc="升级包类型错误" />
+        <Item New_ID="6502989" Old_ID="738197989" ErrorDesc="升级包序号错误" />
+        <!--自更新将TCLSCOPY目录文件覆盖TCLS目录后，ASSIST.exe未退出-->
+        <Item New_ID="6502990" Old_ID="738197990" ErrorDesc="文件拷贝程序未退出" />
+        <Item New_ID="6502991" Old_ID="738197991" ErrorDesc="合并预下载文件错误，请重试" />
+        <Item New_ID="6502992" Old_ID="738197992" ErrorDesc="客户端mmog_data.tdr文件有损坏" />
+        <Item New_ID="6502994" Old_ID="738197994" ErrorDesc="请检查安装目录下的TCLS\mmog_data.xml是否存在" />
+        <Item New_ID="6502995" Old_ID="738197995" ErrorDesc="mmog_data.xml文件被篡改" />
+        <Item New_ID="6502996" Old_ID="738197996" ErrorDesc="VersionServerConfig.xml文件被篡改" />
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="6503">
+        <Item New_ID="6503926" Old_ID="738197926" ErrorDesc="连接版本服务器失败，请检测您的网络环境" />
+        <Item New_ID="6503928" Old_ID="738197928" ErrorDesc="服务器下发数据解码失败" />
+        <Item New_ID="6503929" Old_ID="738197929" ErrorDesc="服务器下发的交换Key解码失败" />
+        <Item New_ID="6503935" Old_ID="738197935" ErrorDesc="版本服务器关闭连接" />
+        <Item New_ID="6503952" Old_ID="738197952" ErrorDesc="版本服务器解析业务数据失败" />
+        <Item New_ID="6503953" Old_ID="738197953" ErrorDesc="版本号无效，请检查" />
+        <!--版本服务器根据更新包配置生成响应所需信息失败-->
+        <Item New_ID="6503954" Old_ID="738197954" ErrorDesc="版本服务器生成数据失败" />
+        <Item New_ID="6503955" Old_ID="738197955" ErrorDesc="版本服务器发生未知错误。" />
+        <Item New_ID="6503956" Old_ID="738197956" ErrorDesc="本地版本和版本服务器协议版本不一致" />
+        <Item New_ID="6503960" Old_ID="738197960" ErrorDesc="连接版本服务器时，解包网络请求消息失败" />
+        <Item New_ID="6503961" Old_ID="738197961" ErrorDesc="连接版本服务器时，客户端版本太低" />
+        <Item New_ID="6503962" Old_ID="738197962" ErrorDesc="连接版本服务器时，客户端版本非法" />
+        <Item New_ID="6503966" Old_ID="738197966" ErrorDesc="您不在白名单内" />
+        <!--cus_create_businesshandle失败，可能是mmog_data.tdr文件错误-->
+        <Item New_ID="6503967" Old_ID="738197967" ErrorDesc="协议文件有损坏" />
+        <Item New_ID="6503968" Old_ID="738197968" ErrorDesc="错误码：6503968" />
+        <Item New_ID="6503969" Old_ID="738197969" ErrorDesc="错误码：6503969" />
+        <!--DiffPatch升级，版本服务器上配的文件名必须为version.list-->
+        <Item New_ID="6503984" Old_ID="738197984" ErrorDesc="版本服务器配置文件名错误" />
+        <Item New_ID="6503985" Old_ID="738197985" ErrorDesc="解析版本配置文件失败" />
+        <Item New_ID="6503993" Old_ID="738197993" ErrorDesc="版本服务器错误" />
+        <Item New_ID="6503999" Old_ID="738197999" ErrorDesc="非法的分支ID" />
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="6504">
+        <Item New_ID="6504256" Old_ID="256" ErrorDesc="安装程序卸载失败" />
+        <!--安装成功-->
+        <Item New_ID="6504257" Old_ID="257" ErrorDesc="" />
+        <!--安装被用户按取消键中止-->
+        <Item New_ID="6504258" Old_ID="258" ErrorDesc="安装失败，错误码:6504258" />
+        <Item New_ID="6504259" Old_ID="259" ErrorDesc="安装失败，磁盘空间不足，请清理磁盘" />
+        <Item New_ID="6504260" Old_ID="260" ErrorDesc="安装失败，打包文件不存在，请卸载后重装" />
+        <Item New_ID="6504261" Old_ID="261" ErrorDesc="安装程序正在运行中" />
+        <Item New_ID="6504262" Old_ID="262" ErrorDesc="更新的进程正在运行中，请重启系统后再试" />
+        <Item New_ID="6504263" Old_ID="263" ErrorDesc="更新包校验失败,错误码：6504263" />
+        <Item New_ID="6504264" Old_ID="264" ErrorDesc="更新包校验失败,错误码：6504264" />
+        <Item New_ID="6504265" Old_ID="265" ErrorDesc="获取更新信息失败，请重试" />
+        <Item New_ID="6504266" Old_ID="266" ErrorDesc="请查看安装包是否完整" />
+        <Item New_ID="6504267" Old_ID="267" ErrorDesc="安装包超时未返回成功消息" />
+        <Item New_ID="6504268" Old_ID="268" ErrorDesc="VFS合并失败" />
+        <Item New_ID="6504269" Old_ID="269" ErrorDesc="D包合并失败，打开文件失败；请尝试卸载后选择其他路径下载安装" />
+        <Item New_ID="6504270" Old_ID="270" ErrorDesc="updatecheck.lst校验失败" />
+        <Item New_ID="6504271" Old_ID="271" ErrorDesc="文件安装失败" />
+        <Item New_ID="6504272" Old_ID="272" ErrorDesc="VFS更新失败" />
+        <Item New_ID="6504273" Old_ID="273" ErrorDesc="无效的安装目录，查看路径是否正确" />
+        <Item New_ID="6504280" Old_ID="280" ErrorDesc="安装文件写入失败，将安装目录迁移到新文件夹后重试" />
+        <Item New_ID="6504281" Old_ID="281" ErrorDesc="D包合并失败，覆盖文件失败" />
+        <Item New_ID="6504290" Old_ID="290" ErrorDesc="关键文件复制成功但校验失败，请重试" />
+        <Item New_ID="6504291" Old_ID="291" ErrorDesc="升级VFS文件时，VFS文件不存在" />
+        <Item New_ID="6504292" Old_ID="292" ErrorDesc="升级VFS文件时，磁盘空间不足" />
+        <Item New_ID="6504293" Old_ID="293" ErrorDesc="升级VFS文件时，备份VFS文件失败" />
+        <Item New_ID="6504294" Old_ID="294" ErrorDesc="升级VFS文件时，备份VFS文件失败" />
+        <Item New_ID="6504295" Old_ID="295" ErrorDesc="合并VFS时源校验失败" />
+        <Item New_ID="6504296" Old_ID="296" ErrorDesc="目标VFS文件不存在" />
+        <Item New_ID="6504297" Old_ID="297" ErrorDesc="目标VFS文件大小为0" />
+        <Item New_ID="6504298" Old_ID="298" ErrorDesc="目标VFS文件头部无效" />
+        <Item New_ID="6504299" Old_ID="299" ErrorDesc="目标VFS文件无读写权限" />
+        <Item New_ID="6504300" Old_ID="300" ErrorDesc="合并VFS文件时磁盘空间不足" />    
+        <Item New_ID="6504301" Old_ID="301" ErrorDesc="硬盘格式不支持，请选择NTFS格式的硬盘分区进行安装。" />
+        <Item New_ID="6504302" Old_ID="302" ErrorDesc="独立分卷安装包加载7z失败" />
+        <Item New_ID="6504303" Old_ID="303" ErrorDesc="独立分卷安装包分卷文件检查失败" />
+        <Item New_ID="6504305" Old_ID="305" ErrorDesc="独立分卷安装包分卷文件检查失败" />
+        <Item New_ID="6504306" Old_ID="306" ErrorDesc="独立分卷安装包解析packlist失败" />
+        <Item New_ID="6504310" Old_ID="310" ErrorDesc="错误码：6504310" />
+        <Item New_ID="6504601" Old_ID="601" ErrorDesc="分卷md5检查失败" />
+        <Item New_ID="6504611" Old_ID="611" ErrorDesc="分卷释放文件时，写文件失败" />
+        <Item New_ID="6504605" Old_ID="605" ErrorDesc="7z释放文件时抛出异常" />
+        <Item New_ID="6504607" Old_ID="607" ErrorDesc="文件无法重命名，错误码：6504607" />
+        <Item New_ID="6504608" Old_ID="608" ErrorDesc="文件无法重命名，错误码：6504608" />
+        <Item New_ID="6504609" Old_ID="609" ErrorDesc="文件无法重命名，错误码：6504609" />
+        <Item New_ID="6504610" Old_ID="610" ErrorDesc="创建目标文件失败，关闭杀毒软件重试" />
+        <!--第三方文件函数调用传入参数错误-->
+        <Item New_ID="6504401" Old_ID="401" ErrorDesc="错误码：6504401" />
+        <Item New_ID="6504402" Old_ID="402" ErrorDesc="第三方文件系统出错，错误码：6504402" />    
+        <Item New_ID="6504403" Old_ID="403" ErrorDesc="第三方文件系统出错，错误码：6504403" />
+        <Item New_ID="6504405" Old_ID="405" ErrorDesc="第三方文件系统出错，错误码：6504405" />
+        <Item New_ID="6504406" Old_ID="406" ErrorDesc="第三方文件系统出错，错误码：6504406" />
+        <Item New_ID="6504407" Old_ID="407" ErrorDesc="第三方文件系统出错，错误码：6504407" />
+        <Item New_ID="6504408" Old_ID="408" ErrorDesc="第三方文件系统出错，错误码：6500163" />
+        <Item New_ID="6504409" Old_ID="409" ErrorDesc="第三方文件系统出错，错误码：6504408" />
+        <Item New_ID="6504410" Old_ID="410" ErrorDesc="第三方文件系统出错，错误码：6504410" />
+        <Item New_ID="6504500" Old_ID="500" ErrorDesc="安装包检测组件失效" />
+        <Item New_ID="6504501" Old_ID="501" ErrorDesc="数字证书检测组件失效" />
+        <Item New_ID="6504502" Old_ID="502" ErrorDesc="安装包文件不存在" />
+        <Item New_ID="6504503" Old_ID="503" ErrorDesc="安装包数字证书非法" />
+        <Item New_ID="6504504" Old_ID="504" ErrorDesc="安装包数字证书不匹配" />
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="6505">
+        <Item New_ID="6505001" Old_ID="15001" ErrorDesc="更新包不完整，请重试" />
+        <Item New_ID="6505002" Old_ID="15002" ErrorDesc="版本信息文件损坏" />
+        <Item New_ID="6505003" Old_ID="15003" ErrorDesc="写文件错误，请重登WeGame或重启系统后再试" />
+        <Item New_ID="6505004" Old_ID="15004" ErrorDesc="无法创建临时文件夹，请先删除" />
+        <Item New_ID="6505005" Old_ID="15005" ErrorDesc="无法读取版本信息文件" />
+        <Item New_ID="6505006" Old_ID="15006" ErrorDesc="版本信息文件损坏" />
+        <Item New_ID="6505007" Old_ID="15007" ErrorDesc="版本过低，错误码：6505007" />
+        <Item New_ID="6505008" Old_ID="15008" ErrorDesc="版本过高" />
+        <Item New_ID="6505009" Old_ID="15009" ErrorDesc="版本过低，错误码：6505009" />
+        <Item New_ID="6505010" Old_ID="15010" ErrorDesc="更新文件不存在" />    
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="6506">
+        <!--TCLS需要立即重启已完成自更新，内部使用-->
+        <Item New_ID="6506000" Old_ID="738198000" ErrorDesc="错误码：6506000" />
+        <Item New_ID="6506001" Old_ID="738198001" ErrorDesc="本地版本号过高" />
+        <Item New_ID="6506002" Old_ID="738198002" ErrorDesc="更新包不存在或者打不开，错误码：6506002" />
+        <Item New_ID="6506003" Old_ID="738198003" ErrorDesc="更新包不存在或者打不开，错误码：6506003" />
+        <Item New_ID="6506004" Old_ID="738198004" ErrorDesc="创建校验线程失败，错误码：6506004" />
+        <Item New_ID="6506005" Old_ID="738198005" ErrorDesc="创建校验线程失败，错误码：6506005" />
+        <Item New_ID="6506006" Old_ID="738198006" ErrorDesc="创建校验线程失败，错误码：6506006" />
+        <Item New_ID="6506007" Old_ID="738198007" ErrorDesc="磁盘剩余空间不足，请清理磁盘" />
+        <Item New_ID="6506008" Old_ID="738198008" ErrorDesc="下载文件不存在" />
+        <Item New_ID="6506009" Old_ID="738198009" ErrorDesc="错误码：6506009" />
+        <Item New_ID="6506010" Old_ID="738198010" ErrorDesc="创建TenioDL失败，错误码：6506010" />
+        <Item New_ID="6506011" Old_ID="738198011" ErrorDesc="创建TenioDL失败，错误码：6506011" />
+        <Item New_ID="6506012" Old_ID="738198012" ErrorDesc="创建TenioDL失败，错误码：6506012" />
+        <Item New_ID="6506013" Old_ID="738198013" ErrorDesc="创建TenioDL失败，错误码：6506013" />
+        <Item New_ID="6506014" Old_ID="738198014" ErrorDesc="创建TenioDL失败，错误码：6506014" />
+        <Item New_ID="6506015" Old_ID="738198015" ErrorDesc="错误码：6506015" />
+        <Item New_ID="6506016" Old_ID="738198016" ErrorDesc="错误码：6506016" />
+        <Item New_ID="6506017" Old_ID="738198017" ErrorDesc="错误码：6506017" />
+        <Item New_ID="6506018" Old_ID="738198018" ErrorDesc="错误码：6506018" />
+        <Item New_ID="6506019" Old_ID="738198019" ErrorDesc="错误码：6506019" />
+        <Item New_ID="6506020" Old_ID="738198020" ErrorDesc="错误码：6506020" />
+        <Item New_ID="6506021" Old_ID="738198021" ErrorDesc="错误码：6506021" />
+        <Item New_ID="6506022" Old_ID="738198022" ErrorDesc="错误码：6506022" />
+        <Item New_ID="6506272" Old_ID="738198272" ErrorDesc="错误码：6506272" />
+        <Item New_ID="6506035" Old_ID="738198035" ErrorDesc="Iptables防火墙禁入" />
+    </ErrorCodeType>
+    <!--Tenbase  end-->
+    
+    <!--游戏安装 start
+        场景： 01：平台检查产生的错误码； 02：Tensetup产生的错误码； 03：X5安装包专用错误码
+    -->
+    <ErrorCodeType Type="7001">
+        <Item New_ID="7001003" Old_ID="7001003" ErrorDesc="安装进度小于100%" />
+        <Item New_ID="7001004" Old_ID="7001004" ErrorDesc="检查文件特征不符合" />
+        <Item New_ID="7001005" Old_ID="7001005" ErrorDesc="子版本不存在" />
+        <Item New_ID="7001006" Old_ID="7001006" ErrorDesc="安装文件解压失败" />
+        <Item New_ID="7001007" Old_ID="7001007" ErrorDesc="安装过程失败，但进度为100%" />
+        <Item New_ID="7001008" Old_ID="7001008" ErrorDesc="安装过程创建进程失败" />
+        <Item New_ID="7001009" Old_ID="7001009" ErrorDesc="安装过程找不到安装包" />
+        <Item New_ID="7001010" Old_ID="7001010" ErrorDesc="安装过程命令为空" />
+        <Item New_ID="7001011" Old_ID="7001011" ErrorDesc="安装包数字证书获取失败" />
+        <Item New_ID="7001012" Old_ID="7001012" ErrorDesc="安装包数字证书不合法" />
+        <Item New_ID="7001013" Old_ID="7001013" ErrorDesc="创建安装目录失败" />
+        <Item New_ID="7001014" Old_ID="7001014" ErrorDesc="创建安装消息窗口失败" />
+        <Item New_ID="7001015" Old_ID="7001015" ErrorDesc="手动安装时未找到安装包文件" />
+        <Item New_ID="7001016" Old_ID="7001016" ErrorDesc="安装过程中安装进程异常退出" />
+        
+        <Item New_ID="7001259" Old_ID="7001259" ErrorDesc="安装过程 安装进程exe释放磁盘空间不足 TenSetup 259" />
+        <Item New_ID="7001260" Old_ID="7001260" ErrorDesc="安装过程 安装包文件被占用 TenSetup 260" />
+        <Item New_ID="7001263" Old_ID="7001263" ErrorDesc="安装过程 安装包md5校验失败 TenSetup 263" />
+        <Item New_ID="7001280" Old_ID="7001280" ErrorDesc="安装过程 安装进程exe释放文件失败 TenSetup 280" />
+        <Item New_ID="7001601" Old_ID="7001601" ErrorDesc="安装过程 找不到分卷文件 TenSetup 601" />
+        <Item New_ID="7001609" Old_ID="7001609" ErrorDesc="安装过程 释放文件无法重命名 TenSetup 609" />
+        <Item New_ID="7001610" Old_ID="7001610" ErrorDesc="安装过程 创建目标文件失败 TenSetup 610" />
+        <Item New_ID="7001611" Old_ID="7001611" ErrorDesc="安装过程 释放分卷写文件失败 TenSetup 611" />
+        <Item New_ID="7001616" Old_ID="7001616" ErrorDesc="安装过程 分卷文件释放磁盘空间不足 TenSetup 616" />
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="7002">
+        <Item New_ID="7002256" Old_ID="256" ErrorDesc="卸载失败" />
+        <Item New_ID="7002257" Old_ID="257" ErrorDesc="安装成功" />
+        <Item New_ID="7002258" Old_ID="258" ErrorDesc="安装被用户按取消键中止" />
+        <Item New_ID="7002259" Old_ID="259" ErrorDesc="安装进程exe释放磁盘空间不足" />
+        <Item New_ID="7002260" Old_ID="260" ErrorDesc="安装失败，一般是要打包的文件不存在" />
+        <Item New_ID="7002261" Old_ID="261" ErrorDesc="安装程序正在运行中" />
+        <Item New_ID="7002262" Old_ID="262" ErrorDesc="更新的进程正在运行中" />
+        <Item New_ID="7002263" Old_ID="263" ErrorDesc="更新包MD5校验失败,且当前更新包没有被依赖" />
+        <Item New_ID="7002264" Old_ID="264" ErrorDesc="更新包MD5校验失败,且当前更新包被依赖" />
+        <Item New_ID="7002265" Old_ID="265" ErrorDesc="获取更新信息失败" />
+        <Item New_ID="7002266" Old_ID="266" ErrorDesc="启动安装包失败" />
+        <Item New_ID="7002267" Old_ID="267" ErrorDesc="安装包超时未返回成功消息" />
+        <Item New_ID="7002268" Old_ID="268" ErrorDesc="VFS合并失败" />
+        <Item New_ID="7002269" Old_ID="269" ErrorDesc="D包合并失败，fopen失败" />
+        <Item New_ID="7002270" Old_ID="270" ErrorDesc="文件updatecheck.lst校验失败" />
+        <Item New_ID="7002271" Old_ID="271" ErrorDesc="文件安装失败" />
+        <Item New_ID="7002272" Old_ID="272" ErrorDesc="VFS更新失败" />
+        <Item New_ID="7002273" Old_ID="273" ErrorDesc="无效的安装目录" />
+        <Item New_ID="7002280" Old_ID="280" ErrorDesc="安装包安装文件时失败" />
+        <Item New_ID="7002281" Old_ID="281" ErrorDesc="D包合并失败，MoveFileEx失败" />
+        <Item New_ID="7002290" Old_ID="290" ErrorDesc="关键文件复制成功但校验失败" />
+        <Item New_ID="7002291" Old_ID="291" ErrorDesc="升级VFS文件时，VFS文件不存在" />
+        <Item New_ID="7002292" Old_ID="292" ErrorDesc="升级VFS文件时，磁盘空间不足" />
+        <Item New_ID="7002293" Old_ID="293" ErrorDesc="升级VFS文件时，备份VFS文件失败" />
+        <Item New_ID="7002294" Old_ID="294" ErrorDesc="升级VFS文件时，备份VFS文件失败" />
+        <Item New_ID="7002295" Old_ID="295" ErrorDesc="合并VFS时源校验失败" />
+        <Item New_ID="7002296" Old_ID="296" ErrorDesc="目标VFS文件不存在" />
+        <Item New_ID="7002297" Old_ID="297" ErrorDesc="目标VFS文件大小为0" />
+        <Item New_ID="7002298" Old_ID="298" ErrorDesc="目标VFS文件头部无效" />
+        <Item New_ID="7002299" Old_ID="299" ErrorDesc="目标VFS文件无读写权限（文件可能被占用）" />
+        <Item New_ID="7002300" Old_ID="300" ErrorDesc="合并VFS文件时磁盘空间不足" />    
+        <Item New_ID="7002301" Old_ID="301" ErrorDesc="请选择NTFS格式的硬盘分区进行安装。" />
+        <Item New_ID="7002302" Old_ID="302" ErrorDesc="独立分卷安装包，加载7z失败" />
+        <Item New_ID="7002303" Old_ID="303" ErrorDesc="独立分卷安装包，分卷文件检查失败" />
+        <Item New_ID="7002305" Old_ID="305" ErrorDesc="独立分卷安装包，分卷文件检查失败" />
+        <Item New_ID="7002306" Old_ID="306" ErrorDesc="独立分卷安装包，解析packlist失败" />
+        <Item New_ID="7002310" Old_ID="310" ErrorDesc="通用错误码，详细信息请参考安装包日志" />
+        <Item New_ID="7002601" Old_ID="601" ErrorDesc="分卷md5检查失败" />
+        <Item New_ID="7002611" Old_ID="611" ErrorDesc="分卷释放文件时，写文件失败" />
+        <Item New_ID="7002616" Old_ID="616" ErrorDesc="分卷文件释放磁盘空间不足" />
+        <Item New_ID="7002605" Old_ID="605" ErrorDesc="7z释放文件时抛出异常" />
+        <Item New_ID="7002607" Old_ID="607" ErrorDesc="文件无法重命名" />
+        <Item New_ID="7002608" Old_ID="608" ErrorDesc="文件无法重命名" />
+        <Item New_ID="7002609" Old_ID="609" ErrorDesc="文件无法重命名" />
+        <Item New_ID="7002610" Old_ID="610" ErrorDesc="创建目标文件失败" />
+        <Item New_ID="7002401" Old_ID="401" ErrorDesc="第三方文件函数调用传入参数错误" />
+        <Item New_ID="7002402" Old_ID="402" ErrorDesc="加载第三方文件系统 加载xlpack.dll错误" />    
+        <Item New_ID="7002403" Old_ID="403" ErrorDesc="第三方文件系统查找CreateFileSystem函数失败" />
+        <Item New_ID="7002405" Old_ID="405" ErrorDesc="第三方文件系统 执行CreateFileSystem函数失败" />
+        <Item New_ID="7002406" Old_ID="406" ErrorDesc="第三方文件系统合并失败" />
+        <Item New_ID="7002407" Old_ID="407" ErrorDesc="[第三方文件系统合并失败]错误的传入参数" />
+        <Item New_ID="7002408" Old_ID="408" ErrorDesc="[第三方文件系统合并失败]错误的传入参数" />
+        <Item New_ID="7002409" Old_ID="409" ErrorDesc="[第三方文件系统合并失败]diff合并失败" />
+        <Item New_ID="7002410" Old_ID="410" ErrorDesc="[第三方文件系统合并失败]数据迁移失败" />
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="7003">
+        <Item New_ID="7003001" Old_ID="15001" ErrorDesc="取更新包文件发生错误，请确认您的更新文件是否完整，建议您重新下载本更新程序" />
+        <Item New_ID="7003002" Old_ID="15002" ErrorDesc="版本信息文件损坏，请重新安装QQ炫舞" />
+        <Item New_ID="7003003" Old_ID="15003" ErrorDesc="向目标路径写文件发生错误，请检查QQ炫舞是否正在运行中，如果是，请关闭QQ炫舞客户端后再重新运行本
+更新程序" />
+        <Item New_ID="7003004" Old_ID="15004" ErrorDesc="无法创建临时文件夹，请先删除" />
+        <Item New_ID="7003005" Old_ID="15005" ErrorDesc="无法读取版本信息文件" />
+        <Item New_ID="7003006" Old_ID="15006" ErrorDesc="版本信息文件损坏" />
+        <Item New_ID="7003007" Old_ID="15007" ErrorDesc="对不起，您当前安装的QQ炫舞版本过低" />
+        <Item New_ID="7003008" Old_ID="15008" ErrorDesc="对不起，您当前安装的QQ炫舞版本过高" />
+        <Item New_ID="7003009" Old_ID="15009" ErrorDesc="对不起，您当前安装的QQ炫舞版本不符合更新程序的要求" />
+        <Item New_ID="7003010" Old_ID="15010" ErrorDesc="更新文件不存在" />    
+    </ErrorCodeType>
+    <!--游戏安装 end-->
+
+    <!--启动游戏错误码  start
+        场景：01：TCLS_CORE启动游戏失败映射的错误码； 02：平台错误码； 03：创建进程失败错误码
+    -->
+    <ErrorCodeType Type="7501">
+        <Item New_ID="7501003" Old_ID="7501003" ErrorDesc="启动超时，请检测网络环境是否正常" />
+        <Item New_ID="7501004" Old_ID="7501004" ErrorDesc="请修复游戏后重试，目前创建客户端进程失败" />
+        <Item New_ID="7501005" Old_ID="7501005" ErrorDesc="客户端进程异常退出" />
+        <Item New_ID="7501006" Old_ID="7501006" ErrorDesc="TCLS错误，请重试" />
+        <Item New_ID="7501007" Old_ID="7501007" ErrorDesc="选区失败，请重试" />
+        <Item New_ID="7501008" Old_ID="7501008" ErrorDesc="服务器维护中" />
+        <Item New_ID="7501009" Old_ID="7501009" ErrorDesc="服务器维护中" />
+        <Item New_ID="7501010" Old_ID="7501010" ErrorDesc="您还没有获得体验资格" />
+        <Item New_ID="7501011" Old_ID="7501011" ErrorDesc="版本类型不匹配，当前客户端不能连接体验服" />
+        <Item New_ID="7501012" Old_ID="7501012" ErrorDesc="版本类型不匹配，当前客户端不能连接正式服" />
+        <Item New_ID="7501013" Old_ID="7501013" ErrorDesc="客户端版本过高" />
+        <Item New_ID="7501014" Old_ID="7501014" ErrorDesc="您还未创建角色" />
+        <Item New_ID="7501015" Old_ID="7501015" ErrorDesc="服务器人数已达上限，请稍后再试" />
+        <Item New_ID="7501016" Old_ID="7501016" ErrorDesc="无效的大区ID，请重新选区" />
+        <Item New_ID="7501017" Old_ID="7501017" ErrorDesc="请检查网络连接状态，目前无法拉取区服信息" />
+        <Item New_ID="7501018" Old_ID="7501018" ErrorDesc="客户端需要更新" />
+        <Item New_ID="7501025" Old_ID="7501025" ErrorDesc="获取票据失败" />
+        <Item New_ID="7501032" Old_ID="7501032" ErrorDesc="请求非法" />
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="7502">
+        <Item New_ID="7502003" Old_ID="7502003" ErrorDesc="您的账号没有经过实名验证，请完成实名验证" />
+        <Item New_ID="7502004" Old_ID="7502004" ErrorDesc="未成年人禁止使用" />
+        <Item New_ID="7502005" Old_ID="7502005" ErrorDesc="应用未激活" />
+        <Item New_ID="7502006" Old_ID="7502006" ErrorDesc="应用汉化中" />
+        <Item New_ID="7502007" Old_ID="7502007" ErrorDesc="游戏锁已开启，不允许登录" />
+        <Item New_ID="7502008" Old_ID="7502008" ErrorDesc="用户手动取消启动游戏" />
+        <Item New_ID="7502009" Old_ID="7502009" ErrorDesc="" /> <!--游戏未安装：错误码内容在代码中拼接的，这里不添加-->
+        <Item New_ID="7502010" Old_ID="7502010" ErrorDesc="上个应用正在启动中" />
+        <Item New_ID="7502011" Old_ID="7502011" ErrorDesc="换应用票据失败" />
+        <Item New_ID="7502012" Old_ID="7502012" ErrorDesc="您取消了密保输入" />
+        <Item New_ID="7502013" Old_ID="7502013" ErrorDesc="未与TCLS_CORE握手成功" />
+        <Item New_ID="7502014" Old_ID="7502014" ErrorDesc="TCLS_CORE异常退出" />
+        <Item New_ID="7502017" Old_ID="7502017" ErrorDesc="启动失败，无法请求到iigw票据" />
+        <Item New_ID="7502018" Old_ID="7502018" ErrorDesc="建设中，敬请期待！" />
+        <Item New_ID="7502019" Old_ID="7502019" ErrorDesc="查询游戏更新状态失败" />
+        <Item New_ID="7502029" Old_ID="7502029" ErrorDesc="查询账号授权失败" />
+        <Item New_ID="7502030" Old_ID="7502030" ErrorDesc="未完成微信授权" />
+        <Item New_ID="7502031" Old_ID="7502031" ErrorDesc="您不在应用启动白名单中，请添加后重试" /><!--boris: 需ama确认没在哪个白名单-->
+        <Item New_ID="7502032" Old_ID="7502032" ErrorDesc="Aclos处于排队过程中" /><!--boris: 需要ama确认-->
+        <Item New_ID="7502033" Old_ID="7502033" ErrorDesc="防沉迷拦截，暂不支持启动" />
+        <Item New_ID="7502034" Old_ID="7502034" ErrorDesc="网络异常，请恢复网络后重试" />
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="7503">
+        <Item New_ID="7503003" Old_ID="7503003" ErrorDesc="系统找不到指定的文件，请查看文件是否存在" />
+        <Item New_ID="7503004" Old_ID="7503004" ErrorDesc="系统找不到指定的路径，请查看路径是否正确" />
+        <Item New_ID="7503005" Old_ID="7503005" ErrorDesc="拒绝访问，请重试" />
+        <Item New_ID="7503006" Old_ID="7503006" ErrorDesc="另一个程序正在使用此文件，进程无法访问" />
+        <Item New_ID="7503007" Old_ID="7503007" ErrorDesc="参数错误，请重试" />
+        <Item New_ID="7503008" Old_ID="7503008" ErrorDesc="文件名、目录名或卷标语法不正确" />
+        <Item New_ID="7503009" Old_ID="7503009" ErrorDesc="找不到指定的模块" />
+        <Item New_ID="7503010" Old_ID="7503010" ErrorDesc="不是有效的 Win32 应用程序" />
+        <Item New_ID="7503011" Old_ID="7503011" ErrorDesc="运行程序与Windows 版本不兼容, 如32位系统运行64位程序" />
+        <Item New_ID="7503012" Old_ID="7503012" ErrorDesc="目录名称无效，查看路径是否正确" />
+        <Item New_ID="7503013" Old_ID="7503013" ErrorDesc="执行页内操作时的错误，请重试" />
+        <Item New_ID="7503014" Old_ID="7503014" ErrorDesc="由本地系统中止网络连接，请查看网络环境是否正常" />
+        <Item New_ID="7503015" Old_ID="7503015" ErrorDesc="文件或目录损坏且无法读取，建议卸载后重新安装" />
+        <Item New_ID="7503016" Old_ID="7503016" ErrorDesc="应用程序的并行配置不正确，请重试" />
+        <Item New_ID="7503017" Old_ID="7503017" ErrorDesc="页面文件太小，无法完成操作" />
+        <Item New_ID="7503018" Old_ID="7503018" ErrorDesc="配额不足，无法处理此命令" />
+    </ErrorCodeType>
+    <!--启动游戏错误码  end-->
+    
+    
+    <!--tinysetup  start
+        场景： 01-10： info_mgr, 11： depot_mgr  15: install
+    -->
+    <ErrorCodeType Type="7800">   
+        <Item New_ID="7800000" Old_ID="7800000" ErrorDesc="未知错误" />        
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="7801">
+        <Item New_ID="7801000" Old_ID="7801000" ErrorDesc="内存不足, 请重启本机后重试" DetailMsg="数据库校验线程创建失败" />
+        <Item New_ID="7801001" Old_ID="7801001" ErrorDesc="内存不足, 请重启本机后重试" DetailMsg="数据库校验线程退出异常" />
+        <Item New_ID="7801002" Old_ID="7801002" ErrorDesc="内存不足, 请重启本机后重试" DetailMsg="数据库校验线程终止异常" />
+        <Item New_ID="7801003" Old_ID="7801003" ErrorDesc="内存不足, 请重启本机后重试" DetailMsg="数据库校验线程运行异常" />
+        
+        <Item New_ID="7801100" Old_ID="7801100" ErrorDesc="下载组件创建失败, 请重启本机后重试" DetailMsg=""/>
+        <Item New_ID="7801101" Old_ID="7801101" ErrorDesc="下载组件创建失败, 请重启本机后重试" DetailMsg=""/>
+        <Item New_ID="7801102" Old_ID="7801102" ErrorDesc="下载配置链接为空, 服务器返回的配置信息异常" DetailMsg="配置url为空"/>
+        <Item New_ID="7801103" Old_ID="7801103" ErrorDesc="创建配置下载任务失败, 请重启本机后重试" DetailMsg="创建配置下载任务失败,原因可能是加载下载器组件失败"/>
+        <Item New_ID="7801104" Old_ID="7801104" ErrorDesc="配置下载任务ID错误" DetailMsg="下载任务ID非法"/>
+        <Item New_ID="7801105" Old_ID="7801105" ErrorDesc="下载配置文件失败, 请确认网络状况后重试, 若本机开启了网络代理、加速工具或其他Host配置，请先关闭" DetailMsg="下载器下载配置失败, 可能网络原因或服务器不存在该配置文件"/>
+        <Item New_ID="7801106" Old_ID="7801106" ErrorDesc="下载配置文件不存在, 请关闭安全软件后重试" DetailMsg="下载完成后检查配置不存在, 可能杀软误删"/>
+        <Item New_ID="7801107" Old_ID="7801107" ErrorDesc="下载配置文件为空, 请确认网络状况并关闭安全软件后重试" DetailMsg="配置文件大小为0, 可能文件写失败或权限异常, 关闭安全软件后重试"/>
+        <Item New_ID="7801108" Old_ID="7801108" ErrorDesc="下载的配置文件不完整，请关闭安全软件后重试" DetailMsg="配置文件数量不对, 可能被杀软误删"/>
+        <Item New_ID="7801109" Old_ID="7801109" ErrorDesc="下载配置文件校验失败, 请确认网络状况后重试" DetailMsg="下载的配置md5校验不正确, 可能文件下载被劫持或本地磁盘写坏数据"/>
+        <Item New_ID="7801110" Old_ID="7801110" ErrorDesc="下载配置文件超时" />
+        <Item New_ID="7801111" Old_ID="7801111" ErrorDesc="磁盘空间不足" />
+        <Item New_ID="7801112" Old_ID="7801112" ErrorDesc="下载配置文件校验失败, 请确认网络状况后重试" DetailMsg="下载的配置大小校验不正确, 可能文件下载被劫持或本地磁盘写坏数据" />
+        <Item New_ID="7801113" Old_ID="7801113" ErrorDesc="下载配置文件时创建文件失败，请尝试重启系统，或更换安装目录重新下载安装" DetailMsg="下载配置文件时创建文件失败" />
+        
+        <Item New_ID="7801200" Old_ID="7801200" ErrorDesc="解析组件创建失败" DetailMsg=""/>
+        <Item New_ID="7801201" Old_ID="7801201" ErrorDesc="解析组件正忙" DetailMsg=""/>
+        <Item New_ID="7801202" Old_ID="7801202" ErrorDesc="配置文件不存在" DetailMsg=""/>
+        <Item New_ID="7801203" Old_ID="7801203" ErrorDesc="配置文件非法" DetailMsg=""/>
+        <Item New_ID="7801204" Old_ID="7801204" ErrorDesc="配置文件为空" DetailMsg=""/>
+        <Item New_ID="7801205" Old_ID="7801205" ErrorDesc="配置文件URL非法" DetailMsg=""/>
+        <Item New_ID="7801206" Old_ID="7801206" ErrorDesc="配置文件ID非法" DetailMsg=""/>
+        <Item New_ID="7801207" Old_ID="7801207" ErrorDesc="配置文件解析失败" DetailMsg=""/>
+        <Item New_ID="7801208" Old_ID="7801208" ErrorDesc="配置文件解析错误, 您可以通过重启WeGame客户端尝试解决该问题" DetailMsg=""/>
+        <Item New_ID="7801209" Old_ID="7801209" ErrorDesc="配置文件解析失败" DetailMsg=""/>
+        <Item New_ID="7801210" Old_ID="7801210" ErrorDesc="配置文件解析失败" DetailMsg=""/>
+        <Item New_ID="7801211" Old_ID="7801211" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件desc非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801212" Old_ID="7801212" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件encode key非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801213" Old_ID="7801213" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件length非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801214" Old_ID="7801214" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件version非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801215" Old_ID="7801215" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件md5非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801216" Old_ID="7801216" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件repo非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801217" Old_ID="7801217" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件repo length非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801218" Old_ID="7801218" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件repo md5非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801219" Old_ID="7801219" ErrorDesc="服务器返回的配置格式错误" DetailMsg=""/>
+        <Item New_ID="7801220" Old_ID="7801220" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件repo为空, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801221" Old_ID="7801221" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件url root非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801222" Old_ID="7801222" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件repo guid非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801223" Old_ID="7801223" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件类型非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801224" Old_ID="7801224" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件encrypt非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801225" Old_ID="7801225" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件desc非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801226" Old_ID="7801226" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件desc非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801227" Old_ID="7801227" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件map非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801228" Old_ID="7801228" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件map非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801229" Old_ID="7801229" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件path非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801230" Old_ID="7801230" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件compress非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801231" Old_ID="7801231" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件encode非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801232" Old_ID="7801232" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件chunk md5非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801233" Old_ID="7801233" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件chunk index非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801234" Old_ID="7801234" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件chunk size非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801235" Old_ID="7801235" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件offset非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801236" Old_ID="7801236" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置文件offset非法, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801237" Old_ID="7801237" ErrorDesc="服务器返回的配置格式错误" DetailMsg="配置信息为空, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7801238" Old_ID="7801238" ErrorDesc="配置解码失败" DetailMsg=""/>
+        <Item New_ID="7801239" Old_ID="7801239" ErrorDesc="配置密钥非法" DetailMsg=""/>
+        <Item New_ID="7801240" Old_ID="7801240" ErrorDesc="配置解密失败" DetailMsg=""/>
+        <Item New_ID="7801241" Old_ID="7801241" ErrorDesc="文件密钥缺失" DetailMsg=""/>
+        <Item New_ID="7801242" Old_ID="7801242" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并空指针错误"/>
+        <Item New_ID="7801243" Old_ID="7801243" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时文件名不一致"/>
+        <Item New_ID="7801244" Old_ID="7801244" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时文件MD5不一致"/>
+        <Item New_ID="7801245" Old_ID="7801245" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时文件大小不一致"/>
+        <Item New_ID="7801246" Old_ID="7801246" ErrorDesc="内存不足, 请重启本机后重试" DetailMsg="文件合并错误"/>
+        <Item New_ID="7801247" Old_ID="7801247" ErrorDesc="内存不足, 请重启本机后重试" DetailMsg="文件合并错误"/>
+        <Item New_ID="7801248" Old_ID="7801248" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时解析json失败"/>
+        <Item New_ID="7801249" Old_ID="7801249" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时文件内部MD5不一致"/>
+        <Item New_ID="7801250" Old_ID="7801250" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时文件内部长度不一致"/>
+        <Item New_ID="7801251" Old_ID="7801251" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时文件内部URL_ROOT不一致"/>
+        <Item New_ID="7801252" Old_ID="7801252" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时文件内部压缩方式不一致"/>
+        <Item New_ID="7801253" Old_ID="7801253" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时文件内部加密方式不一致"/>
+        <Item New_ID="7801254" Old_ID="7801254" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时文件内部格式错误"/>
+        <Item New_ID="7801255" Old_ID="7801255" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时chunk_index不连续"/>
+        <Item New_ID="7801256" Old_ID="7801256" ErrorDesc="服务器返回的配置格式错误" DetailMsg="文件合并时offset越界"/>
+        <Item New_ID="7801270" Old_ID="7801270" ErrorDesc="内存不足, 请重启本机后重试" DetailMsg="清单文件解析错误"/>
+        
+        <Item New_ID="7801300" Old_ID="7801300" ErrorDesc="检测线程创建失败" DetailMsg=""/>
+        <Item New_ID="7801301" Old_ID="7801301" ErrorDesc="检测线程已存在" DetailMsg=""/>
+        <Item New_ID="7801302" Old_ID="7801302" ErrorDesc="检测线程被中断" DetailMsg=""/>        
+        <Item New_ID="7801303" Old_ID="7801303" ErrorDesc="内存不足" DetailMsg=""/>        
+        <Item New_ID="7801304" Old_ID="7801304" ErrorDesc="内存不足" DetailMsg=""/>        
+        <Item New_ID="7801305" Old_ID="7801305" ErrorDesc="组件未初始化" DetailMsg=""/>        
+        <Item New_ID="7801306" Old_ID="7801306" ErrorDesc="组件未初始化" DetailMsg=""/>        
+        <Item New_ID="7801307" Old_ID="7801307" ErrorDesc="配置信息为空" DetailMsg=""/>        
+        <Item New_ID="7801308" Old_ID="7801308" ErrorDesc="配置信息为空" DetailMsg=""/>        
+        <Item New_ID="7801309" Old_ID="7801309" ErrorDesc="配置信息为空" DetailMsg=""/>        
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="7802">
+        <Item New_ID="7802000" Old_ID="7802000" ErrorDesc="数据库组件创建失败" DetailMsg=""/>
+        <Item New_ID="7802100" Old_ID="7802100" ErrorDesc="数据库连接创建失败" DetailMsg=""/>
+        <Item New_ID="7802200" Old_ID="7802200" ErrorDesc="数据库组件注册失败" DetailMsg=""/>
+        <Item New_ID="7802300" Old_ID="7802300" ErrorDesc="删除数据表失败" DetailMsg=""/>
+        <Item New_ID="7802400" Old_ID="7802400" ErrorDesc="插入数据表失败" DetailMsg=""/>
+        <Item New_ID="7802500" Old_ID="7802500" ErrorDesc="更新数据表失败" DetailMsg=""/>
+        <Item New_ID="7802600" Old_ID="7802600" ErrorDesc="查询数据表失败" DetailMsg=""/>
+        <Item New_ID="7802700" Old_ID="7802700" ErrorDesc="查询数据表失败" DetailMsg=""/>
+        <Item New_ID="7802800" Old_ID="7802800" ErrorDesc="删除数据项失败" DetailMsg=""/>
+        <Item New_ID="7802900" Old_ID="7802900" ErrorDesc="删除数据表失败" DetailMsg=""/>
+    </ErrorCodeType>    
+
+    <ErrorCodeType Type="7803">
+        <Item New_ID="7803000" Old_ID="7803000" ErrorDesc="插入数据表失败" DetailMsg=""/>
+        <Item New_ID="7803100" Old_ID="7803100" ErrorDesc="更新数据表失败" DetailMsg=""/>
+        <Item New_ID="7803200" Old_ID="7803200" ErrorDesc="删除数据表失败" DetailMsg=""/>
+        <Item New_ID="7803300" Old_ID="7803300" ErrorDesc="数据库事务开启失败" DetailMsg=""/>
+        <Item New_ID="7803400" Old_ID="7803400" ErrorDesc="数据库事务提交失败" DetailMsg=""/>
+        <Item New_ID="7803500" Old_ID="7803500" ErrorDesc="数据库事务回滚失败" DetailMsg=""/>
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="7805">
+        <Item New_ID="7805000" Old_ID="7805000" ErrorDesc="数据库错误" DetailMsg=""/>
+        <Item New_ID="7805001" Old_ID="7805001" ErrorDesc="数据库组件创建失败" DetailMsg=""/>
+        <Item New_ID="7805002" Old_ID="7805002" ErrorDesc="数据库组件创建失败" DetailMsg=""/>
+        <Item New_ID="7805003" Old_ID="7805003" ErrorDesc="数据库组件创建失败" DetailMsg=""/>
+        <Item New_ID="7805004" Old_ID="7805004" ErrorDesc="删除数据库不存在" DetailMsg=""/>
+        <Item New_ID="7805005" Old_ID="7805005" ErrorDesc="内存不足" DetailMsg=""/>
+        <Item New_ID="7805006" Old_ID="7805006" ErrorDesc="内存不足" DetailMsg=""/>
+        <Item New_ID="7805007" Old_ID="7805007" ErrorDesc="内存不足" DetailMsg=""/>
+        <Item New_ID="7805008" Old_ID="7805008" ErrorDesc="内存不足" DetailMsg=""/>
+        <Item New_ID="7805009" Old_ID="7805009" ErrorDesc="数据库组件创建失败" DetailMsg=""/>
+        <Item New_ID="7805010" Old_ID="7805010" ErrorDesc="配置文件为空" DetailMsg=""/>
+        <Item New_ID="7805011" Old_ID="7805011" ErrorDesc="数据同步超时" DetailMsg=""/>
+    </ErrorCodeType>            
+    
+    <ErrorCodeType Type="7811">
+    
+        <Item New_ID="7811000" Old_ID="7811000" ErrorDesc="下载组件创建失败" DetailMsg=""/>
+        <Item New_ID="7811001" Old_ID="7811001" ErrorDesc="获取配置信息失败" DetailMsg=""/>
+        <Item New_ID="7811002" Old_ID="7811002" ErrorDesc="获取配置信息失败" DetailMsg=""/>
+        <Item New_ID="7811003" Old_ID="7811003" ErrorDesc="下载路径不存在" DetailMsg=""/>
+        <Item New_ID="7811004" Old_ID="7811004" ErrorDesc="下载错误" DetailMsg=""/>
+        
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="7812">
+    
+        <Item New_ID="7812000" Old_ID="7812000" ErrorDesc="下载组件创建失败" DetailMsg=""/>
+        <Item New_ID="7812001" Old_ID="7812001" ErrorDesc="下载路径为不存在, 请重启本机后再试" DetailMsg="下载路径为空"/>
+        <Item New_ID="7812002" Old_ID="7812002" ErrorDesc="下载组件创建失败, 请重启本机后再试" DetailMsg="获取下载组件对象接口失败"/>
+        <Item New_ID="7812003" Old_ID="7812003" ErrorDesc="文件操作失败, 请检查下载目录权限" DetailMsg="根据配置的删除列表, 执行删除文件失败, 可能文件占用"/>
+        <Item New_ID="7812004" Old_ID="7812004" ErrorDesc="目录创建失败, 请检查下载目录权限" DetailMsg="可能权限不足"/>
+        <Item New_ID="7812005" Old_ID="7812005" ErrorDesc="文件下载失败, 请检查下载目录权限" DetailMsg="下载文件失败"/>
+        <Item New_ID="7812006" Old_ID="7812006" ErrorDesc="下载任务创建失败" DetailMsg="下载器创建下载任务失败, 检查tinydl版本是否匹配"/>
+        <Item New_ID="7812007" Old_ID="7812007" ErrorDesc="文件列表为空, 请重启本机后关闭安全软件再试" DetailMsg="将版本号写入mmog_data文件失败, 可能权限不足"/>
+        <Item New_ID="7812008" Old_ID="7812008" ErrorDesc="下载错误" DetailMsg=""/>
+        <Item New_ID="7812009" Old_ID="7812009" ErrorDesc="下载错误" DetailMsg=""/>
+        <Item New_ID="7812010" Old_ID="7812010" ErrorDesc="游戏路径异常" DetailMsg="游戏路径异常"/>
+        <Item New_ID="7812011" Old_ID="7812011" ErrorDesc="游戏路径异常" DetailMsg="游戏路径异常"/>
+        <Item New_ID="7812012" Old_ID="7812012" ErrorDesc="预分配磁盘空间失败，权限不足或磁盘空间不足" DetailMsg="预分配磁盘空间失败，权限不足或磁盘空间不足"/>
+        <Item New_ID="7812013" Old_ID="7812013" ErrorDesc="创建文件失败，权限不足或路径错误，请重启系统或更换安装目录后再试" DetailMsg="创建文件失败，权限不足或路径错误"/>
+        <Item New_ID="7812014" Old_ID="7812014" ErrorDesc="文件写入位置异常" DetailMsg="文件写入位置异常"/>
+        <Item New_ID="7812015" Old_ID="7812015" ErrorDesc="文件写入失败" DetailMsg="文件写入失败"/>
+        <Item New_ID="7812016" Old_ID="7812016" ErrorDesc="下载信息解析失败" DetailMsg="分片信息解析失败"/>
+        <Item New_ID="7812017" Old_ID="7812017" ErrorDesc="下载数据解压失败，请重试或尝试卸载后重装" DetailMsg="分片解压失败"/>
+        <Item New_ID="7812018" Old_ID="7812018" ErrorDesc="下载数据解压后校验失败" DetailMsg="下载数据解压后校验失败"/>
+        <Item New_ID="7812019" Old_ID="7812019" ErrorDesc="文件读取失败" DetailMsg="文件读取失败"/>
+        <Item New_ID="7812021" Old_ID="7812021" ErrorDesc="磁盘空间不足，请清理磁盘或更换安装路径" DetailMsg="下载更新过程中检测到磁盘空间不足"/>
+        <Item New_ID="7812030" Old_ID="7812030" ErrorDesc="磁盘结构损坏且无法读取，请更换磁盘重新下载" DetailMsg="磁盘结构损坏"/>
+        <Item New_ID="7812031" Old_ID="7812031" ErrorDesc="文件或目录损坏且无法读取，请卸载游戏重新下载或更换安装目录重新下载" DetailMsg="文件或目录损坏且无法读取"/>
+        <Item New_ID="7812040" Old_ID="7812040" ErrorDesc="内存不足，内存分配失败，请尝试重启系统后重试" DetailMsg=""/>
+        <Item New_ID="7812043" Old_ID="7812043" ErrorDesc="文件被占用，请解除占用或重启系统后重试" DetailMsg=""/>
+        <Item New_ID="7812044" Old_ID="7812044" ErrorDesc="文件夹名“WeGameApps”被占用，安装路径创建失败" DetailMsg="不能创建重复的路径"/>
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="7813">
+        <Item New_ID="7813006" Old_ID="7813006" ErrorDesc="无法解析主机, 请检查本机Host配置" DetailMsg="curl内部错误码6, Host解析失败"/>
+        <Item New_ID="7813007" Old_ID="7813007" ErrorDesc="连接服务器失败, 请确认网络状况后重试" DetailMsg="curl内部错误码7, 无法通过 connect() 连接至主机或代理服务器"/>
+        <Item New_ID="7813018" Old_ID="7813018" ErrorDesc="下载未完成时传输被关闭，请检查网络状态后重试" DetailMsg="curl内部错误码18, 未下完时连接被关闭，可能是用户网络问题，也可能是cdn主动关闭了连接"/>
+        <Item New_ID="7813028" Old_ID="7813028" ErrorDesc="下载操作超时。请确认网络状况后重试, 若本机开启了网络代理、加速工具或其他Host配置，请先关闭" DetailMsg="curl内部错误码28, 请求超时，一般是本地网络环境异常，找到超时的url在浏览器测试是否正常, 关闭本地的网络代理、加速工具或其他Host配置"/>
+        <Item New_ID="7813035" Old_ID="7813035" ErrorDesc="SSL连接失败，请检查网络状况后重试" DetailMsg="curl内部错误码35, SSL连接失败"/>
+        <Item New_ID="7813052" Old_ID="7813052" ErrorDesc="接收网络数据失败，服务器返回为空，请检查网络状态后重试" DetailMsg="curl内部错误码52, 接收网络数据失败"/>
+        <Item New_ID="7813056" Old_ID="7813056" ErrorDesc="接收网络数据失败，连接异常中断，请检查网络状态后重试" DetailMsg="curl内部错误码56, 接收网络数据失败"/>
+        <Item New_ID="7813201" Old_ID="7813201" ErrorDesc="下载数据校验失败" DetailMsg="分片大小校验失败"/>
+        <Item New_ID="7813202" Old_ID="7813202" ErrorDesc="下载数据校验失败" DetailMsg="分片MD5校验失败"/>
+        <Item New_ID="7813203" Old_ID="7813203" ErrorDesc="下载服务器返回404错误" DetailMsg="分片在CDN上不存在"/>
+        <Item New_ID="7813204" Old_ID="7813204" ErrorDesc="下载服务器返回错误" DetailMsg="下载分片返回HTTP错误码"/>
+        <Item New_ID="7813205" Old_ID="7813205" ErrorDesc="解析下载链接失败" DetailMsg="解析分片的下载地址失败"/>
+        <Item New_ID="7813206" Old_ID="7813206" ErrorDesc="分配内存失败，请重启WeGame或重启系统后重试" DetailMsg="分配内存存储下载的分配时失败"/>
+
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="7814">
+    
+        <Item New_ID="7814000" Old_ID="7814000" ErrorDesc="未知错误" DetailMsg="出现错误但错误码信息丢失, 默认的错误码"/>
+        <Item New_ID="7814001" Old_ID="7814001" ErrorDesc="组件创建失败, 请下载安装最新版本的WeGame" DetailMsg="加载game_library.dll失败, 可能dll接口不匹配。1:检查是否使用了静默的Tinysetup版本, 尝试删除并关闭WeGame自动修复功能；2.重新最新版本的安装平台客户端"/>
+        <Item New_ID="7814002" Old_ID="7814002" ErrorDesc="组件创建失败, 请下载安装最新版本的WeGame" DetailMsg="获取game实例失败, 导致无法获取游戏信息, 可能dll接口不匹配。1:检查是否使用了静默的Tinysetup版本, 尝试删除并关闭WeGame自动修复功能;2.重新最新版本的安装平台客户端"/>
+        <Item New_ID="7814003" Old_ID="7814003" ErrorDesc="组件创建失败" DetailMsg="初始化View层对象失败"/>
+        <Item New_ID="7814004" Old_ID="7814004" ErrorDesc="组件创建失败" DetailMsg="初始化Model层对象失败"/>
+        <Item New_ID="7814005" Old_ID="7814005" ErrorDesc="组件创建失败" DetailMsg="初始化DepotMgr对象失败"/>
+        <Item New_ID="7814006" Old_ID="7814006" ErrorDesc="组件创建失败" DetailMsg="初始化安装脚本对象失败"/>
+        <Item New_ID="7814007" Old_ID="7814007" ErrorDesc="组件创建失败" DetailMsg="初始化Tinydl的磁盘预分配对象失败"/>
+        <Item New_ID="7814008" Old_ID="7814008" ErrorDesc="组件创建失败" DetailMsg="创建安装描述文件(game_install_desc.dat)对象失败"/>
+        <Item New_ID="7814009" Old_ID="7814009" ErrorDesc="内存不足, 请重启本机后再试" DetailMsg="创建状态机工作线程失败。 可能内存不足, 请重启本机后再试"/>
+        
+        <Item New_ID="7814018" Old_ID="7814018" ErrorDesc="创建安装目录失败, 目录权限不足, 请尝试关闭安全软件再手动修改权限后重试" DetailMsg="创建安装目录失败"/>
+        <Item New_ID="7814019" Old_ID="7814019" ErrorDesc="安装目录路径无效，DLC请等待本体安装完成后再下载" DetailMsg="安装路径磁盘驱动器无效" />
+        <Item New_ID="7814020" Old_ID="7814020" ErrorDesc="创建下载目录失败, 目录权限不足, 请尝试关闭安全软件再手动修改权限后重试" DetailMsg="创建游戏文件下载目录权限异常, 请手动设置权限后重试。注意网吧环境客户端机因权限问题经常出现"/>
+        <Item New_ID="7814021" Old_ID="7814021" ErrorDesc="创建下载目录失败, 目录权限不足, 请尝试关闭安全软件再手动修改权限后重试" DetailMsg="创建依赖库下载目录权限异常, 请手动设置权限后重试。注意网吧环境客户端机因权限问题经常出现"/>
+        <Item New_ID="7814022" Old_ID="7814022" ErrorDesc="创建下载目录失败, 目录权限不足, 请尝试关闭安全软件再手动修改权限后重试" DetailMsg="创建安装脚本下载目录权限异常, 请手动设置权限后重试。注意网吧环境客户端机因权限问题经常出现"/>
+        <Item New_ID="7814023" Old_ID="7814023" ErrorDesc="获取磁盘格式错误" DetailMsg="下载前获取磁盘格式错误"/>
+        <Item New_ID="7814024" Old_ID="7814024" ErrorDesc="磁盘格式不支持" DetailMsg="使用的FAT格式，无法下载大文件"/>
+        
+        <Item New_ID="7814025" Old_ID="7814025" ErrorDesc="已取消" DetailMsg=""/>
+        <Item New_ID="7814026" Old_ID="7814026" ErrorDesc="正在安装" DetailMsg=""/>
+        <Item New_ID="7814027" Old_ID="7814027" ErrorDesc="正在更新" DetailMsg=""/>
+        <Item New_ID="7814028" Old_ID="7814028" ErrorDesc="正在修复" DetailMsg=""/>
+        <Item New_ID="7814029" Old_ID="7814029" ErrorDesc="状态非法" DetailMsg=""/>
+        
+        <Item New_ID="7814030" Old_ID="7814030" ErrorDesc="目录被其他程序占用" DetailMsg="下载安装目录存在运行中的进程, 这个错误会弹窗提示用户手动查杀"/>
+        
+        <Item New_ID="7814035" Old_ID="7814035" ErrorDesc="本地的版本信息无效" DetailMsg="读取本地的mmog_data.xml版本号为空, 请确认mmog_data的信息正确"/>
+        
+        <Item New_ID="7814036" Old_ID="7814036" ErrorDesc="服务器返回的配置信息错误" DetailMsg="解析配置encryption info格式错误, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7814037" Old_ID="7814037" ErrorDesc="服务器返回的配置信息错误" DetailMsg="解析配置no inner map encryption info格式错误, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7814038" Old_ID="7814038" ErrorDesc="服务器返回的配置信息错误" DetailMsg="解析配置no chunk encryption info格式错误, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>
+        <Item New_ID="7814039" Old_ID="7814039" ErrorDesc="服务器返回的配置信息错误" DetailMsg="解析配置use_rough_md5格式错误, 导致客户端解析失败, 请检查服务器的Repo包配置格式"/>       
+        <Item New_ID="7814040" Old_ID="7814040" ErrorDesc="服务器返回的详细配置错误" DetailMsg="服务器返回的详细配置信息请求失败, 请检查CDN是否有上传"/>
+        <Item New_ID="7814041" Old_ID="7814041" ErrorDesc="服务器返回的详细配置非法" DetailMsg="服务器返回的详细配置信息大小或MD5不匹配, 请检查配置信息是否正确"/>
+        <Item New_ID="7814042" Old_ID="7814042" ErrorDesc="配置查询失败, 请确认网络状况后重试, 若本机开启了网络代理、加速工具或其他Host配置，请先关闭" DetailMsg="查询后台的游戏repo配置信息失败, 本地网络环境问题"/>
+        <Item New_ID="7814043" Old_ID="7814043" ErrorDesc="服务器返回配置查询失败" DetailMsg="服务器返回的配置查询结果失败, 请检查服务器的游戏版本升级链正常、Repo包正常"/>
+        <Item New_ID="7814044" Old_ID="7814044" ErrorDesc="服务器返回的配置信息为空" DetailMsg="服务器未找到目标分支的repo配置, 请检查服务器是否已制作并发布Repo包"/>
+        <Item New_ID="7814045" Old_ID="7814045" ErrorDesc="服务器返回的配置格式错误" DetailMsg="服务器返回的配置信息非json格式, 导致客户端解析失败"/>
+        <Item New_ID="7814046" Old_ID="7814046" ErrorDesc="服务器返回的配置内容解析失败" DetailMsg="服务器返回的配置内容格式错误, 导致客户端解析失败"/>
+        <Item New_ID="7814047" Old_ID="7814047" ErrorDesc="分支ID非法" DetailMsg="OSS获取到的分支id错误。已废弃"/>
+        <Item New_ID="7814048" Old_ID="7814048" ErrorDesc="服务器返回的配置信息分支ID错误" DetailMsg="服务器返回的配置信息分支ID错误, 不是客户端请求的目标分支id"/>
+        
+        <Item New_ID="7814050" Old_ID="7814050" ErrorDesc="配置信息为空" DetailMsg=""/>
+        <Item New_ID="7814051" Old_ID="7814051" ErrorDesc="目录创建失败, 请检查WeGame目录权限" DetailMsg=""/>
+        <Item New_ID="7814052" Old_ID="7814052" ErrorDesc="目录创建失败, 请检查WeGame目录权限" DetailMsg=""/>
+        <Item New_ID="7814053" Old_ID="7814053" ErrorDesc="组件创建失败" DetailMsg=""/>
+        <Item New_ID="7814054" Old_ID="7814054" ErrorDesc="配置获取失败" DetailMsg=""/>
+        <Item New_ID="7814055" Old_ID="7814055" ErrorDesc="配置信息为空" />
+        <Item New_ID="7814056" Old_ID="7814056" ErrorDesc="请先更新至最新版本" />
+        <Item New_ID="7814057" Old_ID="7814057" ErrorDesc="本地缓存数据损坏" />
+        
+        <Item New_ID="7814060" Old_ID="7814060" ErrorDesc="磁盘空间不足, 请清理磁盘后重试" DetailMsg="磁盘空间不足, 这里会有弹窗提示"/>
+        <Item New_ID="7814061" Old_ID="7814061" ErrorDesc="获取磁盘空间失败, 权限不足或目录不存在" DetailMsg="下载更新前判断本地安装目录磁盘空间是否充足"/>
+        <Item New_ID="7814062" Old_ID="7814062" ErrorDesc="预分配空间失败, 权限不足或目录不存在" DetailMsg="下载器创建预分配空间的占位文件失败"/>
+        <Item New_ID="7814063" Old_ID="7814063" ErrorDesc="释放磁盘预分配空间失败" DetailMsg="下载器创建预分配空间的占位文件后, 无法正常清理释放"/>
+        <Item New_ID="7814064" Old_ID="7814064" ErrorDesc="下载或安装目录空间不足, 请清理磁盘后重试" DetailMsg="磁盘空间不足, 这里会有弹窗提示"/>
+        
+        <Item New_ID="7814066" Old_ID="7814066" ErrorDesc="下载任务超时" DetailMsg="未识别版本文件"/>
+        <Item New_ID="7814067" Old_ID="7814067" ErrorDesc="下载预处理失败" DetailMsg="下载预处理失败"/>
+        <Item New_ID="7814068" Old_ID="7814068" ErrorDesc="下载后处理失败" DetailMsg="下载后处理失败"/>
+        <Item New_ID="7814069" Old_ID="7814069" ErrorDesc="重置版本文件失败" DetailMsg="重置版本文件commonconfig失败"/>
+        <Item New_ID="7814070" Old_ID="7814070" ErrorDesc="重置版本文件失败" DetailMsg="重置版本文件mmog_data失败"/>
+        <Item New_ID="7814071" Old_ID="7814071" ErrorDesc="重置版权文件失败" DetailMsg="重置版本文件RailKeyFileList失败"/>
+        <Item New_ID="7814072" Old_ID="7814072" ErrorDesc="重置识别文件失败" DetailMsg="重置版本文件rail_game_identify失败"/>
+        <Item New_ID="7814073" Old_ID="7814073" ErrorDesc="重置识别文件失败" DetailMsg="重置版本文件rail_game_build_info失败"/>
+        <Item New_ID="7814074" Old_ID="7814074" ErrorDesc="未识别版本文件" DetailMsg="未识别版本文件"/>
+        <Item New_ID="7814075" Old_ID="7814075" ErrorDesc="切换备用模式" DetailMsg="切换备用模式"/>
+        <Item New_ID="7814076" Old_ID="7814076" ErrorDesc="版本无需更新" DetailMsg="版本无需更新"/>
+        <Item New_ID="7814080" Old_ID="7814080" ErrorDesc="移动文件失败, 可能文件被占用或权限不足, 请重启本机并关闭杀软后重试" DetailMsg="文件已下载完成, 由downloading目录移动到安装目录时失败，可能文件不存、文件被占用或权限问题" />
+        <Item New_ID="7814081" Old_ID="7814081" ErrorDesc="移动文件失败, 游戏目录所在磁盘空间不足，请清理掉一些空间后重试" DetailMsg="文件已下载完成, 由downloading目录移动到安装目录时失败，磁盘空间不足" />
+        <Item New_ID="7814082" Old_ID="7814082" ErrorDesc="移动文件失败, 游戏目录文件被占用，请解除占用或重启电脑后重试" DetailMsg="文件已下载完成, 由downloading目录移动到安装目录时失败，文件被占用" />
+        <Item New_ID="7814083" Old_ID="7814083" ErrorDesc="安装目录所在磁盘不存在" DetailMsg="安装目录所在磁盘不存在"/>
+        
+
+        <Item New_ID="7814100" Old_ID="7814100" ErrorDesc="启动错误" DetailMsg="启动错误, 在下载安装/更新/修复操作启动时捕获到错误"/>
+        <Item New_ID="7814110" Old_ID="7814110" ErrorDesc="暂停错误" DetailMsg="暂停错误, 在下载安装/更新/修复操作暂停时捕获到错误"/>
+        <Item New_ID="7814120" Old_ID="7814120" ErrorDesc="重启错误" DetailMsg="继续执行错误, 在下载安装/更新/修复操作继续执行时捕获到错误"/>
+        <Item New_ID="7814130" Old_ID="7814130" ErrorDesc="取消错误" DetailMsg="取消错误, 在下载安装/更新/修复操作取消时捕获到错误"/>
+        <Item New_ID="7814140" Old_ID="7814140" ErrorDesc="通知错误" DetailMsg="出现失败后通知UI层时出现错误, 在下载安装/更新/修复通知失败时捕获到错误"/>
+        <Item New_ID="7814150" Old_ID="7814150" ErrorDesc="环境错误，请重启客户端" DetailMsg="状态机错误, 状态机切换状态时捕获到错误"/>
+        
+        <Item New_ID="7814212" Old_ID="7814212" ErrorDesc="服务器返回配置查询失败" DetailMsg="查询tversion服务器失败, 对应后台错误码2570012"/>
+        <Item New_ID="7814213" Old_ID="7814213" ErrorDesc="服务器返回配置查询失败" DetailMsg="查询publish服务器失败, 对应后台错误码2570013"/>
+        <Item New_ID="7814216" Old_ID="7814216" ErrorDesc="服务器返回配置查询失败" DetailMsg="海星包请求错误, 对应后台错误码2570016"/>
+        <Item New_ID="7814217" Old_ID="7814217" ErrorDesc="服务器返回配置查询失败" DetailMsg="海星包格式错误, 对应后台错误码2570017"/>
+        <Item New_ID="7814218" Old_ID="7814218" ErrorDesc="服务器返回配置查询失败" DetailMsg="海星包格式错误, 对应后台错误码2570018"/>
+        <Item New_ID="7814219" Old_ID="7814219" ErrorDesc="服务器返回配置查询失败" DetailMsg="海星包请求错误, 对应后台错误码2570019"/>
+        <Item New_ID="7814223" Old_ID="7814223" ErrorDesc="服务器返回配置查询权限不足" DetailMsg="用户权限不足, 对应后台错误码2570023"/>
+        <Item New_ID="7814224" Old_ID="7814224" ErrorDesc="服务器返回配置查询失败" DetailMsg="查询灰度信息失败, 对应后台错误码2570024"/>
+
+        <Item New_ID="7814230" Old_ID="7814230" ErrorDesc="下载暂未开放" DetailMsg="游戏下载状态未开放或不在白名单, 对应后台错误码8000208"/>
+        <Item New_ID="7814231" Old_ID="7814231" ErrorDesc="游戏权限未激活" DetailMsg="后台检查到用户没有激活游戏, 对应后台错误码8000205"/>
+        <Item New_ID="7814232" Old_ID="7814232" ErrorDesc="登录态异常，请重新登录后重试" DetailMsg="后台没有检测到登录态，可能票据失效了, 对应后台错误码8000204"/>
+        <Item New_ID="7814233" Old_ID="7814233" ErrorDesc="当前分支ID无效，请切换到其他分支" DetailMsg="游戏没有该分支, 对应后台错误码8000203"/>
+        <Item New_ID="7814234" Old_ID="7814234" ErrorDesc="暂无当前分支的权限，请切换到其他分支" DetailMsg="用户没有该分支的权限, 对应后台错误码8000212"/>
+
+        <Item New_ID="7814312" Old_ID="7814312" ErrorDesc="服务器返回配置查询失败" DetailMsg="查询tversion服务器失败, 对应后台错误码2570012"/>
+        <Item New_ID="7814313" Old_ID="7814313" ErrorDesc="服务器返回配置查询失败" DetailMsg="查询publish服务器失败, 对应后台错误码2570013"/>
+        <Item New_ID="7814316" Old_ID="7814316" ErrorDesc="服务器返回配置查询失败" DetailMsg="海星包请求错误, 对应后台错误码2570016"/>
+        <Item New_ID="7814317" Old_ID="7814317" ErrorDesc="服务器返回配置查询失败" DetailMsg="海星包格式错误, 对应后台错误码2570017"/>
+        <Item New_ID="7814318" Old_ID="7814318" ErrorDesc="服务器返回配置查询失败" DetailMsg="海星包格式错误, 对应后台错误码2570018"/>
+        <Item New_ID="7814319" Old_ID="7814319" ErrorDesc="服务器返回配置查询失败" DetailMsg="海星包请求错误, 对应后台错误码2570019"/>
+        <Item New_ID="7814323" Old_ID="7814323" ErrorDesc="服务器返回配置查询权限不足" DetailMsg="用户权限不足, 对应后台错误码2570023"/>
+        <Item New_ID="7814324" Old_ID="7814324" ErrorDesc="服务器返回配置查询失败" DetailMsg="查询灰度信息失败, 对应后台错误码2570024"/>
+        <Item New_ID="7814350" Old_ID="7814350" ErrorDesc="当前版本已是最新版本" DetailMsg="当前版本已是最新版本"/>
+        <Item New_ID="7814351" Old_ID="7814351" ErrorDesc="服务器返回的配置信息为空" DetailMsg=""/>
+        
+    </ErrorCodeType>
+      
+    <ErrorCodeType Type="7817">
+        <Item New_ID="7817000" Old_ID="7817000" ErrorDesc="脚本组件创建失败, 请重启本机后再试" DetailMsg="安装脚本组件创建错误,重启再试"/>
+        <Item New_ID="7817001" Old_ID="7817001" ErrorDesc="脚本组件正在退出, 请重启本机后再试" DetailMsg="安装脚本组件正在退出, 状态错误，重启再试"/>
+        <Item New_ID="7817002" Old_ID="7817002" ErrorDesc="内存不足, 请重启本机后再试" DetailMsg="执行脚本安装时捕获到错误"/>
+        <Item New_ID="7817010" Old_ID="7817010" ErrorDesc="安装脚本不存在, 请关闭安全软件后重新下载" DetailMsg="脚本文件不存在, 可能被安全软件误删, 关闭杀软再重试下载"/>
+        <Item New_ID="7817011" Old_ID="7817011" ErrorDesc="安装脚本被其他程序占用, 请重启本机后关闭安全软件再试" DetailMsg="安装脚本被其他程序占用, 请重启本机后关闭安全软件再试"/>
+        <Item New_ID="7817012" Old_ID="7817012" ErrorDesc="安装脚本格式错误" DetailMsg="安装脚本非json格式, 请确认服务器的游戏脚本文件内容格式正常"/>
+        <Item New_ID="7817013" Old_ID="7817013" ErrorDesc="安装脚本信内容解析错误" DetailMsg="安装脚本的内容为空, 请确认服务器的游戏脚本文件内容格式正常"/>
+        <Item New_ID="7817020" Old_ID="7817020" ErrorDesc="安装失败" />
+        <Item New_ID="7817021" Old_ID="7817021" ErrorDesc="安装失败" />
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="7821">
+        <Item New_ID="7821001" Old_ID="7821001" ErrorDesc="下载进程异常退出，请重试" DetailMsg="Tinydl进程异常退出" />
+        <Item New_ID="7821010" Old_ID="7821010" ErrorDesc="抱歉，您的显卡配置不符合下载要求" DetailMsg="" />
+        <Item New_ID="7821011" Old_ID="7821011" ErrorDesc="抱歉，您的内存配置不符合下载要求" DetailMsg="" />
+        <Item New_ID="7821012" Old_ID="7821012" ErrorDesc="抱歉，您需要将游戏安装到SSD" DetailMsg="" />
+        <Item New_ID="7821015" Old_ID="7821015" ErrorDesc="抱歉，您的显卡驱动不满足下载要求，请更新显卡驱动程序并重启电脑后再试" DetailMsg="" />
+        <Item New_ID="7821016" Old_ID="7821016" ErrorDesc="当前磁盘写入速度较低，建议更换至SSD所在盘可大幅度提升下载速度" DetailMsg="" />
+    </ErrorCodeType>
+
+    <!-- 登录错误 start -->
+    <ErrorCodeType Type="7610">
+    <Item New_ID="7610001" Old_ID="7610001" ErrorDesc="网络错误" DetailMsg="网络失败，App应该弹出网络连接失败的提示"/>
+    <Item New_ID="7610002" Old_ID="7610002" ErrorDesc="取消登录" DetailMsg="用户取消登录过程，可能取消了验证码/密保卡的输入，或者中止登录过程"/>
+    <Item New_ID="7610003" Old_ID="7610003" ErrorDesc="密码错误" DetailMsg="属于server返回的一种特定错误;这个时候App应该显示server返回的错误信息，并且弹出框让用户可以重输密码;"/>
+    <Item New_ID="7610004" Old_ID="7610004" ErrorDesc="密码过期" DetailMsg="server返回的一种特定错误，表示TGT校验失败，这个时候App应该显示server返回的错误信息，并且弹框让用户可以重输密码"/>
+    <Item New_ID="7610005" Old_ID="7610005" ErrorDesc="登录超时" DetailMsg="server返回的一种特定错误，表示TGT权限不够，这个时候App应该显示server返回的错误信息，并且弹框让用户可以重输密码"/>
+    <Item New_ID="7610006" Old_ID="7610006" ErrorDesc="不存在的用户" DetailMsg="其他server返回错误，这个时候App应该显示server返回的错误信息"/>
+    <Item New_ID="7610007" Old_ID="7610007" ErrorDesc="图片验证失败" DetailMsg="验证码图片文件处理失败"/>
+    <Item New_ID="7610008" Old_ID="7610008" ErrorDesc="即通未知错误" DetailMsg="App没有设置密码而登录引发的错误"/>
+    <Item New_ID="7610009" Old_ID="7610009" ErrorDesc="同时进行登录" DetailMsg="有相同的调用正在进行的错误"/>
+    <Item New_ID="7610010" Old_ID="7610010" ErrorDesc="其他错误" DetailMsg="其他错误"/>
+    <Item New_ID="7610011" Old_ID="7610011" ErrorDesc="密保服务器出错" DetailMsg="密保服务器返回错误，不允许再重试"/>
+    <Item New_ID="7610012" Old_ID="7610012" ErrorDesc="用户操作超时" DetailMsg="用户操作timeout"/>
+    <Item New_ID="7610020" Old_ID="7610020" ErrorDesc="已经登录" DetailMsg="已经登录"/>
+    <Item New_ID="7610031" Old_ID="7610031" ErrorDesc="密保错误" DetailMsg="密保"/>
+    <Item New_ID="7610032" Old_ID="7610032" ErrorDesc="服务端返回的其他错误" DetailMsg="svr返回的other"/>
+    <Item New_ID="7610033" Old_ID="7610033" ErrorDesc="check TGT出错" DetailMsg="check TGT的时候出错"/>
+    <Item New_ID="7610034" Old_ID="7610034" ErrorDesc="该账号密码已经泄露,存在安全风险." DetailMsg="该账号密码已经泄露,存在安全风险,请到https://aq.qq.com/v2/uv_aq/html/reset_pwd/pc_reset_pwd_input_account.html?v=4.0修改密码后恢复正常使用"/>
+    <Item New_ID="7610041" Old_ID="7610041" ErrorDesc="换取TGT时的未知错误" DetailMsg="换取TGT时的未知错误"/>
+    <Item New_ID="7610051" Old_ID="7610051" ErrorDesc="黑名单用户" DetailMsg="黑名单用户"/>
+    <Item New_ID="7610052" Old_ID="7610052" ErrorDesc="账号已经冻结" DetailMsg="账号已经冻结"/>
+    <Item New_ID="7610053" Old_ID="7610053" ErrorDesc="禁止游戏" DetailMsg="禁止游戏"/>
+    <Item New_ID="7610054" Old_ID="7610054" ErrorDesc="被限制" DetailMsg="被限制"/>
+    <Item New_ID="7610055" Old_ID="7610055" ErrorDesc="错误的大大票" DetailMsg="错误的大大票"/>
+    <Item New_ID="7610071" Old_ID="7610071" ErrorDesc="验证图片错误" DetailMsg="验证图片错误"/>
+    <Item New_ID="7610072" Old_ID="7610072" ErrorDesc="网络发包失败" DetailMsg="网络发包失败"/>
+    <Item New_ID="7610073" Old_ID="7610073" ErrorDesc="网络回包错误" DetailMsg="网络回包错误"/>
+    <Item New_ID="7610074" Old_ID="7610074" ErrorDesc="选择登录服务器时发生异常" DetailMsg="选择登录服务器时发生异常"/>
+    <Item New_ID="7610075" Old_ID="7610075" ErrorDesc="ping服务器的结果异常，没有ping签名" DetailMsg="ping服务器的结果异常，没有ping签名"/>
+    <Item New_ID="7610076" Old_ID="7610076" ErrorDesc="验证码结果异常，没有验证码签名" DetailMsg="验证码结果异常，没有验证码签名"/>
+    <Item New_ID="7610077" Old_ID="7610077" ErrorDesc="密码验证结果异常" DetailMsg="密码验证结果异常"/>
+    <Item New_ID="7610078" Old_ID="7610078" ErrorDesc="用户输入的账号异常" DetailMsg="用户输入的账号异常"/>
+    <Item New_ID="7610079" Old_ID="7610079" ErrorDesc="不是用DH KEY加密的" DetailMsg="不是用DH KEY加密的"/>
+    <Item New_ID="7610080" Old_ID="7610080" ErrorDesc="DNS超时" DetailMsg="DNS超时"/>
+    <Item New_ID="7610081" Old_ID="7610081" ErrorDesc="生成DH Key失败" DetailMsg="生成DH Key失败"/>
+    <Item New_ID="7610082" Old_ID="7610082" ErrorDesc="Server返回的错误，客户端不应该显示错误码" DetailMsg="Server返回的错误，客户端不应该显示错误码"/>
+    <Item New_ID="7610083" Old_ID="7610083" ErrorDesc="Account至Uin绑定关系不正确" DetailMsg="Account至Uin绑定关系不正确"/>
+    <Item New_ID="7610091" Old_ID="7610091" ErrorDesc="在更新票据的时候返回需要密保" DetailMsg="在更新票据的时候返回需要密保，不应该出现"/>
+    <Item New_ID="7610092" Old_ID="7610092" ErrorDesc="快速登录账号失败" DetailMsg="快速登录账号失败"/>
+    <Item New_ID="7610093" Old_ID="7610093" ErrorDesc="参数错误" DetailMsg="参数错误"/>
+    <Item New_ID="7610094" Old_ID="7610094" ErrorDesc="server发布灾难安民公告" DetailMsg="server发布灾难安民公告"/>
+    <Item New_ID="7610095" Old_ID="7610095" ErrorDesc="登录密码登录的时候SVR要求手机扫码登录" DetailMsg="登录密码登录的时候SVR要求手机扫码登录，当打开设备锁的时候，是通过要求验证密保的，EIM这里直接返回错误"/>
+    <Item New_ID="7610096" Old_ID="7610096" ErrorDesc="登录超时" DetailMsg="登录超时(登录即通 + 登录tgp服务器总时间)"/>
+    <Item New_ID="7610097" Old_ID="7610097" ErrorDesc="TASLogin.exe异常退出" DetailMsg="TASLogin.exe异常退出"/>
+    <Item New_ID="7610098" Old_ID="7610098" ErrorDesc="获得主界面基础数据超时" DetailMsg="获得主界面基础数据超时"/>
+    <Item New_ID="7610099" Old_ID="7610099" ErrorDesc="tgp服务器回复登录请求超时" DetailMsg="tgp服务器回复登录请求超时"/>
+    <Item New_ID="7610101" Old_ID="7610101" ErrorDesc="bin文件修复失败" DetailMsg="bin文件修复失败"/>
+    <Item New_ID="7610102" Old_ID="7610102" ErrorDesc="设置了密保，但tgp都不支持" DetailMsg="设置了密保，但tgp都不支持"/>
+    <Item New_ID="7610110" Old_ID="7610110" ErrorDesc="客户端以服务器异常模式登录" DetailMsg="客户端以服务器异常模式登录"/>
+    <Item New_ID="7610111" Old_ID="7610111" ErrorDesc="账号没有激活" DetailMsg="账号没有激活"/>
+    <Item New_ID="7610112" Old_ID="7610112" ErrorDesc="连续hello包超时达到最大数" DetailMsg="连续hello包超时达到最大数"/>
+    <Item New_ID="7610113" Old_ID="7610113" ErrorDesc="微信扫描登录鉴权失败" DetailMsg="微信扫描登录鉴权失败"/>
+    <Item New_ID="7610114" Old_ID="7610114" ErrorDesc="统一sdk回调的账号参数是null" DetailMsg="统一sdk回调的账号参数是null"/>
+    <Item New_ID="7610115" Old_ID="7610115" ErrorDesc="业务层检测到sso超时，根据业务层的超时时间" DetailMsg="业务层检测到sso超时，根据业务层的超时时间"/>
+    <Item New_ID="7610116" Old_ID="7610116" ErrorDesc="切换大区成功" DetailMsg="切换大区成功"/>
+    <Item New_ID="7610417" Old_ID="7610417" ErrorDesc="邮箱账号或密码校验失败" DetailMsg="邮箱账号或密码校验失败 自定义错误，对应kMailAccOrPwdCheckFail"/>
+    <Item New_ID="7610418" Old_ID="7610418" ErrorDesc="邮箱未注册" DetailMsg="邮箱未注册 自定义错误，对应kMailAccNotRegister"/>
+    <Item New_ID="7610419" Old_ID="7610419" ErrorDesc="密码错误" DetailMsg="密码错误 自定义错误，对应kMailPwdErr"/>
+    <Item New_ID="7610420" Old_ID="7610420" ErrorDesc="邮箱账号信息过期" DetailMsg="邮箱账号信息过期  自定义错误，对应KMailAccInfoExpire"/>
+    <Item New_ID="7610421" Old_ID="7610421" ErrorDesc="不是开发者账号" DetailMsg="不是开发者账号  自定义错误，对应kNotDeveloperAccount"/>
+    <Item New_ID="7610422" Old_ID="7610422" ErrorDesc="查询开发者权限失败" DetailMsg="自定义错误，对应kQueryDeveloperAuthorityFailed"/>
+    <Item New_ID="7610423" Old_ID="7610423" ErrorDesc="解析开发者权限回包失败" DetailMsg="自定义错误，对应kParseDeveloperAuthorityFailed"/>
+    <Item New_ID="7610424" Old_ID="7610424" ErrorDesc="需要二次验证 " DetailMsg="需要二次验证  自定义错误，对应kMail2FARequired"/>
+    <Item New_ID="7610425" Old_ID="7610425" ErrorDesc="账号注销期间登陆" DetailMsg="账号注销期间登陆时返回的错误码  自定义错误，对应kAccountUnlockedReg"/>
+    <Item New_ID="7610426" Old_ID="7610426" ErrorDesc="账号已经存在" DetailMsg="账号已经登录  自定义错误，对应kAccountExist"/>
+    <Item New_ID="7610427" Old_ID="7610427" ErrorDesc="账号已经登录" DetailMsg="账号已经登录  自定义错误，对应kSSOTicketCheckFail"/>
+    <Item New_ID="7610428" Old_ID="7610428" ErrorDesc="邮箱格式错误" DetailMsg="邮箱格式错误"/>
+    <Item New_ID="7610429" Old_ID="7610429" ErrorDesc="fb not bind" DetailMsg="fb not bind"/>
+    <Item New_ID="7611000" Old_ID="7611000" ErrorDesc="未知错误" DetailMsg="未知错误"/>   
+
+    </ErrorCodeType>
+    <!-- SSO登录子错误码 -->
+    <ErrorCodeType Type="7620">
+     <Item New_ID="7620258" Old_ID="7620258" ErrorDesc="密码错误" DetailMsg="密码错误"/>
+	 <Item New_ID="7620273" Old_ID="7620273" ErrorDesc="此账号已被回收,建议通过https://zc.qq.com重新申请一个QQ使用" DetailMsg="此账号已被回收,建议通过https://zc.qq.com重新申请一个QQ使用"/>
+     <Item New_ID="7620282" Old_ID="7620282" ErrorDesc="QQ号暂时无法登录" DetailMsg="QQ号暂时无法登录，请到http://aq.qq.com/007恢复正常使用"/>   
+    <Item New_ID="7620296" Old_ID="7620296" ErrorDesc="上网异常" DetailMsg="当前上网异常，请更换网络或到常用设备上登录或稍后再试"/>
+    <Item New_ID="7620294" Old_ID="7620294" ErrorDesc="账号异常，长期未登录" DetailMsg="该账号长期未登录，为了保障账号安全，已被系统设置成保护状态，请用手机QQ新版本登录"/>
+    <Item New_ID="7620279" Old_ID="7620279" ErrorDesc="你的身份信息已失效,请重新输入密码登录." DetailMsg="你的身份信息已失效,请重新输入密码登录."/>
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="74">
+    <Item New_ID="7440000" Old_ID="7440000" ErrorDesc="WeGameSDK- 服务器返回数据格式异常" DetailMsg="WeGameSDK- 服务器返回数据格式异常"/>
+    <Item New_ID="7460028" Old_ID="7460028" ErrorDesc="WeGameSDK- 访问后台接口网络超时" DetailMsg="WeGameSDK- 访问后台接口网络超时"/>
+    <Item New_ID="7460217" Old_ID="7460217" ErrorDesc="WeGameSDK- 重试达到上限" DetailMsg="WeGameSDK- 重试达到上限"/>
+    <Item New_ID="7460221" Old_ID="7460221" ErrorDesc="WeGameSDK- 生成加密sessionkey失败" DetailMsg="WeGameSDK- 生成加密sessionkey失败"/>
+    <Item New_ID="7460223" Old_ID="7460223" ErrorDesc="WeGameSDK- 本地key文件错误" DetailMsg="WeGameSDK- 本地key文件错误"/>
+    <Item New_ID="7460224" Old_ID="7460224" ErrorDesc="WeGameSDK- 查询DNS失败" DetailMsg="WeGameSDK- 查询DNS失败"/>
+    <Item New_ID="7460225" Old_ID="7460225" ErrorDesc="WeGameSDK- 解析DNS返回失败" DetailMsg="WeGameSDK- 解析DNS返回失败"/>
+    <Item New_ID="7440227" Old_ID="7440227" ErrorDesc="WeGameSDK- 解析返回sessionkey错误" DetailMsg="WeGameSDK- 解析返回sessionkey错误"/>
+    <Item New_ID="7420000" Old_ID="7420000" ErrorDesc="WeGameSDK- Login接口直接返回失败" DetailMsg="WeGameSDK- Login接口直接返回失败"/>
+    <Item New_ID="7410003" Old_ID="7410003" ErrorDesc="WeGameSDK- 访问后台的url格式不对" DetailMsg="WeGameSDK- 访问后台的url格式不对"/>
+    <Item New_ID="7410028" Old_ID="7410028" ErrorDesc="WeGameSDK- 网络请求超时" DetailMsg="WeGameSDK- 网络请求超时"/>
+    </ErrorCodeType>
+    
+    <ErrorCodeType Type="7650">
+    <Item New_ID="7650032" Old_ID="7650032" ErrorDesc="扫码登录异常" DetailMsg="扫码登录异常"/>
+    <!--<Item New_ID="7650031" Old_ID="7650031" ErrorDesc="扫码未知错误" DetailMsg="暂时不知道什么错误"/>-->
+    </ErrorCodeType>
+    <ErrorCodeType Type="601">
+    <Item New_ID="6010100" Old_ID="6010100" ErrorDesc="WeGameSDK- ST票据校验失败" DetailMsg="WeGameSDK- ST票据校验失败"/>
+    </ErrorCodeType>
+    <!-- 登录错误 end -->
+    <!--tinysetup  end-->
+    
+    <ErrorCodeType Type="7901">
+        <Item New_ID="7901001" Old_ID="7901001" ErrorDesc="尝试上传的是非法图片" />
+        <Item New_ID="7901002" Old_ID="7901002" ErrorDesc="创建图片上传任务失败" />
+        <Item New_ID="7901003" Old_ID="7901003" ErrorDesc="上传图片请求后台回包失败" />
+        <Item New_ID="7901004" Old_ID="7901004" ErrorDesc="创建图片上报任务失败" />
+        <Item New_ID="7901005" Old_ID="7901005" ErrorDesc="上报图片请求后台回包失败" />
+        <Item New_ID="7901006" Old_ID="7901006" ErrorDesc="达到每日图片上传数量上限，无法继续上传" />
+        <Item New_ID="7901007" Old_ID="7901007" ErrorDesc="需要上传的本地图片不存在" />
+        <Item New_ID="7901008" Old_ID="7901008" ErrorDesc="图片文件大小超出限制，禁止上传" />
+        <Item New_ID="7901009" Old_ID="7901009" ErrorDesc="图片上传前压缩失败" />
+        <Item New_ID="7901010" Old_ID="7901010" ErrorDesc="正在处理feeds同步任务，请稍后再试" />
+        <Item New_ID="7901011" Old_ID="7901011" ErrorDesc="创建图片上报后台任务失败" />
+        <Item New_ID="7901012" Old_ID="7901012" ErrorDesc="上报后台请求回包失败" />
+    </ErrorCodeType>
+
+    <ErrorCodeType Type="7902">
+        <Item New_ID="7902001" Old_ID="7902001" ErrorDesc="下载直播插件失败，如果当前有其他下载任务在运行，请暂停后重试" />
+        <Item New_ID="7902002" Old_ID="7902002" ErrorDesc="直播插件运行中，请退出后重试" />
+        <Item New_ID="7902003" Old_ID="7902003" ErrorDesc="创建直播插件失败" />
+        <Item New_ID="7902004" Old_ID="7902004" ErrorDesc="直播插件启动中，请耐心等待" />
+        <Item New_ID="7902005" Old_ID="7902005" ErrorDesc="获取登录态失败，请检查网络状态后重试" />
+        <Item New_ID="7902006" Old_ID="7902006" ErrorDesc="获取直播游戏信息失败，请检查网络状态后重试" />
+        <Item New_ID="7902008" Old_ID="7902008" ErrorDesc="直播插件拉起超时，请重试；如您多次重试无效，请提交平台反馈" />
+    </ErrorCodeType>  
+    
+    <ErrorCodeType Type="3503">
+        <Item New_ID="3503001" Old_ID="3503001" ErrorDesc="查询游戏权限失败" />
+        <Item New_ID="3503002" Old_ID="3503002" ErrorDesc="您还未拥有该游戏权限" />
+        <Item New_ID="3503003" Old_ID="3503003" ErrorDesc="游戏正在退款中" />
+        <Item New_ID="3503004" Old_ID="3503004" ErrorDesc="DLC正在退款中" />
+        <Item New_ID="3503005" Old_ID="3503005" ErrorDesc="自动激活游戏入口关闭" />
+        <Item New_ID="3503006" Old_ID="3503006" ErrorDesc="自动激活游戏繁忙" />
+        <Item New_ID="3503007" Old_ID="3503007" ErrorDesc="游戏锁区,该账号不在此区服范围" />
+        <Item New_ID="3503008" Old_ID="3503008" ErrorDesc="查询游戏权限失败" />
+        <Item New_ID="3503009" Old_ID="3503009" ErrorDesc="查询游戏权限繁忙" />
+        <Item New_ID="3503010" Old_ID="3503010" ErrorDesc="游戏权限参数异常" />
+        <Item New_ID="3503013" Old_ID="3503013" ErrorDesc="查询密保信息错误" />
+   </ErrorCodeType>
+    <!-- 登录后台返回的错误码 -->
+    <ErrorCodeType Type="80">
+        <Item New_ID="8010012" Old_ID="8010012" ErrorDesc="您的账号处于账号注销锁定期。"/>
+        <Item New_ID="8010062" Old_ID="8010062" ErrorDesc="账号身份信息已过期，请重新输入账号密码登录！"/>
+        <Item New_ID="8028014" Old_ID="8028014" ErrorDesc="密码已修改，请重新登录。"/>
+        <Item New_ID="8010081" Old_ID="8010081" ErrorDesc="账号存在异常行为,已冻结账号" DetailMsg="尊敬的用户，你的账号存在异常行为。为保护资产，现为你冻结账号。如有疑惑请点击下方去反馈按钮，或联系人工客服"/>
+        <Item New_ID="8000027" Old_ID="8000027" ErrorDesc="启动失败：您的WeGame版本过旧，请到官网下载最新WeGame版本后重试。"/>
+    </ErrorCodeType>
+</ErrorCode>
