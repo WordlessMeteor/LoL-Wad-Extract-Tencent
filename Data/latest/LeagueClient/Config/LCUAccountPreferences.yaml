@@ -134,7 +134,10 @@ champ-select:
             59: 59012
             6: 6000
             60: 60000
+            60001: 60001301
+            60039: 60039301
             60086: 60086301
+            60103: 60103301
             61: 61000
             62: 62000
             63: 63000
@@ -232,6 +235,9 @@ champ-select:
             3230:
             - 4
             - 7
+            3260:
+            - 74
+            - 76
             3270:
             - 4
             - 32
@@ -330,6 +336,57 @@ jade-ftux:
     data:
         hasSeenChampSelectMasteriesFtux: true
         hasSeenHomeFtux: true
+        hasSeenRunesFtux: true
+    schemaVersion: 1
+jade-store:
+    data:
+        seenRuneItemIds:
+        - "a3427eb2-e67f-40b3-ba42-1b2ce7af5ddf"
+        - "8b6d3d4f-092a-43ac-a0d1-7c97a6b24fc7"
+        - "4d716ea5-2b3f-4e0d-bb13-fbb9251b7efc"
+        - "381ece0e-d002-4f33-a335-03bdeea968c4"
+        - "455ec440-6605-4edd-8ef1-c1aedb75d9fc"
+        - "5ed93247-d902-4153-ac82-d4039d25e999"
+        - "8acf4db5-83b2-4b68-8206-3591be591d43"
+        - "3c20e207-d9ed-4cce-a0ff-ae1d659fe985"
+        - "4885b3df-dbcd-4f98-ab16-706c2daab0ee"
+        - "c09c6bef-6671-4016-b41d-152a3f1bf118"
+        - "e9ff1aa9-658b-4ae0-89b9-68ff5ec4c28f"
+        - "e346b538-0a38-415a-a3c5-3025e45dc990"
+        - "7d6cd7ca-9cd6-4bab-b9e8-5b89d8219e2a"
+        - "c1b189fa-f377-431d-9d78-d467d79186ed"
+        - "eb44d236-1dbb-4761-bc27-6f066d62a938"
+        - "3e46f56c-6360-4c9d-9000-f86fd5d9c7bb"
+        - "ea51edcf-391a-41e5-b401-11669c705e05"
+        - "7e8234b9-96b4-465e-ae22-fbcabdacff3a"
+        - "12fa5445-30aa-4b23-8c57-eb19ce3fef26"
+        - "225ced78-7b1a-4bb3-96cf-9d8c6ba9ee70"
+        - "ad9fb682-f2de-4884-89dc-20c727b53c78"
+        - "49af1696-5045-455a-a3e1-d2d5e1324905"
+        - "f847e474-5668-4041-b9fd-3e2c319cadaf"
+        - "21a6f748-02a5-4d44-be46-a0ee248504f1"
+        - "b70b3933-9b37-406d-b325-ff375c21ae11"
+        - "7792b867-bdc0-44c0-afd4-5427ac1994b9"
+        - "37186970-305a-459b-ac13-d0de60311293"
+        - "6971b64a-70ba-483f-831f-d870358a9550"
+        - "fa4325d7-80c8-4000-a751-d7ca1fa22009"
+        - "0a3c0129-d177-4b29-a1eb-1f7949c1687c"
+        - "60499239-6b3a-4c6e-ab50-a04f92753d0e"
+        - "d9309a98-5b0a-4e89-a9b2-15732c712595"
+        - "d3943585-a548-4221-80d9-d8f2316f24d1"
+        - "b7e65ea6-e898-4701-8eaa-eb37752c1daf"
+        - "318dc6db-e077-4590-ba36-b4906d9fb420"
+        - "214fe45e-ec3c-4e1f-8603-e601fbbff52a"
+        - "bfbbb324-8adc-4617-8fea-82d1143d9697"
+        - "39d791fa-62de-41fb-9a71-faf7edbcced3"
+        - "fb00167c-9dc8-4ee7-8a2d-e06a2421a0aa"
+        - "32baf214-4eda-464c-a378-5037fbcb3b6f"
+        - "cd5f06ef-39dd-460e-b131-94b3272b3938"
+        - "4893d55b-0ac1-4d13-a4d0-153371bfb286"
+        - "a033f2cc-bbeb-46e5-9d32-9a9d5b3dfaaa"
+        - "5ace58e3-a1ec-4cbb-8254-17fe097817bf"
+        - "81ebc3b0-6bdc-42fc-96fb-07669cd54ed9"
+        - "0eab6cdb-b64d-45e8-862b-3308543408dd"
     schemaVersion: 1
 jadePositionPreferencesEncountered:
     data:
@@ -375,7 +432,7 @@ lol-clash:
 lol-collection-champions:
     data:
         groupingDropdownKey: "undefined"
-        lastVisitTime: 1794492815645
+        lastVisitTime: 1795152866998
         lcm-eat-seen: true
         sortingDropdownKey: "championMastery"
         unownedFilter: "none"
@@ -688,7 +745,7 @@ lol-perks:
 lol-premade-voice:
     data:
         autoJoin: true
-        autoJoinTeamVoice: false
+        autoJoinTeamVoice: true
         inputMode: "voiceActivity"
         muteOnConnect: false
         pushToTalkKey: ""
