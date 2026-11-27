@@ -72,7 +72,7 @@
                     "__type": "{ee39916f}"
                 },
                 "CustomMaterial": {
-                    "Material": "{bd9c393e}",
+                    "Material": "Characters/Nunu/Skins/Skin0/Materials/VFX_Nunu_Snowball_inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -2961,7 +2961,7 @@
                     "__type": "ValueFloat"
                 },
                 "CustomMaterial": {
-                    "Material": "{bd9c393e}",
+                    "Material": "Characters/Nunu/Skins/Skin0/Materials/VFX_Nunu_Snowball_inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -9114,7 +9114,7 @@
                     "__type": "{ee39916f}"
                 },
                 "CustomMaterial": {
-                    "Material": "{bd9c393e}",
+                    "Material": "Characters/Nunu/Skins/Skin0/Materials/VFX_Nunu_Snowball_inst",
                     "__type": "VfxMaterialDefinitionData"
                 },
                 "renderPhaseOverride": 0,
@@ -9613,6 +9613,124 @@
         "buildUpTime": 1.0,
         "objectPath": "Characters/Nunu/Skins/Skin0/Particles/Nunu_Base_W_Snowball_mis_small",
         "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Nunu/Skins/Skin0/Materials/VFX_Nunu_Snowball_inst": {
+        "name": "Characters/Nunu/Skins/Skin0/Materials/VFX_Nunu_Snowball_inst",
+        "type": 2,
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "assets/characters/nunusnowball/skins/base/nunusnowball_base_tx_cm.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient",
+                "texturePath": "assets/shared/materials/ice_gradient_v02.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Diffuse_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dark_Overlay",
+                "value": [
+                    0.25999999046325684,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Light_Overlay",
+                "value": [
+                    0.6499999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Smooth_Step_Overlay",
+                "value": [
+                    0.20000000298023224,
+                    0.800000011920929,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Overlay_Sharpness",
+                "value": [
+                    2.240999937057495,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimLight_Size",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimLight_Direction",
+                "value": [
+                    -0.5,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Overall_Light_Intesity",
+                "value": [
+                    0.25,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/Particles/VFX_Nunu_Snowball",
+                        "cullEnable": false,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
     },
     "__linked": []
 }
