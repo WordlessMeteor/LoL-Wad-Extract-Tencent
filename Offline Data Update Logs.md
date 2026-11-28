@@ -1223,13 +1223,26 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-11-27 16-47-01</td>
-			<td style="text-align:center;">1</td>
+			<td style="text-align:center;">2</td>
 			<td>
 				<ul style="list-style-type: disc; margin-left: 2px;">
 					<li>
-						Latest: <ul style="list-style-type: disc; margin-left: 2px;">
+						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
 							<li>Latest: 16.23.839.6851 -> 16.23.840.6595</li>
 							<li>TFT: 19.1.0.5995286 -> 19.1.0.6030237</li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-11-28 16-55-20</td>
+			<td style="text-align:center;">2</td>
+			<td>
+				<ul style="list-style-type: disc; margin-left: 2px;">
+					<li>
+						PBE: <ul style="list-style-type: disc; margin-left: 2px;">
+							<li>TFT: 19.1.0.6030237 -> 19.1.0.6037153</li>
 						</ul>
 					</li>
 				</ul>
